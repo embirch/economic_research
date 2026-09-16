@@ -7,7 +7,7 @@ Owner: director. Sequencing only; no dates promised. Status is updated at the cl
 | Session | Scope | Status |
 |---|---|---|
 | 1.1 Corpus and atlas | `wiki/INDEX.md`, `wiki/reports/*.md` (lead); `wiki/style/*.md` (editor); `data/releases/*.md`, `data/fetch/*.py`, `data/ATLAS.md` (steward). Human reads two wiki entries and one release file for accuracy before 1.2. | closed 2026-09-16; 35/38 wiki, 13/23 style, atlas complete; remainder listed in room/director-2026-09-16-session-1-1-status.md |
-| 1.2 Ledger, threads map, criteria | `programme/LEDGER.md`, `programme/THREADS.md` (lead); README criteria and `anthropic-style` skill rewritten from the style corpus (editor); referee samples ten wiki claims and the ledger. Human weights or excludes threads. | not started |
+| 1.2 Ledger, threads map, criteria | `programme/LEDGER.md`, `programme/THREADS.md` (lead); README criteria and `anthropic-style` skill rewritten from the style corpus (editor); referee samples ten wiki claims and the ledger. Human weights or excludes threads. | halted 2026-09-16 (credit exhausted) mid Step 0: corpus audit PASS, 7 of 11 outstanding corpus files landed; Steps 1–3 not started; see room/director-2026-09-16-session-1-2-halt.md |
 | 1.3 Long-list and short-list | `programme/LONGLIST.md` with a steward feasibility line per item; `programme/SHORTLIST.md`; referee audits scoring; editor answers each why-it-matters. **Gate 1a**: human chooses six. | not started |
 | 1.4 Briefs | `posts/postN/BRIEF.md` ×6; steward feasibility notes; editor framing loop; referee sweep. **Gate 1b**: human approves the six. | not started |
 
@@ -29,3 +29,4 @@ Per post: POST.md → page → referee review → pull request (Gate 3). Set rev
 |---|---|---|
 | Dry run (2026-09-16) | 5 | one hello turn per specialist |
 | 1.1 | 25 (before pause) + 20 (batch 1) + 18 (batch 2) = 63 | cap raised $250 → $280 at close; platform limit 25 live threads, idle count; batch-2 threads in flight at close |
+| 1.2 | 14 (Step 0: 3 lead, 9 editor, 1 referee, 1 steward) | API credit exhausted mid Step 0; 5 threads in flight when it failed; resume needs credit and ~4 corpus threads + Steps 1–3 (~6 threads) |
