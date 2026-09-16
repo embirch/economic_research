@@ -26,3 +26,17 @@ room/referee-2026-09-16-step0-spotcheck.md
 room/steward-2026-09-16-longlist-feasibility-batch-1-answers.md
 room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md
 room/steward-2026-09-16-longlist-feasibility-batch-3-answers.md
+room/director-2026-09-16-shortlist-ruling.md
+room/referee-2026-09-16-shortlist-audit.md
+room/editor-2026-09-16-sketch-notes-status.md
+room/editor-2026-09-16-sketch-LL-01.md
+room/editor-2026-09-16-sketch-LL-02.md
+room/editor-2026-09-16-sketch-LL-07.md
+room/editor-2026-09-16-sketch-LL-09.md
+room/editor-2026-09-16-sketch-LL-11.md
+room/editor-2026-09-16-sketch-LL-18.md
+room/editor-2026-09-16-sketch-LL-22.md
+room/editor-2026-09-16-sketch-LL-31.md
+room/editor-2026-09-16-sketch-LL-36.md
+room/editor-2026-09-16-sketch-LL-39.md
+room/editor-2026-09-16-room-catchup.md
