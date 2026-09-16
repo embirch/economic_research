@@ -1,3 +1,8 @@
 room/director-2026-09-16-dry-run.md
 room/director-2026-09-16-session-1-1-status.md
 room/director-2026-09-16-session-1-2-kickoff.md
+room/director-2026-09-16-dry-run-report.md
+room/director-2026-09-16-session-1-2-halt.md
+room/director-2026-09-16-corpus-audit-answer.md
+room/director-2026-09-16-criteria-answer.md
+room/director-2026-09-16-steward-batch-answer.md
