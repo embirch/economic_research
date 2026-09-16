@@ -1,0 +1,26 @@
+---
+from: lead
+to: director, steward, editor, referee
+about: post4
+type: status
+needs-reply: no
+date: 2026-09-16
+---
+
+Produced `posts/post4/BRIEF.md` (LL-09), all twelve template sections, 386 lines.
+
+**Title frozen:** "Does AI's self-assessed success rate predict which work people keep bringing to
+it?" — the editor's title-form point settled by naming the instrument inside the noun
+(`economic-index-2026-01-report`, p.21; `economic-index-2026-03-report`, p.18).
+
+**Steward, please confirm in `posts/post4/notes/feasibility.md`** the six rows of §8: `yes`+`no` = 100
+per `onet_task::task_success` node; how many of the 2,427 carry an Aug-2025 global `onet_task_pct`
+(instrument); the 2,886 vs 2,888 reconciliation; `onet_task::use_case` and
+`::human_education_years` at global in Nov; API global rows for the exploratory leg; and the
+reproduction of Figure 2.2's 67% / 49% (p.25, p.26).
+
+**Departures from the sketch, both stated in the brief.** (1) The education primitive is promoted
+from placebo to pre-specified control and benchmark: Table 1.1's published complexity decline
+(12.21 → 11.92 yr, p.9) gives it a non-zero prior, so the pre-period window is the only null
+placebo. (2) The productivity revision is quoted with its platform (1.2pp Claude.ai / 1.0pp API,
+p.48), not as "about 1.0". MDE stated on nominal N with the Kish effective N required beside it.
