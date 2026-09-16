@@ -39,8 +39,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--title", default="economic_research session")
     ap.add_argument("--budget-usd", type=float, default=40.0)
-    ap.add_argument("--message", required=True, help="the first (or next) user message")
+    ap.add_argument("--message", help="the first (or next) user message")
     ap.add_argument("--resume", help="existing session id")
+    ap.add_argument("--attach", action="store_true", help="only stream an existing session (with --resume); send nothing")
     args = ap.parse_args()
     client = anthropic.Anthropic()
 
@@ -54,12 +55,14 @@ def main():
         session_id = s.id
         print(f"session {session_id}  (Console: https://platform.claude.com/sessions/{session_id})")
 
-    pending = args.message
+    pending = None if args.attach else args.message
+    if pending is None and not args.attach: sys.exit("--message is required unless --attach")
     while True:
+        stop = None
         with client.beta.sessions.events.stream(session_id) as stream:
-            client.beta.sessions.events.send(session_id, events=[{"type": "user.message", "content": [{"type": "text", "text": pending}]}])
-            print(f"\n>>> sent: {pending[:120]}\n")
-            stop = None
+            if pending:
+                client.beta.sessions.events.send(session_id, events=[{"type": "user.message", "content": [{"type": "text", "text": pending}]}])
+                print(f"\n>>> sent: {pending[:120]}\n"); pending = None
             for ev in stream:
                 t = ev.type
                 if t == "agent.message":
@@ -81,6 +84,12 @@ def main():
                     print(f"  [error] {ev}")
                 elif t == "session.status_idle":
                     stop = getattr(ev, "stop_reason", None); print(f"\n=== idle: {stop}"); break
+        if stop is None:
+            # the stream ended without an idle event (network drop); the session is still running server-side: reconnect
+            st = client.beta.sessions.retrieve(session_id).status
+            if st == "running":
+                print("  [stream ended; session still running: reconnecting]"); time.sleep(3); continue
+            print(f"  [stream ended; session status {st}]")
         # idle: decide what to do
         sr = getattr(stop, "type", None) or (stop.get("type") if isinstance(stop, dict) else str(stop))
         if sr == "requires_action":
