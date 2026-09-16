@@ -12,6 +12,7 @@ tools:
       - name: web_fetch
         enabled: false
 multiagent:
+  type: coordinator
   agents:
     - ./programme-lead.md
     - ./data-steward.md
