@@ -81,7 +81,7 @@ Each path in the repository has exactly one owning agent. Only the owner creates
 | Data steward | `data/` (atlas, release files, fetch scripts, cache), `posts/postN/notes/feasibility.md`, `posts/postN/notes/replication.md`, `room/steward-*.md` |
 | Analyst | `posts/postN/prereg/`, `scripts/`, `data/processed/`, `outputs/`, `notes/lab-notebook.md`, `notes/ideas.md`, `room/analyst-*.md` |
 | Referee | `posts/postN/notes/referee-*.md`, `notes/red-team.md`, `notes/claims.md`, `notes/rederivation/`, `room/referee-*.md` |
-| Editor | `wiki/style/`, `posts/postN/POST.md`, `notes/claims-map.json`, `site/`, `room/editor-*.md` |
+| Editor | `wiki/style/`, `posts/postN/POST.md`, `notes/claims-map.json`, `site/` (incl. `site/tools/`), `room/editor-*.md` |
 
 Room notes are named `room/<owner>-<date>-<slug>.md` so ownership is visible in the filename. The pre-registration commit and the pull request are made by the director and the editor respectively with `git`, which records the author.
 
@@ -92,7 +92,7 @@ Room notes are named `room/<owner>-<date>-<slug>.md` so ownership is visible in 
 - **Data steward** (Opus 5, high; open web search and fetch, for supplementary sources). Owns the atlas. During Stage 1 it profiles every release and every cut and reproduces every headline number it can with Anthropic's released code, recording the exact specification that reproduces it.
 - **Analyst** (Opus 5, high; no web; effort is set per agent, not per turn).
 - **Referee** (Fable 5.1, xhigh; open fetch, re-reads Anthropic's sources itself). Clean context. Four verdicts per post plus a Stage 1 verdict on the short-list scoring.
-- **Editor** (Opus 5, high; open fetch for the style corpus; GitHub MCP with a static-bearer credential in a vault, push and pull-request tools `always_ask`). Broad context by design: it owns `wiki/style/`, a corpus of every Anthropic economics post and report annotated for structure, opening moves, phrasing of findings, captions, limitations and closes, plus the derived style skill. It writes every post against that corpus, not against a short rule list.
+- **Editor** (Opus 5, high; open fetch for the style corpus; pushes `postN-draft` branches with git; the human opens and merges the pull request, which is Gate 3). Broad context by design: it owns `wiki/style/`, a corpus of every Anthropic economics post and report annotated for structure, opening moves, phrasing of findings, captions, limitations and closes, plus the derived style skill. It writes every post against that corpus, not against a short rule list.
 
 ## 5. Three stages, and the sessions inside them
 
@@ -121,6 +121,17 @@ Stage 1 is the most important and the most expensive in reading. It is done once
 | 0.7 Briefs | Programme lead, steward, editor, referee | `programme/briefs/*.md` for the six, full template | Each passes the steward's feasibility, the editor's framing loop and the referee's sweep; **Gate 1b**: Emily approves all six |
 
 Stage 1 is long by design. It should take the team several days of session time and Emily a few hours of reading. Nothing from the old programme enters it except as citations in the wiki (posts 1 and 2 are two data points on what the public files can and cannot do, and their lessons are already in the journal).
+
+
+### Stage 1, session by session (who does what, and why)
+
+**Session 1.1 · Corpus and atlas.** Director lists every publication and release and spawns one programme-lead thread per publication (writes `wiki/reports/<slug>.md`: claims with page references, definitions verbatim, data and methods, limitations verbatim, open questions and conjectures verbatim, what it did not test), one data-steward thread per release (profiles files, grains, facets, metrics, thresholds, coverage; reproduces headline numbers with the released code; writes `data/releases/<release>.md` with the verifying command; a final thread assembles `data/ATLAS.md` and `data/fetch/`), and one editor thread per publication (writes `wiki/style/<slug>.md`: section order, opening move, phrasing of findings, comparisons, captions, limitations, close). One thread per source keeps each summary sharp. Emily reads two wiki entries and one release file for accuracy before 1.2.
+
+**Session 1.2 · Ledger, threads map, criteria.** Programme lead writes `programme/LEDGER.md` (every open question, conjecture, limitation and promised follow-up, with source and whether a later report answered it) and `programme/THREADS.md` (the threads of inquiry the stream pursues, what is established, what is open, what the Institute says it wants next, the mentor's interests from his Anthropic publications, cross-referenced to the atlas). Editor rewrites the criteria in README.md and the `anthropic-style` skill from the style corpus. Referee samples ten wiki claims against the sources and samples the ledger for items answered later; blocks on inaccuracy. Emily reads the threads map and says which threads to weight or exclude.
+
+**Session 1.3 · Long-list and short-list.** Programme lead drafts thirty or more candidates into `programme/LONGLIST.md` (thread, contribution, why it matters and to whom, the Economic Index cut, supplementary data, biggest risk); for each, a room note to the data steward, whose feasibility line is required before scoring. Lead scores (originality against the corpus, fit with threads and mentor, foundation in usage data, feasibility, what it teaches, risk) and writes `programme/SHORTLIST.md` with eight to ten sketches. Referee audits the scoring and checks for inherited framings from `reference/`. Editor answers each sketch's why-it-matters by room note. Gate 1a: Emily chooses six.
+
+**Session 1.4 · Briefs.** Programme lead writes `posts/postN/BRIEF.md` on the twelve-section template; data steward writes `notes/feasibility.md` per post with every cut confirmed and joins tested; editor runs the framing loop; referee runs the assumptions sweep and blocks design changes; director assembles. Gate 1b: Emily approves the six.
 
 ### Stage 2 in detail, per post
 
@@ -160,7 +171,7 @@ Memory stores: standards (read-only: criteria, terminology, register), research-
 - Stage 1: one discovery session plus one briefs session. Stage 2: one session per post. Stage 3: one session for the set, or one per post. Sessions are cheap; outputs are files, so a restart loses nothing. Sandbox lives at most 30 days from creation; the repository is the memory of record.
 - Environment: one cloud environment with the analysis packages pre-installed and unrestricted networking (Anthropic's safety blocklist still applies) while the atlas is being built; tighten to an allowlist once the sources are fixed (`team/environment.yaml`).
 - Budgets: hard cap per session, raised at each gate; Stage 1 will be the most expensive because of the reading; plan on the order of a few hundred dollars for Stage 1 and $200 to 500 per post, with the cap as the control.
-- Human gates: 1a (short-list) and 1b (briefs); 2a and 2b per post; 3 per post. Pushing and pull requests are `always_ask`; everything else runs.
+- Human gates: 1a (short-list) and 1b (briefs); 2a and 2b per post; 3 per post. Agents push with git from the sandbox (verified in the dry run); the editor never pushes main, and merging a post's branch is the human's click on GitHub.
 
 ## 9. Step by step
 

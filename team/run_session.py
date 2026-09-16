@@ -75,7 +75,8 @@ def main():
                 elif t == "agent.thread_message_received":
                     print(f"  <- from {getattr(ev, 'from_agent_name', '')}: {str(getattr(ev, 'content', ''))[:200]}")
                 elif t == "session.usage":
-                    lc = getattr(ev, "list_cost", None); print(f"  [usage] list_cost cents={lc} active_seconds={getattr(ev, 'active_seconds', None)}")
+                    u = getattr(ev, "usage", None); lc = getattr(getattr(u, "list_cost", None), "amount", None) if u else None
+                    print(f"  [usage] cost so far: ${int(lc)/100:.2f}  active {getattr(u, 'active_seconds', 0):.0f}s" if lc else "  [usage]")
                 elif t == "session.error":
                     print(f"  [error] {ev}")
                 elif t == "session.status_idle":

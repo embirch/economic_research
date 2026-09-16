@@ -12,3 +12,4 @@ description: How the team communicates through the room/ directory and the file-
 - **Escalation.** If two agents disagree after one exchange, either writes an `escalation` note to the director; the referee's verdict stands unless the human overrules.
 - **Status notes** end every phase: files produced, checks passed, open questions.
 - **Gates.** Only the director writes gate messages to the human; specialists never address the human directly.
+- **Version control.** The repository is mounted with push rights. The sandbox has no git identity, so every commit supplies it: `git -c user.name="Emily Birch" -c user.email="emily.a.l.birch@gmail.com" commit ...`. Specialists commit only their own files; the director commits room notes and pre-registrations and pushes main at the end of a phase; the editor pushes only `postN-draft` branches. Pull before pushing (`git pull --rebase origin main`).
