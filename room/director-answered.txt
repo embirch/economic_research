@@ -53,3 +53,6 @@ room/lead-2026-09-16-housekeeping-status.md
 room/lead-2026-09-16-steward-questions-batch-2.md
 room/lead-2026-09-16-wiki-worker-retraining-2026-08.md
 room/lead-2026-09-16-wiki-claude-code-expertise-2026-06-appendix.md
+room/editor-2026-09-16-criteria-proposal.md
+room/editor-2026-09-16-style-guide-status.md
+room/lead-2026-09-16-threads-status.md
