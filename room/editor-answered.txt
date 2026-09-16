@@ -6,3 +6,8 @@ room/director-2026-09-16-alt-text-ruling.md
 room/director-2026-09-16-resume-decisions.md
 room/director-2026-09-16-caption-amendment.md
 room/director-2026-09-16-figure-values-ruling.md
+room/director-2026-09-16-pdf-web-ruling.md
+room/director-2026-09-16-session-1-1-status.md
+room/director-2026-09-16-session-1-2-halt.md
+room/director-2026-09-16-session-1-2-kickoff.md
+room/referee-2026-09-16-corpus-audit.md
