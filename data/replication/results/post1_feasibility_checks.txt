@@ -1,0 +1,274 @@
+======================================================================
+[aug2025] release_2025_09_15  rows=100,062  file=release_2025_09_15/data/intermediate/aei_raw_claude_ai_2025-08-04_to_2025-08-11.csv
+  platform_and_product values: ['Claude AI (Free and Pro)']
+  date_start/date_end: ['2025-08-04'] ['2025-08-11']
+  geography values: ['country', 'global', 'state_us']  global rows: 29656
+  C1: facet onet_task::collaboration  rows=14,454  variables=['onet_task_collaboration_count', 'onet_task_collaboration_pct']  levels=['0']
+     patterns present: ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation']
+     distinct base tasks (all): 2617  named (excl none/not_classified): 2616
+     which residual task node appears: ['none']
+     _count rows: 7227  min/max count: 1.0 25852.0
+     _pct rows: 7227  min/max pct: 0.0021 100.0
+     per-task _pct sum over patterns: median 100.0000  min 100.0000  max 100.0000  (share of base cluster)
+     intersection rows outside global: 0
+  C4: facet onet_task at global  rows=5236  variables=['onet_task_count', 'onet_task_pct']
+     distinct task nodes (all): 2618  named: 2616  residual nodes present: ['none', 'not_classified']
+     onet_task_pct sum (all nodes): 100.000000   named only: 91.8727
+     onet_task_count: min 15.0  sum 964,494
+     intersection tasks not in base facet: 0 ; base tasks not in intersection: 1 ['not_classified']
+     per-task automation on count: tasks with b5>0: 1807 of 2616
+     per-task automation on pct: tasks with b5>0: 1807 of 2616
+======================================================================
+[nov2025] release_2026_01_15  rows=458,778  file=release_2026_01_15/data/intermediate/aei_raw_claude_ai_2025-11-13_to_2025-11-20.parquet
+  platform_and_product values: ['Claude AI (Free and Pro)']
+  date_start/date_end: ['2025-11-13'] ['2025-11-20']
+  geography values: ['country', 'country-state', 'global']  global rows: 264808
+  C2: facet onet_task::collaboration  rows=16,778  variables=['onet_task_collaboration_count', 'onet_task_collaboration_pct']  levels=['0']
+     patterns present: ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation']
+     distinct base tasks (all): 3169  named (excl none/not_classified): 3168
+     which residual task node appears: ['none']
+     _count rows: 8389  min/max count: 1.0 30703.0
+     _pct rows: 8389  min/max pct: 0.0807 100.0
+     per-task _pct sum over patterns: median 100.0000  min 100.0000  max 100.0000  (share of base cluster)
+     intersection rows outside global: 0
+  C4: facet onet_task at global  rows=6340  variables=['onet_task_count', 'onet_task_pct']
+     distinct task nodes (all): 3170  named: 3168  residual nodes present: ['none', 'not_classified']
+     onet_task_pct sum (all nodes): 100.000000   named only: 93.5144
+     onet_task_count: min 15.0  sum 999,875
+     intersection tasks not in base facet: 0 ; base tasks not in intersection: 1 ['not_classified']
+     per-task automation on count: tasks with b5>0: 2087 of 3168
+     per-task automation on pct: tasks with b5>0: 2087 of 3168
+======================================================================
+[feb2026] release_2026_03_24  rows=477,717  file=release_2026_03_24/data/aei_raw_claude_ai_2026-02-05_to_2026-02-12.parquet
+  platform_and_product values: ['Claude AI (Free, Pro, and Max)']
+  date_start/date_end: ['2026-02-05'] ['2026-02-12']
+  geography values: ['country', 'country-state', 'global']  global rows: 271313
+  C3: facet onet_task::collaboration  rows=17,530  variables=['onet_task_collaboration_count', 'onet_task_collaboration_pct']  levels=['0']
+     patterns present: ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation']
+     distinct base tasks (all): 3259  named (excl none/not_classified): 3258
+     which residual task node appears: ['none']
+     _count rows: 8765  min/max count: 1.0 20325.0
+     _pct rows: 8765  min/max pct: 0.0928 100.0
+     per-task _pct sum over patterns: median 100.0000  min 100.0000  max 100.0000  (share of base cluster)
+     intersection rows outside global: 0
+  C4: facet onet_task at global  rows=6520  variables=['onet_task_count', 'onet_task_pct']
+     distinct task nodes (all): 3260  named: 3258  residual nodes present: ['none', 'not_classified']
+     onet_task_pct sum (all nodes): 100.000000   named only: 92.9714
+     onet_task_count: min 15.0  sum 1,000,000
+     intersection tasks not in base facet: 0 ; base tasks not in intersection: 1 ['not_classified']
+     per-task automation on count: tasks with b5>0: 2200 of 3258
+     per-task automation on pct: tasks with b5>0: 2200 of 3258
+======================================================================
+REPLICATION (2i): global collaboration split per wave
+[aug2025] collaboration_pct nodes: {'directive': np.float64(38.7798), 'feedback loop': np.float64(10.3182), 'learning': np.float64(20.3381), 'none': np.float64(3.8609), 'not_classified': np.float64(0.0001), 'task iteration': np.float64(22.2233), 'validation': np.float64(4.4797)}  sum=100.0000
+   automation: all-pattern base 49.0980 | five-classified base 51.0698 | augmentation(all) 47.0410
+[nov2025] collaboration_pct nodes: {'directive': np.float64(31.7267), 'feedback loop': np.float64(13.6287), 'learning': np.float64(19.7158), 'none': np.float64(2.9612), 'task iteration': np.float64(27.196), 'validation': np.float64(4.7717)}  sum=100.0000
+   automation: all-pattern base 45.3554 | five-classified base 46.7394 | augmentation(all) 51.6835
+[feb2026] collaboration_pct nodes: {'directive': np.float64(32.6362), 'feedback loop': np.float64(11.5207), 'learning': np.float64(22.3525), 'none': np.float64(3.049), 'task iteration': np.float64(25.585), 'validation': np.float64(4.8566)}  sum=100.0000
+   automation: all-pattern base 44.1569 | five-classified base 45.5456 | augmentation(all) 52.7941
+======================================================================
+REPLICATION (2ii): usage-weighted mean of per-task automation vs the wave global value
+[aug2025] global (collaboration facet): five-pattern 51.0698 | all-pattern 49.0980
+   (a) sum of intersection _count over named tasks -> five-pattern 51.1477 | all-pattern 47.5162
+   (b) onet_task_pct-weighted mean of per-task five-pattern automation -> 51.2001  (diff +0.1303)
+   (c) intersection-count-weighted mean of the same -> 51.2001  (diff +0.1303)
+   named-task usage mass covered by the intersection: 89.8374 of 100
+[nov2025] global (collaboration facet): five-pattern 46.7394 | all-pattern 45.3554
+   (a) sum of intersection _count over named tasks -> five-pattern 47.2418 | all-pattern 43.6233
+   (b) onet_task_pct-weighted mean of per-task five-pattern automation -> 47.0325  (diff +0.2931)
+   (c) intersection-count-weighted mean of the same -> 47.0325  (diff +0.2931)
+   named-task usage mass covered by the intersection: 90.9368 of 100
+[feb2026] global (collaboration facet): five-pattern 45.5456 | all-pattern 44.1569
+   (a) sum of intersection _count over named tasks -> five-pattern 45.9292 | all-pattern 42.2276
+   (b) onet_task_pct-weighted mean of per-task five-pattern automation -> 45.8966  (diff +0.3510)
+   (c) intersection-count-weighted mean of the same -> 45.8966  (diff +0.3510)
+   named-task usage mass covered by the intersection: 90.3851 of 100
+======================================================================
+C8: Seychelles in release_2026_01_15
+  geo_id=="SC": rows=410  facets=['ai_autonomy', 'ai_education_years', 'collaboration', 'country', 'human_education_years', 'human_only_ability', 'human_only_time', 'human_with_ai_time']
+  geo_id=="SYC": rows=0  facets=[]
+  SC country facet rows: {'usage_count': 24715.0, 'usage_pct': 2.47181}
+  SC onet_task rows: 134 ; task nodes: 67 ; onet_task_count sum 24715 ; onet_task_pct sum 100.0000
+  SC onet_task::collaboration rows: 0
+  SC collaboration rows: 12  counts={'directive': 8511.0, 'feedback loop': 14825.0, 'learning': 278.0, 'none': 132.0, 'task iteration': 837.0, 'validation': 132.0}
+  netting SC out of the global collaboration mix: max |shift| 1.1748 pp (feedback loop)
+  automation five-pattern before 46.7394 after 45.4868
+  SC published task nodes: 67 ; of these in the global task set: 67 ; SC count sum 24715 of SC usage_count [24715.]
+  netting SC task counts: max |weight shift| 0.54487 pp over named tasks
+======================================================================
+C5  release_2025_09_15/data/intermediate/onet_task_statements.csv (O*NET DB 20.1)
+  shape (19530, 9)  columns ['O*NET-SOC Code', 'Title', 'Task ID', 'Task', 'Task Type', 'Incumbents Responding', 'Date', 'Domain Source', 'soc_major_group']
+  distinct O*NET-SOC Code 974 ; Task ID 19530 ; Task text 18429 ; lower-stripped keys 18428
+  distinct soc7 775 ; soc_major_group values 22 ; rows per key max 34
+  keys with >1 holder: 10-char O*NET-SOC 272 ; 7-char SOC 265 ; SOC major group 23 (of 18428 keys)
+======================================================================
+C6  release_2025_02_10/wage_data.csv
+  shape (1090, 10)  columns ['SOCcode', 'JobName', 'JobFamily', 'isBright', 'isGreen', 'JobZone', 'MedianSalary', 'JobForecast', 'ChanceAuto', 'WageGroup']
+  SOCcode is 10-char O*NET-SOC ([10]), unique True ; MedianSalary>100: 1084 of 1090 ; removed values [15.94, 16.31, 17.54, 28.15, 28.15, 28.15]
+  JobZone==-1 121 ; ChanceAuto==-1 424
+  KEY TEST: O*NET-SOC[:7] -> SOCcode matches 0 of 775 onet soc7 codes  <-- the brief's stated key
+  KEY TEST: full 10-char O*NET-SOC Code -> SOCcode matches 970 of 974 onet occupation codes
+  KEY TEST: both sides truncated to 7 chars matches 772 of 775 ; wage rows per 7-char code max 13
+  hourly (MedianSalary/2080) min 9.67 median 25.66 max 100.00 ; annual median 53380
+======================================================================
+C7  BLS Employment Projections
+  bytes 1397448
+  detailed-SOC rows 831 ; unique codes 831 ; median wage non-null 825 ; employment non-null 831
+  ep hourly min 14.85 median 29.51 max 268.76 ; employment units = thousands, total 170267.2
+  MERGE AUDIT onet soc7 -> EP occ_code: 775 in, 670 matched, 105 unmatched (sample ['11-1031', '11-2031', '11-3011', '11-9061', '13-1021'])
+======================================================================
+[aug2025] named task nodes 2616 ; named mass 91.8727 of 100 ; conversations 886,107
+  C5 MERGE AUDIT (node text -> 20.1 lower-stripped key): in 2616, matched 2616, unmatched 0, mass unmatched 0.0000 pp
+     node texts collapsing onto one 20.1 key: 0
+  C6 coverage (10-char join, MedianSalary>100): 2607 of 2616 tasks priced ; mass 91.2787 pp = 99.35% of named
+  C7 coverage (EP, 7-char): 2042 tasks ; mass 51.1357 pp = 55.66% of named
+  JobZone coverage (exploratory c): 2601 tasks ; mass 99.86% of named
+  multi-holder: >1 10-char holder 74 tasks (4.08 pp of wave, 4.44% of named) ; >1 soc7 72 (4.05 pp) ; >1 major group 6 (0.28 pp)
+  multi-priced-holder tasks 74 (4.08 pp) ; rule spread on them: max |equal-empw| $6.38/hr, mean 1.182 ; corr 0.99980
+  EMPLOYMENT-WEIGHT IDENTIFICATION: of those, holders sharing one soc7 (so EP gives equal weights): 2
+  C6 vs C7 wage agreement over tasks priced by both: Spearman 0.9869 ; Pearson 0.9723 ; N 2042
+  intersection `not_classified` PATTERN: 4.6421% of named-task intersection counts, on 2476 tasks
+  intersection `none` PATTERN: 2.4581% of counts
+  ANALYSIS SET (C5+C6 wage AND >=1 classified pattern cell): 1802 tasks ; 89.2530 pp of wave ; 97.15% of named mass ; 818,673 conversations
+  KISH effective N on onet_task_pct: all named 99.7 (nominal 2616) ; analysis set 94.4 (nominal 1802)
+  unweighted-count check: tasks with b5 cell but no wage 5 (0.584 pp) ; wage but no b5 cell 805 (2.026 pp)
+     Q1  tasks  599  mass 22.291 pp  Kish   62.3  classified conversations   199,428  hourly $10.40-$25.78
+     Q2  tasks  501  mass 21.856 pp  Kish   43.3  classified conversations   200,457  hourly $25.86-$35.79
+     Q3  tasks  271  mass 19.243 pp  Kish   22.2  classified conversations   178,090  hourly $35.85-$43.40
+     Q4  tasks  431  mass 25.864 pp  Kish   13.7  classified conversations   240,698  hourly $43.40-$100.00
+  WEIGHTED TASK BOOTSTRAP (B=600): SE(top-minus-bottom) 0.863 pp ; 95% half-width 1.69 pp ; MDE(80%) 2.42 pp
+======================================================================
+[nov2025] named task nodes 3168 ; named mass 93.5144 of 100 ; conversations 935,027
+  C5 MERGE AUDIT (node text -> 20.1 lower-stripped key): in 3168, matched 3168, unmatched 0, mass unmatched 0.0000 pp
+     node texts collapsing onto one 20.1 key: 0
+  C6 coverage (10-char join, MedianSalary>100): 3154 of 3168 tasks priced ; mass 92.5622 pp = 98.98% of named
+  C7 coverage (EP, 7-char): 2534 tasks ; mass 54.7271 pp = 58.52% of named
+  JobZone coverage (exploratory c): 3154 tasks ; mass 99.85% of named
+  multi-holder: >1 10-char holder 93 tasks (5.60 pp of wave, 5.98% of named) ; >1 soc7 91 (5.57 pp) ; >1 major group 10 (0.29 pp)
+  multi-priced-holder tasks 93 (5.60 pp) ; rule spread on them: max |equal-empw| $6.38/hr, mean 1.134 ; corr 0.99979
+  EMPLOYMENT-WEIGHT IDENTIFICATION: of those, holders sharing one soc7 (so EP gives equal weights): 2
+  C6 vs C7 wage agreement over tasks priced by both: Spearman 0.9859 ; Pearson 0.9719 ; N 2534
+  intersection `not_classified` PATTERN: 5.6355% of named-task intersection counts, on 3029 tasks
+  intersection `none` PATTERN: 2.0240% of counts
+  ANALYSIS SET (C5+C6 wage AND >=1 classified pattern cell): 2075 tasks ; 89.9892 pp of wave ; 96.23% of named mass ; 854,432 conversations
+  KISH effective N on onet_task_pct: all named 89.5 (nominal 3168) ; analysis set 83.4 (nominal 2075)
+  unweighted-count check: tasks with b5 cell but no wage 12 (0.948 pp) ; wage but no b5 cell 1079 (2.573 pp)
+     Q1  tasks  701  mass 22.461 pp  Kish   55.6  classified conversations   207,782  hourly $10.22-$25.78
+     Q2  tasks  573  mass 22.265 pp  Kish   37.7  classified conversations   212,281  hourly $25.78-$34.56
+     Q3  tasks  321  mass 19.499 pp  Kish   22.0  classified conversations   186,717  hourly $34.87-$43.40
+     Q4  tasks  480  mass 25.764 pp  Kish   11.5  classified conversations   247,652  hourly $43.40-$100.00
+  WEIGHTED TASK BOOTSTRAP (B=600): SE(top-minus-bottom) 0.783 pp ; 95% half-width 1.53 pp ; MDE(80%) 2.19 pp
+======================================================================
+[feb2026] named task nodes 3258 ; named mass 92.9714 of 100 ; conversations 929,714
+  C5 MERGE AUDIT (node text -> 20.1 lower-stripped key): in 3258, matched 3258, unmatched 0, mass unmatched 0.0000 pp
+     node texts collapsing onto one 20.1 key: 0
+  C6 coverage (10-char join, MedianSalary>100): 3244 of 3258 tasks priced ; mass 92.3171 pp = 99.30% of named
+  C7 coverage (EP, 7-char): 2593 tasks ; mass 57.8478 pp = 62.22% of named
+  JobZone coverage (exploratory c): 3242 tasks ; mass 99.77% of named
+  multi-holder: >1 10-char holder 86 tasks (4.53 pp of wave, 4.87% of named) ; >1 soc7 84 (4.50 pp) ; >1 major group 9 (0.26 pp)
+  multi-priced-holder tasks 86 (4.53 pp) ; rule spread on them: max |equal-empw| $5.81/hr, mean 1.040 ; corr 0.99986
+  EMPLOYMENT-WEIGHT IDENTIFICATION: of those, holders sharing one soc7 (so EP gives equal weights): 2
+  C6 vs C7 wage agreement over tasks priced by both: Spearman 0.9870 ; Pearson 0.9739 ; N 2593
+  intersection `not_classified` PATTERN: 5.9043% of named-task intersection counts, on 3110 tasks
+  intersection `none` PATTERN: 2.1551% of counts
+  ANALYSIS SET (C5+C6 wage AND >=1 classified pattern cell): 2188 tasks ; 89.7348 pp of wave ; 96.52% of named mass ; 848,716 conversations
+  KISH effective N on onet_task_pct: all named 134.3 (nominal 3258) ; analysis set 125.7 (nominal 2188)
+  unweighted-count check: tasks with b5 cell but no wage 12 (0.650 pp) ; wage but no b5 cell 1056 (2.582 pp)
+     Q1  tasks  648  mass 22.354 pp  Kish   51.0  classified conversations   206,544  hourly $10.22-$24.00
+     Q2  tasks  641  mass 22.500 pp  Kish   50.6  classified conversations   213,591  hourly $24.00-$34.40
+     Q3  tasks  403  mass 22.384 pp  Kish   36.8  classified conversations   213,235  hourly $34.45-$43.40
+     Q4  tasks  496  mass 22.497 pp  Kish   16.5  classified conversations   215,346  hourly $43.40-$100.00
+  WEIGHTED TASK BOOTSTRAP (B=600): SE(top-minus-bottom) 0.871 pp ; 95% half-width 1.71 pp ; MDE(80%) 2.44 pp
+======================================================================
+SUMMARY  wave | analysis tasks | Kish N | SE | MDE(80%) | resolves +-3pp
+  aug2025  1802  94.4  0.863  2.42  True
+  nov2025  2075  83.4  0.783  2.19  True
+  feb2026  2188  125.7  0.871  2.44  True
+C6 top-coding: MedianSalary max 208000 ; rows at the max 6 ; distinct top values [np.float64(194500.0), np.float64(200890.0), np.float64(201100.0), np.float64(208000.0)]
+======================================================================
+[aug2025] analysis set 1802 tasks, 89.253 pp
+  tasks at the wage cap ($100.00/hr = $208000/yr): 9 ; 0.052 pp (0.06% of analysis mass) ; Q4 mass share 0.2%
+  SE(top-minus-bottom): (a) conversation-binomial 0.151 pp | (b) task bootstrap, usage-weighted mean 4.462 pp | (c) brief's spec (p prop. w, unweighted mean) 1.164 pp
+  MDE(80%, two-sided 5%) = 2.8 x SE: (a) 0.42 pp | (b) 12.49 pp | (c) 3.26 pp ; resolves the +-3 pp band: a=True b=False c=False
+  task-level sd of automation share: Q1 30.85 pp, Q4 27.29 pp ; Kish N Q1 62.3 Q4 13.7 -> sd/sqrt(Kish): Q1 3.91 Q4 7.36
+  SOC major groups represented: 23 (of 22) ; MULTI-holder bucket: yes
+  groups with >=20 tasks: 17 ; >=1 pp of analysis mass: 12 ; >=0.1 pp: 23
+  four largest groups by mass: [('15', 259, np.float64(35.57)), ('25', 169, np.float64(12.23)), ('43', 153, np.float64(7.99)), ('27', 109, np.float64(7.53))]
+  SOC-15 rows: ['15'] ; mass 35.575 pp = 39.86% of analysis mass
+  groups containing both Q1 and Q4 tasks: 10 ; groups spanning all four quartiles: 7
+  EXPLORATORY (a) 1P API: onet_task::collaboration rows 10330 ; base tasks 2055 (named 2054) ; onet_task_pct nodes 2056 ; variables ['onet_task_collaboration_count', 'onet_task_collaboration_pct']
+     API named intersection tasks also in the Claude.ai analysis set: 1329
+======================================================================
+[nov2025] analysis set 2075 tasks, 89.989 pp
+  tasks at the wage cap ($100.00/hr = $208000/yr): 6 ; 0.044 pp (0.05% of analysis mass) ; Q4 mass share 0.2%
+  SE(top-minus-bottom): (a) conversation-binomial 0.148 pp | (b) task bootstrap, usage-weighted mean 6.224 pp | (c) brief's spec (p prop. w, unweighted mean) 1.228 pp
+  MDE(80%, two-sided 5%) = 2.8 x SE: (a) 0.42 pp | (b) 17.43 pp | (c) 3.44 pp ; resolves the +-3 pp band: a=True b=False c=False
+  task-level sd of automation share: Q1 30.19 pp, Q4 26.65 pp ; Kish N Q1 55.6 Q4 11.5 -> sd/sqrt(Kish): Q1 4.05 Q4 7.85
+  SOC major groups represented: 23 (of 22) ; MULTI-holder bucket: yes
+  groups with >=20 tasks: 18 ; >=1 pp of analysis mass: 11 ; >=0.1 pp: 23
+  four largest groups by mass: [('15', 272, np.float64(33.41)), ('25', 204, np.float64(15.03)), ('27', 149, np.float64(8.74)), ('43', 189, np.float64(7.6))]
+  SOC-15 rows: ['15'] ; mass 33.405 pp = 37.12% of analysis mass
+  groups containing both Q1 and Q4 tasks: 10 ; groups spanning all four quartiles: 8
+  EXPLORATORY (a) 1P API: onet_task::collaboration rows 11112 ; base tasks 2252 (named 2251) ; onet_task_pct nodes 2253 ; variables ['onet_task_collaboration_count', 'onet_task_collaboration_pct']
+     API named intersection tasks also in the Claude.ai analysis set: 1469
+======================================================================
+[feb2026] analysis set 2188 tasks, 89.735 pp
+  tasks at the wage cap ($100.00/hr = $208000/yr): 6 ; 0.045 pp (0.05% of analysis mass) ; Q4 mass share 0.2%
+  SE(top-minus-bottom): (a) conversation-binomial 0.154 pp | (b) task bootstrap, usage-weighted mean 5.750 pp | (c) brief's spec (p prop. w, unweighted mean) 1.313 pp
+  MDE(80%, two-sided 5%) = 2.8 x SE: (a) 0.43 pp | (b) 16.10 pp | (c) 3.68 pp ; resolves the +-3 pp band: a=True b=False c=False
+  task-level sd of automation share: Q1 30.34 pp, Q4 28.89 pp ; Kish N Q1 51.0 Q4 16.5 -> sd/sqrt(Kish): Q1 4.25 Q4 7.11
+  SOC major groups represented: 23 (of 22) ; MULTI-holder bucket: yes
+  groups with >=20 tasks: 20 ; >=1 pp of analysis mass: 11 ; >=0.1 pp: 23
+  four largest groups by mass: [('15', 286, np.float64(29.71)), ('25', 199, np.float64(12.39)), ('27', 161, np.float64(8.82)), ('43', 196, np.float64(8.55))]
+  SOC-15 rows: ['15'] ; mass 29.712 pp = 33.11% of analysis mass
+  groups containing both Q1 and Q4 tasks: 8 ; groups spanning all four quartiles: 6
+  EXPLORATORY (a) 1P API: onet_task::collaboration rows 11660 ; base tasks 2298 (named 2297) ; onet_task_pct nodes 2299 ; variables ['onet_task_collaboration_count', 'onet_task_collaboration_pct']
+     API named intersection tasks also in the Claude.ai analysis set: 1541
+released library imported: /workspace/economic_research/data/cache/release_2025_09_15/code/aei_analysis_functions_claude_ai.py
+constants: MIN_OBSERVATIONS_COUNTRY=200 MIN_OBSERVATIONS_US_STATE=100 EXCLUDED_COUNTRIES=23
+enriched file rows 136845
+collaboration_task_regression(geography="country") -> slope -3.111834  partial_r2 0.393687  p 1.721e-13  n_countries 111  n_tasks 1808
+  published (report Fig 2.11): -3.112 / 0.394 / N 111
+released parser uses .split("::").str[0]/[1]: cluster_names with more than one "::": 0
+per-task automation rates built by the released spec: 1808 tasks (includes the `none` task node: True)
+global onet_task_pct rows 2618
+  usage-weighted global automation, released rule, dropping ['not_classified']: 51.7424  (weight covered 95.5535 pp)
+  usage-weighted global automation, released rule, dropping ['not_classified', 'none']: 51.2001  (weight covered 89.8374 pp)
+published wave values from the same file: all-pattern 49.0980  five-pattern 51.0698
+the file's own automation_pct variable at global: 51.0698
+aug2025 base residual node mass: none 5.7162  not_classified 2.4111 ; named 91.8727
+   top-10 named tasks: 22.9409 of 100 ; 24.9703% of named mass
+nov2025 base residual node mass: none 3.7124  not_classified 2.7732 ; named 93.5144
+   top-10 named tasks: 24.2471 of 100 ; 25.9288% of named mass
+feb2026 base residual node mass: none 4.2922  not_classified 2.7364 ; named 92.9714
+   top-10 named tasks: 19.4410 of 100 ; 20.9107% of named mass
+SC onet_task nodes 67 ; none 0.6393 not_classified 5.5998 ; named nodes 65 carrying 93.7609% of SC mass
+SC named counts sum 23173 of SC usage 24715
+netting SC named task weights: 65 of 65 SC named nodes are in the global named set ; max |shift| 0.5823 pp on modify existing software to correct errors, allow  ; mean |shift| 0.00119
+SC named mass as share of global named counts: 2.4783%
+SC share of the GLOBAL count of the tasks it publishes (top 6):
+   64.3%  break systems into their component parts, assign numerical values to e
+   60.1%  complete models and simulations, using manual or automated tools, to a
+   55.1%  perform or evaluate research, such as detailed company or industry ana
+   51.9%  enter codes and instructions to program computer-controlled machinery.
+   39.1%  write computer or microprocessor software programs.
+   37.0%  program electronic equipment.
+median SC share over its 67 nodes: 4.77%
+SC>50% of a task's global count: 4 tasks in the analysis set, 0.263 pp of wave mass, quartiles [np.int64(1), np.int64(3), np.int64(4)]
+     of which Q4: 2 tasks, 0.150 pp ; Q1: 1
+SC>20% of a task's global count: 14 tasks in the analysis set, 1.966 pp of wave mass, quartiles [np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+     of which Q4: 3 tasks, 0.231 pp ; Q1: 5
+SC>10% of a task's global count: 23 tasks in the analysis set, 11.594 pp of wave mass, quartiles [np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+     of which Q4: 6 tasks, 9.039 pp ; Q1: 8
+aug2025 | intersection counts over named tasks: total 886107 ; classified 823192 ; none 21781 ; not_classified 41134
+   base named onet_task_count 886107 -> intersection publishes 100.00% of it ; classified 92.90%
+   wave collaboration_count: total 964494 ; classified 927255 ; base facet residual none 37238 not_classified 1
+nov2025 | intersection counts over named tasks: total 935027 ; classified 863409 ; none 18925 ; not_classified 52693
+   base named onet_task_count 935027 -> intersection publishes 100.00% of it ; classified 92.34%
+   wave collaboration_count: total 999875 ; classified 970267 ; base facet residual none 29608 not_classified 0
+feb2026 | intersection counts over named tasks: total 929714 ; classified 854785 ; none 20036 ; not_classified 54893
+   base named onet_task_count 929714 -> intersection publishes 100.00% of it ; classified 91.94%
+   wave collaboration_count: total 1000000 ; classified 969510 ; base facet residual none 30490 not_classified 0
+aug2025 usage-weighted mean hourly wage: C6 (10-char join, /2080) $35.34 ; C7 (BLS-EP) $37.64
+nov2025 usage-weighted mean hourly wage: C6 (10-char join, /2080) $35.08 ; C7 (BLS-EP) $37.69
+feb2026 usage-weighted mean hourly wage: C6 (10-char join, /2080) $34.36 ; C7 (BLS-EP) $37.55
