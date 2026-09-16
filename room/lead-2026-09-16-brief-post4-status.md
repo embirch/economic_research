@@ -24,3 +24,17 @@ from placebo to pre-specified control and benchmark: Table 1.1's published compl
 (12.21 → 11.92 yr, p.9) gives it a non-zero prior, so the pre-period window is the only null
 placebo. (2) The productivity revision is quoted with its platform (1.2pp Claude.ai / 1.0pp API,
 p.48), not as "about 1.0". MDE stated on nominal N with the Kish effective N required beside it.
+
+**Amendment pass** (`posts/post4/notes/feasibility.md` 7a083a6; `room/steward-2026-09-16-feasibility-post4.md`).
+All five applied: success = published `yes` `_pct` (three categories, `not_classified` = folded
+sub-15 residual; `yes/(yes+no)` withdrawn, folded mass carried as the published error bound); the
+inert "`_count` ≥ 15" rule moved to `onet_task_count`; instrument restated at 2,140 of 2,524 (2,065
+of 2,427); H1 now **unweighted** (MDE |r| ≈ 0.0569) with the usage-weighted estimate as required
+robustness (Kish N_eff 86.5, MDE ≈ 0.31) and §12's null written as a deliverable at the unweighted
+bound; Seychelles netting a required §10 run (largest mover −1.8160 → −1.2712 pp), regressor
+uncorrectable.
+
+Also carried: samples A/B/C, B primary; H2 split on the 1,782 published work shares; H4 restated as
+floor-crossing (86 exits, 140 entrants; MDEs 7.70 / 5.98 pp); API leg at 1,686; Figure 2.2 as the
+replication target (66.9060% → 67%, `_count` 999,875; API 49.3638% → 49%). §1, §5 and the
+hypotheses' substance unchanged; 394 lines.
