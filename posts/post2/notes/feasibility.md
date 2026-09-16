@@ -145,17 +145,39 @@ published "35% of conversations on Claude.ai". On the 2010 vintage those same pa
 except Computer and Mathematical and Office and Administrative Support, which are wrong in
 opposite directions and whose **sum** matches on both vintages. That is the tell.
 
-**What the recode actually is, and why the post must carry it.** 337 of 20,081 (task, code) pairs
-change major group between the vintages, and one occupational move does almost all the work:
-**43-9011 "Computer Operators" (2010) → "Computer Occupations, All Other" 15-1299.\* (2019)**,
-i.e. from SOC 43 to SOC 15. The mass it moves is 3.83 pp of the API's matched mass in August,
-**6.92 pp in November and 9.32 pp in February** (3.18 / 2.76 / 2.64 pp on Claude.ai). Within that,
-**one task** — "perform routine system administrative functions such as troubleshooting,
-back-ups, and upgrades." — runs **1.2396 → 3.9479 → 6.7260** on the API (counts 11,710 → 38,355 →
-67,260) against **1.6426 → 1.2693 → 1.4451** on Claude.ai. So the published "+14% API" is, in
-large part, one O\*NET task whose API share grew 5.4× and which counts as coding only under the
-2019 taxonomy. This is the brief's own H4 (call-splitting) showing up inside the replication
-target, and it should be reported as the first result exactly as §8 provides.
+**What the recode actually is, and why the post must carry it.** *(Corrected 2026-09-16 on
+`room/referee-2026-09-16-post2-recode-correction.md`. The referee's attribution is right: my first
+version named the wrong occupation — 43-9011 Computer Operators — reported the mass on an unnamed
+base, and overstated the single task's share of the result. Re-derived with
+`data/replication/post2_recode_attribution.py`, which also returns the headline series above, so
+both numbers come from one specification.)*
+
+337 of 20,081 (task, code) pairs change major group between the vintages: **34 pairs move into SOC
+15 and 36 move out of it**. The into-15 move is the one that matters, and it comes from SOC 43. On
+**one named base, the classified (matched named) mass**, it carries **4.3615 (August), 7.8350
+(November), 10.3190 (February)** of the API's mass; the February figure is **9.3168 points of the
+geography total**, which is the number my first version mislabelled "matched mass". Two 2010 codes
+make it up, and the larger is **43-9111.01 "Bioinformatics Technicians" → 15-2099.01
+"Bioinformatics Technicians"** at 3.7385 / 7.2796 / **9.7110** of classified mass; **43-9011.00
+"Computer Operators" → 15-1299.00 "Computer Occupations, All Other"** carries only 0.6231 / 0.5554
+/ **0.6081**. On Claude.ai the same move is 3.4653 / 2.9504 / 2.8419. The out-of-15 leg is one code
+pair (15-1199.10 Search Marketing Strategists → 13-1161.01) worth 0.5623 / 0.4561 / 0.3912 on the
+API — an order of magnitude smaller, but it is why the net effect of the recode is not the into-15
+figure.
+
+Inside the into-15 move, **one task** — "perform routine system administrative functions such as
+troubleshooting, back-ups, and upgrades.", which the shipped O\*NET 20.1 statements file holds
+under **43-9111.01 Bioinformatics Technicians and no other code** — runs **1.2396 → 3.9479 →
+6.7260** on the API (counts 11,710 → 38,355 → 67,260) against **1.6426 → 1.2693 → 1.4451** on
+Claude.ai; in February it is 7.4495 of classified mass, i.e. 72% of the into-15 move. But it is
+**about a third of the published result, not most of it**: drop the task and the 2019-vintage API
+leg is still **+10.0054%** (53.2231 → 58.5483), against +3.24% on the shipped vintage. So the
+published "+14% API" is a taxonomy revision first and a fast-growing task second, and the post must
+say both. That the task grew 5.4× on the enterprise surface and not on the consumer one is
+**consistent with** the brief's H4 (call-splitting); it is not a demonstration of it — no file
+attributes a generic system-administration statement, filed by O\*NET under Bioinformatics
+Technicians, to Claude Code or to agentic call-splitting. Report it as the first result exactly as
+§8 provides, in that language.
 
 **Level comparability, stated.** The reproduction is a *task* taxonomy wearing occupation labels
 (§Traps 36: occupation is inferred from the task, never from the user), and the surfaces' units
@@ -225,10 +247,11 @@ The mass difference is what matters: in February the coding set carries **46.31*
 **55.29** (2019) of the API's 83.22 panel mass, and 29.42 vs 31.61 of Claude.ai's 80.89. Since the
 post reproduces the report's number on the 2019 vintage, the coding/non-coding split should be on
 the 2019 vintage too, with the 2010 split reported as the robustness cut; otherwise the post's
-"coding set" and its replicated number mean different things. Note also that H4's mechanism is
-concentrated in the one task named in §2, which is in SOC 15 only under the 2019 recode — so the
-vintage choice is not cosmetic, it is close to the hypothesis itself. The brief cites post1 for
-the task → SOC join and the multi-holder rule (LL-32: allocation rules move the SOC-15 share by
+"coding set" and its replicated number mean different things. Note also that the single task named
+in §2 — the system-administration statement, in SOC 15 only under the 2019 recode — is inside the
+coding set on one vintage and outside it on the other, so the vintage choice is not cosmetic, it
+sits next to the hypothesis. It is *consistent with* H4, not evidence for it. The brief cites post1
+for the task → SOC join and the multi-holder rule (LL-32: allocation rules move the SOC-15 share by
 ≤0.17 pp, confirmed again here — splitting over codes and over Titles agree to four decimals); the
 *vintage* is a separate choice and post1 does not make it.
 
@@ -268,10 +291,15 @@ Feasible, with the coverage stated.
 Every cut in §8 exists at the grain and coverage the design assumes, the 1,241-task panel and its
 mass reproduce exactly, and the published number the post extends reproduces to +14.3885% (API)
 and −17.5208% (Claude.ai) against the report's "+14%" and "−18%" — but **only on the 2019
-O\*NET-SOC vintage, which no Economic Index release ships**; on the shipped 2010-vintage crosswalk
-the API leg is +3.24%, and the entire difference is one occupational recode (43-9011 Computer
-Operators → 15-1299.\* Computer Occupations, All Other) carrying 9.32 pp of February API mass, most
-of it one task whose API share grew 5.4× between August and February. Four things in §8 therefore
+O\*NET-SOC vintage, which no Economic Index release ships**; on the shipped 2010-vintage file
+the API leg is +3.24%. The whole difference is the SOC 43 → SOC 15 move — **10.3190 of February
+API classified mass, i.e. 9.3168 points of the geography total** — of which **43-9111.01
+Bioinformatics Technicians → 15-2099.01** carries 9.7110 and 43-9011.00 Computer Operators →
+15-1299.00 only 0.6081 *(attribution corrected 2026-09-16 on
+`room/referee-2026-09-16-post2-recode-correction.md`; my first version named the second of those)*.
+One task inside the move, the system-administration statement O\*NET files under Bioinformatics
+Technicians, grew 5.4× on the API and is about a third of the result: without it the 2019 leg is
+still +10.0054%. Four things in §8 therefore
 need amending once, before the pre-registration: (i) the API **does** publish `onet_task_count`,
 so the H3 level diagnostic runs on both surfaces, not one; (ii) "Supplementary data. None." is
 wrong — the O\*NET-SOC 2010→2019 crosswalk is an external input, fetched and checksummed at

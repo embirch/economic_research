@@ -563,13 +563,27 @@ holder major group and renormalises the table — run on the 2019 recode it retu
 2010 file it reproduces the August `soc_occupation` facet to **0.0000 pp** across all 22 groups. The other seven
 Figure A.1 panels also land on the appendix's axis readings on this specification. **The Claude.ai
 leg reproduces on either vintage; the API leg only on 2019** — and 337 of 20,081 (task, code)
-pairs change major group, of which one move does nearly all the work: **43-9011 "Computer
-Operators" → "Computer Occupations, All Other" 15-1299.\***, moving 3.83 / 6.92 / **9.32** pp of
-API matched mass (3.18 / 2.76 / 2.64 on Claude.ai). Inside that, a single task — "perform routine
-system administrative functions such as troubleshooting, back-ups, and upgrades." — runs
+pairs change major group, **34 pairs into group 15 and 36 out of it**, and the into-15 move does
+nearly all the work. Stated on the classified (matched named) base it is **4.3615 / 7.8350 /
+10.3190** of API mass across the three waves — the February figure is **9.3168 points of the
+geography total** — and 3.4653 / 2.9504 / 2.8419 on Claude.ai. Two 2010 codes make it up, and the
+big one is **43-9111.01 "Bioinformatics Technicians" → 15-2099.01 "Bioinformatics Technicians"**
+(3.7385 / 7.2796 / **9.7110** of classified mass); **43-9011.00 "Computer Operators" → 15-1299.00
+"Computer Occupations, All Other"** carries only 0.6231 / 0.5554 / 0.6081. The out-of-15 leg is a
+single code pair (15-1199.10 Search Marketing Strategists → 13-1161.01), 0.5623 / 0.4561 / 0.3912
+on the API. *(Attribution corrected in log entry (m) on the referee's note
+`room/referee-2026-09-16-post2-recode-correction.md`: the first version of this paragraph named
+43-9011 as the carrier and reported the geography-total figure as "matched mass".)* Inside the
+into-15 move, a single task — "perform routine system administrative functions such as
+troubleshooting, back-ups, and upgrades.", which the shipped statements file holds under
+Bioinformatics Technicians and **no other code** — runs
 **1.2396 → 3.9479 → 6.7260** on the API (counts 11,710 → 38,355 → 67,260) against 1.6426 → 1.2693
-→ 1.4451 on Claude.ai. So the published +14% is one taxonomy revision plus one fast-growing task:
-**never quote it without the vintage**. Scripts: `data/replication/soc15_figA1_2026_03.py`,
+→ 1.4451 on Claude.ai, 7.4495 of February API classified mass (72% of the move). It is worth
+**about a third** of the published change, not most of it: **drop the task and the 2019 API leg is
+still +10.0054%** (53.2231 → 58.5483). So the published +14% is a taxonomy revision first and a
+fast-growing task second: **never quote it without the vintage**, and do not attribute the task to
+Claude Code — no file identifies Claude Code records. Scripts:
+`data/replication/soc15_figA1_2026_03.py`, `data/replication/post2_recode_attribution.py`,
 `data/fetch/supplementary_onet.py`. Do **not** substitute a later O\*NET database for the
 crosswalk: a text join to O\*NET 27.3 matches only ~76% of named mass (→ +12.58%) and the
 Task-ID bridge only ~75% (→ +24.23%).
@@ -1828,8 +1842,11 @@ block non-browser downloads).
   1. **The +14% / −18% of `economic-index-2026-03-report` p.7 reproduces at +14.3885% and
      −17.5208%, but only after recoding the shipped 2010 O\*NET-SOC codes to the 2019 vintage**
      the report's own footnote 2 (p.11) names. On the shipped file the API leg is **+3.24%**.
-     Full specification, level series and the mechanism (43-9011 Computer Operators →
-     15-1299.\*, 9.32 pp of February API mass; one task at 1.2396 → 3.9479 → **6.7260**) are in
+     Full specification, level series and the mechanism (the SOC 43 → 15 move, 10.3190 of February
+     API classified mass = 9.3168 points of the geography total, carried by **43-9111.01
+     Bioinformatics Technicians → 15-2099.01** with only 0.6081 from 43-9011.00 Computer Operators
+     — attribution corrected in entry (m); one task at 1.2396 → 3.9479 → **6.7260**, worth about a
+     third of the change) are in
      `## Conventions` → "SOC major groups from `onet_task`, and the 2019 recode". February
      Claude.ai comes out at **34.6150** = the published 35%, and the other seven Figure A.1
      panels land on the appendix's axis readings.
@@ -2061,4 +2078,54 @@ block non-browser downloads).
   #   sample less SYC -> r 0.3586 / R2 0.1286 / beta 0.7544 / N 116
   # MDE inputs: sd 3.400 / 3.328 pp; Kish n_eff 11.02 / 10.39 of 115 (top-3 weight 37.9 / 39.9%);
   #   tercile MDE 2.18 / 2.14 pp unweighted, 7.02 / 7.08 pp count-weighted; detectable r 0.265
+  ```
+
+- **2026-09-16 (m) — the 2010→2019 recode's SOC 43 → 15 mass is Bioinformatics Technicians, not
+  Computer Operators.** Correction, on `room/referee-2026-09-16-post2-recode-correction.md`
+  (referee, `aa1c9f7`), verified with a new script,
+  `data/replication/post2_recode_attribution.py` (output
+  `data/replication/results/post2_recode_attribution.csv`). Entry (i) 1 and
+  `## Conventions` → "SOC major groups from `onet_task`, and the 2019 recode" carried the wrong
+  occupation and an unnamed base; both are now corrected, as are
+  `posts/post2/notes/feasibility.md` §2/§6, `posts/post3/notes/feasibility.md` §1/§2 and
+  `data/releases/release_2026_03_24.md` §Reproduced. What the check found:
+
+  1. **The sysadmin task has exactly one holder.** "perform routine system administrative functions
+     such as troubleshooting, back-ups, and upgrades." appears in the shipped O\*NET 20.1
+     `onet_task_statements.csv` under **43-9111.01 Bioinformatics Technicians** (Task ID 17724) and
+     under no other O\*NET-SOC code; `2010_to_2019.csv` sends 43-9111.01 → **15-2099.01
+     Bioinformatics Technicians**. 43-9011.00 Computer Operators → 15-1299.00 does exist and does
+     move into group 15, but it is not where the task or the mass is.
+  2. **The move, on both bases.** 34 of the 337 major-group-changing (task, code) pairs move into
+     group 15 (two 2010→2019 code pairs: 43-9111.01 on 19 task keys, 43-9011.00 on 15) and 36 move
+     out (one pair, 15-1199.10 Search Marketing Strategists → 13-1161.01). February 1P API: the
+     into-15 move is **9.3168 of the geography total = 10.3190 of classified (matched named) mass**
+     (matched mass 90.2876), split **9.7110** (43-9111.01) / **0.6081** (43-9011.00). August
+     4.3615 = 3.7385 / 0.6231; November 7.8350 = 7.2796 / 0.5554. Claude.ai 3.4653 / 2.9504 /
+     2.8419. Out-of-15: 0.5623 / 0.4561 / 0.3912 API. The referee's figures reproduce to the
+     decimal.
+  3. **"In large part one task" was an overstatement.** The task is 7.4495 of February API
+     classified mass, 72% of the into-15 move — but the 2019-vintage API leg without it is still
+     **+10.0054%** (53.2231 → 58.5483) against +14.3885% with it and +3.2433% on the shipped
+     vintage, so the task is **about a third** of the published relative change and the rest of the
+     taxonomy revision is the other two thirds. Claude.ai without it: 40.9117 → 33.5827
+     (−17.9143%).
+  4. **The allocation unit is the (task key, 2019 code) pair, and the dedup matters.** 18 of the
+     20,081 (key, 2010 code, 2019 code) rows are a second 2010 source for a (key, 2019 code)
+     already present; counting them twice raises February API matched mass from 90.2876 to 90.6651
+     and the SOC-15 share from 61.6363 to 61.7795. Dedup on (key, 2019 code) — as
+     `soc15_figA1_2026_03.py` does — before weighting 1/n. None of the 18 is a 43 → 15 mover, so
+     the attribution is unambiguous.
+  5. **Nothing in the files attributes the task to Claude Code** (`## Components`), so the growth
+     is *consistent with* call-splitting and is not evidence of it. Occupation here remains a task
+     taxonomy wearing occupation labels (`## Traps` 36): a generic system-administration statement
+     filed under Bioinformatics Technicians is the clearest example in the corpus.
+
+  ```bash
+  # (m) command, run 2026-09-16 from /workspace/economic_research
+  python data/replication/post2_recode_attribution.py
+  # holder lookup: statements Task.str.lower().str.strip() == the sysadmin string -> 43-9111.01 only
+  # mass: pairs deduped on (key, c2019), w = 1/nunique(c2019); alloc = onet_task_pct * w;
+  #   classified base = alloc.sum() per frame; 43->15 = c2010[:2]=='43' & c2019[:2]=='15'
+  # without-task legs: drop the key before the merge, renormalise over the remaining matched mass
   ```

@@ -1,0 +1,47 @@
+=== who holds the sysadmin task in the shipped O*NET 20.1 statements
+  43-9111.01  Bioinformatics Technicians  (Task ID 17724)
+  crosswalk: 43-9111.01 Bioinformatics Technicians  ->  15-2099.01 Bioinformatics Technicians
+  crosswalk merge: 20081 (key, 2010 code) rows in, 0 with no 2019 code
+  allocation units: 20063 (key, 2019 code) pairs (18 duplicate-source rows dropped)
+
+=== SOC 43 (2010) -> SOC 15 (2019): mass by source code, per frame
+  aug_api  matched mass  87.8383 | 43->15 total  3.8311 of geography total =  4.3615 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      3.2838 geo /  3.7385 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.5473 geo /  0.6231 classified
+      (out of 15:  0.4939 geo /  0.5623 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+  nov_api  matched mass  88.2790 | 43->15 total  6.9167 of geography total =  7.8350 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      6.4264 geo /  7.2796 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.4903 geo /  0.5554 classified
+      (out of 15:  0.4027 geo /  0.4561 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+  feb_api  matched mass  90.2876 | 43->15 total  9.3168 of geography total = 10.3190 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      8.7678 geo /  9.7110 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.5490 geo /  0.6081 classified
+      (out of 15:  0.3532 geo /  0.3912 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+  aug_ai   matched mass  91.8727 | 43->15 total  3.1836 of geography total =  3.4653 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      2.6483 geo /  2.8826 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.5353 geo /  0.5827 classified
+      (out of 15:  0.5215 geo /  0.5677 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+  nov_ai   matched mass  93.5144 | 43->15 total  2.7590 of geography total =  2.9504 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      2.4626 geo /  2.6334 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.2964 geo /  0.3170 classified
+      (out of 15:  0.4756 geo /  0.5085 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+  feb_ai   matched mass  92.9714 | 43->15 total  2.6422 of geography total =  2.8419 of classified
+      43-9111.01 Bioinformatics Technicians             -> 15-2099.01 Bioinformatics Technicians      2.3865 geo /  2.5669 classified
+      43-9011.00 Computer Operators                     -> 15-1299.00 Computer Occupations, All Othe  0.2557 geo /  0.2750 classified
+      (out of 15:  0.4551 geo /  0.4895 classified, all of it 15-1199.10 Search Marketing Strategists -> 13-1161.01)
+
+=== SOC 15 share, 2019 vintage, with and without the sysadmin task
+  api with    sysadmin task: 53.8833 -> 59.2074 -> 61.6363   Aug->Feb +14.3885%
+  api without sysadmin task: 53.2231 -> 57.2977 -> 58.5483   Aug->Feb +10.0054%
+  ai  with    sysadmin task: 41.9682 -> 38.5001 -> 34.6150   Aug->Feb -17.5208%
+  ai  without sysadmin task: 40.9117 -> 37.6539 -> 33.5827   Aug->Feb -17.9143%
+
+=== the sysadmin task's own share (onet_task_pct, geography total)
+  aug_api   1.2396
+  nov_api   3.9479
+  feb_api   6.7260
+  aug_ai    1.6426
+  nov_ai    1.2693
+  feb_ai    1.4451
+
+written: data/replication/results/post2_recode_attribution.csv

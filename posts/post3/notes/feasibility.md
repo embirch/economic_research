@@ -140,9 +140,11 @@ task counts and report the corrected November point beside the published one.
 Exploratory test 2 (the two next-largest SOC groups): `25` Educational Instruction and Library and
 `43` Office and Administrative Support both exist in the rebuild at every wave and surface — but on
 the 2010 vintage the API's group 43 is 11.08 / 15.14 / 17.56 and on the 2019 recode 6.66 / 7.21 /
-7.17, because `43-9011 Computer Operators` moves **into** group 15 in the 2019 taxonomy
-(`data/ATLAS.md` §Conventions, "SOC major groups from `onet_task`, and the 2019 recode"). The
-comparison-group test is therefore vintage-defined too. **CONFIRMED WITH CAVEAT.**
+7.17, because two group-43 occupations move **into** group 15 in the 2019 taxonomy — chiefly
+`43-9111.01 Bioinformatics Technicians → 15-2099.01`, with `43-9011.00 Computer Operators →
+15-1299.00` a distant second (§2 below; `data/ATLAS.md` §Conventions, "SOC major groups from
+`onet_task`, and the 2019 recode"). The comparison-group test is therefore vintage-defined too.
+**CONFIRMED WITH CAVEAT.**
 Exploratory test 1 (tasks entering/leaving the top ten): names are published, so it is computable;
 all ten of Claude.ai's SOC-15 top-ten tasks are also published on the API in every wave, and the
 cross-surface SOC-15 node overlap is 270 / 282 / 284 nodes — H2's signature is measurable.
@@ -185,10 +187,20 @@ panels land too.
 
 **Why the brief's series does not reproduce the API leg.** The brief holds the shipped O\*NET DB
 20.1 statements fixed across all three waves (§7(iv)), which is the **2010** O\*NET-SOC taxonomy.
-The published figure is on the **2019** taxonomy, under which `43-9011 Computer Operators` and its
-tasks move into major group 15; on the API that single move carries 3.83 / 6.92 / **9.32 pp** of
-matched mass across the three waves (`data/ATLAS.md`, added 2026-09-16 (i), which also names the
-one fast-growing task inside it). So the +14% is a real, reproducible number **about the 2019
+The published figure is on the **2019** taxonomy, under which 337 of 20,081 (task, code) pairs
+change major group — **34 pairs into group 15 and 36 out of it**. On the API the into-15 move
+carries **4.3615 / 7.8350 / 10.3190** of *classified* mass across the three waves (the February
+figure is 9.3168 points of the geography total), of which `43-9111.01 Bioinformatics Technicians →
+15-2099.01` is 3.7385 / 7.2796 / **9.7110** and `43-9011.00 Computer Operators → 15-1299.00` only
+0.6231 / 0.5554 / 0.6081; on Claude.ai the same move is 3.4653 / 2.9504 / 2.8419. *(Attribution
+corrected 2026-09-16 on `room/referee-2026-09-16-post2-recode-correction.md`: my first version, and
+`data/ATLAS.md` before its dated entry (m), named 43-9011 as the carrier and gave the
+geography-total figure as "matched mass". Re-derived with
+`data/replication/post2_recode_attribution.py`, which reproduces the re-implementation row of the
+table above — 53.8833 → 59.2074 → 61.6363, +14.3885% — from the same specification.)*
+The fast-growing task inside the move — "perform routine system administrative functions…" — is
+held by 43-9111.01 and nothing else, and is worth about a third of the published change: without it
+the 2019 API leg is +10.0054%. So the +14% is a real, reproducible number **about the 2019
 taxonomy**, and the brief's +3.3% is a real number about the 2010 one. Both are correct; neither is
 quotable without the vintage. A third check, run independently today: re-joining the task text to a
 later O\*NET **database** instead of applying the crosswalk (DB 27.3 → 30.2) reproduces the
