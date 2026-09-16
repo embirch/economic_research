@@ -140,9 +140,11 @@ saying this; the two sides are different populations. Command in `## Dated log 2
 Global means, same documented units in both documentations (`ai_autonomy` "1-5 scale",
 `human_only_time` hours, `human_with_ai_time` minutes): `ai_autonomy` **3.382 (Nov) → 3.407 (Feb) →
 2.720 (Apr) → 2.740 (May)**; `human_only_time` 3.092 → 3.063 → **4.590 → 4.730**;
-`human_with_ai_time` 15.352 → 14.303 → **38.650 → 40.120**. `human_education_years` (12.21 → 11.92 →
-11.89 → 11.79), `ai_education_years` and `human_only_ability` (87.9 → 87.8 → 87.8 → 87.6) do **not**
-break. Nothing in the June documentation announces a rescaling, so a June-to-long-wave comparison of
+`human_with_ai_time` 15.352 → 14.303 → **38.650 → 40.120**. **`multitasking_pct` breaks hardest of all**: 9.325 (Nov) → 9.889 (Feb) →
+**22.290 (Apr) → 22.920 (May)**, a 2.3× jump. `human_education_years` (12.21 → 11.92 → 11.89 →
+11.79) and `human_only_ability` (87.91 → 87.76 → 87.79 → 87.62) do **not** break;
+`ai_education_years` moves +0.63. **`task_success` has no June counterpart at all** — no
+`metric_id` in either June file matches `success`, so the facet stops at 2026-03-24. Nothing in the June documentation announces a rescaling, so a June-to-long-wave comparison of
 autonomy or of either time primitive — including any implied speedup, which moves from ~12× to ~7× —
 is not on one axis. State it or stay inside one schema family.
 
@@ -648,9 +650,15 @@ Consolidated; each attributed. Read this list before writing a loader.
 
 **Units and scales**
 8. **Hours versus minutes.** 2026-01-15: `human_only_time` is in **hours**, `human_with_ai_time`
-   in **minutes** — a speedup is `hours × 60 ÷ minutes` `[R4 §Traps 2]`. 2026-03-24: **both** are
-   in hours and the report prints minutes (3.0629 h × 60 = 183.77 min, the published figure)
-   `[R5 §Traps 3]`. **(re-run 2026-09-16.)** 2026-06-26: `human_only_time_mean` hours,
+   in **minutes** — a speedup is `hours × 60 ÷ minutes` `[R4 §Traps 2]`. 2026-03-24: the report
+   prints `human_only_time` in minutes while the file is in **hours** (3.0629 h × 60 = 183.77 min,
+   the published figure) `[R5 §Traps 3]`. **(re-run 2026-09-16.)** **Refinement, 2026-09-16 (g):
+   that "both in hours" reading applies to `human_only_time` only.** At global in 2026-03-24
+   `human_with_ai_time_mean` is 14.303, which is **minutes**: the hours reading would make Claude
+   slower than no Claude, and the hours × 60 ÷ minutes rule returns a global speedup of **12.71×**,
+   consistent with the November wave's 11.93× and with the report's own 9×–12× education gradient
+   (the fourth report defines speedup as "human-alone time divided by the human-with-AI time").
+   Use hours ÷ minutes in **both** 2026 long waves. 2026-06-26: `human_only_time_mean` hours,
    `human_with_ai_time_mean` minutes and the only metric exceeding 100 `[R6 §Metrics]`.
 9. **`penetration` is not a share.** Its support is `{0} ∪ [0.5, 1]`; a positive value is the
    automation weight α, and 92.5% of the mass is at 0 `[LMI §Traps 3]`.
@@ -791,7 +799,7 @@ Consolidated; each attributed. Read this list before writing a loader.
 | 2025-02-10, 2025-03-27 | `onet_task_statements.csv`: 19,530 rows, 18,429 distinct task texts, 974 O\*NET-SOC codes; join key is the **lower-cased, stripped** task text | 10-char O\*NET-SOC 2019 (`11-1011.00`); `SOC_Structure.csv` is a **ragged** 2018 SOC hierarchy with 7-char codes | the two code systems do not join below the major group (687 of 775 base codes match) `[R1 §Traps 6]` |
 | 2025-09-15 | `data/intermediate/onet_task_statements.csv` — **O\*NET DB 20.1**, 19,530 × 9 (adds `soc_major_group`) | same, plus `soc_structure.csv` | `soc_occupation` clusters are the 22 SOC major groups + `not_classified` `[R3 §Files]` |
 | 2026-01-15, 2026-03-24 | task cluster names are lower-cased O\*NET task statements; **no reference file ships**. The 2026-01-15 join to the 2025-09-15 O\*NET file is clean (3,168/3,168; API 2,251/2,251) | none in-file | March 2026 report footnote 3 says it used **2019** O\*NET-SOC codes while every shipped crosswalk is the 2010 vintage — any SOC rebuild is an approximation `[R4 §Reproduced]`, `[R5 §Reproduced]` |
-| 2026-06-26 | **O\*NET 30.2** (Feb 2026), with a rebuilt DWA-first classifier. `node_external_id` = O\*NET **Task ID** at L0 and O\*NET **element IDs** at L1/L2/L3 (DWA/IWA/GWA) | `soc_occupation` L0 = `##-####.##`, L1 = 2-digit major group (22 groups, **no 55 Military**) | only 2,258 of 2,861 Task IDs and 543 of 718 SOC codes join to the 2025-09-15 O\*NET file; **the DWA/IWA/GWA element ids join to nothing in the repository** `[R6 §Traps 13]` |
+| 2026-06-26 | **O\*NET 30.2** (Feb 2026), with a rebuilt DWA-first classifier. `node_external_id` = O\*NET **Task ID** at L0 and O\*NET **element IDs** at L1/L2/L3 (DWA/IWA/GWA) | `soc_occupation` L0 = `##-####.##`, L1 = 2-digit major group (22 groups, **no 55 Military**) | only 2,258 of 2,861 Task IDs and 543 of 718 SOC codes join to the 2025-09-15 O\*NET file; the DWA/IWA/GWA element ids join to nothing **inside** the repository `[R6 §Traps 13]` — but they do join **outside** it: **149 of the 165 IWA ids in OpenAI's public `usa_share_of_messages_by_onet_iwa_month.csv` match the 215 `onet` `hierarchy_level == 2` `node_external_id`s** of this wave, which is the only cross-provider task key found so far (added 2026-09-16 (g); see `## Supplementary sources`) |
 | `labor_market_impacts/` | **O\*NET 27.0–27.3** — a set-identical match on all 17,992 task strings, and all 756 titles match 27.2 exactly | 2018 SOC detail, 7 chars, no aggregates | the O\*NET file shipped inside the Economic Index releases is the **wrong vintage**: 15,682 of 17,992 tasks and 670 of 756 codes match. Download O\*NET 27.x `[LMI §Traps 4, V14]` |
 
 **Request-cluster taxonomies are bottom-up and are NOT comparable across waves.**
@@ -1063,9 +1071,29 @@ each row gives the join key to the Index and the merge audit actually run:
 **23,543 rows, 18,831 Task IDs, 2,085 DWA ids**. All **17,992** distinct `task_penetration.csv`
 strings match O\*NET 27.3 `Task Statements.txt` and **17,565 (97.6%)** carry at least one DWA.
 
-**Still unverified leads:** Census `PctUrbanRural_State.txt`; the OpenAI Signals CSV bundle
-(`cdn.openai.com/signals/data-download-csv.zip`); the Census gazetteer (reported to block
-non-browser downloads).
+**OpenAI Signals — fetched and profiled 2026-09-16 (g), and it carries the only cross-provider
+task key found so far.** `curl -sL https://cdn.openai.com/signals/data-download-csv.zip` returns
+**200, 1,172,144 B** (the landing page `openai.com/index/signals/` returns 403; the zip does not).
+It holds **25 CSVs** plus `README.pdf`, all **cp1252**, all shares of *messages* (never counts),
+monthly **2024-07 → 2026-06** (24 months):
+
+| file | grain | size |
+|---|---|---|
+| `usa_share_of_messages_by_onet_iwa_month.csv` and `…work_related_onet_iwa…` | month × O\*NET **IWA element id** (`4.A.1.a.1.I01`), US only | 3,960 rows, **165 IWAs** |
+| `share_of_messages_by_work_related_ask_do_express_country_month.csv` | month × country (ISO-2) × work_related × {asking, doing, expressing} | 14,187 rows, **125 countries** |
+| `share_of_messages_by_topic_country_month.csv`, `…_age_group_…`, `…_gender_…` | month × country × topic / age band / gender | up to 1.75 MB |
+| `share_of_messages_by_country_quarter_rank.csv`, `usa_share_of_messages_by_state_2025_rank.csv` | country-quarter ranks; US state ranks | 15,087 B / 1,077 B |
+
+**The join key:** **149 of the 165** IWA ids match the 215 `onet` `hierarchy_level == 2`
+`node_external_id`s of `release_2026_06_26` — so an Index-to-OpenAI task comparison exists at IWA
+level, for the US, monthly. Two cautions: OpenAI's unit is a **message** and the Index's a
+**conversation**; and the `asking / doing / expressing` split is OpenAI's own taxonomy, not the
+collaboration facet (the corpus notes ~49% "Asking" against ~40% "Doing"). Licence and citation
+terms are in the bundle's `README.pdf` only — read it before use; nothing in the zip states a
+machine-readable licence.
+
+**Still unverified leads:** Census `PctUrbanRural_State.txt`; the Census gazetteer (reported to
+block non-browser downloads).
 
 ## Dated log
 
@@ -1517,4 +1545,105 @@ non-browser downloads).
   # wage rebuild: onet_task_statements(20.1) task text -> O*NET-SOC[:7] -> wage_data.SOCcode
   #   (MedianSalary>100) mean per task / 2080, weighted by global onet_task_pct -> 35.08 / 34.36
   curl -sL https://raw.githubusercontent.com/microsoft/ai-diffusion-report/main/data/US/State_Rankings_2026Q1.csv
+  ```
+
+- **2026-09-16 (g) — the long-list feasibility batch 3 (LL-29 … LL-42).** The last fourteen
+  candidate cuts, checked for `room/lead-2026-09-16-longlist-feasibility-batch-3.md`; answers in
+  `room/steward-2026-09-16-longlist-feasibility-batch-3-answers.md`. New facts:
+
+  1. **`multitasking` is a full facet, and it is the fourth metric that breaks at the June
+     boundary.** It exists at all three grains in both 2026 waves (171 / 176 countries, 955 / 1,102
+     sub-national units) plus `onet_task::multitasking` at global over 3,169 / 3,259 tasks with
+     `_count` and `_pct`. Global `yes` is **9.3248 → 9.8892**, then **22.29 / 22.92** in June — see
+     `## Components`. Country residual: `not_classified`, median 9.09% / 11.58%.
+  2. **Both `use_case` intersections exist, and the residual label differs *within* a wave.**
+     `onet_task::use_case` (3,169 / 3,259 nodes) and `request::use_case` (737 / 730 nodes) at
+     global in both waves. Global `use_case` carries `not_classified` (0.0153) in Nov and `none`
+     (0.0298) in Feb — but the **intersections in Feb carry both labels**, so neither may be
+     hard-coded at either grain. Tasks with a published work/coursework split hold **87.92** (Nov)
+     and **86.96** (Feb) of the 93.51 / 92.97 named-task mass.
+  3. **The June `overall` block is *not* ragged: every published unit-month carries all 32
+     `artifact_*_pct` metrics.** 235 of 235 country unit-months, 1,188 of 1,188 subregion
+     unit-months and both global months publish all 32 (**114** countries and **536** subregions in
+     *both* months; the rest are May-only). All 114 also carry the AUI. The raggedness of
+     `[R6 §Metrics]` is a property of the **taxonomy blocks**, not of `category_name == overall`,
+     and subregions **do** carry the artifact metrics at `overall` — the `pct`-only rule applies
+     inside the ladders.
+  4. **The occupation-allocation rule barely matters in this data, because tasks almost never have
+     two holders.** In the O\*NET 20.1 statements a task text maps to one SOC code for all but
+     **72 / 91 / 84** tasks (Aug / Nov / Feb), i.e. **4.05% / 5.57% / 4.50%** of named usage mass;
+     the flat family is the same (84 tasks, 2.56% of mass). Equal-split, employment-weighted and
+     modal-holder allocations move the SOC-15 share by ≤0.17 pp and the 22-group ranking by at most
+     **one** position (Aug) or **none** (Nov, Feb).
+  5. **The external task → SOC rebuild reproduces Anthropic's own occupation facet.** On the
+     August-2025 wave the reconstruction gives Computer & Mathematical **39.03%** on the classified
+     base and **35.86%** on the all-conversation base, against the published `soc_occupation`
+     facet's **39.0412%** and **35.8771%** — a 0.02 pp match. This licenses occupational rebuilds
+     in the 2026 waves, which ship no `soc_occupation` facet. Reconstructed series: Claude.ai
+     39.03 → 36.02 → 32.23 (classified base); 1P API **49.98 → 51.73 → 51.61**, i.e. 45.67 / 46.60
+     on the all-conversation base, matching the published "~46%".
+  6. **The collaboration residual is one node, not two.** `collaboration_pct` sums to exactly 100
+     in all six long-wave frames, but `not_classified` is **0.0001** (Aug Claude.ai), 0.0015 (Aug
+     API), 0.0001 (Nov API) and **absent entirely** from Nov Claude.ai, Feb Claude.ai and Feb API.
+     The substantive residual is `none`: Claude.ai 3.8609 → 2.9612 → 3.0490 against 1P API
+     **10.2116 → 11.0413 → 15.1944**. June has **no `not_classified` metric at all** and its six
+     patterns sum to 99.99–100.01; `collaboration_none_pct` is 2.58 / 2.61 (Claude.ai) and
+     5.73 / 5.51 (API).
+  7. **The v1/v2 pair bounds a large mix change but identifies nothing.** 2,781 task names are
+     common to `task_pct_v1.csv` and `_v2.csv` (97.35% / 98.11% of each file's mass, 733 v1-only,
+     584 v2-only); renormalised on the common set the total-variation distance is **27.24 pp**,
+     the largest single-task move 1.85 pp ("modify existing software to correct errors…"), Spearman
+     **0.7475**. Model, classifier and relevance filter all change together and neither file has
+     counts, so the 27 pp cannot be attributed.
+  8. **Three-wave country panel: 113 countries** clear 200 conversations in Aug 2025, Nov 2025 and
+     Feb 2026 together, and all 113 carry `task_success` in Feb 2026. The ISO-3 (enriched) → ISO-2
+     (raw) bridge through `iso_country_codes.csv` is clean for all 115 Aug-2025 thresholded
+     countries, 0 unmapped.
+  9. **The matched task panel across the three long waves is 2,282 named nodes** (90.94 / 91.27 /
+     90.30 of each wave's task mass). The two flat windows can be added by task name: **1,988** of
+     the panel's nodes appear in `task_pct_v2.csv` (92.27% of its mass) and **2,015** in `_v1.csv`
+     (91.97%), with **1,868** nodes present in all five windows — but the flat waves have no counts,
+     no geography and a different relevance filter.
+  10. **The boundary comparability list** (Claude.ai global, Feb 2026 → mean of April/May, same
+      documented units). *Comparable, moves under 1.1 points:* `human_only_ability_pct` (−0.06),
+      `human_education_years_mean` (−0.08), `collaboration_none_pct` (−0.45),
+      `collaboration_directive_pct` (−1.09), `use_case_work_pct` (−0.79). *Moves 1.8–5.7 points, so
+      comparable only with the break stated:* `collaboration_validation_pct` (−1.78),
+      `use_case_personal_pct` (−2.95), `use_case_coursework_pct` (+3.78),
+      `collaboration_task_iteration_pct` (+4.56), `collaboration_feedback_loop_pct` (+4.46),
+      `collaboration_learning_pct` (−5.70). *Breaking:* `ai_autonomy_mean` (−0.68),
+      `ai_education_years_mean` (+0.63), `human_only_time_mean` (+1.60 h),
+      `human_with_ai_time_mean` (+25.08 min), `multitasking_pct` (+12.72 pp). *Absent in June:*
+      `task_success`, every `_count`, every `not_classified` node. *Not comparable by construction:*
+      the `onet` node count (3,260 vs 2,451 / 2,757 on O\*NET 30.2) and the whole `request` ladder.
+  11. **The productivity threshold can be swept in the report's own unit, and the speedup
+      distribution is nearly invariant to it.** `onet_task_count` is published, so the fourth
+      report's "at least 200 observations in our sample of 1M" is applicable exactly. Nov 2025:
+      3,168 tasks / 93.51 mass / **11.93×** at the ≥15 floor → 578 tasks / 79.65 / **11.83×** at
+      ≥200 → 139 / 61.24 / 11.59× at ≥1,000. Feb 2026: 3,258 / 92.97 / **12.71×** → 616 / 78.41 /
+      **12.62×** → 148 / 58.13 / 12.25×. Moving the threshold 15 → 1,000 moves the usage-weighted
+      speedup by 0.34× (Nov) and 0.46× (Feb), so the published 1.8pp → ~5pp sensitivity lives in
+      the coverage-and-weighting step, not in the speedup distribution.
+  12. **The AUI, income and the use-case mix *do* co-exist in one wave.** In `release_2026_01_15`,
+      118 countries clear 200 conversations, **117** have a working-age population row (so the AUI
+      is rebuildable on the symmetric rule), **116** of those carry IMF 2024 GDP, and all **116**
+      carry `use_case` and `request` L2 at country grain (114 carry `onet_task`). The population and
+      GDP files are static 2024 annuals, not wave quantities, so pairing them with a later wave is
+      not a splice. In Aug 2025 the equivalent set is 114.
+
+  ```bash
+  # (g) commands, run 2026-09-16 from /workspace/economic_research
+  # facets: geography in {global,country,country-state}, facet in {multitasking, use_case,
+  #   onet_task::use_case, request::use_case, collaboration}; residual = cluster_name
+  # June overall completeness: CL[(category_name=='overall')&metric_id.str.startswith('artifact_')]
+  #   .groupby(['geo_id','date_start']).metric_id.nunique()  -> 32 everywhere
+  # allocation rules: onet_task_statements(20.1) key -> set(O*NET-SOC[:7]); equal / BLS-EP
+  #   employment-weighted / modal holder; aggregate to major group and rank
+  # v1/v2: task_pct_v1 vs _v2 on lower-cased names, renormalise on the 2,781 common -> TV 27.24 pp
+  # boundary list: long-wave global facet/variable vs June GLOBAL overall metric_id, Feb vs
+  #   mean(Apr, May)
+  # threshold sweep: pivot onet_task_pct + onet_task_count, join the two time intersections,
+  #   speedup = ho*60/hw  (hours / minutes in BOTH 2026 waves - see trap 8 refinement)
+  curl -sL https://cdn.openai.com/signals/data-download-csv.zip -o /tmp/signals.zip   # 200, 1,172,144 B
+  # IWA key: 149 of 165 OpenAI IWA ids match June onet hierarchy_level==2 node_external_id
   ```
