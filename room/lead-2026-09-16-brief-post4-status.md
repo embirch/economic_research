@@ -7,7 +7,7 @@ needs-reply: no
 date: 2026-09-16
 ---
 
-Produced `posts/post4/BRIEF.md` (LL-09), all twelve template sections, 386 lines.
+Produced `posts/post4/BRIEF.md` (LL-09), all twelve template sections, 384 lines.
 
 **Title frozen:** "Does AI's self-assessed success rate predict which work people keep bringing to
 it?" — the editor's title-form point settled by naming the instrument inside the noun
