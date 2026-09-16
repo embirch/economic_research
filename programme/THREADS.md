@@ -221,6 +221,13 @@ $37.3 (ibid., claim 11, Fig 1.4 p.8).
   diffusion roughly 10x faster than the spread of previous economically consequential technologies in the
   20th century" (`economic-index-2026-01-report`, pp.6, 15–17); three months later the same model on new
   data gives "5-9 years, rather than 2-5" (`economic-index-2026-03-report`, claim 15, p.10, fn 7 p.11).
+  **The November 2025 state Gini is published in two forms and the two publications disagree** — recorded
+  here, in one place, on 2026-09-16 (correction 13), under this map's own convention that where a number
+  exists in two forms both are given. **0.31** in `economic-index-2026-03-report` Fig 1.5 p.10, against
+  **0.32** in `economic-index-2026-01-report` p.12 body text, whose own figure inset reads 0.318 (ibid.,
+  Fig 1.6 p.13). The steward's unweighted recomputation over the 51 state values is 0.3184
+  (`ATLAS §Conventions`, Gini), which rounds to 0.32 — so the later report's 0.31 is the odd one out. Any
+  post plotting this series says which report each point came from; nothing in the corpus reconciles them.
 - **Use case shifts with national income — repeated.** Coursework share against log GDP per working-age
   capita: r = −0.542, R² = 0.293, p < 0.001, β = −4.24; personal r = 0.681, R² = 0.463, β = 3.49; work
   r = 0.142, p = 0.131 — i.e. the work relationship is not significant
@@ -243,19 +250,30 @@ $37.3 (ibid., claim 11, Fig 1.4 p.8).
 
 **(c) Where it is open.**
 
-- **The stream's one explicit "more research is needed" is here.** "This is somewhat counter-intuitive,
-  since we are controlling for the more diverse task composition across different countries. We speculate
-  that cultural and economic factors might affect the automation share, or perhaps that early adopters in
-  each country tend to use AI in a more automotive way—but more research is needed here."
-  (`economic-index-2025-09-report`, pp.26–27.)
+- **The stream's one explicit "more research is needed" is here, and it is open.** "This is somewhat
+  counter-intuitive, since we are controlling for the more diverse task composition across different
+  countries. We speculate that cultural and economic factors might affect the automation share, or perhaps
+  that early adopters in each country tend to use AI in a more automotive way—but more research is needed
+  here." (`economic-index-2025-09-report`, pp.26–27.) The pattern is **replicated** — "This mirrors a
+  finding from our 3rd Economic Index report" (`economic-index-2026-01-report`, p.35) — and neither
+  speculation is tested anywhere in the corpus. Replication is not an answer:
+  `programme/LEDGER.md` L-2025-09-R3-25 was re-graded from `partially answered` to `open` on 2026-09-16 to
+  match this line (correction 14).
 - **Convergence or divergence, as a question.** "The uneven geography of early AI adoption raises important
   questions about economic convergence… If the productivity gains are larger for high-adoption economies,
   current usage patterns suggest that the benefits of AI may concentrate in already-rich regions" (ibid.,
   p.4); "we see no evidence that low-use countries are catching up or that high-use countries are pulling
   away" (`economic-index-2026-01-report`, p.6).
-- **The convergence estimate's own precision.** "This estimate comes with a high degree of uncertainty as
-  the precision of our estimates cannot rule out much slower rates of diffusion" and "our estimates are
-  based on just three months of data" (`economic-index-2026-01-report`, pp.15, 17).
+- **The convergence estimate's own precision — the estimate was superseded, the precision question was
+  not.** "This estimate comes with a high degree of uncertainty as the precision of our estimates cannot
+  rule out much slower rates of diffusion" and "our estimates are based on just three months of data"
+  (`economic-index-2026-01-report`, pp.15, 17). The **horizon** was re-estimated three months later, from
+  2–5 years to 5–9 (`economic-index-2026-03-report`, claim 15, p.10). The **precision** was not: the 5–9
+  range "is given to reflect the different estimates from running the model in our previous report with (5
+  years) or without (9 years) weights" (ibid., fn 7, p.11) — the spread between two specifications, not an
+  interval, and no standard error, bootstrap or confidence band is published for either horizon. Status
+  aligned with `programme/LEDGER.md` L-2026-01-R4-04 and -06, `partially answered`, on 2026-09-16
+  (correction 14).
 - **Why the country Gini is non-monotonic (0.48 → 0.46 → 0.50) is not addressed** (**[inference]**,
   `economic-index-2026-03-report` item 10).
 - **Whether the automation–AUI gradient is an income gradient.** Figure 2.11 residualises on task mix only;
@@ -337,8 +355,10 @@ use cases." (ibid., OQ 13, p.17).
   labels, `economic-index-2026-01-report`, p.10); 68% / 17% in February 2026
   (`economic-index-2026-03-appendix`, Fig A.3 p.6, printed labels). Note that the published pair never sums
   to 100 (89%, 89%, 85%) and the residual is unexplained (ibid., claim 6).
-- **Agentic surfaces automate more — repeated across two publications three years apart in measurement
-  design.** Claude Code 79% automation against 49% on Claude.ai coding conversations, with Feedback Loop
+- **Agentic surfaces automate more — repeated across two publications fourteen months apart in
+  measurement design.** (`economic-index-2025-04-software-development` is 2025-04-28 and
+  `economic-index-2026-06-report` is 2026-06-26; this line read "three years apart" until 2026-09-16,
+  correction 10.) Claude Code 79% automation against 49% on Claude.ai coding conversations, with Feedback Loop
   35.8% against 21.3% and Directive 43.8% against 27.5%
   (`economic-index-2025-04-software-development`, claims 4–6); and, on the autonomy primitive, "Across all
   conversations the average difference in autonomy is 0.37 points", of which "Approximately two thirds …
@@ -369,10 +389,16 @@ use cases." (ibid., OQ 13, p.17).
   either wave through the other's classifier is reported (**[inference]**, ibid., item 11) — the report's own
   precedent for such a check is the August 2025 re-run, which moved automation from 49% to 45%
   (`economic-index-2025-09-report`, fn 4 p.11).
-- **Whether the category framework still separates cleanly on agentic surfaces.** "The boundary between
-  automation and augmentation becomes increasingly blurred with agentic tools like Claude Code… We will
-  likely need to extend the automation/augmentation framework to account for new agentic capabilities"
-  (`economic-index-2025-04-software-development`, Limitations).
+- **Whether the category framework still separates cleanly on agentic surfaces — partly addressed, not
+  closed.** "The boundary between automation and augmentation becomes increasingly blurred with agentic
+  tools like Claude Code… We will likely need to extend the automation/augmentation framework to account
+  for new agentic capabilities" (`economic-index-2025-04-software-development`, Limitations). What
+  followed sits *beside* the framework, not inside it: AI autonomy as a separate 1–5 primitive
+  (`economic-index-2026-01-report`, §2) and surface-level autonomy plus artifacts
+  (`economic-index-2026-06-report`, ch.2). **The five-pattern collaboration taxonomy is unchanged from
+  2025-02-10 to 2026-06-26** (`ATLAS §Conventions`), so the promised extension has not happened and the
+  blurring the limitation names is untested. Status aligned with `programme/LEDGER.md` L-2025-04-SWE-12,
+  `partially answered`, on 2026-09-16 (correction 14).
 - **Automation share does not vary with the education of the prompt — a published null with no statistic.**
   "the automation share is essentially unrelated to the human levels of education required to write the
   prompt (Appendix Figure A.1)" (`economic-index-2026-01-report`, pp.39–40); no fit statistic is printed in
@@ -650,7 +676,7 @@ first-authored survey paper (`survey-81k-economics-2026-04`, p.3, Fig 1).
 | Task-level penetration | `task_penetration.csv`, 17,998 rows over **17,992 distinct** task strings — "not unique on its only key; de-duplicate before joining and never lower-case first"; `penetration` **is** r̃_t = β_t·α_t·1{WorkUsage_t ≥ gate}, with both gates already applied and α already baked in, which is why the support is `{0} ∪ [0.5, 1]` and a positive value *is* α_t (`SB1 10`, `SB2 9`; §Traps 9). |
 | Decomposing the measure | **Blocked, definitively.** "you cannot un-gate either, you cannot recover β_t or α_t separately, and you cannot decompose R_o because no task→occupation link and no w_t ship" (`SB2 9`; §Cuts 15, 30); "the two files share no key" (§Cuts, Family A row). |
 | Varying the usage gate | **Blocked.** The ≥100 gate is already applied upstream — 16,644 of 17,998 rows are exactly 0 — and "do not apply another" (§Thresholds, `labor_market_impacts/`). |
-| Which waves the released measure rests on | **Settled arithmetically.** The usage layer is `release_2025_09_15` + `release_2026_01_15`: Claude.ai country `usage_count` sums 964,494 (4–11 Aug 2025) + 999,875 (13–20 Nov 2025) = 1,964,369 and API `collaboration_count` 944,638 + 971,525 = 1,916,163, with the gate identity 100 / 4,000,000 = 0.0025% exactly. The appendix's "September data" is the **November 2025** window, i.e. the wave that introduced `use_case`; no released file has a September window at all (`SB2 8`). |
+| Which waves the released measure rests on | **Settled arithmetically.** The usage layer is `release_2025_09_15` + `release_2026_01_15`: Claude.ai country `usage_count` sums 964,494 (4–11 Aug 2025) + 999,875 (13–20 Nov 2025) = 1,964,369 and API `collaboration_count` 944,638 + 971,525 = 1,916,163, with the gate identity 100 / 4,000,000 = 0.0025% exactly. On the appendix's "September data": **both readings are recorded and neither may be assumed** (`SB2 8`, restored 2026-09-16, correction 12 — this line had dropped the hedge the LEDGER keeps at §Cross-reference 11). The reading the steward offers is that it means the **November 2025** window, i.e. the wave that introduced `use_case`; the fact that stands on its own is that **no released file has a September window at all**, so the label is not a data window either way. |
 | Trend in coverage across waves | Needs the measure rebuilt per wave from usage. The automation weight needs `onet_task::collaboration`, which is **global only** (§Cuts 10), so a per-occupation α cannot be rebuilt below global; and **no 2026 release carries any exposure construct** — no `soc_occupation` facet in 2026-03-24 and no exposure metric in 2026-06-26 (`SB2 2`). Any per-wave series would therefore be a new construction, not a re-run. |
 | Linking exposure to CPS or UI outcomes | External: no demographics anywhere (§Cuts 28), no geography in `labor_market_impacts/` (§Cuts 1). The BLS Employment Projections table merges on `occ_code` with 755 of 756 matched, the one miss being 11-1031 Legislators (§Supplementary sources). |
 | Non-US extension | **Blocked as released.** `labor_market_impacts/` is US-implicit with no geography (§Cuts 1); the country-grain usage data has no O\*NET→SOC reference file after 2025-09-15 (§Cuts 29). |
@@ -930,10 +956,13 @@ code library); `economic-index-2026-01-report` and its online appendix (the nine
   than 5% of categories and conversations were affected in each study", with per-run figures 1.9%/4.28%,
   3.33%/3.85%, 1.8%/2.96%; a third-party red team "were unable to reidentify any users or find any violation
   of our threat model" (`independent-research-access-2026-08`, claims 13, 16, 17, 18).
-- **Two measurement facts published only there.** "roughly 3% of conversations were not clearly described by
-  the cluster they were assigned to", with the footnote that behaviour and emotional-state facets "were not
-  validated in the original paper"; and "As of May 2026, we estimate that roughly 10% of Claude.ai
-  conversations span multiple topics" (ibid., claims 21–22).
+- **One measurement fact published only there, and one carried over.** New: "As of May 2026, we estimate
+  that roughly 10% of Claude.ai conversations span multiple topics" (`independent-research-access-2026-08`,
+  claim 22). **Carried over, not measured here** (corrected 2026-09-16, correction 11): "roughly 3% of
+  conversations were not clearly described by the cluster they were assigned to" comes from the Clio
+  paper (`clio-insights-2024-12`, claim 8) and the access post says so (`independent-research-access-2026-08`,
+  claim 21: "carried over… not measured here"). What the access post adds to the 3% is the footnote that
+  behaviour and emotional-state facets "were not validated in the original paper" (ibid.).
 
 **(c) Where it is open.**
 
@@ -1580,6 +1609,18 @@ summarised publication.
   was opened; every reach-of-data statement cites `data/ATLAS.md` or the steward's answer note. No
   `wiki/reports/` file was edited; three defects noticed while reading are reported in
   `room/lead-2026-09-16-threads-status.md`, not corrected here.
+- **The referee's corrections, applied 2026-09-16.** Five of the fourteen corrections in
+  `room/referee-2026-09-16-ledger-threads-verdict.md` land in this file. T3(b) bullet 5: "three years apart"
+  → **fourteen months apart** (correction 10). T8(b): the "roughly 3%" cluster-fit figure is **carried over
+  from `clio-insights-2024-12`**, not published first in the access post; only the ~10% multi-topic
+  estimate is new (correction 11). T5(f): the `SB2 8` hedge — both readings of the appendix's "September
+  data" are recorded and neither may be assumed — is **restored**; this line had stated one reading as fact
+  where the LEDGER keeps the hedge (correction 12). T2(b): the November 2025 state AUI Gini is published as
+  **0.31** (`economic-index-2026-03-report` Fig 1.5) and **0.32** (`economic-index-2026-01-report` p.12,
+  inset 0.318); the discrepancy is now recorded in that one place (correction 13). T3(c), T2(c) bullets 1
+  and 3: statuses aligned with `programme/LEDGER.md` for L-2025-04-SWE-12, L-2026-01-R4-04/-06 and
+  L-2025-09-R3-25 — the first two `partially answered` in both files, the third `open` in both
+  (correction 14). No other statement in this map was changed.
 - **Counts.** 11 threads; 38 `wiki/reports/` files mapped, of which 36 are named in at least one thread's (a)
   list. The two exceptions are `institute-agenda-2026-05` and `institute-launch-2026-03`: they state no
   finding and carry no measure, so they are the sources for §(d) of every thread and for

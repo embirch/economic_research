@@ -1,8 +1,9 @@
 # Open-questions ledger — the whole corpus
 
-Every named limitation, stated open question, untested conjecture, revised hypothesis and promised
-follow-up that the corpus contains, with its source, the wiki file it was read from, and whether a
-later Anthropic publication answered it.
+Every named limitation that bounds a published number, every stated open question, every promised
+follow-up and every revised hypothesis the corpus contains, together with a **selection** of its
+untested conjectures and of what the wiki judged each publication did not test, with its source, the
+wiki file it was read from, and whether a later Anthropic publication answered it.
 
 ## How to read this ledger
 
@@ -53,7 +54,11 @@ never reused.
 expectation it does not test) · `promised follow-up` (the source says it will, plans to, or hopes to
 do something) · `revised hypothesis` (the source corrects or pushes back on an earlier Anthropic
 claim) · `untested-by-inference` (**the wiki author's inference, not the source's own statement** —
-taken from the `What it did not test` section of the wiki file, never from the source's voice).
+taken from the `What it did not test` section of the wiki file, never from the source's voice) ·
+`ledger author's inference` (**added 2026-09-16, correction 2**: an observation of the ledger
+author's own, present in no wiki section — one item, L-2026-07-CAN-17. It carries `—` in the
+Wiki § column and states what seeded it. Any further item of this kind must be marked the same way;
+the rule that every `N` line comes from the wiki file stands unchanged).
 
 **Wiki §** names the section of the wiki file the item was read from: `L` = `Limitations (verbatim)`,
 `O` = `Open questions, conjectures and promised follow-ups (verbatim)`, `N` = `What it did not test`.
@@ -67,6 +72,7 @@ the quotation supports; where a quotation is abridged, the omission is marked `�
 - `answered` — a later publication addresses it directly; the answering publication and its page or figure are named.
 - `superseded` — a later publication replaced the claim, measure or estimate the item attaches to.
 - `unanswerable-with-public-data` — settling it needs something no public release contains (the atlas entry is given in §Cross-reference to the atlas).
+- `settled by data (steward)` — **added 2026-09-16**, on `room/referee-2026-09-16-ledger-threads-verdict.md` correction 6. No later *publication* addresses the item, but a fact about the **released data**, established by the data steward and recorded in `data/ATLAS.md` or in a steward room note, settles it or its load-bearing part. Every such item cites the atlas entry or the steward-note path in its last column. The three statuses above turn on what a later publication says; this one turns on what the released files contain, and the two were being conflated. Where only part of the item is settled, the item line says which part. Eleven items carry it (`L-2026-02-IND-20`, `L-2026-03-AUS-13`, `L-2026-03-AUS-14`, `L-2026-03-LMIA-22`, `L-2026-04-E81-22`, `L-2026-05-IAGD-05`, `L-2026-07-CAN-12`, `L-2026-07-CAN-17`, `L-2026-07-CONN-02`, `L-2026-08-IRA-23`, `L-ND-EIHP-03`). For a `promised follow-up` this status says nothing about delivery; the delivery verdict is in §Promised follow-ups and is given there explicitly.
 
 Four qualified variants are used where the plain word would mislead, and they are counted separately
 in §Coverage: `answered (by itself)` (the publication states the limitation and then resolves it in
@@ -77,6 +83,11 @@ the same document — a robustness check run, a critique implemented); `supersed
 feasible). Five items carry `—` because they record the absence of an open-questions section rather
 than an item with a fate.
 
+`superseded` is reserved for a later publication that **replaced** the claim, measure or estimate —
+not for one that does something different, or that reports data cutting against it. Where an
+estimate was replaced but the limitation attached to it was not addressed, the status is
+`partially answered` and the item names what persists (`L-2026-01-R4-04`, `-06`).
+
 Statuses are judgements about the corpus, not about the world, and every one of them is checkable
 against the named wiki file. Where the wiki file itself records a status (the survey announcement,
 the Institute agenda and the Institute launch files each carry status lines written against the
@@ -84,11 +95,20 @@ corpus), that status is carried forward here and attributed.
 
 **Selection rule.** Every promised follow-up and every stated open question in the corpus is here.
 Limitations are here in full where they bound a published number, and merged where the same
-limitation is stated twice in one document in near-identical words (the merge is noted). The
-`What it did not test` sections run to 20–30 items per file; the ledger carries the load-bearing
-ones — those that bear on a published number, on a construct another publication reuses, or on a cut
-the released data might reach — and not the presentational ones. Nothing here is a research
+limitation is stated twice in one document in near-identical words (the merge is noted).
+**Conjectures are selected, not exhaustive** (corrected 2026-09-16 on correction 6 of the referee's
+verdict; the header's "every … untested conjecture" overstated what was done): a source that
+advances a dozen unsupported explanations in one discussion section yields the ones that bear on a
+published number, on a construct another publication reuses, or on a cut the released data might
+reach, and the wiki file is authoritative for the residue. The same selection applies to the
+`What it did not test` sections, which run to 20–30 items per file. Nothing here is a research
 proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
+
+**Re-verification rule** (applied 2026-09-16 under correction 9). An item keeps `answered` only if
+the named answering publication addresses **every clause of the quoted item**. Where it addresses
+one clause and leaves another, the status is `partially answered` and the last column names the
+clause left open. The test applied throughout: would a reader of the long-list be wrong to conclude
+that nothing remains here?
 
 ## Ledger
 
@@ -141,7 +161,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 
 - **L-2025-02-R1-01** | limitation | "We can't know for certain whether someone using Claude for a task was completing a task for work" (§Caveats, b1) | L | partially answered | the use-case primitive (work / coursework / personal) arrives in `economic-index-2026-01-report` §2 and is published per geography |
 - **L-2025-02-R1-02** | limitation | "we don't know *how* the users were using the responses from Claude" (§Caveats, b2) | L | open | recurring; restated by `productivity-gains-2025-11` p.3 and `claude-code-expertise-2026-06` p.10 |
-- **L-2025-02-R1-03** | limitation | "we only analyze data from Claude.ai Free and Pro plans, rather than API, Team, or Enterprise users" (§Caveats, b3) | L | answered | first-party API sample added in `economic-index-2025-09-report` ch.3; Team/Enterprise still absent everywhere |
+- **L-2025-02-R1-03** | limitation | "we only analyze data from Claude.ai Free and Pro plans, rather than API, Team, or Enterprise users" (§Caveats, b3) | L | partially answered | one of the three exclusions is lifted: the first-party API sample is added in `economic-index-2025-09-report` ch.3 (pp.30–45). **Team and Enterprise are still absent from every publication and every release** (re-graded 2026-09-16 under correction 9) |
 - **L-2025-02-R1-04** | limitation | "it is possible that Clio classified some conversations incorrectly" (§Caveats, b4) | L | open | see L-2024-12-CLIO-35 |
 - **L-2025-02-R1-05** | limitation | "Claude can't generate images … and so some creative uses won't be referenced in the data" (§Caveats, b5) | L | open | —
 - **L-2025-02-R1-06** | limitation | "we might expect coding to be overrepresented as a use case … we don't argue that the uses in our dataset are a representative sample of AI use in general" (§Caveats, b6) | L | open | restated as the Index's standing caveat in `economic-index-connector-2026-07` |
@@ -151,14 +171,14 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-02-R1-10** | conjecture | "As we predicted, there wasn't evidence in this dataset of jobs being entirely automated" (§Results, depth) | O | partially answered | re-measured as effective coverage in `economic-index-2026-01-report` p.43 (49% of jobs at ≥25% coverage) |
 - **L-2025-02-R1-11** | promised follow-up | "we'll repeat many of the analyses above over time … We'll regularly release the results and the associated datasets" (§Conclusions) | O | answered | six numbered reports and six release folders to 2026-06-26 |
 - **L-2025-02-R1-12** | promised follow-up | "we'll be able to monitor changes in the depth of AI use within occupations" (§Conclusions) | O | partially answered | `economic-index-2026-01-report` p.43 revises the depth measure; `economic-index-2026-03-appendix` Fig. A.2 plots cumulative coverage |
-- **L-2025-02-R1-13** | promised follow-up | "We can also monitor the ratio of automation to augmentation, providing signals of areas where automation is becoming more prevalent" (§Conclusions) | O | answered | the collaboration series runs to `economic-index-2026-03-report` Fig. 1.3 (five windows) — the one facet that never changed |
+- **L-2025-02-R1-13** | promised follow-up | "We can also monitor the ratio of automation to augmentation, providing signals of areas where automation is becoming more prevalent" (§Conclusions) | O | partially answered | the *ratio* is monitored — the collaboration series runs to `economic-index-2026-03-report` Fig. 1.3 (five windows), the one facet that never changed. The **"areas" half is not published as a series**: the only statement of the trend by area is the qualitative "the shift toward directive interactions appears across a wide range of occupational categories" (`economic-index-2025-09-report` en4, p.11), and no publication prints an automation share by occupation or category over time (re-graded 2026-09-16 under correction 9) |
 - **L-2025-02-R1-14** | promised follow-up | "we plan to share further such datasets as they become available" and "A form for researchers to … suggest new research directions" (§Open data and call for input) | O | answered | the researcher form is discharged in `economic-index-2025-03-report` (task- and occupation-level collaboration data released on request) |
 - **L-2025-02-R1-15** | open question | the conditional forecast: "If it remains the case that AI is used only for certain tasks … the future might be one where most current jobs evolve rather than disappear" (§Conclusions) | O | open | the fork is restated with new measures in `economic-index-2026-01-report` p.47 (deskilling/upskilling) and never resolved |
-- **L-2025-02-R1-16** | untested-by-inference | automation/augmentation is never crossed with occupation, category or wage, though both variables exist for the same conversations | N | answered | delivered one release later, `economic-index-2025-03-report` §How does augmentation vs. automation vary by task and occupation |
+- **L-2025-02-R1-16** | untested-by-inference | automation/augmentation is never crossed with occupation, category or wage, though both variables exist for the same conversations | N | partially answered | occupation and category delivered one release later, `economic-index-2025-03-report` §How does augmentation vs. automation vary by task and occupation. **The wage cross is published nowhere**: the corpus prices tasks by wage (`economic-index-2026-03-report` Fig. 1.4) and sorts model choice and token use by wage (ibid. Fig. 2.2; `economic-index-2026-06-report` Fig. 2.3), never the collaboration facet (re-graded 2026-09-16 under correction 9) |
 - **L-2025-02-R1-17** | untested-by-inference | the collapse of five patterns into two is asserted, not argued; moving Feedback Loop (14.8%) would flip the 57/43 headline | N | open | the base changes by wave and by chapter thereafter (see `data/ATLAS.md` §Conventions) |
 - **L-2025-02-R1-18** | untested-by-inference | the work-relevance filter's precision, recall and drop share are not given, so no percentage on the page has a known denominator | N | open | —
 - **L-2025-02-R1-19** | untested-by-inference | no uncertainty of any kind; a 0.1% and a 37.2% category are printed to the same precision | N | open | recurring across every Index report |
-- **L-2025-02-R1-20** | untested-by-inference | US employment and wage benchmarks are applied to a sample of unstated geographic composition | N | answered | the mismatch is the stated reason for the geography chapter of `economic-index-2025-09-report` (p.11) |
+- **L-2025-02-R1-20** | untested-by-inference | US employment and wage benchmarks are applied to a sample of unstated geographic composition | N | answered | `economic-index-2025-09-report` ch.2 publishes the composition: the US is 21.6% of Claude.ai usage across 150+ countries (p.12), so the benchmark mismatch is now measurable. The report's own reason for the chapter is narrower — it "allow[s] us to disentangle temporal vs. geographic changes more clearly going forward" (p.11) (citation tightened 2026-09-16 under correction 9) |
 
 ### economic-index-2025-02-paper — Which Economic Tasks are Performed with AI? (2025-02-11, arXiv v1)
 
@@ -189,7 +209,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-02-P1-23** | untested-by-inference | collaboration patterns by model are never compared, though model metadata is a Clio facet and the split is known (54/46) | N | open | the direct capability-shifts-delegation test |
 - **L-2025-02-P1-24** | untested-by-inference | Free versus Pro is never split, though every sample is described as Free and Pro | N | open | no release carries a plan or tier column (`data/ATLAS.md` §Cuts 26) |
 - **L-2025-02-P1-25** | untested-by-inference | the paper holds two windows (Dec 2024, Jan 2025) and never compares them, so its own "7-day snapshot" limitation is untested | N | open | —
-- **L-2025-02-P1-26** | untested-by-inference | the work/coursework/personal facet was run (App. B.7) and only two aggregate numbers are reported; the occupational distribution conditional on work is never shown | N | answered | `economic-index-2026-01-report` publishes use case as a primitive at three grains |
+- **L-2025-02-P1-26** | untested-by-inference | the work/coursework/personal facet was run (App. B.7) and only two aggregate numbers are reported; the occupational distribution conditional on work is never shown | N | partially answered | the facet is promoted to a published primitive at three geographic grains in `economic-index-2026-01-report` (p.26, 46/19/35), and `economic-index-2026-06-report` Fig. 1.3 (p.7) shows work-related conversations by occupation **wage quartile**. **A use-case × occupation distribution is still published nowhere**, and no release carries the cross (`ATLAS §Cuts 11`) (re-graded 2026-09-16 under correction 9) |
 - **L-2025-02-P1-27** | untested-by-inference | threshold sensitivity of the depth curve (5 accounts / 15 conversations) is never examined, though the depth statistics are mechanically sensitive to it | N | unanswerable-with-public-data | —
 - **L-2025-02-P1-28** | untested-by-inference | equal splitting of a task's conversations across its occupations drives every occupation-level number and is never validated | N | open | the same allocation choice recurs, differently, in `labor-market-impacts-2026-03-appendix` p.2 (employment-share split) |
 - **L-2025-02-P1-29** | untested-by-inference | automation and augmentation are mapped onto Autor's substitution/complementarity distinction with no external validation against any measure of labour substitution | N | open | the construct is reused by `econ-scenarios-paper-2026-09` p.28 as ψ, again without a crosswalk |
@@ -232,14 +252,14 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-04-SWE-02** | limitation | "The boundary between automation and augmentation becomes increasingly blurred with agentic tools like Claude Code" (§Limitations) | L | partially answered | the AI-autonomy primitive (a separate construct) arrives in `economic-index-2026-01-report` §2 and is cut by surface in `economic-index-2026-06-report` ch.2 |
 - **L-2025-04-SWE-03** | limitation | "our analysis tool made educated guesses based on incomplete information. Some classifications might therefore be incorrect" — and the 5%/2% "Could Not Classify" bucket is dropped and the rest renormalised (§Limitations) | L | open | —
 - **L-2025-04-SWE-04** | limitation | "Our dataset likely captures early adopters. These users might not represent the broader developer population" (§Limitations) | L | partially answered | tenure and cohort effects measured in `economic-index-2026-03-report` ch.2 |
-- **L-2025-04-SWE-05** | limitation | "we only analyzed data within a specific retention window, potentially missing cyclical patterns in software development (such as sprint cycles or release schedules)" (§Limitations) | L | answered | hourly and weekday/weekend cadences in `economic-index-2026-06-report` ch.1 — though no release carries a day or hour grain (`data/ATLAS.md` §Cuts 8) |
+- **L-2025-04-SWE-05** | limitation | "we only analyzed data within a specific retention window, potentially missing cyclical patterns in software development (such as sprint cycles or release schedules)" (§Limitations) | L | partially answered | `economic-index-2026-06-report` ch.1 publishes hourly and weekday/weekend cadences (claims 11–12), which is a within-week cycle. **The limitation's two named examples — sprint cycles and release schedules — are tested nowhere**, and no release carries a day or hour grain to test them on (`data/ATLAS.md` §Cuts 8) (correction 3) |
 - **L-2025-04-SWE-06** | limitation | "We only studied what developers delegate to AI—not how they ultimately use AI outputs in their codebase, the quality of the resulting code, or whether these interactions effectively improved productivity" (§Limitations) | L | partially answered | judged success and abandonment in `claude-code-expertise-2026-06` §Outcomes — still no real-world outcome |
 - **L-2025-04-SWE-07** | limitation | "enterprise numbers for Claude.ai specifically are likely undercounted because a significant amount of enterprise usage on Claude.ai occurs within the Claude For Work product" (fn 3) | L | open | —
 - **L-2025-04-SWE-08** | limitation | "we can't assume that the lessons we draw from software development will directly carry over to other types of occupation" (§Looking ahead) | L | open | the same hedge, in stronger form, in `claude-code-expertise-2026-06` p.3 ("may be a preview of where knowledge work is headed") |
 - **L-2025-04-SWE-09** | open question | "Will the prevalence of 'feedback loops,' where humans are still involved in the process, persist as AI capabilities advance, or will we see a shift toward more complete automation?" (§Looking ahead) | O | partially answered | the collaboration series to Feb 2026 shows no monotone shift (`economic-index-2026-03-report` Fig. 1.3); autonomy by surface in `economic-index-2026-06-report` ch.2 |
 - **L-2025-04-SWE-10** | open question | "As AI systems become capable of building larger-scale pieces of software, will developers shift to mostly managing and guiding these systems, rather than writing code themselves?" (§Looking ahead) | O | partially answered | work modes and decision attribution in `claude-code-expertise-2026-06` §§Work modes, Decisions (70/20 split) |
 - **L-2025-04-SWE-11** | open question | "Which software development roles will change the most, and which might disappear entirely?" (§Looking ahead) | O | open | no publication in the corpus measures a software role disappearing |
-- **L-2025-04-SWE-12** | promised follow-up | "We will likely need to extend the automation/augmentation framework to account for new agentic capabilities" (§Limitations) | O | answered | AI autonomy (1–5) in `economic-index-2026-01-report`; artifacts and surface-level autonomy in `economic-index-2026-06-report` |
+- **L-2025-04-SWE-12** | promised follow-up | "We will likely need to extend the automation/augmentation framework to account for new agentic capabilities" (§Limitations) | O | partially answered | new constructs arrive beside the framework — AI autonomy (1–5) in `economic-index-2026-01-report`, artifacts and surface-level autonomy in `economic-index-2026-06-report` — but **the five-pattern collaboration taxonomy itself is unchanged from 2025-02-10 to 2026-06-26** (`ATLAS §Conventions`), so the framework was not extended; a separate primitive is not an extension of it (corrections 3 and 14; aligned with `programme/THREADS.md` T3(c)) |
 - **L-2025-04-SWE-13** | conjecture | "as AI agents become more commonplace … we should expect more automation of tasks" (key pattern 1) | O | partially answered | contradicted at the aggregate: automation fell back in Nov 2025 (`economic-index-2026-01-report` p.5) |
 - **L-2025-04-SWE-14** | conjecture | "jobs that center on making simple applications and user interfaces might face earlier disruption from AI systems" (key pattern 2, and §What are developers building) | O | open | no publication in the corpus tests a front-end-specific labour-market outcome |
 - **L-2025-04-SWE-15** | conjecture | "The adoption gap suggests a divide between nimbler organizations using cutting-edge AI tools, and traditional enterprises" (key pattern 3) | O | open | no release carries a firm-size or firm-type column (`data/ATLAS.md` §Cuts 26) |
@@ -300,7 +320,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-09-R3-14** | limitation | "a notable fraction of its usage appeared to be possibly associated with coordinated abuse … However, we ran robustness checks and believe that this activity is not driving the results" (Utah, p.29) | L | open | the checks are asserted, never shown; `economic-index-2026-01-report` fn 5–6 later *excludes* Seychelles and Wyoming for the same reason |
 - **L-2025-09-R3-15** | limitation | "our automated analysis system filters out any cells … with fewer than 15 conversations and 5 unique user accounts. For bottom-up request clusters, we have an even higher privacy filter of at least 500 conversations and 250 unique accounts" (p.28, ch.2 en1) | L | open | no suppression flag exists in any release; absent ≠ zero (`data/ATLAS.md` §Cuts 21) |
 - **L-2025-09-R3-16** | limitation | "When for privacy-preserving reasons we do not observe usage shares for a particular collaboration mode we give that category a value of 0% in this figure" (Fig. 3.5 caption, p.37) | L | open | a documented zero-imputation that a replicator must reproduce deliberately |
-- **L-2025-09-R3-17** | limitation | "output length does not capture all dimensions of task complexity, but it appears to be a sensible, easily measured proxy" (p.39) | L | superseded | replaced by the five primitives of `economic-index-2026-01-report` §2 |
+- **L-2025-09-R3-17** | limitation | "output length does not capture all dimensions of task complexity, but it appears to be a sensible, easily measured proxy" (p.39) | L | partially answered | direct measures of complexity arrive in `economic-index-2026-01-report` §2 (the five primitives), but **the proxy was not replaced**: `economic-index-2026-06-report` still uses token length as the compute/complexity gradient (claims 33–38, pp.12–14), and no publication states which measure supersedes which (correction 3) |
 - **L-2025-09-R3-18** | limitation | "With the important caveat that this should be viewed as a preliminary exploration, this is what we find" (the −0.29 cost elasticity, p.42) | L | open | no later publication re-estimates it |
 - **L-2025-09-R3-19** | limitation | "But the implications for the labor market are not entirely clear" (p.44) | L | partially answered | `labor-market-impacts-2026-03` is the corpus's attempt; its employment results are nulls |
 - **L-2025-09-R3-20** | open question | "What are the local labor market consequences for workers and firms of AI usage & adoption?" (pp.5–6, the first of four questions put to outside researchers) | O | partially answered | `labor-market-impacts-2026-03` tests exposure against CPS unemployment and youth hiring; no firm-level result exists anywhere |
@@ -308,9 +328,9 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-09-R3-22** | open question | "What role, if any, does cost-per-task play in shaping enterprise deployment patterns?" (pp.5–6) | O | open | the report's own −0.29 is called preliminary and never revisited |
 - **L-2025-09-R3-23** | open question | "Why are firms able to automate some tasks and not others? What implications does this have for which types of workers will experience better or worse employment prospects?" (pp.5–6) | O | open | the context-constraint argument (pp.31, 41) is the nearest, and it is not a firm-level test |
 - **L-2025-09-R3-24** | open question | "The uneven geography of early AI adoption raises important questions about economic convergence" (p.4) | O | partially answered | US-state convergence modelled in `economic-index-2026-01-report` ch.1 (β̂≈0.77, "two to five years"), revised to 5–9 years in `economic-index-2026-03-report` fn 7; country convergence never modelled |
-- **L-2025-09-R3-25** | open question · "more research is needed" | "We speculate that cultural and economic factors might affect the automation share, or perhaps that early adopters in each country tend to use AI in a more automotive way—but more research is needed here" (pp.26–27) — the report's only explicit "more research is needed" | O | partially answered | the pattern is replicated ("This mirrors a finding from our 3rd Economic Index report", `economic-index-2026-01-report` p.35) and **never explained** |
+- **L-2025-09-R3-25** | open question · "more research is needed" | "We speculate that cultural and economic factors might affect the automation share, or perhaps that early adopters in each country tend to use AI in a more automotive way—but more research is needed here" (pp.26–27) — the report's only explicit "more research is needed" | O | open | the pattern is replicated ("This mirrors a finding from our 3rd Economic Index report", `economic-index-2026-01-report` p.35) and **never explained** — replication is not an answer, and neither speculation has been tested anywhere in the corpus (re-graded 2026-09-16 under correction 14; aligned with `programme/THREADS.md` T2(c), which headlines it as the stream's one open "more research is needed") |
 - **L-2025-09-R3-26** | open question | the capability-versus-learning-by-doing fork: "Whether the growth in directive usage is attributable to improving model capabilities or learning-by-doing could signal very different labor market implications … This will be an important area of inquiry for future research" (p.10) | O | partially answered | `economic-index-2026-03-report` ch.2 finds evidence consistent with learning-by-doing and pushes back on the delegation half (p.19) |
-- **L-2025-09-R3-27** | promised follow-up | "The next chapter … allow[s] us to disentangle temporal vs. geographic changes more clearly going forward. We will continue to track these trends closely in future reports" (p.11) | O | answered | geography is published in every later wave, with coverage rising to 176 countries and 1,256 sub-national units |
+- **L-2025-09-R3-27** | promised follow-up | "The next chapter … allow[s] us to disentangle temporal vs. geographic changes more clearly going forward. We will continue to track these trends closely in future reports" (p.11) | O | answered | geography is published in every later report and every later long-schema release — `economic-index-2026-01-report` ch.3, `economic-index-2026-03-report` ch.1, `economic-index-2026-06-report` (release only) — with released coverage rising from 150+ countries to 176 countries and 1,256 sub-national units across 155 parents at 2026-03-24 (`data/ATLAS.md` §Which cuts exist at which grain, Family B) |
 - **L-2025-09-R3-28** | promised follow-up | "Future work, for example using stratified sampling, will allow us to explore these patterns with higher accuracy given limited observations for smaller countries and states" (p.28, ch.2 en4) | O | open | no later report states a change of sampling design for small geographies |
 - **L-2025-09-R3-29** | promised follow-up | "By making this data public, we hope to enable others to investigate questions we haven't considered" (p.47) | O | partially answered | `independent-research-access-2026-08` opens a non-public route, by invitation, now closed |
 - **L-2025-09-R3-30** | conjecture | five candidate explanations for cross-country disparities — digital infrastructure, economic structure, regulatory environment, awareness and access, trust and comfort (pp.17–18) — offered without test | O | open | `economic-index-2026-01-report` ch.3 correlates primitives with the AUI and states plainly that "the primitives themselves are not necessarily causal factors" (pp.32–33) |
@@ -339,7 +359,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-09-B3-03** | limitation | "income actually has *less* explanatory power within the US than across countries … other factors, beyond income, must explain more of the variation" (§Patterns within the United States) | L | partially answered | workforce composition enters as an instrument in `economic-index-2026-01-report` ch.1 (tech-worker share) |
 - **L-2025-09-B3-04** | limitation | "a notable fraction of its use appeared to be associated with indicators of coordinated abuse … we ran robustness checks and believe that this activity is not driving the results" (Utah, fn 1) | L | open | see L-2025-09-R3-40 |
 - **L-2025-09-B3-05** | limitation | "Our best guess is that it's differences in the composition of states' economies" (§Patterns within the United States) | L | partially answered | measured as workforce composition in `economic-index-2026-01-report` ch.1; asserted, not measured, here |
-- **L-2025-09-B3-06** | limitation | "We're not yet sure why this is" (the automation–adoption puzzle, §Patterns of interaction) | L | partially answered | see L-2025-09-R3-25 |
+- **L-2025-09-B3-06** | limitation | "We're not yet sure why this is" (the automation–adoption puzzle, §Patterns of interaction) | L | open | see L-2025-09-R3-25, whose status this line carries; re-graded with it 2026-09-16 |
 - **L-2025-09-B3-07** | open question | the divergence question: "If the effects of AI prove to be largest in richer countries, this general-purpose technology might have similar economic implications" (§Across countries) | O | open | restated as `institute-agenda-2026-05` `ED-3`; no publication in the corpus classifies AI as a GPT or measures divergence over time |
 - **L-2025-09-B3-08** | conjecture | "AI is rapidly winning users' confidence, and becoming increasingly responsible for completing sophisticated work" (§Patterns of interaction) | O | superseded | the directive rise partly reversed in Nov 2025 (`economic-index-2026-01-report` p.5, "a broad-based shift back toward augmented use") |
 - **L-2025-09-B3-09** | conjecture | "This could be the result of improved model capabilities … users are likely more willing to trust the model's outputs at the first attempt" (§Patterns of interaction) | O | partially answered | the capability/learning fork is the report's own (L-2025-09-R3-26) and is addressed in `economic-index-2026-03-report` ch.2 |
@@ -365,7 +385,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-10-EPR-04** | open question | "we're sharing several economic policy ideas that merit further study" (standfirst) — none of the nine is evaluated anywhere in the corpus | O | partially answered | four reappear as *funding priorities* in `economic-futures-research-fund-2026-07`; five as *recommendations* in `economic-policy-framework-2026-06`; no evidence is published on any |
 - **L-2025-10-EPR-05** | open question | "We believe taxes in this broader category deserve serious study, even though they would directly impact Anthropic's revenue and profitability" (§6, token and compute taxes) | O | open | restated as an evidence gap fourteen months later: "we lack evidence on who would bear the economic incidence of such taxes" (`economic-futures-research-fund-2026-07` Priority 4) |
 - **L-2025-10-EPR-06** | open question | "although we think there are many more ideas to be explored in this area" (§9) | O | open | —
-- **L-2025-10-EPR-07** | conjecture | "As AI models continue to work independently for longer periods of time, and as more employers adopt AI … we expect this trend to accelerate" (the rising-delegation premise the whole post is built on) | O | superseded | the aggregate collaboration series is non-monotone: 41 / 42 / 49 / 45 / 44 percent automation to Feb 2026 (`economic-index-2026-03-report` Fig. 1.3) |
+- **L-2025-10-EPR-07** | conjecture | "As AI models continue to work independently for longer periods of time, and as more employers adopt AI … we expect this trend to accelerate" (the rising-delegation premise the whole post is built on) | O | partially answered | the aggregate collaboration series is non-monotone — 41 / 42 / 49 / 45 / 44 percent automation to Feb 2026 (`economic-index-2026-03-report` Fig. 1.3) — so the conjecture is contradicted at the two most recent published windows. It is **not** superseded: Anthropic keeps the premise, "the underlying trend is still toward greater automation even as the August spike overstated how quickly it was materializing" (`economic-index-2026-01-report` p.9), and no publication retracts the acceleration claim (re-graded 2026-09-16 under correction 9) |
 - **L-2025-10-EPR-08** | conjecture | "As AI transforms the economy, labor's share of the production of value might decline significantly" (§8) | O | open | modelled, not measured, in `econ-scenarios-paper-2026-09` Eq. (11); no Anthropic publication relates Claude usage to labour's share |
 - **L-2025-10-EPR-09** | promised follow-up | "$10 million commitment to scale up the Economic Futures Program … beginning with an event in London this November" (§Continuing the conversation) | O | partially answered | the London symposium happened (`economic-futures-uk-europe-2025-11`); no awardee list or research output appears; superseded by the $200M Fund of July 2026 |
 - **L-2025-10-EPR-10** | untested-by-inference | the founding premise (rising delegation, falling collaboration) is never recomputed, bounded or dated on the page, and a 2025-10 "delegate full tasks" claim cannot be read forward onto the autonomy primitive without a mapping nobody has built | N | open | —
@@ -491,7 +511,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2025-12-INTV-26** | untested-by-inference | classifier validity is never checked — no human coding, agreement rate, model version or prompt — in a post whose numbers are all classifier outputs | N | open | recurring across the whole survey stream |
 - **L-2025-12-INTV-27** | untested-by-inference | the instrument's own performance numbers (97.6% satisfied, 99.12% would recommend) are collected by the instrument under evaluation, from paid participants | N | open | —
 - **L-2025-12-INTV-28** | untested-by-inference | no benchmark for the method's claimed advantage over human interviewing: no cost, no hours, no quality comparison | N | open | restated as an unrun test in `survey-81k-interviews-2026-03-appendix` p.9 |
-- **L-2025-12-INTV-29** | untested-by-inference | anxiety is never related to measured exposure | N | answered | `survey-81k-economics-2026-04` does exactly this for a different instrument and sample (perceived threat against observed exposure), five months later and not as a follow-up |
+- **L-2025-12-INTV-29** | untested-by-inference | anxiety is never related to measured exposure | N | partially answered | the analogue is run five months later and not as a follow-up: `survey-81k-economics-2026-04` regresses **perceived job threat** on **observed exposure** (+1.3pp per +10pp, PDF p.3). Three things differ from the item — the construct (perceived job threat, a binary coding rule, not anxiety), the instrument, and the sample — so whether Interviewer-measured anxiety tracks exposure is still untested (re-graded 2026-09-16 under correction 9) |
 - **L-2025-12-INTV-30** | untested-by-inference | adaptivity is an unmeasured source of variation: no two participants answered the same questions, and prevalence ("69% mentioned stigma") may be confounded with how often the interviewer raised the topic | N | open | the released transcripts make this checkable by others |
 
 ### economic-index-2026-01-report — Economic Primitives (2026-01-15)
@@ -501,9 +521,9 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-01-R4-01** | limitation | "We therefore mainly tested for directional accuracy" and "none of the measures should be taken as exact or definitive" (pp.22–23) | L | open | the standing caveat on all five primitives; repeated at p.54 |
 - **L-2026-01-R4-02** | limitation | "Neither data sources are fully representative of Claude.ai or 1P API traffic" (the validation sets: feedback-permitted transcripts, plus internal and synthetic data) (p.22) | L | open | —
 - **L-2026-01-R4-03** | limitation | "In this report we use Sonnet 4.5 for classification whereas in our previous … report we used Sonnet 4. We previously found that different models can generate different classification outcomes, though these effects tend to be modest" (fn 7, p.18) | L | open | **no re-run is reported**, unlike `economic-index-2025-09-report` p.11 fn 4 — and this wave carries the augmentation reversal |
-- **L-2026-01-R4-04** | limitation | "this estimate comes with uncertainty given that it is based on a change observed over a three month period. Diffusion may ultimately proceed more slowly" (p.6) | L | superseded | the horizon is re-estimated at 5–9 years in `economic-index-2026-03-report` fn 7, p.11 |
+- **L-2026-01-R4-04** | limitation | "this estimate comes with uncertainty given that it is based on a change observed over a three month period. Diffusion may ultimately proceed more slowly" (p.6) | L | partially answered | the **estimate** was superseded — the horizon is re-estimated at 5–9 years in `economic-index-2026-03-report` (claim 15, p.10) — but the **precision limitation persists**: fn 7 (p.11) states the range is the spread between the weighted and unweighted runs of the same model, not an interval, and `economic-index-2026-03-report` N item 9 records that no uncertainty is attached to it. Chosen over keeping `superseded` so that the open half is visible to the long-list (corrections 3 and 14; aligned with `programme/THREADS.md` T2(c)) |
 - **L-2026-01-R4-05** | limitation | "This can produce classical attenuation bias: even if AUI is not actually changing, our estimate of [β] could end up meaningfully below one" (p.16) | L | partially answered | the 2SLS specification is the response; "only the former is statistically distinguishable from 1 at the 10% level" (p.17) |
-- **L-2026-01-R4-06** | limitation | "our estimates are based on just three months of data … considerable uncertainty remains" (p.17) | L | superseded | see L-2026-01-R4-04 |
+- **L-2026-01-R4-06** | limitation | "our estimates are based on just three months of data … considerable uncertainty remains" (p.17) | L | partially answered | see L-2026-01-R4-04: estimate superseded, precision limitation not addressed (corrections 3 and 14) |
 - **L-2026-01-R4-07** | limitation | "the primitives themselves are not necessarily causal factors—we don't know if income or education are truly driving adoption, or if they're proxies for other underlying conditions" (pp.32–33) | L | open | the honest statement of what ch.3 is; it is the corpus's clearest concession on the adoption-determinants question |
 - **L-2026-01-R4-08** | limitation | "At the US state level, these relationships are not statistically significant–likely also due to the smaller sample size" (p.32) and "This relationship is not significant at the US state level" (p.35) | L | open | no MDE is given for either null |
 - **L-2026-01-R4-09** | limitation | "the relationship pattern at one level of observation (country) contradicts the relationship pattern at another level (US state)" (p.33) | L | open | an unexplained level-dependence, flagged and left |
@@ -619,14 +639,14 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-02-IND-10** | untested-by-inference | no trend for India: a single eight-day window, though geographic data has been published since September 2025 | N | open | the brief points the reader to the parent report for "time-series analysis" |
 - **L-2026-02-IND-11** | untested-by-inference | no uncertainty on any gap (3.60 vs 3.38; 84.6% vs 87.9%; 51.3% vs 46%; 14.8 vs 15.4 minutes), and no N for the state or task cuts | N | open | —
 - **L-2026-02-IND-12** | untested-by-inference | composition is never held constant: every headline primitive difference is consistent with India's software-heavy task mix | N | open | **the brief's own causal reading is the alternative it does not separate** |
-- **L-2026-02-IND-13** | untested-by-inference | the per-capita denominator is not varied (working-age population only), though the rank of 101st of 116 turns on it | N | open | recurring across all three spotlights and the AUI convention |
+- **L-2026-02-IND-13** | untested-by-inference | the per-capita denominator is not varied (working-age population only), though the rank of 101st of 116 turns on it | N | unanswerable-with-public-data | **status aligned with L-2026-03-AUS-18 on 2026-09-16 (correction 4)**: both are denominator-sensitivity items and both need an external population series, which is public but ships in no release. For India the series is the UN World Population Prospects 2024 working-age (15–64) estimate that Anthropic itself uses (`economic-index-2026-06-report` ch.3 fn 6); layering it rebuilds *an* index but not Anthropic's, because the India brief's own wave, 2026-01-15, ships no AUI, no population and no GDP (`ATLAS §Cuts 22`), so there is nothing to vary the denominator *of* (§Cross-reference 3a) |
 - **L-2026-02-IND-14** | untested-by-inference | the income–adoption relationship is asserted "strongly correlated" with no coefficient, scatter, sample or residual for India | N | open | —
 - **L-2026-02-IND-15** | untested-by-inference | the speedup formula is not stated: 228/14.8 reproduces "15x" as a ratio of averages, where an average of ratios would differ | N | open | —
 - **L-2026-02-IND-16** | untested-by-inference | two readings of the same 84.6% figure sit unreconciled in §Economic primitives and §Implications | N | open | a post building on the human-only-ability primitive must choose |
 - **L-2026-02-IND-17** | untested-by-inference | no within-India heterogeneity: the primitives are published for India as one unit, so the tech-workforce claim is untested against low-share states | N | open | `data/ATLAS.md` §Cuts 10: intersections are global only, so primitives by Indian state do not exist |
 - **L-2026-02-IND-18** | untested-by-inference | IP geolocation is not stress-tested in the world's largest exporter of IT services, where offshore work and work performed abroad fall on opposite sides of the boundary | N | open | —
 - **L-2026-02-IND-19** | untested-by-inference | "software-related tasks" is not operationalised, so the world-first 45.2% ranking is not reproducible from the page | N | open | —
-- **L-2026-02-IND-20** | untested-by-inference | the headline share (5.8%) and the primitives N (58,098 = 5.96%) are not reconciled | N | answered | steward: a denominator difference, not an error — the file divides by 999,875 including `not_classified`, the report's global N is 975,160 (`data/ATLAS.md` §Traps 42) |
+- **L-2026-02-IND-20** | untested-by-inference | the headline share (5.8%) and the primitives N (58,098 = 5.96%) are not reconciled | N | settled by data (steward) | a denominator difference, not an error — the file divides by 999,875 including `not_classified`, the report's global N is 975,160 (`data/ATLAS.md` §Traps 42; `room/steward-2026-09-16-question-batch-answers.md`) |
 
 ### ai-fluency-index-2026-02 — Anthropic Education Report: The AI Fluency Index (2026-02-23)
 
@@ -721,7 +741,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-03-LMIA-19** | untested-by-inference | no joint pre-trends test, no alternative treatment date, no placebo outcome or placebo group | N | open | —
 - **L-2026-03-LMIA-20** | untested-by-inference | the DiD specification is never written down: no equation, fixed-effect structure, clustering level or weighting | N | open | —
 - **L-2026-03-LMIA-21** | untested-by-inference | every measure comparison is rank-based; two measures can rank identically and still move occupations across the quartile cut the employment analysis uses | N | open | —
-- **L-2026-03-LMIA-22** | untested-by-inference | the appendix does not state which Economic Index waves or release files underlie any number, so none of its figures is reproducible from the document alone | N | partially answered | steward: job-level exposure exists in exactly one public file, `labor_market_impacts/job_exposure.csv`, 756 rows keyed on `occ_code` |
+- **L-2026-03-LMIA-22** | untested-by-inference | the appendix does not state which Economic Index waves or release files underlie any number, so none of its figures is reproducible from the document alone | N | settled by data (steward) | job-level exposure exists in exactly one public file, `labor_market_impacts/job_exposure.csv`, 756 rows keyed on `occ_code` — so the appendix's numbers can be located even though the appendix does not name them (`data/ATLAS.md` §Components, Labour-market files; `room/steward-2026-09-16-question-batch-answers.md` 8). Which Index waves the usage layer draws on is settled separately and arithmetically (§Cross-reference 11) |
 
 ### institute-launch-2026-03 — Introducing The Anthropic Institute (2026-03-11)
 
@@ -731,7 +751,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-03-ILAU-02** | limitation | "If this is right, society is shortly going to need to confront many massive challenges" (¶3) | L | open | —
 - **L-2026-03-ILAU-03** | limitation | "The Anthropic Institute is building out a small analytical staff" (¶8) — the only resourcing statement, and qualitative | L | open | the linked requisition returns an error as of 2026-09-16 |
 - **L-2026-03-ILAU-04** | open question | "How will powerful AI systems reshape our jobs and economies?" (¶3) — the seed of the economics stream | O | partially answered | pursued in three directions: measurement (`economic-index-2026-03-report`, `economic-index-2026-06-report`), exposure (`labor-market-impacts-2026-03`), scenarios (`econ-scenarios-paper-2026-09`); the Institute has never stated what would count as an answer |
-- **L-2026-03-ILAU-05** | promised follow-up | "The Anthropic Institute's goal is to tell the world what we're learning about these challenges as we build frontier AI systems" (¶4) | O | answered | eleven economics publications in the corpus post-date 2026-03-11 |
+- **L-2026-03-ILAU-05** | promised follow-up | "The Anthropic Institute's goal is to tell the world what we're learning about these challenges as we build frontier AI systems" (¶4) | O | answered | **twenty-two** of the 49 entries in `wiki/INDEX.md` post-date 2026-03-11 (recounted 2026-09-16 under correction 9; the earlier "eleven" was wrong) |
 - **L-2026-03-ILAU-06** | promised follow-up | "to partner with external audiences to help address the risks we must confront" (¶4) | O | partially answered | the advisory council, BFI, the symposia and the $200M Fund (all in `wiki/reports/programme-and-product-pages.md`); no partner is named on this page |
 - **L-2026-03-ILAU-07** | promised follow-up | the Korinek remit: "to lead an effort studying how transformative AI could reshape the very nature of economic activity" (Hire 2) | O | answered | `econ-scenarios-paper-2026-09` (Institute Working Paper 2026-02) and `econ-scenarios-explorer-2026-09`, about six months later |
 - **L-2026-03-ILAU-08** | promised follow-up | the Hitzig remit: "joining to connect our economics work to model training and development" (Hire 3) | O | open | **no publication in the corpus connects economic measurement to what Anthropic trains or ships** |
@@ -883,12 +903,12 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-03-AUS-10** | conjecture | "the state-level variation tracks workforce composition rather than income per capita—consistent with the pattern across US states but in contrast to the income gradient across countries" (§Conclusion) | O | open | asserted from four illustrative cases |
 - **L-2026-03-AUS-11** | untested-by-inference | **the page contains no open question, no "more research is needed" and no promised follow-up** | N | — | recorded so the absence is on the record for all three spotlights |
 - **L-2026-03-AUS-12** | untested-by-inference | the composition conjecture is never measured: no ABS industry or occupational mix is joined to state AUI | N | open | —
-- **L-2026-03-AUS-13** | untested-by-inference | no cell sizes or uncertainty for the state estimates (Northern Territory 0.1%, Tasmania 0.6%) | N | answered | steward: the matching release gives counts of 20 and 100, and all eight `AU-*` shares reproduce Figure 2 to the published decimal |
-- **L-2026-03-AUS-14** | untested-by-inference | no within-Australia task or use-case mix, though the facets exist for Australian states in the public release | N | partially answered | `data/ATLAS.md` §Family B: `request` and `onet_task` exist at `country-state`, but intersections and primitives are global only |
+- **L-2026-03-AUS-13** | untested-by-inference | no cell sizes or uncertainty for the state estimates (Northern Territory 0.1%, Tasmania 0.6%) | N | settled by data (steward) | the matching release gives counts of 20 and 100, and all eight `AU-*` shares reproduce Figure 2 to the published decimal, so the cells behind the two smallest estimates are knowable even though the report prints neither (`data/ATLAS.md` §Thresholds; `room/steward-2026-09-16-question-batch-answers.md`) |
+- **L-2026-03-AUS-14** | untested-by-inference | no within-Australia task or use-case mix, though the facets exist for Australian states in the public release | N | settled by data (steward) | `data/ATLAS.md` §Family B: `request` and `onet_task` **do** exist at `country-state`, so a within-Australia task mix is buildable; intersections and primitives are global only, so a within-Australia use-case or primitive mix is not (§Cuts 10). No publication says either |
 - **L-2026-03-AUS-15** | untested-by-inference | no time dimension: one February 2026 snapshot, no trend across the six waves, no before/after around the Sydney office or the MOU | N | open | —
 - **L-2026-03-AUS-16** | untested-by-inference | no collaboration/automation split for Australia, though the facet exists for Australian states — and the autonomy finding is glossed in collaboration language | N | open | —
 - **L-2026-03-AUS-17** | untested-by-inference | the Anglosphere average is never defined numerically: which countries enter it, and whether it is weighted, is not stated | N | open | —
-- **L-2026-03-AUS-18** | untested-by-inference | no denominator sensitivity: the AUI's working-age denominator is not varied, though the composition conjecture itself invokes a professional workforce | N | unanswerable-with-public-data | steward: sub-national AUIs need ABS population that no release ships |
+- **L-2026-03-AUS-18** | untested-by-inference | no denominator sensitivity: the AUI's working-age denominator is not varied, though the composition conjecture itself invokes a professional workforce | N | unanswerable-with-public-data | steward: sub-national AUIs need the **ABS Estimated Resident Population** by state, which is public and ships in no release (`room/steward-2026-09-16-question-batch-answers.md` §Open for the record; `ATLAS §Cuts 4`). Same status and same reason as L-2026-02-IND-13 (correction 4). There is no third spotlight item of this kind: L-2026-07-CAN-13 is a geography-grain item and L-2026-07-CAN-17, the AUI denominator *convention*, is settled by the steward |
 
 ### economic-index-survey-2026-04-announcement — Announcing the Anthropic Economic Index Survey (2026-04-22)
 
@@ -907,7 +927,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-04-SURV-11** | promised follow-up | "use this to improve our models and services in ways that reflect what we've learned" (FAQ 3) | O | open | no publication reports a model or product change attributed to the survey |
 - **L-2026-04-SURV-12** | promised follow-up | "if you participate in more than one Anthropic Interviewer study, we may analyze your responses together to understand how perspectives change over time" (linked sessions article) | O | open | no within-person analysis exists |
 - **L-2026-04-SURV-13** | promised follow-up | "we may share Study Participation Data with select third parties such as external researchers or journalists" (linked sessions article) | O | partially answered | `independent-research-access-2026-08` opens an external route on Anthropic Insights; whether the survey is in its scope is not established there |
-- **L-2026-04-SURV-14** | untested-by-inference | no instrument in public: the topic list is given twice and the question wording never | N | answered | the instrument is published in `economic-index-2026-06-appendix` ch.3 |
+- **L-2026-04-SURV-14** | untested-by-inference | no instrument in public: the topic list is given twice and the question wording never | N | partially answered | **the earlier status was false at source and is withdrawn**: `economic-index-2026-06-appendix` ch.3 is Table A.1 and its caption only — the ten-year vision themes and their definitions — and prints no instrument (appendix PDF p.15, re-fetched and re-read 2026-09-16; the assertion in `economic-index-survey-2026-04-announcement.md` N item 1 was a wiki error and is corrected). What *is* published is fragmentary and in the report body: one question verbatim, "dream big: what do you hope an economy shaped by AI looks like in ten years?" (`economic-index-2026-06-report` p.30); the exposure items' response format, as bands whose midpoints are taken (ibid. Fig 3.3 caption, p.23); and paraphrases of the experience and job-loss items (ibid. ch.3 fns 7 and 11, p.31). No full wording, no scales, no ordering. `partially answered` chosen over `open` because that fragment is usable and `open` would be false (correction 1) |
 - **L-2026-04-SURV-15** | untested-by-inference | no response rate and no invited-sample count; random invitation plus voluntary completion is not a random sample of the frame, and the gap is not acknowledged | N | open | —
 - **L-2026-04-SURV-16** | untested-by-inference | non-response is measurable here and is not measured: usage is observable for invited non-respondents as well as respondents | N | open | **the sharpest gap on the page**, and still open in the sixth report (its limitation 19) |
 - **L-2026-04-SURV-17** | untested-by-inference | rotation versus panel: a rotating cross-section can only show aggregate shifts, while the headline promise is about how views shift | N | open | any two-wave post must treat composition change as the first rival explanation |
@@ -942,7 +962,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-04-E81-19** | untested-by-inference | seven constructs are classifier outputs and none is validated against human coding; the model and date are unstated | N | open | recurring across the survey stream |
 - **L-2026-04-E81-20** | untested-by-inference | whether the wage-quartile U is about work at all: the lowest quartile's gains are illustrated by side ventures, and work/non-work use is never separated | N | open | the use-case primitive exists in the Index and is not used here |
 - **L-2026-04-E81-21** | untested-by-inference | no objective anchor on productivity: the measure is Claude's reading of what a respondent said, never benchmarked against a measured time saving or an Index primitive | N | open | the corpus holds two estimator-based measures and neither is compared |
-- **L-2026-04-E81-22** | untested-by-inference | the provenance of the exposure link is unstated — no vintage, file, column or crosswalk — and the 30% of workers assigned zero coverage are not mentioned | N | partially answered | steward: the join is on `occ_code` in `labor_market_impacts/job_exposure.csv` and on nothing else |
+- **L-2026-04-E81-22** | untested-by-inference | the provenance of the exposure link is unstated — no vintage, file, column or crosswalk — and the 30% of workers assigned zero coverage are not mentioned | N | settled by data (steward) | the join is on `occ_code` in `labor_market_impacts/job_exposure.csv` and on nothing else; no vintage, crosswalk or alternative key exists to check against (`data/ATLAS.md` §Components, Labour-market files; `room/steward-2026-09-16-question-batch-answers.md` 8). The 30%-zero-coverage point is a property of the released column: 92.48% of `task_penetration` rows are exactly 0 (§Traps 9) |
 - **L-2026-04-E81-23** | untested-by-inference | geography and language are absent while every quantitative anchor is American (BLS wages, US major groups, the US hiring result) | N | open | —
 
 ### institute-agenda-2026-05 — Focus areas for The Anthropic Institute (2026-05-07)
@@ -953,7 +973,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-05-IAGD-02** | limitation | "we can see early evidence that jobs like software engineering are changing radically" (¶4) — the strongest verb on the page, on unnamed evidence | L | open | no number, no window, no cited publication |
 - **L-2026-05-IAGD-03** | limitation | "Or is the asymmetry structural?" (`TR-5`) — the only place the page concedes one of its own aims may be unattainable | L | open | —
 - **L-2026-05-IAGD-04** | promised follow-up | "we'll study AI's real-world impacts from our position within a frontier lab, then publish those findings" (¶5) | O | answered | fourteen entries in `wiki/INDEX.md` post-date the agenda; none of them cites it |
-- **L-2026-05-IAGD-05** | promised follow-up | "More granular information from The Anthropic Economic Index, at a higher cadence" (Share 1) | O | partially answered | `economic-index-2026-06-report` p.4 replaces seven-day draws with continuous sampling and publishes hourly and daily cadences; **in the released data the promise is kept exactly once**, by the June 2026 schema change, and nothing follows it (steward item 5) |
+- **L-2026-05-IAGD-05** | promised follow-up | "More granular information from The Anthropic Economic Index, at a higher cadence" (Share 1) | O | settled by data (steward) | the promise is about the **data product**, so its fate is a fact about the releases, not about a report: `economic-index-2026-06-report` p.4 replaces seven-day draws with continuous sampling, and **in the released data the promise is kept exactly once**, by the June 2026 schema change, with nothing following it (`room/steward-2026-09-16-question-batch-answers.md` item 5; `ATLAS §Releases`). Delivery verdict, separately: **partly delivered** (§Promised follow-ups) |
 - **L-2026-05-IAGD-06** | promised follow-up | "We'll try to be an early warning signal for significant change and disruption" (Share 1) | O | open | **no publication defines a trigger, threshold or lead time**; the phrase appears in no other wiki file; the same untested conjecture is recorded for the survey at L-2026-04-SURV-06 |
 - **L-2026-05-IAGD-07** | promised follow-up | "More detailed information about how our work at Anthropic has sped up as a result of new AI tools" (Share 3) | O | partially answered | pre-empted by `work-at-anthropic-2025-12`; no later publication reports Anthropic's internal speed-up |
 - **L-2026-05-IAGD-08** | promised follow-up | "TAI will shape the decisions Anthropic makes" (¶7) and the LTBT-input expectation (¶8) | O | open | unverifiable from published sources |
@@ -1202,12 +1222,12 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-07-CAN-09** | open question | "What explains the pattern of regional adoption? We explore this question in Figure 4" — posed and answered with two bivariate scatters | O | partially answered | —
 - **L-2026-07-CAN-10** | untested-by-inference | **the page names no open question and promises no follow-up**: no "future work", no "we plan to", no "more research is needed" | N | — | true of all three country spotlights |
 - **L-2026-07-CAN-11** | untested-by-inference | no multivariate specification: income and the professional-services share are each plotted against AUI separately, and collinearity across ten provinces is not examined | N | open | —
-- **L-2026-07-CAN-12** | untested-by-inference | no inference at all: no standard error, interval or sample count anywhere | N | partially answered | steward: 11 `CA-*` rows exist in `release_2026_03_24`; 8 of 11 clear the 100-conversation floor in the November wave |
+- **L-2026-07-CAN-12** | untested-by-inference | no inference at all: no standard error, interval or sample count anywhere | N | settled by data (steward) | 11 `CA-*` rows exist in `release_2026_03_24` and 8 of 11 clear the 100-conversation floor in the November wave, so the cell counts the report omits are recoverable (`data/ATLAS.md` §Thresholds; `room/steward-2026-09-16-question-batch-answers.md`) |
 - **L-2026-07-CAN-13** | untested-by-inference | no sub-provincial geography, so "provinces with large professional, scientific and technical services sectors" is not distinguished from "provinces containing a large tech metro" | N | unanswerable-with-public-data | `data/ATLAS.md` §Cuts 3 and §Family C: nothing below `country-state` / `subregion` |
 - **L-2026-07-CAN-14** | untested-by-inference | no time dimension, so the "further along on its adoption curve" conjecture is untested | N | open | —
 - **L-2026-07-CAN-15** | untested-by-inference | consumer surface only: the adoption ranking is a consumer ranking presented as national adoption | N | open | —
 - **L-2026-07-CAN-16** | untested-by-inference | no Index facet beyond the use-case mix: no collaboration split, no autonomy, no O\*NET or occupation composition, no task success for Canada or its provinces | N | open | —
-- **L-2026-07-CAN-17** | untested-by-inference | the published AUI of 4.4 is not tied to a stated denominator convention | N | answered | steward: it reproduces as 4.4430 **only** on the symmetric thresholded-only usage denominator; the August-2025 asymmetric rule gives 3.6219, because `not_classified` is 18.4% of February usage (`data/ATLAS.md` §Conventions) |
+- **L-2026-07-CAN-17** | ledger author's inference (**not** a wiki `N` item) | the published AUI of 4.4 is not tied to a stated denominator convention | — | settled by data (steward) | **Re-attributed 2026-09-16 under correction 2.** `country-report-canada-2026-07.md` has thirteen `N` items and none of them is this; the observation is the ledger author's own, seeded by `room/steward-2026-09-16-question-batch-answers.md` Q4, and it is marked as such rather than carried as a wiki reading. The fact: the published 4.4 reproduces as 4.4430 **only** on the symmetric thresholded-only usage denominator; the August-2025 asymmetric rule gives 3.6219, because `not_classified` is 18.4% of February usage (`data/ATLAS.md` §Conventions, "February 2026 has a level test"; `SB1 Q4`) |
 - **L-2026-07-CAN-18** | untested-by-inference | the education tilt ("academic coursework overrepresented") is never benchmarked against Canada's student population share or age structure | N | open | —
 
 ### economic-index-connector-2026-07 — Ask Claude about the Anthropic Economic Index (2026-07-22)
@@ -1215,7 +1235,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 `wiki/reports/programme-and-product-pages.md` §`economic-index-connector-2026-07`.
 
 - **L-2026-07-CONN-01** | limitation | "As always, the Index reflects patterns in Claude usage rather than the labor market as a whole, and Claude will point you back to the source data and its limitations as you explore" — the page's whole limitations section, one sentence | L | open | **the Index's plainest self-description, and the sentence the hub page lacks** |
-- **L-2026-07-CONN-02** | open question | the four example questions offered as answerable from the data, including "What kinds of tasks are people automating with AI? How has that changed over the past year?" | O | partially answered | steward item 7(c): a like-for-like twelve-month automation comparison **does** exist on the collaboration facet (Feb–Mar 2025 → 5–12 Feb 2026, 43.0619 → 45.5456 on the five-pattern base), with five caveats that must travel with it |
+- **L-2026-07-CONN-02** | open question | the four example questions offered as answerable from the data, including "What kinds of tasks are people automating with AI? How has that changed over the past year?" | O | settled by data (steward) | steward item 7(c): a like-for-like twelve-month automation comparison **does** exist on the collaboration facet (Feb–Mar 2025 → 5–12 Feb 2026, 43.0619 → 45.5456 on the five-pattern base), with five caveats that must travel with it — so the connector's second example question is answerable from the released data, which no publication says (`ATLAS §Conventions`; `room/steward-2026-09-16-question-batch-answers.md` 7(c); `room/director-2026-09-16-steward-batch-answer.md` fact 1) |
 - **L-2026-07-CONN-03** | promised follow-up | "Claude will point you back to the source data and its limitations as you explore" | O | open | no document specifies which limitations the connector surfaces, which release it serves, or how its answers were evaluated |
 - **L-2026-07-CONN-04** | untested-by-inference | the Colorado example implies a reliable state-by-use-case cut, while the reports' own geographic results carry thresholds and suppression that the connector post does not mention | N | open | —
 
@@ -1300,7 +1320,7 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-2026-08-IRA-20** | untested-by-inference | **the programme's central claim is untested by the programme**: the one testable instance of "outsiders ask different questions" is METR against `claude-code-expertise-2026-06`, and the comparison is deferred | N | open | and it is **not reproducible from the released files** for seven statable reasons — window, population, no expertise rating, no occupation, different work taxonomies, different success construct, no task value (`room/steward-2026-09-16-question-batch-2-answers.md` item 7) |
 - **L-2026-08-IRA-21** | untested-by-inference | no partner finding is connected to an Anthropic measure of the same thing: SALT's "people set the direction while Claude assisted" is adjacent to the augmentation share and **is not the same construct**, and nobody reconciles them in either direction | N | open | the house naming convention must not be applied to SALT's "delegating" |
 - **L-2026-08-IRA-22** | untested-by-inference | no numeric aggregation minimums are published anywhere, and `metr_addendum` used stricter ones than the rest — so the released files are not mutually comparable on suppression | N | unanswerable-with-public-data | —
-- **L-2026-08-IRA-23** | untested-by-inference | the counterfactual-time construct now exists twice in Anthropic's published world, measured two different ways (`productivity-gains-2025-11`; METR's guesses validated against a developer study), and nobody has compared them | N | partially answered | the METR side **is** public and cross-tabulable — `time_without_ai` × `model_version` is 8 × 9 with 58 of 72 cells published, and any facet × facet two-way table is recoverable; but no subset carries an O\*NET task, SOC code, occupation or date, so the two may be cited side by side and never merged (`room/steward-2026-09-16-question-batch-2-answers.md` items 5, 6) |
+- **L-2026-08-IRA-23** | untested-by-inference | the counterfactual-time construct now exists twice in Anthropic's published world, measured two different ways (`productivity-gains-2025-11`; METR's guesses validated against a developer study), and nobody has compared them | N | settled by data (steward) | the METR side **is** public and cross-tabulable — `time_without_ai` × `model_version` is 8 × 9 with 58 of 72 cells published, and any facet × facet two-way table is recoverable; but no subset carries an O\*NET task, SOC code, occupation or date, so the two may be cited side by side and never merged (`room/steward-2026-09-16-question-batch-2-answers.md` items 5, 6; §Cross-reference 35d) |
 - **L-2026-08-IRA-24** | untested-by-inference | the corpus's other access promises (Economic Futures consultation; the BFI partnership) offer nothing privileged, so the single documented path to non-public usage data runs through Societal Impacts, by invitation, and is currently closed | N | open | a material fact for any application promising analysis of non-public data |
 
 ### econ-scenarios-explorer-2026-09 — Scenarios for our Economic Future (2026-09-09)
@@ -1388,14 +1408,17 @@ proposal: the long-list is `programme/LONGLIST.md` and does not yet exist.
 - **L-ND-EFHP-04** | untested-by-inference | the hub still calls the analysis system "Clio" against the 2026-08-24 rename | N | open | see L-2024-12-CLIO-38 |
 - **L-ND-EIHP-01** | limitation | **none**: the canonical public entry point to the Index carries no caveat, no scope statement and no methodology note in its body copy; the only bounding information is "Last updated: Jun 26, 2026" | L | open | the connector's one-sentence disclaimer has no counterpart here |
 - **L-ND-EIHP-02** | untested-by-inference | no methodology, window, threshold or surface in the body copy, and the only pointer to method is "Read the report" — so a reader who reads a number off a chart has no route to the definitions behind it | N | open | —
-- **L-ND-EIHP-03** | untested-by-inference | the page's own payload is internally inconsistent about which release it serves ("Last updated: Jun 26, 2026" above a dataset object titled "Dataset 4 - Release 03-24-2026", with two download URLs in one page load) | N | answered | steward item 7(d): the second channel is a byte-identical but incomplete mirror — only the two most recent waves resolve, all four zip members re-hash identical to the Hugging Face folders, and the names are release dates, not data windows; only `release_2025_09_15` and `release_2026_06_26` ship an AUI, so any per-capita chart is on one of those two |
+- **L-ND-EIHP-03** | untested-by-inference | the page's own payload is internally inconsistent about which release it serves ("Last updated: Jun 26, 2026" above a dataset object titled "Dataset 4 - Release 03-24-2026", with two download URLs in one page load) | N | settled by data (steward) | **part (b) only** — the earlier `answered` over-graded it (correction 3, resolved under correction 6 because the settling agent is the steward, not a publication). Settled: the second download channel is a byte-identical but incomplete mirror — only the two most recent waves resolve, all four zip members re-hash identical to the Hugging Face folders, the names are release dates and not data windows, and only `release_2025_09_15` and `release_2026_06_26` ship an AUI, so any per-capita chart is on one of those two. **Not settled: which release the page's own payload is serving.** The steward's words on that half are "Not answerable from the files" (`room/steward-2026-09-16-question-batch-answers.md` item 7(d); `ATLAS §Releases`) |
 
 ## Cross-reference to the atlas
 
-978 items carry status `open` or `partially answered` (826 open, 152 partially). Reaching most of them needs the same handful
+982 items carry status `open` or `partially answered` (827 open, 155 partially), and a further 11 carry
+`settled by data (steward)` — 993 in all (recounted 2026-09-16 after the referee's corrections). Reaching most of them needs the same handful
 of Economic Index cuts, and being ruled out for most of them needs the same handful of entries in
 `data/ATLAS.md` §"Cuts that do not exist" — so the lines below are **grouped by atlas entry**, each
-naming the items it governs. Every open or partially-answered item is covered by exactly one group.
+naming the items it governs. Every one of the 993 is covered by exactly one group; the eleven
+steward-settled items keep the group they were in when they were open, because the atlas entry that
+settles them is the entry that governs the group.
 Nothing here asserts feasibility beyond what the atlas states; a line marked `steward?` needs the
 data steward before any post relies on it. The lead does not open data files.
 
@@ -1407,7 +1430,7 @@ data steward before any post relies on it. The lead does not open data files.
 3. `country` and `state_us` totals with the AUI, 2025-09-15 enriched and 2026-06-26 `overall` — **only those two waves publish an AUI**; 2026-01-15 and 2026-03-24 publish none (`room/steward-2026-09-16-question-batch-2-answers.md` item 14). Reaches L-2025-09-R3-36, -41, -45; L-2025-09-B3-03, -11; L-2026-01-R4-43; L-2026-03-R5-11; L-2026-06-R6-30. Naming, per `room/director-2026-09-16-steward-batch-answer.md`: the house term is the **AI Usage Index (AUI)**, and a citation of `release_2026_06_26` or its documentation carries "(called the 'Anthropic Usage Index' in the June 2026 documentation)" at first mention.
 3a. **Not reachable: L-2026-02-IND-13** (varying the India AUI's denominator). The India brief's own wave, 2026-01-15, ships no AUI, no population and no GDP (`ATLAS §Cuts 22`), so an India AUI at that window cannot be rebuilt at all, let alone re-denominated.
 4. `country` and `country-state` shares and counts, 2026-01-15 and 2026-03-24 — reaches the spotlight small-cell and state-mix items: L-2026-02-IND-02, -11, -17; L-2026-03-AUS-12, -14, -17; L-2026-07-CAN-11, -12.
-5. `onet_task` and `request` at global, country and `country-state`, all three long-schema waves — reaches the task-mix and concentration items: L-2025-02-P1-10, -21; L-2025-03-R2-12, -20; L-2025-09-R3-09; L-2026-03-R5-06, -27. **Compare mixes at level 1 or 2, never at level 0 below global** (`ATLAS §Coverage`).
+5. `onet_task` and `request` at global, country and `country-state`, all three long-schema waves — reaches the task-mix and concentration items: L-2025-02-P1-10, -21; L-2025-03-R2-12, -20; L-2025-09-R3-09; L-2026-03-R5-06, -27. **Compare mixes at level 1 or 2, never at level 0 below global** (`ATLAS §Which cuts exist at which grain`, Family B fill table — corrected from `§Coverage` on 2026-09-16, correction 8).
 6. `soc_occupation`, 2025-09-15 enriched only — reaches L-2025-02-P1-22, -28; L-2025-09-R3-44; L-2026-01-R4-46. State-level `soc_occupation` is unusable as a mix (74.28% mean `not_classified`), so occupational claims below the country stop here.
 7. The five primitives at three grains, 2026-01-15 and 2026-03-24 (`use_case`, `task_success`, `multitasking`, `human_only_ability`, `ai_autonomy`, the two time estimates, the two education measures) — reaches L-2026-01-R4-26, -27, -28, -39, -40, -49, -50; L-2026-01-B4-10; L-2026-02-IND-04, -06, -07, -16; L-2026-03-AUS-07, -16; L-2026-03-R5-10, -21; L-2026-03-R5A-12, -13; L-2026-07-CAN-16.
 8. The twenty `onet_task::*` and `request::*` intersections, **global only** — reaches L-2025-02-P1-23; L-2026-01-R4-48; L-2025-03-R2-19 (as a global-only substitute for the task-level cross that does not exist).
@@ -1457,49 +1480,55 @@ data steward before any post relies on it. The lead does not open data files.
 
 Questions raised in three or more publications, grouped. These are the corpus's own repetitions, and
 they are the strongest signal of what the economics stream keeps returning to without settling.
+Each header's count is the number of **distinct publications** named in its ID list, recounted from
+the lists themselves on 2026-09-16 (correction 7; thirteen of the fifteen headers had understated
+their own lists). Every group still clears the three-publication floor.
 
 **R1. What users do with the output, outside the conversation** — seven publications. L-2025-02-R1-02, L-2025-02-P1-05, L-2025-02-P1-08, L-2024-12-CLIO-07, L-2025-11-PROD-07, L-2026-02-FLU-04, L-2026-06-CCE-06, L-2026-06-R6A-02. Every measurement in the corpus stops at the chat boundary, and every publication that depends on output use says so.
 
-**R2. The conversation is the unit, never the user** — six publications. L-2025-02-R1-10, L-2024-12-CLIO-35 (via the account-weighting check), L-2025-09-R3-01, L-2026-01-R4-24, L-2026-02-FLU-20, L-2026-01-B4-03, L-2026-05-IAGD-11. Ruled out on public data at §Cuts 27b.
+**R2. The conversation is the unit, never the user** — seven publications. L-2025-02-R1-10, L-2024-12-CLIO-35 (via the account-weighting check), L-2025-09-R3-01, L-2026-01-R4-24, L-2026-02-FLU-20, L-2026-01-B4-03, L-2026-05-IAGD-11. Ruled out on public data at §Cuts 27b.
 
 **R3. Occupation is inferred from the task, not the user** — six publications. L-2025-02-P1-06, L-2025-03-R2-18 (in the wiki's own words), L-2025-09-R3-45, L-2026-03-R5-31, L-2026-06-R6-02, L-2026-06-R6A-03, and the single most available unrun validation, L-2026-06-R6-35.
 
-**R4. No classifier validation is published for the mapping the economics depends on** — eight publications. L-2024-12-CLIO-35, L-2025-02-R1-04, L-2025-02-P1-02, L-2026-01-R4-37, L-2026-03-R5-29, L-2026-03-R5A-10, L-2026-06-R6-38, L-2026-06-R6A-09, plus the survey stream's L-2025-12-INTV-26, L-2026-03-S81A-11 and L-2026-04-E81-19.
+**R4. No classifier validation is published for the mapping the economics depends on** — eleven publications. L-2024-12-CLIO-35, L-2025-02-R1-04, L-2025-02-P1-02, L-2026-01-R4-37, L-2026-03-R5-29, L-2026-03-R5A-10, L-2026-06-R6-38, L-2026-06-R6A-09, plus the survey stream's L-2025-12-INTV-26, L-2026-03-S81A-11 and L-2026-04-E81-19.
 
-**R5. Classifier model version changes between waves and the re-validation is never published** — four publications. L-2024-12-CLIO-17, L-2024-12-CLIO-27, L-2025-03-R2-07, L-2025-09-R3-05 (the one check that was run), L-2026-01-R4-03, L-2026-01-R4-44, L-2026-06-R6A-10.
+**R5. Classifier model version changes between waves and the re-validation is never published** — five publications. L-2024-12-CLIO-17, L-2024-12-CLIO-27, L-2025-03-R2-07, L-2025-09-R3-05 (the one check that was run), L-2026-01-R4-03, L-2026-01-R4-44, L-2026-06-R6A-10.
 
-**R6. No uncertainty, no minimum detectable effect beside a null** — eleven publications. L-2025-02-R1-19, L-2025-03-R2-02, L-2025-09-R3-41, L-2026-01-R4-08, L-2026-02-FLU-19, L-2026-03-LMIA-18, L-2026-03-R5-28, L-2026-03-R5A-09, L-2026-04-E81-18, L-2026-05-CASS-18, L-2026-05-CASSA-19, L-2026-06-CCE-25, L-2026-06-R6A-14, L-2026-08-WR-29. The one qualitative power statement in the corpus is L-2026-03-LMI-08.
+**R6. No uncertainty, no minimum detectable effect beside a null** — fifteen publications. L-2025-02-R1-19, L-2025-03-R2-02, L-2025-09-R3-41, L-2026-01-R4-08, L-2026-02-FLU-19, L-2026-03-LMIA-18, L-2026-03-R5-28, L-2026-03-R5A-09, L-2026-04-E81-18, L-2026-05-CASS-18, L-2026-05-CASSA-19, L-2026-06-CCE-25, L-2026-06-R6A-14, L-2026-08-WR-29. The one qualitative power statement in the corpus is L-2026-03-LMI-08.
 
-**R7. Composition versus behaviour in every over-time comparison** — seven publications. L-2025-03-R2-05, L-2025-09-R3-06, L-2025-09-B3-15, L-2026-01-R4-10, L-2026-03-R5-02, L-2026-06-CCE-21, L-2025-12-WORK-26, L-2026-06-R6-33. The corpus's one worked decomposition is L-2026-06-R6-06 (~70% compositional).
+**R7. Composition versus behaviour in every over-time comparison** — eight publications. L-2025-03-R2-05, L-2025-09-R3-06, L-2025-09-B3-15, L-2026-01-R4-10, L-2026-03-R5-02, L-2026-06-CCE-21, L-2025-12-WORK-26, L-2026-06-R6-33. The corpus's one worked decomposition is L-2026-06-R6-06 (~70% compositional).
 
-**R8. Selection into Claude, named and never bounded** — nine publications. L-2025-02-R1-06, L-2025-04-SWE-04, L-2026-02-FLU-29, L-2025-12-INTV-02, L-2026-03-S81-02, L-2026-03-S81A-19, L-2026-04-E81-01, L-2026-04-SURV-18, L-2026-05-CASS-01, L-2026-06-R6-08, and the Index's own statement of it in L-2026-07-CONN-01.
+**R8. Selection into Claude, named and never bounded** — eleven publications. L-2025-02-R1-06, L-2025-04-SWE-04, L-2026-02-FLU-29, L-2025-12-INTV-02, L-2026-03-S81-02, L-2026-03-S81A-19, L-2026-04-E81-01, L-2026-04-SURV-18, L-2026-05-CASS-01, L-2026-06-R6-08, and the Index's own statement of it in L-2026-07-CONN-01.
 
-**R9. No firm, no industry, no employer** — five publications. L-2024-12-CLIO-37 (foreclosed at summarisation), L-2025-09-R3-43, L-2025-12-INTV-22 (employer permission), L-2026-05-IAGD-11, L-2026-07-EFRF-07, L-2026-09-SCPA-14.
+**R9. No firm, no industry, no employer** — six publications. L-2024-12-CLIO-37 (foreclosed at summarisation), L-2025-09-R3-43, L-2025-12-INTV-22 (employer permission), L-2026-05-IAGD-11, L-2026-07-EFRF-07, L-2026-09-SCPA-14.
 
-**R10. Language is claimed and never measured** — five publications. L-2024-12-CLIO-16, L-2024-12-CLIO-30, L-2025-09-R3-25 (language uncontrolled behind the geographic collaboration finding), L-2026-02-IND-14, L-2026-03-AUS-09, L-2026-03-S81A-22, L-2026-07-CAN-05.
+**R10. Language is claimed and never measured** — six publications. L-2024-12-CLIO-16, L-2024-12-CLIO-30, L-2025-09-R3-25 (language uncontrolled behind the geographic collaboration finding), L-2026-02-IND-14, L-2026-03-AUS-09, L-2026-03-S81A-22, L-2026-07-CAN-05.
 
-**R11. The automation/augmentation construct, and what it is not** — six publications. L-2025-02-R1-17, L-2025-02-P1-29, L-2025-04-SWE-02, L-2025-09-R3-26, L-2025-09-B3-18, L-2026-01-R4-19, L-2026-09-SCPA-25. The corpus keeps the construct and keeps changing its base (`ATLAS §Conventions`).
+**R11. The automation/augmentation construct, and what it is not** — seven publications. L-2025-02-R1-17, L-2025-02-P1-29, L-2025-04-SWE-02, L-2025-09-R3-26, L-2025-09-B3-18, L-2026-01-R4-19, L-2026-09-SCPA-25. The corpus keeps the construct and keeps changing its base (`ATLAS §Conventions`).
 
-**R12. Early warning, promised and undemonstrated** — three publications. L-2026-03-LMI-22, L-2026-04-SURV-06, L-2026-05-IAGD-06, and the measurement ask of L-2026-06-EPF-08.
+**R12. Early warning, promised and undemonstrated** — four publications. L-2026-03-LMI-22, L-2026-04-SURV-06, L-2026-05-IAGD-06, and the measurement ask of L-2026-06-EPF-08.
 
-**R13. The long-run stock of expertise and the professional pipeline** — five publications. L-2025-12-WORK-19, L-2026-01-RCT-13, L-2026-01-RCT-21, L-2026-03-R5-11, L-2026-05-IAGD-19, L-2026-06-CCE-14, L-2026-07-EFRF-08.
+**R13. The long-run stock of expertise and the professional pipeline** — six publications. L-2025-12-WORK-19, L-2026-01-RCT-13, L-2026-01-RCT-21, L-2026-03-R5-11, L-2026-05-IAGD-19, L-2026-06-CCE-14, L-2026-07-EFRF-08.
 
-**R14. Convergence or divergence across geographies** — five publications. L-2025-09-R3-24, L-2025-09-B3-07, L-2026-01-R4-29, L-2026-03-R5-11, L-2026-05-IAGD-10, L-2026-06-R6-25.
+**R14. Convergence or divergence across geographies** — six publications. L-2025-09-R3-24, L-2025-09-B3-07, L-2026-01-R4-29, L-2026-03-R5-11, L-2026-05-IAGD-10, L-2026-06-R6-25.
 
-**R15. No outcome series is ever joined to usage** — eight publications. L-2025-02-P1-13, L-2025-11-PROD-14, L-2026-01-R4-25, L-2026-01-B4-13, L-2026-02-FLU-23, L-2026-03-R5-19, L-2026-04-E81-16, L-2026-06-R6-19, L-2026-06-EPF-11. The corpus's single attempt is `labor-market-impacts-2026-03`, whose employment results are nulls.
+**R15. No outcome series is ever joined to usage** — nine publications. L-2025-02-P1-13, L-2025-11-PROD-14, L-2026-01-R4-25, L-2026-01-B4-13, L-2026-02-FLU-23, L-2026-03-R5-19, L-2026-04-E81-16, L-2026-06-R6-19, L-2026-06-EPF-11. The corpus's single attempt is `labor-market-impacts-2026-03`, whose employment results are nulls.
 
 ## Promised follow-ups and whether they were delivered
 
 127 items carry type `promised follow-up` (one of them, L-2026-06-CCE-14, is also the corpus's only
-explicitly named future test). By status: **18 delivered**, **30 partly delivered**, **76 not
-delivered**, **3 undeliverable from public data**. The ID lists are complete; the table names the
-ones that matter most.
+explicitly named future test). By delivery: **16 delivered**, **32 partly delivered**, **76 not
+delivered**, **3 undeliverable from public data** (re-tallied 2026-09-16: L-2025-02-R1-13 and
+L-2025-04-SWE-12 moved from delivered to partly under correction 9 and correction 3). The ID lists
+are complete; the table names the ones that matter most. **Delivery is judged separately from the
+status column**: L-2026-05-IAGD-05 carries status `settled by data (steward)` and is partly
+delivered.
 
 | promise | source | what happened |
 |---|---|---|
 | Repeat the analyses and release the datasets | L-2025-02-R1-11 | **delivered**: six reports, six release folders to 2026-06-26 |
 | Release automation/augmentation at task and occupation level | L-2025-02-R1-14 | **delivered** one wave later, `economic-index-2025-03-report` |
-| Extend the automation/augmentation framework for agentic tools | L-2025-04-SWE-12 | **delivered**: AI autonomy in `economic-index-2026-01-report`; surface autonomy in `economic-index-2026-06-report` |
+| Extend the automation/augmentation framework for agentic tools | L-2025-04-SWE-12 | **partly**: AI autonomy in `economic-index-2026-01-report` and surface autonomy in `economic-index-2026-06-report` are new primitives *beside* the framework; the five-pattern collaboration taxonomy is unchanged from 2025-02-10 to 2026-06-26 (corrected 2026-09-16, correction 3) |
 | Revisit the pace of diffusion | L-2026-01-R4-22 | **delivered**: 5–9 years, `economic-index-2026-03-report` fn 7 |
 | Publish the Interviewer pilot results | L-2025-12-INTV-12, -14 | **delivered**: `survey-81k-interviews-2026-03` |
 | Study how transformative AI reshapes economic activity (Korinek) | L-2026-03-ILAU-07 | **delivered**: `econ-scenarios-paper-2026-09`, ~six months |
@@ -1512,7 +1541,8 @@ ones that matter most.
 | Develop a framework for non-interactive Claude Code usage | L-2026-06-CCE-13 | **not delivered** |
 | Show whether returns to expertise fall over time | L-2026-06-CCE-14 | **not delivered**, with seven months of data in hand |
 | Cross-lingual analysis of Claude.ai usage | L-2024-12-CLIO-16 | **not delivered**: the Index publishes geography, never language |
-| Cohort analyses and Claude Code work on AI fluency | L-2026-02-FLU-08, -11, -12 | **not delivered**: no second fluency wave, and no release covers its window |
+| Cohort analyses on AI fluency | L-2026-02-FLU-08 | **partly**: the tenure design is executed for Index primitives, not fluency behaviours, in `economic-index-2026-03-report` ch.2 (corrected 2026-09-16, correction 5 — the row previously said "not delivered", contradicting the item line and the Partly-delivered list) |
+| Claude Code fluency work; a second fluency wave | L-2026-02-FLU-11, -12 | **not delivered**: no second fluency wave, and no release covers its window (`ATLAS §Cuts 27a`) |
 | Engage workers and industries facing displacement | L-2026-03-ILAU-10, L-2026-06-EPF-16 | **not delivered**: every instrument samples Claude users or a general panel |
 | The Fund's first pilot programme; the $150M fellowship | L-2026-06-EPF-14, -15 | **not delivered**: neither appears in the corpus |
 | London/LSE symposium awardees | L-2025-06-EFL-04, L-2025-10-EFS-04 | **not delivered**: the DC list was published, the London list never |
@@ -1524,9 +1554,9 @@ ones that matter most.
 | One of the first longitudinal datasets on AI usage | L-2025-06-EFL-02, L-ND-EFPP-04 | **undeliverable from public data**: §Cuts 27b, and the threat-model obstacle at L-2026-08-IRA-15 |
 | Hourly sampling "opens avenues for future research" | L-2026-06-R6-27 | **undeliverable from public data**: no day, week or hour grain is released (§Cuts 8) |
 
-**Delivered (18):** L-2024-12-CLIO-19; L-2025-02-R1-11, -13, -14; L-2025-02-P1-16; L-2025-03-R2-13, -14; L-2025-04-SWE-12; L-2025-09-R3-27; L-2025-09-B3-14; L-2025-12-INTV-12, -14; L-2026-01-R4-22; L-2026-03-ILAU-05, -07; L-2026-03-S81-13; L-2026-04-SURV-10; L-2026-05-IAGD-04.
+**Delivered (16):** L-2024-12-CLIO-19; L-2025-02-R1-11, -14; L-2025-02-P1-16; L-2025-03-R2-13, -14; L-2025-09-R3-27; L-2025-09-B3-14; L-2025-12-INTV-12, -14; L-2026-01-R4-22; L-2026-03-ILAU-05, -07; L-2026-03-S81-13; L-2026-04-SURV-10; L-2026-05-IAGD-04.
 
-**Partly delivered (30):** L-2024-12-CLIO-17; L-2025-02-R1-12; L-2025-02-P1-13, -15; L-2025-04-EAC-03; L-2025-06-EFL-04; L-2025-07-BFI-02; L-2025-09-R3-29; L-2025-09-B3-13; L-2025-10-EPR-09; L-2025-10-EFS-03; L-2025-11-PROD-12, -13; L-2025-12-INTV-13, -15; L-2026-01-R4-24; L-2026-01-B4-07, -09; L-2026-02-FLU-08; L-2026-03-LMI-17; L-2026-03-ILAU-06; L-2026-03-R5-16; L-2026-04-SURV-08, -13; L-2026-05-IAGD-05, -07; L-2026-06-EPF-13; L-2026-08-WR-20; L-2026-08-IRA-14; L-2026-09-SCEX-12.
+**Partly delivered (32):** L-2024-12-CLIO-17; L-2025-02-R1-12, **-13**; L-2025-02-P1-13, -15; L-2025-04-EAC-03; **L-2025-04-SWE-12**; L-2025-06-EFL-04; L-2025-07-BFI-02; L-2025-09-R3-29; L-2025-09-B3-13; L-2025-10-EPR-09; L-2025-10-EFS-03; L-2025-11-PROD-12, -13; L-2025-12-INTV-13, -15; L-2026-01-R4-24; L-2026-01-B4-07, -09; L-2026-02-FLU-08; L-2026-03-LMI-17; L-2026-03-ILAU-06; L-2026-03-R5-16; L-2026-04-SURV-08, -13; L-2026-05-IAGD-05, -07; L-2026-06-EPF-13; L-2026-08-WR-20; L-2026-08-IRA-14; L-2026-09-SCEX-12.
 
 **Not delivered (76):** L-2024-12-CLIO-16, -18, -20; L-2025-02-P1-12, -14; L-2025-03-R2-10, -11, -12; L-2025-04-EAC-02; L-2025-06-EFL-03; L-2025-07-BFI-03; L-2025-09-R3-28; L-2025-11-EFUK-02, -03, -04; L-2025-11-PROD-14; L-2025-12-WORK-12, -13, -14; L-2025-12-INTV-16; L-2026-01-R4-23, -25; L-2026-01-B4-06, -08; L-2026-01-RCT-15, -16, -17, -18; L-2026-02-FLU-09, -10, -11, -12; L-2026-03-LMI-18, -19, -20; L-2026-03-LMIA-10, -11; L-2026-03-ILAU-08, -09, -10, -11, -12; L-2026-03-S81-11, -12; L-2026-03-R5-15; L-2026-04-SURV-05, -09, -11, -12; L-2026-05-IAGD-06, -08, -09; L-2026-05-CASS-08, -09, -10; L-2026-05-CASSA-08; L-2026-06-EPF-14, -15, -16; L-2026-06-CCE-13, -14; L-2026-06-CCEA-07; L-2026-06-R6-28; L-2026-07-CONN-03; L-2026-07-EFRF-13; L-2026-08-IRA-13, -15, -16, -17, -18; L-2026-09-SCEX-11; L-2026-09-SCPA-14, -15, -16; L-ND-EFPP-05; L-ND-EFHP-02.
 
@@ -1565,13 +1595,30 @@ ones that matter most.
 | `S81` | 27 | | |
 | `S81A` | 24 | | |
 
-**By status:** open 826 · partially answered 152 · answered 35 · answered (by itself) 16 ·
-unanswerable-with-public-data 17 · superseded 9 · supersedes 1 · superseded in practice 1 ·
-answered (as a standard) 1 · not applicable (`—`) 5.
+**By status** (recounted 2026-09-16, after the fourteen corrections of
+`room/referee-2026-09-16-ledger-threads-verdict.md`): open 827 · partially answered 155 ·
+answered 23 · answered (by itself) 16 · unanswerable-with-public-data 18 ·
+**settled by data (steward) 11** · superseded 5 · supersedes 1 · superseded in practice 1 ·
+answered (as a standard) 1 · not applicable (`—`) 5. Total 1,063.
 
-**By type:** untested-by-inference 358 · limitation 338 · conjecture 133 · promised follow-up 127
+**What changed, and why.** Twenty-six items were re-graded. Eleven moved to the new
+`settled by data (steward)` status because their "answer" was a fact about the released data and
+not a later publication (correction 6). Eight `answered` items lost that grade because the
+answering publication addresses one clause of the item and not another (corrections 1, 3, 9); four
+`superseded` items lost it because a later publication did something different rather than
+replacing the claim (corrections 3, 9, 14); one `open` item became `unanswerable-with-public-data`
+to match its twin (correction 4); and two items whose only "answer" was a replication became `open`
+(correction 14). The full list is in `room/lead-2026-09-16-step0-corrections-status.md`. The
+practical effect on the long-list: the `answered` stratum shrinks from 35 items to 23 and the
+`superseded` stratum from 9 to 5; twelve of those sixteen now carry `partially answered` and four
+`settled by data (steward)`, and two further items that had been `partially answered` on the
+strength of a replication are now `open`. Fourteen questions the ledger had treated as closed are
+open again to some degree.
+
+**By type:** untested-by-inference 357 · limitation 338 · conjecture 133 · promised follow-up 127
 (including one "named test") · open question 101 (including two "more research is needed" and one
-stated hypothesis) · revised hypothesis 6.
+stated hypothesis) · revised hypothesis 6 · ledger author's inference 1 (L-2026-07-CAN-17, split out
+of `untested-by-inference` on 2026-09-16 under correction 2). Total 1,063.
 
 **Thin publications, and why.** Six publications produced fewer than eight items each:
 `economic-advisory-council-2025-04` (4), `becker-friedman-partnership-2025-07` (4),
@@ -1605,8 +1652,8 @@ report, and says so in the item.
    in this ledger was copied from that extract, which is a byte-for-byte slice of the wiki files.
 2. **Structure read first.** `README.md`; `team/SETUP.md` §5 (rows 0.3–0.4 and "Session 1.2");
    `.claude/skills/room-protocol/SKILL.md`; `room/director-2026-09-16-session-1-2-kickoff.md`;
-   `/mnt/memory/standards/terminology.md`; `wiki/INDEX.md` (all 171 lines, including the ten
-   standing notes and the four applied rulings); `data/ATLAS.md` §"Which cuts exist at which grain"
+   `/mnt/memory/standards/terminology.md`; `wiki/INDEX.md` (all 171 lines, including its
+   standing notes — eleven since 2026-09-16 — and the four applied rulings); `data/ATLAS.md` §"Which cuts exist at which grain"
    and §"Cuts that do not exist" (lines 170–349), read as a document — **no data file was opened**.
    Both steward batches were read and are cited by path where they settle whether a cut exists:
    `room/steward-2026-09-16-question-batch-answers.md` (ten answers) and
@@ -1624,7 +1671,10 @@ report, and says so in the item.
 4. **Quotation discipline.** Every `L` and `O` line is a quotation from the wiki file's verbatim
    section, abridged only with `…` and never paraphrased into a stronger claim. Every `N` line is
    marked `untested-by-inference` and is the wiki author's inference about the source, not the
-   source's own statement. Where a wiki file already carries a status line against the corpus
+   source's own statement. **One line is neither** — L-2026-07-CAN-17, which the referee found
+   attributed to a wiki `N` item that does not exist; it is now typed
+   `ledger author's inference`, carries `—` in the Wiki § column and names what seeded it
+   (correction 2). Where a wiki file already carries a status line against the corpus
    (`economic-index-survey-2026-04-announcement`, `institute-agenda-2026-05`,
    `institute-launch-2026-03`, `independent-research-access-2026-08`), that status is carried
    forward and attributed rather than re-derived.
@@ -1634,14 +1684,31 @@ report, and says so in the item.
    enumerated in `wiki/INDEX.md` on 2026-09-16 and must be re-checked when a seventh Economic Index
    report or any new economics publication appears — starting with the items whose status turns on
    "nothing follows it": L-2026-05-IAGD-05, L-2026-06-R6-28, L-2026-04-SURV-05.
-6. **Known limits of the ledger itself.** (a) Quotations were read from the wiki files, not
+6. **The referee's corrections, applied 2026-09-16.** All fourteen numbered corrections of
+   `room/referee-2026-09-16-ledger-threads-verdict.md` are in this file and in
+   `programme/THREADS.md`. Correction 9 required re-verifying every `answered`,
+   `answered (by itself)` and `superseded` item — 63 of them — against the answering wiki file, and
+   at source where the wiki was ambiguous or the claim turned on a figure. **Twenty-two changed
+   status** (twelve lost `answered`, four lost `superseded`, eleven took the new
+   `settled by data (steward)`, one `open` item became `unanswerable-with-public-data`, and two
+   became `open`); the by-ID list and the choices made where a correction offered one are in
+   `room/lead-2026-09-16-step0-corrections-status.md`. Five facts were re-checked at source rather
+   than in the wiki: the `economic-index-2026-06-appendix` PDF p.15 (no survey instrument, against
+   L-2026-04-SURV-14); `economic-index-2026-03-report` pp.6, 11 and 18 (the winter-break confound is
+   *named* in the body at p.6 and *quantified* in ch.1 endnote 3 at p.11; ch.2 endnote 3 at p.18 is
+   the Super Bowl note); `economic-index-2025-09-report` p.10 rendered as an image (the left panel
+   of Figure 1.2 prints six data labels, the right panel none); the same report p.9 (directive 27%
+   and 39% are body text and published); and `economic-index-2025-09-report` p.3 (geography is
+   published "for the first time" in September 2025, not March 2025 — a `clio-insights-2024-12`
+   wiki error, now fixed). Working copies under `/tmp/lead/`, not committed.
+7. **Known limits of the ledger itself.** (a) Quotations were read from the wiki files, not
    re-fetched from the sources; the wiki files record their own verification dates, and
    `wiki/INDEX.md` Standing note 3 warns that `economic-index-2026-03-appendix` exists in two builds
    that differ in wording — so any `R5A` quotation must be checked against the build it came from
    before it is used in a post. (b) The `What it did not test` sections run to 20–30 items per file
    and the ledger carries the load-bearing ones, not all of them; the wiki file is authoritative for
    the residue. (c) §Cross-reference to the atlas groups items by atlas entry rather than printing
-   one line per item, because 978 items are open or partially answered and the same atlas entries
+   one line per item, because 982 items are open or partially answered and the same atlas entries
    govern most of them.
 
 
