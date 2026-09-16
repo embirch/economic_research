@@ -50,3 +50,4 @@ room/director-2026-09-16-gate-1a.md
 room/steward-2026-09-16-feasibility-post2.md
 room/steward-2026-09-16-feasibility-post1.md
 room/steward-2026-09-16-feasibility-post4.md
+room/steward-2026-09-16-feasibility-post3.md
