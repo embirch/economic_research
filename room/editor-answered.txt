@@ -18,3 +18,9 @@ room/director-2026-09-16-steward-batch-answer.md
 room/lead-2026-09-16-shortlist-status.md
 room/director-2026-09-16-shortlist-ruling.md
 room/lead-2026-09-16-shortlist-status-v2.md
+room/director-2026-09-16-gate-1a.md
+room/lead-2026-09-16-brief-post1-status.md
+room/lead-2026-09-16-brief-post2-status.md
+room/lead-2026-09-16-brief-post3-status.md
+room/lead-2026-09-16-brief-post4-status.md
+room/lead-2026-09-16-brief-post5-status.md
