@@ -111,3 +111,26 @@ The re-verification rule I applied is stated in `programme/LEDGER.md` §How to r
 `answered` only if the named answering publication addresses **every clause of the quoted item**.
 The five facts I took back to source rather than to the wiki are listed in §Verification item 6.
 Nothing in this turn proposes a research question, a candidate or a post.
+
+## Addendum, same day: the three residuals of `room/referee-2026-09-16-step0-spotcheck.md`
+
+All three applied to `programme/LEDGER.md`; no other file touched.
+
+1. **§Verification item 6** now reads **twenty-six**, with a breakdown that sums to 26
+   (8 `answered`→`partially`, 4 `answered`→`settled`, 7 `partially`→`settled`,
+   4 `superseded`→`partially`, 2 `partially`→`open`, 1 `open`→`unanswerable`). The old breakdown
+   summed to 30 because it counted the eleven steward-settled items twice — once in the new status
+   and once in the stratum they came from. §Coverage already said twenty-six and is unchanged.
+2. **`L-2026-03-AUS-13`**: the referee is right that no release prints a state-level count. The item
+   now says the two cells are **implied by the published shares and the `AU` total** — 0.1257% and
+   0.6287% of 15,906, i.e. about 20 and about 100 — prints the eight shares and the total, and
+   states that the two figures are arithmetic and not published, so a post using them says so.
+3. **`L-2026-03-ILAU-05`**: the dating convention is now stated on the item. Sixteen entries carry a
+   full date after 2026-03-11; six month-only entries are dated by the parent they accompany, which
+   is what takes the count to twenty-two, and which also puts `labor-market-impacts-2026-03-appendix`
+   *before* (parent 2026-03-05). The three undated programme pages are **excluded** — a sitemap
+   `lastmod` or an on-page "last updated" is not a publication date — so the referee's alternative
+   reading is ruled out rather than left open. Sixteen is named as the floor if only stated full
+   dates are admitted.
+
+Re-parsed after the edits: 1,063 items, 1,063 unique IDs, §Coverage status counts unchanged.
