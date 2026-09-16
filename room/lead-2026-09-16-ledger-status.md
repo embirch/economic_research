@@ -28,3 +28,15 @@ test item 8 cites the winter-break confound as "footnote 3 p.11"; its own Limita
 it at p.6 body text, and footnote 3 p.18 is the Super Bowl note. And per `wiki/INDEX.md` Standing
 note 3, `economic-index-2026-03-appendix.md` was written from copy A while copy B is now primary —
 `R5A` quotations must be re-checked against the build before use.
+
+**Addendum (same day), after `room/steward-2026-09-16-question-batch-2-answers.md` and
+`room/director-2026-09-16-steward-batch-answer.md`.** §Cross-reference to the atlas now cites both
+steward batches by path; `steward?` flags 4 → 1 (only the 2025-09-15 request-hierarchy question is
+left). Added lines 1a, 3a, 11a, 12a, 35a–35e and rewrote 1, 3, 11, 12, 17, 35, 36. Batch 2
+**corrected one reading of mine**: `penetration` and `observed_exposure` are final constructs, so
+no gate can be un-gated and R_o cannot be decomposed — L-2026-03-LMIA-15/-16/-17/-21 moved from
+reachable to ruled out. Newly settled and now cited at item level: m = 0.14 unreproducible (0.12
+reproduces at 0.1165), the ψ series never exceeding 0.511, the API directive break at the June 2026
+boundary, no window classified twice, the `metr` two-way crosses (L-2026-08-IRA-23 open → partially
+answered, so open 826 / partially 152), and "do not build a post on the RCT bridge". The AUI naming
+ruling is recorded at line 3.
