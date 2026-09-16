@@ -197,6 +197,49 @@ contains files.
 7. Per-release `README.md` exists only for 2025-02-10, 2025-03-27 and 2025-09-15;
    `data_documentation.md` only for 2025-09-15 onward. 2025-09-15 is the only folder with both.
 
+## Second distribution channel (added 2026-09-16)
+
+Hugging Face is **not** the only public channel. The Economic Index hub page's own payload names a
+second `datasetDownloadURL` on a Google Cloud Storage bucket
+(`wiki/reports/programme-and-product-pages.md` §`economic-index-hub-page`). Probed today:
+
+| URL | status | bytes | contents |
+|---|---|---|---|
+| `https://economic-research.anthropic.com/releases/econ-index/release-2026-06-26.zip` | **200**, `application/zip`, `last-modified` 2026-06-26 14:55:44 GMT | 30,774,114 (compressed); 296,464,545 uncompressed | `README.md` (7,397 B), `aei_1p_api_2026-06-26.csv`, `aei_claude_ai_2026-06-26.csv` — **all three sha256-identical to `release_2026_06_26/`** (`1a01eeb7…` = that folder's `data_documentation.md`, `62197f00…`, `f974b358…`) |
+| `https://economic-research.anthropic.com/releases/econ-index/release-2026-03-24.zip` | **200** | 8,582,259; 103,287,181 uncompressed | one file, `aei_claude_ai_2026-03-24.csv`, sha256 `69ebf6f9…` = `release_2026_03_24/data/aei_raw_claude_ai_2026-02-05_to_2026-02-12.csv`. **The 1P API file and the documentation are not in this zip** |
+| `release-2026-01-15.zip`, `release-2025-09-15.zip`, `release-2025-03-27.zip`, `release-2025-02-10.zip`, `labor_market_impacts.zip` | **404** | — | only the two most recent waves are mirrored |
+| `…/releases/econ-index/` and the bucket root | **404** / **403** | — | no listing: objects are public, the bucket is not browsable, so the channel cannot be enumerated — you must guess names |
+
+Consequences. (i) The channel is a **mirror, not a second version**: no file differs from Hugging
+Face by a byte, so nothing here changes any published number. (ii) Its **names are misleading** —
+`release-2026-03-24.zip/aei_claude_ai_2026-03-24.csv` is the 5–12 February 2026 window, named by
+release date, and `README.md` inside the June zip is the `data_documentation.md`. (iii) It is
+**incomplete** (no API file for March, no earlier waves, no code, no reference files), so
+`data/fetch/*.py` continues to fetch from Hugging Face, which is checksummable through the tree
+API's LFS oids. Recorded because a reader who found only the zip would have a different file list.
+
+```bash
+for d in 2026-06-26 2026-03-24 2026-01-15 2025-09-15; do
+  printf "%s " $d
+  curl -sI "https://economic-research.anthropic.com/releases/econ-index/release-$d.zip" \
+    | awk 'NR==1{s=$2} /^content-length/{l=$2} END{print s, l}'
+done   # -> 2026-06-26 200 30774114 ; 2026-03-24 200 8582259 ; 2026-01-15 404 ; 2025-09-15 404
+# then: unzip -o -q release-2026-06-26.zip -d x && sha256sum x/*   (compared with the folder CHECKSUMS.txt)
+```
+
+## Sibling Anthropic datasets on Hugging Face (added 2026-09-16)
+
+`Anthropic/EconomicIndex` is one of 14 public datasets under the `Anthropic` author. Two carry
+Claude-usage data and are the nearest public relatives of the Index; neither is part of it. Keys,
+coverage and licences are in `data/ATLAS.md` §Supplementary sources.
+
+| dataset | lastModified | what it is |
+|---|---|---|
+| `Anthropic/AnthropicInterviewer` | 2026-01-06 (`c9e1ec1`) | 1,250 interview transcripts, two columns, three splits |
+| `Anthropic/enabling-independent-research` | 2026-08-26 (`b1ef5f7`) | partner cluster tables from ~250k Claude.ai **and Claude Code** conversations, April–May 2026 |
+
+`curl -s "https://huggingface.co/api/datasets?author=Anthropic&full=true"` (14 ids, no token).
+
 ## Verification
 
 All commands run 2026-09-16 from this sandbox; the tree API is reachable without a token.
@@ -256,3 +299,13 @@ Rate limit observed on the tree API: `ratelimit-policy: "fixed window";"api";q=5
   the one that will bite a loader. No Claude Code file and no survey file beyond
   `BTOS_National.xlsx` exist anywhere in the tree. Per-release profiling notes
   (`data/releases/<release>.md`) and `data/ATLAS.md` still to be written.
+
+- **2026-09-16 (b) — steward question batch.** Re-checked at the top of the session: the dataset
+  API still returns `sha` `2ea58ff75e4247d26810c37f10c179edc2466cac` and `lastModified`
+  `2026-06-26T23:21:00.000Z`, and the root tree still holds the same **seven** data folders plus
+  three root files. **There is no release after 2026-06-26 and no eighth folder**; every
+  "post-June-2026 grain and cadence" question is therefore about a release that does not exist.
+  Two sections added above: the second distribution channel (a byte-identical, incomplete GCS
+  mirror of the two most recent waves) and the two sibling Anthropic datasets.
+  `curl -s "https://huggingface.co/api/datasets/Anthropic/EconomicIndex" | python -c "import json,sys; d=json.load(sys.stdin); print(d['sha'], d['lastModified'])"`
+  and `curl -s ".../tree/main"`.

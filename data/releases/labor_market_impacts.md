@@ -564,3 +564,17 @@ print('cut',round(cut,4),'n top',len(tq),'wage top',round(wt),'wage zero',round(
   Eloundou et al. task-level β not obtained (the `openai/GPTs-are-GPTs` README points at
   `occ_level.csv`, which 404s on `main`); the cause of the 52 zero-exposure occupations with
   positive tasks, and of the 100 tasks sharing the value 0.7239, remains conjecture.
+
+- **2026-09-16 (b) — steward question batch** (`room/director-2026-09-16-steward-question-batch.md`
+  Q8, Q10). Cache rebuilt in a fresh sandbox (2 files, 1,926,998 bytes, both sha256 matching) and
+  the two column questions re-confirmed against the files rather than the report:
+  `job_exposure.csv` = `occ_code, title, observed_exposure` (756 rows, `occ_code` is 7-character
+  **2018 SOC detailed** code, e.g. `11-1011`, unique, no aggregates and no SOC 55 Military);
+  `task_penetration.csv` = `task, penetration` (17,998 rows, 17,992 distinct O\*NET 27.x task
+  strings, not unique on its only key).
+  `python3 -c "import pandas as pd; [print(f, pd.read_csv('data/cache/labor_market_impacts/'+f, keep_default_na=False).columns.tolist()) for f in ('job_exposure.csv','task_penetration.csv')]"`.
+  **This is the only file in any Anthropic public release that carries job-level observed
+  exposure**, and it carries no survey variable, no occupation title crosswalk beyond `title`, and
+  no geography — so the 81k-survey papers' job-level exposure joins to it on `occ_code` only, and
+  every respondent-level variable in those papers is unreleased (see `data/ATLAS.md`
+  §Supplementary sources for the two sibling Anthropic datasets that are public).

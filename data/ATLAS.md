@@ -50,13 +50,26 @@ internal path, skips files whose sha256 already matches (a rebuild is a no-op), 
 `(cd data/cache/<release> && sha256sum -c CHECKSUMS.txt)` — **from inside the cache directory**,
 because the paths are relative to it `[R3 §Traps 21]`. Total: 80 files, ~633 MiB; the cache is
 currently complete for all seven folders (CHECKSUMS.txt line counts 2/14/16/38/4/3/3).
-Conventions for the scripts are in `data/fetch/README.md`.
+Conventions for the scripts are in `data/fetch/README.md`. Sources beside the dataset (the two
+sibling Anthropic datasets and the two mirror zips) come from
+`python data/fetch/supplementary_anthropic.py` — 11 files, 56,415,529 B, which also re-hashes the
+zip members in place to re-prove the mirror is byte-identical.
 
 **Revision.** Everything in this atlas is pinned to Hugging Face revision
 **`2ea58ff75e4247d26810c37f10c179edc2466cac`** (`2ea58ff`), dataset `lastModified`
 `2026-06-26T23:21:00.000Z` `[IX §Verification 5, 7]`. The `x-repo-commit` header was re-fetched
 today and still returns `2ea58ff` (re-run 2026-09-16). If it ever differs, re-run the fetch
-scripts: a hash mismatch fails loudly.
+scripts: a hash mismatch fails loudly. **There is no release after 2026-06-26**: the root tree
+still holds the same seven data folders `[IX §Dated log 2026-09-16 (b)]`.
+
+**Hugging Face is not the only channel.** `economic-research.anthropic.com/releases/econ-index/`
+serves zips of the **two most recent waves only** (`release-2026-06-26.zip` 200, 30,774,114 B;
+`release-2026-03-24.zip` 200, 8,582,259 B; every earlier name 404s, and the directory is not
+listable). Both unzip to files whose sha256 are **identical** to the Hugging Face folders, so the
+mirror changes no number — but it is incomplete (March's zip holds the Claude.ai CSV only) and its
+names mislead: the file inside `release-2026-03-24.zip` is the **5–12 February 2026** window, and
+the June zip's `README.md` is that folder's `data_documentation.md`
+`[IX §Second distribution channel]`. Fetch from Hugging Face, where the LFS oid gives a checksum.
 
 **Licence.** Data CC-BY (**no version given**), code MIT — the dataset card body and the
 2025-02-10 folder README both say exactly this; the card's YAML front matter and the HF API
@@ -130,14 +143,25 @@ O\*NET, SOC, ISO codes, IMF/BEA GDP, World Bank/Census working-age population, C
 GDP, O\*NET or SOC join for the 2026 waves is an external join, usually from 2025-09-15
 `[R4 §Files]`, `[R5 §Files]`, `[R6 §Cuts 12]`.
 
-**Claude Code — stated plainly: there is no Claude Code data anywhere in the dataset.** No folder,
+**Claude Code — stated plainly: there is no Claude Code data anywhere in this dataset** (but
+there is some in a sibling one, added 2026-09-16: `Anthropic/enabling-independent-research`
+carries METR partner clusters over Claude Code sessions with `cc_session_turn_count`,
+`model_version`, `lines_added/removed` and `compaction_*` — see `## Supplementary sources`). No folder,
 file, facet, variable, `metric_id`, `category_name` or column name mentions it, at revision
 `2ea58ff` `[IX §Components]`, `[R4 §Facets, V15]`, `[R5 §Facets]`, `[R6 §Cuts 8, V15]`. The June
 2026 file explicitly excludes it from the API aggregate. Any Claude Code claim in the reports
 (the 0.37-point autonomy gap, the 54%-Opus figure, the April 2025 software-development report) is
 log-level work with no public file behind it.
 
-**Survey — stated plainly: there is no Anthropic survey data anywhere in the dataset.** The only
+**Survey — stated plainly: there is no Anthropic survey data anywhere in the dataset**, and no
+survey-derived variable: no `facet`, `variable`, `metric_id` or `category_name` in any wave
+matches `survey|respond|sentiment|expect|concern|opinion|interview`
+(re-run 2026-09-16 over all nine long/wide frames — Claude.ai and 1P API of every wave).
+**Run that regex over the structural columns only.** Over `cluster_name` or `node_name` it
+returns ~180 false positives in 2026-06-26 alone, because the O\*NET task and occupation text
+is full of them (`Survey Researchers`, `Interview clients to gather financial information`,
+`Post sentiment classification`) — these are names of *work*, not survey instruments
+(re-run 2026-09-16). The only
 survey file in the whole repository is `release_2025_09_15/data/input/BTOS_National.xlsx`, the
 **Census** Business Trends and Outlook Survey, used as the input to Figure 3.1 and never joined to
 any Claude data `[R3 §Files]`, `[R3 §Cuts]`, `[R6 §Cuts 9]`. The June 2026 report's Chapter 3
@@ -256,6 +280,13 @@ value, not derivable from the released files.
     `not_classified`, 69.7% of cells absent) `[R3 §Coverage]`.
 15. No task → occupation link and no time-on-task weights in `labor_market_impacts/`, so
     `observed_exposure` is not decomposable `[LMI §Cuts]`.
+15a. **No emergent-task cut and no research-field cut.** The `onet` ladder is a closed O\*NET
+    universe by construction; the bottom-up `request` ladder can name work O\*NET does not, but its
+    only residual node is `Other / Unclear` at 0.39% / 0.36% of global `pct` in 2026-06-26, and
+    its ids do not survive a wave. For fields of research the nearest cuts are SOC
+    `Life, Physical, and Social Science` (4.54% / 4.51% global) with 57 detailed `19-*` nodes, and
+    the `request` Major node `Research & Intelligence`; there is no discipline or field column
+    `[R6 §Cuts 14]`.
 
 **Counts, denominators, uncertainty**
 16. No counts of any kind in 2025-02-10, 2025-03-27 or `labor_market_impacts/`; percentages only,
@@ -289,7 +320,21 @@ value, not derivable from the released files.
     `[R5 §Cuts 9]`, `[R6 §Cuts 7, 8]`.
 27. No token, turn, extended-thinking, session-length or active-time field outside the API token
     indices; extended thinking exists only as the 2025-03-27 per-task fraction `[R6 §Cuts 7]`,
-    `[R2 §Facets]`.
+    `[R2 §Facets]`. **No artifact field either, except the 32 `artifact_*_pct` aggregate shares of
+    2026-06-26** — which are shares of a geography-month, never a conversation-level flag
+    `[R4 §Cuts 12]`, `[R5 §Cuts 13]`.
+27a. **No window covering 20–26 January 2026**, or any other date between 2025-11-20 and
+    2026-02-05. The released windows are Dec 2024 (one week), Feb–Mar 2025, 4–11 Aug 2025,
+    13–20 Nov 2025, 5–12 Feb 2026 and the calendar months April and May 2026 — six draws in
+    eighteen months, with gaps of 2–5 months between them. Any report whose observation window
+    falls in a gap (the *AI Fluency Index*, 20–26 Jan 2026) cannot be tied to a released file
+    `[R4 §Cuts 11]`, `[R6 §Dated log]`.
+27b. **No unit-level longitudinality anywhere**: no user, account, organisation, session,
+    conversation or firm identifier in any release, so nothing can be followed over time. The
+    identifiers that exist are geographies (`geo_id`) and taxonomy nodes (`node_external_id`,
+    and even those are release-specific UUIDs in 2026-06-26). "Longitudinal" in the programme
+    pages can only mean the **series of cross-sections**, and the series is six windows on four
+    schema families with three taxonomy changes `[R3 §Schema]`, `[R4 §Cuts 6]`, `[R6 §Traps 3]`.
 28. No demographics anywhere `[R1 §Cuts]`, `[LMI §Cuts]`.
 
 **Reference and external quantities**
@@ -333,6 +378,15 @@ both readings are recorded.**
   wider vintage). Applying the August asymmetric rule here introduces a uniform ~8% level error
   `[R6 §Reproduced]`. **Country AUI ranks, ratios and month-to-month changes reproduce exactly;
   absolute country levels do not.**
+- **February 2026 has a level test, and it favours the symmetric rule** (added 2026-09-16). The
+  July 2026 Canada spotlight publishes an AUI of **4.4** for a February 2026 sample; rebuilding
+  from `release_2026_03_24` gives **4.4430** with the usage denominator over thresholded countries
+  **only**, and **3.6219** with the August-2025 `+ not_classified` numerator denominator
+  (`not_classified` is 18.4% of February usage). Use the symmetric rule for any AUI *level*
+  rebuilt from the 2026 long waves; the asymmetric rule remains the one that reproduces the
+  published August-2025 index to 0.00000000. Ranks, Ginis and top-*N* shares are unaffected — the
+  denominator cancels `[R5 §Reproduced]`. (June 2026 gives Canada 4.65 / 4.13, mean 4.39, which
+  also rounds to 4.4, so the spotlight's wave is identified by its provincial shares, not its AUI.)
 - Rebuilding for a wave that ships no AUI: population is
   `release_2025_09_15/data/intermediate/working_age_pop_2024_country.csv` (World Bank
   SP.POP.1564.TO 2024 + Taiwan) and `…_us_state.csv` (Census SC-EST2024, ages 15–64, `SEX==0`)
@@ -355,6 +409,34 @@ both readings are recorded.**
 v2 43.0619; 2026-01-15 all-conversation automation 45.3554 vs classified 46.7394; 2026-03-24
 44.1569 / 52.7941; 2026-06-26 five-pattern identity mean |err| 0.00345, six-pattern 2.018.)**
 **Say which base you are on, every time, and re-check it every wave.**
+
+#### A like-for-like automation comparison twelve months apart does exist
+
+Added 2026-09-16, and it **corrects** the answer first given to the lead's Economic Index
+connector question (which said the widest comparable gap was nine months). **The collaboration
+facet is the one taxonomy that never changed.** The same six patterns — `directive`,
+`feedback loop`, `learning`, `task iteration`, `validation`, `none` — are the cluster set of every
+wave from 2025-02-10 to 2026-06-26; 2025-09-15 adds a seventh, `not_classified`, and 2026-06-26
+carries them as six `collaboration_*_pct` metric ids instead of cluster rows. So automation
+**is** comparable across waves once the base is fixed, and the longest Claude.ai-global pair is
+twelve months:
+
+| pair | gap | five-pattern base | all-conversation base |
+|---|---|---|---|
+| 2025-03-27 (Feb–Mar 2025) → 2026-03-24 (5–12 Feb 2026) | **~12 months** | 43.0619 → 45.5456 (**+2.48 pp**) | 41.6671 → 44.1569 (+2.49 pp) |
+| 2025-02-10 (16–23 Dec 2024) → 2026-01-15 (13–20 Nov 2025) | ~11 months | 42.5538 → 46.7394 (+4.19 pp) | 41.0876 → 45.3554 (+4.27 pp) |
+| 2025-09-15 (4–11 Aug 2025) → 2026-06-26 (May 2026) | ~9 months | 51.0698 → 48.6190 (−2.45 pp) | 49.0980 → 47.3500 (−1.75 pp) |
+
+Five caveats, all of which must be stated with any such comparison. (i) The 2025-03-27 window is
+named only in the blog ("Feb–Mar 2025"), so the earlier endpoint is not precisely dated and the
+gap is not exactly twelve months `[R2 §Facets]`. (ii) The sample label changes, Free+Pro →
+Free, Pro and Max `[R5 §Schema]`. (iii) The v2 file sums to 99.9965 and the 2026 files to 100, so
+renormalise over the five classified patterns rather than comparing raw shares; the v1 file
+(84.209) is a *different* universe again `[R2 §Traps 2]`. (iv) 2025-03-27 has no geography and no
+counts, so the pair is global-only and carries no standard error — a difference of this size
+cannot be tested, only reported `[R2 §Cuts]`. (v) The 2026-06-26 endpoint is a five-pattern
+bucket on a wide schema and two calendar months, so it needs the pooling rule below. Verified
+2026-09-16; the command is in `## Dated log 2026-09-16 (c)`.
 
 ### Task mix and occupation allocation
 
@@ -619,6 +701,20 @@ Consolidated; each attributed. Read this list before writing a loader.
     83–88%. Require persistence across independent windows and **state the specification**
     `[R6 §Skill corrections]`.
 40. **Taxonomies change between waves** — see `## Taxonomies and identifiers`.
+41. **22 `geo_id` values mean two places at once in the August-2025 raw file** — ISO-2 country
+    codes and USPS state codes share one column, so `DE` is Germany *and* Delaware, `CA` Canada
+    *and* California, `IN` India *and* Indiana (full set: AL AR AZ CA CO DE GA ID IL IN KY LA MA
+    MD ME MN MT NC NE PA SC TN, plus `not_classified`). Filter on `geography`, never on `geo_id`
+    alone: a `geo_id`-only read of Germany at `request` level 2 returns **38 rows** (26 German +
+    12 Delaware) summing to `request_pct` **200.0**, under only 26 distinct cluster names — the
+    duplication is invisible in a name-keyed pivot and shows up only in the doubled total. Its
+    size varies by level (×2 at L2, +5% at L1, nil at L0, where Delaware publishes nothing)
+    `[R3 §Traps 22]`. The enriched file is ISO-3 and does not collide.
+42. **`usage_pct` is not the report's share.** The file divides by the sum of `country`
+    `usage_count`, which **includes `not_classified`**: India's 5.81053 (Nov 2025) is
+    58,098 / 999,875, while 58,098 over the report's global N of 975,160 is 5.96. The published
+    figure is the file's, not the report's arithmetic — reproduce shares from `usage_pct`, and
+    state the base whenever you rebuild one `[R4 §Reproduced]`.
 
 ## Taxonomies and identifiers
 
@@ -640,7 +736,7 @@ Consolidated; each attributed. Read this list before writing a loader.
 | 2025-09-15 | L0 **588** · L1 108 · L2 26 (API: 384/93/32); `level` 0 = finest | names; a `request_hierarchy_tree_*.json` ships |
 | 2026-01-15 | 618 / 112 / 24 | names; **no hierarchy file** |
 | 2026-03-24 | 621 / 104 / 26 | names; no hierarchy file |
-| 2026-06-26 | 1,012 Detailed / 196 Minor / **20 Major**; `hierarchy_level` **0 = leaf, 2 = Major** | **UUID v5, release-specific**; the top level was replaced this wave, so nothing carries over `[R6 §Facets, §Cuts 14]` |
+| 2026-06-26 | 1,012 Detailed / 196 Minor / **20 Major**; `hierarchy_level` **0 = leaf, 2 = Major** | **UUID v5, release-specific**; the top level was replaced this wave, so nothing carries over `[R6 §Facets, §Cuts 15]` |
 
 Never diff cluster sets across waves without an explicit name match and a report of the unmatched
 names `[R5 §Traps 11]`. Within 2026-06-26, the two months also differ (global `onet` L0: 2,410 in
@@ -686,8 +782,11 @@ rename-and-reshape layer, and its `state_us` paths do not exist after August 202
 ## Corrections to the economic-index-data skill
 
 The skill is the starting point; the files correct it in twenty places. Format: **skill statement
-→ what the files show → reference.** *(The skill file belongs to another owner; this list is for
-the director to route — nothing here edits it.)*
+→ what the files show → reference.** *(Ownership of `.claude/skills/economic-index-data/SKILL.md`
+passed to the data steward in session 1.2 —
+`room/director-2026-09-16-session-1-2-kickoff.md` ruling 1 — and **all twenty corrections below
+were applied to that file on 2026-09-16**. The list stays here as the audit trail: the skill now
+points at this atlas rather than restating it.)*
 
 1. **"Thresholds are not applied in the public files."** → **False for three of the seven
    folders.** 2025-02-10 applies a 5-account / 15-conversation task threshold upstream and it
@@ -726,9 +825,14 @@ the director to route — nothing here edits it.)*
    `collaboration_automation_augmentation` do not exist in the raw file, and the three API
    token/cost intersections are missing from the skill entirely. The raw Claude.ai file is
    **ISO-2**, the enriched one ISO-3. → `[R3 §Skill corrections]`.
-8. **The 2026 primitive list.** → Omits **`ai_education_years`** (a sixth numeric primitive,
-   present in both 2026 waves), the **twenty `onet_task::*` / `request::*` intersections**, and the
-   API-only `onet_task::{cost, prompt_tokens, completion_tokens}` and `request::` equivalents. It
+8. **The 2026 primitive list.** → Omits **`ai_education_years`** — the **fifth** numeric primitive,
+   present in both 2026 waves, which the skill's list of four (`ai_autonomy`,
+   `human_education_years`, `human_only_time`, `human_with_ai_time`) leaves out. The full set is
+   five, each with 8 statistics, each also appearing as an `onet_task::` and a `request::`
+   intersection (re-verified 2026-09-16: 5 base + 10 intersected numeric facets). Also omits the
+   **twenty `onet_task::*` / `request::*` intersections**, and the
+   API-only `onet_task::{cost, prompt_tokens, completion_tokens}` and `request::` equivalents
+   (variables `cost_index`, `prompt_tokens_index`, `completion_tokens_index`). It
    also calls `task_success`, `use_case`, `multitasking` and `human_only_ability` "primitives" when
    they are categorical facets. → `[R4 §Skill corrections]`, `[R5 §Skill corrections]`.
 9. **"No `soc_occupation` at state level" (2026-01-15, 2026-03-24).** → Understates it: there is
@@ -831,6 +935,23 @@ or `…_2025_02_10.py` and is already in the cache.
 - **`cdn.sanity.io` (the report and appendix PDFs) is refused by `web_fetch` but retrievable with
   `curl`** `[R6 §Verification 17]`.
 
+**Anthropic's other public datasets (fetched and profiled 2026-09-16; cached under
+`data/cache/supplementary/`).** Neither is part of `Anthropic/EconomicIndex`; both are the nearest
+public relatives of it, and the second is the only public Anthropic file with Claude Code data.
+
+| dataset | grain and keys | coverage | metrics | licence | how obtained |
+|---|---|---|---|---|---|
+| `Anthropic/AnthropicInterviewer` (`c9e1ec1`, 2026-01-06) | one row = one interview transcript; columns **`transcript_id`, `text`** only | **exactly 1,250 transcripts** in three splits — workforce 1,000, creatives 125, scientists 125 (11.4 MB) | none: free text, no demographics, no occupation, no country, no date, no labels | card body "Data released under CC-BY, code released under MIT" (YAML says `mit`) | `curl -sL https://huggingface.co/datasets/Anthropic/AnthropicInterviewer/resolve/main/interview_transcripts/{workforce,creatives,scientists}_transcripts.csv`; sha256 `09ff307d…`, `d4e865b9…`, `338677e4…` |
+| `Anthropic/enabling-independent-research` (`b1ef5f7`, 2026-08-26) | one row = one **cluster** at one level of one facet; keys `cluster_id`, `facet_id`, `level`; base columns `num_records, ratio, ratio_95ci_{lower,upper}, mean_val, num_orgs`, then one `<facet>:<value>_{num_records,ratio}` pair per facet value | 4 files / 2,077 rows: `stanford` 974×600 (20 facets), `oxford` 472×310 (28), `metr` 604×163 (16), `metr_addendum` 27×131 (12). ~250k Claude.ai **or Claude Code** conversations per study, one fixed window in **April–May 2026** (the same months as `release_2026_06_26`) | the only public Anthropic data with **`turn_count`** (Stanford, METR), **`cc_session_turn_count`**, **`model_version`** (claude-4-sonnet … claude-4-7-opus), `lines_added/removed`, `compaction_auto/manual`, `session_duration_seconds`, `active_human_time`, `estimated_time_with_ai`, `time_without_ai`; Stanford adds `country` (153 codes), `lang`, `human_agency_level`, `friction_*`, `task_criticality`; Oxford adds 17 `user_*` experience facets and 9 `model_*` behaviour facets | YAML **`cc-by-4.0`** (the only Anthropic usage dataset with a versioned licence) | `curl -sL https://huggingface.co/datasets/Anthropic/enabling-independent-research/resolve/main/{stanford,oxford,metr,metr_addendum}_clusters.csv`; sha256 `b18fa38b…`, `280d11af…`, `69b0d3e4…`, `226fb00b…` |
+
+Cautions before joining either to the Index. The Interviewer file supports **no** quantity in the
+March 2026 81k-interview feature: that feature's 80,508 interviews are **not released**, at any
+grain (see `## Dated log`). The partner-cluster file is a set of **researcher-defined facets on a
+non-random opted-in sample**, clustered by Anthropic's Insights pipeline, with no O\*NET, SOC or
+geography join key beyond Stanford's `country:<iso2>` columns and no denominator in common with the
+Index; its `num_records` sums (3.2M–7.4M) are cluster memberships, not conversations. Treat it as a
+separate instrument, cite it as one, and read Anthropic's interpretation guidance first.
+
 **Named in the skill, not verified here — treat as unverified leads:** Census
 `PctUrbanRural_State.txt`; Microsoft AI Diffusion state and county CSVs
 (`github.com/microsoft/ai-diffusion-report`); the OpenAI Signals CSV bundle
@@ -883,3 +1004,117 @@ non-browser downloads). None was fetched, joined or licence-checked in this thre
   than ~1% because the population denominator is unpublished; the Eloundou et al. task-level β
   behind `labor_market_impacts/` was not obtained; and the skill's "45% April-to-May recurrence"
   has no recoverable specification.
+
+- **2026-09-16 (b) — the steward question batch.** Ten questions from the programme-lead threads
+  (`room/director-2026-09-16-steward-question-batch.md`) answered in
+  `room/steward-2026-09-16-question-batch-answers.md`. The cache was rebuilt from scratch in a
+  fresh sandbox first — `for r in labor_market_impacts release_2025_02_10 release_2025_03_27
+  release_2025_09_15 release_2026_01_15 release_2026_03_24 release_2026_06_26; do python
+  data/fetch/$r.py; done` — 80 files, all sizes and sha256 equal to `INDEX.md` and the published
+  LFS oids, in under two minutes; **the rebuild instruction in this atlas is confirmed working on
+  a bare sandbox**. What the batch added, each with its command in the release file named:
+
+  1. **No released window covers 20–26 January 2026**; the six windows and their 2–5 month gaps
+     are now in `## Cuts that do not exist` 27a `[R4 §Cuts 11]`.
+  2. **No turn count or artifact flag in the Index**; artifacts exist only as 32 aggregate
+     `artifact_*_pct` shares in 2026-06-26, and a public `turn_count` exists only in
+     `Anthropic/enabling-independent-research` `[R5 §Cuts 13]`, `[R6 §Dated log]`.
+  3. **India reaches both grains in 2026-01-15**: the `country` `IN` row (58,098 conversations,
+     `usage_pct` 5.81053 = the published 5.8%) and **30 `IN-*` regions**, 24 of them above the
+     100-conversation floor. The published 5.8% versus the arithmetic 5.96% is a denominator
+     difference, not an error `[R4 §Reproduced]`, now trap 42 here.
+  4. **Australia**: all eight `AU-*` `usage_pct` reproduce Figure 2 of the March 2026 spotlight
+     exactly; the lead's finding is confirmed and the spotlight is fixed to `release_2026_03_24`
+     `[R5 §Reproduced]`.
+  5. **Canada**: 11 `CA-*` rows are public and Ontario's 43.9% reproduces as **43.9387**, with
+     QC/BC/AB, the 2.6% global share and the 8th rank all exact. Canada's **AUI of 4.4
+     reproduces (4.4430) only on the symmetric, thresholded-only usage denominator** — the
+     August-2025 asymmetric rule gives 3.62 — which is the first AUI *level* test on that wave
+     and a qualification to the AUI convention above `[R5 §Reproduced]`.
+  6. **No post-June-2026 release exists** (same seven folders, same `2ea58ff`), so the Institute's
+     granularity-and-cadence promise is, in the released data, one wave: the June 2026 schema
+     change `[IX §Dated log]`.
+  7. **Nothing observable changed in the released data between the January and March 2026 waves**
+     — facet and variable sets are set-identical (34 / 166) `[R5 §Dated log]`.
+  8. **Emergent tasks and research fields do not exist as cuts** (`## Cuts` 15a); the nearest are
+     the `Other / Unclear` request Major (0.39% / 0.36%) and the 57 detailed `19-*` science
+     occupations `[R6 §Cuts 14]`.
+  9. **No unit-level longitudinality** (`## Cuts` 27b). *(The second half of this entry — "no
+     like-for-like automation comparison twelve months apart" — was **wrong** and is corrected in
+     the 2026-09-16 (c) entry below: the collaboration taxonomy never changed, and Feb–Mar 2025 →
+     Feb 2026 is a twelve-month comparison on one surface. See
+     `## Conventions › A like-for-like automation comparison twelve months apart does exist`.)*
+  10. **The five European usage claims do not reproduce as worded** on the only pre-dating release
+      `[R3 §The five European usage claims]`, and **the 80,508 interviews are not released** —
+      `Anthropic/AnthropicInterviewer` holds exactly 1,250 transcripts with two columns.
+  11. **A second distribution channel exists and is a byte-identical, incomplete mirror**
+      `[IX §Second distribution channel]`; two sibling Anthropic datasets are now profiled in
+      `## Supplementary sources`.
+  12. **New trap 41**: 22 `geo_id` values are both an ISO-2 country and a USPS state in the
+      August-2025 raw file `[R3 §Traps 22]`.
+
+  All twenty skill corrections were applied to `.claude/skills/economic-index-data/SKILL.md`
+  (now steward-owned) the same day; the skill is a pointer to this atlas, not a copy of it.
+
+- **2026-09-16 (c) — audit of the (b) entry.** The thread that wrote (b) was cut off before it
+  wrote its answer note, leaving its additions to `data/` unverified. Every fact (b) added has now
+  been re-derived from the cache in a fresh sandbox, and the cache itself re-checked
+  (`sha256sum -c CHECKSUMS.txt` inside each of the seven folders: **2/14/16/38/4/3/3 OK, 0
+  failed**). The HF dataset still returns `sha` `2ea58ff…`, `lastModified`
+  `2026-06-26T23:21:00.000Z`, the same seven data folders and three root files, and
+  `author=Anthropic` still lists **14** datasets. The two mirror zips still return 200 at
+  30,774,114 / 8,582,259 B with every earlier name and the directory itself 404. All four zip
+  members re-hash identical to the Hugging Face folders.
+
+  **Confirmed unchanged:** the India row (58,098, `usage_pct` 5.81053, country base 999,875 of
+  which `not_classified` 156,576, and 58,098/975,160 = 5.9578); 30 `IN-*` units, 24 ≥ 100, min 18;
+  the eight `AU-*` shares (37.1621 / 30.8500 / 17.6726 / 7.5820 / 4.5706 / 1.4083 / 0.6287 /
+  0.1257, counts 15,906 = the `AU` country count); the eleven `CA-*` February rows
+  (43.938692 / 20.766736 / 18.898155 / 10.196124, counts 25,902), Canada 2.5902% and rank 8
+  (US IN GB FR DE JP KR CA); the AUI pair 4.4430 (thresholded-only) vs 3.6219 (+`not_classified`,
+  which is 18.4% of February usage), merge 178 in / 170 matched / 8 unmatched; facet and variable
+  sets set-identical between the two 2026 long waves (34 / 166); the June windows
+  (2026-04-01→05-01, 05-01→06-01), 53 metric ids of which 32 are `artifact_*` and none matches
+  `turn|session`; `Other / Unclear` 0.39 / 0.36; `Life, Physical, and Social Science` 4.54 / 4.51;
+  57 of 718 SOC L0 nodes are `19-*`; CAN AUI 4.65 / 4.13; the eight `CA-*` June subregions with
+  **no** AUI; the Interviewer dataset at exactly 1,250 transcripts × 2 columns (1,000 / 125 / 125,
+  11.4 MB) and the partner file at 2,077 rows over four tables (974×600, 472×310, 604×163,
+  27×131) with `cc_session_turn_count` in `metr` and `metr_addendum` only; the five European
+  claims table (coding GB 15.81 / DE 19.89 / FR 17.97 vs global 18.53; GB tutoring third at 6.97
+  vs 7.51; FR ratios 2.72 / 2.24 / 2.04 / 1.68, none near 4×); the 23 colliding `geo_id` values.
+
+  **Four things (b) got wrong, now fixed in place:**
+  1. Nova Scotia is the eighth Canadian unit above the floor, not the ninth — **8 of 11 `CA-*`
+     units ≥ 100** in November 2025 (NL 88, PE 67, `CA-not_classified` 17), not 9 `[R4 §Country
+     and sub-national spotlights]`.
+  2. `CA-BC` February is **18.898155** → 18.8982, not 18.8983 `[R5 §Country spotlights]`.
+  3. The `geo_id` collision yields 38 **rows** under **26 distinct** level-2 cluster names, not
+     "38 clusters"; and its size varies by level (nil at L0, where Delaware publishes nothing)
+     `[R3 §Traps 22]`, trap 41 above.
+  4. **"No like-for-like automation comparison twelve months apart" is false.** The collaboration
+     facet is the one taxonomy that survives every wave unchanged (six patterns; seven in
+     2025-09-15), so Feb–Mar 2025 → 5–12 Feb 2026 is a twelve-month Claude.ai-global comparison:
+     43.0619 → 45.5456 on the five-pattern base. Recorded with its five caveats in
+     `## Conventions`. The June-2026 published `collaboration_bucket_automation_pct` (48.98 /
+     48.62) independently confirms the five-pattern rule: recomputing it from the six pattern
+     metrics gives 48.9788 / 48.6190.
+
+  One wording repair: the `## Components` survey paragraph now says the
+  `survey|respond|sentiment|…` regex must be run over `facet`/`variable`/`metric_id`/
+  `category_name` only — over `cluster_name`/`node_name` it returns ~180 false positives from
+  O\*NET task text (`Survey Researchers`, `Interview clients to gather financial information`).
+
+  ```bash
+  # the (c) audit, run 2026-09-16 from /workspace/economic_research
+  (cd data/cache/<release> && sha256sum -c CHECKSUMS.txt)          # x7, 80 files, 0 failed
+  curl -s https://huggingface.co/api/datasets/Anthropic/EconomicIndex        # sha, lastModified
+  curl -s "https://huggingface.co/api/datasets?author=Anthropic&full=true"   # 14 ids
+  curl -sI https://economic-research.anthropic.com/releases/econ-index/release-<d>.zip
+  # collaboration taxonomy + the twelve-month pair, one script over all six waves:
+  #   flat waves: automation_vs_augmentation{,_v1,_v2}.csv, index on `interaction_type`
+  #   long waves: geography=='global', facet=='collaboration', variable=='collaboration_pct'
+  #   wide wave:  geo_id=='GLOBAL', category_name=='overall', metric_id=='collaboration_*_pct'
+  #   automation = (directive + feedback loop) / base; base = five classified, or all incl. none
+  # -> 42.5538/41.0876 · 43.0619/41.6671 · 51.0698/49.0980 · 46.7394/45.3554 · 45.5456/44.1569
+  #    · 48.9788/47.7152 (Apr) · 48.6190/47.3500 (May)
+  ```

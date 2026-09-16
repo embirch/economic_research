@@ -30,3 +30,14 @@ Notes for whoever writes them: the path shape differs by wave (see the Discrepan
 not use the dataset card's `configs` block — one of its paths 404s. The tree API
 (`…/api/datasets/Anthropic/EconomicIndex/tree/main/<release>?recursive=true`) is the authority
 for the list and the byte sizes; no token is needed.
+
+## Sources beside the dataset
+
+`data/fetch/supplementary_anthropic.py` (added 2026-09-16) fetches the public Anthropic sources
+that are **not** part of `Anthropic/EconomicIndex`: `Anthropic/AnthropicInterviewer` (1,250
+transcripts), `Anthropic/enabling-independent-research` (partner cluster tables, April–May 2026,
+the only public Anthropic file with Claude Code fields) and the two zips served by
+`economic-research.anthropic.com/releases/econ-index/`, whose members it hashes in place to
+re-prove that the mirror is byte-identical to Hugging Face. Same rules: write-once, sha256 pinned
+in the script, `CHECKSUMS.txt` per group, summary only. Profiles: `data/ATLAS.md`
+§Supplementary sources and `data/releases/INDEX.md` §Second distribution channel.
