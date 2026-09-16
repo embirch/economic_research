@@ -1,0 +1,105 @@
+==============================================================================
+R1/R2  global 'Human can't do alone (%)' 12.09 -> 12.24 and Figure 2.2's 88%
+==============================================================================
+nov2025: yes 87.909689  no 12.090311  100-yes 12.0903  N 999875
+feb2026: yes 87.759900  no 12.240100  100-yes 12.2401  N 1000000
+published R5 Table 1.1: 12.09 -> 12.24 ; rebuilt 12.09 -> 12.24
+published R4 Fig 2.2: 88% (N=999,875) ; rebuilt 87.91% (N=999875)
+
+==============================================================================
+Supplementary joins: World Bank working-age population and IMF GDP (both shipped in 2025-09-15)
+==============================================================================
+pop: (194, 5) ['iso_alpha_3', 'year', 'working_age_pop', 'country_code', 'country_name'] | gdp: (174, 3) ['iso_alpha_3', 'gdp_total', 'year'] | iso: (252, 3) ['iso_alpha_2', 'iso_alpha_3', 'country_name']
+
+[nov2025] population join on ISO-2 country_code: rows in 174, matched 167, unmatched 7: ['GF', 'GP', 'JE', 'MQ', 'RE', 'YT', 'not_classified']
+[nov2025] GDP join on iso_alpha_3: rows in 174, matched 156, unmatched 18 (of those with an ISO-3: ['BM', 'CW', 'GU', 'IM', 'KY', 'LI', 'MC', 'NC', 'PF', 'PS', 'VI'])
+[nov2025] over the >=200 set (119 countries): population 117, GDP 116, both 116
+
+[feb2026] population join on ISO-2 country_code: rows in 178, matched 170, unmatched 8: ['GF', 'GG', 'GP', 'JE', 'MQ', 'NONE', 'RE', 'not_classified']
+[feb2026] GDP join on iso_alpha_3: rows in 178, matched 157, unmatched 21 (of those with an ISO-3: ['BM', 'CW', 'GI', 'GU', 'IM', 'KY', 'LI', 'MC', 'MF', 'NC', 'PF', 'PS', 'VI'])
+[feb2026] over the >=200 set (119 countries): population 116, GDP 115, both 115
+
+balanced panel 115 countries: population 114, GDP 113, both 113
+  panel countries missing population: ['RE']
+  panel countries missing GDP: ['PS', 'RE']
+
+==============================================================================
+R3  AUI rebuild; Canada's published 4.4 (July 2026 spotlight, February sample)
+==============================================================================
+nov2025: N in index 117; Canada AUI symmetric 3.7376, asymmetric 3.1499; USA 4.3842
+feb2026: N in index 116; Canada AUI symmetric 4.4430, asymmetric 3.6219; USA 4.6550
+
+==============================================================================
+R4  positive control: R4 Fig 3.3 country regression of ln AUI on human education
+   published r = 0.359, R2 = 0.129, p < 0.001, beta = 0.75 (Nov 2025 wave)
+==============================================================================
+nov2025 [all thresholded] N=117  r=0.5903  R2=0.3484  p=2.49e-12  slope(lnAUI~educ)=1.0633  slope(educ~lnAUI)=0.3277
+nov2025 [ex-Seychelles] N=116  r=0.3586  R2=0.1286  p=7.73e-05  slope(lnAUI~educ)=0.7544  slope(educ~lnAUI)=0.1704
+feb2026 [all thresholded] N=116  r=0.4400  R2=0.1936  p=7.72e-07  slope(lnAUI~educ)=1.0419  slope(educ~lnAUI)=0.1858
+feb2026 [ex-Seychelles] N=116  r=0.4400  R2=0.1936  p=7.72e-07  slope(lnAUI~educ)=1.0419  slope(educ~lnAUI)=0.1858
+
+==============================================================================
+Outcome distribution, Kish effective N and the MDE inputs
+==============================================================================
+
+[nov2025] panel N=115
+  no (raw, incl not_classified) : mean 13.783  sd 3.400  range [7.74,22.92]
+  no (renormalised yes+no base) : mean 13.783  count-weighted 11.904  sd 3.400  range [7.74,22.92]
+  not_classified share          : mean 0.000  sd 0.000  max 0.00  (non-zero in 0 of 115)
+  classified counts per country : median 1673  min 248  max 219666
+  Kish effective N (count weights) = 11.02 of 115 nominal
+  binomial se of a country's own share at n=200: 2.30 pp; at the median n: 0.79 pp
+  implied within-country sampling sd vs between-country sd: 0.79 vs 3.40 pp
+  MDE (tercile difference, 80% power, a=0.05): unweighted n/3=38 -> 2.18 pp; Kish n_eff/3=3.7 -> 7.02 pp
+  detectable correlation at N=115, 80% power: r ~ 0.265
+  variance decomposition: observed 11.557 (sd 3.400) = sampling 1.312 (sd 1.146) + true 10.245 (sd 3.201)
+  count weights: top-3 hold 37.9% (['US', 'IN', 'JP']); n_eff capped at the 90th pct = 48.4
+
+[feb2026] panel N=115
+  no (raw, incl not_classified) : mean 14.317  sd 3.328  range [8.67,23.58]
+  no (renormalised yes+no base) : mean 14.317  count-weighted 12.256  sd 3.328  range [8.67,23.58]
+  not_classified share          : mean 0.000  sd 0.000  max 0.00  (non-zero in 0 of 115)
+  classified counts per country : median 1643  min 225  max 222372
+  Kish effective N (count weights) = 10.39 of 115 nominal
+  binomial se of a country's own share at n=200: 2.30 pp; at the median n: 0.80 pp
+  implied within-country sampling sd vs between-country sd: 0.80 vs 3.33 pp
+  MDE (tercile difference, 80% power, a=0.05): unweighted n/3=38 -> 2.14 pp; Kish n_eff/3=3.5 -> 7.08 pp
+  detectable correlation at N=115, 80% power: r ~ 0.265
+  variance decomposition: observed 11.076 (sd 3.328) = sampling 1.329 (sd 1.153) + true 9.747 (sd 3.122)
+  count weights: top-3 hold 39.9% (['US', 'IN', 'GB']); n_eff capped at the 90th pct = 47.6
+
+rank stability over 115 panel countries: Spearman(no_renorm) 0.7762; Pearson 0.7985
+raw vs renormalised within wave: Spearman nov 1.0000, feb 1.0000
+
+==============================================================================
+T3 feasibility: shift-share coverage from global onet_task::human_only_ability
+==============================================================================
+
+[nov2025] tasks with a published 'no' cell: 540 of 3169
+  global named-task mass carried by those tasks: 73.30 of 93.51 named (78.4% of named mass, 73.30% of all conversations)
+  'no' conversations visible at task level: 111170 of the global 120888 (92.0%)
+  min published intersection cell count: 1
+  per-country conversations covered by the shift-share (country mix x task with a 'no' cell): median 34.46% of all conversations, min 3.74%, max 78.09%; as a share of that country's NAMED mass median 100.0%
+
+[feb2026] tasks with a published 'no' cell: 646 of 3259
+  global named-task mass carried by those tasks: 72.21 of 92.97 named (77.7% of named mass, 72.21% of all conversations)
+  'no' conversations visible at task level: 110901 of the global 122401 (90.6%)
+  min published intersection cell count: 1
+  per-country conversations covered by the shift-share (country mix x task with a 'no' cell): median 29.16% of all conversations, min 3.24%, max 76.50%; as a share of that country's NAMED mass median 100.0%
+
+==============================================================================
+T3 alternative: shift-share on request::human_only_ability level 2 x country request L2 mix
+==============================================================================
+[nov2025] 23 global L2 nodes with a no-rate (spread 2.8-34.5 pp); country L2 rows matching a global node: 100.0%
+  per-country conversations covered: median 98.4%, min 44.5%, over 115 of 115 panel countries
+[feb2026] 25 global L2 nodes with a no-rate (spread 1.2-29.7 pp); country L2 rows matching a global node: 100.0%
+  per-country conversations covered: median 95.5%, min 41.8%, over 115 of 115 panel countries
+request L2 node names shared across the two waves: 0 of 23 and 25 -> each wave's adjustment is internal to that wave
+
+==============================================================================
+Covariate coverage at country grain over the panel
+==============================================================================
+nov2025 {'human_only_time.human_only_time_mean': 115, 'human_education_years.human_education_years_mean': 115, 'ai_autonomy.ai_autonomy_mean': 115, 'multitasking.multitasking_pct': 115, 'task_success.task_success_pct': 115, 'use_case.use_case_pct': 115} (panel = 115)
+feb2026 {'human_only_time.human_only_time_mean': 115, 'human_education_years.human_education_years_mean': 115, 'ai_autonomy.ai_autonomy_mean': 115, 'multitasking.multitasking_pct': 115, 'task_success.task_success_pct': 115, 'use_case.use_case_pct': 115} (panel = 115)
+
+wrote data/replication/results/post5_replication_and_mde.json

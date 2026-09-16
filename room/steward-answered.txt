@@ -23,3 +23,5 @@ room/lead-2026-09-16-brief-post1-status.md
 room/editor-2026-09-16-room-catchup.md
 room/lead-2026-09-16-brief-post4-status.md
 room/lead-2026-09-16-brief-post3-status.md
+room/director-2026-09-16-gate-1a.md
+room/lead-2026-09-16-brief-post5-status.md

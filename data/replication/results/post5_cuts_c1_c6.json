@@ -1,0 +1,372 @@
+{
+ "C1": {
+  "nov2025": {
+   "clusters": [
+    "no",
+    "yes"
+   ],
+   "variables": [
+    "human_only_ability_count",
+    "human_only_ability_pct"
+   ],
+   "yes": 87.90968871108889,
+   "no": 12.090311288911114,
+   "sum": 100.0,
+   "complement_of_yes": 12.09031128891111,
+   "rows": 4
+  },
+  "feb2026": {
+   "clusters": [
+    "no",
+    "yes"
+   ],
+   "variables": [
+    "human_only_ability_count",
+    "human_only_ability_pct"
+   ],
+   "yes": 87.7599,
+   "no": 12.2401,
+   "sum": 100.0,
+   "complement_of_yes": 12.240099999999998,
+   "rows": 4
+  }
+ },
+ "C2": {
+  "nov2025": {
+   "country": {
+    "units": 171,
+    "clusters": [
+     "no",
+     "not_classified",
+     "yes"
+    ],
+    "variables": [
+     "human_only_ability_count",
+     "human_only_ability_pct"
+    ],
+    "pct_sum_min": 99.99999999999997,
+    "pct_sum_max": 100.00000000000003,
+    "nc_units": 39,
+    "nc_median": 10.344827586206897,
+    "rows": 678
+   },
+   "country-state": {
+    "units": 938,
+    "clusters": [
+     "no",
+     "not_classified",
+     "yes"
+    ],
+    "variables": [
+     "human_only_ability_count",
+     "human_only_ability_pct"
+    ],
+    "pct_sum_min": 99.99999999999997,
+    "pct_sum_max": 100.00000000000003,
+    "nc_units": 389,
+    "nc_median": 12.5,
+    "rows": 3738
+   }
+  },
+  "feb2026": {
+   "country": {
+    "units": 175,
+    "clusters": [
+     "no",
+     "not_classified",
+     "yes"
+    ],
+    "variables": [
+     "human_only_ability_count",
+     "human_only_ability_pct"
+    ],
+    "pct_sum_min": 99.99999999999997,
+    "pct_sum_max": 100.00000000000003,
+    "nc_units": 42,
+    "nc_median": 11.11111111111111,
+    "rows": 698
+   },
+   "country-state": {
+    "units": 1082,
+    "clusters": [
+     "no",
+     "not_classified",
+     "yes"
+    ],
+    "variables": [
+     "human_only_ability_count",
+     "human_only_ability_pct"
+    ],
+    "pct_sum_min": 99.99999999999997,
+    "pct_sum_max": 100.00000000000003,
+    "nc_units": 497,
+    "nc_median": 13.6986301369863,
+    "rows": 4308
+   }
+  }
+ },
+ "C3": {
+  "nov2025": {
+   "variables": [
+    "usage_count",
+    "usage_pct"
+   ],
+   "ids": 174,
+   "pseudo": [
+    "not_classified"
+   ],
+   "real": 173,
+   "ge200": 118,
+   "min_count": 15.0,
+   "usage_pct_sum_incl_pseudo": 99.99999999999997,
+   "total_count_all_ids": 999875.0
+  },
+  "feb2026": {
+   "variables": [
+    "usage_count",
+    "usage_pct"
+   ],
+   "ids": 178,
+   "pseudo": [
+    "NONE",
+    "not_classified"
+   ],
+   "real": 176,
+   "ge200": 117,
+   "min_count": 15.0,
+   "usage_pct_sum_incl_pseudo": 98.9313,
+   "total_count_all_ids": 989313.0
+  }
+ },
+ "panel": {
+  "n": 115,
+  "n_ex_syc": 115,
+  "nov_ge200": 118,
+  "feb_ge200": 117,
+  "sc_rows_nov": 410,
+  "sc_rows_feb": 0
+ },
+ "C2b": {
+  "nov2025": {
+   "facet_units": 171,
+   "explicit_nc": 39,
+   "yn_sum_median_when_nc_absent": 100.0,
+   "count_vs_usage_maxdiff": 0.0,
+   "ge200_without_facet": [],
+   "min_facet_total_ge200": 239.0,
+   "min_no_count_ge200": 24.0,
+   "missing_no_row_ge200": 0
+  },
+  "feb2026": {
+   "facet_units": 175,
+   "explicit_nc": 42,
+   "yn_sum_median_when_nc_absent": 100.0,
+   "count_vs_usage_maxdiff": 0.0,
+   "ge200_without_facet": [],
+   "min_facet_total_ge200": 225.0,
+   "min_no_count_ge200": 31.0,
+   "missing_no_row_ge200": 0
+  }
+ },
+ "C4": {
+  "nov2025": {
+   "rows": 11074,
+   "variables": [
+    "onet_task_human_only_ability_count",
+    "onet_task_human_only_ability_pct"
+   ],
+   "tasks": 3169,
+   "suffixes": [
+    "no",
+    "not_classified",
+    "yes"
+   ],
+   "nonglobal_rows": 0,
+   "tasks_with_no": 540,
+   "tasks_with_yes": 3043,
+   "tasks_both_arms": 539,
+   "armsum_median": 100.0,
+   "armsum_min": 99.99999999999997,
+   "count_min": 15.0
+  },
+  "feb2026": {
+   "rows": 11592,
+   "variables": [
+    "onet_task_human_only_ability_count",
+    "onet_task_human_only_ability_pct"
+   ],
+   "tasks": 3259,
+   "suffixes": [
+    "no",
+    "not_classified",
+    "yes"
+   ],
+   "nonglobal_rows": 0,
+   "tasks_with_no": 646,
+   "tasks_with_yes": 3105,
+   "tasks_both_arms": 646,
+   "armsum_median": 100.0,
+   "armsum_min": 99.99999999999997,
+   "count_min": 15.0
+  }
+ },
+ "C5": {
+  "nov2025": {
+   "units": 117,
+   "residual_labels": [
+    "none",
+    "not_classified"
+   ],
+   "named_nodes_median": 19.0,
+   "named_mass_median": 34.26905734480687,
+   "panel_units_with_onet": 113,
+   "panel_named_mass_median": 34.46191051995163,
+   "panel_named_mass_min": 3.740157480314961
+  },
+  "feb2026": {
+   "units": 118,
+   "residual_labels": [
+    "none",
+    "not_classified"
+   ],
+   "named_nodes_median": 16.5,
+   "named_mass_median": 29.04503054724835,
+   "panel_units_with_onet": 114,
+   "panel_named_mass_median": 29.440522944645423,
+   "panel_named_mass_min": 3.2367972742759794
+  }
+ },
+ "C4b": {
+  "nov2025": {
+   "geographies": [
+    "global"
+   ],
+   "levels": [
+    "0",
+    "1",
+    "2"
+   ],
+   "variables": [
+    "request_human_only_ability_count",
+    "request_human_only_ability_pct"
+   ],
+   "levels_detail": {
+    "0": {
+     "nodes": 617,
+     "with_rate": 591,
+     "rate_min": 0.39001560062402496,
+     "rate_max": 58.67178924259056
+    },
+    "1": {
+     "nodes": 111,
+     "with_rate": 111,
+     "rate_min": 1.1587848418415283,
+     "rate_max": 41.27729812087354
+    },
+    "2": {
+     "nodes": 23,
+     "with_rate": 23,
+     "rate_min": 2.7811893348124084,
+     "rate_max": 34.54807629284918
+    }
+   }
+  },
+  "feb2026": {
+   "geographies": [
+    "global"
+   ],
+   "levels": [
+    "0",
+    "1",
+    "2"
+   ],
+   "variables": [
+    "request_human_only_ability_count",
+    "request_human_only_ability_pct"
+   ],
+   "levels_detail": {
+    "0": {
+     "nodes": 620,
+     "with_rate": 574,
+     "rate_min": 0.6551724137931034,
+     "rate_max": 59.193548387096776
+    },
+    "1": {
+     "nodes": 103,
+     "with_rate": 101,
+     "rate_min": 1.6384489350081923,
+     "rate_max": 52.87691187181355
+    },
+    "2": {
+     "nodes": 25,
+     "with_rate": 25,
+     "rate_min": 1.164247292019748,
+     "rate_max": 29.74633493521504
+    }
+   }
+  }
+ },
+ "C5b": {
+  "nov2025": {
+   "0": {
+    "ids": 74,
+    "panel_ids": 72,
+    "panel_named_mass_median": 22.222547275111104,
+    "panel_named_mass_min": 1.0530749789385003
+   },
+   "1": {
+    "ids": 121,
+    "panel_ids": 114,
+    "panel_named_mass_median": 69.77194294281986,
+    "panel_named_mass_min": 6.666666666666667
+   },
+   "2": {
+    "ids": 129,
+    "panel_ids": 115,
+    "panel_named_mass_median": 98.43173431734317,
+    "panel_named_mass_min": 44.52830188679245
+   }
+  },
+  "feb2026": {
+   "0": {
+    "ids": 71,
+    "panel_ids": 70,
+    "panel_named_mass_median": 19.93733644954382,
+    "panel_named_mass_min": 1.2084592145015105
+   },
+   "1": {
+    "ids": 119,
+    "panel_ids": 114,
+    "panel_named_mass_median": 76.5351569918884,
+    "panel_named_mass_min": 6.539509536784741
+   },
+   "2": {
+    "ids": 134,
+    "panel_ids": 115,
+    "panel_named_mass_median": 95.47482472912684,
+    "panel_named_mass_min": 41.777777777777786
+   }
+  }
+ },
+ "C6": {
+  "metric_ids": 52,
+  "hoa_metrics": [
+   "human_only_ability_pct"
+  ],
+  "aui_metrics": [
+   "usage_per_capita_index"
+  ],
+  "count_metrics": [],
+  "ids_per_month": {
+   "2026-04-01": 114,
+   "2026-05-01": 121
+  },
+  "hoa_both_months": 114,
+  "aui_both_months": 114,
+  "both_metrics_both_months": 114,
+  "global_hoa": {
+   "2026-05-01": 87.62,
+   "2026-04-01": 87.79
+  }
+ }
+}

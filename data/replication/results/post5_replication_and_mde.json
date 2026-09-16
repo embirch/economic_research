@@ -1,0 +1,257 @@
+{
+ "R1_R2": {
+  "nov2025": {
+   "yes_pct": 87.90968871108889,
+   "no_pct": 12.090311288911114,
+   "complement": 12.09031128891111,
+   "yes_count": 878987.0,
+   "no_count": 120888.0,
+   "N": 999875.0
+  },
+  "feb2026": {
+   "yes_pct": 87.7599,
+   "no_pct": 12.2401,
+   "complement": 12.240099999999998,
+   "yes_count": 877599.0,
+   "no_count": 122401.0,
+   "N": 1000000.0
+  }
+ },
+ "joins": {
+  "nov2025": {
+   "rows_in": 174,
+   "pop_matched": 167,
+   "pop_unmatched": [
+    "GF",
+    "GP",
+    "JE",
+    "MQ",
+    "RE",
+    "YT",
+    "not_classified"
+   ],
+   "gdp_matched": 156,
+   "gdp_unmatched_with_iso3": [
+    "BM",
+    "CW",
+    "GU",
+    "IM",
+    "KY",
+    "LI",
+    "MC",
+    "NC",
+    "PF",
+    "PS",
+    "VI"
+   ],
+   "ge200": 119,
+   "ge200_pop": 117,
+   "ge200_gdp": 116,
+   "ge200_both": 116
+  },
+  "feb2026": {
+   "rows_in": 178,
+   "pop_matched": 170,
+   "pop_unmatched": [
+    "GF",
+    "GG",
+    "GP",
+    "JE",
+    "MQ",
+    "NONE",
+    "RE",
+    "not_classified"
+   ],
+   "gdp_matched": 157,
+   "gdp_unmatched_with_iso3": [
+    "BM",
+    "CW",
+    "GI",
+    "GU",
+    "IM",
+    "KY",
+    "LI",
+    "MC",
+    "MF",
+    "NC",
+    "PF",
+    "PS",
+    "VI"
+   ],
+   "ge200": 119,
+   "ge200_pop": 116,
+   "ge200_gdp": 115,
+   "ge200_both": 115
+  }
+ },
+ "panel_join": {
+  "n": 115,
+  "pop": 114,
+  "gdp": 113,
+  "both": 113,
+  "missing_pop": [
+   "RE"
+  ],
+  "missing_gdp": [
+   "PS",
+   "RE"
+  ]
+ },
+ "AUI": {
+  "nov2025": {
+   "N": 117,
+   "CA_sym": 3.7375624262981373,
+   "CA_asym": 3.149905197767392
+  },
+  "feb2026": {
+   "N": 116,
+   "CA_sym": 4.443008008997978,
+   "CA_asym": 3.6218881303135135
+  }
+ },
+ "R4_control": {
+  "nov2025|all thresholded": {
+   "N": 117,
+   "r": 0.5902520365149745,
+   "R2": 0.34839746661007476,
+   "p": 2.4941886361462942e-12,
+   "slope_lnaui_on_educ": 1.0632838428048106,
+   "slope_educ_on_lnaui": 0.32766177062471435
+  },
+  "nov2025|ex-Seychelles": {
+   "N": 116,
+   "r": 0.35858572259817406,
+   "R2": 0.12858372045125463,
+   "p": 7.732617811474818e-05,
+   "slope_lnaui_on_educ": 0.7543804279830013,
+   "slope_educ_on_lnaui": 0.17044943861421605
+  },
+  "feb2026|all thresholded": {
+   "N": 116,
+   "r": 0.44001367618203047,
+   "R2": 0.19361203522722475,
+   "p": 7.720885961568931e-07,
+   "slope_lnaui_on_educ": 1.0419032242215778,
+   "slope_educ_on_lnaui": 0.1858253537624623
+  },
+  "feb2026|ex-Seychelles": {
+   "N": 116,
+   "r": 0.44001367618203047,
+   "R2": 0.19361203522722475,
+   "p": 7.720885961568931e-07,
+   "slope_lnaui_on_educ": 1.0419032242215778,
+   "slope_educ_on_lnaui": 0.1858253537624623
+  }
+ },
+ "mde": {
+  "nov2025": {
+   "N": 115,
+   "sd_renorm": 3.3996077718709454,
+   "sd_raw": 3.3996077718709454,
+   "mean_renorm": 13.782917669840538,
+   "mean_weighted": 11.904437346262341,
+   "kish": 11.021888085047665,
+   "mde_unweighted_pp": 2.1837858331963473,
+   "mde_kish_pp": 7.023190870570427,
+   "se_at_200": 2.2978250586152114,
+   "se_at_median_n": 0.7944818654624628,
+   "nc_mean": 0.0,
+   "nc_nonzero": 0,
+   "median_n_class": 1673.0,
+   "var_observed": 11.557333002565334,
+   "var_sampling": 1.312397522563826,
+   "sd_true": 3.2007710758505534,
+   "top3_weight_share": 37.94690608908587,
+   "kish_capped_p90": 48.41937981948693,
+   "detectable_r": 0.264575131106459
+  },
+  "feb2026": {
+   "N": 115,
+   "sd_renorm": 3.328096459472426,
+   "sd_raw": 3.328096459472426,
+   "mean_renorm": 14.316509539697389,
+   "mean_weighted": 12.255937663894509,
+   "kish": 10.386678124300994,
+   "mde_unweighted_pp": 2.1378495365972774,
+   "mde_kish_pp": 7.082575698916789,
+   "se_at_200": 2.2978250586152114,
+   "se_at_median_n": 0.8017023883060989,
+   "nc_mean": 0.0,
+   "nc_nonzero": 0,
+   "median_n_class": 1643.0,
+   "var_observed": 11.076226043552897,
+   "var_sampling": 1.3292191702392537,
+   "sd_true": 3.122019678559641,
+   "top3_weight_share": 39.94255887715092,
+   "kish_capped_p90": 47.64283656215221,
+   "detectable_r": 0.264575131106459
+  }
+ },
+ "stability": {
+  "spearman_no_renorm": 0.7762329361634972,
+  "pearson": 0.7985048269037889,
+  "spearman_raw_vs_renorm_nov": 1.0,
+  "spearman_raw_vs_renorm_feb": 1.0
+ },
+ "T3": {
+  "nov2025": {
+   "tasks_total": 3169,
+   "tasks_with_no": 540,
+   "named_mass_covered": 73.29826228278532,
+   "named_mass_total": 93.5143892986622,
+   "no_count_visible": 111170.0,
+   "no_count_global": 120888.0,
+   "country_covered_median_pct": 34.46191051995163,
+   "country_covered_min_pct": 3.740157480314961,
+   "country_covered_share_of_named_median": 100.0
+  },
+  "feb2026": {
+   "tasks_total": 3259,
+   "tasks_with_no": 646,
+   "named_mass_covered": 72.21039999999999,
+   "named_mass_total": 92.97139999999996,
+   "no_count_visible": 110901.0,
+   "no_count_global": 122401.0,
+   "country_covered_median_pct": 29.15633696211954,
+   "country_covered_min_pct": 3.2367972742759794,
+   "country_covered_share_of_named_median": 100.0
+  }
+ },
+ "T3_request_L2": {
+  "nov2025": {
+   "nodes_with_rate": 23,
+   "rate_min": 2.7811893348124084,
+   "rate_max": 34.54807629284918,
+   "panel_countries": 115,
+   "covered_median_pct": 98.43173431734317,
+   "covered_min_pct": 44.52830188679245
+  },
+  "feb2026": {
+   "nodes_with_rate": 25,
+   "rate_min": 1.164247292019748,
+   "rate_max": 29.74633493521504,
+   "panel_countries": 115,
+   "covered_median_pct": 95.47482472912685,
+   "covered_min_pct": 41.777777777777786
+  },
+  "shared_names_across_waves": 0
+ },
+ "covariates": {
+  "nov2025": {
+   "human_only_time.human_only_time_mean": 115,
+   "human_education_years.human_education_years_mean": 115,
+   "ai_autonomy.ai_autonomy_mean": 115,
+   "multitasking.multitasking_pct": 115,
+   "task_success.task_success_pct": 115,
+   "use_case.use_case_pct": 115
+  },
+  "feb2026": {
+   "human_only_time.human_only_time_mean": 115,
+   "human_education_years.human_education_years_mean": 115,
+   "ai_autonomy.ai_autonomy_mean": 115,
+   "multitasking.multitasking_pct": 115,
+   "task_success.task_success_pct": 115,
+   "use_case.use_case_pct": 115
+  }
+ }
+}

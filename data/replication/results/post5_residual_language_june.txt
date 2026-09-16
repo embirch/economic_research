@@ -1,0 +1,44 @@
+==============================================================================
+Where the country not_classified residual lives (H4's confirmatory signature)
+==============================================================================
+nov2025: 39 countries carry an explicit not_classified row; their usage_count: min 19, median 47, max 187; of those >=200: 0 []
+  over the 118 countries at or above 200: not_classified present in 0; yes+no sums to 100 in 118 of 118
+feb2026: 42 countries carry an explicit not_classified row; their usage_count: min 18, median 42, max 124; of those >=200: 0 []
+  over the 117 countries at or above 200: not_classified present in 0; yes+no sums to 100 in 117 of 117
+
+==============================================================================
+country-state grain (not a cut in BRIEF section 8; reported for completeness)
+==============================================================================
+nov2025: 938 real units carry the facet; 545 real units at or above 100 conversations; 545 carry both (51 US-*, 109 parents); explicit not_classified among them: 33
+feb2026: 1082 real units carry the facet; 570 real units at or above 100 conversations; 570 carry both (52 US-*, 125 parents); explicit not_classified among them: 25
+balanced country-state panel (facet and >=100 conversations in both waves): 496 units, 105 parents, 51 US
+
+==============================================================================
+E1: is there any language column, value or metric in any release?
+==============================================================================
+nov_claude: columns ['geo_id', 'geography', 'date_start', 'date_end', 'platform_and_product', 'facet', 'level', 'variable', 'cluster_name', 'value']; structural matches {}
+nov_api: columns ['geo_id', 'geography', 'date_start', 'date_end', 'platform_and_product', 'facet', 'level', 'variable', 'cluster_name', 'value']; structural matches {}
+feb_claude: columns ['geo_id', 'geography', 'date_start', 'date_end', 'platform_and_product', 'facet', 'level', 'variable', 'cluster_name', 'value']; structural matches {}
+feb_api: columns ['geo_id', 'geography', 'date_start', 'date_end', 'platform_and_product', 'facet', 'level', 'variable', 'cluster_name', 'value']; structural matches {}
+jun_claude: columns ['date_start', 'date_end', 'geo_id', 'geo_level', 'category_name', 'hierarchy_level', 'metric_id', 'value', 'node_name', 'node_external_id']; structural matches {}
+jun_api: columns ['date_start', 'date_end', 'geo_id', 'geo_level', 'category_name', 'hierarchy_level', 'metric_id', 'value', 'node_name', 'node_external_id']; structural matches {}
+aug2025 columns: ['geo_id', 'geography', 'date_start', 'date_end', 'platform_and_product', 'facet', 'level', 'variable', 'cluster_name', 'value']
+-- E1 substitute 1: GeoNames countryInfo.txt (live file, no version; CC BY 4.0)
+   fetched 31678 B, sha256 93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512
+   merge audit on ISO-2: rows in 115, matched 115, unmatched []
+   252 rows in the source; English listed anywhere 48 of 115; English listed first 17: ['AU', 'CA', 'CM', 'GB', 'GH', 'IE', 'IN', 'JM', 'KE', 'MU', 'NG', 'NZ', 'PR', 'UG', 'US', 'ZM', 'ZW']
+-- E1 substitute 2: Anthropic/enabling-independent-research, stanford_clusters.csv
+   148 lang:* columns and 306 country:* columns (74 languages, 153 countries), cluster grain, April-May 2026
+
+==============================================================================
+June 2026 residual and comparability (cut C6)
+==============================================================================
+countries with human_only_ability_pct and the AUI in both months: 114
+value precision: distinct decimals [1, 2]
+human_only_ability_pct range April 78.30-91.59, May 77.84-92.07
+not_classified-like metrics at country/overall: []
+June global human_only_ability_pct: {'2026-05-01': 87.62, '2026-04-01': 87.79}
+June countries with the measure in both months mapped to ISO-2: 114; overlap with the 115-country panel: 112; panel countries absent from June: ['MZ', 'RE', 'TG']
+Seychelles (SYC) anywhere in the June file: False
+
+wrote data/replication/results/post5_residual_language_june.json

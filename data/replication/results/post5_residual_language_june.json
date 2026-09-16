@@ -1,0 +1,98 @@
+{
+ "nc": {
+  "nov2025": {
+   "countries_with_nc": 39,
+   "nc_usage_min": 19.0,
+   "nc_usage_median": 47.0,
+   "nc_usage_max": 187.0,
+   "nc_ge200": [],
+   "ge200_n": 118,
+   "ge200_with_nc": 0
+  },
+  "feb2026": {
+   "countries_with_nc": 42,
+   "nc_usage_min": 18.0,
+   "nc_usage_median": 41.5,
+   "nc_usage_max": 124.0,
+   "nc_ge200": [],
+   "ge200_n": 117,
+   "ge200_with_nc": 0
+  }
+ },
+ "country_state": {
+  "nov2025": {
+   "facet_units": 938,
+   "ge100": 545,
+   "both": 545,
+   "us": 51,
+   "parents": 109,
+   "nc_present": 33
+  },
+  "feb2026": {
+   "facet_units": 1082,
+   "ge100": 570,
+   "both": 570,
+   "us": 52,
+   "parents": 125,
+   "nc_present": 25
+  },
+  "panel": {
+   "units": 496,
+   "parents": 105,
+   "us": 51
+  }
+ },
+ "language": {
+  "nov_claude": {},
+  "nov_api": {},
+  "feb_claude": {},
+  "feb_api": {},
+  "jun_claude": {},
+  "jun_api": {}
+ },
+ "geonames": {
+  "rows": 252,
+  "panel": 115,
+  "matched": 115,
+  "en_any": 48,
+  "en_first": 17,
+  "en_first_ids": [
+   "AU",
+   "CA",
+   "CM",
+   "GB",
+   "GH",
+   "IE",
+   "IN",
+   "JM",
+   "KE",
+   "MU",
+   "NG",
+   "NZ",
+   "PR",
+   "UG",
+   "US",
+   "ZM",
+   "ZW"
+  ],
+  "sha256": "93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512"
+ },
+ "stanford_lang": {
+  "lang_cols": 148,
+  "country_cols": 306
+ },
+ "june": {
+  "both_metrics_both_months": 114,
+  "nc_metrics": [],
+  "hoa_range_apr": [
+   78.3,
+   91.59
+  ],
+  "overlap_with_panel": 112,
+  "panel_absent_from_june": [
+   "MZ",
+   "RE",
+   "TG"
+  ]
+ }
+}

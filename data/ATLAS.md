@@ -1144,6 +1144,17 @@ collaboration facet (the corpus notes ~49% "Asking" against ~40% "Doing"). Licen
 terms are in the bundle's `README.pdf` only — read it before use; nothing in the zip states a
 machine-readable licence.
 
+**GeoNames country attributes — fetched and joined 2026-09-16 (l),** the only keyless
+country→language table found. `curl -sL https://download.geonames.org/export/dump/countryInfo.txt`
+returns **200, 31,678 B** (sha256 `93bafc52…` on that date; the file is **live and unversioned**,
+so the checksum drifts). 252 rows, ISO-2 key, 19 tab-separated columns including a comma-separated
+ISO-639 `Languages` list, `population`, `continent` and `neighbours`; licence CC BY 4.0, attribute
+GeoNames. Merge against the 115-country two-wave panel: **115 in, 115 matched, 0 unmatched**;
+English listed first for 17 countries, anywhere for 48. **Parsing trap:**
+`pd.read_csv(..., comment='#')` truncates every row at the `#` inside the postal-code-format
+column — strip the `#` header lines instead. The `Languages` field is spoken/administrative, not a
+legal "official language" list, so any English indicator built from it is a stated coding choice.
+
 **Still unverified leads:** Census `PctUrbanRural_State.txt`; the Census gazetteer (reported to
 block non-browser downloads).
 
@@ -1977,4 +1988,77 @@ block non-browser downloads).
   python data/fetch/supplementary_onet.py      # crosswalk, sha256 pinned
   python data/checks/post3_feasibility.py      # cuts, join audits, both vintages, released code,
                                                # C/HHI/TVD, Seychelles netting, check block
+  ```
+
+- **2026-09-16 (l) — post5 (LL-18) feasibility: the country `human_only_ability` residual is a
+  privacy fold, and the intersection the briefs keep missing is `request::human_only_ability`.**
+  Written for `posts/post5/notes/feasibility.md`; scripts
+  `data/replication/post5_{cuts_c1_c6, replication_and_mde, residual_language_june}.py`
+  (outputs in `data/replication/results/post5_*.{txt,json}`). Six new facts:
+
+  1. **No country in the analysis panel carries a `not_classified` `human_only_ability` cell.**
+     Zero of the 118 (Nov 2025) and 117 (Feb 2026) countries at or above 200 conversations; the
+     39 / 42 country ids that do carry one have `usage_count` 19–187 and 18–124, all below the
+     threshold. Over the thresholded set `yes + no` = 100.0000 exactly, so the renormalised base
+     `no/(yes+no)` and the raw `no_pct` are **the same number**, and any design resting on a
+     country-level `not_classified` gradient at this facet has nothing to regress. The mechanism:
+     `not_classified` counts never exceed **14 / 13**, none of those countries publishes a `no`
+     cell, and the smallest published `no` cell anywhere is **16 / 15** — the residual is the
+     **sub-15 `no` cell folded**, exactly as for `task_success` in `(j)`. It *does* exist at
+     `country-state`: 33 / 25 of the units surviving the 100 floor carry one. This refines
+     `(f) 5`, whose "country median 10.34% / 11.11%" is a median over sub-threshold microstates.
+  2. **`request::human_only_ability` exists at global at levels 0, 1 *and* 2**
+     (617/591, 111/111, 23/23 nodes with a computable `no`-rate in Nov; 620/574, 103/101, 25/25 in
+     Feb; L2 rate spread 2.8–34.5 and 1.2–29.7 pp). Crossed with the **country `request` L2** mix
+     it gives a task-mix adjustment covering a median **98.4% / 95.5%** of a country's
+     conversations for **all 115** panel countries, against **34.5% / 29.2%** for the
+     `onet_task` route of `(e) 2`. Country L2 rows match a global node name 100% of the time.
+     Constraint: **0 of 23 / 25** L2 node names are shared across the two waves (`(e) 1`), so each
+     wave's adjustment is internal to that wave. The `onet_task` intersection is thinner than its
+     node count suggests: only **540 of 3,169** (Nov) and **646 of 3,259** (Feb) tasks publish a
+     `no` cell, carrying 78.4% / 77.7% of named-task mass and 92.0% / 90.6% of all `no`
+     conversations.
+  3. **Figure 3.3's country regression reproduces only with Seychelles dropped, and the AUI
+     denominator rule is immaterial to it.** R4 p.31 publishes r = 0.359, R² = 0.129, β = 0.75 for
+     ln AUI on `human_education_years_mean`. Over all 117 thresholded November countries it is
+     r = 0.5903, R² = 0.3484, β = 1.0633; dropping **SYC** gives **r = 0.3586, R² = 0.1286,
+     p = 7.7e-05, β = 0.7544, N = 116** — the published figures. Whether SYC is also removed from
+     the AUI denominator changes nothing to 4 dp (a constant shift in ln AUI), so the denominator
+     rule of `## Conventions › The AI Usage Index` matters for **levels only**, never for slopes,
+     correlations or ranks. The same regression on the February wave is r = 0.4400, β = 1.0419 and
+     is not a published number. This is the first end-to-end validation of an AUI **rebuild**
+     against a published *regression* rather than a published level.
+  4. **February country rows do not account for the whole sample.** `usage_count` over the 178
+     February country ids sums to **989,313** of the 1,000,000 per-million base (`usage_pct` sums
+     to **98.9313**), against exactly **999,875** / 100.0000 in November. The missing 1.07% is in
+     geographies below the privacy floor — absent, not zero. Never build a February denominator by
+     summing country rows.
+  5. **June 2026's `human_only_ability_pct` is the `yes` share** (global 87.79 Apr / 87.62 May,
+     continuous with 87.91 → 87.76), so a "could not do alone" outcome is `100 − value`. The
+     country/`overall` block publishes it and `usage_per_capita_index` for **114** ids in April and
+     **121** in May — **114 in both months**, 112 of which are in the two-wave 115-country panel
+     (`MZ`, `RE`, `TG` absent); SYC absent entirely; no count metric and no `not_classified`.
+  6. **A keyless country→language file exists, with a parsing trap.** GeoNames
+     `https://download.geonames.org/export/dump/countryInfo.txt` (200, 31,678 B, sha256
+     `93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512` on 2026-09-16, CC BY 4.0,
+     **live and unversioned**): 252 rows, ISO-2 key, a comma-separated ISO-639 `Languages` column.
+     Merge against the 115-country panel: **115 in, 115 matched, 0 unmatched**; English listed
+     first in 17, anywhere in 48. **`pd.read_csv(..., comment='#')` silently truncates every row**,
+     because the postal-code-format column contains `#`; drop the `#` lines before parsing. The
+     only Anthropic-side language field remains `stanford_clusters.csv` (74 `lang:*` × 153
+     `country:*` facets, April–May 2026, a different instrument).
+
+  ```bash
+  # (l) commands, run 2026-09-16 from /workspace/economic_research
+  python data/fetch/release_2026_06_26.py          # this sandbox had no June cache
+  python data/replication/post5_cuts_c1_c6.py
+  python data/replication/post5_replication_and_mde.py
+  python data/replication/post5_residual_language_june.py
+  # panel: usage_count >= 200 in BOTH long waves, facet present in both -> 115 (113 with IMF GDP)
+  # residual: pivot human_only_ability_count by cluster_name -> not_classified max 14 / 13,
+  #   no 'no' cell in any of those countries, min published 'no' cell 16 / 15
+  # Fig 3.3 control: AUI over thresholded countries (symmetric), ln AUI ~ human_education_years_mean,
+  #   sample less SYC -> r 0.3586 / R2 0.1286 / beta 0.7544 / N 116
+  # MDE inputs: sd 3.400 / 3.328 pp; Kish n_eff 11.02 / 10.39 of 115 (top-3 weight 37.9 / 39.9%);
+  #   tercile MDE 2.18 / 2.14 pp unweighted, 7.02 / 7.08 pp count-weighted; detectable r 0.265
   ```

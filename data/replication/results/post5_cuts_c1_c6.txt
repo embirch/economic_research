@@ -1,0 +1,105 @@
+==============================================================================
+C1  global human_only_ability
+==============================================================================
+nov2025 | variables: ['human_only_ability_count', 'human_only_ability_pct'] | levels: ['0']
+variable      human_only_ability_count  human_only_ability_pct
+cluster_name                                                  
+no                            120888.0               12.090311
+yes                           878987.0               87.909689
+  sum of pct = 100.000000 ; 100 - yes = 12.0903
+feb2026 | variables: ['human_only_ability_count', 'human_only_ability_pct'] | levels: ['0']
+variable      human_only_ability_count  human_only_ability_pct
+cluster_name                                                  
+no                            122401.0                 12.2401
+yes                           877599.0                 87.7599
+  sum of pct = 100.000000 ; 100 - yes = 12.2401
+
+==============================================================================
+C2  country (and country-state) human_only_ability
+==============================================================================
+nov2025 country: 171 units, clusters=['no', 'not_classified', 'yes'], vars=['human_only_ability_count', 'human_only_ability_pct'], pct sums [100.0000,100.0000], not_classified median 10.3448 over 39 units
+nov2025 country-state: 938 units, clusters=['no', 'not_classified', 'yes'], vars=['human_only_ability_count', 'human_only_ability_pct'], pct sums [100.0000,100.0000], not_classified median 12.5000 over 389 units
+feb2026 country: 175 units, clusters=['no', 'not_classified', 'yes'], vars=['human_only_ability_count', 'human_only_ability_pct'], pct sums [100.0000,100.0000], not_classified median 11.1111 over 42 units
+feb2026 country-state: 1082 units, clusters=['no', 'not_classified', 'yes'], vars=['human_only_ability_count', 'human_only_ability_pct'], pct sums [100.0000,100.0000], not_classified median 13.6986 over 497 units
+
+==============================================================================
+C3  country usage_count / usage_pct and the 200 threshold
+==============================================================================
+nov2025 | variables: ['usage_count', 'usage_pct'] | cluster_name distinct: [''] | country ids: 174
+  pseudo-geographies present: ['not_classified']
+  real country ids 173; >=200 conversations: 118; min count 15; usage_pct sum (incl pseudo) 100.0000
+feb2026 | variables: ['usage_count', 'usage_pct'] | cluster_name distinct: [''] | country ids: 178
+  pseudo-geographies present: ['NONE', 'not_classified']
+  real country ids 176; >=200 conversations: 117; min count 15; usage_pct sum (incl pseudo) 98.9313
+
+  balanced panel (>=200 in BOTH waves, facet present in both): 115; excluding Seychelles: 115
+  SC rows: nov 410, feb 0
+
+==============================================================================
+C2b  residual semantics, count base, and facet coverage at the threshold
+==============================================================================
+nov2025: countries carrying facet 171; carrying an explicit not_classified row 39
+  where not_classified is ABSENT: yes+no pct median 100.0000, min 100.0000
+  where present: yes+no pct median 89.6552, min 67.5000
+  facet counts vs usage_count: max abs diff 0; countries where they differ 0
+  countries >=200 without the facet: 0 []
+  over >=200 countries: min facet total 239, median 1658; min 'no' count 24; countries with no 'no' row 0
+feb2026: countries carrying facet 175; carrying an explicit not_classified row 42
+  where not_classified is ABSENT: yes+no pct median 100.0000, min 100.0000
+  where present: yes+no pct median 88.8889, min 71.0526
+  facet counts vs usage_count: max abs diff 0; countries where they differ 0
+  countries >=200 without the facet: 0 []
+  over >=200 countries: min facet total 225, median 1639; min 'no' count 31; countries with no 'no' row 0
+
+==============================================================================
+C4  global onet_task::human_only_ability
+==============================================================================
+nov2025 | rows 11074 | variables ['onet_task_human_only_ability_count', 'onet_task_human_only_ability_pct'] | distinct tasks 3169 | suffixes ['no', 'not_classified', 'yes'] | rows at non-global grain: 0
+  tasks with a 'no' arm: 540; with 'yes': 3043; with both: 539; with a not_classified arm: 1954
+  per-task pct over all published arms: median 100.0000, min 100.0000, max 100.0000
+  per-task counts: min total 15, median 48
+feb2026 | rows 11592 | variables ['onet_task_human_only_ability_count', 'onet_task_human_only_ability_pct'] | distinct tasks 3259 | suffixes ['no', 'not_classified', 'yes'] | rows at non-global grain: 0
+  tasks with a 'no' arm: 646; with 'yes': 3105; with both: 646; with a not_classified arm: 2045
+  per-task pct over all published arms: median 100.0000, min 100.0000, max 100.0000
+  per-task counts: min total 15, median 52
+
+==============================================================================
+C5  country onet_task mix
+==============================================================================
+nov2025: 117 country ids carry onet_task; residual labels ['none', 'not_classified']; named nodes per country median 19; named mass median 34.27%; total pct per country [100.0000,100.0000]
+  over the 115-country panel: 113 carry onet_task, named-mass median 34.46%, min 3.74%, 10th pct 12.98%
+feb2026: 118 country ids carry onet_task; residual labels ['none', 'not_classified']; named nodes per country median 16; named mass median 29.05%; total pct per country [100.0000,100.0000]
+  over the 115-country panel: 114 carry onet_task, named-mass median 29.44%, min 3.24%, 10th pct 8.79%
+
+==============================================================================
+C4b  request::human_only_ability (NOT named in BRIEF section 8; the wider-coverage sibling)
+==============================================================================
+nov2025 level 0: 617 global nodes, 591 with a computable no-rate, spread 0.4-58.7 pp
+nov2025 level 1: 111 global nodes, 111 with a computable no-rate, spread 1.2-41.3 pp
+nov2025 level 2: 23 global nodes, 23 with a computable no-rate, spread 2.8-34.5 pp
+feb2026 level 0: 620 global nodes, 574 with a computable no-rate, spread 0.7-59.2 pp
+feb2026 level 1: 103 global nodes, 101 with a computable no-rate, spread 1.6-52.9 pp
+feb2026 level 2: 25 global nodes, 25 with a computable no-rate, spread 1.2-29.7 pp
+
+==============================================================================
+C5b  country request mix by level (the shift-share denominator alternatives)
+==============================================================================
+nov2025 request L0: 74 country ids; over the panel 72 countries, named mass median 22.2%, min 1.1%
+nov2025 request L1: 121 country ids; over the panel 114 countries, named mass median 69.8%, min 6.7%
+nov2025 request L2: 129 country ids; over the panel 115 countries, named mass median 98.4%, min 44.5%
+feb2026 request L0: 71 country ids; over the panel 70 countries, named mass median 19.9%, min 1.2%
+feb2026 request L1: 119 country ids; over the panel 114 countries, named mass median 76.5%, min 6.5%
+feb2026 request L2: 134 country ids; over the panel 115 countries, named mass median 95.5%, min 41.8%
+
+==============================================================================
+C6  June 2026 country / overall
+==============================================================================
+metric ids at country/overall: 52
+human_only_ability metrics: ['human_only_ability_pct'] | usage_per_capita metrics: ['usage_per_capita_index'] | count-like: []
+country ids per month: {'2026-04-01': 114, '2026-05-01': 121}
+human_only_ability_pct ids per month: {'2026-04-01': 114, '2026-05-01': 121}
+usage_per_capita_index ids per month: {'2026-04-01': 114, '2026-05-01': 121}
+countries with human_only_ability_pct in BOTH months: 114; with AUI in both: 114; with both metrics in both months: 114
+global human_only_ability_pct by month: {'2026-05-01': 87.62, '2026-04-01': 87.79}
+
+wrote data/replication/results/post5_cuts_c1_c6.json
