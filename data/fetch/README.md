@@ -41,3 +41,18 @@ the only public Anthropic file with Claude Code fields) and the two zips served 
 re-prove that the mirror is byte-identical to Hugging Face. Same rules: write-once, sha256 pinned
 in the script, `CHECKSUMS.txt` per group, summary only. Profiles: `data/ATLAS.md`
 §Supplementary sources and `data/releases/INDEX.md` §Second distribution channel.
+
+`data/fetch/supplementary_onet.py` (added 2026-09-16) fetches the two O\*NET Center files the
+dataset does not ship: the official **O\*NET-SOC 2010 → 2019 crosswalk**, without which the fifth
+report's occupational figures (Appendix Figure A.1, the "+14% API / −18% Claude.ai" of p.7, the
+35% of p.5) do not reproduce — see `data/ATLAS.md` §Conventions, "SOC major groups from
+`onet_task`, and the 2019 recode" — and the **O\*NET 27.3 text zip**, the vintage
+`labor_market_impacts/` was built on. Both CC BY 4.0, both sha256-pinned in the script.
+
+## Replication scripts
+
+`data/replication/` holds the re-implementations of published numbers that no released notebook
+covers (reports 4, 5 and 6 ship no code). Each runs from the repository root against
+`data/cache/`, prints its merge audit, and writes a small CSV under
+`data/replication/results/`.
+

@@ -313,7 +313,13 @@ value, not derivable from the released files.
     `[LMI §Cuts]`.
 17. **No count metric of any kind in 2026-06-26** — no conversation count, no denominator, no
     sample size, nothing to weight the two months with `[R6 §Thresholds]`.
-18. No `usage_count` variable in any 1P API file `[R4 §Cuts 5, V24]`.
+18. No `usage_count` variable in any 1P API file `[R4 §Cuts 5, V24]` — but this is the
+    *geography-total* variable, and the API has no geography at all (item 2). **Facet counts do
+    exist on the API**: `onet_task_count` at global carries 2,056 / 2,253 / 2,299 nodes in the
+    three long waves (min 15, sums 944,638 / 971,525 / 1,000,000), as do
+    `collaboration_count` and every `onet_task::*_count`, so a task-level *level* diagnostic is
+    available on **both** surfaces (added 2026-09-16 (i); the unit is a sampled prompt–response
+    record, not a conversation).
 19. No `usage_count` or `usage_pct` at global level in 2025-09-15 — totals must be summed
     `[R3 §Cuts]`.
 20. No confidence intervals on four of the five global numeric facets in 2026-03-24 (only
@@ -524,6 +530,44 @@ observable analogue of ψ, not ψ itself. And it is Claude traffic only. State b
   largest `onet_task_pct`, **do not renormalise** → 19.4410 ("19%"). Dropping only
   `not_classified` gives 22.49; renormalising gives 20.91 `[R5 §Reproduced]`. **(re-run
   2026-09-16: 19.4410.)**
+
+#### SOC major groups from `onet_task`, and the 2019 recode (added 2026-09-16 (i))
+
+The fifth report's occupational figures — Appendix Figure A.1, the published "35% of
+conversations on Claude.ai" (p.5) and "the share of tasks in this category has increased by **14%**
+in the API and decreased by **18%** in Claude.ai" (p.7) — are **not reproducible from the released
+files alone**, because the only O\*NET file the dataset ships is DB 20.1 on the **2010**
+O\*NET-SOC taxonomy and footnote 2 (p.11) says those numbers use the **2019** vintage. Add the
+O\*NET Center crosswalk and they reproduce. The specification, in order:
+
+1. global `onet_task` level-0 `onet_task_pct`, per surface, per wave;
+2. drop `none` **and** `not_classified`;
+3. join the lower-cased, stripped task text to
+   `release_2025_09_15/data/intermediate/onet_task_statements.csv` → 2010 O\*NET-SOC codes;
+4. recode to 2019 codes with `2010_to_2019.csv` (`data/fetch/supplementary_onet.py`);
+5. split a task's `pct` equally over its distinct 2019 codes (splitting over Titles is identical
+   to 4 dp);
+6. renormalise over the matched named mass — the **classified** base.
+
+| vintage / base | Claude.ai Aug → Nov → Feb | Aug→Feb | 1P API Aug → Nov → Feb | Aug→Feb |
+|---|---|---|---|---|
+| **2019, classified** (reproduces) | **41.9682 → 38.5001 → 34.6150** | **−17.5208%** ("−18%") | **53.8833 → 59.2074 → 61.6363** | **+14.3885%** ("+14%") |
+| 2010, classified (shipped file) | 39.0706 → 36.0583 → 32.2626 | −17.4248% | 50.0841 → 51.8285 → 51.7084 | **+3.2433%** ✗ |
+| 2019, all-conversation | 38.557 → 36.003 → 32.182 | −16.53% | 47.330 → 52.268 → 55.650 | +17.58% ✗ |
+
+February Claude.ai on the reproducing row is **34.6150** = the published 35%. The other seven
+Figure A.1 panels also land on the appendix's axis readings on this specification. **The Claude.ai
+leg reproduces on either vintage; the API leg only on 2019** — and 337 of 20,081 (task, code)
+pairs change major group, of which one move does nearly all the work: **43-9011 "Computer
+Operators" → "Computer Occupations, All Other" 15-1299.\***, moving 3.83 / 6.92 / **9.32** pp of
+API matched mass (3.18 / 2.76 / 2.64 on Claude.ai). Inside that, a single task — "perform routine
+system administrative functions such as troubleshooting, back-ups, and upgrades." — runs
+**1.2396 → 3.9479 → 6.7260** on the API (counts 11,710 → 38,355 → 67,260) against 1.6426 → 1.2693
+→ 1.4451 on Claude.ai. So the published +14% is one taxonomy revision plus one fast-growing task:
+**never quote it without the vintage**. Scripts: `data/replication/soc15_figA1_2026_03.py`,
+`data/fetch/supplementary_onet.py`. Do **not** substitute a later O\*NET database for the
+crosswalk: a text join to O\*NET 27.3 matches only ~76% of named mass (→ +12.58%) and the
+Task-ID bridge only ~75% (→ +24.23%).
 
 ### "Each 1% increase in the share of tech workers"
 
@@ -1095,6 +1139,14 @@ machine-readable licence.
 **Still unverified leads:** Census `PctUrbanRural_State.txt`; the Census gazetteer (reported to
 block non-browser downloads).
 
+**O\*NET Center files the dataset does not ship (fetched, checksummed and scripted 2026-09-16 (i);
+`data/fetch/supplementary_onet.py`, cached under `data/cache/supplementary/`).**
+
+| source | how obtained | grain, size | join key to the Index | audit | licence |
+|---|---|---|---|---|---|
+| **O\*NET-SOC 2010 → 2019 crosswalk** — the file that makes the fifth report's occupational numbers reproducible (`## Conventions` → "SOC major groups from `onet_task`") | `curl -sL "https://www.onetcenter.org/taxonomy/2019/walk/2010_to_2019.csv?fmt=csv"` (200, 108,052 B, sha256 `8f026a33…ecc5a`). The `dl_files/taxonomy/…` path 404s; the `?fmt=csv` query is required or the URL returns HTML | 1,164 rows; 1,110 distinct 2010 codes, 1,012 distinct 2019 codes | `O*NET-SOC Code` of the shipped `onet_task_statements.csv` | 19,530 (task key, 2010 code) pairs in → **20,081 out, 0 unmatched codes**; 18,428 of 18,428 task keys mapped; every named task of all six long-wave global frames maps (2,616 / 2,054 / 3,168 / 2,251 / 3,258 / 2,297, zero unmatched) | O\*NET, **CC BY 4.0**, attribute the O\*NET program (US DOL) — *not* the Index's unversioned CC-BY |
+| **O\*NET DB 27.3 text zip** — the `labor_market_impacts/` vintage and the source of `Tasks to DWAs.txt` | `curl -sL https://www.onetcenter.org/dl_files/database/db_27_3_text.zip` (200, 11,504,351 B, sha256 `98450a43…92b41`) | 19,265 task statements, 1,016 occupations | task text or Task ID | **not** a substitute for the crosswalk: a text join to the Index matches only ~76% of named mass, the Task-ID bridge ~75%, both non-randomly | CC BY 4.0 |
+
 ## Dated log
 
 - **2026-09-16 — first assembly.** Built from the seven release profiles written today
@@ -1542,7 +1594,9 @@ block non-browser downloads).
   # June recurrence: top-10 by log(value / benchmark), benchmark = USA country row (states) or
   #   GLOBAL row (countries), nodes present in both months, mean over units
   # SYC netting: global_count - SYC_country_count per cluster, renormalise -> max shift 1.17 pp
-  # wage rebuild: onet_task_statements(20.1) task text -> O*NET-SOC[:7] -> wage_data.SOCcode
+  # wage rebuild: onet_task_statements(20.1) task text -> full 10-char O*NET-SOC Code ->
+  #   wage_data.SOCcode   (corrected 2026-09-16 (h): SOCcode IS the 10-char code; a [:7] key
+  #   matches 0 of 775 - the shorthand first written here was wrong, the numbers below are right)
   #   (MedianSalary>100) mean per task / 2080, weighted by global onet_task_pct -> 35.08 / 34.36
   curl -sL https://raw.githubusercontent.com/microsoft/ai-diffusion-report/main/data/US/State_Rankings_2026Q1.csv
   ```
@@ -1646,4 +1700,137 @@ block non-browser downloads).
   #   speedup = ho*60/hw  (hours / minutes in BOTH 2026 waves - see trap 8 refinement)
   curl -sL https://cdn.openai.com/signals/data-download-csv.zip -o /tmp/signals.zip   # 200, 1,172,144 B
   # IWA key: 149 of 165 OpenAI IWA ids match June onet hierarchy_level==2 node_external_id
+  ```
+
+- **2026-09-16 (h) — post1 (LL-07) feasibility: the wage join key was wrong everywhere, and the
+  task×collaboration intersection has a residual the marginal facet does not.** Written for
+  `posts/post1/notes/feasibility.md` (cuts C1–C8 of `posts/post1/BRIEF.md` §8). Cache rebuilt
+  from scratch first (4 folders, 59 files, 355,158,908 B; `sha256sum -c` 14/38/4/3 OK, 0 failed).
+
+  1. **`wage_data.SOCcode` is a 10-character O\*NET-SOC code, not a 7-character SOC.** A
+     `O*NET-SOC Code[:7]` → `SOCcode` join matches **0 of 775** codes. The key is the **full
+     10-char code**, which is what Anthropic's own `plots.ipynb` cell 26 does
+     (`merge(wage_df, left_on="O*NET-SOC Code", right_on="SOCcode")`): **970 of 974** occupations.
+     Truncating **both** sides to 7 chars matches 772 of 775 but puts up to **13** wage rows under
+     one code, i.e. it imports an unstated aggregation. On the corrected key the priced named-task
+     mass is **99.35 / 98.98 / 99.30%** (Aug 2025 / Nov 2025 / Feb 2026), and the usage-weighted
+     mean hourly wage is **$35.34 / $35.08 / $34.36** — which reproduces log (f) 13 exactly and
+     proves those numbers were always on the 10-char join. The `[:7]` shorthand in (f)'s command
+     block is corrected in place. Also: in the released notebook the `MedianSalary > 100` filter
+     is applied **after** the join and after an `agg('first')` aggregation to occupation `Title`,
+     `MedianSalary` is **annual** (the ÷2080 hourly rate is ours, never Anthropic's), and the
+     series is **top-coded at $208,000** (6 occupations at $100.00/hr).
+  2. **The `onet_task::collaboration` intersection carries a `not_classified` *pattern* that the
+     marginal `collaboration` facet does not.** Over named tasks the intersection counts split
+     classified / `none` / `not_classified` = **92.90 / 2.46 / 4.64** (Aug), **92.34 / 2.02 /
+     5.64** (Nov), **91.94 / 2.16 / 5.90** (Feb) — i.e. **41,134 / 52,693 / 54,893** conversations
+     labelled `not_classified` inside the intersection, against **1 / 0 / 0** in the marginal
+     facet (log (g) 6). The intersection publishes **100.00%** of the base named
+     `onet_task_count` (886,107 / 935,027 / 929,714), so this is not suppression — it is a
+     different residual in a different frame. Consequence: the usage-weighted mean of per-task
+     automation returns the wave's five-pattern value to **+0.1303 / +0.2931 / +0.3510 pp**, never
+     exactly; the other cause is the named-task restriction (8.13 / 6.49 / 7.03 pp of dropped
+     `none`+`not_classified` task mass). Never call that identity "exact to rounding".
+  3. **Base vs intersection node sets.** Base `onet_task` at global = named + `none` +
+     `not_classified` (2,618 / 3,170 / 3,260); the intersection = named + `none` (2,617 / 3,169 /
+     3,259). `not_classified` is absent from the intersection entirely. Named mass 91.8727 /
+     93.5144 / 92.9714; `none` 5.7162 / 3.7124 / 4.2922; `not_classified` 2.4111 / 2.7732 /
+     2.7364. Intersection `_count` floor is **1** in all three waves; base floor is 15.
+  4. **Kish effective N on `onet_task_pct` is 3–4% of the nominal task count**: **99.7 / 89.5 /
+     134.3** over 2,616 / 3,168 / 3,258 named tasks (94.4 / 83.4 / 125.7 on the wage-priced,
+     classified-cell analysis set of 1,802 / 2,075 / 2,188 tasks). By usage-weighted wage quartile
+     it is 62.3 / 43.3 / 22.2 / **13.7** (Aug), 55.6 / 37.7 / 22.0 / **11.5** (Nov), 51.0 / 50.6 /
+     36.8 / **16.5** (Feb). **Any MDE on a usage-weighted task statistic must be quoted with its
+     variance model**: for a top-minus-bottom quartile difference the MDE(80%) is **0.42 pp**
+     (conversation-level binomial), **3.3–3.7 pp** (resample tasks with p ∝ weight, unweighted
+     mean) and **12.5–17.4 pp** (plain design-based task bootstrap of the weighted mean). Task-level
+     sd of the automation share is 27–31 pp.
+  5. **Seychelles is `SC`, not `SYC`, in `release_2026_01_15`** (ISO-2 wave; `SYC` returns 0 rows),
+     and **the netting cannot reach an intersection**. SC publishes 67 `onet_task` nodes (65 named,
+     93.76% of its own mass, all present globally) and **0** `onet_task::collaboration` rows, so
+     its contribution to per-task automation rates is unremovable. It is up to **64.3%** of the
+     *global* conversation count of an individual task (median 4.8% over its nodes); **23** tasks
+     have SC above 10% of their global count, holding **11.59 pp** of the wave, **9.04 pp** of it in
+     the top wage quartile. Netting the weights moves a single task weight by up to 0.58 pp
+     (mean 0.0012); netting the global collaboration mix reproduces the **1.1748 pp** shift
+     (`feedback loop`) and takes five-pattern automation 46.7394 → 45.4868 (extends trap 14).
+  6. **Anthropic's released library reproduces Figure 2.11 exactly on this machinery** —
+     `collaboration_task_regression(df, geography="country")` → slope **−3.111834**, partial R²
+     **0.393687**, p 1.721e-13, **N 111**, n_tasks **1808** (published −3.112 / 0.394 / 111). It
+     runs in this sandbox with a **stub `geopandas` module** injected (`geopandas` is imported at
+     module scope, is not installed, and is unused by these functions) and a `chdir` into `code/`.
+     Its per-task rate spec: drop the `not_classified` **task** node, **keep** the `none` task
+     node, drop `none`/`not_classified` **patterns** from each task's base, renormalise weights
+     over tasks that have a rate; it parses `cluster_name.str.split("::").str[0]` and **0** cluster
+     names contain more than one `::` in any wave, so the released parser is safe (use `rsplit`
+     anyway).
+  7. **Occupational reach of the C5 join, per wave**: 2,616 / 3,168 / 3,258 named nodes, **all
+     matched**, 0 unmatched, 0 collisions on the lower-cased stripped key; the 20.1 file is 19,530
+     rows → **18,428** keys (one case-variant collapse, up to **34** rows on one key). Multi-holder
+     tasks: **74 / 93 / 86** at the 10-char code, 72 / 91 / 84 at 7-char (= log (g) 4), **6 / 10 /
+     9** spanning two SOC major groups. The (g) 4 percentages **4.05 / 5.57 / 4.50** are of the
+     **wave total**; of *named* mass they are 4.44 / 5.98 / 4.87. Equal-split vs
+     employment-weighted wage correlate at **0.9998** with a max single-task gap of $6.38/hr, and
+     BLS-EP employment is 7-char only, so for 2 of those tasks the employment-weighted rule
+     degenerates to equal split. All 22 SOC major groups are represented, but only **10 / 10 / 8**
+     contain tasks in both the global bottom and top usage-weighted wage quartile and only
+     **7 / 8 / 6** span all four — a within-major-group quartile estimator runs on those, not on 22.
+  8. **BLS-EP re-checked today**: `data.bls.gov/projections/occupationProj` **200**, 1,397,448 B,
+     **831** detailed-SOC rows, median wage on 825, `Employment 2025` (thousands) on 831; `soc7` →
+     `occ_code` 775 in / **670** matched / 105 unmatched. Priced named-task mass **55.66 / 58.52 /
+     62.22%** of named (51.14 / 54.73 / 57.85 pp of the wave — the 54.7 / 57.8 figures in circulation
+     are the wave-total ones). Rank agreement with `wage_data.csv` Spearman 0.9869 / 0.9859 /
+     0.9870. `www.bls.gov` and `download.bls.gov` still **403**.
+  9. **Top-10 task concentration, stated on both denominators**: 22.9409 / 24.2471 / **19.4410** of
+     the wave total (the published convention: drop `none` and `not_classified`, do not
+     renormalise) = 24.97 / 25.93 / **20.91%** of named mass.
+
+  ```bash
+  # (h) commands, run 2026-09-16 from /workspace/economic_research
+  # scripts: /tmp/p1/{a_cuts,b_joins,c_var,d_replicate}.py  (rebuild in ~3 min)
+  # C1-C4: geography=='global', facet=='onet_task::collaboration', cluster_name.str.rsplit('::',1)
+  # C6 key test: set(onet['O*NET-SOC Code']) & set(wage.SOCcode) -> 970 of 974 ; [:7] -> 0 of 775
+  # released code: sys.modules['geopandas']=stub ; chdir(code/) ;
+  #   import aei_analysis_functions_claude_ai as A ; A.collaboration_task_regression(df,'country')
+  # variance models: binomial on b5 counts | task bootstrap equal-prob, weighted mean |
+  #   resample p prop. w, unweighted mean  -> MDE 0.42 / 12.5-17.4 / 3.3-3.7 pp
+  curl -sL https://data.bls.gov/projections/occupationProj    # 200, 1,397,448 B, 831 rows
+  ```
+
+- **2026-09-16 (i) — post2 (LL-11) feasibility, and the fifth report's "+14% API" reproduced.**
+  Written for `posts/post2/notes/feasibility.md`; two scripts added under `data/replication/`
+  (`soc15_figA1_2026_03.py`, `post2_panel_checks.py`) and one under `data/fetch/`
+  (`supplementary_onet.py`). What is new:
+
+  1. **The +14% / −18% of `economic-index-2026-03-report` p.7 reproduces at +14.3885% and
+     −17.5208%, but only after recoding the shipped 2010 O\*NET-SOC codes to the 2019 vintage**
+     the report's own footnote 2 (p.11) names. On the shipped file the API leg is **+3.24%**.
+     Full specification, level series and the mechanism (43-9011 Computer Operators →
+     15-1299.\*, 9.32 pp of February API mass; one task at 1.2396 → 3.9479 → **6.7260**) are in
+     `## Conventions` → "SOC major groups from `onet_task`, and the 2019 recode". February
+     Claude.ai comes out at **34.6150** = the published 35%, and the other seven Figure A.1
+     panels land on the appendix's axis readings.
+  2. **`onet_task_count` exists on the 1P API side** at global in all three long waves
+     (2,056 / 2,253 / 2,299 nodes, min 15, sums 944,638 / 971,525 / 1,000,000). `## Cuts` 18
+     amended: what is absent from the API is the *geography-total* `usage_count`.
+  3. **The cross-surface `onet_task` panels**, global, named nodes only (`none` and
+     `not_classified` dropped): 2,616 / 3,168 / 3,258 Claude.ai, 2,054 / 2,251 / 2,297 API;
+     within-wave overlaps 1,603 / 1,823 / 1,908; **1,241** tasks in all six frames, carrying
+     83.1365 / 82.4755 / 82.6289 / 81.5020 / **80.8906** / **83.2233** of each frame's geography
+     total — which is **not** the same as "of named mass" (87.01% / 92.18% in February). Window
+     pairs are larger than the six-frame panel: **1,317** (Aug→Nov), **1,595** (Nov→Feb).
+     Minimum detectable |r| at 5%/80%: 0.0795 / 0.0771 / 0.0701.
+  4. **Case-variant duplicate task strings do not exist inside the Index** (0 in all six frames;
+     the cluster names are already lower-cased) — trap 21 bites only on the statements side.
+  5. **`onet_task::collaboration` on the API** publishes a per-task `directive` share for
+     1,143 / 1,155 / 1,135 of the 1,241 panel tasks; the rest are suppressed, not zero.
+  6. A **coding set** built as "modal SOC major group 15" over the panel has 242 tasks on each
+     vintage but an overlap of only **228**, and February API mass of **46.31 (2010) vs 55.29
+     (2019)** out of 83.22 — so any coding/non-coding split must name its O\*NET-SOC vintage.
+
+  ```bash
+  # (i) commands, run 2026-09-16 from /workspace/economic_research
+  python data/fetch/supplementary_onet.py          # crosswalk + db_27_3_text.zip, sha256 pinned
+  python data/replication/soc15_figA1_2026_03.py   # both vintages, both bases, merge audit
+  python data/replication/post2_panel_checks.py    # frames, panels, floors, intersections, coding set
   ```
