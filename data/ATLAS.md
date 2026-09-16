@@ -555,7 +555,12 @@ O\*NET Center crosswalk and they reproduce. The specification, in order:
 | 2010, classified (shipped file) | 39.0706 → 36.0583 → 32.2626 | −17.4248% | 50.0841 → 51.8285 → 51.7084 | **+3.2433%** ✗ |
 | 2019, all-conversation | 38.557 → 36.003 → 32.182 | −16.53% | 47.330 → 52.268 → 55.650 | +17.58% ✗ |
 
-February Claude.ai on the reproducing row is **34.6150** = the published 35%. The other seven
+February Claude.ai on the reproducing row is **34.6150** = the published 35%. **Anthropic's own
+released function is the specification** (added `(k)` 1): `map_to_occupational_categories` in
+`release_2025_09_15/code/aei_analysis_functions_1p_api.py` duplicates a task's full `pct` into each
+holder major group and renormalises the table — run on the 2019 recode it returns 41.9294 → 38.4599
+→ **34.5867** (−17.512%) and 53.7272 → 59.0386 → **61.4530** (**+14.380%**), and on the shipped
+2010 file it reproduces the August `soc_occupation` facet to **0.0000 pp** across all 22 groups. The other seven
 Figure A.1 panels also land on the appendix's axis readings on this specification. **The Claude.ai
 leg reproduces on either vintage; the API leg only on 2019** — and 337 of 20,081 (task, code)
 pairs change major group, of which one move does nearly all the work: **43-9011 "Computer
@@ -725,7 +730,10 @@ Consolidated; each attributed. Read this list before writing a loader.
     1,054.638; excluded by the report from all geographic analyses, and **not** excluded in the
     file — so `usage_pct` and every global mix are contaminated unless you drop it
     `[R4 §Thresholds, V21, V22]`. SYC is not published at all in June 2026, so the "index > 25"
-    rule is inert there `[R6 §Skill corrections]`.
+    rule is inert there `[R6 §Skill corrections]`. **Amended 2026-09-16 `(j)` 5 and `(k)` 4: at
+    *task* grain it is removable** — SC's 67 country `onet_task` rows sum to 24,715 exactly, as
+    every country's do, so a global task mix can be netted of it (−1.22 pp on the November SOC-15
+    share); the global-only intersections still cannot be corrected.
 15. **Wyoming, November 2025.** Excluded by the report from all US-state analyses for the same
     reason (AUI 2.073, third highest). Confirmed by replication: the published state education
     correlation reproduces at r = 0.9279, N = 50, i.e. 51 states less Wyoming — but the published
@@ -1908,4 +1916,65 @@ block non-browser downloads).
   #   g = df[(df.geography=='global') & (df.facet=='onet_task::task_success')]
   #   g.groupby(task).cat.apply(lambda s: tuple(sorted(set(s)))).value_counts()
   #   -> no node with all three cells; counts sum to onet_task_count for every node
+  ```
+
+- **2026-09-16 (k) — post3 (LL-36) feasibility: the released function *is* the `soc_occupation`
+  specification, and a single country can be netted out of a global mix.** Written for
+  `posts/post3/notes/feasibility.md`; script `data/checks/post3_feasibility.py` (45 s, writes
+  `data/checks/results/post3_{S,C}_series.csv`, check block passes). What is new, beyond `(i)`:
+
+  1. **Anthropic's released `map_to_occupational_categories`
+     (`release_2025_09_15/code/aei_analysis_functions_1p_api.py`) reproduces the published
+     August-2025 `soc_occupation` facet exactly** — 35.8771 against 35.877057, and **0.0000 pp**
+     mean absolute error across all 22 major groups. Its rule is **full duplication** ("Assign full
+     value to each group"), `none`/`not_classified` → "Not Classified", then renormalise the whole
+     table to 100 — i.e. an all-conversation base with duplication, **not** an equal split. Equal
+     split over codes/Titles is +0.029 pp on the classified base, over major groups −0.012 pp. Use
+     the released rule as the primary and quote the others as robustness. Run it with
+     `pip install plotly` (an import-time dependency of the module).
+  2. Run on the 2019 recode of `(i)`, the released function gives the published legs directly:
+     Claude.ai 41.9294 → 38.4599 → **34.5867** (−17.512%), API 53.7272 → 59.0386 → **61.4530**
+     (**+14.380%**), classified base; all-conversation 47.2322 → 52.1557 → **55.5180** (+17.54%),
+     and on the shipped 2010 vintage the API all-conversation series is 43.9245 → 45.6920 →
+     **46.6134** (+6.12%). So the published sentence is *2019 vintage, classified base*; **no base
+     reproduces +14% on the 2010 vintage** (classified +3.27, all-conv +6.12, node share −5.20).
+  3. **Substituting a later O\*NET *database* for the crosswalk is confirmed wrong, across five
+     vintages**: a text join to DB 27.3 / 28.2 / 29.2 / 30.0 / 30.2 matches only 81–82% of named
+     mass and returns +12.6% on the API (mean absolute error 0.6 pp over the eight Figure A.1
+     panels, against 0.2 pp for the crosswalk). `db_30_2_text.zip` sha256
+     `b5479271931796b838f7173dc0f673a9ec961b7833ac87168fd11e92e7453741`, 13,444,123 B.
+  4. **A country's task rows sum *exactly* to its `usage_count`** — not only Seychelles (`(j)` 5)
+     but **all 117** countries that publish `onet_task` rows in `release_2026_01_15` (sub-floor
+     cells are folded into that country's own `none`/`not_classified` rows). So **a flagged country
+     can be netted out of a global task mix**, which trap 14 and `(e) 3` call impossible.
+     For this post's category: **Seychelles** publishes
+     67 rows summing to 24,715 = its country total, **84.1%** of its named traffic is SOC-15, it is
+     **5.78%** of the whole global SOC-15 mass, and netting it moves November Claude.ai SOC-15 from
+     36.0583 → **34.8375** classified (−1.22 pp; −1.14 pp all-conv) and the within-category top-ten
+     share from 61.1859 → **59.8982** (−1.29 pp). Bound including its 1,542 unnamed conversations:
+     **[−1.33, −1.22] pp**. Only **71.43%** of the global November SOC-15 mass is recoverable from
+     country rows overall (240,822 of 337,154 conversations, 113 countries), so this works for a
+     single named country, not for a general geographic re-weighting.
+  5. **A within-category top-ten share is base-invariant** (classified and all-conversation give
+     the identical number) but not construction-invariant: four allocation rules move it by up to
+     **0.39 pp** (S by ≤0.18 pp — the LL-32 ≤0.17 pp bound is a bound on the category share, not on
+     a within-category statistic), and the O\*NET vintage moves it by several points and can flip
+     the sign of its change on the API.
+  6. **Multi-holder exposure re-measured** on the shipped 20.1 statements: >1 holder occupation for
+     **74 / 93 / 86** Claude.ai task nodes (4.44% / 5.98% / 4.87% of named mass) and 51 / 55 / 57
+     API nodes (2.11% / 2.07% / 1.80%); >1 *major group* for only 6 / 10 / 9 nodes (0.30% / 0.31% /
+     0.28%). LL-32's 72 / 91 / 84 and 4.05% / 5.57% / 4.50% are the same fact on a slightly
+     different key set.
+  7. SOC-15 effective N, for power arithmetic: Claude.ai **346,207 / 337,154 / 299,950**
+     conversations, API **415,574 / 444,509 / 466,863** (2019 recode: 371,883 / 359,986 / 321,821
+     and 447,098 / 507,794 / 556,499); binomial SE on a within-category share ≈ **0.07–0.09 pp**.
+     SOC-15 node counts 330 / 342 / 352 and 299 / 323 / 317 — but the counted bases are
+     **964,494 / 999,875 / 1,000,000** (Claude.ai) and 944,638 / 971,525 / 1,000,000 (API), so a
+     rising node count is partly more cells clearing the fixed 15-conversation floor.
+
+  ```bash
+  # (k) commands, run 2026-09-16 from /workspace/economic_research
+  python data/fetch/supplementary_onet.py      # crosswalk, sha256 pinned
+  python data/checks/post3_feasibility.py      # cuts, join audits, both vintages, released code,
+                                               # C/HHI/TVD, Seychelles netting, check block
   ```
