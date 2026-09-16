@@ -1,10 +1,10 @@
 # post2 · When a task takes a larger share of AI use on the enterprise API, does it take a smaller share on the consumer app?
 
-*Candidate LL-11. Brief of record, written on `team/templates/BRIEF.md`. The question and the title
-above are the frozen forms and settle the two title-form defects the short list carried: the
-question now says AI (criterion 6; referee audit-2 correction 20), and "grow"/"shrink" are gone,
-because the design measures shares and not levels (editor's note, `room/editor-2026-09-16-sketch-LL-11.md`,
-"Title form"). Findings will say Claude.*
+*Candidate LL-11. Brief of record on `team/templates/BRIEF.md`. Question and title above are the
+frozen forms, settling both title-form defects: the question says AI (criterion 6; referee audit-2
+correction 20), and "grow"/"shrink" are gone because the design measures shares, not levels (editor's
+note `room/editor-2026-09-16-sketch-LL-11.md`). Findings will say Claude. Amended once on the
+steward's feasibility note (`posts/post2/notes/feasibility.md`), §8, §9 test 4 and §10 only.*
 
 ## 1. The question
 
@@ -111,39 +111,32 @@ anchor.
 
 ## 6. Hypotheses
 
-**H1 · Migration.** A task's change in Claude.ai share and its change in API share are negatively
-related across the 1,241 tasks published on both surfaces in all three windows.
-*Signature only it predicts:* the negative relation appears in **both** adjacent windows
-(August→November 2025 and November 2025→February 2026), holds in the non-coding tasks as well as
-the coding tasks, and is larger in magnitude than the same statistic computed *within* each surface
-(the mechanical share-accounting benchmark).
-*What would count against it:* either window's correlation not distinguishable from zero at the
-stated power; the two windows' correlations disagreeing in sign; or the relation present only in
-coding tasks.
+**H1 · Migration.** A task's change in Claude.ai share and its change in API share are negatively related
+across the 1,241 tasks published on both surfaces in all three windows. *Signature only it predicts:* the
+negative relation appears in **both** adjacent windows (August→November 2025 and November 2025→February
+2026), holds in the non-coding tasks as well as the coding tasks, and is larger in magnitude than the same
+statistic computed *within* each surface (the mechanical share-accounting benchmark). *What would count
+against it:* either window's correlation not distinguishable from zero at the stated power; the two windows'
+correlations disagreeing in sign; or the relation present only in coding tasks.
 
-**H2 · Independent growth.** The two surfaces' task mixes move for their own reasons and the
-cross-surface relation is zero.
-*Signature:* correlations near zero in both windows and on the long August→February change, with
-intervals that exclude the migration magnitudes, while each surface's own task mix still moves.
-*What would count against it:* a negative correlation outside the interval around zero in both
-windows, or a negative long-change correlation with both adjacent windows negative.
+**H2 · Independent growth.** The two surfaces' task mixes move for their own reasons and the cross-surface
+relation is zero. *Signature:* correlations near zero in both windows and on the long August→February
+change, with intervals that exclude the migration magnitudes, while each surface's own task mix still moves.
+*What would count against it:* a negative correlation outside the interval around zero in both windows, or a
+negative long-change correlation with both adjacent windows negative.
 
-**H3 · Common denominator, not a flow.** The negative relation is produced by composition shocks
-moving one surface's denominator for every task at once — first-time Claude.ai users in February
-above all.
-*Signature:* the relation concentrates in the November→February window and vanishes in
-August→November; and the within-surface benchmark statistic is of similar magnitude to the
-cross-surface one.
-*What would count against it:* equal-sized negative correlations in both windows, with the
-within-surface benchmark materially smaller.
+**H3 · Common denominator, not a flow.** The negative relation is produced by composition shocks moving one
+surface's denominator for every task at once — first-time Claude.ai users in February above all.
+*Signature:* the relation concentrates in the November→February window and vanishes in August→November; and
+the within-surface benchmark statistic is of similar magnitude to the cross-surface one. *What would count
+against it:* equal-sized negative correlations in both windows, with the within-surface benchmark materially
+smaller.
 
-**H4 · Call-splitting, not a flow.** The API's coding-task shares rise because agentic coding is
-labelled as many tasks, which dilutes non-coding API shares arithmetically; Claude.ai's coding share
-falls for user-mix reasons. Anthropic states the first half itself (p.6, quoted in §3).
-*Signature:* the negative relation is carried by tasks in SOC major group 15 and is absent in the
-pre-specified non-coding control set.
-*What would count against it:* a negative correlation of similar magnitude in the non-coding
-control.
+**H4 · Call-splitting, not a flow.** The API's coding-task shares rise because agentic coding is labelled as
+many tasks, which dilutes non-coding API shares arithmetically; Claude.ai's coding share falls for user-mix
+reasons. Anthropic states the first half itself (p.6, quoted in §3). *Signature:* the negative relation is
+carried by tasks in SOC major group 15 and is absent in the pre-specified non-coding control set. *What
+would count against it:* a negative correlation of similar magnitude in the non-coding control.
 
 ## 7. Assumptions sweep
 
@@ -201,7 +194,8 @@ signature, not as a closing caveat. Second, the Claude.ai coding decline predate
 read as migration. Third, the task universe is nearly closed between these waves — "Our data from
 this report showed many fewer novel O\*NET tasks than in our previous report" (ibid., p.7) — which
 supports a matched panel but also means entry and exit are small and cannot carry the result; the
-panel's mass coverage (80.9% and 83.2%) is reported beside every estimate.
+panel's mass coverage is reported beside every estimate on the base §8 names (80.9 / 83.2 of the
+geography total; 87.0 / 92.2 of named mass).
 
 ## 8. Data, confirmed at column level
 
@@ -214,56 +208,104 @@ panel's mass coverage (80.9% and 83.2%) is reported beside every estimate.
 > **83.2%** of API Feb-2026 named mass. Shares only, and never past 2026-03-24, as your entry says.
 > Log (e) 10."
 
-The steward's confirming note is **`posts/post2/notes/feasibility.md`**; it confirms or contradicts
-each cut below at column level, with a command per cut. Cuts are named against `data/ATLAS.md`
-(§Which cuts exist at which grain, §Cuts that do not exist, §Conventions, §Thresholds, §Traps).
+The steward's confirming note is **`posts/post2/notes/feasibility.md`** (verdict **FEASIBLE WITH
+CAVEAT**, 16 September 2026): every cut below confirmed with a command, its amendments applied here
+and marked *(steward)*, all cuts named against `data/ATLAS.md`.
 
 | # | release (window) | file | geography | facet · level | variable | threshold / base |
 |---|---|---|---|---|---|---|
-| 1 | `release_2025_09_15` (4–11 Aug 2025) | Claude.ai long file | `geography == global` | `onet_task` · L0 | `onet_task_pct` | privacy floor `onet_task_count ≥ 15`, applied upstream |
-| 2 | `release_2026_01_15` (13–20 Nov 2025) | Claude.ai long file | `global` | `onet_task` · L0 | `onet_task_pct` | same floor; denominator 999,875 |
-| 3 | `release_2026_03_24` (5–12 Feb 2026) | Claude.ai long file | `global` | `onet_task` · L0 | `onet_task_pct` | same floor; counts on a 1,000,000 sample base (§Other bases) |
-| 4–6 | the same three releases | 1P API file (global only, §Components) | `global` | `onet_task` · L0 | `onet_task_pct` | same floor; no `usage_count` in any API file (§Cuts 18) |
-| 7 | `release_2025_09_15` reference | `data/intermediate/onet_task_statements.csv` (O\*NET DB 20.1, 19,530 × 9, with `soc_major_group`) | — | — | task text → SOC major group | join key is the lower-cased, stripped task text (§Taxonomies) |
+| 1–3 | `release_2025_09_15` (4–11 Aug 2025), `release_2026_01_15` (13–20 Nov 2025), `release_2026_03_24` (5–12 Feb 2026) | Claude.ai long file | `geography == global` | `onet_task` · L0 | `onet_task_pct`, `onet_task_count` | privacy floor count ≥ 15, applied upstream; count bases 964,494 / 999,875 / 1,000,000, February per million (§Other bases) |
+| 4–6 | the same three releases | 1P API file (global only, §Components) | `global` | `onet_task` · L0 | `onet_task_pct`, `onet_task_count` | same floor; count bases 944,638 / 971,525 / 1,000,000 *(steward)* |
+| 7 | `release_2025_09_15` reference | `data/intermediate/onet_task_statements.csv` (O\*NET DB 20.1, 19,530 × 9) | — | — | task text → O\*NET-SOC **2010** code | join key the lower-cased, stripped task text; 0 unmatched named tasks in all six frames (§Taxonomies) |
+| 8 | external *(steward)* | O\*NET-SOC 2010 → 2019 crosswalk, O\*NET Resource Center (`data/fetch/supplementary_onet.py`) | — | — | 2010 code → 2019 code(s) | 1,164 rows; 0 unmatched 2010 codes; O\*NET data under CC BY 4.0, attribution to the O\*NET program required |
 
-**Panel, exclusions and conventions.** `none` and `not_classified` are dropped — they are different
-things and both must go (§Traps 24). The analysis panel is the **1,241** tasks published on both
-surfaces in all three waves; absent is not zero, so a task missing from any frame is excluded rather
-than set to zero (§Traps 25). `{facet}_pct` is a share of the geography total *including*
-`not_classified` (§Other bases), so the primary estimates use the published `onet_task_pct`
-unrenormalised, with a renormalisation over the 1,241-task panel as a stated sensitivity. Reads use
-`keep_default_na=False` everywhere and `na_values=[]` on 2026-03-24, and `level` is cast to string
-after any parquet read (§Traps 1, 2, 7). Case-variant duplicate task strings are de-duplicated
-before the text join, by a stated rule, with collisions counted (§Traps 21). **The series stops at
-2026-03-24**: across the next boundary the API `directive` share jumps 58.22 → 80.88 where the
-documentation stops including Claude Code (§Components), so the June release is not used at all.
+**Panel, exclusions and conventions.** `none` and `not_classified` are dropped — different things,
+both must go (§Traps 24) — and the API residual is two to three times the consumer one
+(`not_classified` 6.02 against 2.74 in February), one more reason no level is compared across
+surfaces. The panel is the **1,241** tasks published on both surfaces in all three waves; absent is
+not zero, so a task missing from any frame is excluded rather than set to zero (§Traps 25). **Panel
+mass, base now stated** *(steward)*: 80.89% of Claude.ai and 83.22% of API February **geography
+total** (which includes `none` and `not_classified`), being **87.01%** and **92.18%** of *named*
+mass — the line quoted above says "named mass", the geography-total reading is the right one for
+those two figures, and the post reports both. `{facet}_pct` is a share of the geography total
+(§Other bases), so primary estimates use `onet_task_pct` unrenormalised, with a renormalisation over
+the panel as a stated sensitivity. Reads use `keep_default_na=False` and `na_values=[]` on
+2026-03-24, and `level` is cast to string after any parquet read (§Traps 1, 2, 6, 7). Case-variant
+duplicates are zero inside the Index *(steward)*, so the de-duplication rule applies to the
+statements side of the join. **The series stops at 2026-03-24**: across the next boundary the API
+`directive` share jumps 58.22 → 80.88 where the documentation stops including Claude Code
+(§Components), so June is not used at all.
 
-**Supplementary data.** None. The join is task text inside the Index.
+**Levels, and what the files cannot identify** *(steward, amendment i)*. Shares carry every estimate.
+`onet_task_count` exists at global on **both** surfaces in all three waves (2,056 / 2,253 / 2,299 API
+rows, minimum 15), so the H3 level diagnostic runs on both surfaces rather than one: §Cuts 18 rules
+out the geography-total `usage_count`, not facet counts. Two conditions travel with it — the counts
+are counts of *sampled* records on bases differing by wave and surface (within 5.9%), and an API
+record is a prompt–response pair, not a conversation (§7(2)). Diagnostic only, never an outcome. The
+February inflow itself is unobservable in the releases: no user, account, plan, tenure, signup-date or
+within-window date field exists in any wave (§Cuts 26, 27b), so it is stated as Anthropic states it
+(fn 3, p.18, quoted in §7), named beside the November→February estimate, and tested only through the
+window contrast — never adjusted for.
 
-**Levels.** Shares only, per the steward's caveat. The API files carry no usage count (§Cuts 18);
-Claude.ai carries `onet_task_count` on sample bases within 3.7% of each other across the three
-waves, so a level diagnostic is possible on one surface only. It is used only as a diagnostic for
-H3, never as an outcome, and the steward is asked to confirm whether any `_count` exists for
-`onet_task` on the API side.
+**Supplementary data** *(steward, amendment ii — the brief's "None" was wrong)*. One external input,
+required by the reproduction leg and H4's coding set and nothing else: the **O\*NET-SOC 2010 → 2019
+crosswalk** from the O\*NET Resource Center (cut 8), fetched and checksummed at
+`data/fetch/supplementary_onet.py`. *Join key:* `O*NET-SOC 2010 Code` against the statements file's
+`O*NET-SOC Code`. *Coverage:* 19,530 (task key, 2010 code) pairs in → 20,081 (task key, 2019 code) rows
+out, 0 unmatched 2010 codes, 18,428 of 18,428 task keys carrying a 2019 code, every named task in all
+six frames mapping with zero unmatched. *Why it is needed:* the released files ship only the 2010
+taxonomy and the number this post reproduces is on the 2019 one, by the report's own footnote. A later
+O\*NET database is **not** a substitute — joining the Index task text to O\*NET 27.3 statements drops
+17–28% of each frame's named mass, the statements having been reworded, and returns +12.58% *(steward, §3)*.
 
 **The published number this reproduces first** (criterion 3; referee correction 4). Before any new
 number: "Since August 2025, the share of tasks in this category has increased by 14% in the API and
-decreased by 18% in Claude.ai" (`economic-index-2026-03-report`, p.7), "this category" being
-Computer and Mathematical. The reproduction rebuilds SOC major group 15 from global `onet_task_pct`
-through cut 7, states the base (classified or all-conversation) and states the vintage caveat
-Anthropic attaches to its own occupational number: "This number uses 2019 O\*NET-SOC codes, while
-previous reports use the 2010 vintage" (ibid., fn 2, p.11). The task → SOC join and the multi-holder
-rule are **stated in post1 (LL-07)**, which is written first in the construction triple
-(`programme/SHORTLIST.md` §5, pair 3; director's pairs ruling); this post cites post1's statement
-rather than re-deriving it, and adds nothing to it. One flag for the steward: the steward's LL-36
-line (`room/steward-2026-09-16-longlist-feasibility-batch-3-answers.md`) gives a SOC-15
-reconstruction of "Claude.ai 39.03 → 36.02 → **32.23** (classified); 1P API 49.98 → 51.73 → 51.61",
-which implies about −17.4% on Claude.ai and about +3% on the API, not +14%. The Claude.ai leg
-therefore looks reproducible and the API leg may not be on this base and vintage. The
-pre-registration fixes the rule in advance: the reproduction is reported as run, with base and
-vintage named; if the API leg does not reproduce, the discrepancy is reported as the first result
-and the confirmatory design proceeds unchanged, since no test in §9 depends on the published
-relative change.
+decreased by 18% in Claude.ai" (`economic-index-2026-03-report`, p.7), "this category" being Computer
+and Mathematical, evidenced in the appendix figure "Task usage share trends by occupation group
+(V1-V5, 2019 O\*NET-SOC)" (`economic-index-2026-03-appendix`, p.5), with the vintage named in the
+report's own footnote: "This number uses 2019 O\*NET-SOC codes, while previous reports use the 2010
+vintage" (ibid., fn 2, p.11).
+
+**The specification that reproduces it** *(steward, amendment v; §2 of the feasibility note, with
+`data/replication/soc15_figA1_2026_03.py`)*: global `onet_task` L0 `onet_task_pct` per surface per wave
+(cuts 1–6); drop `none` and `not_classified`; join the lower-cased, stripped task text to the shipped
+O\*NET 20.1 statements for 2010 codes (cut 7); recode each 2010 code to its 2019 code(s) with the
+crosswalk (cut 8); split a task's `pct` equally across its distinct 2019 codes, the `pct_occ_scaled`
+rule (§Conventions); renormalise over matched named mass — the **classified** base. So specified, the
+API runs 53.8833 → 59.2074 → 61.6363 (**+14.3885%** August to February) and Claude.ai 41.9682 →
+38.5001 → 34.6150 (**−17.5208%**, February being the report's published 35% of Claude.ai
+conversations). The task → SOC join and the multi-holder rule are **stated in post1 (LL-07)**, written
+first in the construction triple (`programme/SHORTLIST.md` §5, pair 3; director's pairs ruling), and
+cited rather than re-derived; the **vintage** is a separate choice post1 does not make, and this post
+makes it explicitly.
+
+**The discrepancy to report first, pre-registered now.** The published claim is not reproducible from
+the public files alone: on the shipped 2010 taxonomy the same specification gives **+3.2433%** on the
+API against **−17.4248%** on Claude.ai, so the consumer leg reproduces on either vintage and the
+enterprise leg only after the recode. The post reports both specifications side by side as its first
+result with the cause named — 337 of 20,081 (task, code) pairs change major group, and one move,
+43-9011 Computer Operators (2010) → Computer Occupations, All Other 15-1299.\* (2019), carries 9.32 pp
+of February API matched mass, most of it one task ("perform routine system administrative functions
+such as troubleshooting, back-ups, and upgrades.") whose API share runs 1.2396 → 3.9479 → 6.7260
+against 1.6426 → 1.2693 → 1.4451 on Claude.ai *(steward, §2)*. Two consequences are fixed in advance:
+no confirmatory test in §9 depends on the published relative change, so the design proceeds unchanged
+whichever specification is read; and that one task is H4's mechanism inside the replication target,
+which is why the vintage is pre-specified below rather than chosen later.
+
+**H4's coding set, vintage pre-specified** *(steward, amendment iv)*. The coding set for H4 and §9 test
+4 is SOC major group 15 **on the 2019 vintage**, matching the reproduced number, with the 2010-vintage
+set as the robustness cut and the non-coding control its complement under the same vintage. The choice
+is not cosmetic: on the panel the two sets each hold 242 tasks but overlap in only 228, and in February
+the 2019 set carries 55.29 of the API's 83.22 panel mass against 46.31 for the 2010 set (31.61 against
+29.42 on Claude.ai).
+
+**Effective N and power** *(steward, §4)*. N = 1,241 on the fixed six-frame panel, minimum detectable
+|r| **0.0795** at 5% two-sided and 80% power — the brief's "about 0.08". Window-specific panels are
+1,317 (August→November, MDE 0.0771) and 1,595 (November→February, MDE 0.0701); the fixed panel stays
+primary because it holds the sample constant, the wider ones being a robustness cut (§10). The
+exploratory directive test rests on `onet_task::collaboration` at global on the API, published for
+1,143 / 1,155 / 1,135 panel tasks; the missing cells are suppressed, not zero, and the intersection
+`_pct` is a share of its base cluster (§Other bases) — both stated with the coverage.
 
 ## 9. Confirmatory tests and the exploratory allowance
 
@@ -274,18 +316,17 @@ before any estimate is read:
    in its API share, computed separately in each adjacent window (August→November, November→February),
    with confidence intervals; the confirmatory claim requires both to be negative with intervals
    excluding zero. The long August→February change is reported as a third estimate. Key number: the
-   window correlations with their intervals. At 1,241 tasks a correlation of about 0.08 is detectable
-   at conventional power, so a weak but real relation would be visible and a strong one unmistakable;
-   the minimum detectable effect is printed beside every estimate, and beside a null it is the
-   finding.
+   window correlations with their intervals, each printed beside the minimum detectable effect of §8,
+   which beside a null is the finding.
 2. **H2.** The same two correlations tested against zero, reported as an interval rather than a
    verdict, so that a null is a measured null and not an absence of evidence.
 3. **H3.** The same statistic computed *within* each surface (a task's change against the
    mass-weighted change of the other tasks on the same surface) as the share-accounting benchmark,
    and the window-by-window comparison: a relation carried by November→February alone is the
    composition reading.
-4. **H4.** The same estimate on the pre-specified coding set (SOC major group 15 through cut 7) and
-   on the non-coding control set, with the difference between them reported.
+4. **H4.** The same estimate on the pre-specified coding set — SOC major group 15 on the 2019 vintage
+   through cuts 7 and 8, per §8 — and on its non-coding complement, with the difference between them
+   reported, and the 2010-vintage split as the robustness cut.
 
 **Exploratory allowance: two tests, after the confirmatory set, labelled exploratory in the post and
 excluded from the headline.** (a) Naming the tasks in the migrating quadrant — the largest negative
@@ -299,17 +340,23 @@ the nearest public test of the mentor's conjecture that migrating tasks are the 
 
 - **Persistence across windows** — the two adjacent windows must agree in sign; the long change is
   the third window and is reported whatever it shows.
+- **Panel and vintage** — the estimate recomputed on the window-specific panels (1,317 tasks for
+  August→November, 1,595 for November→February, both wider than the fixed six-frame panel, which
+  stays primary because it holds the sample constant), and the coding / non-coding split recomputed
+  on the 2010 O\*NET-SOC vintage beside the pre-specified 2019 one, the two sets overlapping in 228
+  of 242 tasks and differing by about 9 pp of February API panel mass.
 - **Leave-one-out** — the estimate recomputed dropping the highest-mass task, then jackknifed across
   all 1,241 tasks, with the largest single-task influence reported.
 - **Flagged and fragile units excluded** — `none` and `not_classified` dropped; a near-floor
-  sensitivity that drops tasks whose Claude.ai count is 15–20 in any wave, since those shares are the
-  noisiest and the floor is exactly 15 in all three waves (§Thresholds).
+  sensitivity dropping tasks whose count is 15–20 in any wave, 14 to 65 tasks per frame and about 5%
+  of the panel, since those shares are the noisiest and the floor is 15 (§Thresholds).
 - **Placebo** — a permutation null that pairs each task's Claude.ai change with another task's API
   change, 10,000 draws, giving the distribution of the statistic under no correspondence; and the
   within-surface benchmark of test 3 as the accounting placebo.
 - **Second implementation** — the correlation recomputed as a rank correlation and as a mass-weighted
-  regression, and the whole panel rebuilt independently from the parquet siblings by the analyst, with
-  the two panels reconciled task by task.
+  regression, the whole panel rebuilt independently from the parquet siblings by the analyst and
+  reconciled task by task, and the reproduction leg re-run on both vintages from
+  `data/replication/soc15_figA1_2026_03.py`.
 
 ## 11. Literature check
 
