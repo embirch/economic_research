@@ -12,3 +12,7 @@ room/lead-2026-09-16-step0-corrections-status.md
 room/lead-2026-09-16-shortlist-status.md
 room/director-2026-09-16-shortlist-ruling.md
 room/lead-2026-09-16-shortlist-status-v2.md
+room/steward-2026-09-16-feasibility-post2.md
+room/editor-2026-09-16-brief-post2.md
+room/lead-2026-09-16-brief-post2-status.md
+room/director-2026-09-16-gate-1a.md
