@@ -3,3 +3,8 @@ room/director-2026-09-16-dry-run-report.md
 room/director-2026-09-16-session-1-1-kickoff.md
 room/director-2026-09-16-index-rulings.md
 room/director-2026-09-16-alt-text-ruling.md
+room/director-2026-09-16-resume-decisions.md
+room/director-2026-09-16-caption-amendment.md
+room/director-2026-09-16-chart-asset-ruling.md
+room/director-2026-09-16-figure-values-ruling.md
+room/director-2026-09-16-pdf-web-ruling.md
