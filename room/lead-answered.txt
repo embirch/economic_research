@@ -23,3 +23,6 @@ room/director-2026-09-16-session-1-2-status.md
 room/director-2026-09-16-session-1-3-kickoff.md
 room/referee-2026-09-16-ledger-threads-verdict.md
 room/referee-2026-09-16-step0-spotcheck.md
+room/steward-2026-09-16-longlist-feasibility-batch-1-answers.md
+room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md
+room/steward-2026-09-16-longlist-feasibility-batch-3-answers.md
