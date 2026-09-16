@@ -631,6 +631,10 @@ Consolidated; each attributed. Read this list before writing a loader.
    documented as int `[R4 §Traps 8]`, `[R6 §Traps 2]`.
 7. **Read the big files from Parquet.** The 219 MB June CSV costs ~8× its Parquet sibling
    `[R6 §Traps 16]`. (The skill's "files offloaded to iCloud stall loads" has no analogue here.)
+   **But the parquet siblings do not share a dtype for `level`**: it is `int64` in the 2026-03-24
+   sibling and a string in the 2026-01-15 one, so `level == '1'` silently returns **zero** rows on
+   one wave and the right rows on the other. Cast `level` to `str` after every parquet read
+   (added 2026-09-16, `## Dated log 2026-09-16 (e) 6`).
 
 **Units and scales**
 8. **Hours versus minutes.** 2026-01-15: `human_only_time` is in **hours**, `human_with_ai_time`
@@ -791,7 +795,13 @@ Consolidated; each attributed. Read this list before writing a loader.
 | 2026-06-26 | 1,012 Detailed / 196 Minor / **20 Major**; `hierarchy_level` **0 = leaf, 2 = Major** | **UUID v5, release-specific**; the top level was replaced this wave, so nothing carries over `[R6 §Facets, §Cuts 15]` |
 
 Never diff cluster sets across waves without an explicit name match and a report of the unmatched
-names `[R5 §Traps 11]`. Within 2026-06-26, the two months also differ (global `onet` L0: 2,410 in
+names `[R5 §Traps 11]`. **Measured, 2026-09-16:** between 2026-01-15 and 2026-03-24 the global
+`request` names match **9 of 112 / 104** at level 1 and **1 of 24 / 26** at level 2, while the
+`onet_task` names match **2,888 of 3,170 / 3,260** and carry 99.46% / 99.24% of each wave's task
+mass — so a change-in-mix or shift-share design must run on `onet_task`, and a request-mix
+comparison across waves is not available at any level
+(`## Dated log 2026-09-16 (e) 1`).
+Within 2026-06-26, the two months also differ (global `onet` L0: 2,410 in
 April, 2,713 in May) — restrict month-over-month comparisons to the intersection `[R6 §Traps 11]`.
 
 **Level semantics.** In 2025-09-15 → 2026-03-24, `request` `level` **0 = finest, 2 = coarsest**.
@@ -1028,11 +1038,24 @@ no expertise rating — so nothing joins to the Index and nothing follows over t
 `[IX §Sibling Anthropic datasets]`. Command in `## Dated log 2026-09-16 (d)`.
 
 
-**Named in the skill, not verified here — treat as unverified leads:** Census
-`PctUrbanRural_State.txt`; Microsoft AI Diffusion state and county CSVs
-(`github.com/microsoft/ai-diffusion-report`); the OpenAI Signals CSV bundle
+**Third-party comparators fetched, joined and licence-checked 2026-09-16 (e)** — the four external
+series the long-list's candidates need. All are keyless and machine-readable from this sandbox;
+each row gives the join key to the Index and the merge audit actually run:
+
+| source | how obtained (verified today) | grain, size | join key to the Index | audit |
+|---|---|---|---|---|
+| **RPS occupation adoption index** (Bick, Blandin, Deming & Schumacher 2026, ~14,000 workers, four waves Aug 2025 – May 2026) | the blog's "downloaded through the RPS" link is `sites.google.com/view/covid-rps/data`; the file itself is a Google Sheet exported as xlsx: `curl -sL "https://docs.google.com/spreadsheets/d/1_JfNtZVoBi5W_jHEJ1UOs2rhHYRtLXGM/export?format=xlsx"` (200, 138,364 B) | 4 sheets + README: **SOC major 22**, **SOC minor 95**, **SOC broad 409**, 2018 Census occupation 505; columns `soc_code, soc_name, adoption_rate, number_observations` | `labor_market_impacts/job_exposure.csv` `occ_code` truncated: `occ_code[:4]+"000"` → minor, `occ_code[:6]+"0"` → broad | 756 detailed codes → **93 minor groups, 90 matched**; → 428 broad groups, 383 matched. Cell sizes: minor median **60** respondents, broad median **11** (73.8% under 30) |
+| **RPS task adoption index** (same paper) | `curl -sL "https://docs.google.com/spreadsheets/d/17OI5xRALkN4lDZ1fHw2R9xPJUdDgWyFU/export?format=xlsx"` (200, 240,801 B) | **DWA 1,655**, IWA 322, BWA 9; columns `dwaid, dwatitle, adoption_rate, number_observations` | O\*NET **DWA id** — reach it from Index task text via `Tasks to DWAs.txt` | RPS covers **1,655 of the 2,085** DWAs in O\*NET 27.3; cell sizes median **13** respondents, 68.4% under 30 |
+| **Microsoft `working-with-ai`** (Tomlinson et al. 2025, Bing Copilot) | `curl -sL https://raw.githubusercontent.com/microsoft/working-with-ai/main/{ai_applicability_scores,iwa_metrics}.csv` (200; 50,018 / 72,575 B; MIT + NOTICE.md) | `ai_applicability_scores.csv` **785** detailed 2018-SOC rows (`SOC Code, title, ai_applicability_score`); `iwa_metrics.csv` **332** IWAs with user/AI completion, scope and feedback columns | `occ_code` (7-char detailed SOC) | 756 in, **756 matched, 0 unmatched** |
+| **Microsoft AI Diffusion country shares** (Misra et al. 2025) | `curl -sL https://raw.githubusercontent.com/microsoft/ai-diffusion-report/main/data/AI_Diffusion_Q12026_Update.csv` (200, 4,468 B); `data/US/` also holds `State_Rankings_2026Q1.csv`, `County_AI_User_Share_2026Q1.csv`, `MSA_Ranking_2026Q1.csv` | **147 economies × 3 periods** (H1 2025, H2 2025, Q1 2026), values are percent **strings** with `%`; the file is **cp1252, not UTF-8** (a default `read_csv` raises `UnicodeDecodeError` at position 2070) | economy **name** → ISO-3 via `iso_country_codes.csv` (itself latin-1) | 147 names, **142 matched exactly**; 5 need a manual map (Netherlands, Türkiye, Côte d'Ivoire, Congo, Congo DRC). Overlap with the Aug-2025 thresholded AUI set **101**; with June-2026 AUI countries **105**; with both **100** |
+
+`Tasks to DWAs.txt` comes from the O\*NET 27.3 zip (`db_27_3_text.zip`, 200, 11,504,351 B):
+**23,543 rows, 18,831 Task IDs, 2,085 DWA ids**. All **17,992** distinct `task_penetration.csv`
+strings match O\*NET 27.3 `Task Statements.txt` and **17,565 (97.6%)** carry at least one DWA.
+
+**Still unverified leads:** Census `PctUrbanRural_State.txt`; the OpenAI Signals CSV bundle
 (`cdn.openai.com/signals/data-download-csv.zip`); the Census gazetteer (reported to block
-non-browser downloads). None was fetched, joined or licence-checked in this thread.
+non-browser downloads).
 
 ## Dated log
 
@@ -1249,4 +1272,103 @@ non-browser downloads). None was fetched, joined or licence-checked in this thre
   #   -> 66.30 / 63.58 / 58.22 / 80.88 / 82.75 ; six-pattern sums 99.99 and 100.01
   # partner crosses: pivot <facet>:<value>_num_records over rows where facet_id==<other facet>,
   #   then compare A against B.T  -> max abs diff 0.0 on 58 cells
+  ```
+
+- **2026-09-16 (e) — the long-list feasibility batch 1 (LL-01 … LL-14).** Fourteen candidate cuts
+  in `programme/LONGLIST.md` confirmed or refuted against the cache for
+  `room/lead-2026-09-16-longlist-feasibility-batch-1.md`; answers in
+  `room/steward-2026-09-16-longlist-feasibility-batch-1-answers.md`. The cache was rebuilt from
+  scratch first (80 files, 664 MiB, all sizes and sha256 equal to `INDEX.md`). New facts, each
+  with its command in the block below:
+
+  1. **The `request` taxonomy has almost no cross-wave node correspondence, and this is the hard
+     constraint on any mix or shift-share design.** Between 2026-01-15 and 2026-03-24 the global
+     `request` cluster *names* match **9 of 112 / 104** at level 1 and **1 of 24 / 26** at level 2.
+     The `onet_task` ladder is the opposite: **2,888 of 3,170 / 3,260** names match, carrying
+     **99.46% / 99.24%** of each wave's task mass. Any decomposition of a change in task mix must
+     run on `onet_task`, never on `request` (strengthens `## Taxonomies`, trap 40).
+  2. **The long waves' `{facet}_pct` sums to exactly 100 per country, so the published-mass share
+     is *not* a suppression control there** (unlike June 2026, where it is). What carries the
+     suppression instead is the `none`/`not_classified` node: at country `onet_task` it is a median
+     **65.9%** (Nov 2025) and **71.0%** (Feb 2026) of the country's own mass, over a median 21 / 18
+     published task nodes; at country `request` L1 `not_classified` is a median 30.2 / 23.5 and at
+     L2 1.6 / 4.5. A country task mix is therefore measurable over ~30% of that country's
+     conversations.
+  3. **Seychelles is absent from `release_2026_03_24` altogether** — **0 rows** at any grain
+     (`SC` has 410 rows in 2026-01-15, `usage_count` 24,715). The report's Seychelles exclusion is
+     inert in the Feb-2026 wave as well as in June 2026; state the rule, but it removes nothing
+     (extends trap 14).
+  4. **Balanced country panel across the two 2026 long waves: 115 countries** at or above 200
+     conversations in **both** (118 in Nov 2025, 117 in Feb 2026), and all 115 carry all five
+     numeric primitives plus `task_success` and `use_case` at country grain; **113** of them also
+     carry IMF GDP from `gdp_2024_country.csv`.
+  5. **Intersected numeric facets carry nine variables, not eight** (`_count` plus the eight
+     statistics); the base facet carries 8 at country grain and 10 at global (the two extra are the
+     histogram pair). In 2026-03-24 global `human_only_time` carries only 6 — the missing CIs of
+     `[R5 §Cuts 4]`. `onet_task::task_success` carries 2 (`_count`, `_pct`) in both waves, over
+     3,169 / 3,259 tasks (refines skill correction 8).
+  6. **Parquet typing differs between the fetch scripts' siblings**: `level` is `int64` in the
+     2026-03-24 parquet and a string in the 2026-01-15 one, so a `level == '1'` filter silently
+     returns zero rows on one wave and works on the other. Cast `level` to `str` after any parquet
+     read (new reading trap, alongside trap 6).
+  7. **Wage coverage of the task mix is near-total**, which the wage file's defects do not suggest:
+     matching global `onet_task` nodes through the shipped O\*NET 20.1 statements to
+     `wage_data.csv` after the `MedianSalary > 100` filter (1,084 of 1,090 rows survive) covers
+     **99.4% / 99.0% / 99.3%** of *named*-task usage mass in Aug 2025 / Nov 2025 / Feb 2026
+     (91.3 / 92.6 / 92.3 of the all-inclusive 100).
+  8. **Claude's task mass that reaches an O\*NET DWA**: of Feb-2026 global `onet_task` nodes,
+     3,258 of 3,260 join the shipped 20.1 statements (92.97 of 100 mass — the residual is
+     `none`/`not_classified`); **2,545 nodes / 69.28% of mass** carry a DWA through 27.3, 2,740
+     nodes / 76.23% match 27.3 by text directly, and the union of the two routes is 2,665 nodes /
+     **74.50%**. Against the RPS DWA index specifically: **64.42%** (20.1 route) to **74.50%**
+     (union).
+  9. **`onet_task` node counts are comparable across the three long waves**: the privacy floor is
+     exactly **15** in all three (min `onet_task_count` = 15) and the denominators are 964,494 /
+     999,875 / 1,000,000, so the published counts 2,618 / 3,170 / 3,260 sit on samples within 3.7%
+     of each other; **2,284** nodes appear in all three.
+  10. **Claude.ai × 1P API task overlap**: named global `onet_task` nodes are 2,616 / 3,168 / 3,258
+      (Claude.ai) and 2,054 / 2,251 / 2,297 (API); pairwise overlap 1,603 / 1,823 / 1,908 and
+      **1,241 tasks appear in all six frames**, carrying **80.89%** (Claude.ai) and **83.22%**
+      (API) of Feb-2026 named-task mass.
+  11. **Four state-AUI windows exist**: 51 published `state_us` AUI rows in Aug 2025 (51 of 52
+      usage rows ≥ 100, the 52nd being `not_classified`); 51 `US-*` units in Nov 2025, all ≥ 100;
+      **54** in Feb 2026, of which 52 ≥ 100 (the extras are GU/PR/VI); and 51 `US-*` subregion
+      `usage_per_capita_index` ids in **each** June month, never `US-PR`.
+  12. **LL-01's regression is complete on one file**: of the 115 thresholded Aug-2025 countries,
+      **114** carry the AUI, `gdp_per_working_age_capita` and `automation_pct` together — the one
+      loss is **PSE** (no GDP row). The published task-mix specification is N = 111
+      `[R3 §Reproduced]`.
+  13. **LL-09's panel**: 2,886 named tasks are common to Nov 2025 and Feb 2026; **2,427** of them
+      carry `onet_task::task_success` in Nov 2025 (91.95% of Nov named mass), 2,608 in Feb 2026;
+      282 Nov-only and 372 Feb-only nodes are dropped.
+  14. **The seven-window automation series re-verified today** end to end: 42.5538 (Dec 2024),
+      43.0619 (Feb–Mar 2025), 51.0698 (Aug 2025), 46.7394 (Nov 2025), 45.5456 (Feb 2026), 48.9788
+      (Apr 2026), 48.6190 (May 2026) on the five-classified-pattern base; the June values equal the
+      published `collaboration_bucket_automation_pct` (48.98 / 48.62) to two decimals. The **API**
+      side exists in three pre-June waves only and runs 86.17 / 83.87 / 79.75 on the same base
+      (and 77.37 / 74.61 / 67.63 on all conversations) — never extend it past 2026-03-24
+      (`## Components`).
+  15. **Reachability today**: `data.bls.gov/projections/occupationProj` **200** (one HTML table,
+      831 rows; merge on `occ_code` re-run: 756 in, 755 matched, `11-1031` unmatched);
+      `www.onetcenter.org/dl_files/database/db_27_3_text.zip` **200**; `www.bls.gov` **403**,
+      `download.bls.gov` **403**, `web.archive.org` **403** — so a second BLS projections vintage
+      is still unobtainable and any vintage comparison must quote Anthropic's published
+      coefficient.
+
+  ```bash
+  # (e) commands, run 2026-09-16 from /workspace/economic_research (cache rebuilt first)
+  for r in labor_market_impacts release_2025_02_10 release_2025_03_27 release_2025_09_15 \
+           release_2026_01_15 release_2026_03_24 release_2026_06_26; do python data/fetch/$r.py; done
+  # long waves read as: pd.read_csv(..., keep_default_na=False, na_values=[]) or the parquet
+  #   sibling, then df['level'] = df['level'].astype(str)          # fact 6
+  # request vs onet_task name overlap: set(cluster_name) at geography=='global' per facet/level
+  #   -> request L1 9/112/104, L2 1/24/26 ; onet_task 2,888 of 3,170/3,260, mass 99.46/99.24
+  # country mix coverage: groupby(geo_id) sum of {facet}_pct  -> exactly 100 everywhere;
+  #   share on cluster_name in ('none','not_classified') -> median 65.9 (Nov) / 71.0 (Feb)
+  # SC absence: (df.geo_id=='SC').sum() -> 410 in 2026-01-15, 0 in 2026-03-24
+  # balanced panel: usage_count>=200 in both waves, minus not_classified/NONE -> 115
+  # DWA route: O*NET 27.3 zip 'Tasks to DWAs.txt' + shipped 20.1 'onet_task_statements.csv',
+  #   key = Task ID via lower-cased stripped task text -> 69.28 / 74.50 / 64.42 % of mass
+  # RPS + Microsoft: see '## Supplementary sources' for the four export/raw URLs and audits
+  curl -s -o /dev/null -w "%{http_code}\n" https://download.bls.gov/pub/time.series/ep/   # 403
   ```

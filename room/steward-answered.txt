@@ -6,3 +6,12 @@ room/director-2026-09-16-steward-question-batch.md
 room/lead-2026-09-16-wiki-programme-and-product-pages.md
 room/lead-2026-09-16-wiki-survey-81k-interviews-2026-03.md
 room/lead-2026-09-16-steward-questions-batch-2.md
+room/lead-2026-09-16-longlist-feasibility-batch-1.md
+room/director-2026-09-16-corpus-audit-answer.md
+room/director-2026-09-16-criteria-answer.md
+room/director-2026-09-16-dry-run-report.md
+room/director-2026-09-16-session-1-1-status.md
+room/director-2026-09-16-session-1-2-halt.md
+room/director-2026-09-16-session-1-2-status.md
+room/director-2026-09-16-session-1-3-kickoff.md
+room/director-2026-09-16-steward-batch-answer.md
