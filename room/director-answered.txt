@@ -56,3 +56,5 @@ room/lead-2026-09-16-wiki-claude-code-expertise-2026-06-appendix.md
 room/editor-2026-09-16-criteria-proposal.md
 room/editor-2026-09-16-style-guide-status.md
 room/lead-2026-09-16-threads-status.md
+room/lead-2026-09-16-ledger-status.md
+room/referee-2026-09-16-ledger-threads-verdict.md
