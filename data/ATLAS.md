@@ -136,6 +136,16 @@ including Claude Code is a **composition change that will read as a behaviour ch
 an API collaboration or automation series across the 2026-03-24 → 2026-06-26 boundary without
 saying this; the two sides are different populations. Command in `## Dated log 2026-09-16 (d)`.
 
+**Three primitive *levels* break at the same boundary, on Claude.ai as well** (added 2026-09-16 (f)).
+Global means, same documented units in both documentations (`ai_autonomy` "1-5 scale",
+`human_only_time` hours, `human_with_ai_time` minutes): `ai_autonomy` **3.382 (Nov) → 3.407 (Feb) →
+2.720 (Apr) → 2.740 (May)**; `human_only_time` 3.092 → 3.063 → **4.590 → 4.730**;
+`human_with_ai_time` 15.352 → 14.303 → **38.650 → 40.120**. `human_education_years` (12.21 → 11.92 →
+11.89 → 11.79), `ai_education_years` and `human_only_ability` (87.9 → 87.8 → 87.8 → 87.6) do **not**
+break. Nothing in the June documentation announces a rescaling, so a June-to-long-wave comparison of
+autonomy or of either time primitive — including any implied speedup, which moves from ~12× to ~7× —
+is not on one axis. State it or stay inside one schema family.
+
 **Labour-market files.** `labor_market_impacts/` is a separate, undated, unversioned folder of two
 CSVs — `job_exposure.csv` (756 detailed SOC occupations × `observed_exposure`) and
 `task_penetration.csv` (17,998 rows / 17,992 O\*NET task strings × `penetration`). No
@@ -1371,4 +1381,140 @@ non-browser downloads).
   #   key = Task ID via lower-cased stripped task text -> 69.28 / 74.50 / 64.42 % of mass
   # RPS + Microsoft: see '## Supplementary sources' for the four export/raw URLs and audits
   curl -s -o /dev/null -w "%{http_code}\n" https://download.bls.gov/pub/time.series/ep/   # 403
+  ```
+
+- **2026-09-16 (f) — the long-list feasibility batch 2 (LL-15 … LL-28).** Fourteen further candidate
+  cuts checked against the cache for `room/lead-2026-09-16-longlist-feasibility-batch-2.md`; answers
+  in `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`. New facts:
+
+  1. **The 2025-03-27 cluster file is richer than the atlas said, and its bucketing applies to both
+     prevalence columns.** `cluster_level_data/cluster_level_dataset.tsv` is 630 × **16** columns:
+     three name/description pairs (L0 630 → L1 145 → L2 30), `percent_records` **and**
+     `percent_users` (both present on **all 630** rows, each summing to exactly 100.0000, with
+     **100** and **99** distinct values respectively — the 100-bucket privacy adjustment is applied
+     to *both*, as that folder's README states), an **`onet_task`** field, six
+     `collaboration:<pattern>_ratio` columns (all six present on **452** rows, 178 suppressed) and
+     `has_thinking_ratio` (present on **601**, blank on 29). The folder README's data dictionary
+     documents **all sixteen** columns — the "documents 3 of 8 columns" defect belongs to the
+     *parent* folder README, not this one.
+  2. **Records and users rank the clusters almost identically**: Spearman **0.9932**, Pearson 0.9947,
+     and the whole range of `percent_records / percent_users` is **0.978 – 1.087** (177 clusters
+     records-heavy, 453 users-heavy) with only 100 distinct ratio values. A breadth-versus-depth
+     statement from this file is a statement about a ±9% band, most of it bucket width; there are no
+     counts, so no interval.
+  3. **The top-down/bottom-up coverage gap is measurable, and here it is** (this settles the
+     ledger's last `steward?` flag). Of the 630 clusters, **11 carry no `onet_task` at all** =
+     **1.6353%** of records mass. The field names **370** distinct tasks, of which **346** are in
+     the published `task_pct_v2.csv` universe; the other **24 are genuine O\*NET task statements
+     that the released top-down file does not carry** (3.8861% of records mass). Conversely the
+     bottom-up ladder reaches only **346 of 3,365** top-down tasks, which hold **49.20%** of v2
+     usage mass. Limits: one O\*NET task per cluster (not a distribution), no cluster ids, and
+     `release_2025_09_15/data/output/request_hierarchy_tree_claude_ai.json` is a nested
+     name/description tree with **no O\*NET field**, so the later-wave cross-check is a text match
+     with no verifiable key.
+  4. **The 2025-03-27 task files join cleanly and the `filtered` cost is 9.8 points of mass.**
+     `task_pct_v2.csv` (3,365) and `task_thinking_fractions.csv` (3,365) are the **same** task set;
+     `automation_vs_augmentation_by_task.csv` has 3,364, so the triple-matched set is **3,364**
+     tasks carrying **98.2183** of 100 `pct`. Its collaboration columns are **ratios summing to
+     exactly 1.0** per row (not percentages) with `filtered` median 0.30 and **1,066 rows at
+     filtered = 1.0**; weighting `pct` by the five classified ratios leaves **90.1561** of 100.
+     Thinking: 2,950 of 3,365 blank (= 0), the **415** tasks with a positive fraction carry
+     **75.14%** of usage mass, and the usage-weighted mean fraction is 0.0404.
+  5. **`human_only_ability` and `task_success` residuals are `not_classified` in both 2026 waves**
+     (never `none` — the `none`/`not_classified` flip of trap 24 is a `use_case` phenomenon).
+     Global publishes `yes`/`no` only, summing to 100 (`human_only_ability` yes 87.9097 → 87.7599;
+     `task_success` yes 66.9060 → 69.9385); at country level the `not_classified` share is a median
+     **10.34% / 11.11%** (`human_only_ability`) and **26.67% / 21.43%** (`task_success`). Both
+     facets exist at all three grains in both waves, and **115** countries carry each facet *and*
+     clear 200 conversations in both waves.
+  6. **The 2026-03-24 CI gap is global-only.** At global, `ai_education_years` carries 6 variables
+     (no CIs) against `human_education_years`' 10; at **country and `country-state` both facets
+     carry all 8, mean CIs included, in both waves**. Sizing the education residual: over
+     thresholded countries the cross-country sd is 0.6933 / 0.5926 (Nov, human / ai) and
+     0.4715 / 0.3659 (Feb); the residual (ai − human) is 0.1958 ± 0.2085 (Nov) and 0.2586 ± 0.1712
+     (Feb) with corr 0.959 / 0.947 — against **median per-country mean-CI half-widths of 0.17
+     (human) and 0.15 (ai) years**. The between-country signal and the within-country measurement
+     error are the same size.
+  7. **All three API token/cost indices exist in all three pre-June waves, and only the first ships
+     counts.** `onet_task::{cost, prompt_tokens, completion_tokens}` over **2,055 / 2,252 / 2,298**
+     tasks; 2025-09-15 carries a `<metric>_count` companion, **2026-01-15 and 2026-03-24 carry the
+     `_index` alone** (nothing to weight with). Each index's mean is **exactly 1.0000 within its
+     own wave** (medians 0.70–0.84, maxima 5.4–30.3), so cross-wave levels are meaningless and only
+     within-wave dispersion is interpretable. `request::{cost, prompt_tokens, completion_tokens}`
+     start in 2026-01-15 (422 / 476 nodes); Aug 2025 has `request::collaboration` only.
+  8. **The trap-39 recurrence figures are per-US-state, and the country version is very different.**
+     Specification: top 10 nodes by log(unit share ÷ benchmark share), nodes present in both months,
+     averaged over units. Per state (benchmark the `USA` country row, 51 units):
+     **32.7% / 33.1% / 19.8%** for `request` L1 / `onet` L2 / `soc_occupation` L0, against
+     **84.9% / 87.6% / 83.5%** by raw share. Per **country** (benchmark `GLOBAL`, 114 units):
+     **52.7% / 55.4% / 32.0%** and **86.7% / 90.4% / 83.8%** — countries are ~20 points more
+     persistent than states on the same rule. Rounding floor: with `value` at two decimals the
+     relative error is ≤2% only at `pct` ≥ 0.25 and ≤1% at ≥ 0.5; cells surviving ≥0.5 are 52.6% /
+     58.2% / 28.3% (country) and 67.4% / 75.9% / 44.3% (subregion). **6,594 `pct` cells are exactly
+     0.00**, so any log ratio must drop them explicitly.
+  9. **Global mixes cannot be rebuilt from country rows, but a single country can be netted out
+     exactly.** Summing country `collaboration_count` gives 842,822 of the global 999,875 (84.3%;
+     `onet_task` 839,194) because the `not_classified` geography (156,576) publishes no facet rows.
+     Seychelles is nevertheless removable by count subtraction, and it matters: dropping SYC
+     (24,715 = 2.47% of Nov-2025 conversations) moves the global `collaboration` mix by up to
+     **1.17 pp** (`feedback loop`), the `use_case` `work` share by 1.17 pp and `task_success` `no`
+     by 0.45 pp.
+  10. **Exclusion sensitivity reproduces**: Aug-2025 state AUI Gini **0.366510** over 51 states
+      (published 0.37) and **0.333986** without Utah; the top-5 AUI share is 29.68 → 26.77. The
+      long waves publish counts, so the regressions carry intervals; the AUI, Gini and concentration
+      shares have **no sampling interval in any wave**, and the concentration shares reproduce only
+      to 0.7–0.9 pp `[R5 §Reproduced]`.
+  11. **The retraining destinations are all in `job_exposure.csv`**: Computer User Support
+      Specialists 15-1232 **0.4685**, Computer Network Support 15-1231 0.2867, Accountants and
+      Auditors 13-2011 **0.3478**, Bookkeeping/Accounting/Auditing Clerks 43-3031 **0.3104**,
+      Medical Assistants 31-9092 **0.0476**. The file is 54% zeros (**411 of 756** occupations at
+      exactly 0, median 0), and of the 52 zero-exposure-but-positive-task occupations **20 sit in
+      the health, clerical and support families** (15 `29-*`, 3 `43-*`, 2 `31-*`).
+  12. **`State_Rankings_2026Q1.csv` joins the state panel without a crosswalk**: 51 rows
+      (50 states + DC) with a `State Abbr` column, **51 of 51** matching the Aug-2025 `state_us`
+      ids; one period only (Q1 2026); `census_state_codes.txt` (58 lines, pipe-delimited) is only a
+      check. The county (3,143 rows) and MSA (35 rows) files exist, but **the Index has no county or
+      metro grain** (June `geo_level` is `country`, `global`, `subregion` only), so they are not a
+      fallback for a state-level comparison.
+  13. **The published mean task wage does not reproduce from public files.** Anthropic's
+      $49.3 → $47.9 (Nov 2025 → Feb 2026) rebuilds as **$35.08 → $34.36** using the shipped O\*NET
+      20.1 statements and `wage_data.csv` (mean over holder SOCs, ÷2080, 92.6% / 92.3% of named-task
+      mass priced) and **$37.69 → $37.55** using the BLS-EP 2025 median annual wage (54.7% / 57.8%
+      priced). Alternative aggregations (max holder, employment-weighted, ÷1920) span $34–$38 and
+      none approaches $49. The **direction** reproduces on the 2019 scrape (−$0.72 against the
+      published −$1.40) and is nearly flat on EP (−$0.14). The likeliest cause is the OEWS *mean*
+      hourly series, which returns 403 here; record both readings and compare changes, never levels.
+  14. **Sub-national collaboration panel**: units at or above 100 conversations are **545 of 981**
+      (Nov 2025, 109 parent countries) and **570 of 1,137** (Feb 2026, 125 parents); at 385 they are
+      **277** (80 parents) and **295** (95 parents). Every surviving unit carries `collaboration`
+      rows. Surviving units hold a median **91% / 90%** of their parent's usage at the 100 floor
+      (85% at 385, minimum 16%). Parents with ≥5 surviving units: **32 (Nov) / 36 (Feb)**; with ≥10:
+      18 / 16 — that is the real N for any between/within decomposition.
+  15. **The autonomy scale is integer-valued, and the June wave is off its axis.** The Nov-2025
+      global histogram publishes **five bins** `[1.0, 1.0)` … `[5.0, 5.0)` at 2.962 / 16.250 /
+      26.329 / 48.566 / **5.892**; Feb-2026 publishes 25 equal-width bins of which only the five
+      integer ones are non-zero (2.094 / 14.681 / 27.938 / 51.033 / **4.253**) — spurious
+      resolution, same underlying integer scale, and the top of the 1–5 scale is pinned exactly.
+      June publishes `ai_autonomy_mean` only, and it breaks (see `## Components`).
+
+  ```bash
+  # (f) commands, run 2026-09-16 from /workspace/economic_research
+  # cluster file: pd.read_csv('.../cluster_level_dataset.tsv', sep='\t', keep_default_na=False)
+  #   -> 630x16 ; percent_records/users nunique 100/99, sums 100.0 ; onet_task blanks 11 (1.6353%)
+  #   -> spearmanr(percent_records, percent_users) = 0.9932 ; ratio range 0.978-1.087
+  # coverage gap: set(onet_task.lower()) vs set(task_pct_v2.task_name.lower())
+  #   -> 346 of 370 matched ; 24 unmatched all present in onet_task_statements.csv ; 49.20% of v2 mass
+  # 2025-03-27 task join: three files on lower-cased task_name -> 3,364 triple-matched, 98.2183 mass;
+  #   weight pct by (1 - filtered) -> 90.1561 ; thinking blanks 2,950, positive 415 = 75.14% of mass
+  # 2026 facets: geography in {global,country,country-state}, facet in {human_only_ability,
+  #   task_success, human_education_years, ai_education_years, ai_autonomy}; nvars 10/8/8 (6 for
+  #   global ai_education_years in Feb) ; residual cluster_name == 'not_classified'
+  # API indices: facet in {onet_task::cost, onet_task::prompt_tokens, onet_task::completion_tokens}
+  #   -> value.mean() == 1.0000 in each wave ; count companion only in 2025-09-15
+  # June recurrence: top-10 by log(value / benchmark), benchmark = USA country row (states) or
+  #   GLOBAL row (countries), nodes present in both months, mean over units
+  # SYC netting: global_count - SYC_country_count per cluster, renormalise -> max shift 1.17 pp
+  # wage rebuild: onet_task_statements(20.1) task text -> O*NET-SOC[:7] -> wage_data.SOCcode
+  #   (MedianSalary>100) mean per task / 2080, weighted by global onet_task_pct -> 35.08 / 34.36
+  curl -sL https://raw.githubusercontent.com/microsoft/ai-diffusion-report/main/data/US/State_Rankings_2026Q1.csv
   ```
