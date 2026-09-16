@@ -54,24 +54,34 @@ finished post.
 | batch | LL IDs drafted | request note to steward | steward answer note | status |
 |---|---|---|---|---|
 | 1 | LL-01 … LL-14 | `room/lead-2026-09-16-longlist-feasibility-batch-1.md` | `room/steward-2026-09-16-longlist-feasibility-batch-1-answers.md` | **finalised**: 7 FEASIBLE, 7 FEASIBLE-WITH-CAVEAT, 0 NOT FEASIBLE; every caveat carried into the entry's cut and risk fields |
-| 2 | LL-15 … LL-28 | `room/lead-2026-09-16-longlist-feasibility-batch-2.md` | pending | awaiting feasibility |
-| 3 | — | — | — | not started |
+| 2 | LL-15 … LL-28 | `room/lead-2026-09-16-longlist-feasibility-batch-2.md` | `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md` | **finalised**: 3 FEASIBLE (LL-16, LL-18, LL-20), 11 FEASIBLE-WITH-CAVEAT, 0 NOT FEASIBLE; every caveat carried into the entry's cut, contribution and risk fields; **LL-25 deleted by the lead** as subsumed by LL-05 on the steward's pairing |
+| 3 | LL-29 … LL-42 | `room/lead-2026-09-16-longlist-feasibility-batch-3.md` | pending | awaiting feasibility |
 
 New atlas facts the steward logged for batch 1 are at `data/ATLAS.md ## Dated log 2026-09-16 (e)`
 (fifteen numbered facts) and `## Supplementary sources`, "Third-party comparators fetched, joined
-and licence-checked 2026-09-16 (e)" (the four external series, with their merge audits). Three of
-them changed a design rather than confirming it: the `request` ladder has almost no cross-wave node
-correspondence (LL-06 moves to `onet_task`), the RPS occupation index is published at SOC minor
-group and not by 3-digit prefix (LL-03 runs at N = 90), and a country's published task mix covers
-only about 30% of that country's conversations (LL-06's suppression control changes).
+and licence-checked 2026-09-16 (e)" (the four external series, with their merge audits); batch 2's
+are at `## Dated log 2026-09-16 (f)` (fifteen more) plus a new `## Components` paragraph recording
+that three primitive levels break at the June 2026 boundary. Three batch-1 caveats changed a design
+rather than confirming it: the `request` ladder has almost no cross-wave node correspondence (LL-06
+moves to `onet_task`), the RPS occupation index is published at SOC minor group and not by 3-digit
+prefix (LL-03 runs at N = 90), and a country's published task mix covers only about 30% of that
+country's conversations (LL-06's suppression control changes). Four batch-2 caveats did the same:
+LL-16's `steward?` flag is **settled** with numbers, LL-19's residual turns out to be the size of its
+own measurement error, LL-26's published task-value **level does not reproduce** under any of five
+wage constructions, and LL-28's June wave is off its own autonomy axis.
 
 ## Counts
 
 | | |
 |---|---|
-| drafted | 28 |
-| deleted | 0 |
-| surviving | 28 (LL-01 … LL-14 confirmed by the steward; LL-15 … LL-28 provisional) |
+| drafted | 41 (LL-01 … LL-42, no LL-25 in the surviving set) |
+| deleted | 1 (LL-25, by the lead, as subsumed — reason in the deletions table) |
+| surviving | 41: LL-01 … LL-24 and LL-26 … LL-28 confirmed by the steward (27), LL-29 … LL-42 provisional (14) |
+
+The gate requires thirty or more surviving candidates. Twenty-seven are already through both the
+steward and the gap check; batch 3 is drafted so that the total clears thirty with margin even if the
+steward refuses several. LL-34 and LL-42 are the two I expect to be most at risk, and each entry says
+so in its own risk field.
 
 ---
 
@@ -247,7 +257,13 @@ usage-weighted measure, and criticises chat-log measures for classifying "tasks 
 user's occupation". Tomlinson et al. (2025) "Working with AI" [abs] — an AI applicability score per
 detailed 2018 SOC from Bing Copilot conversations, published at SOC level, and explicitly "not …
 measuring the ability of AI to replace jobs". Eloundou et al. (2024) [abs] — the capability input
-itself. No work compares `observed_exposure` to a survey adoption index.
+itself. No work compares `observed_exposure` to a survey adoption index. **Addendum** (searched
+again while drafting batch 3): the file now has external users — Audoly, Guerin & Topa (2026), NY
+Fed [abs], joins Anthropic's measure to Lightcast job postings, and Brynjolfsson, Chandar & Chen's
+June 2026 Stanford DEL indicator note [abs] joins the Index's automation ratio to ADP employment.
+Both join it to *outcomes*, neither to another measure of adoption, so the comparison proposed here
+is still unmade — but the post must position itself against those users rather than treat the file
+as unused.
 
 **Why it matters.** `observed_exposure` is the measure the Institute's scenario model is calibrated
 on, the measure the retraining review uses to say who is at risk, and the measure the survey work
@@ -1044,6 +1060,19 @@ hiring"; it measures realised employment, not forecasters' beliefs. Humlum & Ves
 Gap" [abs] — "no clear evidence that recent AI adoption is associated with systematic changes in
 employment". Nobody has asked whether the official forecast has begun to price exposure.
 
+**External literature, addendum** (searched again while drafting batch 3, 2026-09-16). Two works use
+`observed_exposure` itself and belong on the record here. Audoly, Guerin & Topa (2026), "Do Job
+Postings Show Early Labor-Market Effects of AI?", NY Fed Liberty Street Economics [abs] — combines
+"a task-level AI exposure metric developed by Anthropic that combines detailed task descriptions
+from O\*NET with observed AI usage" with Lightcast postings, reports that "40 percent of workers are
+in jobs with zero measured AI exposure", and finds "little indication of a distinct AI-driven
+decline in labor demand". Brynjolfsson, Chandar & Chen, "AI Economic Indicators: June 2026 Update",
+Stanford DEL research note [abs] — uses the Index's automation and augmentation ratios against ADP
+employment and reports that "occupations with a higher automation ratio see decreases or smaller
+increases in the employment index" while augmentation "does not appear correlated". Neither examines
+the BLS projection gradient, so the gap holds; both mean the post must position itself against
+external users of the same file rather than treating it as unused.
+
 **Why it matters.** The exposure measure's only external validation is its correlation with the
 BLS projection, and the mentor's own prior is that those projections carry little information. If a
 newer vintage prices exposure more steeply, the forecasters have updated and the measure gains an
@@ -1121,12 +1150,15 @@ the difference between diffusion and intensity, which is what `ED-2` asks about 
 what the policy framework needs to know about churn. It moves the prior of anyone who reads a
 conversation share as a population share.
 
-**Contribution.** *If it holds* (records and users rank clusters alike): conversation shares are a
-usable proxy for user shares, and the Index's standing unit caveat is bounded by a measured
-correlation for the first time. *If it fails*: the post names the use cases that are concentrated
-in few users and the ones that are broad, which is the breadth/intensity split the corpus says it
-cannot make. *If null* (bucketing destroys the comparison): the post documents how much resolution
-the privacy bucketing costs, which is a measurement fact for anyone using that file.
+**Contribution** (rewritten after the steward's audit, which supplies the headline number). *If it
+holds* (records and users rank clusters alike, as ρ = 0.9932 says): the corpus's most repeated
+caveat — the unit is a conversation, never the user — is **bounded** for the first time, at a
+user-to-record ratio inside ±9% across 630 use cases, so every conversation share in every wave can
+be read as a user share to within that band. *If it fails* (the collaboration-complete subset
+diverges): delegated use is the habit of a few users rather than a property of the work, which is
+the intensity story the corpus says it cannot tell. *If null* (the bucketing destroys resolution):
+the post documents how much resolution the privacy bucketing costs and retires an open item with a
+measured bound instead of a caveat.
 
 **Economic Index cut (proposed).** `release_2025_03_27/cluster_level_data/` — the 630 level-0
 clusters (→145 L1 →30 L2) with `percent_records` **and** `percent_users`, plus the per-cluster
@@ -1137,13 +1169,20 @@ collaboration and thinking ratios in the same TSV. Caveats to carry: prevalence 
 
 **Supplementary data.** None.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-15. FEASIBLE WITH CAVEAT: the measurable spread is ±9% and both columns are bucketed, so there
+is no interval and little room for a gradient.** `release_2025_03_27/cluster_level_data/cluster_level_dataset.tsv`
+is 630 × 16: `percent_records` **and** `percent_users` on **all 630** rows, each summing to exactly
+100, with 100 and 99 distinct values — the 100-bucket adjustment applies to **both** (that folder's
+README says so). Spearman(records, users) = **0.9932**; the whole ratio range is **0.978–1.087**.
+Collaboration ratios complete on 452 rows, thinking on 601. Log (f) 1–2."
 
-**Biggest risk.** Data. `percent_records` has exactly 100 distinct values across 630 rows because of
-the privacy bucketing, so the ratio of the two columns may be dominated by bucket width rather than
-by behaviour. If it bites, the ratio is a step function and the post reports the bucket structure
-and a rank test robust to ties, not an elasticity.
+**Biggest risk.** Data, and the steward's audit has already realised it: both columns are bucketed
+into 100 buckets, the rank correlation is 0.9932 and the entire user-to-record ratio range is
+0.978–1.087, so there is no gradient to estimate and no interval to put on it. The consequence is
+that this candidate is now a **bounding** post rather than a decomposition, and it is the weakest
+survivor in the file: the contribution triplet below is rewritten to say so, and the referee should
+scrutinise it at scoring before it reaches the short-list.
 
 **Mentor interests.** none directly; the construct bears on ⟨mentor⟩ T6(e), the claim that advanced
 users behave differently, which is a statement about people measured on conversations.
@@ -1195,21 +1234,32 @@ March 2025.
 **Economic Index cut (proposed).** `release_2025_03_27`: `cluster_level_data/` (630 L0 clusters,
 145 L1, 30 L2, with the O*NET task field and `percent_records`) against the same folder's
 `task_pct_v2.csv` (3,365 tasks) and `automation_vs_augmentation_v2.csv` (3,364 tasks × five
-patterns + `filtered`) at global. Cross-check on a later wave with `request` L0/L1/L2 and
-`onet_task` L0 at global in `release_2025_09_15`, where a `request_hierarchy_tree_*.json` also
-ships (`ATLAS §Cuts 25` — it is the last wave that has one).
+patterns + `filtered`) at global. `onet_task` L0 at global in `release_2025_09_15` is **dropped** on the steward's finding that the
+2025-09-15 hierarchy JSON carries no O*NET field, so that leg would be an unverifiable text match.
+The measured coverage gap the post starts from: 11 of 630 clusters carry no O*NET task (1.64% of
+records mass), the field names 370 tasks of which 24 are real O*NET statements the released
+top-down file omits, and the bottom-up ladder reaches 346 of 3,365 top-down tasks holding 49.2% of
+v2 usage mass.
 
 **Supplementary data.** `release_2025_02_10/onet_task_statements.csv` (byte-identical to the March
 copy, `82e4c418…`) for the task → O*NET-SOC side of the concordance.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-16. FEASIBLE — and the `steward?` flag is settled.** The TSV's `onet_task` field is documented
+(all 16 columns are, in the cluster README). Coverage gap, measured: **11 of 630** clusters carry no
+O\*NET task = **1.64%** of records mass; the field names **370** tasks of which **346** are in
+`task_pct_v2.csv` and the other **24 are real O\*NET statements the released top-down file omits**
+(3.89% of mass); the bottom-up ladder reaches **346 of 3,365** top-down tasks holding **49.2%** of v2
+usage mass. Limits: one task per cluster, no ids, and the 2025-09-15 hierarchy JSON has **no O\*NET
+field**, so the later-wave leg is an unverifiable text match. Log (f) 3."
 
-**Biggest risk.** Data. This is the one remaining `steward?` flag in the ledger
-(`LEDGER §Cross-reference 36`): whether the cluster file's O*NET field and the hierarchy JSON
-support a published coverage-gap measure is unresolved, and cluster names carry no ids. If it bites,
-the concordance is a text match with an unmeasurable error rate, and the post must present it as a
-descriptive mapping with the unmatched mass reported rather than as a gap statistic.
+**Biggest risk.** Design, now that the flag is settled. The cluster file carries **one** O*NET task
+per cluster, so the concordance is one-to-one by construction and cannot express a cluster that
+spans several tasks — which is exactly the over-classification the external literature alleges. If
+it bites, the 49.2% mass figure understates overlap because a cluster's second and third tasks are
+invisible; the post therefore reports the gap in both directions (clusters with no task; top-down
+tasks no cluster reaches) and drops the 2025-09-15 leg, which the steward has shown is an
+unverifiable text match.
 
 **Mentor interests.** none on this release; the measure bears on ⟨mentor⟩ interest 2, judgement
 calls at every step of a task-based measure.
@@ -1267,15 +1317,23 @@ exists at task level.
 
 **Supplementary data.** None.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-17. FEASIBLE WITH CAVEAT: two marginals, no counts, and 9.8 points of mass lost to `filtered`.**
+`task_pct_v2.csv` and `task_thinking_fractions.csv` are the **same** 3,365 tasks;
+`automation_vs_augmentation_by_task.csv` has 3,364, so **3,364** match across all three, carrying
+**98.22** of 100 `pct`. Its pattern columns are **ratios summing to 1.0**, `filtered` median 0.30 with
+**1,066** rows at 1.0; weighting by the five classified ratios leaves **90.16** of 100. Thinking
+blanks 2,950 (= 0); the **415** positive tasks carry **75.1%** of usage mass. No counts → no
+interval. Log (f) 4."
 
 **Biggest risk.** Design. Joining two marginals on the same tasks cannot distinguish "the same
 conversations that were directive also used thinking" from "tasks that attract directive use happen
-to attract thinking", and `filtered` swamps rare tasks (1,066 of 3,364 are 100% filtered,
-`ATLAS §Traps 35`). If it bites, the correlation is a between-task fact only; the post states the
-inferential limit in the sentence that carries the number and weights by `pct` with `filtered`
-renormalised out.
+to attract thinking", and the steward's audit adds two hard numbers: only **415** tasks have a
+positive thinking fraction (75.1% of usage mass), and renormalising out `filtered` costs 9.8 points
+of mass. With no counts in this release there is no interval either. If it bites, the correlation is
+a between-task fact on a minority of task nodes; the post states the inferential limit in the
+sentence that carries the number, weights by `pct` with `filtered` renormalised out, and reports the
+415-task support before anything else.
 
 **Mentor interests.** ⟨mentor⟩ interest 5, pricing the work: "more compute is associated with more
 valuable artifacts" (`economic-index-2026-06-report`, pp.2–3).
@@ -1334,14 +1392,21 @@ at global. Thresholds 200/country applied by us; `none` versus `not_classified` 
 `gdp_2024_country.csv` for the per-capita and income axes, since the 2026 waves ship neither
 (`ATLAS §Cuts 22, 29`).
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-18. FEASIBLE.** `human_only_ability` exists at `global`, `country` and `country-state` in both
+2026 waves (938 / 1,082 sub-national units), plus `onet_task::human_only_ability` at global over
+3,169 / 3,259 tasks. **115** countries carry the facet and clear 200 conversations in both waves. The
+residual is **`not_classified` in both waves** (never `none`) at country and `country-state`, median
+**10.34% / 11.11%**; global publishes `yes`/`no` only, summing to 100 (yes 87.9097 → 87.7599).
+Log (f) 5."
 
 **Biggest risk.** Construct. "Could the human have done this alone" is a classifier's judgement
 about a counterfactual, made from a transcript, with no validation statistic anywhere in the corpus
 (`L-2026-01-R4-01` is the standing caveat). If it bites, cross-country differences in the primitive
-are differences in how the classifier reads prompts in different languages, and the post must report
-the task-mix-held-constant version beside the raw one and treat the level as uninterpretable.
+are differences in how the classifier reads prompts in different languages; the post reports the
+task-mix-held-constant version beside the raw one, treats the level as uninterpretable, and prints
+the country `not_classified` residual (median 10.34% in November, 11.11% in February) as a share
+beside every rate rather than renormalising it away.
 
 **Mentor interests.** ⟨mentor⟩ T4(e): he is lead author of the report that built the primitives
 (`economic-index-2026-01-report`, p.1, ch.4) and of the first tracking of them over time
@@ -1389,23 +1454,32 @@ the fifth report names. *If null*: the post shows that the two primitives are to
 (r ≈ 0.93) to support a residual, which retires an open item and warns off a tempting construct.
 
 **Economic Index cut (proposed).** `human_education_years` and `ai_education_years` — numeric facets
-with their statistics at all three grains in `release_2026_01_15` and `release_2026_03_24`;
-`human_education_years` is the one numeric facet carrying confidence intervals in 2026-03-24
-(`ATLAS §Cuts 20`), so the residual's uncertainty is one-sided and must be stated. Task mix held
-constant at global with `onet_task::human_education_years` and `onet_task::ai_education_years`.
+with their statistics at all three grains in `release_2026_01_15` and `release_2026_03_24`. The CI
+gap is **global-only**: at country and `country-state` both facets carry all eight variables
+including the mean CIs in both waves, which is what the residual needs; the missing CIs of
+`ATLAS §Cuts 20` bite at global. Task mix held constant at global with
+`onet_task::human_education_years` and `onet_task::ai_education_years` (3,169 / 3,259 tasks).
 
 **Supplementary data.** None required; if an education benchmark is wanted, the report's own
 comparator is BLS attainment, which ships in no release (`ATLAS §Cuts 29`) and would be an external
 join.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-19. FEASIBLE WITH CAVEAT: the CI gap is global-only, and the residual is the size of its own
+measurement error.** At global, Feb-2026 `ai_education_years` has 6 variables (no CIs) against
+`human_education_years`' 10 — but at **country and `country-state` both carry all 8, mean CIs
+included, in both waves**, as do both `onet_task::` intersections (3,169 / 3,259 tasks). Over
+thresholded countries: sd 0.6933 / 0.5926 (Nov, human / ai) and 0.4715 / 0.3659 (Feb); residual
+(ai − human) **0.1958 ± 0.2085** and **0.2586 ± 0.1712**, corr 0.959 / 0.947, against median
+per-country mean-CI half-widths of **0.17 / 0.15 years**. Log (f) 6."
 
-**Biggest risk.** Design. A difference of two classifier outputs has the variance of both and the
-validation of neither, and the two are correlated at r ≈ 0.93, so the residual may be almost all
-noise. If it bites, the residual's cross-country variance will be small relative to its measurement
-error; the pre-registration therefore states the reliability floor the post needs and reports the
-raw pair beside the residual.
+**Biggest risk.** Design, and the steward has measured it landing: the residual is 0.1958 ± 0.2085
+years in November and 0.2586 ± 0.1712 in February, against median per-country mean-CI half-widths of
+0.17 and 0.15 years — a construct whose cross-country dispersion is about the size of its own
+measurement error, with the two inputs correlated at 0.95. If it bites, the null branch below is the
+branch we report, and it is a real result: the corpus's most tempting unbuilt construct cannot be
+built at country grain. The post pre-registers the reliability floor and reports the raw pair beside
+the residual.
 
 **Mentor interests.** ⟨mentor⟩ "These observed differences in success rates could deepen
 inequalities in the labor market… early adopters with high-skill tasks have more successful
@@ -1461,15 +1535,20 @@ three** geographies in `release_2026_01_15` and `release_2026_03_24` (`SB2 12`,
 **Supplementary data.** `working_age_pop_2024_country.csv` and `gdp_2024_country.csv` from
 `release_2025_09_15/data/intermediate/` for the per-capita and income axes.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-20. FEASIBLE.** `task_success` (`yes`/`no`) at `country` (168 / 170 units) and `country-state`
+(886 / 1,039) in both waves, plus `onet_task::task_success` at global; **115** countries carry it and
+clear 200 in both waves. Global yes 66.9060 → 69.9385. Carry the country residual: `not_classified`
+is a median **26.67% / 21.43%** of a country's conversations — larger than any plausible gradient, so
+it must be reported as a share, not dropped silently. Log (f) 5."
 
-**Biggest risk.** Design. Success is classified by the same model that produced the conversation and
-is confounded with task mix, language and prompt style, all of which vary by country; and the
-composition control is global-only, so it cannot be applied within country. If it bites, the
-gradient is a task-mix artefact; the post therefore reports the raw gradient, the global
-composition-adjusted benchmark, and the share of each country's mass on tasks whose global success
-rate is known.
+**Biggest risk.** Design, and the steward has named the binding form of it: `not_classified` is a
+median 26.67% of a country's conversations in November and 21.43% in February — larger than any
+gradient the post could find — so a country whose classification rate moves between waves will look
+as though its success rate moved. If it bites, the gradient tracks classifiability rather than
+success; the pre-registration therefore reports the residual share beside every rate, tests the
+gradient on the residual itself as a placebo, and reports the raw, the composition-adjusted and the
+residual-controlled versions together.
 
 **Mentor interests.** ⟨mentor⟩ "This pushes back against a hypothesis we made last year…"
 (`economic-index-2026-03-report`, OQ 14, p.19) — the same measure, at user level rather than
@@ -1528,14 +1607,21 @@ party API; §Cuts 27). Three waves, none crossing the June boundary.
 **Supplementary data.** None; published list prices are not in any release and would be an external,
 undated layer the post should avoid.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-21. FEASIBLE WITH CAVEAT: only the first wave ships counts, so there is nothing to weight the
+later two with.** `onet_task::{cost, prompt_tokens, completion_tokens}` all exist at global in all
+three pre-June waves, over **2,055 / 2,252 / 2,298** tasks; 2025-09-15 carries a `_count` companion,
+**2026-01-15 and 2026-03-24 carry the `_index` alone**. Each index's mean is **exactly 1.0000 within
+its own wave** (medians 0.70–0.84, maxima 5.4–30.3), so cross-wave levels are meaningless and only
+within-wave dispersion is interpretable. Log (f) 7."
 
-**Biggest risk.** Data. Every cost and token measure is an index re-based to mean 1.0 at global
-grain, so levels are unrecoverable and "cost" is realised spend, which already embeds model choice.
-If it bites, unit price cannot be separated from model mix at all and the honest post is a
-decomposition of *spend* into tokens and residual, with the residual named as model mix and the
-published elasticity re-expressed in those terms.
+**Biggest risk.** Data, and the steward has sharpened it: the indices are re-based to mean exactly
+1.0000 *within each wave*, and only the August 2025 wave ships a `_count` companion, so the later two
+waves cannot be usage-weighted at all and no level travels across waves. If it bites, the design
+collapses to three separate within-wave cross-sections and the "has the elasticity changed" question
+is unanswerable; the post therefore pre-registers the within-wave decomposition of spend into token
+volume and residual model mix, reports it three times, and states plainly that a trend in the
+elasticity is not identified.
 
 **Mentor interests.** ⟨mentor⟩ interest 5, pricing the work and its compute
 (`economic-index-2026-06-report`, pp.12–13).
@@ -1585,21 +1671,34 @@ which is itself the argument for the cadence the Institute promised.
 `geo_level == subregion` (652 ids, 51 US states + DC carrying the AUI) and `geo_level == country`
 (121 ids), `metric_id == pct` at the top of each ladder and below it, for `onet` L2, `request` L1 and
 `soc_occupation` L0. Recurrence of "top 10 nodes by log(local share ÷ parent share)" and of "top 10
-by raw share", month to month, with the specification stated — the atlas already records 32.7% /
-33.1% / 19.8% against 83–88% under the two rules (`ATLAS §Traps 39`), so the post extends a measured
-fact rather than guessing. Total April→May unit recurrence holds (every April unit recurs in May;
-7 countries and 116 subregions are May-only, `ATLAS §Coverage`).
+by raw share", month to month, with the specification stated. The steward has now produced both
+legs: per US state (51 units, benchmarked on the `USA` row) recurrence is 32.7 / 33.1 / 19.8 against
+84.9 / 87.6 / 83.5 by raw share, and per country (114 units, benchmarked on `GLOBAL`) it is
+**52.7 / 55.4 / 32.0** against 86.7 / 90.4 / 83.8 — so the post reports both geographies, and the
+20-point gap between them is part of the finding. Admission rule: `pct` ≥ 0.5 (relative error ≤1% at
+two-decimal rounding), with the 6,594 exactly-0.00 cells dropped explicitly. Total April→May unit
+recurrence holds (every April unit recurs in May; 7 countries and 116 subregions are May-only,
+`ATLAS §Coverage`).
 
 **Supplementary data.** None.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-22. FEASIBLE WITH CAVEAT: state recurrence is the harsh case; countries are ~20 points more
+persistent, and a `pct` floor of 0.5 is the honest admission rule.** The atlas figures are
+**per-US-state** (51 units, benchmark the `USA` country row, top 10 by log share ratio, nodes present
+in both months): 32.7 / 33.1 / 19.8 against 84.9 / 87.6 / 83.5 by raw share. The same rule for
+**countries** (114 units, benchmark `GLOBAL`) gives **52.7 / 55.4 / 32.0** and 86.7 / 90.4 / 83.8 —
+so yes, it can be produced for countries. With two-decimal values, relative error is ≤1% only at
+`pct` ≥ **0.5** (≤2% at 0.25); cells surviving ≥0.5: 52.6 / 58.2 / 28.3% (country), 67.4 / 75.9 /
+44.3% (subregion). **6,594 `pct` cells are exactly 0.00** — drop them explicitly. Log (f) 8."
 
 **Biggest risk.** Data. The June wave publishes **no count metric of any kind** (`ATLAS §Cuts 17`)
-and `value` is pre-rounded to two decimals, so cells cannot be sized and Iceland's 0.02 carries
-±25% relative error. If it bites, the recurrence rate cannot be converted into a per-cell noise
-estimate, and the post must present persistence as an observable proxy for reliability, stated as
-such, rather than as a standard error.
+and `value` is pre-rounded to two decimals, so cells cannot be sized; the steward's audit turns that
+into a rule — relative error is ≤1% only at `pct` ≥ 0.5, which admits 28–76% of cells depending on
+the ladder, and 6,594 cells are exactly 0.00. If it bites, the recurrence rate cannot be converted
+into a per-cell noise estimate; the post presents persistence as an observable proxy for reliability,
+stated as such, reports it at both the 0.5 and 0.25 floors, and drops the exact-zero cells
+explicitly rather than silently.
 
 **Mentor interests.** ⟨mentor⟩ interest 2, robustness by rank
 (`labor-market-impacts-2026-03-appendix`, Fig 4 p.10) — the same discipline applied to geography.
@@ -1656,14 +1755,23 @@ where Utah's residual is the outlier. Conventions and published targets per `ATL
 **Supplementary data.** `working_age_pop_2024_*.csv` and `gdp_2024_*.csv` from
 `release_2025_09_15/data/intermediate/` for the rebuilt waves.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-23. FEASIBLE WITH CAVEAT: five of the six quantities reproduce under both samples; the
+concentration shares reproduce only to 0.7–0.9 pp, and no AUI or Gini has a sampling interval.** The
+state AUI Gini is **0.366510** over 51 states (published 0.37) and **0.333986** without Utah; the
+top-5 AUI share 29.68 → 26.77; Wyoming and Seychelles are straightforward row drops. **Seychelles'
+contamination of the global mixes is measurable exactly** by count subtraction (24,715 = 2.47% of
+Nov-2025 conversations): it moves the global `collaboration` mix by up to **1.17 pp**, `use_case`
+`work` by 1.17 pp, `task_success` `no` by 0.45 pp. Note global mixes cannot be rebuilt *from* country
+rows (they sum to 84.3%). Log (f) 9–10."
 
-**Biggest risk.** Design. The exercise can only re-run the quantities Anthropic published, and
-"Utah's activity is not driving the results" is a claim about results we can reproduce only where a
-specification is documented — the elasticities and the Gini, not the internal checks. If it bites,
-the post reports sensitivity for the four reproducible quantities and states plainly that the
-report's own unnamed checks remain unverifiable, which is the ledger item's real content.
+**Biggest risk.** Design. Five of the six quantities reproduce under both samples, so the exercise
+runs — but no AUI, Gini or concentration share carries a sampling interval in any wave, and the
+concentration shares themselves reproduce only to 0.7–0.9pp because the population denominator is
+unpublished. If it bites, a movement of that size cannot be told from a rebuild artefact; the post
+therefore reports exclusion effects only where they exceed the reproduction error (the Utah Gini
+moves 0.366510 → 0.333986, which does), states the reproduction error beside every number, and
+treats the report's own unnamed internal checks as unverifiable rather than refuted.
 
 **Mentor interests.** ⟨mentor⟩ interest 2, judgement calls at every step and robustness shown rather
 than asserted (`labor-market-impacts-2026-03`, fn 6 pp.15–16).
@@ -1724,14 +1832,24 @@ positive-penetration tasks (`ATLAS §Traps 37`), and that distinction is the pos
 (`occupationProj`, 831 rows, employment 2025/2035 and median annual wage) on `occ_code` for the
 growth and pay of each destination; merge audit 756 in / 755 matched.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-24. FEASIBLE WITH CAVEAT: the comparison distribution is 54% zeros.** All the named destinations
+are present: Computer User Support 15-1232 **0.4685**, Computer Network Support 15-1231 0.2867,
+Accountants and Auditors 13-2011 **0.3478**, Bookkeeping/Accounting/Auditing Clerks 43-3031
+**0.3104**, Medical Assistants 31-9092 **0.0476**. Against them, **411 of 756** occupations have
+exposure exactly 0 (median 0), so the employment-weighted benchmark is mostly zeros and the
+comparison must be stated as a quantile position, not a ratio. Of the 52 zero-exposure-but-positive-
+task occupations, **20 are in the health, clerical and support families** (15 `29-*`, 3 `43-*`, 2
+`31-*`). Log (f) 11."
 
-**Biggest risk.** Design. The destination list is a handful of occupations named in prose, so the
-post is coding a small, judgement-laden set and any claim about "retraining destinations" in general
-rests on it. If it bites, the result is sensitive to the coding of four titles; the pre-registration
-therefore publishes the crosswalk, reports the result for the named set and for the broader sector
-families separately, and states which occupations would have to be added to flip the conclusion.
+**Biggest risk.** Design, and the steward's audit changes its shape: 411 of 756 occupations have
+exposure exactly 0, so the comparison distribution has a median of zero and a ratio against "the
+average occupation" is meaningless. If it bites, any headline of the form "destinations are N times
+more exposed" is an artefact of the zero mass; the post therefore states the result as a quantile
+position of each destination in the employment-weighted distribution, and reports separately that 20
+of the 52 zero-exposure-but-positive-task occupations sit in exactly the health, clerical and support
+families the sector programmes place into — which is the measurement caveat that decides how the
+quantile should be read.
 
 **Mentor interests.** ⟨mentor⟩ "If current data on AI usage are any guide, college-educated
 workers—software developers, paralegals, accountants—are most at risk (Massenkoff and McCrory 2026).
@@ -1739,74 +1857,6 @@ But this is highly uncertain." (`worker-retraining-2026-08`, p.4.) ⟨mentor⟩ 
 evidentiary standard" (ibid. p.5).
 
 **Institute agenda.** `ED-5`; Research Fund Priority 2.
-
----
-
-## LL-25 — Is the American geography of Claude the American geography of AI?
-
-**Thread.** T2.
-
-**Ledger items.** `L-2025-09-R3-45` *open* (the AUI's working-age denominator is a proxy the
-report's own conjectures contradict); `L-2026-01-R4-09` *open* (the relationship pattern at country
-level contradicts the pattern at state level, flagged and left);
-`L-2026-07-CONN-04` *open* (the connector implies a reliable state-by-use-case cut while the
-reports' own results carry thresholds and suppression).
-
-**Closest existing answer and why it falls short.** `economic-index-2026-01-report` Fig 1.7 p.13
-explains nearly two-thirds of cross-state AUI variation with the tech-worker share, and
-`economic-index-2025-09-report` p.19 gives the state income slope of 1.8. Both explain Claude's
-state geography with state characteristics; neither compares it with another measurement of AI use
-by state, and the fourth report's own puzzle — that country and state relationships have opposite
-signs — is left open. This candidate is deliberately distinct from LL-05 (countries) and LL-10 (the
-convergence rate): it asks whether the state ranking itself is a Claude artefact.
-
-**External literature checked.** Misra et al. (2025) and the Microsoft AI Diffusion repository
-[abs] — publishes `State_Rankings_2026Q1.csv`, `County_AI_User_Share_2026Q1.csv` and
-`MSA_Ranking_2026Q1.csv`, i.e. a population-normalised AI user share for US states, counties and
-metros, with no comparison to any provider's own index. Bick, Blandin, Deming & Schumacher (2026)
-[full] — national, not sub-national. Daepp & Counts (2025), "The Emerging Generative Artificial
-Intelligence Divide in the United States" [abs] — a US sub-national divide measured on different
-telemetry. Nobody compares a provider's state index with an independent state measure.
-
-**Why it matters.** The state convergence result is the Index's strongest policy-facing claim and
-the one an American policymaker is most likely to act on. If Claude's state ranking and an
-independent AI ranking agree, the convergence finding is about AI; if they do not, it is about where
-Anthropic's users are, and the `ED-1` access question has a different answer inside the US than
-across countries — which is exactly the level-dependence puzzle the fourth report flagged.
-
-**Contribution.** *If it holds* (state rankings agree): the state-level diffusion story is about AI
-and the post says so with a rank correlation and the states that disagree. *If it fails*: the
-convergence claim is partly a statement about Claude's user base, and the post identifies the states
-that drive the difference and whether tech-worker share explains them. *If null*: the post reports
-the overlap, the interval, and the fact that 51 units cannot separate the two hypotheses — with the
-county and metro files named as the route that could.
-
-**Economic Index cut (proposed).** State AUI at two published points and two rebuilt ones:
-`release_2025_09_15` enriched `state_us` (51 rows, published AUI, 100-conversation floor);
-`release_2026_06_26` `geo_level == subregion`, `metric_id == usage_per_capita_index`, 51 US ids in
-each of April and May 2026 (never `US-PR`, `ATLAS §Cuts 4`; the union of country and subregion rows
-double-counts `US-PR`, `§Traps 16`); and `US-*` rows in `release_2026_01_15` and
-`release_2026_03_24` rebuilt on the Census state population file. Ranks and ratios, not levels.
-
-**Supplementary data.** `State_Rankings_2026Q1.csv` from `github.com/microsoft/ai-diffusion-report`
-(`data/US/`), joined on state name → USPS via
-`release_2025_09_15/data/input/census_state_codes.txt` (pipe-delimited FIPS/USPS, 57 rows); the
-county and metro files are the extension if the state comparison has no power.
-
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
-
-**Biggest risk.** Data. The external state file is one quarter (Q1 2026) while the Index's nearest
-windows are February and April–May 2026, so the comparison straddles different periods and different
-constructs (conversations per working-age person against the share of working-age people using AI).
-If it bites, a rank disagreement cannot be attributed to market share rather than timing, and the
-post must report the comparison at every available Index window to show the ranking is stable before
-it interprets any gap.
-
-**Mentor interests.** ⟨mentor⟩ T2(e): lead author of the report that built the state convergence
-model (`economic-index-2026-01-report`, p.1).
-
-**Institute agenda.** `ED-1`; `Share 1`.
 
 ---
 
@@ -1841,12 +1891,14 @@ bill. If the fall is composition — more cheap personal queries — it says the
 it is within-occupation, it says AI moved down the ladder inside the same jobs. Those have opposite
 implications for `ED-7`, and Anthropic asserted the first without testing it.
 
-**Contribution.** *If it holds* (the fall is between-occupation composition): Anthropic's mechanical
-reading is right, and the post supplies the decomposition it asserted. *If it fails* (a
-within-occupation component): AI is being used for cheaper work inside the same occupations, which is
-a different and more consequential statement. *If null*: the post publishes the shift-share with its
-uncertainty and shows how much of the $1.40 movement is smaller than the measure's own vintage
-sensitivity.
+**Contribution** (amended after the steward's audit, which shows the published level does not
+reproduce). *If it holds* (the change is between-occupation composition): Anthropic's mechanical
+reading is right, and the post supplies the decomposition it asserted, on a rebuilt series whose
+level is stated as not matching the published one. *If it fails* (a within-occupation component):
+AI is being used for cheaper work inside the same occupations, which is a different and more
+consequential statement. *If null*: the post publishes the non-reproduction of the published task
+value under five wage constructions — the first public statement that the Index's wage series cannot
+be rebuilt from the files Anthropic ships — together with the shift-share on the sources that can.
 
 **Economic Index cut (proposed).** `onet_task` L0 `onet_task_pct` at `geography == global` in
 `release_2026_01_15` and `release_2026_03_24` (the two waves either side of the published fall), with
@@ -1862,14 +1914,23 @@ and `release_2025_02_10/wage_data.csv` (`SOCcode`, 1,084 usable rows after the `
 filter); BLS Employment Projections median annual wage as the second wage source, so the result can
 be shown under two wage vintages.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-26. FEASIBLE WITH CAVEAT: the published level does not reproduce — compare changes, not levels.**
+$49.3 → $47.9 rebuilds as **$35.08 → $34.36** (shipped O\*NET 20.1 statements → `wage_data.csv`, mean
+over holder SOCs ÷ 2080, 92.6% / 92.3% of named-task mass priced) and **$37.69 → $37.55** (BLS-EP 2025
+median, 54.7% / 57.8% priced); max-holder, employment-weighted and ÷1920 variants span $34–$38 and
+none approaches $49. The **direction** reproduces on the 2019 scrape (−$0.72 against the published
+−$1.40) and is nearly flat on EP (−$0.14). Likeliest cause: the OEWS **mean** hourly series, 403 from
+here. The 2,888-name panel is confirmed. Log (f) 13."
 
-**Biggest risk.** Design. The published movement is $1.40 on a $49 base, which is small relative to
-the wage measure's own vintage and deflator ambiguity, and Anthropic states neither. If it bites,
-the decomposition's components are each larger than the total and the post's honest finding is that
-the published change is inside the measure's uncertainty — which is worth publishing, since the
-report reads a mechanism into it.
+**Biggest risk.** Data, and it is now measured: the published **level** does not reproduce under any
+of five wage constructions (rebuilds span $34–$38 against a published $49.3), because Anthropic
+almost certainly priced tasks on the OEWS mean hourly series, which returns 403 from this sandbox.
+The house criterion is that a published number is reproduced before anything new is built on it, and
+here it cannot be. If it bites — and it has — the post is explicitly a **change** decomposition with
+the non-reproduction reported as its first result, the published level quoted as published and never
+rebuilt, and the direction shown under both wage sources (−$0.72 on the 2019 scrape, −$0.14 on
+BLS-EP, against a published −$1.40).
 
 **Mentor interests.** ⟨mentor⟩ interest 5: task value as "the average hourly wage of US workers who
 perform that task" (`economic-index-2026-03-report`, p.8, fn 5 p.11), and the published claim that
@@ -1924,14 +1985,20 @@ facet (`§Cuts 5`).
 
 **Supplementary data.** None.
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-27. FEASIBLE WITH CAVEAT: the decomposition's real N is 32–36 countries, not 109–125.** Units at
+or above 100 conversations: **545 of 981** (Nov, 109 parents) and **570 of 1,137** (Feb, 125 parents);
+at 385, **277** (80 parents) and **295** (95 parents). Every surviving unit carries `collaboration`
+rows. Surviving units hold a median **91% / 90%** of their parent's usage at the 100 floor (85% at
+385, minimum 16%). Parents with ≥5 surviving units: **32 / 36**; with ≥10: **18 / 16**. Log (f) 14."
 
-**Biggest risk.** Data. Roughly half the sub-national units are below the 100-conversation floor, so
-the units that survive are the large metros, and a within-country variance computed on them
-understates dispersion while their `not_classified` share varies. If it bites, the decomposition is
-about big regions only; the post must report the surviving units' share of each country's usage and
-run the decomposition at both the 100 and the 385 floors the steward proposed (`SB2 17`).
+**Biggest risk.** Data, re-sized by the steward: a variance decomposition needs several units per
+country, and only **32** countries in November and **36** in February have five or more sub-national
+units above the 100-conversation floor (18 and 16 have ten or more). If it bites, the within-country
+component is estimated on three dozen mostly rich countries and cannot be generalised; the post
+therefore reports the decomposition on the ≥5-unit and ≥10-unit panels separately, states the
+surviving units' share of each parent's usage (median 91% / 90%), and runs it at both the 100 and
+385 floors.
 
 **Mentor interests.** ⟨mentor⟩ T3(e): the migration of work toward the automated surface as the
 mechanism for imminent change (`economic-index-2026-03-report`, OQ 17, p.9) — tested here across
@@ -1982,11 +2049,15 @@ automation/augmentation framework the April 2025 report promised to extend. *If 
 publishes the two distributions side by side with the seven reasons they cannot be merged, which is
 the reconciliation the access post invited and nobody has written.
 
-**Economic Index cut (proposed).** `ai_autonomy` — a numeric facet with its statistics at all three
-grains in `release_2026_01_15` and `release_2026_03_24` (global mean 3.38 → 3.41), plus the global
-histogram (histograms are global only, `ATLAS §Cuts 20`) and the global
-`onet_task::ai_autonomy` intersection; and `ai_autonomy_mean` in `release_2026_06_26` for the API
-block, with the boundary caution attached (`SB2 15`).
+**Economic Index cut (proposed, amended on the steward's caveat).** `ai_autonomy` — a numeric facet
+at all three grains in `release_2026_01_15` and `release_2026_03_24` (10 variables at global, 8
+below), with the **global histogram**, which is what resolves the scale's top: November publishes
+five integer bins (2.962 / 16.250 / 26.329 / 48.566 / 5.892 at autonomy 5) and February 25 bins of
+which only the five integer ones are non-zero (4.253 at 5). Plus the global
+`onet_task::ai_autonomy` intersection. **`release_2026_06_26` is excluded from the scale axis**: its
+`ai_autonomy_mean` is 2.72 / 2.74 against February's 3.407 on the same documented scale with no
+announced rescaling, and the two time primitives break at the same boundary — the break is reported,
+not spliced.
 
 **Supplementary data.** `Anthropic/enabling-independent-research`, `metr` subset: 604 rows, 14
 facets, 247,315 records on one April–May 2026 window, including `supervision_intensity`
@@ -1995,14 +2066,25 @@ code, occupation or date column, so the steward's rule governs: "the two can be 
 each on its own sample, never merged" (`SB2 6`). Facet × facet two-way tables inside it *are*
 recoverable (`SB2 5`).
 
-**Steward feasibility line.** pending — see
-`room/lead-2026-09-16-longlist-feasibility-batch-2.md`.
+**Steward feasibility line** (verbatim; `room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`).
+"**LL-28. FEASIBLE WITH CAVEAT: the Index histogram answers the scale question exactly, but the June
+wave is off its own axis and must not be spliced.** `ai_autonomy` exists at all three grains in both
+waves (10 variables at global, 8 below), and the histogram resolves the top: Nov publishes **five
+integer bins** (2.962 / 16.250 / 26.329 / 48.566 / **5.892** at autonomy 5); Feb publishes 25 bins of
+which only the five integer ones are non-zero (**4.253** at 5). But June's `ai_autonomy_mean` is
+**2.72 / 2.74** (Claude.ai) and 2.27 / 2.24 (API) against Feb's 3.407, under the same documented 1–5
+scale and with no announced rescaling — `human_only_time` and `human_with_ai_time` break at the same
+boundary. On the framing: the side-by-side is **admissible** on my never-merge rule (`SB2 6`) — two
+instruments, each on its own sample, no shared unit, window or key — provided the post's claim is
+about the measure and the June break is stated. `## Components`, log (f) 15."
 
-**Biggest risk.** Construct, and it is the reason this candidate could be deleted: the two measures
-have no common unit, no common sample and no common window, so any comparison is of distributions
-from different populations. If it bites, the post can only bound the Index scale's reach and must not
-state a difference as a finding; the assumptions sweep therefore carries the steward's
-never-merge rule verbatim, and the post's claim is about the **measure**, not about surfaces.
+**Biggest risk.** Construct, and a second one the steward has just surfaced. First: the two
+instruments have no common unit, sample or window, so the comparison is of distributions from
+different populations and the post's claim must be about the **measure**, never about surfaces.
+Second: June's `ai_autonomy_mean` is 2.72/2.74 against February's 3.407 on the same documented 1–5
+scale with no announced rescaling, and two time primitives break at the same boundary — so the June
+wave is off its own axis and is excluded from the scale comparison, and that break is reported as a
+finding in its own right rather than smoothed over.
 
 **Mentor interests.** ⟨mentor⟩ T3(e): "API workflows are far more likely to be directive, with less
 need for a human in the loop" (`economic-index-2026-03-report`, OQ 17, p.9); ⟨mentor⟩ he is second
@@ -2012,8 +2094,908 @@ author of the agentic-coding paper (`claude-code-expertise-2026-06`, p.1).
 
 ---
 
+## LL-29 — Do people do one thing at a time with AI, and does it change what they get?
+
+**Thread.** T4.
+
+**Ledger items.** `L-2026-01-R4-40` *open* (multitasking, 9%, is measured and set aside; its bearing
+on the human-with-AI time estimate is not examined); `L-2026-03-R5A-14` *open* (multitasking and the
+collaboration modes are both conversation-level and which task a single label refers to in a
+multi-task conversation is unspecified); `L-2026-01-R4-01` *open* (the standing directional-accuracy
+caveat on all five primitives).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-01-report` Fig 2.2 p.25
+publishes multitasking at 9% globally and uses it in no analysis; the appendix concedes that in a
+multi-task conversation it is unspecified which task the other labels describe. So the corpus has a
+measure that tells it when its own unit of observation is ambiguous, and never checks what that
+ambiguity does to the estimates built on the unit.
+
+**External literature checked.** METR (2025) [abs] — the time-use decomposition of AI-assisted work
+(prompting, waiting, reviewing, idle), the nearest external treatment of what a single task actually
+contains. Chatterji et al. (2025) [abs] — classifies messages, not conversations, and so sidesteps
+the problem by construction. Tomlinson et al. (2025) [abs] — separates "user goal" from "AI action"
+within one conversation, an explicit acknowledgement that one exchange can carry more than one unit
+of work. Nobody has measured how much of a usage corpus is multi-task, or what it does to the
+estimates.
+
+**Why it matters.** Every published speedup, success rate and collaboration share is a
+conversation-level average, and 9% of conversations are known to contain more than one task. If the
+multi-task share is concentrated in particular tasks or places, then those cells' primitives are
+measuring something different from the rest, and the productivity chain inherits it. It moves the
+prior of anyone treating a conversation as a task.
+
+**Contribution.** *If it holds* (multi-task conversations differ systematically in time and
+success): the corpus's unit ambiguity has a measurable footprint, and the post gives the correction
+factor. *If it fails*: the 9% is spread evenly and the unit ambiguity is harmless, which licenses
+every conversation-level average for the first time. *If null*: the post publishes the multi-task
+share by task and geography with its MDE, which is a measurement fact the corpus has never printed.
+
+**Economic Index cut (proposed).** `multitasking` — a categorical facet at `global`, `country` and
+`country-state` in `release_2026_01_15` and `release_2026_03_24` — with the global
+`onet_task::multitasking` intersection, against `onet_task::human_with_ai_time` and
+`onet_task::task_success` on the same tasks at global. Residual node named explicitly
+(`ATLAS §Traps 24`).
+
+**Supplementary data.** None.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Construct. Multitasking is a classifier judgement with no validation statistic,
+and it may simply track conversation length, which is published nowhere (`ATLAS §Cuts 27`). If it
+bites, the multi-task share is a length proxy and every correlation with it is mechanical; the post
+must say so and report the relationship with the time primitives, which are the only length-adjacent
+measures available.
+
+**Mentor interests.** ⟨mentor⟩ T4(e): he is lead author of the report that built the primitives and
+of the first tracking of them (`economic-index-2026-01-report` p.1; `economic-index-2026-03-report`
+Table 1.1 p.9).
+
+**Institute agenda.** `ED-4`.
+
+---
+
+## LL-30 — Is the work AI does for work the same work it does for study?
+
+**Thread.** T1, with T4.
+
+**Ledger items.** `L-2025-02-P1-26` *partially answered* (the facet was run and only two aggregate
+numbers reported; a use-case × occupation distribution is still published nowhere);
+`L-2026-01-R4-49` *open* (speedup is never split by use case, though 54% of Claude.ai conversations
+are not work); `L-2026-03-R5-06` *open* (educational tasks may be easier, or students mindful of
+usage limits — offered and untested).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-01-report` p.26 publishes
+the three-way split (46% work / 19% coursework / 35% personal) and
+`economic-index-2026-03-report` Fig 1.2 p.6 reports its movement (coursework 19% → 12%, personal
+35% → 42%). `economic-index-2026-06-report` Fig 1.3 p.7 shows work-related conversations by
+occupation **wage quartile**. A use-case × occupation or use-case × task distribution appears
+nowhere, and the atlas confirms no release carries the cross below global (`ATLAS §Cuts 10, 11`) —
+but the global intersection does exist, which is the one place the question can be asked.
+
+**External literature checked.** Chatterji et al. (2025) [abs] — the direct external comparator:
+non-work messages grew "from 53% to more than 70%", work usage concentrated among educated
+professionals, and a published work/non-work split by topic. Bick, Blandin, Deming & Schumacher
+(2026) [full] — measures work adoption only, by design, and notes 55% of US adults use AI for
+non-work against 45% for work. arXiv 2605.30685 [abs] — schooling use falls and leisure use rises
+with national income. Nobody publishes the occupational composition of *non-work* AI use.
+
+**Why it matters.** Every occupational claim in the Index is built on conversations of which more
+than half are not work, and the occupational mapping does not know which is which. If the
+occupational mix of coursework and personal use differs sharply from that of work use, then the
+headline occupational shares — and the exposure measure that gates on work usage — are averaging two
+different populations. That is the construct risk under `ED-7` and under the exposure measure's own
+work gate.
+
+**Contribution.** *If it holds* (the mixes differ): the post supplies the work-only occupational mix
+the corpus has never published, and quantifies how much the headline shares move. *If it fails* (the
+mixes are similar): the work gate is doing little, which simplifies the interpretation of every
+occupational series. *If null*: the post publishes the global use-case × task intersection with its
+suppression accounting — the first time that cut appears anywhere.
+
+**Economic Index cut (proposed).** `onet_task::use_case` and `request::use_case` at
+`geography == global` in `release_2026_01_15` and `release_2026_03_24` (two of the twenty
+intersections, global only, `ATLAS §Cuts 10`), with `use_case` at all three grains for the
+aggregate; task → SOC via the shipped O*NET 20.1 statements to build the occupational mix under each
+use case. Residual differs by wave — `not_classified` in November, `none` in February — and must not
+be hard-coded (`ATLAS §Traps 24`).
+
+**Supplementary data.** `release_2025_09_15/data/intermediate/onet_task_statements.csv` for
+task → O*NET-SOC.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Data. The intersection is global only, so the whole post is one cross-section per
+wave with no geography, and the use-case residual changes label between waves. If it bites, the
+comparison is two global tables and the post cannot say whether the pattern travels; it should then
+report the two waves as a replication rather than a trend.
+
+**Mentor interests.** ⟨mentor⟩ interest 5, pricing the work by the wage of the occupation that
+performs it (`economic-index-2026-03-report`, p.8) — which the work/non-work split directly
+qualifies.
+
+**Institute agenda.** `ED-7`; `ED-11`.
+
+---
+
+## LL-31 — Does what people take away from AI depend on where they are?
+
+**Thread.** T2, with T1.
+
+**Ledger items.** `L-2026-06-R6-30` *open* (no per-capita geography result at all in the sixth
+report, though the index is released); `L-2026-06-R6-31` *open* (no subregion result, though the
+grain exists); `L-2026-06-R6A-19` *open* ("Cowork" is used as a surface name without definition and
+no exhibit separates chat from Cowork).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-06-report` ch.2 publishes
+the artifact taxonomy and the global shares — 93% of conversations produce an artifact, with the
+four largest categories at 7 / 17 / 15 / 11 percent — and the release ships 32 `artifact_*_pct`
+metrics at country and subregion grain. The report publishes no geography of any kind, which the
+threads map records as an absence: "Geography's measure gets finer and geography's reporting stops."
+So the newest and most concrete output measure in the corpus has never been cut by place.
+
+**External literature checked.** Chatterji et al. (2025) [abs] — topic mix by country income, not
+output type. arXiv 2605.30685 [abs] — purposes by country income and language. Misra et al. (2025)
+[abs] — adoption levels by economy with no content dimension. Tomlinson et al. (2025) [abs] — one
+country. Nobody has published what AI *produces* by geography, because no other provider releases an
+artifact taxonomy.
+
+**Why it matters.** Artifacts are the closest thing in the corpus to output: a spreadsheet, a
+document, a piece of code. A geography of artifacts is therefore the first observable answer to
+`ED-1`'s value-capture half — whether richer places get different things out of the same technology,
+not merely more of it. It also tests the sixth report's own silence: the release made the cut
+available and the report declined it.
+
+**Contribution.** *If it holds* (artifact mix varies systematically with income or adoption): the
+post supplies the first geography of AI output and names what poorer places produce more of. *If it
+fails* (mixes are flat): what people take away is invariant to place, which strengthens the case
+that usage differences are about volume rather than kind. *If null*: the post reports the
+suppression-limited coverage of the artifact metrics below global and shows which grains support any
+comparison.
+
+**Economic Index cut (proposed).** `release_2026_06_26`, the 32 `artifact_*_pct` metrics at
+`geo_level == country` (121 ids) and `geo_level == subregion` (652 ids), `category_name == overall`,
+April and May 2026 pooled as the **unweighted mean** of the two months (the specification that
+reproduces the published shares, `ATLAS §Conventions`, "Pooling the two months of June 2026");
+ranked against `usage_per_capita_index` where it exists (countries and US states only,
+`§Cuts 4`). `GLOBAL` identity rows excluded (`§Traps 18`); `US-PR` double-count avoided
+(`§Traps 16`).
+
+**Supplementary data.** `gdp_2024_country.csv` from `release_2025_09_15/data/intermediate/` for the
+income axis.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Data. The publication rule inside the country block is ragged — 2,568 of 12,319
+country top-of-ladder cells publish `pct` alone — and below the top of each ladder subregions carry
+`pct` only, with no counts anywhere in the wave. If it bites, artifact metrics exist for a selected
+set of countries and the geography is of publication rather than of behaviour; the post must report
+how many of the 121 countries carry all 32 metrics before comparing any of them.
+
+**Mentor interests.** ⟨mentor⟩ he is first named author of the wave that introduced artifacts
+(`economic-index-2026-06-report`, p.1) and of the interpretive claim that compute and human
+involvement move together (pp.13–14).
+
+**Institute agenda.** `ED-1`; `ED-3`.
+
+---
+
+## LL-32 — Does it matter how a conversation is credited to the occupations that share its task?
+
+**Thread.** T8, with T1 and T5.
+
+**Ledger items.** `L-2025-02-P1-28` *open* (equal splitting of a task's conversations across its
+occupations drives every occupation-level number and is never validated);
+`L-2026-03-LMIA-03` *open* (the appendix instead allocates by employment shares, mechanically giving
+large occupations more of the count, with no alternative compared);
+`L-2026-06-R6-39` *open* (mapped-occupation wage is used as the value of the work, with the report's
+own counter-example).
+
+**Closest existing answer and why it falls short.** The first paper splits a task's conversations
+equally across the occupations that hold it; the exposure appendix splits by employment share. Both
+choices are stated once and never compared, and every occupational share, every wage-based task
+value and the exposure measure itself inherit whichever rule was used. The corpus contains two
+incompatible allocation rules from the same team and no sensitivity analysis.
+
+**External literature checked.** Bick, Blandin, Deming & Schumacher (2026) [full] — the external
+critique that makes this urgent: chat-log measures "tend to over-classify chats into generic
+activities spanning many occupations" [abs], which is precisely the many-holder case the allocation
+rule resolves by assumption. PIIE (2026), "Research on AI and the labor market is still in the first
+inning" [abs] — "Results can be sensitive to which AI measure is chosen". Tomlinson et al. (2025)
+[abs] — weights activities to occupations by O*NET importance and relevance, a third rule again.
+Nobody has published the sensitivity.
+
+**Why it matters.** This is the single assumption that stands between "conversations about tasks"
+and every occupational statement Anthropic has made, including the one external researchers now
+build on. If the occupational ranking is robust to the rule, the whole occupational edifice is safe
+and can be said so; if it is not, then which occupations look exposed is partly a modelling choice,
+and `ED-7` answers depend on it.
+
+**Contribution.** *If it holds* (rankings are stable across rules): the corpus's most load-bearing
+unvalidated choice is shown not to matter, in ranks and in the top of the distribution. *If it
+fails*: the post names the occupations whose position depends on the rule and shows how far they
+move — including in the exposure file external teams are using. *If null*: the post publishes the
+three rules' outputs side by side with the share of usage on multi-holder tasks, which is the
+sensitivity the corpus has never printed.
+
+**Economic Index cut (proposed).** `onet_task` L0 `onet_task_pct` at `geography == global` in
+`release_2025_09_15`, `release_2026_01_15` and `release_2026_03_24`, allocated to SOC occupations
+under three rules — equal split across holders, employment-weighted split, and single modal holder
+— using the shipped O*NET 20.1 statements; compared against the wave's published occupational
+shares where they exist (`soc_occupation` in the 2025-09-15 enriched file) and against
+`pct_occ_scaled`, the rule that reproduces the published category shares in the flat family
+(`ATLAS §Conventions`, task mix).
+
+**Supplementary data.** BLS Employment Projections (`occupationProj`, 831 rows) for the
+employment-weighted rule; `release_2025_02_10/bls_employment_may_2023.csv` (22 major groups) as the
+cross-check the first release itself shipped.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design. The three rules are all defensible and none is ground truth, so the post
+can show dispersion but cannot say which is right. If it bites, the finding is "the ranking moves by
+X positions" with no preferred rule, which is still decision-relevant but must be written as a
+sensitivity result rather than a correction — and the post must resist the temptation to declare a
+winner.
+
+**Mentor interests.** ⟨mentor⟩ "There are judgment calls involved at every step"
+(`labor-market-impacts-2026-03`, fn 6 pp.15–16); ⟨mentor⟩ the employment-share allocation is his
+appendix's own choice (`labor-market-impacts-2026-03-appendix`, p.2).
+
+**Institute agenda.** `ED-7`; `WILD-6`.
+
+---
+
+## LL-33 — What is the tenth of enterprise AI use that is neither delegated nor collaborative?
+
+**Thread.** T3, with T8.
+
+**Ledger items.** `L-2025-09-R3-39` *open* (the 11% of API transcripts that are neither automation
+nor augmentation is never named or explained); `L-2026-03-R5A-08` *open* (the residual recurs at
+89 / 89 / 85 and the apparent 9-point automation fall is never tested against a rise in the
+residual); `L-2026-01-B4-18` *open* (the shares are reported without noting that the modes are not
+exhaustive).
+
+**Closest existing answer and why it falls short.** `economic-index-2025-09-report` p.36 reports 77%
+automation and 12% augmentation on the API, and `economic-index-2026-03-appendix` Fig A.3 p.6 gives
+68% / 17% — pairs that sum to 89%, 89% and 85%. No publication names the residual, and the fifth
+report's 9-point fall in automation is never tested against the possibility that the residual grew
+instead. The atlas confirms the residual is decomposable in the long family and not in June 2026.
+
+**External literature checked.** Chatterji et al. (2025) [abs] — carries an explicit third category,
+"Expressing" at about 11%, so a residual of this size is a known feature of conversation taxonomies
+rather than an anomaly. Tomlinson et al. (2025) [abs] — reports conversations where AI's action and
+the user's goal differ, a related unclassifiable case. Nobody has decomposed a provider's
+unclassified residual, because only Anthropic publishes the components.
+
+**Why it matters.** The automation share is the number the policy stream, the scenario model and
+external teams all use, and it is reported on a base that changes by wave and by chapter. If the
+residual is doing the moving, then published automation "falls" are classification events. Anyone
+using the Index's automation ratio — and the Stanford indicator note now does — needs to know which.
+
+**Contribution.** *If it holds* (the residual is stable and small): the published automation
+movements are real, and the post supplies the residual series that shows it. *If it fails* (the
+residual moves with the automation share): part of a headline series is classification, and the post
+dates it. *If null*: the post publishes the first decomposition of the residual into `none` and
+`not_classified` across waves and surfaces, and states what June 2026 makes undecomposable.
+
+**Economic Index cut (proposed).** `facet == collaboration`, `variable == collaboration_pct`,
+**including** the `none` and `not_classified` nodes, at `geography == global` for both Claude.ai and
+the 1P API in `release_2025_09_15`, `release_2026_01_15` and `release_2026_03_24` — the long family
+sums to 100 including both residual nodes, so the residual is decomposable there
+(`ATLAS §Other bases`). `release_2026_06_26` is reported as a boundary: it has no `not_classified`
+node at all and its gap to 100 "mixes unclassified and suppressed and is not decomposable"
+(`§Cuts 24`).
+
+**Supplementary data.** None.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design. `none` and `not_classified` mean different things — the attribute is
+absent, against privacy-filtered or unclassifiable — and only their sum is comparable across waves if
+either label is missing in a wave. If it bites, the decomposition is partly a labelling artefact;
+the post reports both nodes separately, states which waves publish which, and refuses the June wave
+rather than interpolating it.
+
+**Mentor interests.** ⟨mentor⟩ the base-dependence of the automation construct underlies his α
+weighting: "A task that sees only augmentative uses … would have α_t equal to 0.5"
+(`labor-market-impacts-2026-03-appendix`, Definitions 10–11, p.3).
+
+**Institute agenda.** `ED-7`; `Share 1`.
+
+---
+
+## LL-34 — Can a model launch be seen in what people ask AI to do?
+
+**Thread.** T1, with T8.
+
+**Ledger items.** `L-2025-03-R2-17` *open* (the window is the 11 days after a model launch; launch
+effect and diffusion are never separated — "the corpus's only natural experiment on a lab-controlled
+lever"); `L-2025-03-R2-16` *open* (the v1→v2 comparison is never re-run through one pipeline);
+`L-2025-03-R2-09` *open* (the three-way fork: diffusion, novel applications of coding, or capability
+improvement).
+
+**Closest existing answer and why it falls short.** `economic-index-2025-03-report` measures usage 11
+days after the Claude 3.7 Sonnet launch and reports category shifts, offering three explanations and
+testing none; its own methodology section concedes the classifier changed and the relevance filter
+was dropped between the two waves. The corpus therefore contains a pre/post pair around a
+lab-controlled event and no attempt to read it as one.
+
+**External literature checked.** Chatterji et al. (2025) [abs] — documents usage composition
+shifting around model releases on a much longer series, and reports that multimedia usage rose after
+an April 2025 model update, the nearest external evidence that launches move the mix. Bick et al.
+(2026) [abs] — quarterly adoption levels, no event structure. Misra et al. (2025) [abs] — notes a
+South Korean adoption jump around a model's language capability improvement. Nobody has used a
+provider's own pre/post release pair as an experiment.
+
+**Why it matters.** `ED-8` asks whether there are "dials that AI companies … might turn to control
+the rate of AI diffusion on a sector-by-sector basis", and the answer depends on whether a
+capability release changes *what* people bring rather than only how much. This is the only pair in
+the released data that sits either side of such an event, and its confounds are documented well
+enough to bound.
+
+**Contribution.** *If it holds* (the task mix shifts beyond what the pipeline change can explain):
+a capability release is visible in the task mix, and the post gives the first estimate of a dial's
+effect. *If it fails*: the shift is within the range the classifier swap and the dropped filter can
+produce, so the corpus's one natural experiment cannot be read — which retires the item honestly.
+*If null*: the post publishes the decomposition of the v1→v2 difference into base change, filter
+change and mix change, which is the audit the second report's methodology section invites.
+
+**Economic Index cut (proposed).** `release_2025_03_27`: `task_pct_v1.csv` against `task_pct_v2.csv`
+(3,514 / 3,365 tasks) and `automation_vs_augmentation_v1/_v2.csv`, on the five-classified-pattern
+base with the v1 universe difference stated — v1 sums to 84.209 and v2 to 99.9965, and **"v1" in a
+later folder *is* the February 2025 release**, i.e. December 2024 and Claude 3.5 Sonnet, not an
+independent window (`ATLAS §Traps 26`, §Conventions "The v1/v2 base difference"). The two task lists
+are not a panel: 733 v1-only and 584 v2-only (`ATLAS §Family A`).
+
+**Supplementary data.** None.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design, and it may be fatal: three things changed at once between the two files —
+the model, the classifier and the occupational-relevance filter — and the release publishes no
+counts, so nothing can be tested. If it bites, the post can only bound the mix change against the
+base change and must report that the experiment is not identified; the steward should be asked
+whether that bound is worth a post at all, and if not this candidate should be deleted.
+
+**Mentor interests.** none; the item predates his authorship.
+
+**Institute agenda.** `ED-8` (can AI diffusion be modulated).
+
+---
+
+## LL-35 — Do places that started using AI earlier get more out of it?
+
+**Thread.** T6, with T2.
+
+**Ledger items.** `L-2026-03-R5-23` *open* (tenure × geography is never reported, though country
+fixed effects enter the specification — "the direct test of the self-reinforcing-advantage
+conjecture"); `L-2026-03-R5-15` *open* (the promise to isolate cohort and survivorship bias from
+learning-by-doing); `L-2026-03-R5-11` *open* (whether the benefits of early adoption are
+self-reinforcing).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-03-report` ch.2 establishes
+the tenure gradient at user level — long-tenure users are 3–5pp more likely to have a successful
+conversation — and states that cohort and survivorship bias cannot be cleanly separated from
+learning in one cross-section. The report names geography as the dimension where the
+self-reinforcing conjecture would show, runs country fixed effects, and never reports the
+interaction. No release carries tenure at any grain, so geography is the only cohort proxy the
+public data supports.
+
+**External literature checked.** Bick, Blandin, Deming & Schumacher (2026) [full] — the external
+mechanism: "workers who have used generative AI for at least six months adopt it for more of their
+work tasks", and experience rather than demographics drives adoption; measured on workers, not
+places. Humlum & Vestergaard (2025) [abs] — firm-led investment raises the benefits reported by
+users, an organisational analogue of the same story. Misra et al. (2025) [abs] — adoption levels and
+changes by economy with no outcome measure. Nobody has tested whether earlier-adopting *places* show
+better AI outcomes.
+
+**Why it matters.** The self-reinforcing-advantage conjecture is the distributional claim the fifth
+report makes and does not test, and it is the mechanism behind the Institute's worry that benefits
+concentrate in already-rich regions. A geography-level cohort test is the only version available on
+public data, and its result bears on whether convergence in *usage* implies convergence in *benefit*.
+
+**Contribution.** *If it holds* (earlier-adopting countries show higher success today, holding task
+mix and income): early adoption compounds into outcomes, and the post supplies the first
+geography-level evidence for the conjecture. *If it fails*: later adopters do as well, which is
+evidence against self-reinforcing advantage and for the adoption-curve reading. *If null*: the post
+publishes the cohort proxy with its MDE and states what a real cohort test would require — which is
+the promise the fifth report has not kept.
+
+**Economic Index cut (proposed).** Early-adoption proxy: a country's `usage_pct` and rebuilt
+per-capita usage in `release_2025_09_15` (4–11 Aug 2025). Outcome: `task_success` `yes` share at
+`geography == country` in `release_2026_03_24` (5–12 Feb 2026), with `release_2026_01_15` as the
+intermediate point. Controls: `human_education_years` at country, GDP per working-age capita, and the
+global `onet_task::task_success` benchmark to hold task mix constant. Balanced panel of countries
+above 200 conversations in all three waves; country `not_classified` share reported beside every
+rate, since the steward measured it at a median 26.67% / 21.43% for this facet.
+
+**Supplementary data.** `working_age_pop_2024_country.csv` and `gdp_2024_country.csv` from
+`release_2025_09_15/data/intermediate/`.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design. Early adoption at country level is collinear with income and with the
+tech-worker share, and the outcome is a classifier judgement whose classification rate varies by
+country — so a positive result has at least three readings. If it bites, the coefficient is an income
+coefficient; the pre-registration states the income and composition controls in advance and reports
+the result with and without them, and the post's claim is about places, never about users.
+
+**Mentor interests.** ⟨mentor⟩ "These observed differences in success rates could deepen inequalities
+in the labor market… early adopters with high-skill tasks have more successful interactions with
+Claude than later, less technical adopters" (`economic-index-2026-03-report`, OQ 21, p.20).
+
+**Institute agenda.** `ED-1`; `ED-5`; `ED-10`.
+
+---
+
+## LL-36 — Is coding still the leading edge of AI use, or just its largest share?
+
+**Thread.** T7, with T1.
+
+**Ledger items.** `L-2025-04-SWE-11` *open* (which software development roles change the most, and
+which might disappear); `L-2025-04-SWE-14` *open* (the conjecture that jobs centred on simple
+applications and user interfaces face earlier disruption);
+`L-2025-03-R2-09` *open* (whether growth in other categories is diffusion, novel applications of
+coding, or capability).
+
+**Closest existing answer and why it falls short.** The Computer & Mathematical share is the
+corpus's most-cited series — 37.2% in the first paper, a peak of 40% in March 2025, 34% in November
+2025, 35% in February 2026, with the API "edged higher … to 46%" — and it is always reported as one
+number. No publication decomposes it: whether coding's share is falling because non-coding grew or
+because coding itself narrowed, and whether the coding tasks being used are the same ones. The
+fifth report attributes movement to Claude Code splitting calls and never tests it inside the
+category.
+
+**External literature checked.** Chatterji et al. (2025) [abs] — "Computer programming and
+self-expression both represent relatively small shares of use", and technical help fell from about
+12% to 5% of messages, a sharply different picture on a consumer product. Tomlinson et al. (2025)
+[abs] — notes that "Conversational studies of Anthropic's Claude model show more emphasis on
+computer and math tasks". Brynjolfsson, Chandar & Chen (2026) [abs] — young software developers' 
+employment down about 20% from late 2022. Nobody decomposes the coding share inside a provider's
+own series.
+
+**Why it matters.** The Institute's headline evidence that "jobs like software engineering are
+changing radically" is this thread, and the policy reading of the Index assumes coding is the
+leading indicator for knowledge work. If coding's share is falling while its internal composition
+shifts toward narrower, more agentic work, the leading-indicator reading changes; if the share is
+falling because everything else grew, coding is simply being diluted.
+
+**Contribution.** *If it holds* (coding's internal composition narrows as its share falls): the
+leading-edge reading survives and the post shows which coding tasks are now carrying it. *If it
+fails* (the share falls with composition flat): coding is being diluted by diffusion elsewhere, and
+"software engineering is changing radically" is not what this series says. *If null*: the post
+publishes the first within-category decomposition of the corpus's most-quoted share, with the
+taxonomy breaks marked.
+
+**Economic Index cut (proposed).** `onet_task` L0 `onet_task_pct` at `geography == global` for
+Claude.ai and the 1P API in `release_2025_09_15`, `release_2026_01_15` and `release_2026_03_24`,
+aggregated to SOC major group 15 (Computer & Mathematical) through the shipped O*NET 20.1
+statements, with within-category concentration (share of the category's mass in its top ten tasks)
+computed per wave; `release_2025_02_10` and `release_2025_03_27` reported separately on their own
+base (`pct_occ_scaled`, `ATLAS §Conventions`), and `release_2026_06_26` reported separately again
+because it rebuilt on O*NET 30.2.
+
+**Supplementary data.** None beyond the shipped O*NET statements.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Data. The category is reconstructed through an external task → SOC join in the
+waves that ship no `soc_occupation` facet, and the published category share depends on the
+allocation rule (which is LL-32's subject), so a within-category concentration series inherits two
+construction choices. If it bites, the level of the category share will not match the published
+34–35% and the post must report the reconstruction gap before the decomposition.
+
+**Mentor interests.** ⟨mentor⟩ T3(e): the migration of coding work to the API as his stated leading
+indicator (`economic-index-2026-03-report`, OQ 17–19).
+
+**Institute agenda.** `ED-7`; the agenda's own evidence claim (`institute-agenda-2026-05`, *Lead ¶4*).
+
+---
+
+## LL-37 — What would an early-warning signal built on AI usage data actually fire on?
+
+**Thread.** T5, with T10 and T8.
+
+**Ledger items.** `L-2026-05-IAGD-06` *open* ("We'll try to be an early warning signal" — no
+publication defines a trigger, threshold or lead time); `L-2026-03-LMI-22` *open* (the framework
+"could help identify the most vulnerable jobs before displacement is visible");
+`L-2026-06-EPF-20` *open* (the tier triggers are never operationalised, with no rule for
+distinguishing a 5% from a 10% world in real time).
+
+**Closest existing answer and why it falls short.** `institute-agenda-2026-05` promises the
+early-warning function, `economic-policy-framework-2026-06` indexes its three tiers to the
+unemployment rate, and `labor-market-impacts-2026-03` offers the framework as the instrument. The
+ledger records that no publication anywhere in the corpus defines a trigger, a threshold or a lead
+time, and the recurring-items list files this as R12, promised across four publications and
+undemonstrated in all of them.
+
+**External literature checked.** Brynjolfsson, Chandar & Chen, "AI Economic Indicators: June 2026
+Update" [abs] — the closest thing that exists: a monthly indicator dashboard with a "Takeoff
+Tracker", which states that occupations with a higher automation ratio see smaller employment
+increases and that TFP growth shows "no evidence of a break from recent levels". Audoly, Guerin &
+Topa (2026) [abs] — tests exposure against postings and finds the divergence predates ChatGPT.
+Frank et al. (2026) [abs] — finds exposed-occupation unemployment rising from early 2022, before the
+launch. All three are outcome-side indicators; none defines a trigger on the *usage* side, which is
+the only side Anthropic controls and the side it promised.
+
+**Why it matters.** This is the Institute's most repeated public promise and its least specified
+one. A post that constructs candidate triggers from released usage data, states their false-positive
+rate across the six windows, and reports what lead time is even arithmetically available, converts a
+slogan into a specification — or shows that the released cadence cannot support one, which is an
+argument for the cadence Anthropic said it would provide.
+
+**Contribution.** *If it holds* (a usage-side trigger persists across windows and is not fired by
+noise): the post supplies the first defined early-warning rule with its false-positive rate. *If it
+fails*: the released series cannot support a trigger, and the post says precisely why — window
+spacing, taxonomy breaks, or noise. *If null*: the post publishes the arithmetic of lead time
+against six windows in eighteen months with gaps of two to five months, which bounds every
+early-warning claim the corpus makes.
+
+**Economic Index cut (proposed).** The six released windows as a series of cross-sections (Dec 2024,
+Feb–Mar 2025, 4–11 Aug 2025, 13–20 Nov 2025, 5–12 Feb 2026, April and May 2026,
+`ATLAS §Cuts 27a`): candidate triggers built from (i) the five-pattern automation share by task at
+global (`onet_task::collaboration`), (ii) `observed_exposure` from
+`labor_market_impacts/job_exposure.csv` as the occupational weight, and (iii) task-share growth on
+the matched `onet_task` panel (2,284 nodes common to the three long waves). Each trigger scored on
+persistence across adjacent windows and on how often it fires in a window whose next window does not
+confirm it.
+
+**Supplementary data.** BLS Employment Projections on `occ_code` (755 of 756 matched) to express any
+trigger in employment terms; no outcome series is claimed, because none ships in any release
+(`ATLAS §Cuts 29`).
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design, and it is the scope risk: a trigger is only an early warning if something
+later confirms it, and no outcome series is in the data, so the post can measure persistence and
+false-positive rates but not predictive validity. If it bites, the honest framing is "what a trigger
+could look like and how often it would fire spuriously", not "here is a working early-warning
+signal" — and the post must refuse the stronger claim in its title as well as its text.
+
+**Mentor interests.** ⟨mentor⟩ "This framework is most useful when the effects are ambiguous—and
+could help identify the most vulnerable jobs before displacement is visible"
+(`labor-market-impacts-2026-03`, p.3); ⟨mentor⟩ "An established approach may help future observers
+separate signal from noise" (ibid. p.14).
+
+**Institute agenda.** `Share 1` (early warning); `ED-7`.
+
+---
+
+## LL-38 — Which of the scenario model's parameters can AI usage data actually discipline?
+
+**Thread.** T11, with T4 and T8.
+
+**Ledger items.** `L-2026-09-SCPA-18` *open* ("Each parameter underpinning our scenario explorer is
+something we can potentially measure … those data will tell us which scenario we are in. Today, none
+of the three can be ruled out" — the corpus's clearest published measurement agenda, executed
+nowhere); `L-2026-09-SCEX-09` *open* ("How can we tell?" — no indicator or diagnostic is offered);
+`L-2026-09-SCPA-29` *open* (only two parameters get a sensitivity table).
+
+**Closest existing answer and why it falls short.** `econ-scenarios-paper-2026-09` p.38 names five
+measurable parameters and says the data will tell us which scenario we are in; the explorer says the
+model "will inform the research Anthropic funds". Neither measures any parameter. The steward has
+established what the released data can do for two of them — ψ has an observable analogue, m does not
+reproduce at all — and nothing in the corpus assembles the parameter-by-parameter position.
+
+**External literature checked.** Acemoglu (2025) [abs] — an independent task-share calibration, a
+rival parameterisation rather than a measurement. Bick et al. (2026) "Mind the Gap" [abs] —
+aggregate time savings of 2.3% of US hours, which speaks to the per-instance gain parameter.
+Humlum & Vestergaard (2025) [abs] — ~3% time savings and null earnings effects, the same parameter
+from a survey. Census "Microstructure of AI Diffusion" (2026) [abs] — 18% of firms using AI in a
+business function, 32% employment-weighted, which is the diffusion parameter. The parameters have
+external evidence; nobody has mapped that evidence onto the model's own dials.
+
+**Why it matters.** The explorer is the Institute's public instrument and its central defence is
+that its parameters are measurable. A post that says, dial by dial, which can be measured from
+released usage data, which needs an external series, and which cannot be measured at all — with the
+bound where one exists — is the audit the paper invites and the fastest way to make the model
+falsifiable. It moves the prior of anyone treating the three scenarios as equally supported.
+
+**Contribution.** *If it holds* (most dials can be bounded): the post supplies the first measured
+bracket around the scenarios and names which is closest to today. *If it fails* (most cannot): the
+model's measurability defence does not survive contact with its own company's released data, stated
+parameter by parameter. *If null*: the post publishes the audit table with the reproduction status of
+each parameter — including that the published m = 0.14 reproduces from nothing public while its
+superseded 0.12 reproduces at 0.116534 — which is a service to every later user of the explorer.
+
+**Economic Index cut (proposed).** Per parameter: **ψ** from the five-classified-pattern automation
+series across seven windows (the steward's 42.5538 → 48.6190); **m** from
+`labor_market_impacts/job_exposure.csv` at BLS-EP employment weights (0.116534 on the
+all-employment denominator, against a published 0.14 that reproduces from nothing);
+**a** from `onet_task::human_only_time` and `onet_task::human_with_ai_time` at global in the two 2026
+waves, with the unit trap stated (`ATLAS §Traps 8`); **d** flagged as external only (Census BTOS,
+the only BTOS file in the repository being the national workbook in
+`release_2025_09_15/data/input/`); the two search frictions flagged as unmeasurable from any release.
+
+**Supplementary data.** BLS Employment Projections for the m weights; the published BTOS national
+workbook for d, cited as the paper's own anchor rather than re-estimated.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design — scope. Four parameters in one post risks four thin analyses instead of one
+finding, which is exactly the failure the team's lesson 5 records. If it bites, the post sprawls; the
+pre-registration therefore fixes one confirmatory quantity per parameter, caps the exploratory
+allowance, and states in advance that the deliverable is an audit table with two bounded dials, not
+four estimates.
+
+**Mentor interests.** none as an author; ⟨mentor⟩ the affected-mass anchor is his measure
+(`econ-scenarios-paper-2026-09`, p.25, citing Massenkoff and McCrory 2026), and the corpus's clearest
+instance of one mentor publication being discounted against another runs through it.
+
+**Institute agenda.** `ED-4`; `ED intro ¶2`; `ED-5`.
+
+---
+
+## LL-39 — When the ruler changed, did AI use change with it?
+
+**Thread.** T8, with T1 and T4.
+
+**Ledger items.** `L-2026-06-R6A-10` *open* (no old-versus-new agreement rate, so no reader can tell
+how much of any change between the fifth and sixth reports is the new classifier plus O*NET 30.2 —
+"the load-bearing omission for any cross-wave comparison");
+`L-2026-03-R5A-05` *open* (the O*NET vintage change is asserted and never bounded);
+`L-2026-06-R6-20` *open* ("A chat transcript no longer fully captures how people are using AI, and
+our methods … have had to rapidly adapt").
+
+**Closest existing answer and why it falls short.** `economic-index-2026-06-appendix` validates the
+rebuilt two-step classifier with seven WildChat examples, two of them adjudicated by the authors, and
+publishes no agreement rate, no position-bias test and no tie-break reliability figure. The fifth
+report's 2019 O*NET-SOC recode is scoped to one figure and never quantified. So the corpus's largest
+measurement break is documented as a list of changes with no estimate of what they did.
+
+**External literature checked.** Bick, Blandin, Deming & Schumacher (2026) [full] — the external
+argument that chat-log classification is conceptually fragile, which this candidate turns into a
+measurement. Chatterji et al. (2025) [abs] — reports usage series across taxonomy revisions on one
+product without publishing a bridge either. Tomlinson et al. (2025) [abs] — validates its classifier
+against user feedback, the standard this wave does not meet. No external work can measure Anthropic's
+break, because it needs the released files either side of it.
+
+**Why it matters.** Every cross-wave statement the programme might make — and every one Anthropic
+makes — runs across this boundary, and the steward has just shown that three primitive levels break
+at it: `ai_autonomy` falls from 3.407 to 2.72/2.74 with no announced rescaling, and the two time
+primitives move with it. If quantities that should be continuous jump at the boundary while the
+collaboration facet (whose taxonomy did not change) does not, the break is in the ruler. That is a
+prerequisite for anyone comparing June 2026 with anything.
+
+**Contribution.** *If it holds* (quantities whose taxonomy changed jump while the unchanged facet
+does not): the June wave's discontinuity is a measurement artefact, and the post supplies the first
+estimate of its size, metric by metric. *If it fails* (everything moves together): the change is
+behavioural and the sixth report's numbers can be compared with the fifth's. *If null*: the post
+publishes the boundary audit — which metrics are comparable across it and which are not — which is
+the bridge the appendix omitted and every later user needs.
+
+**Economic Index cut (proposed).** Quantities available either side of the 2026-03-24 → 2026-06-26
+boundary, each in its own base: the five-pattern automation share (taxonomy unchanged from 2025-02-10
+to 2026-06-26, `ATLAS §Conventions`); `ai_autonomy_mean`, `human_only_time_mean` and
+`human_with_ai_time_mean` (the three the steward found breaking, with the units trap,
+`§Traps 8`); `task_success` (a facet in the long waves, a metric in June); and the `onet` ladder's
+node counts and top-ten concentration, reported as **not** comparable and used as the control. The
+1P API leg is excluded throughout, because its population changes at exactly this boundary
+(`§Components`).
+
+**Supplementary data.** None.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design. A jump at a boundary where several things changed at once cannot be
+attributed to any one of them, and the June wave publishes no counts, so nothing can be tested. If
+it bites, the post reports magnitudes and a ranking of which quantities are safe to compare, without
+attributing the break to the classifier, the O*NET vintage or the window — and that is still the most
+useful thing anyone can say about the boundary.
+
+**Mentor interests.** ⟨mentor⟩ he is first named author of the wave that made the break
+(`economic-index-2026-06-report`, p.1) and lead author of the wave before it, so the two endpoints
+are both his.
+
+**Institute agenda.** `Share 1` (granularity and cadence); `WILD-6`.
+
+---
+
+## LL-40 — How much of the world's AI use can the Index actually show?
+
+**Thread.** T8, with T2.
+
+**Ledger items.** `L-2025-09-R3-15` *open* (the privacy filters, with no suppression flag anywhere,
+so absent ≠ zero); `L-2026-06-R6-01` *open* (cells with insufficient observations are filtered and
+no count metric exists in that wave); `L-2026-06-R6A-14` *open* (no sample sizes anywhere and no
+uncertainty on any published number).
+
+**Closest existing answer and why it falls short.** Every release documents that cells below a
+privacy floor are dropped, and no release publishes a suppression flag or a count of suppressed
+cells. The atlas has measured the consequence in three places — country `usage_pct` sums to 82.03 and
+87.49 in the two June months, a median country accounts for 55% of itself at June `request` L0, and
+the steward has now added that a country's named-task mix covers only about 30% of its own
+conversations. No publication states any of this, and external users of the released files have no
+way to know it.
+
+**External literature checked.** Bick, Blandin, Deming & Schumacher (2026) [full] — publishes
+`number_observations` for every cell of both its indexes, which is the disclosure standard this
+candidate measures the Index against. Tomlinson et al. (2025) [abs] — publishes activity shares with
+a stated 0.05% coverage screen. Misra et al. (2025) [abs] — states its own volume and population
+floors explicitly. Anthropic is the only one of the four whose published cells cannot be sized, and
+nobody has quantified the gap.
+
+**Why it matters.** The Institute's data-sharing promise and the independent-research programme both
+rest on outsiders being able to use the released files, and the Economic Policy Framework asks
+governments for exactly the granularity Anthropic itself suppresses silently. A published accounting
+of what share of usage is visible at each grain is what an external researcher needs before using
+the Index at all — and it is the measurement the corpus has never made about itself.
+
+**Contribution.** *If it holds* (coverage is high at the grains people use): the released files are
+more usable than the atlas's fill tables suggest, stated grain by grain. *If it fails*: a large part
+of usage is invisible at the grains the reports headline, and the post gives the numbers an external
+user needs to decide what to trust. *If null*: the post publishes the coverage accounting with the
+one wave where it cannot be computed at all (June 2026, no counts) named as the limit case.
+
+**Economic Index cut (proposed).** Coverage accounting at every grain that publishes counts:
+`usage_count`, `onet_task_count`, `request_count` and `collaboration_count` against the
+corresponding `_pct` sums, at `global`, `country` and `country-state` in `release_2025_09_15`,
+`release_2026_01_15` and `release_2026_03_24` (privacy floor exactly 15 in all three, denominators
+964,494 / 999,875 / 1,000,000); the `none`/`not_classified` mass by grain; and `release_2026_06_26`
+reported as the case where the accounting is impossible because no count metric of any kind exists
+(`ATLAS §Cuts 17`), using the `pct`-sum shortfall (82.03 / 87.49) as the only available proxy.
+
+**Supplementary data.** None.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Design. Much of this is already in the atlas, so the post risks being a summary of
+the team's own internal document rather than a contribution. If it bites, the post has no finding of
+its own; the pre-registration therefore fixes the contribution as the *cross-wave, cross-grain*
+accounting the atlas records only wave by wave, plus the comparison against the three external
+publishers' disclosure standards, which the atlas does not make.
+
+**Mentor interests.** none directly; the measurement bears on ⟨mentor⟩ interest 3, stating a design's
+power (`labor-market-impacts-2026-03`, p.12).
+
+**Institute agenda.** `Share 1`; `WILD-6`; the EPF measurement ask (PDF p.5).
+
+---
+
+## LL-41 — Does the threshold behind AI's published productivity number survive being moved?
+
+**Thread.** T4, with T11.
+
+**Ledger items.** `L-2026-01-R4-16` *open* ("We choose a threshold of 0.02% because it replicates our
+previous results … If we do not impose a restriction … the implied aggregate labor productivity
+growth … would be roughly 5% percentage points per year" — the single most consequential
+undocumented free parameter in the productivity chain);
+`L-2026-01-R4-17` *open* (tasks without observed speedup are assumed to have none);
+`L-2025-11-PROD-21` *open* (no uncertainty is propagated to the 1.8%).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-01-report` fn 6 pp.52–53
+states the threshold, states that dropping it takes the headline from 1.8pp to roughly 5pp, and
+justifies the choice by its ability to replicate the earlier result. That is the whole of the
+sensitivity analysis: one alternative, reported in a footnote, with no curve between the two points
+and no interval on either. The productivity number is the corpus's most quoted aggregate.
+
+**External literature checked.** Humlum & Vestergaard (2025) [abs] — ~3% average time savings and
+null earnings effects, an order of magnitude below the estimator-based figure. Bick et al. (2026)
+"Mind the Gap" [abs] — aggregate time savings of 2.3% of US hours. METR (2025) [abs] — a measured
+19% slowdown against a forecast speedup. Acemoglu (2025) [abs] — a much smaller macro number from a
+task-share calibration. The external literature brackets Anthropic's estimate from below; nobody has
+examined the threshold that sets it.
+
+**Why it matters.** Anthropic's own scenario paper discounts this estimate by a factor of four, the
+Institute cites it, and policy readers quote the 1.8pp. If the number moves monotonically and
+steeply with an undocumented inclusion threshold, then the published figure is a choice about which
+tasks count, and the honest headline is a range. This is the cheapest available audit of the
+corpus's most-quoted number.
+
+**Contribution.** *If it holds* (the estimate is flat over a defensible threshold range): the
+published number is robust where it matters and the post says over what range. *If it fails*: the
+headline is a function of the threshold, and the post publishes the curve between 1.8pp and 5pp that
+the footnote only anchors at two points. *If null*: the post publishes the task-set and mean-speedup
+consequences of the threshold without the aggregate — which is still the first sensitivity curve
+anyone has drawn on it.
+
+**Economic Index cut (proposed).** The threshold acts on the task set, so the reproducible object is
+the task set and its speedup distribution: `onet_task_pct` at `geography == global` with
+`onet_task::human_only_time` and `onet_task::human_with_ai_time` in `release_2026_01_15` and
+`release_2026_03_24`, sweeping the inclusion threshold from 0 to 0.1% and reporting, at each point,
+the number of tasks retained, their share of usage mass, and the usage-weighted mean speedup with
+the wave's unit convention (`ATLAS §Traps 8`). The aggregate itself needs employment weights that
+ship in no 2026 release (`§Cuts 29`), so it is rebuilt only as an external-join extension and
+labelled as such.
+
+**Supplementary data.** BLS Employment Projections and the shipped O*NET 20.1 statements for the
+Hulten-style weights, with the merge audit printed; the 1.8pp and ~5pp figures quoted as published,
+never rebuilt.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Data. The published aggregate needs conversation-level speedups and a wage-bill
+weighting that no release ships, so the post cannot reproduce 1.8pp and therefore cannot show the
+aggregate's threshold curve directly. If it bites — and the atlas says it will (`§Cuts 29`, "Blocked
+as published") — the post's object is the task set and its mean speedup, with the aggregate discussed
+only through the published endpoints, and the title must not promise more.
+
+**Mentor interests.** ⟨mentor⟩ T4(e): he is lead author of the report carrying the threshold and the
+success adjustment (`economic-index-2026-01-report`, p.1, ch.4).
+
+**Institute agenda.** `ED-4`; the Research Fund's productivity-measurement priority.
+
+---
+
+## LL-42 — Is the income gradient in AI use about how much people ask, or about what they ask for?
+
+**Thread.** T2, with T1 and T4.
+
+**Ledger items.** `L-2025-09-R3-21` *open* ("What determines AI adoption across countries and within
+the US?"); `L-2026-01-R4-31` *open* (three candidate explanations for the use-case gradient by
+income, none tested); `L-2025-09-B3-01` *open* (as GDP per capita rises, use shifts away from
+Computer and Mathematical tasks).
+
+**Closest existing answer and why it falls short.** `economic-index-2026-01-report` Fig 3.2 p.30
+reports the use-case gradient by income (coursework r = −0.542, personal r = 0.681, work not
+significant at p = 0.131) and Fig 3.3 the AUI–GDP elasticity of 0.70; the September report gives the
+task-mix version. The two are always reported separately, so nothing says how much of the income
+gradient in *usage per person* is the same phenomenon as the income gradient in *what is used for*.
+The report itself lists three explanations and tests none.
+
+**External literature checked.** arXiv 2605.30685, "How Early Adopters Used Generative AI
+Worldwide" [abs] — the closest external work: schooling use is most prevalent in lower-income
+countries and leisure use rises with income, on a different platform's data, and it does not
+decompose an adoption gradient into intensity and mix. Chatterji et al. (2025) [abs] — growth faster
+in lower-income countries, with topic mix by income. Bick et al. (2026) "Mind the Gap" [abs] —
+attributes cross-country adoption gaps to demographics and firm composition, i.e. to who is using
+rather than to what for. The decomposition is unmade.
+
+**Why it matters.** `ED-1` asks what determines whether a place can access AI and how it captures
+value. Those are two questions, and the Index has two gradients that are always reported as one
+story. If richer countries differ mainly in intensity, access is the binding constraint; if they
+differ mainly in mix, then value capture is, and the policy implication changes from connectivity to
+capability. It moves the prior of anyone reading the 0.70 elasticity as a statement about access.
+
+**Contribution.** *If it holds* (the gradient is mostly intensity): access and volume are the story,
+and the post says how much of the income relationship survives holding the use-case mix fixed.
+*If it fails* (mostly mix): richer places use AI for different things and the same elasticity means
+something else, which the post states with the mix-adjusted elasticity. *If null*: the post publishes
+the first joint decomposition of the two published gradients with its MDE at 111–115 countries.
+
+**Economic Index cut (proposed).** `release_2025_09_15` enriched, `geography == country`: the AUI,
+`gdp_per_working_age_capita`, `working_age_pop` and the `onet_task` and `request` mixes in one file
+(the only wave where all of these co-exist, `SB2 14`); and `release_2026_01_15` /
+`release_2026_03_24` for the `use_case` facet at country grain, whose income axis must come from the
+2025-09-15 GDP file because the 2026 waves ship none (`§Cuts 22, 29`). Decomposition of the
+AUI–income elasticity into a within-mix component and a mix-composition component, at `request` L1/L2
+where cell fill permits and never at `onet_task` L0 below global (`§Cuts`, Family B fill table).
+
+**Supplementary data.** `gdp_2024_country.csv` and `working_age_pop_2024_country.csv` from
+`release_2025_09_15/data/intermediate/`.
+
+**Steward feasibility line.** pending — see
+`room/lead-2026-09-16-longlist-feasibility-batch-3.md`.
+
+**Biggest risk.** Data. The decomposition wants the AUI, income and the use-case mix in one wave, and
+no wave has all three: the AUI and GDP are in August 2025, `use_case` arrives in November 2025. If it
+bites, the post either decomposes on the task mix in 2025-09-15 (available, but not the use-case
+gradient the fourth report published) or splices two waves, which the programme's own rules
+discourage. The steward's ruling on which of the two is admissible determines whether this candidate
+survives.
+
+**Mentor interests.** ⟨mentor⟩ "lower income, less educated countries paradoxically showing more
+complex use in some cases" (`economic-index-2026-03-report`, OQ 13, p.17).
+
+**Institute agenda.** `ED-1`; `ED-3`.
+
+---
+
 ## Deletions
 
 | ID | question | deletion reason |
 |---|---|---|
-| — | — | none yet; no steward feasibility line has been returned |
+| LL-25 | Is the American geography of Claude the American geography of AI? | **Subsumed by LL-05**, on the steward's own pairing: "the pair I would name is **LL-05 / LL-25** — one design (Index AUI against the Microsoft diffusion series) at two geographies from the same provider" (`room/steward-2026-09-16-longlist-feasibility-batch-2-answers.md`, standing answer (c)). LL-25 was FEASIBLE WITH CAVEAT, not refused, so this is the lead's deletion, not the steward's: it has strictly less power than LL-05 (N = 51 on a single external quarter, Q1 2026, against 100 countries overlapping both AUI waves) and there is no finer fallback, because the Index publishes no county or metro grain. The US-state leg survives as a pre-registered robustness cut inside LL-05's brief, with the steward's audit carried over: `data/US/State_Rankings_2026Q1.csv` is 51 rows with a `State Abbr` column matching the August 2025 `state_us` ids 51 of 51, no crosswalk needed. The two ledger items LL-25 carried that LL-05 does not — `L-2026-01-R4-09` (the country/state level-dependence) and `L-2026-07-CONN-04` (state-by-use-case reliability) — are picked up by LL-27 and LL-22 respectively, so nothing on the ledger is dropped by this deletion. |
