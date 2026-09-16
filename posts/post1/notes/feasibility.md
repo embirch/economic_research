@@ -293,8 +293,9 @@ conversations. Losses are small and audited: 5 / 12 / 12 tasks have a classified
 The brief's expectation ("well below the nominal 2,617 / 3,169 / 3,259") is confirmed and then
 some: the effective N is **3–4% of nominal**, and the top wage quartile — the quartile the
 headline difference depends on — has an effective N of **11.5 to 16.5 tasks**. Quartile
-boundaries on usage-weighted wage are $25.78 / $34.6–35.8 / $43.40 in every wave (Q4 = $43.40 to
-$100.00/hr), and each quartile holds 199k–248k classified conversations.
+boundaries on usage-weighted wage are $25.78 / $35.79 / $43.40 (Aug), $25.78 / $34.56 / $43.40
+(Nov) and $24.00 / $34.40 / $43.40 (Feb) — Q4 runs $43.40 to the $100.00/hr top code in all three
+— and each quartile holds 199k–248k classified conversations.
 
 **H1 / H2 (price gradient, either sign) — data exists at the grain and coverage assumed.** The
 three global frames, the same-wave weights, the wage and the five-pattern base are all in place
