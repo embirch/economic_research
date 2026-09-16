@@ -156,8 +156,9 @@ at all in this rerun** — its single earlier use, LL-18 over LL-12, is now moot
 score.
 
 **Short-list, nine:** LL-07, LL-09, LL-11, LL-12, LL-18, LL-24, LL-30, LL-31, LL-36.
-**New entrants needing a sketch, a referee audit and an editor note:** LL-12, LL-24, LL-30.
-**Reserves, in order:** LL-20 (24, FEAS 5), then LL-16, LL-33, LL-41 (24).
+**Reserves, in order (correction 18):** LL-20 (24, FEAS 5), then **LL-33 and LL-41** (24, FOUND 5),
+then LL-16 (24, FOUND 4). The order runs down the stated tie-break chain: all four tie at TEACH 4,
+LL-20 leads on FEAS 5, and FOUND separates the remaining three.
 
 **What this rerun cost.** Four of my ten are gone: LL-01 and LL-22 as inherited framings, LL-02 on
 score after the permitted rewrite, and **LL-39 at 23**, which the referee's TEACH 3 and RISK 2 put
@@ -183,9 +184,11 @@ are adopted, and one carries over.
 2. **LL-09 and LL-11 — hard pair (referee).** They share an outcome variable: the November→February
    change in a task's Claude.ai share, and therefore the same exposure to the February Super Bowl
    inflow. Two posts resting on one series' movement would be one finding told twice.
-3. **LL-07 and LL-36 — construction pair (referee).** Both build the task → SOC join and both must
-   fix the multi-holder rule. Not a duplication of question, but whichever is written first states
-   the construction and the second cites it rather than re-deriving it.
+3. **LL-07, LL-36 and LL-30 — construction triple (referee, correction 19).** All three build the
+   task → SOC join and all three must fix the multi-holder rule; LL-30's reconstruction leg uses
+   exactly the same join, though its direct leg reads the occupation off the June node and needs
+   none. Not a duplication of question, but whichever is written first states the construction and
+   the others cite it rather than re-deriving it.
 4. **LL-12 and LL-36 — soft pair (referee).** Both work the global `onet_task` concentration frame;
    LL-12 on the whole task universe, LL-36 inside one occupational category. Written together they
    would read as one concentration post.
@@ -193,10 +196,10 @@ are adopted, and one carries over.
    across places against income and adoption. Separable if one is written on the primitive at
    country grain and the other on artifact shares at country and state grain, which is how the
    entries stand.
-6. **LL-24 and LL-30 — no overlap**, and worth saying so: the two new entrants sit on different
-   files (the labour-market folder; the global use-case intersections) and answer different
-   questions. Of the nine, **LL-36 is the most entangled**, appearing in three pairs, and LL-11 in
-   two.
+6. **LL-24 and LL-30 — no overlap**, and worth saying so: the two sit on different files (the
+   labour-market folder; the June `soc_occupation` nodes and the long-wave intersections) and answer
+   different questions. Of the nine, **LL-36 is the most entangled**, appearing in three pairs, and
+   LL-07, LL-11 and LL-30 in two each.
 
 Dissolved: LL-22/LL-39 and LL-02/LL-39 (all three candidates are out) and LL-01/LL-18 (LL-01 is out).
 One consequence survives its pair: LL-31 must now state the both-month and 0.5-floor admission rules
@@ -712,15 +715,19 @@ pooling, and the post supplies the non-cumulative series. *If null*: the post re
 the apparent flattening is taxonomy change rather than behaviour — a measurement result the corpus
 needs before any later wave is compared.
 
-**Design in brief.** For each of the three long waves separately, count the published task nodes,
-draw the Lorenz curve of task shares and take its Gini, and compute the share of each occupation's
-tasks observed within that one window. The comparison that carries the finding is the within-wave
-series against the published cumulative curve at the same three dates. Key number: the change in
-the within-wave task Gini from August 2025 to February 2026, beside the cumulative coverage figures
-the appendix publishes. Rough detectable effect: the three waves sit on samples within 3.7% of each
-other with an identical privacy floor of 15, so a change in published node count of more than a few
-per cent is not a sampling artefact; 2,284 nodes appear in all three, which is the base for the
-like-for-like leg.
+**Design in brief.** For each of the three long waves separately, and on the **union of the
+Claude.ai and 1P API named nodes** — because `economic-index-2026-03-appendix` Fig A.2 pools both
+surfaces and a Claude.ai-only series would not be its like-for-like counterpart (correction 11) —
+compute the share of occupations whose tasks are observed at 25%, 50% and 75% coverage **within that
+one window**, and the Lorenz curve and Gini of task shares as a cross-check. The comparison that
+carries the finding is the within-wave triple against the published cumulative 49 / 24 / 7. Key
+number: the within-wave share of occupations at ≥25% task coverage, wave by wave, beside the
+cumulative figure at the same dates. Because the privacy floor drops any cell below 15 conversations
+in a sample of about a million, the public within-wave coverage is a **lower bound** on the internal
+unfloored curve, so the three waves are compared on **shape and never on level** (correction 12).
+Rough detectable effect: not a sampling question but a floor question — the post reports how many
+nodes sit at counts of 15 to 20 in each wave, and bootstraps the coverage triple on the published
+counts, rather than asserting that a few per cent cannot be an artefact (correction 13).
 
 **Data.** Steward line, verbatim: "**LL-12. FEASIBLE.** Node counts are comparable across the three
 long waves: the privacy floor is exactly **15** in all three and the denominators are 964,494 /
@@ -739,18 +746,24 @@ post's discussion sets itself against rather than reproduces.
 
 **Risks, ranked.** (1) The published node count is bounded by how many tasks a fixed sample can
 reach, so breadth and sample size are not separable in levels — observed as node counts tracking
-the denominators; mitigated by reading breadth off the 2,284 common tasks and the scale-free Lorenz
-curve. (2) Taxonomy movement: the fifth report recoded to 2019 O\*NET-SOC for one figure — observed
-as the per-occupation denominators shifting between waves. (3) Suppression removes rare tasks first,
-which is where breadth lives — observed as the Gini moving with the `none`/`not_classified` mass.
+the denominators; mitigated by reading breadth off shape, off the 2,284 common tasks and off the
+scale-free Lorenz curve. (2) **Churn, which is the third reading beside saturation and pooling**:
+2,284 of 3,170 and 3,260 nodes are common to all three waves, so roughly 28% of the task set turns
+over between waves, and a flat coverage series can hide a changing set of occupations
+(correction 13) — observed as the common-node series and the all-node series diverging. (3) Taxonomy
+movement: the fifth report recoded to 2019 O\*NET-SOC for one figure — observed as the
+per-occupation denominators shifting between waves. (4) Suppression removes rare tasks first, which
+is where breadth lives — observed as the coverage triple moving with the `none`/`not_classified`
+mass.
 
 **What it teaches.** Whether the Index's own evidence on the corpus's oldest fork says breadth is
 growing, once the statistic can fall.
 
-**The imaginable close.** *Holds*: that AI reaches more of the work each time we look, and that the
-reaching is what the cumulative curve was hiding. *Fails*: that the widening belongs to the way the
-curve is drawn rather than to the work. *Null*: that a taxonomy which moves between waves cannot
-answer a question about breadth, and what a stable one would cost.
+**The imaginable close.** *Holds*: that the reach of AI across the work of an occupation grows from
+one window to the next, and that the published curve was right for a reason it could not
+demonstrate. *Fails*: that the widening belongs to the way the curve is drawn rather than to the
+work. *Null*: that a taxonomy which moves between waves cannot answer a question about breadth, and
+what a stable one would cost.
 
 **Mentor and Institute hooks.** ⟨mentor⟩ the adoption-curve reading — "early adopters favor specific
 high-value uses like coding, and later adopters take on a much wider range of tasks"
@@ -773,25 +786,32 @@ mindful of usage limits — offered and untested).
 **Why it matters.** Every occupational claim in the Index is built on conversations of which more
 than half are not work, and the occupational mapping does not know which is which. If the
 occupational mix of coursework and personal use differs sharply from that of work use, the headline
-occupational shares — and the exposure measure that gates on work usage — are averaging two
-different populations. The decision it informs is whether an economist can read an Index occupation
-share as a statement about that occupation's labour market at all.
+occupational shares — and `observed_exposure`, which gates on work usage through the
+`1{WorkUsage_t ≥ 100}` term — are averaging two different populations. What it decides is whether an
+economist can read an Index occupation share as a statement about that occupation's labour market
+at all.
 
 **Contribution.** *If it holds* (the mixes differ): the post supplies the work-only occupational mix
 the corpus has never published, and quantifies how much the headline shares move. *If it fails* (the
 mixes are similar): the work gate is doing little, which simplifies the interpretation of every
 occupational series. *If null*: the post publishes the global use-case × task intersection with its
-suppression accounting — the first time that cut appears anywhere.
+suppression accounting — the first time that cut appears in any publication.
 
-**Design in brief.** Take the task × use-case and request × use-case intersections at global in both
-2026 waves, build the occupational mix under each use case through the shipped O\*NET statements,
-and compare the work-only mix with the published all-conversation mix. The comparison that carries
-the finding is the work-only occupational share against the published share, occupation by
-occupation. Key number: the largest displacement between the published mix and the work-only mix,
-in percentage points of the occupational distribution. Rough detectable effect: with 3,169 / 3,259
-task nodes and 87.92 / 86.96 of named-task mass carrying a work/coursework split, the sampling floor
-is small; the binding limit is that the cut is global-only, so the result is two cross-sections and
-not a geography.
+**Design in brief.** The **direct measurement** is the June 2026 cross, which the first draft of
+this sketch missed (correction 14): `release_2026_06_26` publishes
+`use_case_{work,personal,coursework}_pct` inside every `soc_occupation` node — global L0 (718
+detailed occupations) and L1 (22 major groups), and country L1 (22 × 121) — so the occupational mix
+under each use case is read off directly at detailed grain, with a 121-country leg at major-group
+grain. The **fixed-instrument check** is the reconstruction from the long-wave intersections
+(`onet_task::use_case`, `request::use_case`) in the two 2026 waves, whose classifier and taxonomy
+are stable and where the cut is global-only; the two legs are reported side by side and **never
+spliced**, because the June wave rebuilt the classifier and pools Cowork into the Claude.ai
+population. The comparison that carries the finding is the work-only occupational share against the
+published all-conversation share, occupation by occupation. Key numbers: the total-variation
+distance between the two mixes, reported beside the largest single displacement, since a maximum
+over twenty-two groups is a max-over-grid statistic (correction 15). Rough detectable effect: 718
+occupational nodes at global and 22 groups across 121 countries; the binding limit on the
+reconstruction leg is that it is global-only, so that leg is two cross-sections and not a geography.
 
 **Data.** Steward line, verbatim: "**LL-30. FEASIBLE WITH CAVEAT: the residual label differs
 *within* the February wave, and the whole cut is global-only.** `onet_task::use_case` (3,169 / 3,259
@@ -799,33 +819,44 @@ nodes) and `request::use_case` (737 / 730) both exist in both waves; `use_case` 
 three grains. Global carries `not_classified` (0.0153) in Nov and `none` (0.0298) in Feb — but the
 **Feb intersections carry both labels**, so neither may be hard-coded at either grain. Tasks with a
 published work/coursework split hold **87.92 / 86.96** of the 93.51 / 92.97 named-task mass.
-Log (g) 2." Supplementary:
+Log (g) 2." The "global-only" clause binds the **long-wave reconstruction leg only**: the June cross
+is published at global L0 and L1 and at country L1 (`data/releases/release_2026_06_26.md` rows
+187/196/197; `ATLAS §Which cuts exist at which grain`, Family C). Supplementary:
 `release_2025_09_15/data/intermediate/onet_task_statements.csv`, shipped inside a release; join key
-the lower-cased task text, then `O*NET-SOC Code`.
+the lower-cased task text, then `O*NET-SOC Code`, for the reconstruction leg only — the June leg
+needs no join, the occupation being the node.
 
 **Overlap with existing work, stated.** `economic-index-2026-01-report` p.26 publishes the three-way
 split and `economic-index-2026-03-report` Fig 1.2 its movement; `economic-index-2026-06-report`
 Fig 1.3 shows work-related conversations by occupation **wage quartile**, which is the nearest
-existing cut and is coarser than an occupational mix. Externally, Chatterji et al. (2025) publish
-the work/non-work split by topic and report non-work growing to more than 70% of messages, on a
-different product and without an occupational composition of non-work; arXiv 2605.30685 splits
-purposes by country income. The occupational composition of non-work AI use is published nowhere.
+published cut and is coarser than an occupational mix. The June release carries the cross itself and
+no publication uses it — which is the gap, and is now corrected in `programme/LEDGER.md`
+`L-2025-02-P1-26`, whose answer column had said no release carries it (correction 14).
+`reference/posts/post2` Stage 2 used the June within-group use-case mix, so that use is cited, not
+inherited. Externally, Chatterji et al. (2025) publish the work/non-work split by topic and report
+non-work growing to more than 70% of messages, on a different product and without an occupational
+composition of non-work; arXiv 2605.30685 splits purposes by country income. The occupational
+composition of non-work AI use is published nowhere.
 
-**Risks, ranked.** (1) Global-only: no geography, so the result cannot be shown to travel —
-observed as two cross-sections that agree or disagree with nothing to arbitrate them. (2) The
+**Risks, ranked.** (1) The two legs are on different instruments — the June wave rebuilt the
+classifier and pools Cowork into Claude.ai — so they can disagree for reasons that have nothing to
+do with use case; observed as the reconstruction and the direct cross ordering occupations
+differently, which is reported rather than reconciled. (2) The reconstruction leg is global-only, so
+it cannot be shown to travel; observed as two cross-sections with nothing to arbitrate them. (3) The
 residual label differs between waves *and* within the February wave, so a hard-coded residual
-silently drops or double-counts mass — observed as the two waves' covered mass diverging from the
-steward's 87.92 / 86.96. (3) Occupation is inferred from the task, so a coursework conversation about
-a task belonging to an occupation is not a student's occupation — observed as the coursework mix
-loading on the occupations whose tasks are most textbook-like.
+silently drops or double-counts mass; observed as the covered mass diverging from the steward's
+87.92 / 86.96. (4) Occupation is inferred from the task, so a coursework conversation about a task
+belonging to an occupation is not a student's occupation; observed as the coursework mix loading on
+the occupations whose tasks are most textbook-like.
 
 **What it teaches.** How much of the Index's occupational picture is about work, and how different
 the picture looks when only work is counted.
 
 **The imaginable close.** *Holds*: that the occupational map of AI use changes shape when only the
 working half of it is counted. *Fails*: that people bring the same kinds of work to AI whether or
-not they are being paid for it. *Null*: that a cut available only at the world level cannot tell us
-whose work it is, and that the cross belongs at country grain in a later release.
+not they are being paid for it. *Null*: that the work-only and all-conversation mixes differ by less
+than the suppression accounting can carry, so the question is answered for this wave and reopens
+only when a release publishes counts beside the cross.
 
 **Mentor and Institute hooks.** ⟨mentor⟩ interest 5, pricing the work by the wage of the occupation
 that performs it (`economic-index-2026-03-report`, p.8) — which the work/non-work split directly
@@ -861,15 +892,21 @@ recommendation survives the check it never ran. *If null*: the post publishes th
 distribution of the named destinations with the merge audit and shows that four named occupations
 cannot support a general claim.
 
-**Design in brief.** Code the destinations named in the review to 2018 SOC, publish the coding, and
-place each one in the employment-weighted distribution of `observed_exposure` over all 756
-occupations. Because 411 of the 756 have exposure exactly zero, the statement is a **quantile
-position, never a ratio** to a mean that is mostly zeros. The comparison that carries the finding is
-each destination's percentile against the employment-weighted distribution, with the
-zero-exposure-but-positive-task cases shown separately. Key number: the employment-weighted
-percentile of the destination occupations, reported as a set. Rough detectable effect: with a named
-set of five or six occupations there is no sampling inference to do; what bounds the claim is the
-coding of the destination list and the 54% mass at zero, both reported before the percentiles.
+**Design in brief.** Code the **complete** destination list the review names — p.2: nursing aides,
+IT support technicians, welders; p.9: IT support and computer repair, software development, medical
+assisting, nursing, medical billing, construction, building maintenance, manufacturing, accounting,
+bookkeeping — to 2018 SOC, and publish the crosswalk, **before any exposure value is looked up**
+(correction 16). The five destinations the steward priced omit software development at the high end
+and the trades and nursing at the low end, so a subset would drive the answer. The sector families
+are pre-specified with the list. Comparators are fixed ex ante (correction 17): each destination's
+percentile in the employment-weighted distribution over all 756 occupations; its percentile among
+the positive-exposure occupations only, since 411 of 756 are exactly zero; and its position against
+the review's own at-risk list — software developers, paralegals, accountants. The statement is a
+**quantile position, never a ratio** to a mean that is mostly zeros. Key number: the
+employment-weighted percentile of the destination set, reported as a set with the crosswalk beside
+it. Rough detectable effect: there is no sampling inference over a named list; what bounds the claim
+is the coding, the 54% mass at zero by occupation and roughly 40% by employment, and a rule fixed in
+advance for when a named set may carry a quantile statement at all.
 
 **Data.** Steward line, verbatim: "**LL-24. FEASIBLE WITH CAVEAT: the comparison distribution is 54%
 zeros.** All the named destinations are present: Computer User Support 15-1232 **0.4685**, Computer
@@ -892,24 +929,30 @@ workers in exposed occupations, which is why where a programme places matters. M
 (2026), as summarised by PIIE, combine exposure with demographics and places rather than with
 programmes.
 
-**Risks, ranked.** (1) The destination list is a handful of occupations named in prose, so the
-result rests on a hand coding — observed as the percentiles moving when a title is coded to a
-neighbouring SOC; mitigated by publishing the crosswalk and reporting the named set and the broader
-sector families separately. (2) A zero in `job_exposure.csv` means "no measured exposure", not "no
-tasks used", and 20 of the 52 such occupations sit in exactly the health and clerical families the
-programmes place into — observed as a destination scoring zero while owning positive-penetration
-tasks. (3) The measure is Claude-only and dated to the 2025 usage waves — observed as any claim
-about "AI exposure" being a claim about one provider's traffic, which the post must say in the
-sentence that carries the number.
+**Risks, ranked.** (1) The destination list is occupations named in prose, so the result rests on a
+hand coding — observed as the percentiles moving when a title is coded to a neighbouring SOC;
+mitigated by coding the complete list before any exposure is looked up, publishing the crosswalk,
+and reporting the named set and the pre-specified sector families separately. (2)
+`observed_exposure` is a **composite** — Eloundou capability, gated work usage, and the
+automation-over-augmentation weighting (`labor-market-impacts-2026-03`, p.2) — not a usage measure,
+so a destination's score is not a statement about how much Claude is used in it; observed as the
+ranking moving if the capability input alone is substituted. (3) A zero means "no measured
+exposure", not "no tasks used", and 20 of the 52 zero-exposure-but-positive-task occupations sit in
+exactly the health and clerical families the programmes place into — observed as a destination
+scoring zero while owning positive-penetration tasks. (4) The measure is Claude-only and dated to
+the 2025 usage waves — observed as any claim about "AI exposure" being a claim about one provider's
+traffic, which the post says in the sentence that carries the number. `L-2026-08-WR-17` is touched,
+not addressed: nothing here speaks to what retraining the highest-skilled would require.
 
 **What it teaches.** Whether the most promising thing in the retraining evidence base is pointed at
-work that AI is already doing, which is a fact a funder can act on this year.
+work that Claude is already doing, which is a fact a funder can act on this year.
 
 **The imaginable close.** *Holds*: that the programmes with the best evidence behind them are
-training people into the work the technology has already reached. *Fails*: that the destinations sit
-outside what AI is being used for, and the review's recommendation stands. *Null*: that a handful of
-occupations named in prose cannot carry a claim about a policy instrument, and what a destination
-census would need to contain.
+training people into the work Claude is already doing. *Fails*: that the destinations sit outside
+what Claude is being used for, and the review's recommendation stands. *Null*: that the destination
+set straddles the exposure distribution too widely to carry a single quantile statement under the
+rule fixed in advance, so the targeting question needs a destination census rather than a reading
+of two lists.
 
 **Mentor and Institute hooks.** ⟨mentor⟩ "If current data on AI usage are any guide, college-educated
 workers—software developers, paralegals, accountants—are most at risk (Massenkoff and McCrory 2026).
@@ -982,3 +1025,35 @@ One pass, on `room/director-2026-09-16-shortlist-ruling.md` (c0df423),
 referee's corrections 5 and 7 require, both recorded above. No score was adjusted except the
 fourteen adopted from the referee and the two anchor rows. Nothing in `reference/` was opened by me;
 every statement about `post1` and `post2` in this file is quoted from the referee's audit.
+
+### §8 continued — final pass, corrections 11–20
+
+Second referee round `room/referee-2026-09-16-shortlist-audit-2.md` (c168b19) and the three editor
+notes `room/editor-2026-09-16-sketch-LL-{12,24,30}.md` with
+`room/editor-2026-09-16-sketch-notes-status-v2.md` (af583a4). Previous state: `8646d7c`.
+
+| # | What moved | Why | Authority |
+|---|---|---|---|
+| 19 | **Cut confirmed and closed.** LL-39 stays out at 23 and LL-02 at 22; the referee states that his re-score is the record and that "at the line" was loose prose. The two `(anchor)` rows stand. No score in §2 changes in this pass | the one reading I flagged as open is now closed against me, which is the right outcome | audit-2 (b) |
+| 20 | **LL-12**: the within-wave series is built on the **union of Claude.ai and API named nodes**, because Fig A.2 pools both surfaces; the key number becomes the within-wave share of occupations at ≥25/50/75% coverage beside the published 49 / 24 / 7, with the Gini as cross-check | a Claude.ai-only series is not the like-for-like counterpart of the published curve | correction 11 |
+| 21 | **LL-12**: the privacy floor (15 in a sample of ~1M) is stated to make public within-wave coverage a **lower bound** on the internal unfloored curve, so the waves are compared on shape and never on level | the comparison as first written would have read a floor artefact as a level | correction 12 |
+| 22 | **LL-12**: "more than a few per cent is not a sampling artefact" replaced by a near-floor sensitivity count (nodes at 15–20) and a count-based bootstrap; **churn named as the third reading** beside saturation and pooling (2,284 common of 3,170 / 3,260, ≈28% turnover per wave) and added to the ranked risks | the original sentence asserted what the design is supposed to establish, and two readings were listed where there are three | correction 13 |
+| 23 | **LL-30**: the closest existing answer rewritten. The June wave **does** carry the cross — `use_case_{work,personal,coursework}_pct` inside every `soc_occupation` node, global L0 (718) and L1 (22) and country L1 (22 × 121) — so the June cross becomes the **direct measurement** and the long-wave intersections the **fixed-instrument reconstruction check**, never spliced. "Global-only" now binds one leg only. `reference/posts/post2` Stage 2 cited | my entry described the data wrongly, and the error came from the ledger | correction 14 |
+| 24 | **`programme/LEDGER.md` `L-2025-02-P1-26` answer column corrected**: it had said no release carries the cross, citing `§Cuts 11`; it now records the June cross with its rows and notes that `§Cuts 11` rules out a cross of two *categories* and does not reach a metric published inside a category's nodes | a ledger error that had propagated into a sketch | correction 14 |
+| 25 | **LL-30**: total-variation distance between the published and work-only mixes reported beside the largest single displacement (a max over 22 groups); "first time that cut appears anywhere" → "in any publication"; the exposure gate named as `1{WorkUsage_t ≥ 100}`; risks re-ranked with the two-instrument risk first | a max-over-grid needs a companion statistic, and the data now carries the cut even though no publication uses it | correction 15 |
+| 26 | **LL-24**: the **complete** destination list from the review is coded before any exposure value is looked up — p.2 nursing aides, IT support technicians, welders; p.9 IT support and computer repair, software development, medical assisting, nursing, medical billing, construction, building maintenance, manufacturing, accounting, bookkeeping — with the sector families pre-specified | the steward's five omit software development at the high end and the trades and nursing at the low end, so a subset would have driven the answer | correction 16 |
+| 27 | **LL-24**: comparators fixed ex ante (percentile over all 756; percentile among positive-exposure occupations; the review's own at-risk list); `observed_exposure` stated as a composite of capability, gated usage and the automation weighting rather than as usage; `L-2026-08-WR-17` marked touched-not-addressed | the comparator choice would otherwise have been made after seeing the numbers | correction 17 |
+| 28 | **Reserve order** rewritten: LL-20, then LL-33 and LL-41 (FOUND 5), then LL-16 (FOUND 4) | the order runs down the stated tie-break chain | correction 18 |
+| 29 | **§5**: LL-30 added to the construction pair, which becomes the **LL-07 / LL-36 / LL-30 triple**; the entanglement tally updated (LL-36 in three pairs; LL-07, LL-11 and LL-30 in two each) | all three build the task → SOC join and fix the multi-holder rule | correction 19 |
+| 30 | Editor WITH A CHANGE items applied to the three new sketches, **no first person anywhere in an imaginable close**: LL-12's holds loses "each time we look" and no longer says the cumulative curve "was hiding" the growth, since a curve that cannot fall is uninformative rather than concealing; LL-30's null loses "cannot tell us" and becomes two mixes differing by less than the suppression accounting can carry; LL-24's holds says Claude rather than "the technology", and its null becomes the pre-registered rule for when a named set may carry a quantile statement | the editor's notes on register and on the imaginable close | ruling 4; editor notes |
+| 31 | Correction 20's **optional re-sort of §2 by Σ declined**, with the reason recorded: the referee has verified the table row by row in its current order and §8 references it by that order; re-sorting at the final commit buys readability at the cost of re-verification. LL-11's missing "AI" stands flagged for the brief stage | optional item, declined on a stated ground rather than ignored | correction 20 |
+
+**Editor title-form notes recorded and not applied**, questions being frozen: LL-12's "recurring"
+(the second leg measures concentration within a window, not recurrence over time), LL-24's
+"retraining programmes" (a class where the design has one review's destinations), LL-30's "work"
+running in two senses and "study" standing in for `coursework`. With LL-11's missing "AI", these are
+the four question-level defects the brief stage inherits.
+
+**Final state.** Nine sketches, all nine steward lines verbatim, corrections 1–20 applied or
+declined on a stated ground, one ledger correction made. This is the last commit of
+`programme/SHORTLIST.md` before Gate 1a.
