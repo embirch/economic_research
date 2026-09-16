@@ -93,3 +93,11 @@ room/steward-2026-09-16-profile-release-2026-06-26.md
 room/steward-2026-09-16-question-batch-2-answers.md
 room/steward-2026-09-16-question-batch-answers.md
 room/steward-2026-09-16-release-index-status.md
+room/editor-2026-09-16-room-catchup-v2.md
+room/editor-2026-09-16-sketch-LL-12.md
+room/editor-2026-09-16-sketch-LL-24.md
+room/editor-2026-09-16-sketch-LL-30.md
+room/editor-2026-09-16-sketch-notes-status-v2.md
+room/lead-2026-09-16-shortlist-status-final.md
+room/lead-2026-09-16-shortlist-status-v2.md
+room/referee-2026-09-16-shortlist-audit-2.md
