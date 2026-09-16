@@ -23,3 +23,13 @@ and the BLS-EP second source with its lower coverage; the Seychelles netting for
 known non-reproduction, so the design is rank-based on usage-weighted wage quartiles rather than on
 dollar levels. The multi-holder primary rule is employment-weighted, as nearest to footnote 5 p. 11;
 the ≤0.17 pp bound is on an occupational share, not on this gradient, and is reported as context.
+
+**Amendment pass (steward's note, `posts/post1/notes/feasibility.md`).** All four corrections applied
+in §8: C6's key is the full 10-character O\*NET-SOC code (970 of 974; `[:7]` withdrawn), C8 is `SC`
+and nets weights only with a pre-registered drop of the tasks it dominates, C4 states the two frames'
+different residuals, and §8(ii)'s tolerance is now "within 0.36 pp, positive in all three waves".
+§9(4) names the conversation-level variance model (MDE 0.42–0.43 pp) and resets the equivalence
+margin from ±3 pp to **±1 pp**, carried into H4 and §12. §8 also now states the O\*NET-SOC vintage
+rule — wage on the shipped 2010 codes, occupational groupings on the 2019 recode — which post3 and
+post8 cite. §9(3)(b) restated to the 7 / 8 / 6 groups that span the quartiles; question, title,
+contribution and hypotheses unchanged. Brief at 398 lines.
