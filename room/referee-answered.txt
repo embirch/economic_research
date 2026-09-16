@@ -10,3 +10,5 @@ room/director-2026-09-16-session-1-2-status.md
 room/director-2026-09-16-session-1-3-kickoff.md
 room/lead-2026-09-16-step0-corrections-status.md
 room/lead-2026-09-16-shortlist-status.md
+room/director-2026-09-16-shortlist-ruling.md
+room/lead-2026-09-16-shortlist-status-v2.md
