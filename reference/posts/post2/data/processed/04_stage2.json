@@ -1,0 +1,139 @@
+{
+ "2026-05": {
+  "artifact": {
+   "pooled_r2": 0.207,
+   "slope": 1.696,
+   "n_cells": 1600,
+   "dissimilarity_median": 3.99,
+   "top5": {
+    "WV": 10.03,
+    "SD": 9.64,
+    "AK": 8.4,
+    "MS": 8.18,
+    "WY": 7.79
+   },
+   "drivers": {
+    "WV": "email_or_message (-3.7)",
+    "SD": "none (+2.3)",
+    "AK": "explanation_or_answer (+2.5)",
+    "MS": "email_or_message (-2.4)",
+    "WY": "document_or_report (+1.6)"
+   },
+   "user_mix_dissim_from_global": null
+  },
+  "use_case": {
+   "pooled_r2": 0.381,
+   "slope": 3.01,
+   "n_cells": 150,
+   "dissimilarity_median": 3.14,
+   "top5": {
+    "AK": 6.71,
+    "DC": 5.96,
+    "FL": 5.43,
+    "IA": 4.92,
+    "WI": 4.71
+   },
+   "drivers": {
+    "AK": "use_case_personal (+6.7)",
+    "DC": "use_case_personal (-6.0)",
+    "FL": "use_case_work (+5.4)",
+    "IA": "use_case_coursework (+4.9)",
+    "WI": "use_case_work (-4.7)"
+   },
+   "user_mix_dissim_from_global": null
+  },
+  "collaboration": {
+   "pooled_r2": 0.32,
+   "slope": 2.123,
+   "n_cells": 250,
+   "dissimilarity_median": 1.91,
+   "top5": {
+    "SD": 4.18,
+    "AR": 3.74,
+    "ND": 3.56,
+    "SC": 3.36,
+    "WV": 3.17
+   },
+   "drivers": {
+    "SD": "collaboration_task_iteration (-4.0)",
+    "AR": "collaboration_feedback_loop (+2.5)",
+    "ND": "collaboration_directive (-3.1)",
+    "SC": "collaboration_learning (-2.9)",
+    "WV": "collaboration_task_iteration (-2.6)"
+   },
+   "user_mix_dissim_from_global": null
+  }
+ },
+ "2026-04": {
+  "artifact": {
+   "pooled_r2": 0.246,
+   "slope": 1.669,
+   "n_cells": 1600,
+   "dissimilarity_median": 4.4,
+   "top5": {
+    "ND": 11.5,
+    "WY": 9.95,
+    "MS": 9.0,
+    "AK": 8.98,
+    "SD": 8.61
+   },
+   "drivers": {
+    "ND": "email_or_message (-3.0)",
+    "WY": "none (+2.5)",
+    "MS": "educational_material (+2.3)",
+    "AK": "explanation_or_answer (+2.6)",
+    "SD": "advice_or_recommendation (-1.7)"
+   },
+   "user_mix_dissim_from_global": null
+  },
+  "use_case": {
+   "pooled_r2": 0.367,
+   "slope": 2.705,
+   "n_cells": 150,
+   "dissimilarity_median": 3.38,
+   "top5": {
+    "IN": 8.33,
+    "DC": 7.3,
+    "WY": 6.26,
+    "WA": 5.89,
+    "MA": 5.68
+   },
+   "drivers": {
+    "IN": "use_case_coursework (+8.3)",
+    "DC": "use_case_personal (-7.3)",
+    "WY": "use_case_work (+6.3)",
+    "WA": "use_case_personal (+5.9)",
+    "MA": "use_case_coursework (+5.7)"
+   },
+   "user_mix_dissim_from_global": null
+  },
+  "collaboration": {
+   "pooled_r2": 0.186,
+   "slope": 1.65,
+   "n_cells": 250,
+   "dissimilarity_median": 2.08,
+   "top5": {
+    "SD": 8.36,
+    "AK": 7.69,
+    "WY": 5.96,
+    "WV": 4.72,
+    "ID": 4.57
+   },
+   "drivers": {
+    "SD": "collaboration_learning (-5.1)",
+    "AK": "collaboration_learning (+5.0)",
+    "WY": "collaboration_task_iteration (-4.3)",
+    "WV": "collaboration_feedback_loop (+3.7)",
+    "ID": "collaboration_directive (+3.6)"
+   },
+   "user_mix_dissim_from_global": null
+  }
+ },
+ "verdict": "DOES NOT",
+ "top5_both_months": [
+  "AK",
+  "MS",
+  "SD",
+  "WY"
+ ]
+}

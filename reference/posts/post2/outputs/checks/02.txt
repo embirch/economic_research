@@ -1,0 +1,16 @@
+(a) log(Usage Index) on the computer & math workforce share in percentage points (Anthropic's 'each 1% increase in the share' is one point of share; the log-log elasticity is ~1.2-1.5 and does not match), by wave, 51 states, HC3; Utah shown with and without:
+  2025-08: all +0.369 [+0.28,+0.46] R2 0.62 | without Utah +0.351 R2 0.65
+  2025-11: all +0.280 [+0.17,+0.39] R2 0.48 | without Utah +0.280 R2 0.47
+  2026-02: all +0.296 [+0.20,+0.39] R2 0.61 | without Utah +0.295 R2 0.60
+  2026-04: all +0.298 [+0.21,+0.39] R2 0.61 | without Utah +0.296 R2 0.60
+  2026-05: all +0.294 [+0.21,+0.38] R2 0.61 | without Utah +0.293 R2 0.60
+  Anthropic (January 2026 report, BLS shares): 0.36 per point, R2 'nearly two-thirds'. Reproduced on the August 2025 wave (0.369, R2 0.62); the November wave gives 0.28 and R2 0.48 with ACS shares.
+
+(b) State Gini of the Usage Index (unweighted over 51 states; the population-weighted Lorenz version gives 0.32/0.28/0.21 and does not match the report):
+  2025-08: 0.367 (without Utah 0.334)
+  2025-11: 0.318 (without Utah 0.321)
+  2026-02: 0.286 (without Utah 0.287)
+  2026-04: 0.282 (without Utah 0.283)
+  2026-05: 0.278 (without Utah 0.279)
+  Anthropic: 0.37 (Aug), 0.31 (Nov), 0.29 (Feb).
+CHECK OK

@@ -1,0 +1,118 @@
+{
+ "n": 101,
+ "corr": {
+  "log_gdp": {
+   "log_gdp": 1.0,
+   "internet": 0.81,
+   "tertiary": 0.766,
+   "prompt_edu": 0.267
+  },
+  "internet": {
+   "log_gdp": 0.81,
+   "internet": 1.0,
+   "tertiary": 0.741,
+   "prompt_edu": 0.138
+  },
+  "tertiary": {
+   "log_gdp": 0.766,
+   "internet": 0.741,
+   "tertiary": 1.0,
+   "prompt_edu": 0.262
+  },
+  "prompt_edu": {
+   "log_gdp": 0.267,
+   "internet": 0.138,
+   "tertiary": 0.262,
+   "prompt_edu": 1.0
+  }
+ },
+ "models": {
+  "income only": {
+   "z_log_gdp": [
+    -2.34,
+    [
+     -4.0,
+     -0.69
+    ]
+   ]
+  },
+  "internet + tertiary, no income": {
+   "z_internet": [
+    -1.25,
+    [
+     -2.66,
+     0.16
+    ]
+   ],
+   "z_tertiary": [
+    -1.67,
+    [
+     -2.74,
+     -0.6
+    ]
+   ]
+  },
+  "internet + tertiary + income": {
+   "z_internet": [
+    -1.17,
+    [
+     -2.63,
+     0.29
+    ]
+   ],
+   "z_tertiary": [
+    -1.64,
+    [
+     -2.76,
+     -0.51
+    ]
+   ],
+   "z_log_gdp": [
+    -0.19,
+    [
+     -1.75,
+     1.37
+    ]
+   ]
+  },
+  "internet + tertiary + prompt_edu + income": {
+   "z_internet": [
+    -1.48,
+    [
+     -3.14,
+     0.17
+    ]
+   ],
+   "z_tertiary": [
+    -1.41,
+    [
+     -2.61,
+     -0.21
+    ]
+   ],
+   "z_prompt_edu": [
+    -0.95,
+    [
+     -2.0,
+     0.1
+    ]
+   ],
+   "z_log_gdp": [
+    0.39,
+    [
+     -1.5,
+     2.29
+    ]
+   ]
+  }
+ },
+ "movers": {
+  "z_internet": [
+   [
+    "MOZ",
+    -0.74
+   ]
+  ],
+  "z_tertiary": []
+ }
+}

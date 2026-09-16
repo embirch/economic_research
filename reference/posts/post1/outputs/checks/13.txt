@@ -1,0 +1,8 @@
+N = 86  (coefficients: points of pattern share per SD; interval)
+pattern          mean share |               tertiary |               internet |             log income
+directive              39.6 |    -1.11 [-2.02,-0.20] |    -0.60 [-1.79,+0.59] |    -0.67 [-2.17,+0.84]
+feedback loop          12.2 |    +0.06 [-0.38,+0.50] |    +0.15 [-0.31,+0.62] |    +0.01 [-0.63,+0.64]
+task iteration         22.6 |    +0.16 [-0.57,+0.88] |    +0.16 [-0.51,+0.83] |    -0.08 [-1.19,+1.02]
+learning               20.9 |    +0.62 [-0.21,+1.45] |    +0.09 [-0.76,+0.93] |    +0.75 [-0.78,+2.27]
+validation              4.6 |    +0.27 [-0.02,+0.56] |    +0.20 [-0.11,+0.51] |    -0.00 [-0.51,+0.51]
+CHECK OK

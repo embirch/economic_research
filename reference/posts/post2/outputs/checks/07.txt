@@ -1,0 +1,12 @@
+Levels, 50 states (Utah excluded). Spearman rank correlations:
+  anthropic vs microsoft: raw +0.78 | after workforce tech share +0.50
+  anthropic vs openai   : raw +0.90 | after workforce tech share +0.70
+  microsoft vs openai   : raw +0.85 | after workforce tech share +0.61
+  tech share alone explains: Anthropic R2 0.60, Microsoft R2 0.52, OpenAI(rank) R2 0.50
+  Pre-registered read-out (all pairs >= 0.5 after composition): DO NOT AGREE
+
+Mix, Anthropic 2025-08 L2 mapped vs OpenAI 2025 topics, Spearman across states: Technical help -0.12 (means A 40.1 / O 6.8), Writing +0.02 (means A 17.9 / O 26.4), Seeking information -0.36 (means A 16.9 / O 19.4), Practical Guidance -0.33 (means A 19.1 / O 29.7), Self-expression +0.14 (means A 3.6 / O 8.1) | median -0.12
+
+Mix, Anthropic 2026-05 L2 mapped vs OpenAI 2025 topics, Spearman across states: Technical help -0.02 (means A 18.5 / O 6.8), Writing +0.19 (means A 20.5 / O 26.4), Seeking information -0.11 (means A 26.6 / O 19.4), Practical Guidance +0.22 (means A 27.5 / O 29.7), Self-expression +0.26 (means A 6.2 / O 8.1) | median +0.19
+Pre-registered read-out (May median >= 0.5): PROVIDER USER BASES
+CHECK OK

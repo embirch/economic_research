@@ -1,0 +1,8 @@
+Tenure gap (published): directive 8.7 points; automation (our outcome) 8.3 points
+2025-08: N=111 residual SD  5.15, 5th-95th spread 15.81, full range 26.33 -> newness explains at most 52% of the 5th-95th spread
+2025-11: N=113 residual SD  4.56, 5th-95th spread 14.57, full range 21.92 -> newness explains at most 57% of the 5th-95th spread
+2026-02: N=115 residual SD  4.34, 5th-95th spread 13.26, full range 19.03 -> newness explains at most 63% of the 5th-95th spread
+2026-04: N=114 residual SD  3.06, 5th-95th spread 10.70, full range 13.42 -> newness explains at most 78% of the 5th-95th spread
+2026-05: N=121 residual SD  3.04, 5th-95th spread  9.88, full range 16.12 -> newness explains at most 84% of the 5th-95th spread
+With a 30-point difference in new-user share between two countries, newness would explain 2.5 points, i.e. 16% of the Aug 2025 5th-95th spread.
+CHECK OK: gaps match the published table; spreads computed for every wave. RESULT: the ceiling is roughly half of the typical spread in Aug 2025 (extreme case), so newness is bounded but not ruled out.

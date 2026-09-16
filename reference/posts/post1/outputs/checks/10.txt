@@ -1,0 +1,2 @@
+CHECK OK: four figures written
+['06_histograms.png', '06_scatters.png', 'fig1_replication_by_wave.png', 'fig2_pdi_before_after_income.png', 'fig3_coefficients.png', 'fig4_within_groups.png']

@@ -1,0 +1,37 @@
+(A) Aug 2025 outcome: each candidate added to tertiary + internet + income (+controls). Coef per SD [95% CI]; tertiary coef after adding.
+
+  test_scores              N=101  -1.20 [-2.37,-0.03]   tertiary after: -1.38   corr(candidate, tertiary) +0.68
+  learning_adj_years       N=101  -2.11 [-3.55,-0.66]   tertiary after: -1.19   corr(candidate, tertiary) +0.77
+  expected_years           N=101  -1.46 [-2.86,-0.05]   tertiary after: -1.38   corr(candidate, tertiary) +0.74
+  secondary_enrol          N=101  -0.61 [-1.82,+0.59]   tertiary after: -1.47   corr(candidate, tertiary) +0.78
+  edu_spend                N= 98  +0.10 [-0.67,+0.88]   tertiary after: -1.69   corr(candidate, tertiary) +0.33
+  globe_future             N= 48  -0.30 [-1.24,+0.65]   tertiary after: -1.05   corr(candidate, tertiary) +0.07
+  globe_performance        N= 48  +0.20 [-0.58,+0.97]   tertiary after: -0.94   corr(candidate, tertiary) -0.07
+  globe_uai                N= 48  -0.10 [-1.13,+0.92]   tertiary after: -1.01   corr(candidate, tertiary) +0.13
+  globe_inst_collectivism  N= 48  -0.97 [-2.36,+0.43]   tertiary after: -1.28   corr(candidate, tertiary) -0.04
+  hof_longterm             N= 72  -1.21 [-2.04,-0.37]   tertiary after: -0.96   corr(candidate, tertiary) +0.28
+  hof_indulgence           N= 71  +1.40 [+0.39,+2.40]   tertiary after: -1.04   corr(candidate, tertiary) +0.26
+
+(B) Selective activities, May 2026: candidate coef per SD with tertiary, internet, income in the model
+  Developing Objectives and Strategies:
+     test_scores          N= 56 -6.10 [-10.72, -1.48]  tertiary after -3.07
+     learning_adj_years   N= 56 -6.53 [-10.75, -2.32]  tertiary after -3.02
+     globe_future         N= 38 -2.99 [-5.71, -0.27]  tertiary after -3.72
+     globe_performance    N= 38 -2.00 [-5.64, 1.63]  tertiary after -3.69
+     hof_longterm         N= 48 -2.28 [-4.6, 0.04]  tertiary after -3.18
+     hof_indulgence       N= 47 +1.30 [-2.31, 4.91]  tertiary after -3.44
+  Thinking Creatively:
+     test_scores          N= 82 -0.13 [-1.31, 1.04]  tertiary after -1.39
+     learning_adj_years   N= 82 -0.18 [-1.55, 1.2]  tertiary after -1.39
+     globe_future         N= 45 -0.49 [-1.43, 0.46]  tertiary after -0.91
+     globe_performance    N= 45 -0.10 [-1.23, 1.04]  tertiary after -0.85
+     hof_longterm         N= 62 -1.06 [-1.55, -0.58]  tertiary after -0.79
+     hof_indulgence       N= 62 +0.45 [-0.31, 1.2]  tertiary after -1.10
+  Working with Computers:
+     test_scores          N= 82 +1.06 [0.08, 2.04]  tertiary after +0.70
+     learning_adj_years   N= 82 +1.20 [0.19, 2.2]  tertiary after +0.68
+     globe_future         N= 45 +0.26 [-0.34, 0.85]  tertiary after +0.86
+     globe_performance    N= 45 +0.26 [-0.86, 1.38]  tertiary after +0.90
+     hof_longterm         N= 62 +0.11 [-0.58, 0.81]  tertiary after +0.42
+     hof_indulgence       N= 62 +0.16 [-0.63, 0.95]  tertiary after +0.66
+CHECK OK

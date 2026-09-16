@@ -1,0 +1,204 @@
+{
+ "anthropic_state_slope": {
+  "slope": 2.729,
+  "r2": 0.184,
+  "p": 0.0037,
+  "n": 44
+ },
+ "(1) education alone": {
+  "n": 43,
+  "r2": 0.024,
+  "terms": {
+   "z_bachelors_plus": {
+    "coef": -0.69,
+    "ci": [
+     -1.52,
+     0.14
+    ],
+    "mde": 1.18
+   }
+  }
+ },
+ "(2) education + log income": {
+  "n": 43,
+  "r2": 0.025,
+  "terms": {
+   "z_bachelors_plus": {
+    "coef": -0.89,
+    "ci": [
+     -2.74,
+     0.96
+    ],
+    "mde": 2.64
+   },
+   "z_log_gdp": {
+    "coef": 0.24,
+    "ci": [
+     -1.75,
+     2.23
+    ],
+    "mde": 2.85
+   }
+  }
+ },
+ "(3) full": {
+  "n": 43,
+  "r2": 0.599,
+  "terms": {
+   "z_bachelors_plus": {
+    "coef": -3.22,
+    "ci": [
+     -7.97,
+     1.52
+    ],
+    "mde": 6.78
+   },
+   "z_log_gdp": {
+    "coef": -1.57,
+    "ci": [
+     -7.0,
+     3.87
+    ],
+    "mde": 7.77
+   },
+   "z_broadband": {
+    "coef": 1.0,
+    "ci": [
+     -1.7,
+     3.7
+    ],
+    "mde": 3.86
+   },
+   "aui": {
+    "coef": 6.29,
+    "ci": [
+     -6.63,
+     19.22
+    ],
+    "mde": 18.46
+   },
+   "z_coding_share": {
+    "coef": -0.39,
+    "ci": [
+     -2.43,
+     1.65
+    ],
+    "mde": 2.92
+   }
+  }
+ },
+ "(2b) income alone": {
+  "n": 43,
+  "r2": 0.013,
+  "terms": {
+   "z_log_gdp": {
+    "coef": -0.51,
+    "ci": [
+     -1.69,
+     0.68
+    ],
+    "mde": 1.69
+   }
+  }
+ },
+ "(2c) broadband alone": {
+  "n": 43,
+  "r2": 0.015,
+  "terms": {
+   "z_broadband": {
+    "coef": 0.55,
+    "ci": [
+     -1.24,
+     2.34
+    ],
+    "mde": 2.56
+   }
+  }
+ },
+ "verdict": "DOES NOT REAPPEAR (inside MDE)",
+ "robustness": {
+  "drop DC": [
+   -2.13,
+   -5.22,
+   0.97
+  ],
+  "drop Utah": [
+   -1.5,
+   -3.54,
+   0.53
+  ],
+  "drop DC and Utah": [
+   -1.18,
+   -2.87,
+   0.51
+  ],
+  "drop Utah, education alone": [
+   -0.87,
+   -1.35,
+   -0.39
+  ],
+  "drop Utah and DC, education alone": [
+   -0.63,
+   -1.25,
+   -0.01
+  ],
+  "directive outcome (adjusted)": [
+   -2.98,
+   -7.84,
+   1.88
+  ],
+  "unadjusted automation": [
+   -3.28,
+   -7.95,
+   1.39
+  ],
+  "loo_range": [
+   -4.08,
+   -1.49
+  ],
+  "loo_movers": [
+   [
+    "NV",
+    -4.08
+   ],
+   [
+    "UT",
+    -1.49
+   ]
+  ]
+ },
+ "countries_like_for_like": {
+  "education alone": {
+   "coef": -3.51,
+   "ci": [
+    -4.43,
+    -2.59
+   ],
+   "r2": 0.45
+  },
+  "education + log income": {
+   "coef": -1.32,
+   "ci": [
+    -2.27,
+    -0.38
+   ],
+   "r2": 0.57
+  },
+  "income alone": {
+   "coef": -3.87,
+   "ci": [
+    -4.62,
+    -3.11
+   ],
+   "r2": 0.55
+  },
+  "internet alone": {
+   "coef": -3.48,
+   "ci": [
+    -4.41,
+    -2.55
+   ],
+   "r2": 0.44
+  }
+ }
+}

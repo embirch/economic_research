@@ -1,0 +1,8 @@
+AUI reconstruction check on Aug 2025: 115 countries, max |published - rebuilt| = 0.0000
+2025-08: slope = -3.112, R2 = 0.394, p = 1.7e-13, N = 111, tasks with rates = 1808
+  EXCLUDED 2025-11 SYC: index 1055 (> 25.0)
+2025-11: slope = -3.341, R2 = 0.514, p = 4.4e-19, N = 113, tasks with rates = 2088
+2026-02: slope = -2.715, R2 = 0.484, p = 6.4e-18, N = 115, tasks with rates = 2201
+2026-04: slope = -1.487, R2 = 0.472, p = 3.2e-17, N = 114, task nodes with rates = 2380  [June: node-level adjustment]
+2026-05: slope = -1.444, R2 = 0.432, p = 2.6e-16, N = 121, task nodes with rates = 2691  [June: node-level adjustment]
+CHECK OK: Aug 2025 reproduces step 02; all waves negative; codes harmonised to ISO-3

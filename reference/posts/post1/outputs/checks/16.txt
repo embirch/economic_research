@@ -1,0 +1,28 @@
+May 2026, by work activity: education coefficient on within-activity automation share (points per SD of tertiary enrolment)
+
+                                                                       activity  n  tert  tert_lo  tert_hi  bundle  global_auto  global_autonomy  global_share
+                                           Developing Objectives and Strategies 56 -4.05    -6.71    -1.38   -8.16         46.2             3.01          0.22
+                                                 Coaching and Developing Others 45 -1.61    -6.93     3.70    3.01         41.3             2.68          0.19
+                                                            Thinking Creatively 82 -1.42    -2.47    -0.38   -4.15         41.4             3.01         11.85
+                  Evaluating Information to Determine Compliance with Standards 75 -1.32    -5.24     2.59   -2.38         34.7             2.62          0.52
+                                                            Getting Information 82 -1.27    -2.44    -0.10   -0.11         59.1             2.69         12.78
+                                              Documenting/Recording Information 82 -1.19    -2.34    -0.04   -2.81         49.1             2.98         11.60
+                                                   Training and Teaching Others 82 -1.08    -3.54     1.39   -3.05         26.2             2.53          3.19
+                                           Performing Administrative Activities 80 -0.94    -2.97     1.08   -0.44         52.4             2.50          1.06
+                                                  Analyzing Data or Information 82 -0.92    -1.94     0.11   -2.55         49.8             2.76          5.93
+                          Judging the Qualities of Objects, Services, or People 82 -0.87    -3.29     1.55   -2.29         38.2             2.76          0.94
+                                    Providing Consultation and Advice to Others 82 -0.78    -1.57     0.01   -1.37         44.3             2.62         23.89
+                                    Organizing, Planning, and Prioritizing Work 63 -0.74    -4.06     2.59   -2.02         51.5             2.91          0.39
+                             Communicating with People Outside the Organization 82 -0.12    -2.18     1.93   -1.03         39.4             2.57          1.96
+                                          Making Decisions and Solving Problems 82 -0.10    -0.94     0.74   -1.74         36.6             2.55          6.62
+                             Performing for or Working Directly with the Public 82  0.11    -1.21     1.43   -1.50         52.5             2.43          2.03
+                         Communicating with Supervisors, Peers, or Subordinates 58  0.13    -2.83     3.09   -0.81         53.2             2.53          0.36
+Estimating the Quantifiable Characteristics of Products, Events, or Information 81  0.19    -2.12     2.50   -3.86         51.9             2.43          0.65
+                                                         Processing Information 81  0.81    -0.76     2.37    1.04         64.0             2.81          1.05
+                                                         Working with Computers 82  0.93     0.22     1.65   -0.19         72.1             2.95          9.40
+                             Interpreting the Meaning of Information for Others 82  1.42    -1.13     3.96    1.81         36.9             2.41          3.40
+
+April vs May agreement across activities (correlation): 0.26
+Education coefficient vs activity's global automation share: 0.28 | vs global autonomy: -0.45 | vs global share of use: -0.01
+Activities with intervals clear of zero (May): ['Developing Objectives and Strategies', 'Thinking Creatively', 'Getting Information', 'Documenting/Recording Information']
+CHECK OK

@@ -1,0 +1,40 @@
+{
+ "panel_all_waves": {
+  "n_obs": 561,
+  "n_countries": 114,
+  "coef_aui": 0.342,
+  "ci": [
+   -0.769,
+   1.453
+  ],
+  "p": 0.5459,
+  "mde": 1.587,
+  "mean_within_country_sd_of_aui": 0.25
+ },
+ "panel_excl_june": {
+  "n_obs": 324,
+  "n_countries": 108,
+  "coef_aui": 0.82,
+  "ci": [
+   -0.174,
+   1.813
+  ],
+  "p": 0.106,
+  "mde": 1.42,
+  "mean_within_country_sd_of_aui": 0.151
+ },
+ "superbowl": {
+  "us_change": -3.458,
+  "comparators": {
+   "CAN": -0.755,
+   "GBR": -0.284,
+   "AUS": 0.354,
+   "IRL": -1.207,
+   "NZL": 2.01
+  },
+  "comparator_mean": 0.024,
+  "comparator_sd": 1.252,
+  "us_minus_mean": -3.481,
+  "cohort_supported": false
+ }
+}

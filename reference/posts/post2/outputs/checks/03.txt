@@ -1,0 +1,19 @@
+
+2026-04: suppressed cells 227 of 1122 (small groups in small states); treated as zero, row sums before fill: median 95.5
+
+2026-04: user groups 22, matched to workforce 22; unmatched user groups: []
+  over-representation among users (mean user share / mean workforce share):
+   Arts, Design, Entertainment, Sports, and Media 6.7x, Computer and Mathematical 6.7x, Life, Physical, and Social Science 3.7x, Educational Instruction and Library 2.0x, Community and Social Service 1.6x, Architecture and Engineering 1.4x ... Building and Grounds Cleaning and Maintenance 0.02x, Farming, Fishing, and Forestry 0.01x, Construction and Extraction 0.00x
+  users' computer/math share on workforce computer/math share (no Utah): -0.59 [-0.93,-0.25] per point, R2 0.20, N 50; user share mean 23.7%, workforce mean 3.5%
+  dissimilarity user vs workforce mix: median 45.9 pts, min 39.9 (CO), max 60.9 (WY)
+  most selected user bases: {'WY': 60.9, 'SD': 57.4, 'MS': 57.1, 'AK': 55.3, 'ND': 54.9}
+
+2026-05: suppressed cells 188 of 1122 (small groups in small states); treated as zero, row sums before fill: median 98.4
+
+2026-05: user groups 22, matched to workforce 22; unmatched user groups: []
+  over-representation among users (mean user share / mean workforce share):
+   Arts, Design, Entertainment, Sports, and Media 6.6x, Computer and Mathematical 6.2x, Life, Physical, and Social Science 3.4x, Educational Instruction and Library 1.9x, Community and Social Service 1.7x, Sales and Related 1.4x ... Building and Grounds Cleaning and Maintenance 0.02x, Farming, Fishing, and Forestry 0.02x, Construction and Extraction 0.01x
+  users' computer/math share on workforce computer/math share (no Utah): -0.48 [-0.72,-0.24] per point, R2 0.26, N 50; user share mean 22.0%, workforce mean 3.5%
+  dissimilarity user vs workforce mix: median 44.4 pts, min 38.2 (CO), max 54.6 (WY)
+  most selected user bases: {'WY': 54.6, 'SD': 52.6, 'AK': 51.3, 'WV': 51.1, 'MS': 50.8}
+CHECK OK

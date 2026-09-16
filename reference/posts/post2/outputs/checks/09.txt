@@ -1,0 +1,34 @@
+clusters with >= 0.5% of US use in both months: 53; states 50 (Utah excluded)
+outlier cells (>= 1.6x): April 49, May 59, both 22; recurrence of April outliers 45%, of May outliers 37%
+month-to-month correlation of log distinctiveness: 0.62
+recurrence on log state usage share (linear probability, 49 April outlier cells): +0.007 [-0.191,+0.205] MDE 0.282
+recurrence by state-size tercile: {'small': 0.42, 'mid': 0.56, 'large': 0.0}
+April outliers per state by tercile (mean): {'small': 1.8, 'mid': 1.0, 'large': 0.1}
+persistent outliers:
+  WV 2.3x  Fiction writing
+  ME 2.2x  Outdoor and garden
+  NE 2.1x  Outdoor and garden
+  HI 2.1x  Destination research
+  MS 1.8x  Media discovery
+  MS 1.8x  Formatted writing
+  OK 1.8x  Media discovery
+  WV 1.8x  Companionship and conversation
+  AR 1.8x  Fiction writing
+  DC 1.7x  Editing and rewriting
+  WV 1.7x  Gaming
+  WV 1.7x  Media discovery
+  IA 1.7x  Science
+  AK 1.7x  Gaming
+  MS 1.6x  Instructional design
+  AL 1.6x  Fiction writing
+  KS 1.6x  Gaming
+  NM 1.6x  Fiction writing
+  DC 1.6x  Self-presentation writing
+  KY 1.6x  Media discovery
+  WI 1.6x  Outdoor and garden
+  DC 1.6x  Research and evidence
+  threshold 1.5: April 78, May 91, both 30
+  threshold 2.0: April 12, May 13, both 4
+covariate spot checks: DC public admin 18.6% (Census ~17), VT rural 61.1% (Census 64.9), HI arts/accommodation 14.6%, NE agriculture 4.3%, UT college 8.2%
+H1 (recurrence < 60% and rises with usage): DOES NOT HOLD
+CHECK OK

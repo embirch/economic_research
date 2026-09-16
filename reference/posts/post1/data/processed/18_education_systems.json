@@ -1,0 +1,284 @@
+{
+ "overall": {
+  "test_scores": {
+   "n": 101,
+   "coef": -1.2,
+   "ci": [
+    -2.37,
+    -0.03
+   ],
+   "tertiary_after": -1.38,
+   "corr_with_tertiary": 0.68
+  },
+  "learning_adj_years": {
+   "n": 101,
+   "coef": -2.11,
+   "ci": [
+    -3.55,
+    -0.66
+   ],
+   "tertiary_after": -1.19,
+   "corr_with_tertiary": 0.77
+  },
+  "expected_years": {
+   "n": 101,
+   "coef": -1.46,
+   "ci": [
+    -2.86,
+    -0.05
+   ],
+   "tertiary_after": -1.38,
+   "corr_with_tertiary": 0.74
+  },
+  "secondary_enrol": {
+   "n": 101,
+   "coef": -0.61,
+   "ci": [
+    -1.82,
+    0.59
+   ],
+   "tertiary_after": -1.47,
+   "corr_with_tertiary": 0.78
+  },
+  "edu_spend": {
+   "n": 98,
+   "coef": 0.1,
+   "ci": [
+    -0.67,
+    0.88
+   ],
+   "tertiary_after": -1.69,
+   "corr_with_tertiary": 0.33
+  },
+  "globe_future": {
+   "n": 48,
+   "coef": -0.3,
+   "ci": [
+    -1.24,
+    0.65
+   ],
+   "tertiary_after": -1.05,
+   "corr_with_tertiary": 0.07
+  },
+  "globe_performance": {
+   "n": 48,
+   "coef": 0.2,
+   "ci": [
+    -0.58,
+    0.97
+   ],
+   "tertiary_after": -0.94,
+   "corr_with_tertiary": -0.07
+  },
+  "globe_uai": {
+   "n": 48,
+   "coef": -0.1,
+   "ci": [
+    -1.13,
+    0.92
+   ],
+   "tertiary_after": -1.01,
+   "corr_with_tertiary": 0.13
+  },
+  "globe_inst_collectivism": {
+   "n": 48,
+   "coef": -0.97,
+   "ci": [
+    -2.36,
+    0.43
+   ],
+   "tertiary_after": -1.28,
+   "corr_with_tertiary": -0.04
+  },
+  "hof_longterm": {
+   "n": 72,
+   "coef": -1.21,
+   "ci": [
+    -2.04,
+    -0.37
+   ],
+   "tertiary_after": -0.96,
+   "corr_with_tertiary": 0.28
+  },
+  "hof_indulgence": {
+   "n": 71,
+   "coef": 1.4,
+   "ci": [
+    0.39,
+    2.4
+   ],
+   "tertiary_after": -1.04,
+   "corr_with_tertiary": 0.26
+  }
+ },
+ "activities": {
+  "Developing Objectives and Strategies": {
+   "test_scores": {
+    "n": 56,
+    "coef": -6.1,
+    "ci": [
+     -10.72,
+     -1.48
+    ],
+    "tertiary_after": -3.07
+   },
+   "learning_adj_years": {
+    "n": 56,
+    "coef": -6.53,
+    "ci": [
+     -10.75,
+     -2.32
+    ],
+    "tertiary_after": -3.02
+   },
+   "globe_future": {
+    "n": 38,
+    "coef": -2.99,
+    "ci": [
+     -5.71,
+     -0.27
+    ],
+    "tertiary_after": -3.72
+   },
+   "globe_performance": {
+    "n": 38,
+    "coef": -2.0,
+    "ci": [
+     -5.64,
+     1.63
+    ],
+    "tertiary_after": -3.69
+   },
+   "hof_longterm": {
+    "n": 48,
+    "coef": -2.28,
+    "ci": [
+     -4.6,
+     0.04
+    ],
+    "tertiary_after": -3.18
+   },
+   "hof_indulgence": {
+    "n": 47,
+    "coef": 1.3,
+    "ci": [
+     -2.31,
+     4.91
+    ],
+    "tertiary_after": -3.44
+   }
+  },
+  "Thinking Creatively": {
+   "test_scores": {
+    "n": 82,
+    "coef": -0.13,
+    "ci": [
+     -1.31,
+     1.04
+    ],
+    "tertiary_after": -1.39
+   },
+   "learning_adj_years": {
+    "n": 82,
+    "coef": -0.18,
+    "ci": [
+     -1.55,
+     1.2
+    ],
+    "tertiary_after": -1.39
+   },
+   "globe_future": {
+    "n": 45,
+    "coef": -0.49,
+    "ci": [
+     -1.43,
+     0.46
+    ],
+    "tertiary_after": -0.91
+   },
+   "globe_performance": {
+    "n": 45,
+    "coef": -0.1,
+    "ci": [
+     -1.23,
+     1.04
+    ],
+    "tertiary_after": -0.85
+   },
+   "hof_longterm": {
+    "n": 62,
+    "coef": -1.06,
+    "ci": [
+     -1.55,
+     -0.58
+    ],
+    "tertiary_after": -0.79
+   },
+   "hof_indulgence": {
+    "n": 62,
+    "coef": 0.45,
+    "ci": [
+     -0.31,
+     1.2
+    ],
+    "tertiary_after": -1.1
+   }
+  },
+  "Working with Computers": {
+   "test_scores": {
+    "n": 82,
+    "coef": 1.06,
+    "ci": [
+     0.08,
+     2.04
+    ],
+    "tertiary_after": 0.7
+   },
+   "learning_adj_years": {
+    "n": 82,
+    "coef": 1.2,
+    "ci": [
+     0.19,
+     2.2
+    ],
+    "tertiary_after": 0.68
+   },
+   "globe_future": {
+    "n": 45,
+    "coef": 0.26,
+    "ci": [
+     -0.34,
+     0.85
+    ],
+    "tertiary_after": 0.86
+   },
+   "globe_performance": {
+    "n": 45,
+    "coef": 0.26,
+    "ci": [
+     -0.86,
+     1.38
+    ],
+    "tertiary_after": 0.9
+   },
+   "hof_longterm": {
+    "n": 62,
+    "coef": 0.11,
+    "ci": [
+     -0.58,
+     0.81
+    ],
+    "tertiary_after": 0.42
+   },
+   "hof_indulgence": {
+    "n": 62,
+    "coef": 0.16,
+    "ci": [
+     -0.63,
+     0.95
+    ],
+    "tertiary_after": 0.66
+   }
+  }
+ }
+}

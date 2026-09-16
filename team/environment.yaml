@@ -1,0 +1,19 @@
+name: research-env
+config:
+  type: cloud
+  packages:
+    pip:
+      - pandas==2.3.3
+      - numpy
+      - statsmodels==0.14.6
+      - scipy
+      - matplotlib
+      - pyarrow
+      - duckdb
+      - polars
+      - xlrd
+      - openpyxl
+      - markdown
+      - requests
+  networking:
+    type: unrestricted   # research needs data from many hosts (Hugging Face, Census, World Bank, BLS, OECD, other providers); Anthropic's general safety blocklist still applies. Tighten to an allowlist once the atlas has fixed the sources.

@@ -1,0 +1,122 @@
+{
+ "Primary (Aug 2025, Hofstede country scores)": {
+  "n": 61,
+  "coef": -0.634,
+  "ci_low": -1.554,
+  "ci_high": 0.286,
+  "mde": 1.314,
+  "p": 0.1767
+ },
+ "A. + Hofstede regional scores": {
+  "n": 72,
+  "coef": -0.419,
+  "ci_low": -1.286,
+  "ci_high": 0.447,
+  "mde": 1.238,
+  "p": 0.3427
+ },
+ "B1. GLOBE power-distance practices": {
+  "n": 52,
+  "coef": 0.591,
+  "ci_low": -0.32,
+  "ci_high": 1.503,
+  "mde": 1.303,
+  "p": 0.2037
+ },
+ "B2. GLOBE participative leadership (expect negative)": {
+  "n": 52,
+  "coef": 0.613,
+  "ci_low": -0.612,
+  "ci_high": 1.838,
+  "mde": 1.751,
+  "p": 0.3269
+ },
+ "C. + individualism + uncertainty avoidance (PDI coef)": {
+  "n": 61,
+  "coef": -0.132,
+  "ci_low": -1.183,
+  "ci_high": 0.919,
+  "mde": 1.501,
+  "p": 0.8055
+ },
+ "C. individualism coef": {
+  "n": 61,
+  "coef": 1.452,
+  "ci_low": 0.065,
+  "ci_high": 2.838,
+  "mde": 1.981,
+  "p": 0.0402
+ },
+ "C. uncertainty-avoidance coef": {
+  "n": 61,
+  "coef": 0.149,
+  "ci_low": -0.809,
+  "ci_high": 1.106,
+  "mde": 1.368,
+  "p": 0.7607
+ },
+ "D. outcome = directive share (task-mix residual)": {
+  "n": 61,
+  "coef": -0.406,
+  "ci_low": -1.209,
+  "ci_high": 0.397,
+  "mde": 1.147,
+  "p": 0.3216
+ },
+ "E. wave 2025-11": {
+  "n": 61,
+  "coef": -0.294,
+  "ci_low": -1.179,
+  "ci_high": 0.59,
+  "mde": 1.264,
+  "p": 0.5145
+ },
+ "E. wave 2026-02": {
+  "n": 61,
+  "coef": 0.12,
+  "ci_low": -0.581,
+  "ci_high": 0.822,
+  "mde": 1.002,
+  "p": 0.7368
+ },
+ "F. English-majority countries only (illustrative)": {
+  "n": 49,
+  "coef": -0.586,
+  "ci_low": -1.611,
+  "ci_high": 0.439,
+  "mde": 1.464,
+  "p": 0.2628
+ },
+ "G. Stanford human agency: AI-handles-alone share": {
+  "n": 41,
+  "coef": -0.235,
+  "ci_low": -0.621,
+  "ci_high": 0.15,
+  "mde": 0.551,
+  "p": 0.2316
+ },
+ "H. leave-one-out: countries moving PDI coef by >25%": {
+  "movers": [
+   [
+    "AUT",
+    -0.831
+   ],
+   [
+    "JAM",
+    -0.427
+   ],
+   [
+    "PAN",
+    -0.794
+   ]
+  ]
+ },
+ "I. placebo outcome: unclassified share": {
+  "n": 61,
+  "coef": -0.121,
+  "ci_low": -0.413,
+  "ci_high": 0.171,
+  "mde": 0.418,
+  "p": 0.4172
+ }
+}

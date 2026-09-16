@@ -1,0 +1,92 @@
+{
+ "directive": {
+  "mean_share": 39.6,
+  "z_tertiary": [
+   -1.11,
+   -2.02,
+   -0.2
+  ],
+  "z_internet": [
+   -0.6,
+   -1.79,
+   0.59
+  ],
+  "z_log_gdp": [
+   -0.67,
+   -2.17,
+   0.84
+  ]
+ },
+ "feedback loop": {
+  "mean_share": 12.2,
+  "z_tertiary": [
+   0.06,
+   -0.38,
+   0.5
+  ],
+  "z_internet": [
+   0.15,
+   -0.31,
+   0.62
+  ],
+  "z_log_gdp": [
+   0.01,
+   -0.63,
+   0.64
+  ]
+ },
+ "task iteration": {
+  "mean_share": 22.6,
+  "z_tertiary": [
+   0.16,
+   -0.57,
+   0.88
+  ],
+  "z_internet": [
+   0.16,
+   -0.51,
+   0.83
+  ],
+  "z_log_gdp": [
+   -0.08,
+   -1.19,
+   1.02
+  ]
+ },
+ "learning": {
+  "mean_share": 20.9,
+  "z_tertiary": [
+   0.62,
+   -0.21,
+   1.45
+  ],
+  "z_internet": [
+   0.09,
+   -0.76,
+   0.93
+  ],
+  "z_log_gdp": [
+   0.75,
+   -0.78,
+   2.27
+  ]
+ },
+ "validation": {
+  "mean_share": 4.6,
+  "z_tertiary": [
+   0.27,
+   -0.02,
+   0.56
+  ],
+  "z_internet": [
+   0.2,
+   -0.11,
+   0.51
+  ],
+  "z_log_gdp": [
+   -0.0,
+   -0.51,
+   0.51
+  ]
+ }
+}

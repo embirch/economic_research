@@ -1,0 +1,16 @@
+Change in log Usage Index by sub-period (mean over 50 states, Utah excluded): Aug->Nov 0.111, Nov->Feb 0.044 (advertising influx wave), Feb->May -0.037; Aug->May 0.118
+Bottom-10 states in Aug (mean gain) 0.205 vs top-10 -0.085
+  (a) beta-convergence             R2 0.29 | log_aug -0.176 [-0.25,-0.10] MDE 0.11
+  (b) + education + tech share     R2 0.31 | log_aug -0.236 [-0.39,-0.08] MDE 0.22  bachelors_plus +0.048 [-0.06,+0.15] MDE 0.15  tech -0.006 [-0.12,+0.11] MDE 0.16
+  (c) + education + income         R2 0.33 | log_aug -0.245 [-0.40,-0.09] MDE 0.22  bachelors_plus +0.015 [-0.08,+0.11] MDE 0.13  log_gdp +0.040 [-0.05,+0.13] MDE 0.13
+  (a1) Aug->Nov on Aug level       R2 0.14 | log_aug -0.185 [-0.34,-0.03] MDE 0.22
+  (a2) Nov->Feb on Nov level       R2 0.15 | log_nov -0.105 [-0.25,+0.04] MDE 0.20
+  (a3) Feb->May on Feb level       R2 0.03 | log_feb -0.064 [-0.15,+0.02] MDE 0.12
+  (a4) Apr->May on Apr level       R2 0.03 | log_apr -0.016 [-0.05,+0.02] MDE 0.05
+  (n) |Aug->Nov change| on Aug sample size R2 0.04 | log_count_aug -0.037 [-0.13,+0.06] MDE 0.14
+  (a) without Wyoming              -0.180 [-0.26,-0.10]
+  (a1) Aug->Nov without Wyoming    -0.135 [-0.25,-0.02]
+  rank persistence of the index (Spearman): Aug25-May26 0.92, Feb26-May26 0.89
+
+Pre-registered read-out: convergence real: True | catch-up follows education: False | follows composition: False
+CHECK OK

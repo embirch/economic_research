@@ -1,0 +1,50 @@
+{
+ "Educational Instruction and Library": {
+  "kind": "learning",
+  "n": 59,
+  "pdi_coef": 0.412,
+  "ci": [
+   -0.961,
+   1.784
+  ],
+  "mde": 1.961,
+  "income_coef": -1.863,
+  "income_p": 0.0334
+ },
+ "Life, Physical, and Social Science": {
+  "kind": "learning",
+  "n": 59,
+  "pdi_coef": -0.224,
+  "ci": [
+   -1.513,
+   1.066
+  ],
+  "mde": 1.842,
+  "income_coef": -2.101,
+  "income_p": 0.0008
+ },
+ "Office and Administrative Support": {
+  "kind": "routine",
+  "n": 59,
+  "pdi_coef": -0.184,
+  "ci": [
+   -1.419,
+   1.051
+  ],
+  "mde": 1.764,
+  "income_coef": -0.343,
+  "income_p": 0.6466
+ },
+ "Sales and Related": {
+  "kind": "routine",
+  "n": 59,
+  "pdi_coef": -0.375,
+  "ci": [
+   -1.286,
+   0.535
+  ],
+  "mde": 1.301,
+  "income_coef": -0.012,
+  "income_p": 0.9801
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "Life, Physical, and Social Science": {
+  "n": 82,
+  "tert_before": -1.85,
+  "tert_after": -1.57,
+  "coursework_coef": -0.05,
+  "personal_coef": -0.3,
+  "mean_cw": 26.2,
+  "corr_cw_tertiary": -0.47
+ },
+ "Management": {
+  "n": 82,
+  "tert_before": -1.33,
+  "tert_after": -1.33,
+  "coursework_coef": -0.03,
+  "personal_coef": -0.02,
+  "mean_cw": 13.1,
+  "corr_cw_tertiary": -0.45
+ },
+ "Healthcare Practitioners and Technical": {
+  "n": 82,
+  "tert_before": -1.22,
+  "tert_after": -1.11,
+  "coursework_coef": -0.72,
+  "personal_coef": -0.61,
+  "mean_cw": 6.3,
+  "corr_cw_tertiary": -0.55
+ },
+ "Business and Financial Operations": {
+  "n": 82,
+  "tert_before": -1.05,
+  "tert_after": -1.21,
+  "coursework_coef": -0.13,
+  "personal_coef": -0.03,
+  "mean_cw": 10.8,
+  "corr_cw_tertiary": -0.46
+ },
+ "Arts, Design, Entertainment, Sports, and Media": {
+  "n": 82,
+  "tert_before": -0.74,
+  "tert_after": -0.7,
+  "coursework_coef": -0.01,
+  "personal_coef": 0.15,
+  "mean_cw": 22.2,
+  "corr_cw_tertiary": -0.23
+ },
+ "Educational Instruction and Library": {
+  "n": 82,
+  "tert_before": -0.78,
+  "tert_after": -1.08,
+  "coursework_coef": -0.28,
+  "personal_coef": -0.21,
+  "mean_cw": 45.9,
+  "corr_cw_tertiary": -0.53
+ }
+}

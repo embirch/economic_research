@@ -1,0 +1,13 @@
+  Fiction writing                  R2 on user occupation shares: Apr 0.22, May 0.09 → not composition
+  Outdoor and garden               R2 on user occupation shares: Apr 0.07, May 0.00 → not composition
+  Destination research             R2 on user occupation shares: Apr 0.07, May 0.10 → not composition
+  Media discovery                  R2 on user occupation shares: Apr 0.15, May 0.04 → not composition
+  Formatted writing                R2 on user occupation shares: Apr 0.03, May 0.00 → not composition
+  Companionship and conversation   R2 on user occupation shares: Apr 0.00, May 0.02 → not composition
+  Editing and rewriting            R2 on user occupation shares: Apr 0.19, May 0.02 → not composition
+  Gaming                           R2 on user occupation shares: Apr 0.30, May 0.30 → not composition
+  Science                          R2 on user occupation shares: Apr 0.03, May 0.42 → not composition
+  Instructional design             R2 on user occupation shares: Apr 0.30, May 0.28 → not composition
+  Self-presentation writing        R2 on user occupation shares: Apr 0.01, May 0.02 → not composition
+  Research and evidence            R2 on user occupation shares: Apr 0.24, May 0.11 → not composition
+CHECK OK

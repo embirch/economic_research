@@ -1,0 +1,33 @@
+  top = L.idxmax(axis=1).str.replace("lang:","").str.replace("_ratio",""); topv = L.max(axis=1)
+GDP per working-age adult          matched 110 of 111 thresholded countries; missing: PSE
+Coding share (SOC, Aug 2025)       matched 111 of 111 thresholded countries; missing: 
+Personal-use share (Nov 2025)      matched 111 of 111 thresholded countries; missing: 
+Language group (Stanford)          matched 111 of 111 thresholded countries; missing: 
+Human agency: AI handles alone     matched  57 of 111 thresholded countries; missing: 54 countries
+Hofstede rows not mapped to a country code (must be resolved by hand or confirmed as non-countries):
+ctr            country  pdi
+BLR            Belarus  NaN
+BEF     Belgium French 67.0
+BEN    Belgium Netherl 61.0
+CAF      Canada French 54.0
+CHI              China 80.0
+ETH           Ethiopia  NaN
+GEE       Germany East  NaN
+MLI               Mali  NaN
+SAF       South Africa  NaN
+SWF Switzerland French 70.0
+SWG Switzerland German 26.0
+Hofstede power distance            matched  61 of 111 thresholded countries; missing: 50 countries
+Hofstede PDI incl. regional (robustness) matched  72 of 111 thresholded countries; missing: 39 countries
+GLOBE societies not mapped: ['China', 'South Africa (Black Sample)', 'French Switzerland', 'Canada (English-speaking)', 'Germany (EAST)']
+GLOBE leadership columns containing 'participative': ['Participative', 'Participative Global Leadership Dimension']
+GLOBE power-distance practices     matched  52 of 111 thresholded countries; missing: 59 countries
+
+Spot check, Aug 2025 rows:
+geo_id    wave  automation  expected  auto_resid  aui   gdp_pwa  coding_share  personal_share lang_group  hof_pdi  hof_idv  hof_uai  globe_pdi_practices  globe_participative
+   DNK 2025-08       44.12     59.49       -8.67 2.31 113263.94         22.09           42.67    english     18.0     74.0     23.0                 3.89                 5.70
+   IND 2025-08       58.31     55.58        7.12 0.27   3948.71         52.15           27.82    english     77.0     48.0     40.0                 5.47                 5.07
+   SGP 2025-08       45.31     52.78       -4.72 4.57 121453.28         26.90           33.03    english     74.0     20.0      8.0                 4.99                 5.32
+
+Countries available for the primary test (all variables present): 61
+CHECK OK: one row per country-wave; ranges valid; India PDI 77 and Denmark PDI 18 as published

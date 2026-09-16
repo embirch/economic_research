@@ -1,0 +1,26 @@
+May 2026: education coefficient on within-group automation share (points per SD of tertiary enrolment), all groups
+
+                                         group  n  tert_coef  tert_lo  tert_hi  inc_coef  global_learning  global_coursework  global_automation
+            Life, Physical, and Social Science 82      -1.85    -3.28    -0.43     -1.26             27.7               21.6               40.5
+                                    Management 82      -1.33    -2.78     0.13      0.59             13.7                9.8               43.9
+        Healthcare Practitioners and Technical 82      -1.22    -2.60     0.17      0.71             40.4                4.2               41.6
+             Business and Financial Operations 82      -1.05    -2.46     0.36     -1.09             19.5                7.5               42.6
+                     Personal Care and Service 82      -0.86    -3.96     2.24     -0.88             10.7                8.2               55.9
+           Educational Instruction and Library 82      -0.78    -1.66     0.09     -0.14             27.0               40.4               42.8
+Arts, Design, Entertainment, Sports, and Media 82      -0.74    -1.45    -0.02     -2.54              2.5               18.1               35.9
+            Transportation and Material Moving 62      -0.58    -7.01     5.86      2.38             10.9                8.2               51.7
+                                    Production 82      -0.52    -2.35     1.32      0.03              9.2                7.4               63.7
+                     Computer and Mathematical 82      -0.32    -0.90     0.26      0.12             11.1               14.5               63.9
+                             Sales and Related 82      -0.31    -1.24     0.62      0.99             24.7                5.5               43.8
+          Food Preparation and Serving Related 68      -0.22    -3.31     2.88     -3.98             19.7                2.8               49.1
+             Office and Administrative Support 82      -0.19    -1.08     0.70      0.13              7.3               17.1               56.0
+                  Architecture and Engineering 82      -0.12    -1.54     1.30     -0.46             23.6               19.9               44.9
+                  Community and Social Service 82       0.06    -0.95     1.08      0.14             28.8                2.1               40.0
+                                         Legal 80       0.11    -1.46     1.68     -6.33             19.1               10.7               34.6
+                            Healthcare Support 80       0.16    -1.21     1.52      0.64             41.7               12.0               39.1
+         Installation, Maintenance, and Repair 78       0.19    -2.49     2.87      2.08             16.9                8.0               69.4
+                            Protective Service 59       0.56    -7.07     8.20     -4.01             13.5                5.8               73.6
+
+Correlation across groups of the education coefficient with the group's global learning share: -0.06 | with global coursework share: -0.25 | with global automation share: 0.38
+April vs May education coefficients, correlation across groups: 0.31
+CHECK OK

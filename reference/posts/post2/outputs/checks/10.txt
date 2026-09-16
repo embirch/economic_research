@@ -1,0 +1,13 @@
+  Fiction writing                  apr: N=45 (a) index -0.369 [-0.48,-0.26] MDE 0.16 R2 0.42 | (b) index -0.358 [-0.49,-0.22], personal +0.005 [-0.024,+0.035] R2 0.43
+  Fiction writing                  may: N=45 (a) index -0.387 [-0.56,-0.22] MDE 0.24 R2 0.51 | (b) index -0.355 [-0.57,-0.14], personal +0.016 [-0.013,+0.045] R2 0.53
+  Gaming                           apr: N=47 (a) index -0.394 [-0.53,-0.26] MDE 0.19 R2 0.51 | (b) index -0.335 [-0.47,-0.20], personal +0.027 [+0.004,+0.051] R2 0.58
+  Gaming                           may: N=48 (a) index -0.427 [-0.51,-0.34] MDE 0.12 R2 0.67 | (b) index -0.379 [-0.48,-0.28], personal +0.027 [+0.010,+0.044] R2 0.75
+  Companionship and conversation   apr: N=46 (a) index -0.189 [-0.31,-0.06] MDE 0.18 R2 0.28 | (b) index -0.136 [-0.29,+0.02], personal +0.026 [+0.006,+0.046] R2 0.40
+  Companionship and conversation   may: N=47 (a) index -0.214 [-0.35,-0.08] MDE 0.19 R2 0.28 | (b) index -0.170 [-0.32,-0.02], personal +0.027 [+0.004,+0.050] R2 0.39
+  Media discovery                  apr: N=45 (a) index -0.471 [-0.62,-0.32] MDE 0.21 R2 0.62 | (b) index -0.430 [-0.62,-0.24], personal +0.024 [-0.012,+0.061] R2 0.66
+  Media discovery                  may: N=48 (a) index -0.482 [-0.60,-0.36] MDE 0.17 R2 0.68 | (b) index -0.415 [-0.57,-0.26], personal +0.034 [+0.009,+0.058] R2 0.77
+
+H2 hobbyist signature: 4 of 4 clusters pass in both months → HOLDS
+  pooled leisure index, apr: -0.390 [-0.48,-0.30] R2 0.64  (a state at half the national index has leisure distinctiveness 1.31x a state at the national index)
+  pooled leisure index, may: -0.411 [-0.49,-0.34] R2 0.74  (a state at half the national index has leisure distinctiveness 1.33x a state at the national index)
+CHECK OK

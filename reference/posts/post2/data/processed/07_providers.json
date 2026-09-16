@@ -1,0 +1,96 @@
+{
+ "levels": {
+  "anthropic-microsoft": {
+   "raw": 0.781,
+   "residual_after_tech": 0.499
+  },
+  "anthropic-openai": {
+   "raw": 0.895,
+   "residual_after_tech": 0.698
+  },
+  "microsoft-openai": {
+   "raw": 0.847,
+   "residual_after_tech": 0.612
+  }
+ },
+ "levels_verdict": "DO NOT AGREE",
+ "mix": {
+  "2025-08": {
+   "Technical help": {
+    "spearman": -0.115,
+    "anthropic_mean": 40.1,
+    "openai_mean": 6.8,
+    "anthropic_sd": 13.8,
+    "openai_sd": 0.75
+   },
+   "Writing": {
+    "spearman": 0.023,
+    "anthropic_mean": 17.9,
+    "openai_mean": 26.4,
+    "anthropic_sd": 7.12,
+    "openai_sd": 1.66
+   },
+   "Seeking information": {
+    "spearman": -0.356,
+    "anthropic_mean": 16.9,
+    "openai_mean": 19.4,
+    "anthropic_sd": 7.8,
+    "openai_sd": 2.29
+   },
+   "Practical Guidance": {
+    "spearman": -0.331,
+    "anthropic_mean": 19.1,
+    "openai_mean": 29.7,
+    "anthropic_sd": 7.41,
+    "openai_sd": 1.82
+   },
+   "Self-expression": {
+    "spearman": 0.145,
+    "anthropic_mean": 3.6,
+    "openai_mean": 8.1,
+    "anthropic_sd": 1.79,
+    "openai_sd": 0.88
+   },
+   "median": -0.115
+  },
+  "2026-05": {
+   "Technical help": {
+    "spearman": -0.016,
+    "anthropic_mean": 18.5,
+    "openai_mean": 6.8,
+    "anthropic_sd": 1.17,
+    "openai_sd": 0.75
+   },
+   "Writing": {
+    "spearman": 0.189,
+    "anthropic_mean": 20.5,
+    "openai_mean": 26.4,
+    "anthropic_sd": 1.21,
+    "openai_sd": 1.66
+   },
+   "Seeking information": {
+    "spearman": -0.114,
+    "anthropic_mean": 26.6,
+    "openai_mean": 19.4,
+    "anthropic_sd": 2.03,
+    "openai_sd": 2.29
+   },
+   "Practical Guidance": {
+    "spearman": 0.221,
+    "anthropic_mean": 27.5,
+    "openai_mean": 29.7,
+    "anthropic_sd": 1.62,
+    "openai_sd": 1.82
+   },
+   "Self-expression": {
+    "spearman": 0.259,
+    "anthropic_mean": 6.2,
+    "openai_mean": 8.1,
+    "anthropic_sd": 0.95,
+    "openai_sd": 0.88
+   },
+   "median": 0.189
+  }
+ },
+ "mix_verdict": "PROVIDER USER BASES"
+}

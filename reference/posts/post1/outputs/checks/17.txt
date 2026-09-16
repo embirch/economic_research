@@ -1,0 +1,9 @@
+Within-group education coefficient (per SD) before and after adding the group's own coursework and personal shares by country
+
+Life, Physical, and Social Science       N= 82  tertiary before -1.85 [-3.28,-0.43]  after -1.57 [-2.60,-0.55]  | coursework share coef -0.05 [-0.21,+0.11] personal -0.30 [-0.52,-0.08] | mean coursework in group 26%, corr(cw, tertiary) -0.47
+Management                               N= 82  tertiary before -1.33 [-2.78,+0.13]  after -1.33 [-2.82,+0.17]  | coursework share coef -0.03 [-0.22,+0.17] personal -0.02 [-0.28,+0.24] | mean coursework in group 13%, corr(cw, tertiary) -0.45
+Healthcare Practitioners and Technical   N= 82  tertiary before -1.22 [-2.60,+0.17]  after -1.11 [-2.68,+0.47]  | coursework share coef -0.72 [-1.18,-0.26] personal -0.61 [-0.96,-0.26] | mean coursework in group 6%, corr(cw, tertiary) -0.55
+Business and Financial Operations        N= 82  tertiary before -1.05 [-2.46,+0.36]  after -1.21 [-2.70,+0.27]  | coursework share coef -0.13 [-0.30,+0.03] personal -0.03 [-0.18,+0.13] | mean coursework in group 11%, corr(cw, tertiary) -0.46
+Arts, Design, Entertainment, Sports, and N= 82  tertiary before -0.74 [-1.45,-0.02]  after -0.70 [-1.54,+0.14]  | coursework share coef -0.01 [-0.14,+0.12] personal +0.15 [-0.14,+0.43] | mean coursework in group 22%, corr(cw, tertiary) -0.23
+Educational Instruction and Library      N= 82  tertiary before -0.78 [-1.66,+0.09]  after -1.08 [-1.97,-0.18]  | coursework share coef -0.28 [-0.48,-0.08] personal -0.21 [-0.50,+0.09] | mean coursework in group 46%, corr(cw, tertiary) -0.53
+CHECK OK

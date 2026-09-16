@@ -1,0 +1,42 @@
+{
+ "automation_gap_points": 8.3,
+ "directive_gap_points": 8.7,
+ "waves": {
+  "2025-08": {
+   "n": 111,
+   "sd_resid": 5.15,
+   "spread_p5_p95": 15.81,
+   "spread_full": 26.33,
+   "ceiling_share_of_p5p95": 0.525
+  },
+  "2025-11": {
+   "n": 113,
+   "sd_resid": 4.56,
+   "spread_p5_p95": 14.57,
+   "spread_full": 21.92,
+   "ceiling_share_of_p5p95": 0.57
+  },
+  "2026-02": {
+   "n": 115,
+   "sd_resid": 4.34,
+   "spread_p5_p95": 13.26,
+   "spread_full": 19.03,
+   "ceiling_share_of_p5p95": 0.626
+  },
+  "2026-04": {
+   "n": 114,
+   "sd_resid": 3.06,
+   "spread_p5_p95": 10.7,
+   "spread_full": 13.42,
+   "ceiling_share_of_p5p95": 0.775
+  },
+  "2026-05": {
+   "n": 121,
+   "sd_resid": 3.04,
+   "spread_p5_p95": 9.88,
+   "spread_full": 16.12,
+   "ceiling_share_of_p5p95": 0.84
+  }
+ },
+ "plausible_30pt_difference_points": 2.49
+}

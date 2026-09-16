@@ -1,0 +1,4 @@
+  rate = g.groupby("task").apply(lambda t: t.loc[t.is_auto, "value"].sum() / t["value"].sum() * 100)
+A. Anthropic's function: slope = -3.112, R2 = 0.394, p = 1.72e-13, countries = 111, tasks = 1808
+B. Independent code:      slope = -3.112, R2 = 0.394, p = 1.72e-13, countries = 111, tasks = 1808
+CHECK OK: both implementations agree to the decimal and match the published slope 3.112 and R2 0.394; sign negative as reported

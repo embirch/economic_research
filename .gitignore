@@ -1,0 +1,5 @@
+data/cache/
+*.parquet
+__pycache__/
+.venv/
+claude-lock.json.bak

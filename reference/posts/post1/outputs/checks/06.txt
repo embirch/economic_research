@@ -1,0 +1,24 @@
+  beta_hand = np.linalg.solve(X.values.T @ X.values, X.values.T @ y)           # (X'X)^-1 X'y, the least-squares formula
+  beta_hand = np.linalg.solve(X.values.T @ X.values, X.values.T @ y)           # (X'X)^-1 X'y, the least-squares formula
+  beta_hand = np.linalg.solve(X.values.T @ X.values, X.values.T @ y)           # (X'X)^-1 X'y, the least-squares formula
+synthetic test, true effect 3.0: mean estimate over 300 draws = 3.01 (sd 0.55)
+synthetic test, true effect 0.0: mean estimate over 300 draws = -0.00 (sd 0.53)
+hand-written least squares agrees with statsmodels on all 8 coefficients
+figures saved; estimation sample N = 61; language groups: {'english': 49, 'spanish': 8, 'other': 4}
+
+Full pre-registered model (Aug 2025, HC3):
+                 coef     se  ci_low  ci_high       p    mde
+z_pdi          -0.634  0.469  -1.554    0.286  0.1767  1.314
+log_gdp        -2.791  0.704  -4.172   -1.411  0.0001  1.972
+aui             0.104  0.440  -0.758    0.965  0.8132  1.231
+coding_share    0.041  0.061  -0.078    0.161  0.4985  0.171
+personal_share -0.231  0.083  -0.394   -0.068  0.0054  0.233
+VIF: {'z_pdi': np.float64(1.65), 'log_gdp': np.float64(3.9), 'aui': np.float64(2.33), 'coding_share': np.float64(1.18), 'personal_share': np.float64(2.28)}
+
+Power distance alone: {'coef': np.float64(1.901), 'se': np.float64(0.521), 'ci_low': 0.88, 'ci_high': 2.923, 'p': np.float64(0.0003), 'mde': np.float64(1.459)}
+Power distance + log income: {'z_pdi': {'coef': np.float64(-0.39), 'se': np.float64(0.419), 'ci_low': -1.211, 'ci_high': 0.43, 'p': np.float64(0.3511), 'mde': np.float64(1.172)}, 'log_gdp': {'coef': np.float64(-3.84), 'se': np.float64(0.431), 'ci_low': -4.684, 'ci_high': -2.995, 'p': np.float64(0.0), 'mde': np.float64(1.206)}}
+Income + adoption only: {'log_gdp': {'coef': np.float64(-3.963), 'se': np.float64(0.444), 'ci_low': -4.833, 'ci_high': -3.093, 'p': np.float64(0.0), 'mde': np.float64(1.243)}, 'aui': {'coef': np.float64(0.392), 'se': np.float64(0.302), 'ci_low': -0.199, 'ci_high': 0.983, 'p': np.float64(0.194), 'mde': np.float64(0.844)}}
+
+Pre-registered decision: AGAINST H1: coefficient below the MDE
+Income (log GDP) in the full model: coef -2.791 [-4.172, -1.411], MDE 1.972
+CHECK OK: synthetic recovery, hand-vs-library agreement, model fitted on the pre-registered specification

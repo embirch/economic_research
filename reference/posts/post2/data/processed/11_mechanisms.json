@@ -1,0 +1,368 @@
+{
+ "Outdoor and garden": {
+  "covariate": "agri_share",
+  "apr": {
+   "n": 41,
+   "alone": {
+    "coef": 0.147,
+    "ci": [
+     0.058,
+     0.235
+    ],
+    "mde": 0.126,
+    "r2": 0.217
+   },
+   "with_index": {
+    "coef": 0.088,
+    "ci": [
+     -0.008,
+     0.185
+    ],
+    "index": -0.336
+   },
+   "rural_alone": {
+    "coef": 0.236,
+    "ci": [
+     0.171,
+     0.301
+    ]
+   }
+  },
+  "may": {
+   "n": 46,
+   "alone": {
+    "coef": 0.163,
+    "ci": [
+     0.072,
+     0.253
+    ],
+    "mde": 0.129,
+    "r2": 0.222
+   },
+   "with_index": {
+    "coef": 0.12,
+    "ci": [
+     0.027,
+     0.213
+    ],
+    "index": -0.281
+   },
+   "rural_alone": {
+    "coef": 0.224,
+    "ci": [
+     0.151,
+     0.296
+    ]
+   }
+  },
+  "explained": true
+ },
+ "Destination research": {
+  "covariate": "arts_accom_share",
+  "apr": {
+   "n": 34,
+   "alone": {
+    "coef": 0.135,
+    "ci": [
+     -0.252,
+     0.522
+    ],
+    "mde": 0.553,
+    "r2": 0.229
+   },
+   "with_index": {
+    "coef": 0.11,
+    "ci": [
+     -0.248,
+     0.469
+    ],
+    "index": 0.358
+   }
+  },
+  "may": {
+   "n": 41,
+   "alone": {
+    "coef": 0.113,
+    "ci": [
+     -0.159,
+     0.384
+    ],
+    "mde": 0.388,
+    "r2": 0.183
+   },
+   "with_index": {
+    "coef": 0.085,
+    "ci": [
+     -0.151,
+     0.322
+    ],
+    "index": 0.272
+   }
+  },
+  "explained": false
+ },
+ "Editing and rewriting": {
+  "covariate": "pubadmin_share",
+  "apr": {
+   "n": 44,
+   "alone": {
+    "coef": 0.071,
+    "ci": [
+     -0.031,
+     0.174
+    ],
+    "mde": 0.147,
+    "r2": 0.128
+   },
+   "with_index": {
+    "coef": 0.075,
+    "ci": [
+     -0.035,
+     0.186
+    ],
+    "index": -0.019
+   }
+  },
+  "may": {
+   "n": 47,
+   "alone": {
+    "coef": 0.097,
+    "ci": [
+     0.066,
+     0.127
+    ],
+    "mde": 0.044,
+    "r2": 0.296
+   },
+   "with_index": {
+    "coef": 0.094,
+    "ci": [
+     0.054,
+     0.135
+    ],
+    "index": 0.013
+   }
+  },
+  "explained": false
+ },
+ "Self-presentation writing": {
+  "covariate": "pubadmin_share",
+  "apr": {
+   "n": 49,
+   "alone": {
+    "coef": 0.07,
+    "ci": [
+     -0.071,
+     0.212
+    ],
+    "mde": 0.202,
+    "r2": 0.128
+   },
+   "with_index": {
+    "coef": 0.056,
+    "ci": [
+     -0.051,
+     0.163
+    ],
+    "index": 0.107
+   }
+  },
+  "may": {
+   "n": 50,
+   "alone": {
+    "coef": 0.036,
+    "ci": [
+     -0.151,
+     0.224
+    ],
+    "mde": 0.268,
+    "r2": 0.036
+   },
+   "with_index": {
+    "coef": 0.012,
+    "ci": [
+     -0.118,
+     0.142
+    ],
+    "index": 0.178
+   }
+  },
+  "explained": false
+ },
+ "Research and evidence": {
+  "covariate": "pubadmin_share",
+  "apr": {
+   "n": 45,
+   "alone": {
+    "coef": 0.065,
+    "ci": [
+     -0.061,
+     0.19
+    ],
+    "mde": 0.179,
+    "r2": 0.083
+   },
+   "with_index": {
+    "coef": 0.048,
+    "ci": [
+     -0.067,
+     0.163
+    ],
+    "index": 0.08
+   }
+  },
+  "may": {
+   "n": 46,
+   "alone": {
+    "coef": 0.091,
+    "ci": [
+     0.047,
+     0.134
+    ],
+    "mde": 0.063,
+    "r2": 0.208
+   },
+   "with_index": {
+    "coef": 0.091,
+    "ci": [
+     0.025,
+     0.157
+    ],
+    "index": -0.003
+   }
+  },
+  "explained": false
+ },
+ "Instructional design": {
+  "covariate": "college_share",
+  "apr": {
+   "n": 42,
+   "alone": {
+    "coef": -0.012,
+    "ci": [
+     -0.08,
+     0.057
+    ],
+    "mde": 0.098,
+    "r2": 0.003
+   },
+   "with_index": {
+    "coef": 0.093,
+    "ci": [
+     0.005,
+     0.18
+    ],
+    "index": -0.364
+   }
+  },
+  "may": {
+   "n": 42,
+   "alone": {
+    "coef": 0.025,
+    "ci": [
+     -0.022,
+     0.073
+    ],
+    "mde": 0.068,
+    "r2": 0.019
+   },
+   "with_index": {
+    "coef": 0.101,
+    "ci": [
+     0.04,
+     0.163
+    ],
+    "index": -0.27
+   }
+  },
+  "explained": false
+ },
+ "Science": {
+  "covariate": "college_share",
+  "apr": {
+   "n": 35,
+   "alone": {
+    "coef": 0.034,
+    "ci": [
+     -0.067,
+     0.135
+    ],
+    "mde": 0.145,
+    "r2": 0.019
+   },
+   "with_index": {
+    "coef": 0.122,
+    "ci": [
+     0.028,
+     0.215
+    ],
+    "index": -0.336
+   }
+  },
+  "may": {
+   "n": 37,
+   "alone": {
+    "coef": 0.026,
+    "ci": [
+     -0.059,
+     0.112
+    ],
+    "mde": 0.122,
+    "r2": 0.01
+   },
+   "with_index": {
+    "coef": 0.038,
+    "ci": [
+     -0.1,
+     0.176
+    ],
+    "index": -0.04
+   }
+  },
+  "explained": false
+ },
+ "Formatted writing": {
+  "covariate": "college_share",
+  "apr": {
+   "n": 44,
+   "alone": {
+    "coef": 0.008,
+    "ci": [
+     -0.055,
+     0.07
+    ],
+    "mde": 0.089,
+    "r2": 0.001
+   },
+   "with_index": {
+    "coef": 0.076,
+    "ci": [
+     -0.005,
+     0.157
+    ],
+    "index": -0.243
+   }
+  },
+  "may": {
+   "n": 47,
+   "alone": {
+    "coef": -0.012,
+    "ci": [
+     -0.069,
+     0.045
+    ],
+    "mde": 0.082,
+    "r2": 0.006
+   },
+   "with_index": {
+    "coef": 0.056,
+    "ci": [
+     -0.004,
+     0.117
+    ],
+    "index": -0.224
+   }
+  },
+  "explained": false
+ }
+}

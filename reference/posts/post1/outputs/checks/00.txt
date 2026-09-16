@@ -1,0 +1,7 @@
+Python 3.9.6 at /Users/emilybirch/Desktop/Anthropic/research/.venv/bin/python
+  pandas       2.3.3
+  numpy        2.0.2
+  statsmodels  0.14.6
+  scipy        1.13.1
+  matplotlib   3.9.4
+CHECK OK: environment ready

@@ -1,0 +1,412 @@
+{
+ "A_us_states": {
+  "2026-04": {
+   "(1) education alone": {
+    "n": 51,
+    "r2": 0.33,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -1.13,
+      "ci": [
+       -1.48,
+       -0.79
+      ],
+      "mde": 0.49
+     }
+    }
+   },
+   "(2) education + log income": {
+    "n": 51,
+    "r2": 0.34,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -0.91,
+      "ci": [
+       -1.84,
+       0.01
+      ],
+      "mde": 1.32
+     },
+     "log_gdp": {
+      "coef": -0.28,
+      "ci": [
+       -1.23,
+       0.67
+      ],
+      "mde": 1.36
+     }
+    }
+   },
+   "(3) full": {
+    "n": 51,
+    "r2": 0.47,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -1.28,
+      "ci": [
+       -2.53,
+       -0.03
+      ],
+      "mde": 1.79
+     },
+     "log_gdp": {
+      "coef": -0.42,
+      "ci": [
+       -1.67,
+       0.84
+      ],
+      "mde": 1.8
+     },
+     "broadband": {
+      "coef": 0.47,
+      "ci": [
+       -0.6,
+       1.53
+      ],
+      "mde": 1.53
+     },
+     "aui": {
+      "coef": 0.42,
+      "ci": [
+       -2.5,
+       3.34
+      ],
+      "mde": 4.18
+     },
+     "coding_share": {
+      "coef": 0.3,
+      "ci": [
+       -0.59,
+       1.19
+      ],
+      "mde": 1.27
+     },
+     "personal_share": {
+      "coef": -0.45,
+      "ci": [
+       -1.16,
+       0.27
+      ],
+      "mde": 1.03
+     }
+    }
+   },
+   "income alone": {
+    "n": 51,
+    "r2": 0.26,
+    "terms": {
+     "log_gdp": {
+      "coef": -1.0,
+      "ci": [
+       -1.35,
+       -0.66
+      ],
+      "mde": 0.49
+     }
+    }
+   },
+   "personal alone": {
+    "n": 51,
+    "r2": 0.01,
+    "terms": {
+     "personal_share": {
+      "coef": -0.15,
+      "ci": [
+       -1.03,
+       0.74
+      ],
+      "mde": 1.26
+     }
+    }
+   },
+   "(1) on the 43 August states": {
+    "n": 43,
+    "r2": 0.46,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -1.26,
+      "ci": [
+       -1.64,
+       -0.87
+      ]
+     }
+    }
+   }
+  },
+  "2026-05": {
+   "(1) education alone": {
+    "n": 50,
+    "r2": 0.42,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -1.15,
+      "ci": [
+       -1.51,
+       -0.78
+      ],
+      "mde": 0.52
+     }
+    }
+   },
+   "(2) education + log income": {
+    "n": 50,
+    "r2": 0.49,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -0.52,
+      "ci": [
+       -1.24,
+       0.2
+      ],
+      "mde": 1.02
+     },
+     "log_gdp": {
+      "coef": -0.77,
+      "ci": [
+       -1.54,
+       -0.01
+      ],
+      "mde": 1.09
+     }
+    }
+   },
+   "(3) full": {
+    "n": 50,
+    "r2": 0.66,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -0.6,
+      "ci": [
+       -1.34,
+       0.14
+      ],
+      "mde": 1.06
+     },
+     "log_gdp": {
+      "coef": -0.49,
+      "ci": [
+       -1.47,
+       0.5
+      ],
+      "mde": 1.41
+     },
+     "broadband": {
+      "coef": -0.18,
+      "ci": [
+       -0.77,
+       0.42
+      ],
+      "mde": 0.85
+     },
+     "aui": {
+      "coef": 1.13,
+      "ci": [
+       -0.8,
+       3.07
+      ],
+      "mde": 2.76
+     },
+     "coding_share": {
+      "coef": 0.98,
+      "ci": [
+       0.51,
+       1.44
+      ],
+      "mde": 0.66
+     },
+     "personal_share": {
+      "coef": 0.12,
+      "ci": [
+       -0.35,
+       0.6
+      ],
+      "mde": 0.68
+     }
+    }
+   },
+   "income alone": {
+    "n": 50,
+    "r2": 0.46,
+    "terms": {
+     "log_gdp": {
+      "coef": -1.2,
+      "ci": [
+       -1.66,
+       -0.73
+      ],
+      "mde": 0.66
+     }
+    }
+   },
+   "personal alone": {
+    "n": 50,
+    "r2": 0.02,
+    "terms": {
+     "personal_share": {
+      "coef": 0.28,
+      "ci": [
+       -0.5,
+       1.05
+      ],
+      "mde": 1.11
+     }
+    }
+   },
+   "(1) on the 43 August states": {
+    "n": 43,
+    "r2": 0.49,
+    "terms": {
+     "bachelors_plus": {
+      "coef": -1.24,
+      "ci": [
+       -1.65,
+       -0.83
+      ]
+     }
+    }
+   }
+  }
+ },
+ "B_within_country": {
+  "2026-04": {
+   "personal share": {
+    "n": 411,
+    "countries": 51,
+    "terms": {
+     "personal_share": {
+      "coef": 0.026,
+      "ci": [
+       -0.079,
+       0.13
+      ]
+     }
+    }
+   },
+   "coding share": {
+    "n": 411,
+    "countries": 51,
+    "terms": {
+     "coding_share": {
+      "coef": 0.247,
+      "ci": [
+       0.096,
+       0.399
+      ]
+     }
+    }
+   },
+   "prompt education (years)": {
+    "n": 411,
+    "countries": 51,
+    "terms": {
+     "prompt_education": {
+      "coef": -0.956,
+      "ci": [
+       -2.136,
+       0.224
+      ]
+     }
+    }
+   },
+   "all three": {
+    "n": 411,
+    "countries": 51,
+    "terms": {
+     "personal_share": {
+      "coef": -0.061,
+      "ci": [
+       -0.222,
+       0.1
+      ]
+     },
+     "coding_share": {
+      "coef": 0.335,
+      "ci": [
+       0.187,
+       0.484
+      ]
+     },
+     "prompt_education": {
+      "coef": -2.276,
+      "ci": [
+       -3.998,
+       -0.555
+      ]
+     }
+    }
+   },
+   "between_personal_share": -0.191,
+   "between_prompt_education": -2.102
+  },
+  "2026-05": {
+   "personal share": {
+    "n": 497,
+    "countries": 54,
+    "terms": {
+     "personal_share": {
+      "coef": 0.071,
+      "ci": [
+       -0.037,
+       0.179
+      ]
+     }
+    }
+   },
+   "coding share": {
+    "n": 497,
+    "countries": 54,
+    "terms": {
+     "coding_share": {
+      "coef": 0.223,
+      "ci": [
+       0.077,
+       0.368
+      ]
+     }
+    }
+   },
+   "prompt education (years)": {
+    "n": 497,
+    "countries": 54,
+    "terms": {
+     "prompt_education": {
+      "coef": -1.699,
+      "ci": [
+       -2.665,
+       -0.734
+      ]
+     }
+    }
+   },
+   "all three": {
+    "n": 497,
+    "countries": 54,
+    "terms": {
+     "personal_share": {
+      "coef": -0.096,
+      "ci": [
+       -0.218,
+       0.027
+      ]
+     },
+     "coding_share": {
+      "coef": 0.28,
+      "ci": [
+       0.145,
+       0.415
+      ]
+     },
+     "prompt_education": {
+      "coef": -2.752,
+      "ci": [
+       -3.812,
+       -1.691
+      ]
+     }
+    }
+   },
+   "between_personal_share": -0.139,
+   "between_prompt_education": -1.837
+  }
+ }
+}

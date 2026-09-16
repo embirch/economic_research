@@ -1,0 +1,7 @@
+SOC groups with by-country automation (May 2026): 22
+requested groups not found by exact name: []
+Educational Instruction and Library      [learning] N= 59  PDI coef +0.41 [-0.96, +1.78] MDE 1.96 | income coef -1.86 (p=0.033)
+Life, Physical, and Social Science       [learning] N= 59  PDI coef -0.22 [-1.51, +1.07] MDE 1.84 | income coef -2.10 (p=0.001)
+Office and Administrative Support        [routine ] N= 59  PDI coef -0.18 [-1.42, +1.05] MDE 1.76 | income coef -0.34 (p=0.647)
+Sales and Related                        [routine ] N= 59  PDI coef -0.38 [-1.29, +0.54] MDE 1.30 | income coef -0.01 (p=0.980)
+CHECK OK: within-group models fitted

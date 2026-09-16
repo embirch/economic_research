@@ -1,0 +1,35 @@
+  2026-04: 448 subregions with automation and task mix; usage index published for 51 (US states only)
+
+(A) US states, 2026-04: N=51  [all 51 published; no threshold information in the June file]
+  (1) education alone        R2=0.33  bachelors_plus -1.13 [-1.48,-0.79]
+  (2) education + log income R2=0.34  bachelors_plus -0.91 [-1.84,+0.01]  log_gdp -0.28 [-1.23,+0.67]
+  (3) full                   R2=0.47  bachelors_plus -1.28 [-2.53,-0.03]  log_gdp -0.42 [-1.67,+0.84]  broadband +0.47 [-0.60,+1.53]  aui +0.42 [-2.50,+3.34]  coding_share +0.30 [-0.59,+1.19]  personal_share -0.45 [-1.16,+0.27]
+  income alone               R2=0.26  log_gdp -1.00 [-1.35,-0.66]
+  personal alone             R2=0.01  personal_share -0.15 [-1.03,+0.74]
+  (1) on the 43 August states R2=0.46  bachelors_plus -1.26 [-1.64,-0.87]
+  2026-05: 550 subregions with automation and task mix; usage index published for 50 (US states only)
+
+(A) US states, 2026-05: N=50  [all 51 published; no threshold information in the June file]
+  (1) education alone        R2=0.42  bachelors_plus -1.15 [-1.51,-0.78]
+  (2) education + log income R2=0.49  bachelors_plus -0.52 [-1.24,+0.20]  log_gdp -0.77 [-1.54,-0.01]
+  (3) full                   R2=0.66  bachelors_plus -0.60 [-1.34,+0.14]  log_gdp -0.49 [-1.47,+0.50]  broadband -0.18 [-0.77,+0.42]  aui +1.13 [-0.80,+3.07]  coding_share +0.98 [+0.51,+1.44]  personal_share +0.12 [-0.35,+0.60]
+  income alone               R2=0.46  log_gdp -1.20 [-1.66,-0.73]
+  personal alone             R2=0.02  personal_share +0.28 [-0.50,+1.05]
+  (1) on the 43 August states R2=0.49  bachelors_plus -1.24 [-1.65,-0.83]
+
+(B) Within-country across subregions (country fixed effects, SEs clustered by country), exploratory:
+  2026-04: 411 subregions in 51 countries (>=3 subregions each); mean within-country SD: personal share 2.9 pts, prompt education 0.27 yrs
+    personal share         personal_share +0.026 [-0.079,+0.130]
+    coding share           coding_share +0.247 [+0.096,+0.399]
+    prompt education (years) prompt_education -0.956 [-2.136,+0.224]
+    all three              personal_share -0.061 [-0.222,+0.100]  coding_share +0.335 [+0.187,+0.484]  prompt_education -2.276 [-3.998,-0.555]
+    for scale, between countries (subregion means, N=51): personal_share -0.191 [-0.255,-0.127]
+    for scale, between countries (subregion means, N=51): prompt_education -2.102 [-3.674,-0.530]
+  2026-05: 497 subregions in 54 countries (>=3 subregions each); mean within-country SD: personal share 2.9 pts, prompt education 0.29 yrs
+    personal share         personal_share +0.071 [-0.037,+0.179]
+    coding share           coding_share +0.223 [+0.077,+0.368]
+    prompt education (years) prompt_education -1.699 [-2.665,-0.734]
+    all three              personal_share -0.096 [-0.218,+0.027]  coding_share +0.280 [+0.145,+0.415]  prompt_education -2.752 [-3.812,-1.691]
+    for scale, between countries (subregion means, N=54): personal_share -0.139 [-0.213,-0.064]
+    for scale, between countries (subregion means, N=54): prompt_education -1.837 [-3.326,-0.349]
+CHECK OK

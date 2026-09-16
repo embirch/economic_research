@@ -1,0 +1,18 @@
+median age: DC 34.9, ME 44.9, UT 32.3 (Census: 34.8, 44.8, 31.9)
+
+2026-05: base R2 (tech share) 0.60; residual SD 0.32 log points; N 50
+  (a) education alone                              R2 0.08 | bachelors_plus +0.088 [-0.00,+0.18] MDE 0.13
+  (b) education + age + broadband                  R2 0.28 | bachelors_plus -0.016 [-0.24,+0.21] MDE 0.33  median_age +0.023 [-0.07,+0.12] MDE 0.14  broadband +0.174 [+0.02,+0.33] MDE 0.23
+  (c) income alone                                 R2 0.10 | log_gdp +0.098 [-0.02,+0.21] MDE 0.17
+  (d) education + income                           R2 0.10 | bachelors_plus +0.029 [-0.13,+0.19] MDE 0.23  log_gdp +0.075 [-0.09,+0.24] MDE 0.24
+  (e) not residualised: log AUI on tech + education R2 0.70 | tech +0.168 [+0.03,+0.31] MDE 0.20  bachelors_plus +0.269 [+0.12,+0.42] MDE 0.21
+
+2026-04: base R2 (tech share) 0.60; residual SD 0.32 log points; N 50
+  (a) education alone                              R2 0.09 | bachelors_plus +0.096 [+0.01,+0.18] MDE 0.12
+  (b) education + age + broadband                  R2 0.26 | bachelors_plus -0.002 [-0.24,+0.23] MDE 0.34  median_age +0.010 [-0.09,+0.11] MDE 0.14  broadband +0.163 [+0.00,+0.33] MDE 0.23
+  (c) income alone                                 R2 0.10 | log_gdp +0.103 [+0.01,+0.20] MDE 0.14
+  (d) education + income                           R2 0.11 | bachelors_plus +0.038 [-0.13,+0.20] MDE 0.24  log_gdp +0.073 [-0.09,+0.23] MDE 0.23
+  (e) not residualised: log AUI on tech + education R2 0.71 | tech +0.152 [+0.02,+0.29] MDE 0.20  bachelors_plus +0.292 [+0.15,+0.43] MDE 0.20
+
+Pre-registered read-out (May): education explains the residual: False | income (c,d): False | broadband (b): False
+CHECK OK

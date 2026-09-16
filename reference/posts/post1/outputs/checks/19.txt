@@ -1,0 +1,31 @@
+WVS countries: 66 | respondents: 97220
+
+(A) Aug 2025 outcome: WVS item added to tertiary + internet + income (+controls). Coef per SD [95% CI]; tertiary after; corr with tertiary
+  wvs_independence             N= 45  -0.75 [-2.43,+0.93]  MDE 2.40  tertiary after -1.14  corr +0.12
+  wvs_imagination              N= 45  -0.40 [-2.25,+1.45]  MDE 2.64  tertiary after -1.09  corr +0.20
+  wvs_obedience                N= 45  +0.83 [-0.70,+2.35]  MDE 2.18  tertiary after -1.05  corr -0.30
+  wvs_hardwork                 N= 45  +0.34 [-1.04,+1.72]  MDE 1.97  tertiary after -1.17  corr -0.08
+  wvs_perseverance             N= 45  -0.70 [-2.37,+0.97]  MDE 2.39  tertiary after -0.84  corr +0.37
+  wvs_respect_authority_good   N= 45  +0.68 [-1.87,+3.22]  MDE 3.64  tertiary after -0.77  corr -0.40
+  wvs_autonomy_index           N= 45  -1.20 [-3.48,+1.08]  MDE 3.26  tertiary after -1.21  corr +0.30
+
+(B) Selective activities, May 2026
+  Developing Objectives and Strategies:
+     wvs_independence             N= 34 -1.95 [-5.24, 1.33]
+     wvs_imagination              N= 34 +0.31 [-3.0, 3.62]
+     wvs_obedience                N= 34 +0.66 [-3.44, 4.75]
+     wvs_autonomy_index           N= 34 -1.53 [-5.34, 2.28]
+     wvs_respect_authority_good   N= 34 -0.36 [-3.84, 3.12]
+  Thinking Creatively:
+     wvs_independence             N= 42 -0.67 [-1.69, 0.35]
+     wvs_imagination              N= 42 -0.16 [-1.85, 1.53]
+     wvs_obedience                N= 42 -0.32 [-2.25, 1.62]
+     wvs_autonomy_index           N= 42 -0.24 [-2.19, 1.7]
+     wvs_respect_authority_good   N= 42 +0.21 [-0.75, 1.18]
+  Working with Computers:
+     wvs_independence             N= 42 -0.40 [-1.19, 0.39]
+     wvs_imagination              N= 42 +0.02 [-1.23, 1.28]
+     wvs_obedience                N= 42 +0.22 [-0.7, 1.13]
+     wvs_autonomy_index           N= 42 -0.38 [-1.04, 0.28]
+     wvs_respect_authority_good   N= 42 -0.10 [-0.86, 0.66]
+CHECK OK

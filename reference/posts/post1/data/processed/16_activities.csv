@@ -1,0 +1,40 @@
+month,activity,n,tert,tert_lo,tert_hi,bundle,global_auto,global_autonomy,global_share
+2026-04,Analyzing Data or Information,71,-1.29,-2.27,-0.31,-3.58,50.1,2.73,5.75
+2026-04,Communicating with People Outside the Organization,71,-0.43,-1.7,0.85,-0.61,38.0,2.56,1.85
+2026-04,"Communicating with Supervisors, Peers, or Subordinates",46,-1.37,-5.12,2.39,-1.69,54.0,2.53,0.37
+2026-04,Developing Objectives and Strategies,45,0.43,-4.72,5.57,-3.9,45.6,2.99,0.24
+2026-04,Documenting/Recording Information,71,-1.19,-2.07,-0.32,-3.45,49.3,2.96,10.7
+2026-04,"Estimating the Quantifiable Characteristics of Products, Events, or Information",68,0.58,-1.37,2.53,-0.94,52.9,2.43,0.59
+2026-04,Evaluating Information to Determine Compliance with Standards,61,-2.18,-4.22,-0.14,-4.99,35.1,2.59,0.47
+2026-04,Getting Information,71,-1.09,-2.27,0.1,-0.58,59.5,2.66,12.23
+2026-04,Interpreting the Meaning of Information for Others,71,0.85,-0.1,1.8,1.75,36.2,2.41,3.15
+2026-04,"Judging the Qualities of Objects, Services, or People",71,-2.28,-3.96,-0.59,-2.58,39.4,2.76,0.9
+2026-04,Making Decisions and Solving Problems,71,-0.75,-2.16,0.66,-1.91,37.0,2.53,6.44
+2026-04,"Organizing, Planning, and Prioritizing Work",51,-3.41,-7.31,0.49,-3.65,52.4,2.91,0.35
+2026-04,Performing Administrative Activities,69,-3.26,-5.56,-0.96,-1.04,52.7,2.48,1.07
+2026-04,Performing for or Working Directly with the Public,71,-1.25,-4.23,1.74,-2.39,51.6,2.42,1.84
+2026-04,Processing Information,71,0.95,-1.24,3.15,1.45,64.8,2.78,0.97
+2026-04,Providing Consultation and Advice to Others,71,-0.74,-1.38,-0.1,-2.53,44.3,2.61,22.78
+2026-04,Thinking Creatively,71,-0.96,-2.13,0.2,-3.86,41.7,3.0,11.55
+2026-04,Training and Teaching Others,71,-1.03,-3.24,1.19,-3.55,26.8,2.52,2.93
+2026-04,Working with Computers,71,0.09,-0.55,0.73,0.5,72.7,2.91,9.48
+2026-05,Analyzing Data or Information,82,-0.92,-1.94,0.11,-2.55,49.8,2.76,5.93
+2026-05,Coaching and Developing Others,45,-1.61,-6.93,3.7,3.01,41.3,2.68,0.19
+2026-05,Communicating with People Outside the Organization,82,-0.12,-2.18,1.93,-1.03,39.4,2.57,1.96
+2026-05,"Communicating with Supervisors, Peers, or Subordinates",58,0.13,-2.83,3.09,-0.81,53.2,2.53,0.36
+2026-05,Developing Objectives and Strategies,56,-4.05,-6.71,-1.38,-8.16,46.2,3.01,0.22
+2026-05,Documenting/Recording Information,82,-1.19,-2.34,-0.04,-2.81,49.1,2.98,11.6
+2026-05,"Estimating the Quantifiable Characteristics of Products, Events, or Information",81,0.19,-2.12,2.5,-3.86,51.9,2.43,0.65
+2026-05,Evaluating Information to Determine Compliance with Standards,75,-1.32,-5.24,2.59,-2.38,34.7,2.62,0.52
+2026-05,Getting Information,82,-1.27,-2.44,-0.1,-0.11,59.1,2.69,12.78
+2026-05,Interpreting the Meaning of Information for Others,82,1.42,-1.13,3.96,1.81,36.9,2.41,3.4
+2026-05,"Judging the Qualities of Objects, Services, or People",82,-0.87,-3.29,1.55,-2.29,38.2,2.76,0.94
+2026-05,Making Decisions and Solving Problems,82,-0.1,-0.94,0.74,-1.74,36.6,2.55,6.62
+2026-05,"Organizing, Planning, and Prioritizing Work",63,-0.74,-4.06,2.59,-2.02,51.5,2.91,0.39
+2026-05,Performing Administrative Activities,80,-0.94,-2.97,1.08,-0.44,52.4,2.5,1.06
+2026-05,Performing for or Working Directly with the Public,82,0.11,-1.21,1.43,-1.5,52.5,2.43,2.03
+2026-05,Processing Information,81,0.81,-0.76,2.37,1.04,64.0,2.81,1.05
+2026-05,Providing Consultation and Advice to Others,82,-0.78,-1.57,0.01,-1.37,44.3,2.62,23.89
+2026-05,Thinking Creatively,82,-1.42,-2.47,-0.38,-4.15,41.4,3.01,11.85
+2026-05,Training and Teaching Others,82,-1.08,-3.54,1.39,-3.05,26.2,2.53,3.19
+2026-05,Working with Computers,82,0.93,0.22,1.65,-0.19,72.1,2.95,9.4

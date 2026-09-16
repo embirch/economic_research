@@ -1,0 +1,204 @@
+{
+ "2026-05": {
+  "base_r2": 0.602,
+  "resid_sd": 0.318,
+  "(a) education alone": {
+   "r2": 0.079,
+   "terms": {
+    "bachelors_plus": {
+     "coef": 0.088,
+     "ci": [
+      -0.003,
+      0.18
+     ],
+     "mde": 0.131
+    }
+   }
+  },
+  "(b) education + age + broadband": {
+   "r2": 0.283,
+   "terms": {
+    "bachelors_plus": {
+     "coef": -0.016,
+     "ci": [
+      -0.245,
+      0.212
+     ],
+     "mde": 0.327
+    },
+    "median_age": {
+     "coef": 0.023,
+     "ci": [
+      -0.072,
+      0.118
+     ],
+     "mde": 0.135
+    },
+    "broadband": {
+     "coef": 0.174,
+     "ci": [
+      0.017,
+      0.332
+     ],
+     "mde": 0.225
+    }
+   }
+  },
+  "(c) income alone": {
+   "r2": 0.097,
+   "terms": {
+    "log_gdp": {
+     "coef": 0.098,
+     "ci": [
+      -0.019,
+      0.215
+     ],
+     "mde": 0.167
+    }
+   }
+  },
+  "(d) education + income": {
+   "r2": 0.1,
+   "terms": {
+    "bachelors_plus": {
+     "coef": 0.029,
+     "ci": [
+      -0.134,
+      0.191
+     ],
+     "mde": 0.232
+    },
+    "log_gdp": {
+     "coef": 0.075,
+     "ci": [
+      -0.093,
+      0.244
+     ],
+     "mde": 0.24
+    }
+   }
+  },
+  "(e) not residualised: log AUI on tech + education": {
+   "r2": 0.697,
+   "terms": {
+    "tech": {
+     "coef": 0.168,
+     "ci": [
+      0.029,
+      0.306
+     ],
+     "mde": 0.198
+    },
+    "bachelors_plus": {
+     "coef": 0.269,
+     "ci": [
+      0.119,
+      0.418
+     ],
+     "mde": 0.214
+    }
+   }
+  }
+ },
+ "2026-04": {
+  "base_r2": 0.599,
+  "resid_sd": 0.323,
+  "(a) education alone": {
+   "r2": 0.09,
+   "terms": {
+    "bachelors_plus": {
+     "coef": 0.096,
+     "ci": [
+      0.01,
+      0.182
+     ],
+     "mde": 0.122
+    }
+   }
+  },
+  "(b) education + age + broadband": {
+   "r2": 0.257,
+   "terms": {
+    "bachelors_plus": {
+     "coef": -0.002,
+     "ci": [
+      -0.237,
+      0.232
+     ],
+     "mde": 0.335
+    },
+    "median_age": {
+     "coef": 0.01,
+     "ci": [
+      -0.09,
+      0.11
+     ],
+     "mde": 0.143
+    },
+    "broadband": {
+     "coef": 0.163,
+     "ci": [
+      0.001,
+      0.325
+     ],
+     "mde": 0.231
+    }
+   }
+  },
+  "(c) income alone": {
+   "r2": 0.104,
+   "terms": {
+    "log_gdp": {
+     "coef": 0.103,
+     "ci": [
+      0.007,
+      0.2
+     ],
+     "mde": 0.138
+    }
+   }
+  },
+  "(d) education + income": {
+   "r2": 0.109,
+   "terms": {
+    "bachelors_plus": {
+     "coef": 0.038,
+     "ci": [
+      -0.128,
+      0.205
+     ],
+     "mde": 0.238
+    },
+    "log_gdp": {
+     "coef": 0.073,
+     "ci": [
+      -0.089,
+      0.234
+     ],
+     "mde": 0.23
+    }
+   }
+  },
+  "(e) not residualised: log AUI on tech + education": {
+   "r2": 0.709,
+   "terms": {
+    "tech": {
+     "coef": 0.152,
+     "ci": [
+      0.016,
+      0.288
+     ],
+     "mde": 0.195
+    },
+    "bachelors_plus": {
+     "coef": 0.292,
+     "ci": [
+      0.152,
+      0.431
+     ],
+     "mde": 0.2
+    }
+   }
+  }
+ }
+}

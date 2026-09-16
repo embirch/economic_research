@@ -1,0 +1,158 @@
+{
+ "clusters": 53,
+ "outliers": {
+  "apr": 49,
+  "may": 59,
+  "both": 22
+ },
+ "recurrence_apr": 0.449,
+ "corr_months": 0.617,
+ "recurrence_on_log_usage": {
+  "coef": 0.007,
+  "ci": [
+   -0.191,
+   0.205
+  ],
+  "mde": 0.282
+ },
+ "recurrence_by_tercile": {
+  "small": 0.419,
+  "mid": 0.562,
+  "large": 0.0
+ },
+ "persistent": [
+  {
+   "state": "WV",
+   "cluster": "Fiction writing",
+   "apr": 2.33,
+   "may": 2.6
+  },
+  {
+   "state": "ME",
+   "cluster": "Outdoor and garden",
+   "apr": 2.19,
+   "may": 2.42
+  },
+  {
+   "state": "NE",
+   "cluster": "Outdoor and garden",
+   "apr": 2.09,
+   "may": 2.13
+  },
+  {
+   "state": "HI",
+   "cluster": "Destination research",
+   "apr": 2.47,
+   "may": 2.06
+  },
+  {
+   "state": "MS",
+   "cluster": "Media discovery",
+   "apr": 1.85,
+   "may": 2.47
+  },
+  {
+   "state": "MS",
+   "cluster": "Formatted writing",
+   "apr": 1.86,
+   "may": 1.82
+  },
+  {
+   "state": "OK",
+   "cluster": "Media discovery",
+   "apr": 1.8,
+   "may": 1.86
+  },
+  {
+   "state": "WV",
+   "cluster": "Companionship and conversation",
+   "apr": 1.78,
+   "may": 1.85
+  },
+  {
+   "state": "AR",
+   "cluster": "Fiction writing",
+   "apr": 1.76,
+   "may": 1.79
+  },
+  {
+   "state": "DC",
+   "cluster": "Editing and rewriting",
+   "apr": 1.75,
+   "may": 1.76
+  },
+  {
+   "state": "WV",
+   "cluster": "Gaming",
+   "apr": 1.98,
+   "may": 1.71
+  },
+  {
+   "state": "WV",
+   "cluster": "Media discovery",
+   "apr": 2.41,
+   "may": 1.71
+  },
+  {
+   "state": "IA",
+   "cluster": "Science",
+   "apr": 2.13,
+   "may": 1.69
+  },
+  {
+   "state": "AK",
+   "cluster": "Gaming",
+   "apr": 1.91,
+   "may": 1.66
+  },
+  {
+   "state": "MS",
+   "cluster": "Instructional design",
+   "apr": 2.44,
+   "may": 1.65
+  },
+  {
+   "state": "AL",
+   "cluster": "Fiction writing",
+   "apr": 1.65,
+   "may": 1.93
+  },
+  {
+   "state": "KS",
+   "cluster": "Gaming",
+   "apr": 1.65,
+   "may": 1.7
+  },
+  {
+   "state": "NM",
+   "cluster": "Fiction writing",
+   "apr": 1.62,
+   "may": 1.75
+  },
+  {
+   "state": "DC",
+   "cluster": "Self-presentation writing",
+   "apr": 1.82,
+   "may": 1.62
+  },
+  {
+   "state": "KY",
+   "cluster": "Media discovery",
+   "apr": 2.25,
+   "may": 1.61
+  },
+  {
+   "state": "WI",
+   "cluster": "Outdoor and garden",
+   "apr": 1.6,
+   "may": 2.1
+  },
+  {
+   "state": "DC",
+   "cluster": "Research and evidence",
+   "apr": 1.69,
+   "may": 1.6
+  }
+ ],
+ "H1": "DOES NOT HOLD"
+}

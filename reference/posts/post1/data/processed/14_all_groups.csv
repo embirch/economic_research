@@ -1,0 +1,39 @@
+month,group,n,tert_coef,tert_lo,tert_hi,inc_coef,int_coef,global_learning,global_automation,global_coursework
+2026-04,Architecture and Engineering,71,-1.84,-3.77,0.1,0.25,-0.57,24.6,44.4,19.7
+2026-04,"Arts, Design, Entertainment, Sports, and Media",71,-0.64,-1.54,0.25,-1.95,0.01,2.5,36.1,16.7
+2026-04,Business and Financial Operations,71,-1.39,-3.29,0.51,-1.25,-0.56,20.0,43.0,7.6
+2026-04,Community and Social Service,71,-2.18,-4.44,0.09,-1.53,0.65,29.5,39.8,2.1
+2026-04,Computer and Mathematical,71,-0.12,-0.68,0.44,0.28,-1.08,11.4,63.9,14.5
+2026-04,Educational Instruction and Library,71,-0.9,-1.72,-0.07,0.27,-1.19,27.5,43.1,38.9
+2026-04,Food Preparation and Serving Related,54,1.34,-2.05,4.73,-0.9,2.21,21.6,47.9,3.0
+2026-04,Healthcare Practitioners and Technical,71,-1.07,-2.41,0.27,-1.01,-0.2,40.6,41.5,3.9
+2026-04,Healthcare Support,67,0.6,-1.97,3.17,0.58,-0.33,42.4,37.9,12.2
+2026-04,"Installation, Maintenance, and Repair",61,-0.21,-2.31,1.89,4.87,-0.5,18.1,68.0,8.4
+2026-04,Legal,65,-1.09,-3.68,1.5,-1.52,-1.46,19.4,35.3,11.5
+2026-04,"Life, Physical, and Social Science",71,-0.81,-2.52,0.89,-2.47,-0.72,28.7,40.5,21.1
+2026-04,Management,71,-1.32,-2.63,-0.0,0.85,-0.82,13.5,44.0,9.5
+2026-04,Office and Administrative Support,71,-0.92,-1.87,0.04,0.54,-0.76,7.4,57.1,16.2
+2026-04,Personal Care and Service,71,-3.6,-7.05,-0.14,-0.45,2.71,10.5,56.7,7.5
+2026-04,Production,71,-0.99,-3.45,1.46,3.11,0.26,9.1,64.8,7.3
+2026-04,Protective Service,50,0.07,-6.87,7.01,2.99,-0.14,11.4,77.2,5.8
+2026-04,Sales and Related,71,-0.61,-1.49,0.26,0.96,-2.0,25.4,43.2,5.8
+2026-04,Transportation and Material Moving,50,-2.79,-5.12,-0.47,5.25,-3.11,11.1,50.9,7.6
+2026-05,Architecture and Engineering,82,-0.12,-1.54,1.3,-0.46,-0.4,23.6,44.9,19.9
+2026-05,"Arts, Design, Entertainment, Sports, and Media",82,-0.74,-1.45,-0.02,-2.54,0.03,2.5,35.9,18.1
+2026-05,Business and Financial Operations,82,-1.05,-2.46,0.36,-1.09,-0.75,19.5,42.6,7.5
+2026-05,Community and Social Service,82,0.06,-0.95,1.08,0.14,-1.04,28.8,40.0,2.1
+2026-05,Computer and Mathematical,82,-0.32,-0.9,0.26,0.12,-0.45,11.1,63.9,14.5
+2026-05,Educational Instruction and Library,82,-0.78,-1.66,0.09,-0.14,-1.15,27.0,42.8,40.4
+2026-05,Food Preparation and Serving Related,68,-0.22,-3.31,2.88,-3.98,2.77,19.7,49.1,2.8
+2026-05,Healthcare Practitioners and Technical,82,-1.22,-2.6,0.17,0.71,-0.92,40.4,41.6,4.2
+2026-05,Healthcare Support,80,0.16,-1.21,1.52,0.64,-1.66,41.7,39.1,12.0
+2026-05,"Installation, Maintenance, and Repair",78,0.19,-2.49,2.87,2.08,2.46,16.9,69.4,8.0
+2026-05,Legal,80,0.11,-1.46,1.68,-6.33,2.42,19.1,34.6,10.7
+2026-05,"Life, Physical, and Social Science",82,-1.85,-3.28,-0.43,-1.26,0.48,27.7,40.5,21.6
+2026-05,Management,82,-1.33,-2.78,0.13,0.59,0.05,13.7,43.9,9.8
+2026-05,Office and Administrative Support,82,-0.19,-1.08,0.7,0.13,-0.78,7.3,56.0,17.1
+2026-05,Personal Care and Service,82,-0.86,-3.96,2.24,-0.88,0.16,10.7,55.9,8.2
+2026-05,Production,82,-0.52,-2.35,1.32,0.03,1.67,9.2,63.7,7.4
+2026-05,Protective Service,59,0.56,-7.07,8.2,-4.01,5.78,13.5,73.6,5.8
+2026-05,Sales and Related,82,-0.31,-1.24,0.62,0.99,-0.95,24.7,43.8,5.5
+2026-05,Transportation and Material Moving,62,-0.58,-7.01,5.86,2.38,1.83,10.9,51.7,8.2

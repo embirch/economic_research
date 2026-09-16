@@ -1,0 +1,14 @@
+   wave  countries_in_file  above_200  with_automation
+2025-08                201        116              125
+2025-11                174        119              125
+2026-02                178        119              127
+2026-04                114        114              114
+2026-05                121        121              121
+
+Spot check (India, Denmark, Singapore), Aug 2025:
+geo_id  usage_count  directive  feedback loop  automation  augmentation
+   DNK       2282.0  31.551271      12.138475   43.689746     55.346188
+   IND      68964.0  43.893916      12.947335   56.841251     40.647294
+   SGP       5375.0  35.218605       9.227907   44.446512     53.655814
+
+CHECK OK: thresholded rows = 585; pattern shares sum between 90.8 and 100.0

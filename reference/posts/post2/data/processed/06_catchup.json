@@ -1,0 +1,160 @@
+{
+ "(a) beta-convergence": {
+  "r2": 0.293,
+  "n": 50,
+  "terms": {
+   "log_aug": {
+    "coef": -0.176,
+    "ci": [
+     -0.252,
+     -0.1
+    ],
+    "mde": 0.109
+   }
+  }
+ },
+ "(b) + education + tech share": {
+  "r2": 0.311,
+  "n": 50,
+  "terms": {
+   "log_aug": {
+    "coef": -0.236,
+    "ci": [
+     -0.389,
+     -0.083
+    ],
+    "mde": 0.218
+   },
+   "bachelors_plus": {
+    "coef": 0.048,
+    "ci": [
+     -0.055,
+     0.151
+    ],
+    "mde": 0.148
+   },
+   "tech": {
+    "coef": -0.006,
+    "ci": [
+     -0.121,
+     0.108
+    ],
+    "mde": 0.163
+   }
+  }
+ },
+ "(c) + education + income": {
+  "r2": 0.328,
+  "n": 50,
+  "terms": {
+   "log_aug": {
+    "coef": -0.245,
+    "ci": [
+     -0.403,
+     -0.088
+    ],
+    "mde": 0.224
+   },
+   "bachelors_plus": {
+    "coef": 0.015,
+    "ci": [
+     -0.078,
+     0.109
+    ],
+    "mde": 0.133
+   },
+   "log_gdp": {
+    "coef": 0.04,
+    "ci": [
+     -0.049,
+     0.129
+    ],
+    "mde": 0.127
+   }
+  }
+ },
+ "(a1) Aug->Nov on Aug level": {
+  "r2": 0.137,
+  "n": 50,
+  "terms": {
+   "log_aug": {
+    "coef": -0.185,
+    "ci": [
+     -0.339,
+     -0.031
+    ],
+    "mde": 0.22
+   }
+  }
+ },
+ "(a2) Nov->Feb on Nov level": {
+  "r2": 0.151,
+  "n": 50,
+  "terms": {
+   "log_nov": {
+    "coef": -0.105,
+    "ci": [
+     -0.246,
+     0.036
+    ],
+    "mde": 0.201
+   }
+  }
+ },
+ "(a3) Feb->May on Feb level": {
+  "r2": 0.034,
+  "n": 50,
+  "terms": {
+   "log_feb": {
+    "coef": -0.064,
+    "ci": [
+     -0.15,
+     0.021
+    ],
+    "mde": 0.122
+   }
+  }
+ },
+ "(a4) Apr->May on Apr level": {
+  "r2": 0.031,
+  "n": 50,
+  "terms": {
+   "log_apr": {
+    "coef": -0.016,
+    "ci": [
+     -0.049,
+     0.018
+    ],
+    "mde": 0.047
+   }
+  }
+ },
+ "(n) |Aug->Nov change| on Aug sample size": {
+  "r2": 0.041,
+  "n": 50,
+  "terms": {
+   "log_count_aug": {
+    "coef": -0.037,
+    "ci": [
+     -0.134,
+     0.059
+    ],
+    "mde": 0.138
+   }
+  }
+ },
+ "(a) without Wyoming": {
+  "coef": -0.18,
+  "ci": [
+   -0.257,
+   -0.102
+  ]
+ },
+ "(a1) Aug->Nov without Wyoming": {
+  "coef": -0.135,
+  "ci": [
+   -0.25,
+   -0.021
+  ]
+ }
+}

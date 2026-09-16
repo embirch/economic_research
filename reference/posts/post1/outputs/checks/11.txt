@@ -1,0 +1,23 @@
+coverage among the 111: {'prompt_edu': 111, 'task_hours': 111, 'work_share': 111, 'coursework_share': 110, 'english_share': 111, 'internet': 110, 'tertiary': 102}
+
+Hofstede sample with power distance (N=58): income coef per SD, baseline -2.39
+  + prompt_edu       income  -1.44 [-2.91, 0.03]    remaining  0.60 | candidate  -0.94 [-1.79, -0.1]
+  + task_hours       income  -2.51 [-4.05, -0.96]   remaining  1.05 | candidate   0.74 [-1.76, 3.25]
+  + work_share       income  -2.35 [-3.61, -1.1]    remaining  0.98 | candidate   0.11 [-1.14, 1.36]
+  + coursework_share income  -2.35 [-3.61, -1.1]    remaining  0.98 | candidate  -0.20 [-2.5, 2.11]
+  + english_share    income  -2.84 [-4.78, -0.9]    remaining  1.19 | candidate  -0.72 [-2.17, 0.73]
+  + internet         income  -1.21 [-3.28, 0.87]    remaining  0.50 | candidate  -1.30 [-2.75, 0.14]
+  + tertiary         income  -1.60 [-3.19, -0.02]   remaining  0.67 | candidate  -0.96 [-2.05, 0.13]
+  all candidates together: income -0.92 [-3.36, 1.51]  remaining 0.39; candidates: {'prompt_edu': np.float64(-0.57), 'task_hours': np.float64(0.96), 'work_share': np.float64(0.62), 'coursework_share': np.float64(0.65), 'english_share': np.float64(-0.87), 'internet': np.float64(-1.22), 'tertiary': np.float64(-0.46)}
+
+All countries, no power distance (N=100): income coef per SD, baseline -2.56
+  + prompt_edu       income  -2.12 [-3.69, -0.54]   remaining  0.83 | candidate  -0.80 [-1.77, 0.18]
+  + task_hours       income  -2.76 [-4.31, -1.21]   remaining  1.08 | candidate   1.43 [-0.86, 3.73]
+  + work_share       income  -2.59 [-4.31, -0.86]   remaining  1.01 | candidate  -0.19 [-1.12, 0.74]
+  + coursework_share income  -2.59 [-4.31, -0.86]   remaining  1.01 | candidate   0.30 [-1.19, 1.79]
+  + english_share    income  -2.47 [-4.23, -0.72]   remaining  0.97 | candidate   0.40 [-0.91, 1.71]
+  + internet         income  -1.11 [-2.7, 0.48]     remaining  0.43 | candidate  -1.61 [-2.96, -0.27]
+  + tertiary         income  -1.23 [-2.88, 0.43]    remaining  0.48 | candidate  -1.93 [-3.13, -0.73]
+  all candidates together: income -0.27 [-2.34, 1.8]  remaining 0.11; candidates: {'prompt_edu': np.float64(-0.89), 'task_hours': np.float64(1.08), 'work_share': np.float64(0.72), 'coursework_share': np.float64(0.96), 'english_share': np.float64(0.1), 'internet': np.float64(-1.22), 'tertiary': np.float64(-1.18)}
+
+CHECK OK: unbundling models fitted on both samples

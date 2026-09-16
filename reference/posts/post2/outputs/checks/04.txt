@@ -1,0 +1,16 @@
+
+2026-05: 50 states (Utah excluded), 22 occupation groups
+  artifact       pooled R2 0.207 (slope 1.70, 1600 cells) | dissimilarity observed vs expected: median 4.0 pts, top5 {'WV': 10.0, 'SD': 9.6, 'AK': 8.4, 'MS': 8.2, 'WY': 7.8} | drivers {'WV': 'email_or_message (-3.7)', 'SD': 'none (+2.3)', 'AK': 'explanation_or_answer (+2.5)', 'MS': 'email_or_message (-2.4)', 'WY': 'document_or_report (+1.6)'}
+     between-state SD of observed shares (mean over categories) 0.37 pts; of expected 0.08 pts; corr of per-category SDs 0.90
+  use_case       pooled R2 0.381 (slope 3.01, 150 cells) | dissimilarity observed vs expected: median 3.1 pts, top5 {'AK': 6.7, 'DC': 6.0, 'FL': 5.4, 'IA': 4.9, 'WI': 4.7} | drivers {'AK': 'use_case_personal (+6.7)', 'DC': 'use_case_personal (-6.0)', 'FL': 'use_case_work (+5.4)', 'IA': 'use_case_coursework (+4.9)', 'WI': 'use_case_work (-4.7)'}
+  collaboration  pooled R2 0.320 (slope 2.12, 250 cells) | dissimilarity observed vs expected: median 1.9 pts, top5 {'SD': 4.2, 'AR': 3.7, 'ND': 3.6, 'SC': 3.4, 'WV': 3.2} | drivers {'SD': 'collaboration_task_iteration (-4.0)', 'AR': 'collaboration_feedback_loop (+2.5)', 'ND': 'collaboration_directive (-3.1)', 'SC': 'collaboration_learning (-2.9)', 'WV': 'collaboration_task_iteration (-2.6)'}
+
+2026-04: 50 states (Utah excluded), 22 occupation groups
+  artifact       pooled R2 0.246 (slope 1.67, 1600 cells) | dissimilarity observed vs expected: median 4.4 pts, top5 {'ND': 11.5, 'WY': 10.0, 'MS': 9.0, 'AK': 9.0, 'SD': 8.6} | drivers {'ND': 'email_or_message (-3.0)', 'WY': 'none (+2.5)', 'MS': 'educational_material (+2.3)', 'AK': 'explanation_or_answer (+2.6)', 'SD': 'advice_or_recommendation (-1.7)'}
+     between-state SD of observed shares (mean over categories) 0.41 pts; of expected 0.10 pts; corr of per-category SDs 0.88
+  use_case       pooled R2 0.367 (slope 2.70, 150 cells) | dissimilarity observed vs expected: median 3.4 pts, top5 {'IN': 8.3, 'DC': 7.3, 'WY': 6.3, 'WA': 5.9, 'MA': 5.7} | drivers {'IN': 'use_case_coursework (+8.3)', 'DC': 'use_case_personal (-7.3)', 'WY': 'use_case_work (+6.3)', 'WA': 'use_case_personal (+5.9)', 'MA': 'use_case_coursework (+5.7)'}
+  collaboration  pooled R2 0.186 (slope 1.65, 250 cells) | dissimilarity observed vs expected: median 2.1 pts, top5 {'SD': 8.4, 'AK': 7.7, 'WY': 6.0, 'WV': 4.7, 'ID': 4.6} | drivers {'SD': 'collaboration_learning (-5.1)', 'AK': 'collaboration_learning (+5.0)', 'WY': 'collaboration_task_iteration (-4.3)', 'WV': 'collaboration_feedback_loop (+3.7)', 'ID': 'collaboration_directive (+3.6)'}
+
+Pre-registered verdict (artifact mix, May): DOES NOT (pooled R2 0.207)
+largest residual states in both months: ['AK', 'MS', 'SD', 'WY']
+CHECK OK

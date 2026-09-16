@@ -1,0 +1,98 @@
+{
+ "2025-08 request L1": [
+  45,
+  108
+ ],
+ "2025-08 request L2": [
+  51,
+  26
+ ],
+ "2025-08": {
+  "states": 51,
+  "soc states": 47,
+  "soc groups": 22
+ },
+ "2025-11 request L1": [
+  48,
+  112
+ ],
+ "2025-11 request L2": [
+  51,
+  24
+ ],
+ "2025-11": {
+  "states": 51,
+  "dropped_non_states": [],
+  "usage_count_min": 199.0
+ },
+ "2026-02 request L1": [
+  50,
+  103
+ ],
+ "2026-02 request L2": [
+  51,
+  26
+ ],
+ "2026-02": {
+  "states": 51,
+  "dropped_non_states": [
+   "GU",
+   "PR",
+   "VI"
+  ],
+  "usage_count_min": 187.0
+ },
+ "2026-04 request L1": [
+  51,
+  172
+ ],
+ "2026-04 request L2": [
+  51,
+  20
+ ],
+ "2026-04": {
+  "states": 51,
+  "soc states": 51,
+  "soc groups": 22
+ },
+ "2026-05 request L1": [
+  51,
+  175
+ ],
+ "2026-05 request L2": [
+  51,
+  20
+ ],
+ "2026-05": {
+  "states": 51,
+  "soc states": 51,
+  "soc groups": 22
+ },
+ "covariates": {
+  "states": 51,
+  "missing_by_source": {
+   "wf_Computer and Mathematical": 0,
+   "bachelors_plus": 0,
+   "ms_ai_user_share": 0,
+   "openai_rank_2025": 0
+  },
+  "openai_topics": [
+   "oa_Multimedia",
+   "oa_Other/Unknown",
+   "oa_Practical Guidance",
+   "oa_Seeking information",
+   "oa_Self-expression",
+   "oa_Technical help",
+   "oa_Writing"
+  ]
+ }
+}
+Spot checks: DC computer/math workforce share 7.9% (ACS ~7); CA 4.4; MS 1.5 | Microsoft DC 40.3 MD 36.3 | OpenAI DC rank 1 VA rank 2
+AUI by wave (DC, CA, WV):
+wave   2025-08  2025-11  2026-02  2026-04  2026-05
+state                                             
+DC        3.82     4.00     4.31     3.72     3.32
+CA        2.13     1.48     1.55     1.56     1.62
+UT        3.78     1.07     1.26     1.26     1.21
+WV        0.23     0.25     0.28     0.24     0.25
+CHECK OK

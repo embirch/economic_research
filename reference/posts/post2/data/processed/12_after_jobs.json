@@ -1,0 +1,62 @@
+{
+ "Fiction writing": {
+  "apr": 0.216,
+  "may": 0.087,
+  "composition": false
+ },
+ "Outdoor and garden": {
+  "apr": 0.067,
+  "may": 0.0,
+  "composition": false
+ },
+ "Destination research": {
+  "apr": 0.073,
+  "may": 0.099,
+  "composition": false
+ },
+ "Media discovery": {
+  "apr": 0.153,
+  "may": 0.042,
+  "composition": false
+ },
+ "Formatted writing": {
+  "apr": 0.028,
+  "may": 0.0,
+  "composition": false
+ },
+ "Companionship and conversation": {
+  "apr": 0.003,
+  "may": 0.021,
+  "composition": false
+ },
+ "Editing and rewriting": {
+  "apr": 0.191,
+  "may": 0.017,
+  "composition": false
+ },
+ "Gaming": {
+  "apr": 0.301,
+  "may": 0.305,
+  "composition": false
+ },
+ "Science": {
+  "apr": 0.034,
+  "may": 0.423,
+  "composition": false
+ },
+ "Instructional design": {
+  "apr": 0.299,
+  "may": 0.277,
+  "composition": false
+ },
+ "Self-presentation writing": {
+  "apr": 0.01,
+  "may": 0.018,
+  "composition": false
+ },
+ "Research and evidence": {
+  "apr": 0.239,
+  "may": 0.108,
+  "composition": false
+ }
+}

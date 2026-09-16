@@ -1,0 +1,17 @@
+                                                          n   coef  ci_low  ci_high    mde       p
+Primary (Aug 2025, Hofstede country scores)            61.0 -0.634  -1.554    0.286  1.314  0.1767
+A. + Hofstede regional scores                          72.0 -0.419  -1.286    0.447  1.238  0.3427
+B1. GLOBE power-distance practices                     52.0  0.591  -0.320    1.503  1.303  0.2037
+B2. GLOBE participative leadership (expect negative)   52.0  0.613  -0.612    1.838  1.751  0.3269
+C. + individualism + uncertainty avoidance (PDI coef)  61.0 -0.132  -1.183    0.919  1.501  0.8055
+C. individualism coef                                  61.0  1.452   0.065    2.838  1.981  0.0402
+C. uncertainty-avoidance coef                          61.0  0.149  -0.809    1.106  1.368  0.7607
+D. outcome = directive share (task-mix residual)       61.0 -0.406  -1.209    0.397  1.147  0.3216
+E. wave 2025-11                                        61.0 -0.294  -1.179    0.590  1.264  0.5145
+E. wave 2026-02                                        61.0  0.120  -0.581    0.822  1.002  0.7368
+F. English-majority countries only (illustrative)      49.0 -0.586  -1.611    0.439  1.464  0.2628
+G. Stanford human agency: AI-handles-alone share       41.0 -0.235  -0.621    0.150  0.551  0.2316
+I. placebo outcome: unclassified share                 61.0 -0.121  -0.413    0.171  0.418  0.4172
+
+H. leave-one-out movers: [('AUT', np.float64(-0.831)), ('JAM', np.float64(-0.427)), ('PAN', np.float64(-0.794))]
+CHECK OK: all pre-registered robustness rows computed

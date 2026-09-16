@@ -1,0 +1,209 @@
+{
+ "overall": {
+  "wvs_independence": {
+   "n": 45,
+   "coef": -0.75,
+   "ci": [
+    -2.43,
+    0.93
+   ],
+   "mde": 2.4,
+   "tertiary_after": -1.14,
+   "corr_tertiary": 0.12
+  },
+  "wvs_imagination": {
+   "n": 45,
+   "coef": -0.4,
+   "ci": [
+    -2.25,
+    1.45
+   ],
+   "mde": 2.64,
+   "tertiary_after": -1.09,
+   "corr_tertiary": 0.2
+  },
+  "wvs_obedience": {
+   "n": 45,
+   "coef": 0.83,
+   "ci": [
+    -0.7,
+    2.35
+   ],
+   "mde": 2.18,
+   "tertiary_after": -1.05,
+   "corr_tertiary": -0.3
+  },
+  "wvs_hardwork": {
+   "n": 45,
+   "coef": 0.34,
+   "ci": [
+    -1.04,
+    1.72
+   ],
+   "mde": 1.97,
+   "tertiary_after": -1.17,
+   "corr_tertiary": -0.08
+  },
+  "wvs_perseverance": {
+   "n": 45,
+   "coef": -0.7,
+   "ci": [
+    -2.37,
+    0.97
+   ],
+   "mde": 2.39,
+   "tertiary_after": -0.84,
+   "corr_tertiary": 0.37
+  },
+  "wvs_respect_authority_good": {
+   "n": 45,
+   "coef": 0.68,
+   "ci": [
+    -1.87,
+    3.22
+   ],
+   "mde": 3.64,
+   "tertiary_after": -0.77,
+   "corr_tertiary": -0.4
+  },
+  "wvs_autonomy_index": {
+   "n": 45,
+   "coef": -1.2,
+   "ci": [
+    -3.48,
+    1.08
+   ],
+   "mde": 3.26,
+   "tertiary_after": -1.21,
+   "corr_tertiary": 0.3
+  }
+ },
+ "activities": {
+  "Developing Objectives and Strategies": {
+   "wvs_independence": {
+    "n": 34,
+    "coef": -1.95,
+    "ci": [
+     -5.24,
+     1.33
+    ]
+   },
+   "wvs_imagination": {
+    "n": 34,
+    "coef": 0.31,
+    "ci": [
+     -3.0,
+     3.62
+    ]
+   },
+   "wvs_obedience": {
+    "n": 34,
+    "coef": 0.66,
+    "ci": [
+     -3.44,
+     4.75
+    ]
+   },
+   "wvs_autonomy_index": {
+    "n": 34,
+    "coef": -1.53,
+    "ci": [
+     -5.34,
+     2.28
+    ]
+   },
+   "wvs_respect_authority_good": {
+    "n": 34,
+    "coef": -0.36,
+    "ci": [
+     -3.84,
+     3.12
+    ]
+   }
+  },
+  "Thinking Creatively": {
+   "wvs_independence": {
+    "n": 42,
+    "coef": -0.67,
+    "ci": [
+     -1.69,
+     0.35
+    ]
+   },
+   "wvs_imagination": {
+    "n": 42,
+    "coef": -0.16,
+    "ci": [
+     -1.85,
+     1.53
+    ]
+   },
+   "wvs_obedience": {
+    "n": 42,
+    "coef": -0.32,
+    "ci": [
+     -2.25,
+     1.62
+    ]
+   },
+   "wvs_autonomy_index": {
+    "n": 42,
+    "coef": -0.24,
+    "ci": [
+     -2.19,
+     1.7
+    ]
+   },
+   "wvs_respect_authority_good": {
+    "n": 42,
+    "coef": 0.21,
+    "ci": [
+     -0.75,
+     1.18
+    ]
+   }
+  },
+  "Working with Computers": {
+   "wvs_independence": {
+    "n": 42,
+    "coef": -0.4,
+    "ci": [
+     -1.19,
+     0.39
+    ]
+   },
+   "wvs_imagination": {
+    "n": 42,
+    "coef": 0.02,
+    "ci": [
+     -1.23,
+     1.28
+    ]
+   },
+   "wvs_obedience": {
+    "n": 42,
+    "coef": 0.22,
+    "ci": [
+     -0.7,
+     1.13
+    ]
+   },
+   "wvs_autonomy_index": {
+    "n": 42,
+    "coef": -0.38,
+    "ci": [
+     -1.04,
+     0.28
+    ]
+   },
+   "wvs_respect_authority_good": {
+    "n": 42,
+    "coef": -0.1,
+    "ci": [
+     -0.86,
+     0.66
+    ]
+   }
+  }
+ }
+}

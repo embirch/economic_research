@@ -1,0 +1,25 @@
+  Outdoor and garden           ← agri_share         apr: alone +0.147 [+0.06,+0.23] MDE 0.13 R2 0.22 | with index +0.088 [-0.01,+0.19] (index -0.34) | rural_share alone +0.236 [+0.17,+0.30]
+  Outdoor and garden           ← agri_share         may: alone +0.163 [+0.07,+0.25] MDE 0.13 R2 0.22 | with index +0.120 [+0.03,+0.21] (index -0.28) | rural_share alone +0.224 [+0.15,+0.30]
+     → EXPLAINED by the stated mechanism
+  Destination research         ← arts_accom_share   apr: alone +0.135 [-0.25,+0.52] MDE 0.55 R2 0.23 | with index +0.110 [-0.25,+0.47] (index +0.36)
+  Destination research         ← arts_accom_share   may: alone +0.113 [-0.16,+0.38] MDE 0.39 R2 0.18 | with index +0.085 [-0.15,+0.32] (index +0.27)
+     → NOT explained by the stated mechanism
+  Editing and rewriting        ← pubadmin_share     apr: alone +0.071 [-0.03,+0.17] MDE 0.15 R2 0.13 | with index +0.075 [-0.04,+0.19] (index -0.02)
+  Editing and rewriting        ← pubadmin_share     may: alone +0.097 [+0.07,+0.13] MDE 0.04 R2 0.30 | with index +0.094 [+0.05,+0.14] (index +0.01)
+     → NOT explained by the stated mechanism
+  Self-presentation writing    ← pubadmin_share     apr: alone +0.070 [-0.07,+0.21] MDE 0.20 R2 0.13 | with index +0.056 [-0.05,+0.16] (index +0.11)
+  Self-presentation writing    ← pubadmin_share     may: alone +0.036 [-0.15,+0.22] MDE 0.27 R2 0.04 | with index +0.012 [-0.12,+0.14] (index +0.18)
+     → NOT explained by the stated mechanism
+  Research and evidence        ← pubadmin_share     apr: alone +0.065 [-0.06,+0.19] MDE 0.18 R2 0.08 | with index +0.048 [-0.07,+0.16] (index +0.08)
+  Research and evidence        ← pubadmin_share     may: alone +0.091 [+0.05,+0.13] MDE 0.06 R2 0.21 | with index +0.091 [+0.03,+0.16] (index -0.00)
+     → NOT explained by the stated mechanism
+  Instructional design         ← college_share      apr: alone -0.012 [-0.08,+0.06] MDE 0.10 R2 0.00 | with index +0.093 [+0.00,+0.18] (index -0.36)
+  Instructional design         ← college_share      may: alone +0.025 [-0.02,+0.07] MDE 0.07 R2 0.02 | with index +0.101 [+0.04,+0.16] (index -0.27)
+     → NOT explained by the stated mechanism
+  Science                      ← college_share      apr: alone +0.034 [-0.07,+0.14] MDE 0.14 R2 0.02 | with index +0.122 [+0.03,+0.22] (index -0.34)
+  Science                      ← college_share      may: alone +0.026 [-0.06,+0.11] MDE 0.12 R2 0.01 | with index +0.038 [-0.10,+0.18] (index -0.04)
+     → NOT explained by the stated mechanism
+  Formatted writing            ← college_share      apr: alone +0.008 [-0.05,+0.07] MDE 0.09 R2 0.00 | with index +0.076 [-0.01,+0.16] (index -0.24)
+  Formatted writing            ← college_share      may: alone -0.012 [-0.07,+0.05] MDE 0.08 R2 0.01 | with index +0.056 [-0.00,+0.12] (index -0.22)
+     → NOT explained by the stated mechanism
+CHECK OK

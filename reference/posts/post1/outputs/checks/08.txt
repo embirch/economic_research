@@ -1,0 +1,5 @@
+Panel, all five waves: N=561 obs, 114 countries; within-country coef on AUI = 0.342 [-0.769, 1.453], p=0.5459, MDE 1.587; typical within-country movement of AUI = 0.25 index points
+Panel, excluding June 2026: N=324 obs, 108 countries; within-country coef on AUI = 0.82 [-0.174, 1.813], p=0.106, MDE 1.42; typical within-country movement of AUI = 0.15 index points
+Super Bowl test: US change Nov->Feb = -3.46 points; comparators mean +0.02 (sd 1.25); US minus mean = -3.48 -> cohort NOT supported by the pre-registered rule
+  comparators: {'CAN': -0.755, 'GBR': -0.284, 'AUS': 0.354, 'IRL': -1.207, 'NZL': 2.01}
+CHECK OK: panel fitted on countries seen in >=3 waves; all comparators present
