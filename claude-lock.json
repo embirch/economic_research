@@ -9,44 +9,44 @@
     "./team/agents/analyst.md": {
       "kind": "agent",
       "id": "agent_01VR1W2w759u8jQixwjqvRW1",
-      "version": "1",
-      "hash": "ab0324b1cda26126d17dfd015f555381",
-      "remote_hash": "bce4ee70b69f2db66355b3309c32b50b"
+      "version": "2",
+      "hash": "bec861d0a3d30c44e35b2bfde529bc11",
+      "remote_hash": "bd8923fae257a4983b6f26e871123d84"
     },
     "./team/agents/data-steward.md": {
       "kind": "agent",
       "id": "agent_019f5LBbE9KLN49qfAyxQaLB",
-      "version": "1",
-      "hash": "9edc80f1bce09adf4f10232548a35cf4",
-      "remote_hash": "94e449d434009c389614fee550d5cb8b"
+      "version": "2",
+      "hash": "78ce20972b995454d1fb4c030c5505ba",
+      "remote_hash": "07a2448f2f78679e3fc93f671a18d1fb"
     },
     "./team/agents/director.md": {
       "kind": "agent",
       "id": "agent_0193GKsjm8DYDiTFrrXKtBgy",
-      "version": "2",
-      "hash": "d14a7795eaf9362247598aa12b7d9144",
-      "remote_hash": "ddc9b74643a7428a11e57eadbc8906bd"
+      "version": "3",
+      "hash": "94e8232177add9b8e460c529c9b88609",
+      "remote_hash": "c3fe12fab5f0f7fd5944f00558c32fd4"
     },
     "./team/agents/editor.md": {
       "kind": "agent",
       "id": "agent_013EeUahpP5iNHCwbW22aF7M",
-      "version": "2",
-      "hash": "e5c48167d2d41e963d9b940927f28a3a",
-      "remote_hash": "0571d33e25842d5ae6545351d59087c4"
+      "version": "3",
+      "hash": "e469058e7d29e79cbd72239a87cca884",
+      "remote_hash": "d5ba88190dcbc2d92e5b8eca23c1f16f"
     },
     "./team/agents/programme-lead.md": {
       "kind": "agent",
       "id": "agent_01PjZ415AjWnezMMVFnGyrbG",
-      "version": "1",
-      "hash": "eabe2860015855e989487639b57c63d2",
-      "remote_hash": "264f8c9ed331d3b1b340b782c55fbe1b"
+      "version": "2",
+      "hash": "5ee8b4bddb22a3454ac6c862e54d6d88",
+      "remote_hash": "0ea75b0188c7d3255c2cb1ea1f13bcdd"
     },
     "./team/agents/referee.md": {
       "kind": "agent",
       "id": "agent_017JziDLubtRnsScSYjbBZEe",
-      "version": "1",
-      "hash": "8f4d563525b753264b07ed025c7ea97d",
-      "remote_hash": "48b194ff56021b06148d5d0595133229"
+      "version": "2",
+      "hash": "8b2309ab2be8d8f9316006b8cbc2b04a",
+      "remote_hash": "f1040b3f228a61f470b014bbd5a9dc19"
     },
     "./team/environment.yaml": {
       "kind": "environment",
