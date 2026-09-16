@@ -1,1 +1,5 @@
 room/director-2026-09-16-dry-run.md
+room/director-2026-09-16-dry-run-report.md
+room/director-2026-09-16-index-rulings.md
+room/director-2026-09-16-session-1-1-kickoff.md
+room/director-2026-09-16-alt-text-ruling.md

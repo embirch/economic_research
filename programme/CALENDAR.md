@@ -1,0 +1,31 @@
+# Programme calendar
+
+Owner: director. Sequencing only; no dates promised. Status is updated at the close of each session.
+
+## Stage 1 · Research briefs
+
+| Session | Scope | Status |
+|---|---|---|
+| 1.1 Corpus and atlas | `wiki/INDEX.md`, `wiki/reports/*.md` (lead); `wiki/style/*.md` (editor); `data/releases/*.md`, `data/fetch/*.py`, `data/ATLAS.md` (steward). Human reads two wiki entries and one release file for accuracy before 1.2. | in progress (2026-09-16) |
+| 1.2 Ledger, threads map, criteria | `programme/LEDGER.md`, `programme/THREADS.md` (lead); README criteria and `anthropic-style` skill rewritten from the style corpus (editor); referee samples ten wiki claims and the ledger. Human weights or excludes threads. | not started |
+| 1.3 Long-list and short-list | `programme/LONGLIST.md` with a steward feasibility line per item; `programme/SHORTLIST.md`; referee audits scoring; editor answers each why-it-matters. **Gate 1a**: human chooses six. | not started |
+| 1.4 Briefs | `posts/postN/BRIEF.md` ×6; steward feasibility notes; editor framing loop; referee sweep. **Gate 1b**: human approves the six. | not started |
+
+## Stage 2 · Doing the research (one session per post)
+
+Order set at Gate 1a. Per post: replicate → pre-registration (Gate 2a) → analysis → verification (Gate 2b) → close.
+
+| Post | Title (frozen at brief) | Status |
+|---|---|---|
+| — | — | awaiting Gate 1a |
+
+## Stage 3 · Write-ups
+
+Per post: POST.md → page → referee review → pull request (Gate 3). Set review once all six exist.
+
+## Cumulative cost log
+
+| Session | Threads spawned | Notes |
+|---|---|---|
+| Dry run (2026-09-16) | 5 | one hello turn per specialist |
+| 1.1 | see status note | filled at close of session |
