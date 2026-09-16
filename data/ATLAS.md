@@ -1430,7 +1430,11 @@ block non-browser downloads).
       `[R3 §Reproduced]`.
   13. **LL-09's panel**: 2,886 named tasks are common to Nov 2025 and Feb 2026; **2,427** of them
       carry `onet_task::task_success` in Nov 2025 (91.95% of Nov named mass), 2,608 in Feb 2026;
-      282 Nov-only and 372 Feb-only nodes are dropped.
+      282 Nov-only and 372 Feb-only nodes are dropped. *(Two precisions added 2026-09-16 (j):
+      "carry `task_success`" means **a published `yes` cell** — all 3,168 named nodes carry the
+      intersection, 558 of them with a `not_classified` cell alone — and 91.95 is of **100**,
+      i.e. of all conversations; as a share of the Nov **named** mass it is 98.32%. On the
+      weaker rule "a `yes` **or** `no` cell" the sample is **2,524**.)*
   14. **The seven-window automation series re-verified today** end to end: 42.5538 (Dec 2024),
       43.0619 (Feb–Mar 2025), 51.0698 (Aug 2025), 46.7394 (Nov 2025), 45.5456 (Feb 2026), 48.9788
       (Apr 2026), 48.6190 (May 2026) on the five-classified-pattern base; the June values equal the
@@ -1833,4 +1837,75 @@ block non-browser downloads).
   python data/fetch/supplementary_onet.py          # crosswalk + db_27_3_text.zip, sha256 pinned
   python data/replication/soc15_figA1_2026_03.py   # both vintages, both bases, merge audit
   python data/replication/post2_panel_checks.py    # frames, panels, floors, intersections, coding set
+  ```
+
+- **2026-09-16 (j) — post4 (LL-09) feasibility: `not_classified` inside a task intersection is a
+  folded privacy residual, not a classifier verdict.** Written for
+  `posts/post4/notes/feasibility.md`; one script added,
+  `data/replication/post4_feasibility_checks.py`, output in
+  `data/replication/results/post4_feasibility_checks.txt`. What is new:
+
+  1. **`onet_task::task_success` has three categories, and the third is suppression.** At global in
+     both 2026 long waves the cluster key is `<task>::<yes|no|not_classified>`. Every published
+     `yes` or `no` cell has `_count` **≥ 15** (minimum exactly 15; 0 of 2,506 `yes` and 0 of 1,650
+     `no` cells below it in Nov), every `not_classified` cell is **≤ 27 (Nov) / 28 (Feb)**, the
+     three cells' counts **partition `onet_task_count` exactly** (3,169 of 3,169 Nov nodes; 3,259 of
+     3,259 Feb), and **no node publishes all three** (one exception in the whole corpus: one Feb
+     1P API node). Publication patterns, Nov: `{no,yes}` 1,545 · `{not_classified,yes}` 951 ·
+     `{not_classified}` 558 · `{no,not_classified}` 105 · `{yes}` 10. The mechanism is therefore
+     identified: the classifier prompt is binary, so a sub-15 cell is **relabelled
+     `not_classified`** rather than dropped. The same rule holds for every categorical
+     `onet_task::` intersection in these waves: in `onet_task::use_case` up to three cells can fold
+     and the maximum `not_classified` count is **39** (≈ 3 × 13); in `onet_task::collaboration` all
+     six substantive patterns (`none` included) have a minimum of **15** while `not_classified` runs
+     **1–59** (≈ 5 × 14) — which is what the 52,693-conversation `not_classified` pattern recorded
+     in `(h)` actually is. So "intersections go down to 1" is a statement about the folded residual
+     only, never about a substantive category.
+  2. **Consequences for any per-task rate built from these intersections.** (a) `yes_pct` *is* the
+     share of that task's own conversations judged successful — no renormalisation, because the
+     cells partition the node. (b) **Renormalising over published cells is wrong**: `yes/(yes+no)`
+     sets 961 Nov nodes (1,195 Feb) to exactly 100% because their `no` cell is folded, not zero, and
+     is undefined for the 558 (464) nodes whose only cell is `not_classified`. (c) The published
+     `not_classified` `_pct` is the **bound width** on the rate: median 22.22 pp, max 48.28 pp over
+     the 1,056 Nov nodes that carry both a label and a folded cell — and it is mechanically wider
+     for smaller nodes, so the measurement error is correlated with the node's usage share.
+     (d) A "`_count` ≥ 15" filter on the intersection removes **nothing**.
+  3. **The LL-09 panel, three nested samples** (matched named Nov ∩ Feb = 2,886; 282 Nov-only, 372
+     Feb-only): any `yes`/`no` cell **2,524** (92.2879 pp), published `yes` cell **2,427**
+     (91.9470 pp), no folded cell **1,553** (88.6094 pp). With an Aug-2025 share — the instrument —
+     **2,140 / 2,065 / 1,493**; the named three-wave intersection is 2,282 (2,284 with the two
+     pseudo-nodes). First stage on the 2,140: corr(Aug, Nov) 0.9167 in levels, 0.8753 in logs.
+  4. **Concentration makes the nominal N misleading.** Kish effective N over the 2,524 is **87.1**
+     on Nov-share weights and 129.6 on Feb-share weights, so the usage-weighted MDE |r| is
+     **0.305 / 0.249** against a nominal 0.056. Outcome (Nov→Feb Δ share) sd 0.0530 pp, max |Δ|
+     1.8160 pp; placebo (Aug→Nov) sd 0.0837 pp; corr(outcome, placebo) −0.4251 (mechanical).
+  5. **Seychelles is partly removable from a global task series, which the earlier entries did not
+     say.** SC publishes **67 `onet_task` nodes (65 named) whose counts sum to 24,715 = its
+     `usage_count` exactly** in Nov 2025 and has **0 rows** in Feb 2026, so the global Nov task
+     share can be netted task by task: 47 nodes move by more than 0.01 pp and the largest task
+     ("modify existing software to correct errors…", 59,739 Nov conversations) loses **6,790 =
+     11.37%** of itself, moving its Nov→Feb change from **−1.8160** to **−1.2712 pp**. The
+     *intersections* cannot be corrected at all (global only), so a success rate or use-case mix
+     keeps the Seychelles contribution. Extends trap 14 and `(e) 3`.
+  6. **Replication of the fourth report's Figure 2.2 is exact**: global `task_success` `yes` `_pct`
+     on the all-conversation base gives **66.9060%** Claude.ai ("67%", p.25) and **49.3638%** 1P API
+     ("49%", p.26), with the facet's `_count` summing to **999,875** = the published N to the digit.
+     Feb 2026: 69.9385% / 50.5476% (data facts, unpublished). The usage-weighted mean of the
+     per-task `yes_pct` over labelled nodes is 66.9141% (Nov) and 69.9215% (Feb), i.e. the
+     intersection column is the same measure as the headline to 0.01 pp.
+  7. **Floor-crossing, not entry.** Of the 282 Nov-only nodes, 213 have ≤ 20 conversations and only
+     **86** carry a Nov success label; of the 372 Feb-only nodes, 264 have ≤ 20 and only **140**
+     carry a Feb label. Any entry/exit analysis on `onet_task` is an analysis of the 15-conversation
+     publication floor (trap 25), not of work appearing or disappearing.
+  8. **Trap 21 does not bite inside the Index** (re-confirmed independently of `(i)` 4): lower-cased
+     stripped `onet_task` keys are 3,170 / 3,260 / 2,618 — **0** collisions in any of the three long
+     waves.
+
+  ```bash
+  # (j) commands, run 2026-09-16 from /workspace/economic_research
+  python data/replication/post4_feasibility_checks.py    # all of the above, 7 s, writes results/
+  # the identifying observation, in one line per wave:
+  #   g = df[(df.geography=='global') & (df.facet=='onet_task::task_success')]
+  #   g.groupby(task).cat.apply(lambda s: tuple(sorted(set(s)))).value_counts()
+  #   -> no node with all three cells; counts sum to onet_task_count for every node
   ```

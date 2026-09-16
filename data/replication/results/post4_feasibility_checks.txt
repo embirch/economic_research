@@ -1,0 +1,133 @@
+==============================================================================
+1. onet_task global, three waves (brief §8 rows 1, 3, 4)
+==============================================================================
+[Aug 2025] onet_task global L0: rows=5236 nodes=2618 named=2616 vars=['onet_task_count', 'onet_task_pct']
+[Aug 2025]   pct sum=100.000000 count sum=964494 min count=15 named mass=91.8727 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Nov 2025] onet_task global L0: rows=6340 nodes=3170 named=3168 vars=['onet_task_count', 'onet_task_pct']
+[Nov 2025]   pct sum=100.000000 count sum=999875 min count=15 named mass=93.5144 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Feb 2026] onet_task global L0: rows=6520 nodes=3260 named=3258 vars=['onet_task_count', 'onet_task_pct']
+[Feb 2026]   pct sum=100.000000 count sum=1000000 min count=15 named mass=92.9714 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Aug 2025] second-implementation identity max|count/964494*100 - pct| = 4.441e-16
+[Nov 2025] second-implementation identity max|count/999875*100 - pct| = 4.441e-16
+[Feb 2026] second-implementation identity max|count/1000000*100 - pct| = 4.441e-16
+[Aug 2025 enriched] nodes=2618; onet_task_pct identical to the raw file: True
+
+==============================================================================
+2. onet_task::task_success global (brief §8 row 2)
+==============================================================================
+[Nov 2025] onet_task::task_success: rows=11540 vars=['onet_task_task_success_count', 'onet_task_task_success_pct'] levels=['0'] categories=['no', 'not_classified', 'yes'] task keys=3169 pseudo task keys=['none']
+[Nov 2025]   publication patterns: ('no', 'yes')=1545; ('not_classified', 'yes')=951; ('not_classified',)=558; ('no', 'not_classified')=105; ('yes',)=10
+[Nov 2025]   yes: nodes=2506 count min=15 max=31694 #<15=0
+[Nov 2025]   no: nodes=1650 count min=15 max=28045 #<15=0
+[Nov 2025]   not_classified: nodes=1614 count min=1 max=27 #<15=1056
+[Nov 2025]   sum(yes,no,not_classified) == 100 for 3169 of 3169 nodes (min 100.0000, max 100.0000)
+[Nov 2025]   sum(yes,no) == 100 for 1555 of 3169 nodes
+[Feb 2026] onet_task::task_success: rows=12060 vars=['onet_task_task_success_count', 'onet_task_task_success_pct'] levels=['0'] categories=['no', 'not_classified', 'yes'] task keys=3259 pseudo task keys=['none']
+[Feb 2026]   publication patterns: ('no', 'yes')=1544; ('not_classified', 'yes')=1171; ('not_classified',)=464; ('no', 'not_classified')=56; ('yes',)=24
+[Feb 2026]   yes: nodes=2739 count min=15 max=29026 #<15=0
+[Feb 2026]   no: nodes=1600 count min=15 max=16855 #<15=0
+[Feb 2026]   not_classified: nodes=1691 count min=1 max=28 #<15=1227
+[Feb 2026]   sum(yes,no,not_classified) == 100 for 3259 of 3259 nodes (min 100.0000, max 100.0000)
+[Feb 2026]   sum(yes,no) == 100 for 1568 of 3259 nodes
+[Aug 2025] facets matching "success" at global: []
+[Nov 2025] the three cells partition onet_task_count exactly for 3169 of 3169 nodes -> the intersection _pct base is the task's own conversations
+[Nov 2025]   nodes with no yes and no no cell (no success rate at all) = 558
+[Nov 2025]   nodes with yes but no `no` cell = 961 (renormalising over published cells would set every one of them to 100%)
+[Nov 2025]   nodes with a label and a folded not_classified cell = 1056; bound width = not_classified _pct, median 22.22 pp, max 48.28 pp
+[Feb 2026] the three cells partition onet_task_count exactly for 3259 of 3259 nodes -> the intersection _pct base is the task's own conversations
+[Feb 2026]   nodes with no yes and no no cell (no success rate at all) = 464
+[Feb 2026]   nodes with yes but no `no` cell = 1195 (renormalising over published cells would set every one of them to 100%)
+[Feb 2026]   nodes with a label and a folded not_classified cell = 1227; bound width = not_classified _pct, median 19.05 pp, max 48.28 pp
+
+==============================================================================
+3. the matched panel, the regression sample, the instrument, the placebo
+==============================================================================
+nodes incl pseudo: Nov=3170 Feb=3260 Aug=2618
+Nov n Feb incl pseudo = 2888; the two pseudo-nodes are ['none', 'not_classified'] -> named matched = 2886   [the 2,888 vs 2,886 reconciliation]
+Nov-only named = 282; Feb-only named = 372; named in all three long waves = 2282 (2,282 named + 2 pseudo = the atlas 2,284)
+  any Nov yes/no cell: N=2524; Nov mass=92.2879 pp of 100 = 98.69% of Nov named mass; with an Aug-2025 share = 2140
+  published Nov `yes` cell (the long-list 2,427): N=2427; Nov mass=91.9470 pp of 100 = 98.32% of Nov named mass; with an Aug-2025 share = 2065
+  exactly identified (no folded not_classified cell): N=1553; Nov mass=88.6094 pp of 100 = 94.75% of Nov named mass; with an Aug-2025 share = 1493
+  folding error inside the 2524-task sample: 971 nodes carry a folded not_classified cell; bound width median 22.73 pp, max 48.28 pp
+  outcome Nov->Feb over N=2524: mean=-0.00039 sd=0.05297 p5=-0.0079 p95=+0.0178 max|.|=1.8160 pp
+  placebo Aug->Nov over N=2140: mean=+0.00024 sd=0.08373 max|.|=2.1578 pp; corr with the outcome = -0.4251
+  power, any Nov yes/no cell (N=2524), weights=Nov share: Kish N_eff=87.1; MDE|r| nominal=0.0558 vs weighted=0.3052
+  power, any Nov yes/no cell (N=2524), weights=Feb share: Kish N_eff=129.6; MDE|r| nominal=0.0558 vs weighted=0.2489
+  power, published Nov `yes` cell (the long-list 2,427) (N=2427), weights=Nov share: Kish N_eff=86.5; MDE|r| nominal=0.0569 vs weighted=0.3064
+  power, published Nov `yes` cell (the long-list 2,427) (N=2427), weights=Feb share: Kish N_eff=128.2; MDE|r| nominal=0.0569 vs weighted=0.2503
+  power, exactly identified (no folded not_classified cell) (N=1553), weights=Nov share: Kish N_eff=80.4; MDE|r| nominal=0.0711 vs weighted=0.3184
+  power, exactly identified (no folded not_classified cell) (N=1553), weights=Feb share: Kish N_eff=118.2; MDE|r| nominal=0.0711 vs weighted=0.2608
+  H4 margin: Nov-only exits=282 (mass 0.5438 pp, 213 within 15-20 conversations), with a Nov success label=86
+  H4 margin: Feb-only entrants=372 (mass 0.7552 pp, 264 within 15-20 conversations), with a Feb success label=140
+  first stage on the 2140 instrumented tasks: corr(Aug pct, Nov pct)=0.9167 (R2 0.8404) in levels; 0.8753 (R2 0.7662) in logs
+  H4 unweighted means and MDEs: exits 73.44 (sd 25.25, n 86) vs survivors 66.60 (sd 19.11, n 2524), MDE 7.70 pp; entrants 75.45 (sd 24.81, n 140) vs survivors Feb 69.25, MDE 5.98 pp
+  exits mean Nov yes_pct=73.4395%; entrants mean Feb yes_pct=75.4483%; survivors usage-weighted Nov yes_pct=66.9864%
+
+==============================================================================
+4. the controls at global, November (brief §8 row 5)
+==============================================================================
+[Nov 2025] onet_task::use_case: vars=['onet_task_use_case_count', 'onet_task_use_case_pct'] categories=['coursework', 'not_classified', 'personal', 'work'] task keys=3169; pct sums to 100 for 3169 of 3169
+  coursework: published for 889 tasks (873 of the 2524 regression tasks); count min=15 max=25615 #<15=0
+  not_classified: published for 2535 tasks (1917 of the 2524 regression tasks); count min=1 max=39 #<15=1745
+  personal: published for 1628 tasks (1556 of the 2524 regression tasks); count min=15 max=26863 #<15=0
+  work: published for 1902 tasks (1782 of the 2524 regression tasks); count min=15 max=43710 #<15=0
+  H2 split: `work` published for 1782 of 2524 sample tasks, median published work share 59.91; folded for 742, median with folded set to zero 41.37
+[Nov 2025] onet_task::human_education_years: cluster_name is the task alone (no ::category); vars=['onet_task_human_education_years_count', 'onet_task_human_education_years_mean', 'onet_task_human_education_years_mean_ci_lower', 'onet_task_human_education_years_mean_ci_upper', 'onet_task_human_education_years_median', 'onet_task_human_education_years_median_ci_lower', 'onet_task_human_education_years_median_ci_upper', 'onet_task_human_education_years_pct', 'onet_task_human_education_years_stdev']; task keys=3169
+  _mean published for 3169 of 3169 keys, 2524 of the 2524 regression tasks, 2140 of the 2140 instrumented tasks; range 1.009-17.512 yr
+  _count equals onet_task_count for 3169 of 3169 nodes (min 15)
+  H3 pre-check corr(Nov yes_pct, education mean) over 2524 nodes: unweighted -0.0703, usage-weighted -0.1752
+
+==============================================================================
+5. the 1P API leg (brief §8 row 6)
+==============================================================================
+[Aug 2025 API] geographies=['global']; usage_count variable present=False
+[Aug 2025 API] onet_task global L0: rows=4112 nodes=2056 named=2054 vars=['onet_task_count', 'onet_task_pct']
+[Aug 2025 API]   pct sum=100.000000 count sum=944638 min count=15 named mass=87.8383 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Aug 2025 API] onet_task::task_success ABSENT at global
+[Nov 2025 API] geographies=['global']; usage_count variable present=False
+[Nov 2025 API] onet_task global L0: rows=4506 nodes=2253 named=2251 vars=['onet_task_count', 'onet_task_pct']
+[Nov 2025 API]   pct sum=100.000000 count sum=971525 min count=15 named mass=88.2790 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Nov 2025 API] onet_task::task_success: rows=8118 vars=['onet_task_task_success_count', 'onet_task_task_success_pct'] levels=['0'] categories=['no', 'not_classified', 'yes'] task keys=2252 pseudo task keys=['none']
+[Nov 2025 API]   publication patterns: ('no', 'yes')=1295; ('not_classified',)=442; ('not_classified', 'yes')=407; ('no', 'not_classified')=105; ('yes',)=2; ('no',)=1
+[Nov 2025 API]   yes: nodes=1704 count min=15 max=30259 #<15=0
+[Nov 2025 API]   no: nodes=1401 count min=15 max=66512 #<15=0
+[Nov 2025 API]   not_classified: nodes=954 count min=1 max=28 #<15=512
+[Nov 2025 API]   sum(yes,no,not_classified) == 100 for 2252 of 2252 nodes (min 100.0000, max 100.0000)
+[Nov 2025 API]   sum(yes,no) == 100 for 1298 of 2252 nodes
+[Feb 2026 API] geographies=['global']; usage_count variable present=False
+[Feb 2026 API] onet_task global L0: rows=4598 nodes=2299 named=2297 vars=['onet_task_count', 'onet_task_pct']
+[Feb 2026 API]   pct sum=100.000000 count sum=1000000 min count=15 named mass=90.2876 pseudo=['none', 'not_classified'] lower-case collisions=0
+[Feb 2026 API] onet_task::task_success: rows=8256 vars=['onet_task_task_success_count', 'onet_task_task_success_pct'] levels=['0'] categories=['no', 'not_classified', 'yes'] task keys=2298 pseudo task keys=['none']
+[Feb 2026 API]   publication patterns: ('no', 'yes')=1306; ('not_classified',)=467; ('not_classified', 'yes')=423; ('no', 'not_classified')=99; ('yes',)=2; ('no', 'not_classified', 'yes')=1
+[Feb 2026 API]   yes: nodes=1732 count min=15 max=30605 #<15=0
+[Feb 2026 API]   no: nodes=1406 count min=15 max=55952 #<15=0
+[Feb 2026 API]   not_classified: nodes=990 count min=1 max=28 #<15=523
+[Feb 2026 API]   sum(yes,no,not_classified) == 100 for 2298 of 2298 nodes (min 100.0000, max 100.0000)
+[Feb 2026 API]   sum(yes,no) == 100 for 1308 of 2298 nodes
+[API] matched named Nov n Feb = 1930; with a Nov success label = 1686; also carrying an Aug API share = 1428
+
+==============================================================================
+6. replication: the published task-success levels (fourth report, Fig 2.2 p.25 and p.26)
+==============================================================================
+[Nov Claude.ai] no pct=33.0940 count=330899; yes pct=66.9060 count=668976
+[Nov Claude.ai]   pct sum=100.000000; N=999875; yes on the all-conversation base=66.9060% (count route 66.9060%)
+[Nov 1P API] no pct=50.6362 count=491943; yes pct=49.3638 count=479582
+[Nov 1P API]   pct sum=100.000000; N=971525; yes on the all-conversation base=49.3638% (count route 49.3638%)
+[Feb Claude.ai] no pct=30.0615 count=300615; yes pct=69.9385 count=699385
+[Feb Claude.ai]   pct sum=100.000000; N=1000000; yes on the all-conversation base=69.9385% (count route 69.9385%)
+[Feb 1P API] no pct=49.4523 count=494523; not_classified pct=0.0001 count=1; yes pct=50.5476 count=505476
+[Feb 1P API]   pct sum=100.000000; N=1000000; yes on the all-conversation base=50.5476% (count route 50.5476%)
+[Nov 2025 Claude.ai] usage-weighted mean per-task yes_pct over 2611 labelled task nodes = 66.9141% on 962000 conversations (against the published global level)
+[Feb 2026 Claude.ai] usage-weighted mean per-task yes_pct over 2795 labelled task nodes = 69.9215% on 964252 conversations (against the published global level)
+
+==============================================================================
+7. the Seychelles composition term (brief §7.3c, §10)
+==============================================================================
+Nov: SC rows=410, usage_count=[24715.0]; Feb: SC rows=0
+  SC publishes 67 onet_task nodes (65 named), counts summing to 24715 = its usage_count exactly; 1542 conversations (6.2% of SC) sit in its none/not_classified nodes
+  SC named nodes inside the regression sample = 65, 23173 conversations = 2.3176 pp of the Nov base
+  netting SC out of the Nov numerator and denominator moves the Nov share by median +0.0002, min -0.5449, max +0.0541 pp; 47 tasks move by >0.01 pp
+  largest task "modify existing software to correct errors, allow it to ad...": Nov 59739 conversations of which SC 6790 (11.37%); raw change -1.8160 pp, SC-netted -1.2712 pp
+  no correction is available for the regressor: SC rows at facet onet_task::task_success = 0 (intersections are global only)
+[Nov 2025] pseudo-node sizes: none=37119 (3.7124 pp), not_classified=27729 (2.7732 pp); success rows for the task key `not_classified` = 0
+[Feb 2026] pseudo-node sizes: none=42922 (4.2922 pp), not_classified=27364 (2.7364 pp); success rows for the task key `not_classified` = 0
