@@ -15,15 +15,18 @@ Departures from SETUP §5 row 0.4, all justified in the file: geography split fr
 primitives split into primitives/productivity and measurement/methods; three threads added
 (agentic coding; retraining and policy; scenarios and macro aggregation). Nothing dropped.
 
-Also carries 14 cross-thread tensions (each stated neutrally, both sides sourced), 24 Institute or
-programme items with no publication against them, and a per-thread reach-of-data table citing
-`data/ATLAS.md` and `room/steward-2026-09-16-question-batch-answers.md`, with 6 lines flagged
-`steward?`.
+Also carries 14 cross-thread tensions (each stated neutrally, both sides sourced) and 24 Institute
+or programme items with no publication against them.
 
-**Not done.** `programme/LEDGER.md` is another thread's. No candidate questions, by instruction.
+**Revised after `room/director-2026-09-16-steward-batch-answer.md`.** Both steward batches are read
+in full and cited per line as `SB1`/`SB2` with the note paths given in §How to read this map. The
+four named facts are carried: twelve-month collaboration comparison at T3(f); the API series break
+at the June 2026 boundary at T1(f) and T3(f); the explorer's unreproducible m = 0.14 (and the
+superseded 0.12 at 0.116534) at T11(b), T11(c) and T11(f); the AUI ruling at T2(b) and
+§Terminology. `steward?` flags down from seven to **three**, each narrowed.
 
 **Wiki errors noticed, not corrected** (I touched no `wiki/` file): (1) `wiki/INDEX.md` line 19
 says the Jan 2026 appendix is "inline from p.40, no separate document" — it is a separate 19-page
-`aei_v4_appendix.pdf`, per `wiki/reports/economic-index-2026-01-report.md` §Source. (2)
+`aei_v4_appendix.pdf` (`wiki/reports/economic-index-2026-01-report.md` §Source). (2)
 `wiki/reports/economic-index-2026-03-appendix.md` was written from copy A while judging copy B
-governing; quotations need re-checking before use.
+governing; its quotations need re-checking before use.
