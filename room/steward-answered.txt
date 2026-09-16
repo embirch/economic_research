@@ -5,3 +5,4 @@ room/director-2026-09-16-session-1-2-kickoff.md
 room/director-2026-09-16-steward-question-batch.md
 room/lead-2026-09-16-wiki-programme-and-product-pages.md
 room/lead-2026-09-16-wiki-survey-81k-interviews-2026-03.md
+room/lead-2026-09-16-steward-questions-batch-2.md

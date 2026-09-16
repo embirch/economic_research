@@ -227,6 +227,104 @@ for the Figure 5 wage gap ("they earn 47% more") is BLS median annual wage 2025,
 weighted: top-exposure quartile $70,630 vs zero-exposure $50,506 = **+39.8%**, a different
 construct (occupational medians, not individual earnings) and a different year (V25).
 
+### Which Economic Index waves this folder's usage layer is (added 2026-09-16)
+
+Asked by `room/lead-2026-09-16-steward-questions-batch-2.md` Q8: which release folders and windows
+are the appendix's "previous two Anthropic Economic Index reports (2M from Claude.ai and 2M from
+1P API)" (note 3) and its "August"/"September" data (note 1). The appendix names neither. Both are
+settled arithmetically from the files:
+
+| appendix phrase | the folders it can only be | evidence |
+|---|---|---|
+| "2M from Claude.ai" | `release_2025_09_15` (4–11 Aug 2025) **+** `release_2026_01_15` (13–20 Nov 2025) | country `usage_count` sums **964,494 + 999,875 = 1,964,369** ≈ 2M. No other pair of released waves gets there: those are the only two Claude.ai waves with counts, and one wave alone is ~1M |
+| "2M from 1P API" | the same two folders | `collaboration_count` sums **944,638 + 971,525 = 1,916,163** ≈ 2M. The 2025-09-15 wave is the first with a 1P API file, so these are the only two API waves that existed when the report was written |
+| the 100-observation gate = "0.0025% of traffic" | the pooled 4M above | 100 / 4,000,000 = 0.0025% **exactly** — already item 11 of Reproduced (V18). The gate's denominator is the *pooled* Claude.ai + API traffic of both waves, not one wave and not one surface |
+| "the August data", where the work share is **imputed** | `release_2025_09_15` | `use_case` is **absent** from that folder's facet set (7 facets: `collaboration`, `country`, `onet_task`, `onet_task::collaboration`, `request`, `request::collaboration`, `state_us`) — exactly the gap note 1 describes |
+| "the September data", where the use-case primitive "was introduced" | `release_2026_01_15` | `use_case` **first appears** there, and in no earlier folder. **But that wave's window is 13–20 November 2025, not September** — no released file has a September window at all |
+
+So the month labels are not data windows. "August" is the August 2025 window; "September" is the
+wave that introduced `use_case`, whose window is November 2025 and whose *report* is January 2026.
+The likeliest reading is that the authors named waves by an internal sample month; the alternative
+— that they name them by publication month — fails too, because the August-2025-window wave was
+published on 15 September 2025, which would make "the September data" the very wave that lacks
+`use_case`. **Record both readings and do not assume a September sample exists.**
+
+```bash
+python3 - <<'PY'
+import pandas as pd
+d=pd.read_csv('data/cache/release_2025_09_15/data/intermediate/aei_raw_claude_ai_2025-08-04_to_2025-08-11.csv',
+              keep_default_na=False,na_values=[],usecols=['geography','facet','variable','value'])
+print('Aug Claude.ai %.0f'%d[(d.geography=='country')&(d.variable=='usage_count')].value.sum(),
+      '| use_case present', 'use_case' in set(d.facet))
+a=pd.read_csv('data/cache/release_2025_09_15/data/intermediate/aei_raw_1p_api_2025-08-04_to_2025-08-11.csv',
+              keep_default_na=False,na_values=[],usecols=['variable','value'])
+print('Aug API %.0f'%a[a.variable=='collaboration_count'].value.sum())
+e=pd.read_parquet('data/cache/release_2026_01_15/data/intermediate/aei_raw_claude_ai_2025-11-13_to_2025-11-20.parquet',
+                  columns=['geography','facet','variable','value'])
+print('Nov Claude.ai %.0f'%e[(e.geography=='country')&(e.variable=='usage_count')].value.sum(),
+      '| use_case present', 'use_case' in set(e.facet))
+b=pd.read_parquet('data/cache/release_2026_01_15/data/intermediate/aei_raw_1p_api_2025-11-13_to_2025-11-20.parquet',
+                  columns=['variable','value'])
+print('Nov API %.0f'%b[b.variable=='collaboration_count'].value.sum())
+PY
+# -> Aug Claude.ai 964494 | use_case present False ; Aug API 944638
+# -> Nov Claude.ai 999875 | use_case present True  ; Nov API 971525
+```
+
+### The scenarios-explorer anchor m: 0.12 reproduces, 0.14 does not (added 2026-09-16)
+
+Asked by `room/lead-2026-09-16-steward-questions-batch-2.md` Q2. The explorer bundle defines its one
+empirical anchor as "observed exposure, averaged over occupations … at CPS employment weights",
+m = **0.14** at mid-2026, and records that it was **0.12** before mid-August 2026
+(`wiki/reports/econ-scenarios-explorer-2026-09.md`). `observed_exposure` in this folder is exactly
+that construct at exactly that grain — 756 detailed 2018-SOC occupations, no geography, no time.
+Rebuilt with BLS Employment Projections 2025 base-year employment, the nearest public substitute
+for CPS employment weights (BLS OEWS returns 403 to this sandbox and CPS microdata is not public
+here):
+
+| specification | value | verdict |
+|---|---|---|
+| unweighted mean over the 756 occupations — the phrase read literally | **0.076977** | not the anchor under any rounding |
+| employment-weighted, denominator = the 755 occupations that match | **0.128658** | rounds to 0.13 |
+| employment-weighted, denominator = **all** US employment, so occupations absent from the file count as zero exposure | **0.116534** | **rounds to 0.12 — the superseded anchor** |
+
+Merge audit: 756 rows in, **755 matched**, 1 unmatched (`11-1031` Legislators, absent from the
+projections table). Coverage 154,223 of 170,267 thousand jobs (90.6%).
+
+Three conclusions. (i) The anchor is **occupation-grained and US-only**; there is no geography or
+date at which it could be cut, so any scenario claim about a region or a year is outside this file.
+(ii) The **0.12 vintage reproduces to rounding** on the all-employment denominator, so the
+construct and this folder are almost certainly its source. (iii) **0.14 does not reproduce from any
+released file, and cannot**: it is a *mid-2026* anchor, while this folder's usage layer is the
+August + November 2025 waves, and **no 2026 release carries any exposure construct at all** — the
+2026-03-24 folder has no `soc_occupation` facet and the 2026-06-26 folder has no exposure metric.
+A mid-2026 exposure measure is unpublished. Treat 0.14 as an unreproducible model input, and say so
+beside any use of the explorer.
+
+For the related ψ question (Q3) the comparison is in `data/ATLAS.md §Conventions`: the Index's
+observed automation share on the five-classified-pattern base — the base that matches ψ's
+definition, since it excludes unaffected conversations — runs 42.55 / 43.06 / 51.07 / 46.74 /
+45.55 / 48.98 / 48.62 across the six waves, i.e. **0.43–0.51, at or below the least disruptive
+preset (ψ = 0.50) in every wave and never within 24 points of ψ = 0.75**.
+
+```bash
+python3 - <<'PY'
+import pandas as pd
+t=pd.read_html('/tmp/proj.html')[0]            # https://data.bls.gov/projections/occupationProj
+t.columns=['title','occ_code','emp2025','emp2035','chg','pctchg','openings','wage','edu','exp','train','a','b','c'][:len(t.columns)]
+t['emp2025']=pd.to_numeric(t.emp2025.astype(str).str.replace(',',''),errors='coerce')
+t['occ_code']=t.occ_code.astype(str).str.strip()
+j=pd.read_csv('data/cache/labor_market_impacts/job_exposure.csv', keep_default_na=False)
+m=j.merge(t[['occ_code','emp2025']],on='occ_code',how='left')
+print('merge: %d in, %d matched, unmatched %s'%(len(m),m.emp2025.notna().sum(),m[m.emp2025.isna()].occ_code.tolist()))
+m=m.dropna(subset=['emp2025']); num=(m.observed_exposure*m.emp2025).sum()
+print('unweighted %.6f | weighted/matched %.6f | weighted/all-employment %.6f'%(
+      j.observed_exposure.mean(), num/m.emp2025.sum(), num/t.emp2025.sum()))
+PY
+# -> merge: 756 in, 755 matched, unmatched ['11-1031']
+# -> unweighted 0.076977 | weighted/matched 0.128658 | weighted/all-employment 0.116534
+```
+
 ## Cuts that do not exist
 
 Plainly, and each verified by the column list (V4):

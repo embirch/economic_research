@@ -240,6 +240,25 @@ coverage and licences are in `data/ATLAS.md` §Supplementary sources.
 
 `curl -s "https://huggingface.co/api/datasets?author=Anthropic&full=true"` (14 ids, no token).
 
+**Confirmed from the files, not the card (added 2026-09-16, lead batch-2 Q4 and Q6).** The card
+header's shape is right: **4 CSVs, 2,077 rows — stanford 974, oxford 472, metr 604,
+metr_addendum 27** — and the four CSVs total **5,614,399 bytes (5.61 MB)**, against the card's
+"5.63 MB". Widths are 600 / 310 / 163 / 131 columns. `cluster_id` is unique per row in all four;
+the grain is one row = one cluster of one `facet_id` at one `level` (0 or 1; `metr_addendum` is
+level 0 only). `num_records` sums are **4,779,264 / 7,368,265 / 4,697,289 / 3,201,275** — cluster
+memberships, not conversations, so they are not a sample size.
+
+**It is not a release in the atlas sense, and it is not joinable to one.** No `data_documentation.md`,
+no window columns, no release folder, no schema shared with any Economic Index wave, a different
+licence (YAML `cc-by-4.0`, versioned, where the Index says "CC-BY" unversioned), and a single
+`lastModified` with no wave history. Treat it as a one-off companion to the
+`independent-research-access-2026-08` post. On joinability, the lead's reading is **correct**: of
+the four subsets only `stanford` carries anything geographic (a `country` facet, 153 ISO-2 values,
+and even that is a marginal column set, not a row key), and **none** carries an O\*NET task, SOC
+code, request cluster, occupation, date or any other Index key — the facet inventories are
+researcher-defined behavioural variables. There is no common denominator and no common unit, so
+nothing can be merged; the two can only be *cited side by side*, each on its own sample.
+
 ## Verification
 
 All commands run 2026-09-16 from this sandbox; the tree API is reachable without a token.

@@ -127,7 +127,14 @@ and **always global only** — no country, no state, no region, no per-capita an
 they are **indices re-based to mean 1.0**, never levels `[R3 §Facets]`, `[R4 §Facets, V14]`. The
 March 2026 report says the API sample "includes data from Claude Code"; the June 2026 file says
 its API data **excludes** Claude Code. Neither is separable in any file `[R5 §Facets]`,
-`[R6 §Cuts 8]`.
+`[R6 §Cuts 8]`. **That difference is visible in the numbers and it breaks the API series**
+(added 2026-09-16): global API `directive` share runs 66.30 (Aug 2025) → 63.58 (Nov 2025) →
+58.22 (Feb 2026) → **80.88** (Apr 2026) → 82.75 (May 2026), all on the same all-conversation base
+(the June six patterns sum to 99.99 / 100.01), and API automation goes 77.37 → 93.66 / 94.22 on
+the bucket metric. A 22-point jump across exactly the boundary where the documentation stops
+including Claude Code is a **composition change that will read as a behaviour change**. Never run
+an API collaboration or automation series across the 2026-03-24 → 2026-06-26 boundary without
+saying this; the two sides are different populations. Command in `## Dated log 2026-09-16 (d)`.
 
 **Labour-market files.** `labor_market_impacts/` is a separate, undated, unversioned folder of two
 CSVs — `job_exposure.csv` (756 detailed SOC occupations × `observed_exposure`) and
@@ -318,6 +325,24 @@ value, not derivable from the released files.
 26. No model, product, plan, tier, user, account, firm, industry (NAICS), language or tenure
     column in any release `[R1 §Cuts]`, `[R2 §Cuts]`, `[R3 §Cuts]`, `[R4 §Cuts 6]`,
     `[R5 §Cuts 9]`, `[R6 §Cuts 7, 8]`.
+26a. **No window classified twice, and no classifier- or model-version column anywhere** (added
+    2026-09-16). No release ships the same window under two model or classifier versions at any
+    grain, and no release ships any classifier-validation or inter-rater output, so the Clio
+    validation (Claude 3 family) has no published re-validation on later models. The two near
+    misses are not it: the 2025-03-27 folder's `v1`/`v2` pair is two *pipeline* versions on two
+    **different** windows (v1 is byte-identical to the December-2024 files — trap 26), and the
+    `model_version` facet of `Anthropic/enabling-independent-research` is one fixed April–May 2026
+    window across 9 *serving* versions of a Claude Code sample, which is a different dataset, a
+    different population and not a classifier comparison `[R2 §Files]`, `## Supplementary sources`.
+26b. **Tenure and model class are absent from 2026-03-24, but `task_success` is not** (added
+    2026-09-16). Of the March 2026 report's three headline Chapter-2 analyses, two have no public
+    file at all — nothing in `facet` or `variable` matches `tenure|seniority|model|opus|sonnet|
+    haiku|version|cohort|expert` in either file — while **`task_success` is a published binary
+    facet** (`yes` 69.938% / `no` 30.062% global) at all three geographies, plus
+    `onet_task::task_success` and `request::task_success` at global. So success *levels* by task,
+    request and geography are public; success *regressions* on tenure or model are log-level
+    `[R5 §Facets]`.
+
 27. No token, turn, extended-thinking, session-length or active-time field outside the API token
     indices; extended thinking exists only as the 2025-03-27 per-task fraction `[R6 §Cuts 7]`,
     `[R2 §Facets]`. **No artifact field either, except the 32 `artifact_*_pct` aggregate shares of
@@ -354,6 +379,16 @@ section carrying the verifying command. **Where the report's prose and Anthropic
 both readings are recorded.**
 
 ### The AI Usage Index
+
+**Two published names, one formula** (added 2026-09-16). The June 2026 documentation calls
+`usage_per_capita_index` the "**Anthropic** Usage Index — Usage share divided by working-age
+(15-64) population share. 1.0 means proportional to population. Countries and US states only.";
+the reports and `/mnt/memory/standards/terminology.md` say "**AI** Usage Index (AUI)", and the
+2025-09-15 documentation uses neither phrase (it says "Concentration index showing if a geography
+has more/less usage than expected based on population share"). The formula, the 1.0 convention and
+the countries-and-US-states restriction are identical in all three. Both names are Anthropic's own:
+quote whichever the wave you are citing uses, say which, and **do not harmonise them silently**
+(`[R6 §Metrics]`; raised as terminology by the lead, batch 2 Q13).
 
 - **Countries (August 2025, the only wave where Anthropic publishes the index):**
   `AUI[g] = (usage[g] / U) / (pop[g] / P)` where `U` = usage over countries with
@@ -437,6 +472,23 @@ counts, so the pair is global-only and carries no standard error — a differenc
 cannot be tested, only reported `[R2 §Cuts]`. (v) The 2026-06-26 endpoint is a five-pattern
 bucket on a wide schema and two calendar months, so it needs the pooling rule below. Verified
 2026-09-16; the command is in `## Dated log 2026-09-16 (c)`.
+
+**This series is also the Index's answer to the scenarios model's ψ** (added 2026-09-16, for the
+lead's batch-2 Q3). The September 2026 scenarios explorer sets ψ — "the share of affected tasks
+that is automated rather than augmented" — at **0.50 / 0.75 / 0.90** by assumption across its three
+presets `[wiki/reports/econ-scenarios-explorer-2026-09.md]`. The five-classified-pattern base is
+the right comparator, because ψ conditions on *affected* tasks and that base excludes the `none`
+pattern. On it the Index has never observed a wave above **0.511**:
+
+| wave | Dec 2024 | Feb–Mar 2025 | Aug 2025 | Nov 2025 | Feb 2026 | Apr 2026 | May 2026 |
+|---|---|---|---|---|---|---|---|
+| observed automation share | 0.4255 | 0.4306 | **0.5107** | 0.4674 | 0.4555 | 0.4898 | 0.4862 |
+
+So the observed share brackets the *least* disruptive preset and sits 24–44 points below the other
+two. Two cautions before anyone writes that down as a refutation: the Index's unit is a
+**conversation**, not a task, and its automation/augmentation split is a classifier on
+collaboration patterns, not a measure of which tasks ended up automated — so this is the nearest
+observable analogue of ψ, not ψ itself. And it is Claude traffic only. State both.
 
 ### Task mix and occupation allocation
 
@@ -952,6 +1004,30 @@ geography join key beyond Stanford's `country:<iso2>` columns and no denominator
 Index; its `num_records` sums (3.2M–7.4M) are cluster memberships, not conversations. Treat it as a
 separate instrument, cite it as one, and read Anthropic's interpretation guidance first.
 
+**But it does carry facet × facet crosses, which the Index does not** (added 2026-09-16, for the
+lead's batch-2 Q5). The grain is one row = one cluster of one `facet_id` at one `level`, and every
+row carries the marginals of *every other* facet over the records in that cluster, as
+`<facet>:<value>_num_records` and `_ratio` column pairs. Since a facet's own values are themselves
+rows (`facet_id == 'time_without_ai'` is 8 rows, one per band), **any facet × any facet two-way
+table is recoverable**. Verified on `metr`: `time_without_ai` × `model_version` is 8 × 9 with 58 of
+72 cells published, and `time_without_ai` × `task_success` is 8 × 4 — and the joint reconstructed
+from the band rows equals the joint reconstructed from the model rows **exactly** (max abs
+difference 0.0 over the 58 shared cells), with the residual between a band's `num_records` and its
+row sum being the suppressed cells (e.g. 265 vs 257 in the 1,000–3,000-minute band). No column ever
+carries two facet separators, so there is no *three*-way table and no conversation-level record.
+`metr` facets (14): `task_success` {clear_success, partial_success, abandoned_or_unclear,
+clear_failure}, `time_without_ai` (8 log-spaced bands, `0_minutes` to `1000_to_3000_minutes`),
+`work_activity_type` (8), `supervision_intensity` {fully_autonomous, collaborative,
+actively_supervised, lightly_supervised}, `model_version` (9, `claude-4-sonnet` …
+`claude-4-7-opus`, plus `none`), `turn_count`, `cc_session_turn_count`, `char_count`,
+`session_duration_seconds`, `session_wall_clock_seconds`, `lines_added`, `lines_removed`,
+`compaction_auto`, `compaction_manual`; cluster ladders are `task_description` (277 L0 / 9 L1) and
+`professional_domain` (269 L0 / 6 L1). Global marginals: 247,315 records, success
+61.0 / 20.0 / 17.0 / 2.0; `fully_autonomous` 42.8%. **No date column of any kind**, no occupation,
+no expertise rating — so nothing joins to the Index and nothing follows over time
+`[IX §Sibling Anthropic datasets]`. Command in `## Dated log 2026-09-16 (d)`.
+
+
 **Named in the skill, not verified here — treat as unverified leads:** Census
 `PctUrbanRural_State.txt`; Microsoft AI Diffusion state and county CSVs
 (`github.com/microsoft/ai-diffusion-report`); the OpenAI Signals CSV bundle
@@ -1117,4 +1193,60 @@ non-browser downloads). None was fetched, joined or licence-checked in this thre
   #   automation = (directive + feedback loop) / base; base = five classified, or all incl. none
   # -> 42.5538/41.0876 · 43.0619/41.6671 · 51.0698/49.0980 · 46.7394/45.3554 · 45.5456/44.1569
   #    · 48.9788/47.7152 (Apr) · 48.6190/47.3500 (May)
+  ```
+
+- **2026-09-16 (d) — the lead's second question batch.** Seventeen questions from the
+  `wiki/reports/` Data-and-methods sections (`room/lead-2026-09-16-steward-questions-batch-2.md`)
+  answered in `room/steward-2026-09-16-question-batch-2-answers.md`. What it added, each with its
+  command in the file named:
+
+  1. **The scenarios model's anchor m = 0.14 does not reproduce; its superseded 0.12 does.**
+     `observed_exposure` at BLS-EP employment weights is 0.116534 on the all-employment
+     denominator (0.128658 on matched occupations, 0.076977 unweighted); merge 756 in / 755
+     matched / 1 unmatched. And no 2026 release carries any exposure construct, so a *mid-2026*
+     exposure cannot be rebuilt at all `[LMI §The scenarios-explorer anchor]`.
+  2. **The Index's observed automation share is 0.43–0.51 in every wave**, at or below the least
+     disruptive ψ preset (0.50) and 24–44 points below the other two — recorded in
+     `## Conventions` with the conversation-vs-task caveat.
+  3. **The labour-market folder's usage layer is pinned to two folders arithmetically**:
+     Claude.ai 964,494 + 999,875 ≈ 2M and API 944,638 + 971,525 ≈ 2M, with 100/4,000,000 =
+     0.0025% exact. The appendix's "August" is the Aug-2025 wave (no `use_case`); its "September"
+     is the wave that introduced `use_case`, whose window is **November 2025** — no released file
+     has a September window `[LMI §Which Economic Index waves]`.
+  4. **New trap: the 1P API series breaks at the June 2026 boundary.** Global API `directive`
+     goes 66.30 → 63.58 → 58.22 → **80.88** → 82.75 on one base, across exactly the boundary
+     where the documentation stops including Claude Code — a composition change that reads as a
+     behaviour change (`## Components`).
+  5. **The partner-cluster file carries facet × facet crosses**, verified internally consistent
+     (`time_without_ai` × `model_version` 8×9, 58 of 72 cells, two reconstructions agreeing to
+     0.0) — the one public Anthropic file where a two-way behavioural table exists
+     (`## Supplementary sources`).
+  6. **Two published names for the AUI**: "Anthropic Usage Index" (June 2026 documentation) and
+     "AI Usage Index" (reports, house terminology), same formula — `## Conventions`, do not
+     harmonise.
+  7. **New cuts 26a and 26b**: no window is classified twice and no classifier/model-version
+     column exists anywhere; and `task_success` *is* public in 2026-03-24 (binary, three
+     geographies, plus both global intersections) even though tenure and model class are not.
+  8. `Anthropic/AnthropicInterviewer` profiled at value level: two columns, `transcript_id`
+     prefixed `work_`/`creativity_`/`science_`, `text` a raw dialogue transcript (median ~8.8k
+     characters, `Assistant:` turn markers in all 1,250 rows), **no coded field of any kind**
+     `[IX §Sibling Anthropic datasets]`.
+  9. **The Economic Index hub page ships map geometry, not chart data.** Its two
+     `cdn.sanity.io/files/…json` assets are TopoJSON (`type`, `arcs`, `transform`, `objects`;
+     5.1 MB and 5.3 MB), so no page value can be matched to a release; the series are fetched
+     client-side from an endpoint absent from the server-rendered HTML. The stale
+     "Dataset 4 - Release 03-24-2026" title cannot be the source of a per-capita chart, because
+     **only 2025-09-15 and 2026-06-26 publish an AUI at all**.
+
+  ```bash
+  # (d) commands, run 2026-09-16 from /workspace/economic_research
+  curl -s https://data.bls.gov/projections/occupationProj -o /tmp/proj.html   # 200, 831 SOC rows
+  curl -s https://www.anthropic.com/economic-index -o /tmp/hub.html           # 200, 293,823 B
+  curl -s https://cdn.sanity.io/files/4zrzovbb/website/<sha>.json             # TopoJSON, x2
+  # API directive series, one base (all conversations):
+  #   long waves: facet=='collaboration', variable=='collaboration_pct', cluster 'directive'
+  #   wide wave:  geo_id=='GLOBAL', category_name=='overall', collaboration_directive_pct
+  #   -> 66.30 / 63.58 / 58.22 / 80.88 / 82.75 ; six-pattern sums 99.99 and 100.01
+  # partner crosses: pivot <facet>:<value>_num_records over rows where facet_id==<other facet>,
+  #   then compare A against B.T  -> max abs diff 0.0 on 58 cells
   ```
