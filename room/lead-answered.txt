@@ -8,3 +8,10 @@ room/director-2026-09-16-caption-amendment.md
 room/director-2026-09-16-chart-asset-ruling.md
 room/director-2026-09-16-figure-values-ruling.md
 room/director-2026-09-16-pdf-web-ruling.md
+room/director-2026-09-16-session-1-1-status.md
+room/director-2026-09-16-session-1-2-kickoff.md
+room/director-2026-09-16-session-1-2-halt.md
+room/director-2026-09-16-corpus-audit-answer.md
+room/director-2026-09-16-institute-launch-answer.md
+room/director-2026-09-16-steward-question-batch.md
+room/referee-2026-09-16-corpus-audit.md
