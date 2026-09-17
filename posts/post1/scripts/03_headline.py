@@ -352,9 +352,13 @@ if __name__ == "__main__":
         dw = R[w]["Delta_W"]
         assert abs(dw["coef"] - (R[w]["wage_weighted_share"]["coef"] - R[w]["unweighted_share"]["coef"])) < 1e-9, w
         assert abs(dw["mde"] - MDE_K * dw["se"]) < 1e-12, w
-        # Δ_W's materiality arithmetic (prereg §2): about 0.11-0.12 pp per point of quartile gap, so
-        # Δ_W must be far smaller than D itself whenever D is of the order of a point
-        assert abs(dw["coef"]) < max(1.0, 0.5 * abs(R[w]["registered"]["D"]["coef"])), (w, dw["coef"])
+        # Δ_W's materiality arithmetic (prereg §2): about 0.11-0.12 pp of Δ_W per point of quartile
+        # gap. referee-results item 15: this is an expectation about the RESULT, not a fact about the
+        # code — a Δ_W larger than the arithmetic predicts would have been a finding, not a bug — so
+        # it is printed, not asserted.
+        ratio = dw["coef"] / R[w]["registered"]["D"]["coef"]
+        print(f"  Δ_W / D in {w}: {ratio:+.4f} pp per point of quartile gap "
+              f"(the brief's arithmetic says 0.11-0.12; printed, not asserted)")
         # the slope's coefficient is in pp per +$10/hr and finite
         sl = R[w]["slope_per_10dollar"]
         assert np.isfinite(sl["coef"]) and np.isfinite(sl["se"]) and sl["se"] > 0, w

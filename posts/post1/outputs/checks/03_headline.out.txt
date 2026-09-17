@@ -65,5 +65,8 @@ The five pattern shares by quartile (description, in no decision rule; P5's clau
      validation         3.888    3.763    5.161    4.313
 
 wrote posts/post1/data/processed/headline.json
+  Δ_W / D in aug2025: -0.0160 pp per point of quartile gap (the brief's arithmetic says 0.11-0.12; printed, not asserted)
+  Δ_W / D in nov2025: +0.1131 pp per point of quartile gap (the brief's arithmetic says 0.11-0.12; printed, not asserted)
+  Δ_W / D in feb2026: -0.2192 pp per point of quartile gap (the brief's arithmetic says 0.11-0.12; printed, not asserted)
 
 CHECK BLOCK PASSED — 03_headline.py

@@ -1,7 +1,7 @@
 {
   "post": "post1",
   "question": "Is AI delegated more on low-wage work or on high-wage work?",
-  "generated": "2026-09-17T12:14:35Z",
+  "generated": "2026-09-17T12:49:20Z",
   "prereg": "posts/post1/prereg/prereg.md (content c9b1b45, committed 066b761)",
   "scripts": [
     "scripts/01_*.py",
@@ -87,7 +87,7 @@
         }
       },
       "prereg_rule": "prereg \u00a72: \"\u0394_W is published with its own interval beside D. Its materiality line is separate and higher than \u03b4: 0.11\u20130.12 pp of \u0394_W per point of gap, so a full point of \u0394_W needs a gap of roughly 8\u20139 pp\".",
-      "verdict": "contains zero; |\u0394_W| = 0.0222 pp, below the separate 1 pp materiality line, so the weighting of a published automation share is signed and small, never wrong",
+      "verdict": "contains zero; |\u0394_W| = 0.0222 pp, below the separate 1 pp materiality line, so the weighting of a published automation share is small and, in this window, of undetermined sign",
       "notes": "an hourly rate, not a bill: no hours enter \u0394_W"
     },
     "slope_aug2025": {
@@ -403,6 +403,20 @@
           "se": 0.2282787517056604,
           "mde": 0.6391805047758491,
           "unit": "percentage points"
+        },
+        "D_L_all_four_subset": {
+          "coef": -4.054133138261893,
+          "ci": [
+            -4.570322156046187,
+            -3.537944120477599
+          ],
+          "se": 0.2633665811128641,
+          "mde": 0.7374264271160195,
+          "r": -2.9300374479353737,
+          "fired": true,
+          "n_groups": 8,
+          "mass_share_q1_q4": 75.41878441826786,
+          "unit": "percentage points; the P3(b) side-estimate on the groups spanning all four quartiles, reported beside the primary identified set"
         }
       },
       "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
@@ -447,6 +461,8 @@
           "41"
         ],
         "n_groups_all_four": 8,
+        "subset": "identified",
+        "mass_share_q1_q4_used": 80.03786585984558,
         "identified_mass_share_q1_q4": 80.03786585984558,
         "tasks_in_identified_groups": 1435
       },
@@ -560,6 +576,20 @@
           "se": 0.2536750632303953,
           "mde": 0.7102901770451068,
           "unit": "percentage points"
+        },
+        "D_L_all_four_subset": {
+          "coef": -1.794013562902122,
+          "ci": [
+            -2.35196225987493,
+            -1.2360648659293143
+          ],
+          "se": 0.2846729312236386,
+          "mde": 0.7970842074261881,
+          "r": -0.2429131052191064,
+          "fired": true,
+          "n_groups": 9,
+          "mass_share_q1_q4": 79.38644147209423,
+          "unit": "percentage points; the P3(b) side-estimate on the groups spanning all four quartiles, reported beside the primary identified set"
         }
       },
       "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
@@ -605,6 +635,8 @@
           "41"
         ],
         "n_groups_all_four": 9,
+        "subset": "identified",
+        "mass_share_q1_q4_used": 80.31391885409579,
         "identified_mass_share_q1_q4": 80.31391885409579,
         "tasks_in_identified_groups": 1641
       },
@@ -660,7 +692,7 @@
         }
       },
       "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
-      "verdict": "did not fire: D_L keeps its sign and more than half of D \u2014 nothing bigger than the MDE of 0.6058 pp is shown on this leg, which is not composition excluded",
+      "verdict": "did not fire on the point estimate; D_L retains 0.50 of D and the contrast D_L \u2212 \u00bdD is +0.02 [-0.33, +0.37] pp, so whether this leg's set retains more or less than half of D is undetermined at this precision; not composition excluded",
       "coverage": {
         "dropped_undefined_tasks": 16,
         "undefined_tasks_analysis": 29,
@@ -782,6 +814,20 @@
           "se": 0.2100297079814194,
           "mde": 0.5880831823479743,
           "unit": "percentage points"
+        },
+        "D_L_all_four_subset": {
+          "coef": -6.085129108937618,
+          "ci": [
+            -6.56152694057827,
+            -5.608731277296966
+          ],
+          "se": 0.24306458263552383,
+          "mde": 0.6805808313794667,
+          "r": -9.097567352201962,
+          "fired": true,
+          "n_groups": 8,
+          "mass_share_q1_q4": 74.73631195526943,
+          "unit": "percentage points; the P3(b) side-estimate on the groups spanning all four quartiles, reported beside the primary identified set"
         }
       },
       "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
@@ -826,6 +872,8 @@
           "41"
         ],
         "n_groups_all_four": 8,
+        "subset": "identified",
+        "mass_share_q1_q4_used": 75.51740352237756,
         "identified_mass_share_q1_q4": 75.51740352237756,
         "tasks_in_identified_groups": 1597
       },
@@ -881,7 +929,7 @@
         }
       },
       "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
-      "verdict": "did not fire: D_L keeps its sign and more than half of D \u2014 nothing bigger than the MDE of 0.7088 pp is shown on this leg, which is not composition excluded",
+      "verdict": "did not fire on the point estimate; D_L retains 4.17 of D and the contrast D_L \u2212 \u00bdD is +2.46 [+2.02, +2.89] pp, which excludes zero, so D_L keeps more than half of D at this precision; not composition excluded",
       "coverage": {
         "dropped_undefined_tasks": 8,
         "undefined_tasks_analysis": 21,
@@ -919,7 +967,19 @@
             -0.8969275550389791,
             -0.7857136371063925
           ],
+          "se": 0.028371418539469763,
+          "mde": 0.07943997191051533,
           "unit": "pp per +$10/hr"
+        },
+        "Delta_W_aug2025": {
+          "coef": -0.36311446563438216,
+          "ci": [
+            -0.38711446193169696,
+            -0.33911446933706735
+          ],
+          "se": 0.01224512098044392,
+          "mde": 0.03428633874524298,
+          "unit": "pp"
         },
         "D_nov2025": {
           "coef": -2.4670255365277924,
@@ -937,7 +997,19 @@
             -1.0410562606430669,
             -0.9247040097464152
           ],
+          "se": 0.029682241841342945,
+          "mde": 0.08311027715576023,
           "unit": "pp per +$10/hr"
+        },
+        "Delta_W_nov2025": {
+          "coef": -0.41431721549163975,
+          "ci": [
+            -0.43884041973675003,
+            -0.38979401124652946
+          ],
+          "se": 0.012512068714073472,
+          "mde": 0.03503379239940572,
+          "unit": "pp"
         },
         "D_feb2026": {
           "coef": -5.154691709845292,
@@ -955,7 +1027,19 @@
             -1.749926604247272,
             -1.6255151295172143
           ],
+          "se": 0.03173820405121163,
+          "mde": 0.08886697134339257,
           "unit": "pp per +$10/hr"
+        },
+        "Delta_W_feb2026": {
+          "coef": -0.6985548527988018,
+          "ci": [
+            -0.7243020723544517,
+            -0.672807633243152
+          ],
+          "se": 0.013136577792066534,
+          "mde": 0.036782417817786295,
+          "unit": "pp"
         }
       },
       "prereg_rule": "prereg \u00a7Exploratory allowance: three tests, after the confirmatory set, none in the headline, each labelled exploratory; in no decision rule.",
@@ -1149,6 +1233,8 @@
             -8.279239452425722,
             -7.727796361561494
           ],
+          "se": 0.14067684173388587,
+          "mde": 0.3938951568548804,
           "unit": "pp, top-minus-bottom Job-Zone quartile"
         },
         "slope_nov2025": {
@@ -1167,6 +1253,8 @@
             -12.140568713462303,
             -11.589997740892771
           ],
+          "se": 0.14045435849064847,
+          "mde": 0.39327220377381567,
           "unit": "pp, top-minus-bottom Job-Zone quartile"
         },
         "slope_feb2026": {
@@ -1185,6 +1273,8 @@
             -11.741383154103316,
             -11.205287514028685
           ],
+          "se": 0.13676160380359814,
+          "mde": 0.3829324906500748,
           "unit": "pp, top-minus-bottom Job-Zone quartile"
         }
       },
@@ -1237,6 +1327,8 @@
             -0.05805947985450921,
             0.01195023249059739
           ],
+          "se": 0.017859948536071733,
+          "mde": 0.05000785590100085,
           "unit": "pp"
         }
       },
@@ -1267,6 +1359,8 @@
             -0.07413770997114008,
             -0.0038516752200399088
           ],
+          "se": 0.017930440240509563,
+          "mde": 0.050205232673426775,
           "unit": "pp"
         }
       },
@@ -1297,11 +1391,13 @@
             -1.9247391619324712,
             -1.8203128716103611
           ],
+          "se": 0.0266398490793989,
+          "mde": 0.07459157742231692,
           "unit": "pp"
         }
       },
       "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
-      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "verdict": "the sign does NOT agree with C6 in this window; BLS-EP (SOC-2018) does not price the renumbered computer occupations, so C7's top quartile is 92\u201394% non-coding and this rebuild is the Computer & Mathematical exclusion of leg (a) on 55\u201362% of the mass, not an independent second source; the owner is unchanged",
       "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
     },
     "rob_model_b_aug2025": {
@@ -1338,28 +1434,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 3.400269705059567,
+          "coef": 3.3437711312564136,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 3.3447972742226133,
+          "coef": 3.324174067240495,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 3.400269705059567,
+          "coef": 3.3437711312564136,
           "ci": [
-            -3.814791466066089,
-            9.094896622491245
+            -3.8220335574525333,
+            8.946161010657043
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.8313168683131686,
+          "coef": 0.8303169683031697,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.8313); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.8303); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_aug2025": {
@@ -1503,6 +1599,8 @@
             0.802421541496341,
             0.8725221885180735
           ],
+          "se": 0.017883146583746533,
+          "mde": 0.050072810434490286,
           "unit": "pp"
         }
       },
@@ -1533,6 +1631,8 @@
             0.7961030747489414,
             0.8666858660034086
           ],
+          "se": 0.01800614482063628,
+          "mde": 0.05041720549778158,
           "unit": "pp"
         }
       },
@@ -1563,11 +1663,13 @@
             -1.3888342200889026,
             -1.2908609745132702
           ],
+          "se": 0.024993633958489095,
+          "mde": 0.06998217508376946,
           "unit": "pp"
         }
       },
       "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
-      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "verdict": "the sign does NOT agree with C6 in this window; BLS-EP (SOC-2018) does not price the renumbered computer occupations, so C7's top quartile is 92\u201394% non-coding and this rebuild is the Computer & Mathematical exclusion of leg (a) on 55\u201362% of the mass, not an independent second source; the owner is unchanged",
       "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
     },
     "rob_model_b_nov2025": {
@@ -1604,28 +1706,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 8.881281318258003,
+          "coef": 8.921943038714165,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 4.5008266947044895,
+          "coef": 4.425572493552711,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 8.881281318258003,
+          "coef": 8.921943038714165,
           "ci": [
-            -1.9183574234032004,
-            15.98052775894798
+            -1.4699099277277201,
+            15.87041766413978
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.6712328767123288,
+          "coef": 0.6803319668033196,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.6712); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.6803); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_nov2025": {
@@ -1703,6 +1805,8 @@
             -0.1827012006058043,
             -0.10894039540356654
           ],
+          "se": 0.018816877555464736,
+          "mde": 0.05268725715530126,
           "unit": "pp"
         }
       },
@@ -1733,6 +1837,8 @@
             -0.19237940925006178,
             -0.11822389003409725
           ],
+          "se": 0.018917571755390536,
+          "mde": 0.052969200915093495,
           "unit": "pp"
         }
       },
@@ -1763,11 +1869,13 @@
             -2.082603323235463,
             -1.982166405368518
           ],
+          "se": 0.02562213333177167,
+          "mde": 0.07174197332896068,
           "unit": "pp"
         }
       },
       "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
-      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "verdict": "the sign does NOT agree with C6 in this window; BLS-EP (SOC-2018) does not price the renumbered computer occupations, so C7's top quartile is 92\u201394% non-coding and this rebuild is the Computer & Mathematical exclusion of leg (a) on 55\u201362% of the mass, not an independent second source; the owner is unchanged",
       "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
     },
     "rob_model_b_feb2026": {
@@ -1804,28 +1912,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 4.7788652074335065,
+          "coef": 4.727360634781918,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 3.6680574660597007,
+          "coef": 3.7661099294749403,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 4.7788652074335065,
+          "coef": 4.727360634781918,
           "ci": [
-            -3.389786785426645,
-            11.08932911996451
+            -3.6584172027774815,
+            11.055666347560509
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.9459054094590541,
+          "coef": 0.9431056894310569,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.9459); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.9431); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_feb2026": {
@@ -3899,7 +4007,49 @@
         25.85576923076923,
         35.78846153846154,
         43.39903846153846
-      ]
+      ],
+      "boundary_occupation": "15-1199 Computer Occupations, All Other ($90,270 \u00f7 2,080 = $43.40/hr)",
+      "boundary_occupations": {
+        "b1_25.78": {
+          "hourly": 25.78365384615385,
+          "annual": 53630.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "25-3011"
+          ],
+          "titles": [
+            "Adult Basic and Secondary Education and Literacy Teachers and Instructors"
+          ]
+        },
+        "b2_35.56": {
+          "hourly": 35.55769230769231,
+          "annual": 73960.0,
+          "detailed_codes": 4,
+          "soc7": [
+            "29-1199"
+          ],
+          "titles": [
+            "Acupuncturists",
+            "Health Diagnosing and Treating Practitioners, All Other",
+            "Naturopathic Physicians",
+            "Orthoptists"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
+          ]
+        }
+      }
     },
     "mde_aug2025": {
       "value": 0.40437931307464486,
@@ -3992,7 +4142,48 @@
         25.783653846153847,
         34.86538461538461,
         43.39903846153846
-      ]
+      ],
+      "boundary_occupation": "15-1199 Computer Occupations, All Other ($90,270 \u00f7 2,080 = $43.40/hr)",
+      "boundary_occupations": {
+        "b1_25.78": {
+          "hourly": 25.78365384615385,
+          "annual": 53630.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "25-3011"
+          ],
+          "titles": [
+            "Adult Basic and Secondary Education and Literacy Teachers and Instructors"
+          ]
+        },
+        "b2_34.87": {
+          "hourly": 34.86538461538461,
+          "annual": 72510.0,
+          "detailed_codes": 2,
+          "soc7": [
+            "27-1014",
+            "29-2032"
+          ],
+          "titles": [
+            "Diagnostic Medical Sonographers",
+            "Multimedia Artists and Animators"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
+          ]
+        }
+      }
     },
     "mde_nov2025": {
       "value": 0.3929905813193996,
@@ -4085,7 +4276,46 @@
         24.004807692307693,
         34.44711538461539,
         43.39903846153846
-      ]
+      ],
+      "boundary_occupation": "15-1199 Computer Occupations, All Other ($90,270 \u00f7 2,080 = $43.40/hr)",
+      "boundary_occupations": {
+        "b1_24.00": {
+          "hourly": 24.004807692307693,
+          "annual": 49930.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "27-3091"
+          ],
+          "titles": [
+            "Interpreters and Translators"
+          ]
+        },
+        "b2_34.45": {
+          "hourly": 34.44711538461539,
+          "annual": 71650.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "19-1022"
+          ],
+          "titles": [
+            "Microbiologists"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
+          ]
+        }
+      }
     },
     "mde_feb2026": {
       "value": 0.3916894683522509,
@@ -4122,7 +4352,8 @@
       "H1_or_H2_80pc": 1.5171635019904666,
       "H4_declared_80pc": 0.32369414342009417,
       "H4_clause_80pc": 0.4828364980095292,
-      "P_H1_at_true_D_1pp": 1.562500000000001e-05
+      "P_H1_at_true_D_1pp": 1.562500000000001e-05,
+      "notes": "every P2 probability assumes a **constant** true D across the three windows. The realised D's are +1.3836 / +7.3854 / +0.6689 pp, whose standard deviation across windows is 26 times the mean within-window SE (`facts.between_window_dispersion_of_D`), so that assumption is falsified by the data: none of these probabilities is the probability of this outcome, and no probability under a non-constant true D has been computed. This resolves the referee's carried item 15(c)."
     },
     "owner_under_robustness": {
       "value": "O-A",
@@ -4196,7 +4427,38 @@
         0.9870791749000217,
         0.986091143376725,
         0.9869133024792749
-      ]
+      ],
+      "c7_share_of_soc15_analysis_mass": [
+        10.887832601675171,
+        10.488965621619194,
+        11.64632827511841
+      ],
+      "c7_share_of_q4_mass": [
+        26.357976653696465,
+        27.669980543191414,
+        31.809761580048594
+      ],
+      "soc15_share_of_c7_priced_q4": [
+        7.561784678441802,
+        6.421679590296849,
+        5.912912325782757
+      ],
+      "soc15_share_of_c7_q4_redrawn": [
+        8.544884867521471,
+        7.004480007301883,
+        6.3466266616660425
+      ],
+      "soc15_share_of_c6_q4": [
+        73.06477454795152,
+        71.26300452215327,
+        65.46264665248083
+      ],
+      "c7_leg_a_retained_fraction": [
+        0.9685279454570472,
+        0.9266556298659508,
+        0.9810926310303852
+      ],
+      "mechanism": "C7 prices about a tenth of SOC-15's analysis mass, so the C7 rebuild is leg (a) on 55-62% of the mass rather than an independent second source; leg (a) inside the C7 frame retains 0.93-0.98 of C7's own D because the coding family is already gone"
     },
     "november_is_corroborated_not_independent": {
       "value": true,
@@ -4208,7 +4470,18 @@
       "value": 20.157778101917096,
       "label": "the design-based MDE, the bound on any claim about tasks in general (pp); a claim about work in general is not licensed",
       "script": "scripts/06_robustness.py",
-      "source_check": "model (b) MDE 14.1 / 20.2 / 16.1 pp against the pre-registered 12.5 / 17.4 / 16.1"
+      "source_check": "model (b) MDE 14.1 / 20.2 / 16.1 pp against the pre-registered 12.5 / 17.4 / 16.1",
+      "realised_mde_by_wave": [
+        14.07202258386146,
+        20.157778101917096,
+        16.1180872955857
+      ],
+      "prereg_mde_by_wave": [
+        12.5,
+        17.4,
+        16.1
+      ],
+      "sentence": "the post's generalisation sentence carries the **realised** bound: a design that resamples tasks resolves nothing below about fourteen to twenty points \u2014 never \"about twelve\", which was the pre-registered figure"
     },
     "conventions_and_constants": {
       "value": 2080,
@@ -4286,6 +4559,497 @@
         1
       ]
     },
+    "X7_none_node_variant": {
+      "value": true,
+      "label": "X7: D re-estimated with the `none` task node kept, as Anthropic's released code does \u2014 inert for D by construction, since that node carries no wage and cannot enter a wage quartile",
+      "script": "scripts/06_robustness.py",
+      "source_check": "what the variant moves is the wave-level usage-weighted mean, not D",
+      "wave_share_without_none_node": [
+        51.20005312722551,
+        47.03247012106165,
+        45.89657970472861
+      ],
+      "wave_share_with_none_node": [
+        51.74235085991072,
+        47.00311560226852,
+        45.913049168629534
+      ],
+      "D": [
+        1.3836455029332828,
+        7.385412826055354,
+        0.6688743125891541
+      ]
+    },
+    "A1_allocation_variants_of_the_legs": {
+      "value": -11.89518383993165,
+      "label": "leg (a) and leg (b) re-estimated under the three allocation rules (A1): equal split over the distinct 2019 holder codes, modal holder, employment-weighted (primary). D and \u0394_W use no group and cannot move",
+      "script": "scripts/06_robustness.py",
+      "source_check": "D and \u0394_W use no occupational group, so no allocation rule can move them; the allocation rule moves the SOC-15 share, leg (a)'s exclusion set and leg (b)'s group membership",
+      "leg_a_equal_split_fractional": [
+        -13.713259734474537,
+        -11.075218583118916,
+        -12.373945709327964
+      ],
+      "leg_a_modal_holder": [
+        -14.06969053479288,
+        -11.399855567613782,
+        -12.616671940399563
+      ],
+      "leg_a_employment_weighted": [
+        -13.031857513857098,
+        -10.470148206135976,
+        -11.89518383993165
+      ],
+      "leg_b_modal_holder": [
+        -4.304130776962697,
+        -1.9293257055135788,
+        -6.124115287379151
+      ],
+      "leg_b_employment_weighted": [
+        -4.198899392597729,
+        -1.8716300959620455,
+        -6.21688751534059
+      ],
+      "soc15_share_of_analysis_mass": {
+        "equal_split_2019": 35.700178006005856,
+        "equal_split_2010": 33.25954182026743,
+        "employment_weighted_2019": 35.55131342578354,
+        "employment_weighted_2010": 33.11067724004512
+      }
+    },
+    "C7_legs": {
+      "value": -11.018010833693628,
+      "label": "the three legs rebuilt inside the C7 (BLS-EP) frame",
+      "script": "scripts/06_robustness.py",
+      "source_check": "leg (a) retains 0.93-0.98 of C7's own D: the coding family is already absent from the C7 frame (item 10)",
+      "leg_a": [
+        {
+          "D": -15.589897490265576,
+          "D_L": -15.099251386132895,
+          "D_L_ci": [
+            -15.509048439326206,
+            -14.689454332939585
+          ],
+          "D_L_se": 0.2090839694980679,
+          "D_L_mde": 0.5854351145945901,
+          "r": 0.9685279454570472,
+          "r_ci": [
+            0.9579507435080059,
+            0.9791051474060886
+          ],
+          "contrast": -7.304302641000111,
+          "contrast_ci": [
+            -7.553406262460735,
+            -7.0551990195394865
+          ],
+          "fired": false
+        },
+        {
+          "D": -11.890081362034657,
+          "D_L": -11.018010833693628,
+          "D_L_ci": [
+            -11.411647008717177,
+            -10.62437465867008
+          ],
+          "D_L_se": 0.2008384720451743,
+          "D_L_mde": 0.562347721726488,
+          "r": 0.9266556298659508,
+          "r_ci": [
+            0.9140323452148079,
+            0.9392789145170938
+          ],
+          "contrast": -5.072970152676298,
+          "contrast_ci": [
+            -5.307171499073745,
+            -4.838768806278851
+          ],
+          "fired": false
+        },
+        {
+          "D": -16.714112416095272,
+          "D_L": -16.39809252564454,
+          "D_L_ci": [
+            -16.767765920598304,
+            -16.028419130690775
+          ],
+          "D_L_se": 0.18861233928468357,
+          "D_L_mde": 0.5281145499971139,
+          "r": 0.9810926310303852,
+          "r_ci": [
+            0.9731493263155943,
+            0.9890359357451762
+          ],
+          "contrast": -8.0410363175969,
+          "contrast_ci": [
+            -8.257874246213616,
+            -7.824198388980184
+          ],
+          "fired": false
+        }
+      ],
+      "leg_b": [
+        {
+          "D": -15.589897490265576,
+          "D_L": -6.033359898796409,
+          "D_L_ci": [
+            -6.710258931874309,
+            -5.356460865718509
+          ],
+          "D_L_se": 0.3453629929314517,
+          "D_L_mde": 0.9670163802080646,
+          "r": 0.3870044625093702,
+          "r_ci": [
+            0.3479975106706601,
+            0.4260114143480803
+          ],
+          "contrast": 1.7615888463363831,
+          "contrast_ci": [
+            1.1682861041327275,
+            2.3548915885400388
+          ],
+          "fired": true
+        },
+        {
+          "D": -11.890081362034657,
+          "D_L": -8.257022595332256,
+          "D_L_ci": [
+            -9.074498684615714,
+            -7.4395465060487975
+          ],
+          "D_L_se": 0.4170872981766286,
+          "D_L_mde": 1.16784443489456,
+          "r": 0.6944462652456816,
+          "r_ci": [
+            0.6317122712835641,
+            0.7571802592077992
+          ],
+          "contrast": -2.3119819143149254,
+          "contrast_ci": [
+            -3.070042784469041,
+            -1.5539210441608096
+          ],
+          "fired": false
+        },
+        {
+          "D": -16.714112416095272,
+          "D_L": -7.147825790069415,
+          "D_L_ci": [
+            -7.746072759024523,
+            -6.549578821114308
+          ],
+          "D_L_se": 0.3052336517176377,
+          "D_L_mde": 0.8546542248093856,
+          "r": 0.4276521308535796,
+          "r_ci": [
+            0.39614708624246076,
+            0.4591571754646985
+          ],
+          "contrast": 1.209230417978223,
+          "contrast_ci": [
+            0.6915383869730835,
+            1.7269224489833626
+          ],
+          "fired": true
+        }
+      ],
+      "leg_e": [
+        null,
+        {
+          "D": -11.890081362034657,
+          "D_L": -13.59235266498392,
+          "D_L_ci": [
+            -14.213509025327125,
+            -12.971196304640715
+          ],
+          "D_L_se": 0.31692233140159964,
+          "D_L_mde": 0.8873825279244789,
+          "r": 1.1431673384830368,
+          "r_ci": [
+            1.101026836637517,
+            1.1853078403285564
+          ],
+          "contrast": -7.647311983966601,
+          "contrast_ci": [
+            -8.17994660221043,
+            -7.1146773657227715
+          ],
+          "fired": false
+        },
+        {
+          "D": -16.714112416095272,
+          "D_L": -11.3752894549142,
+          "D_L_ci": [
+            -12.080490547486397,
+            -10.670088362342002
+          ],
+          "D_L_se": 0.359803084430223,
+          "D_L_mde": 1.0074486364046245,
+          "r": 0.6805799298059094,
+          "r_ci": [
+            0.6435606249804504,
+            0.7175992346313684
+          ],
+          "contrast": -3.0182332468665587,
+          "contrast_ci": [
+            -3.6525355739170986,
+            -2.383930919816019
+          ],
+          "fired": false
+        }
+      ]
+    },
+    "leg_e_substantive_cell_denominator": {
+      "value": 3.8537719575778686,
+      "label": "leg (e) on the substantive-cell denominator \u2014 the pre-registered sensitivity to the work-share denominator (978 / 1,106 tasks; 35 tasks flip in each wave)",
+      "script": "scripts/05_legs.py",
+      "source_check": "the leg does not fire under either denominator",
+      "nov2025": {
+        "D_L": 3.8537719575778686,
+        "D_L_ci": [
+          3.4344754059126092,
+          4.273068509243128
+        ],
+        "D_L_se": 0.21393074141426024,
+        "D_L_mde": 0.5990060759599286,
+        "r": 0.5218086041151228,
+        "fired": false
+      },
+      "feb2026": {
+        "D_L": 2.73920408445475,
+        "D_L_ci": [
+          2.246648808384242,
+          3.2317593605252575
+        ],
+        "D_L_se": 0.251308328148123,
+        "D_L_mde": 0.7036633188147443,
+        "r": 4.0952448507874815,
+        "fired": false
+      }
+    },
+    "leg_table_2010_grouping": {
+      "value": 6,
+      "label": "legs (a) and (b) on the 2010 O*NET-SOC grouping, reported beside the 2019 recode (V1); the H3 verdict is the same",
+      "script": "scripts/05_legs.py",
+      "source_check": "persistent-leg rule declares H3: True; 6 of 6 fired",
+      "rows": [
+        {
+          "leg": "a",
+          "wave": "aug2025",
+          "D_L": -14.38239475702668,
+          "D_L_ci": [
+            -14.811047959959257,
+            -13.953741554094101
+          ],
+          "D_L_se": 0.21870463076494154,
+          "D_L_mde": 0.6123729661418362,
+          "r": -10.394566185151094,
+          "fired": true
+        },
+        {
+          "leg": "b",
+          "wave": "aug2025",
+          "D_L": -2.526329084642224,
+          "D_L_ci": [
+            -3.711539040600014,
+            -1.3411191286844335
+          ],
+          "D_L_se": 0.6047100640408652,
+          "D_L_mde": 1.6931881793144226,
+          "r": -1.8258499588850539,
+          "fired": true
+        },
+        {
+          "leg": "a",
+          "wave": "nov2025",
+          "D_L": -11.722102916846463,
+          "D_L_ci": [
+            -12.12571914959951,
+            -11.318486684093417
+          ],
+          "D_L_se": 0.20593043175948447,
+          "D_L_mde": 0.5766052089265565,
+          "r": -1.5871967069317359,
+          "fired": true
+        },
+        {
+          "leg": "b",
+          "wave": "nov2025",
+          "D_L": -2.746751136041374,
+          "D_L_ci": [
+            -3.771496579561279,
+            -1.7220056925214688
+          ],
+          "D_L_se": 0.5228389110819919,
+          "D_L_mde": 1.4639489510295771,
+          "r": -0.3719157209940896,
+          "fired": true
+        },
+        {
+          "leg": "a",
+          "wave": "feb2026",
+          "D_L": -13.72313629913058,
+          "D_L_ci": [
+            -14.10274665953675,
+            -13.34352593872441
+          ],
+          "D_L_se": 0.19368231273950418,
+          "D_L_mde": 0.5423104756706116,
+          "r": -20.51676382369883,
+          "fired": true
+        },
+        {
+          "leg": "b",
+          "wave": "feb2026",
+          "D_L": -15.006610368644788,
+          "D_L_ci": [
+            -16.01239683604333,
+            -14.000823901246246
+          ],
+          "D_L_se": 0.5131657864116598,
+          "D_L_mde": 1.4368642019526472,
+          "r": -22.435620693154608,
+          "fired": true
+        }
+      ]
+    },
+    "composition_of_the_top_quartile": {
+      "value": 37.93722291816594,
+      "label": "what Q4 is made of: the largest software-modification tasks' share of its usage mass, the top-minus-bottom contrast inside SOC-15 alone, and what is left of Q4 once SOC-15 is excluded (referee-results item 12, reproduced from the build table)",
+      "script": "scripts/05_legs.py",
+      "source_check": "description of the sample's composition, in no decision rule: each figure is a re-weighting of the per-task shares already estimated for leg (a)",
+      "largest_software_tasks": {
+        "aug2025": {
+          "task_prefixes": [
+            "modify existing software to correct errors",
+            "write new programs or modify existing programs"
+          ],
+          "tasks_matching_first": 2,
+          "tasks_matching_either": 3,
+          "q4_mass_first": 6.526634691351113,
+          "q4_mass_either": 11.39872306100401,
+          "q4_mass_total": 22.649181850794285,
+          "q4_share_first": 28.816205081254314,
+          "q4_share_either": 50.32730601968418
+        },
+        "nov2025": {
+          "task_prefixes": [
+            "modify existing software to correct errors",
+            "write new programs or modify existing programs"
+          ],
+          "tasks_matching_first": 2,
+          "tasks_matching_either": 3,
+          "q4_mass_first": 8.541267658457308,
+          "q4_mass_either": 12.214126765845732,
+          "q4_mass_total": 22.51421427678458,
+          "q4_share_first": 37.93722291816594,
+          "q4_share_either": 54.25073518306286
+        },
+        "feb2026": {
+          "task_prefixes": [
+            "modify existing software to correct errors",
+            "write new programs or modify existing programs"
+          ],
+          "tasks_matching_first": 2,
+          "tasks_matching_either": 3,
+          "q4_mass_first": 5.9802,
+          "q4_mass_either": 8.8255,
+          "q4_mass_total": 22.510699999999993,
+          "q4_share_first": 26.566033042064447,
+          "q4_share_either": 39.205799908487975
+        }
+      },
+      "within_soc15_contrast": {
+        "aug2025": {
+          "coef": -0.14206301118551057,
+          "ci": [
+            -0.7180497933466206,
+            0.4339237709755994
+          ],
+          "se": 0.2938762049512695,
+          "mde": 0.8228533738635545,
+          "q4_mass": 16.548573656238396,
+          "q1_mass": 3.418994830449955,
+          "q4_tasks": 74,
+          "q1_tasks": 24
+        },
+        "nov2025": {
+          "coef": 6.465581522219139,
+          "ci": [
+            5.86579478303685,
+            7.065368261401429
+          ],
+          "se": 0.30601926320192085,
+          "mde": 0.8568539369653784,
+          "q4_mass": 16.04430553819227,
+          "q1_mass": 3.0273784223027866,
+          "q4_tasks": 76,
+          "q1_tasks": 23
+        },
+        "feb2026": {
+          "coef": 0.8038856614281005,
+          "ci": [
+            0.16307041222278595,
+            1.444700910633415
+          ],
+          "se": 0.32695256096811703,
+          "mde": 0.9154671707107276,
+          "q4_mass": 14.736099999999997,
+          "q1_mass": 2.6338999999999997,
+          "q4_tasks": 127,
+          "q1_tasks": 14
+        }
+      },
+      "residual_after_soc15_exclusion": {
+        "aug2025": {
+          "q4_tasks": 286,
+          "q4_mass": 6.100608194555887,
+          "q4_kish": 97.95264938324932,
+          "q4_share": 38.69281057651134,
+          "q1_tasks": 576,
+          "q1_mass": 18.891771229266304,
+          "q1_kish": 74.6859321258475,
+          "q1_share": 51.72466809036844
+        },
+        "nov2025": {
+          "q4_tasks": 327,
+          "q4_mass": 6.469908738592308,
+          "q4_kish": 85.4634582275867,
+          "q4_share": 34.75357400960128,
+          "q1_tasks": 676,
+          "q1_mass": 19.284510563820444,
+          "q1_kish": 56.63658871517848,
+          "q1_share": 45.22372221573726
+        },
+        "feb2026": {
+          "q4_tasks": 355,
+          "q4_mass": 7.774599999999996,
+          "q4_kish": 83.25118340562871,
+          "q4_share": 36.01925672665169,
+          "q1_tasks": 635,
+          "q1_mass": 19.72849999999999,
+          "q1_kish": 53.63011376173688,
+          "q1_share": 47.914440566583345
+        }
+      }
+    },
+    "seychelles_worst_case_bound": {
+      "value": 4.503834664604272,
+      "label": "the bound on November's un-cleanable Seychelles rate contamination: every SC conversation on a top-quartile task counted as automation and every one on a bottom-quartile task as augmentation, with the weights netted",
+      "script": "scripts/06_robustness.py",
+      "source_check": "every Seychelles conversation on a Q4 task counted as automation and every one on a Q1 task as augmentation, weights netted; a bound, in no decision rule",
+      "D_observed": 7.385412826055365,
+      "D_weights_netted": 6.546269153233491,
+      "D_worst_case": 4.503834664604272
+    },
+    "between_window_dispersion_of_D": {
+      "value": 3.6888118786929347,
+      "label": "the standard deviation of D across the three windows, against the mean within-window SE \u2014 the empirical test of P2's constant-true-D assumption",
+      "script": "scripts/09_results_and_figures.py",
+      "source_check": "D = +1.3836, +7.3854, +0.6689; SD 3.6888 pp against a mean SE of 0.1416 pp",
+      "mean_within_window_se": 0.14155468604122565,
+      "ratio": 26.059270673798988,
+      "consequence": "the constant-true-D assumption behind every P2 probability is falsified, so none of those probabilities is the probability of this outcome, and no probability under a non-constant D has been computed; the O-A label's 'persistent' is about the sign only"
+    },
     "country_mix_not_testable": {
       "value": false,
       "label": "whether the country mix inside a task can be cleaned at this grain",
@@ -4297,7 +5061,7 @@
     "fig1": {
       "file": "outputs/figures/fig1_D_by_wave.png",
       "script": "scripts/09_results_and_figures.py",
-      "caption": "**In all three Claude.ai windows the delegated share is higher on top-quartile than on bottom-quartile tasks, and in none of them does the difference clear a percentage point in every window.** Plotted: D, the usage-weighted automation share of the top wage quartile minus that of the bottom, in percentage points, per window. Each point is one window of Claude.ai conversations (4\u201311 Aug 2025, 13\u201320 Nov 2025, 5\u201312 Feb 2026), estimated separately and never pooled or spliced. The automation share of a task is its `directive` plus `feedback loop` conversations divided by its five classified collaboration patterns (`directive`, `feedback loop`, `learning`, `task iteration`, `validation`) in `onet_task::collaboration` at global; the `none` and `not_classified` patterns are outside that denominator and each quartile's `none` share is reported in Figure 2. Tasks are sorted into usage-weighted wage quartiles on the hourly wage of the occupations that hold the task (`wage_data.csv` `MedianSalary` \u00f7 2080, employment-weighted over holders), and the quartile means are weighted by `onet_task_pct` so that the difference is about conversations and not about tasks. Sample: the 1,802 / 2,075 / 2,188 tasks that carry both a wage and at least one classified-pattern cell \u2014 97.15 / 96.23 / 96.52% of named-task usage mass, on 818,673 / 854,432 / 848,716 classified conversations; the 805 / 1,079 / 1,056 tasks with a wage and no classified cell and the 5 / 12 / 12 with a cell and no wage are dropped, never zeroed. Filled circles are the pre-registered quartile rule; open squares share the boundary wage between the two adjacent quartiles in proportion, which matters because $43.40/hr is a mass point carrying 8\u201311 pp of a window. Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release carries a user, account or session identifier, so no clustering is possible and these intervals are a lower bound on the sampling variance. The shaded band is the pre-registered indifference region of \u00b11 percentage point; the null value is zero. Read as a statement about tasks rather than conversations, a task-resampling design resolves nothing below about 14 to 20 percentage points."
+      "caption": "**In all three Claude.ai windows the delegated share is higher on top-quartile than on bottom-quartile tasks; the difference clears a percentage point in two windows on the pre-registered quartile rule and in none once the boundary wage is shared, and it does not clear a point in every window under either rule.** Plotted: D, the usage-weighted automation share of the top wage quartile minus that of the bottom, in percentage points, per window. Each point is one window of Claude.ai conversations (4\u201311 Aug 2025, 13\u201320 Nov 2025, 5\u201312 Feb 2026), estimated separately and never pooled or spliced. The automation share of a task is its `directive` plus `feedback loop` conversations divided by its five classified collaboration patterns (`directive`, `feedback loop`, `learning`, `task iteration`, `validation`) in `onet_task::collaboration` at global; the `none` and `not_classified` patterns are outside that denominator and each quartile's `none` share is reported in Figure 2. Tasks are sorted into usage-weighted wage quartiles on the hourly wage of the occupations that hold the task (`wage_data.csv` `MedianSalary` \u00f7 2080, employment-weighted over holders), and the quartile means are weighted by `onet_task_pct` so that the difference is about conversations and not about tasks. Sample: the 1,802 / 2,075 / 2,188 tasks that carry both a wage and at least one classified-pattern cell \u2014 97.15 / 96.23 / 96.52% of named-task usage mass, on 818,673 / 854,432 / 848,716 classified conversations; the 805 / 1,079 / 1,056 tasks with a wage and no classified cell and the 5 / 12 / 12 with a cell and no wage are dropped, never zeroed. Filled circles are the pre-registered quartile rule; open squares share the boundary wage between the two adjacent quartiles in proportion, which matters because $43.40/hr is a mass point carrying 8\u201311 pp of a window. Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release carries a user, account or session identifier, so no clustering is possible and these intervals are a lower bound on the sampling variance. The shaded band is the pre-registered indifference region of \u00b11 percentage point; the null value is zero. Read as a statement about tasks rather than conversations, a task-resampling design resolves nothing below about 14 to 20 percentage points."
     },
     "fig2": {
       "file": "outputs/figures/fig2_quartile_shares.png",
@@ -4307,12 +5071,12 @@
     "fig3": {
       "file": "outputs/figures/fig3_h3_legs.png",
       "script": "scripts/09_results_and_figures.py",
-      "caption": "**The gradient does not survive either composition leg: excluding Computer & Mathematical tasks, or holding the occupational group fixed, turns it negative in all three windows; restricting to work-dominant tasks does not.** Plotted: D re-estimated under each pre-registered composition leg, in percentage points, one panel per Claude.ai window. Leg (a) removes the tasks rule A2 assigns to Computer & Mathematical (SOC major group 15 on the 2019 O*NET-SOC recode) \u2014 42.8 / 39.7 / 35.6% of analysis-set usage mass and 73.1 / 71.3 / 65.5% of the top quartile's \u2014 with the quartile boundaries kept from the full analysis set and never re-drawn. Leg (b) averages the within-group top-minus-bottom differences over the nine major groups that hold analysis-set tasks in both the global bottom and the global top quartile, each group weighted by its usage mass in those two quartiles; the other thirteen groups are reported as not identified, never as zeros. Leg (e) keeps the tasks whose `work` share is at least half of their published `use_case` cells (943 / 1,071 tasks in November and February; the 29 / 21 tasks whose only published cell is `not_classified` have an undefined work share and are dropped, never scored 0), and is untestable in August, where no facet name in the file contains `use_case`. The solid line is that window's D and the dashed line is half of it: a leg fires if its estimate loses the sign or more than half the size, which is the pre-registered rule, read on the point estimates. Bars are two-sided 95% intervals on the same conversation-level binomial model as Figure 1 and are a lower bound on the sampling variance. Each leg's MDE, its interval for D_L \u2212 \u00bdD and its retained mass are in `results.json`; the legs are not independent evidence, since Computer & Mathematical dominates both leg (a) and the leave-one-group-out series."
+      "caption": "**The gradient does not survive either composition leg: excluding Computer & Mathematical tasks, or holding the occupational group fixed, turns it negative in all three windows; restricting to work-dominant tasks does not.** Plotted: D re-estimated under each pre-registered composition leg, in percentage points, one panel per Claude.ai window. Leg (a) removes the tasks rule A2 assigns to Computer & Mathematical (SOC major group 15 on the 2019 O*NET-SOC recode) \u2014 42.8 / 39.7 / 35.6% of analysis-set usage mass and 73.1 / 71.3 / 65.5% of the top quartile's \u2014 with the quartile boundaries kept from the full analysis set and never re-drawn. Leg (b) averages the within-group top-minus-bottom differences over the ten (August, November) or nine (February) major groups that hold analysis-set tasks in both the global bottom and the global top quartile, each group weighted by its usage mass in those two quartiles; the other twelve or thirteen groups are reported as not identified, never as zeros. Leg (e) keeps the tasks whose `work` share is at least half of their published `use_case` cells (943 / 1,071 tasks in November and February; the 29 / 21 tasks whose only published cell is `not_classified` have an undefined work share and are dropped, never scored 0), and is untestable in August, where no facet name in the file contains `use_case`. The solid line is that window's D and the dashed line is half of it: a leg fires if its estimate loses the sign or more than half the size, which is the pre-registered rule, read on the point estimates. Bars are two-sided 95% intervals on the same conversation-level binomial model as Figure 1 and are a lower bound on the sampling variance. Each leg's MDE, its interval for D_L \u2212 \u00bdD and its retained mass are in `results.json`; the legs are not independent evidence, since Computer & Mathematical dominates both leg (a) and the leave-one-group-out series."
     },
     "fig4": {
       "file": "outputs/figures/fig4_delta_w.png",
       "script": "scripts/09_results_and_figures.py",
-      "caption": "**Weighting the published automation share by the wage of the work moves it by less than a tenth of a point in two windows and by eight tenths in the third.** Plotted: \u0394_W, the wage-weighted minus the unweighted usage-weighted automation share of Claude.ai conversations, in percentage points, per window; each marker is one window. \u0394_W is Cov_w(wage, p) \u00f7 E_w[wage] over the analysis set \u2014 the same per-task automation share p as Figure 1, the same `onet_task_pct` weights, and the task's hourly wage as the re-weighting variable \u2014 so it is the size of the error made when a conversation-counting automation share is read as though it were weighted by the wage bill at stake. It is an hourly rate, not a bill: no hours enter it. Sample as Figure 1. Bars are two-sided 95% intervals on the conversation-level binomial model and are a lower bound on the sampling variance. The null value is zero; the pre-registered materiality line is separate and higher than the quartile margin \u2014 about 0.11 to 0.12 pp of \u0394_W per point of quartile gap, so a full point of \u0394_W needs a gap of roughly 8 to 9 points."
+      "caption": "**Weighting the published automation share by the wage of the work moves it by less than a fifth of a point in two windows and by eight tenths of a point in the third, and not in the same direction as the quartile gap in two of the three.** Plotted: \u0394_W, the wage-weighted minus the unweighted usage-weighted automation share of Claude.ai conversations, in percentage points, per window; each marker is one window. \u0394_W is Cov_w(wage, p) \u00f7 E_w[wage] over the analysis set \u2014 the same per-task automation share p as Figure 1, the same `onet_task_pct` weights, and the task's hourly wage as the re-weighting variable \u2014 so it is the size of the error made when a conversation-counting automation share is read as though it were weighted by the wage bill at stake. It is an hourly rate, not a bill: no hours enter it. Sample as Figure 1. Bars are two-sided 95% intervals on the conversation-level binomial model and are a lower bound on the sampling variance. The null value is zero; the pre-registered materiality line is separate and higher than the quartile margin \u2014 about 0.11 to 0.12 pp of \u0394_W per point of quartile gap, so a full point of \u0394_W needs a gap of roughly 8 to 9 points."
     }
   }
 }

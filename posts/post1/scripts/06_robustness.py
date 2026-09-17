@@ -169,6 +169,34 @@ def main():
                   f"{row['X4_max_weight_shift_pp']:.4f} pp): {fmt(row['X4_sc_netted_weights'])}")
             row["X4_note"] = ("the netting reaches the weights only: SC has 0 rows of "
                               "onet_task::collaboration, so the per-task rates keep it")
+            # referee-results item 12: the bound on the un-cleanable part. For a task with SC share
+            # s of its global count and observed share p, the SC-free share is (p − s·p_SC)/(1 − s)
+            # for an unknown SC share p_SC. The bound WORST for a positive gradient sets p_SC = 1 on
+            # Q4 tasks and p_SC = 0 on Q1 tasks, with the weights netted as w·(1 − s) (X4). It is a
+            # bound, not an estimate, and it is in no decision rule.
+            pv = an.p.to_numpy(float) / 100.0
+            sv = an.sc_share.to_numpy(float)
+            wv = an.w.to_numpy(float)
+            m4, m1 = qw[:, 3] > 0, qw[:, 0] > 0
+            wn = wv * (1 - sv)
+            pw = pv.copy()
+            pw[m4] = np.clip((pv[m4] - sv[m4]) / (1 - sv[m4]), 0, 1)
+            pw[m1] = np.clip(pv[m1] / (1 - sv[m1]), 0, 1)
+            row["X4_seychelles_worst_case_bound"] = dict(
+                D_observed=float(100 * (np.average(pv[m4], weights=wv[m4])
+                                        - np.average(pv[m1], weights=wv[m1]))),
+                D_weights_netted=float(100 * (np.average(pv[m4], weights=wn[m4])
+                                              - np.average(pv[m1], weights=wn[m1]))),
+                D_worst_case=float(100 * (np.average(pw[m4], weights=wn[m4])
+                                          - np.average(pw[m1], weights=wn[m1]))),
+                construction=("every Seychelles conversation on a Q4 task counted as automation and "
+                              "every one on a Q1 task as augmentation, weights netted; a bound, in "
+                              "no decision rule"))
+            print(f"  X4  Seychelles worst-case bound: observed "
+                  f"{row['X4_seychelles_worst_case_bound']['D_observed']:+.4f} → weights netted "
+                  f"{row['X4_seychelles_worst_case_bound']['D_weights_netted']:+.4f} → every SC "
+                  f"conversation counted against the gradient "
+                  f"{row['X4_seychelles_worst_case_bound']['D_worst_case']:+.4f} pp")
 
         # ---- X7 the `none`-node variant
         facts = json.loads((PROCESSED / "build_facts.json").read_text())["waves"][wave]
@@ -245,15 +273,36 @@ def main():
         q7 = B.quartile_weights(c7, "wage_c7", "registered")
         d7 = d_on(c7, q7)
         dw7, _ = H.delta_w(c7, wage_col="wage_c7")
+        # referee-results item 10: BLS-EP is keyed on SOC-2018 and does not price the renumbered
+        # computer family, so the C7 frame is the SOC-15 exclusion in disguise. The four shares that
+        # say so are computed here from the build table rather than quoted.
+        is15 = (an.group2019 == "15").to_numpy()
+        hasc7 = an.wage_c7.notna().to_numpy()
+        is15_c7 = (c7.group2019 == "15").to_numpy()
+        c7_diag = dict(
+            share_of_soc15_analysis_mass=float(an.w.to_numpy()[is15 & hasc7].sum()
+                                               / an.w.to_numpy()[is15].sum() * 100),
+            share_of_q4_mass=float(qw[hasc7, 3].sum() / qw[:, 3].sum() * 100),
+            soc15_share_of_c7_priced_q4_c6_masks=float(qw[hasc7 & is15, 3].sum()
+                                                       / qw[hasc7, 3].sum() * 100),
+            soc15_share_of_c7_q4_redrawn=float(q7[is15_c7, 3].sum() / q7[:, 3].sum() * 100),
+            soc15_share_of_c6_q4=float(qw[is15, 3].sum() / qw[:, 3].sum() * 100))
         row["C7_second_wage_source"] = dict(
             D=d7, Delta_W=dw7, n_tasks=int(len(c7)),
             mass_share_named=float(c7.w.sum() / an.w.sum() * 100),
             bounds=[float(b) for b in B.quartiles(c7, "wage_c7")[1]],
             legs=leg_set(c7, q7, wave),
-            sign_agrees_with_C6=bool(np.sign(d7["coef"]) == np.sign(base["coef"])))
+            sign_agrees_with_C6=bool(np.sign(d7["coef"]) == np.sign(base["coef"])),
+            soc15_diagnostics=c7_diag)
         print(f"  C7  second wage source ({len(c7)} tasks, {row['C7_second_wage_source']['mass_share_named']:.1f}% "
               f"of the analysis set's mass): D {fmt(d7)}  Δ_W {dw7['coef']:+.4f}  "
               f"sign agrees with C6: {row['C7_second_wage_source']['sign_agrees_with_C6']}")
+        print(f"      C7 prices {c7_diag['share_of_soc15_analysis_mass']:.1f}% of SOC-15 analysis mass "
+              f"and {c7_diag['share_of_q4_mass']:.1f}% of Q4 mass; SOC-15 is "
+              f"{c7_diag['soc15_share_of_c7_priced_q4_c6_masks']:.1f}% of the C7-priced Q4 "
+              f"({c7_diag['soc15_share_of_c7_q4_redrawn']:.1f}% after the C7 quartiles are re-drawn) "
+              f"against {c7_diag['soc15_share_of_c6_q4']:.1f}% of the C6 Q4 — leg (a) under C7 retains "
+              f"r = {row['C7_second_wage_source']['legs']['a']['r']:.4f} of C7's D")
 
         # ---- the placebo
         perm = S.permutation_null(an.p.to_numpy(), an.w.to_numpy(), an.wage.to_numpy(),

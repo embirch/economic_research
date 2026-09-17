@@ -235,6 +235,47 @@
           ]
         }
       },
+      "boundary_occupations": {
+        "b1_25.78": {
+          "hourly": 25.78365384615385,
+          "annual": 53630.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "25-3011"
+          ],
+          "titles": [
+            "Adult Basic and Secondary Education and Literacy Teachers and Instructors"
+          ]
+        },
+        "b2_35.56": {
+          "hourly": 35.55769230769231,
+          "annual": 73960.0,
+          "detailed_codes": 4,
+          "soc7": [
+            "29-1199"
+          ],
+          "titles": [
+            "Acupuncturists",
+            "Health Diagnosing and Treating Practitioners, All Other",
+            "Naturopathic Physicians",
+            "Orthoptists"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
+          ]
+        }
+      },
       "quartiles_fractional": {
         "Q1": {
           "tasks_with_weight": 606,
@@ -519,6 +560,46 @@
           "quartiles_spanned": [
             3,
             4
+          ]
+        }
+      },
+      "boundary_occupations": {
+        "b1_25.78": {
+          "hourly": 25.78365384615385,
+          "annual": 53630.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "25-3011"
+          ],
+          "titles": [
+            "Adult Basic and Secondary Education and Literacy Teachers and Instructors"
+          ]
+        },
+        "b2_34.87": {
+          "hourly": 34.86538461538461,
+          "annual": 72510.0,
+          "detailed_codes": 2,
+          "soc7": [
+            "27-1014",
+            "29-2032"
+          ],
+          "titles": [
+            "Diagnostic Medical Sonographers",
+            "Multimedia Artists and Animators"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
           ]
         }
       },
@@ -834,6 +915,44 @@
           "quartiles_spanned": [
             3,
             4
+          ]
+        }
+      },
+      "boundary_occupations": {
+        "b1_24.00": {
+          "hourly": 24.004807692307693,
+          "annual": 49930.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "27-3091"
+          ],
+          "titles": [
+            "Interpreters and Translators"
+          ]
+        },
+        "b2_34.45": {
+          "hourly": 34.44711538461539,
+          "annual": 71650.0,
+          "detailed_codes": 1,
+          "soc7": [
+            "19-1022"
+          ],
+          "titles": [
+            "Microbiologists"
+          ]
+        },
+        "b3_43.40": {
+          "hourly": 43.39903846153846,
+          "annual": 90270.0,
+          "detailed_codes": 13,
+          "soc7": [
+            "15-1199"
+          ],
+          "titles": [
+            "Business Intelligence Analysts",
+            "Computer Occupations, All Other",
+            "Computer Systems Engineers/Architects",
+            "Data Warehousing Specialists"
           ]
         }
       },

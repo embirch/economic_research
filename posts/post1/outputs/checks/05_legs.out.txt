@@ -11,7 +11,8 @@ THE EIGHT LEG TESTS (prereg P3, P4). Legs (a) and (b) in three waves, leg (e) in
     leg (b)  D +1.3836  D_L -4.1989 [-4.7094, -3.6884]  SE 0.2605  MDE 0.7294
               r_L -3.0347 [-3.9160, -2.1533]  D_L−½D -4.8907 [-5.3381, -4.4433] (MDE 0.6392)  corr(D_L, D) 0.557
               tasks 655  conversations 331,041  FIRED: True (on sign True, on half False)
-              coverage: {'identified_groups': ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41'], 'n_identified': 10, 'not_identified_groups': ['21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 12, 'groups_all_four': ['11', '13', '15', '17', '19', '25', '29', '41'], 'n_groups_all_four': 8, 'identified_mass_share_q1_q4': 80.03786585984558, 'tasks_in_identified_groups': 1435}
+              coverage: {'identified_groups': ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41'], 'n_identified': 10, 'not_identified_groups': ['21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 12, 'groups_all_four': ['11', '13', '15', '17', '19', '25', '29', '41'], 'n_groups_all_four': 8, 'subset': 'identified', 'mass_share_q1_q4_used': 80.03786585984558, 'identified_mass_share_q1_q4': 80.03786585984558, 'tasks_in_identified_groups': 1435}
+              [all-four subset, the P3(b) side-estimate] D_(b) -4.0541 [-4.5703, -3.5379]  SE 0.2634  r -2.9300  FIRED True  over 8 groups carrying 75.42% of Q1+Q4 mass
               [2010 grouping beside it] D_L -2.5263 [-3.7115, -1.3411]  r_L -1.8258  FIRED True
 --------------------------------------------------------------------------------------------------------
   [nov2025]  legs testable: ['a', 'b', 'e']
@@ -23,7 +24,8 @@ THE EIGHT LEG TESTS (prereg P3, P4). Legs (a) and (b) in three waves, leg (e) in
     leg (b)  D +7.3854  D_L -1.8716 [-2.4246, -1.3187]  SE 0.2821  MDE 0.7899
               r_L -0.2534 [-0.3335, -0.1733]  D_L−½D -5.5643 [-6.0615, -5.0671] (MDE 0.7103)  corr(D_L, D) 0.509
               tasks 745  conversations 343,033  FIRED: True (on sign True, on half True)
-              coverage: {'identified_groups': ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41'], 'n_identified': 10, 'not_identified_groups': ['21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 12, 'groups_all_four': ['11', '13', '15', '17', '19', '25', '27', '29', '41'], 'n_groups_all_four': 9, 'identified_mass_share_q1_q4': 80.31391885409579, 'tasks_in_identified_groups': 1641}
+              coverage: {'identified_groups': ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41'], 'n_identified': 10, 'not_identified_groups': ['21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 12, 'groups_all_four': ['11', '13', '15', '17', '19', '25', '27', '29', '41'], 'n_groups_all_four': 9, 'subset': 'identified', 'mass_share_q1_q4_used': 80.31391885409579, 'identified_mass_share_q1_q4': 80.31391885409579, 'tasks_in_identified_groups': 1641}
+              [all-four subset, the P3(b) side-estimate] D_(b) -1.7940 [-2.3520, -1.2361]  SE 0.2847  r -0.2429  FIRED True  over 9 groups carrying 79.39% of Q1+Q4 mass
               [2010 grouping beside it] D_L -2.7468 [-3.7715, -1.7220]  r_L -0.3719  FIRED True
     leg (e)  D +7.3854  D_L +3.7160 [+3.2920, +4.1401]  SE 0.2164  MDE 0.6058
               r_L +0.5032 [+0.4558, +0.5505]  D_L−½D +0.0233 [-0.3264, +0.3730] (MDE 0.4996)  corr(D_L, D) 0.655
@@ -40,7 +42,8 @@ THE EIGHT LEG TESTS (prereg P3, P4). Legs (a) and (b) in three waves, leg (e) in
     leg (b)  D +0.6689  D_L -6.2169 [-6.6923, -5.7415]  SE 0.2426  MDE 0.6792
               r_L -9.2946 [-13.5551, -5.0340]  D_L−½D -6.5513 [-6.9630, -6.1397] (MDE 0.5881)  corr(D_L, D) 0.578
               tasks 707  conversations 321,921  FIRED: True (on sign True, on half False)
-              coverage: {'identified_groups': ['11', '13', '15', '19', '23', '25', '27', '29', '41'], 'n_identified': 9, 'not_identified_groups': ['17', '21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 13, 'groups_all_four': ['11', '13', '15', '19', '25', '27', '29', '41'], 'n_groups_all_four': 8, 'identified_mass_share_q1_q4': 75.51740352237756, 'tasks_in_identified_groups': 1597}
+              coverage: {'identified_groups': ['11', '13', '15', '19', '23', '25', '27', '29', '41'], 'n_identified': 9, 'not_identified_groups': ['17', '21', '31', '33', '35', '37', '39', '43', '45', '47', '49', '51', '53'], 'n_not_identified': 13, 'groups_all_four': ['11', '13', '15', '19', '25', '27', '29', '41'], 'n_groups_all_four': 8, 'subset': 'identified', 'mass_share_q1_q4_used': 75.51740352237756, 'identified_mass_share_q1_q4': 75.51740352237756, 'tasks_in_identified_groups': 1597}
+              [all-four subset, the P3(b) side-estimate] D_(b) -6.0851 [-6.5615, -5.6087]  SE 0.2431  r -9.0976  FIRED True  over 8 groups carrying 74.74% of Q1+Q4 mass
               [2010 grouping beside it] D_L -15.0066 [-16.0124, -14.0008]  r_L -22.4356  FIRED True
     leg (e)  D +0.6689  D_L +2.7916 [+2.2954, +3.2877]  SE 0.2531  MDE 0.7088
               r_L +4.1735 [+2.7496, +5.5975]  D_L−½D +2.4571 [+2.0244, +2.8899] (MDE 0.6182)  corr(D_L, D) 0.571
@@ -64,8 +67,10 @@ H1's signature clause (D keeping more than half its size, same sign, on every le
 ========================================================================================================
 Description, in no decision rule
   [aug2025] leave-one-group-out: 23 re-estimates; largest mover 15 (-14.4155 pp), second 43 (+3.2420 pp); |largest| > sum of the others: True
+          composition (referee-results item 12): the two "modify existing software…" tasks hold 6.53 pp of Q4's 22.65 pp (28.8%), 11.40 pp with the third; within SOC-15 alone D = -0.1421 [-0.7180, +0.4339]; the residual Q4 after the SOC-15 exclusion is 286 tasks, 6.10 pp, Kish 98.0, share 38.69 against a residual Q1 of 51.72
           ten largest tasks out: D -11.6151 [-11.9665, -11.2637] (move -12.9987 pp; 22.9409 pp of the wave)
   [nov2025] leave-one-group-out: 23 re-estimates; largest mover 15 (-17.8556 pp), second 43 (+2.3222 pp); |largest| > sum of the others: True
+          composition (referee-results item 12): the two "modify existing software…" tasks hold 8.54 pp of Q4's 22.51 pp (37.9%), 12.21 pp with the third; within SOC-15 alone D = +6.4656 [+5.8658, +7.0654]; the residual Q4 after the SOC-15 exclusion is 327 tasks, 6.47 pp, Kish 85.5, share 34.75 against a residual Q1 of 45.22
           ten largest tasks out: D -13.0770 [-13.4238, -12.7301] (move -20.4624 pp; 24.2471 pp of the wave)
           use-case mix by quartile (work / personal / coursework, % of published cells):
              Q1  work 32.80  personal 44.52  coursework 20.77  not_classified  1.91  automation share 46.5846
@@ -74,6 +79,7 @@ Description, in no decision rule
              Q4  work 60.82  personal 24.59  coursework 13.44  not_classified  1.15  automation share 53.9700
           slope per +$10/hr alone +1.7826 [+1.7083, +1.8569]; with the work share as a covariate -0.0624 [-0.1408, +0.0160]; usage-weighted corr(wage, work share) +0.3428, VIF 1.133
   [feb2026] leave-one-group-out: 23 re-estimates; largest mover 15 (-12.5641 pp), second 43 (+2.9098 pp); |largest| > sum of the others: False
+          composition (referee-results item 12): the two "modify existing software…" tasks hold 5.98 pp of Q4's 22.51 pp (26.6%), 8.83 pp with the third; within SOC-15 alone D = +0.8039 [+0.1631, +1.4447]; the residual Q4 after the SOC-15 exclusion is 355 tasks, 7.77 pp, Kish 83.3, share 36.02 against a residual Q1 of 47.91
           ten largest tasks out: D -11.4260 [-11.7516, -11.1003] (move -12.0948 pp; 19.4410 pp of the wave)
           use-case mix by quartile (work / personal / coursework, % of published cells):
              Q1  work 29.05  personal 56.33  coursework 12.99  not_classified  1.63  automation share 48.8471
@@ -83,5 +89,8 @@ Description, in no decision rule
           slope per +$10/hr alone -0.2848 [-0.3564, -0.2132]; with the work share as a covariate -1.6273 [-1.7029, -1.5516]; usage-weighted corr(wage, work share) +0.3489, VIF 1.139
 
 wrote posts/post1/data/processed/legs.json
+  [aug2025] largest leave-one-group-out movers (printed, not asserted): [('15', 14.41550301679038), ('43', 3.2420288708172054), ('25', 2.861892019041904)]
+  [nov2025] largest leave-one-group-out movers (printed, not asserted): [('15', 17.855561032191332), ('43', 2.3221536282354016), ('11', 2.0769637244775776)]
+  [feb2026] largest leave-one-group-out movers (printed, not asserted): [('15', 12.564058152520804), ('43', 2.9097524633688154), ('11', 1.9760631242482785)]
 
 CHECK BLOCK PASSED — 05_legs.py

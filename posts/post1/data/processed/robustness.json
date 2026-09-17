@@ -457,16 +457,23 @@
             "fired": true
           }
         },
-        "sign_agrees_with_C6": false
+        "sign_agrees_with_C6": false,
+        "soc15_diagnostics": {
+          "share_of_soc15_analysis_mass": 10.887832601675171,
+          "share_of_q4_mass": 26.357976653696465,
+          "soc15_share_of_c7_priced_q4_c6_masks": 7.561784678441802,
+          "soc15_share_of_c7_q4_redrawn": 8.544884867521471,
+          "soc15_share_of_c6_q4": 73.06477454795152
+        }
       },
       "permutation_null": {
-        "mean": 3.400269705059567,
-        "sd": 3.3447972742226133,
-        "q025": -3.814791466066089,
-        "q975": 9.094896622491245,
+        "mean": 3.3437711312564136,
+        "sd": 3.324174067240495,
+        "q025": -3.8220335574525333,
+        "q975": 8.946161010657043,
         "draws": 10000,
-        "stats_abs_max": 16.288796802386784,
-        "p_value": 0.8313168683131686,
+        "stats_abs_max": 13.319876056106267,
+        "p_value": 0.8303169683031697,
         "obs": 1.3836455029332828
       }
     },
@@ -542,6 +549,12 @@
       "X5_drop_sc_over_20pc_dropped_mass": 1.965645705713214,
       "X5_drop_sc_over_20pc_dropped_mass_q4": 0.1049131141392674,
       "X4_note": "the netting reaches the weights only: SC has 0 rows of onet_task::collaboration, so the per-task rates keep it",
+      "X4_seychelles_worst_case_bound": {
+        "D_observed": 7.385412826055365,
+        "D_weights_netted": 6.546269153233491,
+        "D_worst_case": 4.503834664604272,
+        "construction": "every Seychelles conversation on a Q4 task counted as automation and every one on a Q1 task as augmentation, weights netted; a bound, in no decision rule"
+      },
       "X7_none_node_variant": {
         "D": 7.385412826055354,
         "ci": [
@@ -1050,16 +1063,23 @@
             "fired": false
           }
         },
-        "sign_agrees_with_C6": false
+        "sign_agrees_with_C6": false,
+        "soc15_diagnostics": {
+          "share_of_soc15_analysis_mass": 10.488965621619194,
+          "share_of_q4_mass": 27.669980543191414,
+          "soc15_share_of_c7_priced_q4_c6_masks": 6.421679590296849,
+          "soc15_share_of_c7_q4_redrawn": 7.004480007301883,
+          "soc15_share_of_c6_q4": 71.26300452215327
+        }
       },
       "permutation_null": {
-        "mean": 8.881281318258003,
-        "sd": 4.5008266947044895,
-        "q025": -1.9183574234032004,
-        "q975": 15.98052775894798,
+        "mean": 8.921943038714165,
+        "sd": 4.425572493552711,
+        "q025": -1.4699099277277201,
+        "q975": 15.87041766413978,
         "draws": 10000,
-        "stats_abs_max": 20.6576604452765,
-        "p_value": 0.6712328767123288,
+        "stats_abs_max": 20.142772034910905,
+        "p_value": 0.6803319668033196,
         "obs": 7.385412826055354
       }
     },
@@ -1599,16 +1619,23 @@
             "fired": false
           }
         },
-        "sign_agrees_with_C6": false
+        "sign_agrees_with_C6": false,
+        "soc15_diagnostics": {
+          "share_of_soc15_analysis_mass": 11.64632827511841,
+          "share_of_q4_mass": 31.809761580048594,
+          "soc15_share_of_c7_priced_q4_c6_masks": 5.912912325782757,
+          "soc15_share_of_c7_q4_redrawn": 6.3466266616660425,
+          "soc15_share_of_c6_q4": 65.46264665248083
+        }
       },
       "permutation_null": {
-        "mean": 4.7788652074335065,
-        "sd": 3.6680574660597007,
-        "q025": -3.389786785426645,
-        "q975": 11.08932911996451,
+        "mean": 4.727360634781918,
+        "sd": 3.7661099294749403,
+        "q025": -3.6584172027774815,
+        "q975": 11.055666347560509,
         "draws": 10000,
-        "stats_abs_max": 15.059348538163583,
-        "p_value": 0.9459054094590541,
+        "stats_abs_max": 15.756014308915923,
+        "p_value": 0.9431056894310569,
         "obs": 0.6688743125891541
       }
     }

@@ -604,6 +604,19 @@ def build_wave(wave: str, verbose: bool = True) -> tuple[pd.DataFrame, dict]:
         facts["boundary_tie_mass"][f"b{i}_{b:.2f}"] = dict(
             tasks=int(len(at)), mass=float(at.w.sum()),
             quartiles_spanned=sorted(int(x) for x in at.q.unique()))
+    # which occupations sit exactly on each boundary wage (referee-results item 3: the post must be
+    # able to name the occupation the third boundary is)
+    wgt = pd.read_csv(ROOT / "data/cache/release_2025_02_10/wage_data.csv",
+                      keep_default_na=False, na_values=[])
+    wgt = wgt[wgt.MedianSalary > 100].assign(hourly=lambda d: d.MedianSalary / 2080.0)
+    facts["boundary_occupations"] = {}
+    for i, b in enumerate(bounds, start=1):
+        at = wgt[(wgt.hourly - b).abs() < 5e-3]
+        facts["boundary_occupations"][f"b{i}_{b:.2f}"] = dict(
+            hourly=float(b), annual=float(at.MedianSalary.iloc[0]) if len(at) else None,
+            detailed_codes=int(len(at)),
+            soc7=sorted({c[:7] for c in at.SOCcode}),
+            titles=sorted(at.JobName.tolist())[:4])
     # the same quarters with the boundary mass point shared in proportion (the corrected reading)
     qw_frac = quartile_weights(an, "wage", "fractional")
     facts["quartiles_fractional"] = {}

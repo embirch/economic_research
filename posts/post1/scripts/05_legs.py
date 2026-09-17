@@ -83,9 +83,15 @@ UC_CATS = B.UC_CATS
 
 # ---------------------------------------------------------------- leg estimands (prereg P3)
 def leg_coefficients(an: pd.DataFrame, qw: np.ndarray, leg: str, group_col: str = "group2019",
-                     work_col: str = "work_share") -> tuple[np.ndarray | None, dict]:
+                     work_col: str = "work_share", subset: str = "identified"
+                     ) -> tuple[np.ndarray | None, dict]:
     """The coefficient vector of a leg, with the leg's coverage audit. Quartile masks are kept from
-    the full analysis set and are never re-drawn (prereg P3)."""
+    the full analysis set and are never re-drawn (prereg P3).
+
+    `subset` applies to leg (b) only: "identified" is the primary set of P3(b) (the groups holding
+    analysis-set tasks in both the global Q1 and the global Q4) and "all_four" is the subset
+    spanning all four quartiles, which P3(b) registers as reported beside it in every table.
+    """
     w4, w1 = qw[:, 3].copy(), qw[:, 0].copy()
     info: dict = {}
     if leg == "a":
@@ -121,8 +127,11 @@ def leg_coefficients(an: pd.DataFrame, qw: np.ndarray, leg: str, group_col: str 
                 notid.append(gname)
                 continue
             identified.append(gname)
-            if {1, 2, 3, 4} <= set(qlab[m]):
+            spans_all_four = {1, 2, 3, 4} <= set(qlab[m])
+            if spans_all_four:
                 all_four.append(gname)
+            if subset == "all_four" and not spans_all_four:
+                continue
             mass = g4.sum() + g1.sum()
             c += mass * (g4 / g4.sum() - g1 / g1.sum())
             tot += mass
@@ -132,7 +141,10 @@ def leg_coefficients(an: pd.DataFrame, qw: np.ndarray, leg: str, group_col: str 
         info["n_not_identified"] = len(notid)
         info["groups_all_four"] = all_four
         info["n_groups_all_four"] = len(all_four)
-        info["identified_mass_share_q1_q4"] = float(tot / (w4.sum() + w1.sum()) * 100)
+        info["subset"] = subset
+        info["mass_share_q1_q4_used"] = float(tot / (w4.sum() + w1.sum()) * 100)
+        info["identified_mass_share_q1_q4"] = float(tot / (w4.sum() + w1.sum()) * 100) \
+            if subset == "identified" else None
         info["tasks_in_identified_groups"] = int(np.sum(np.isin(groups, identified)))
         return (c / tot if tot > 0 else None), info
     else:
@@ -161,6 +173,22 @@ def leg_row(an: pd.DataFrame, qw: np.ndarray, leg: str, wave: str, **kw) -> dict
                              + dl["coef"] ** 2 * var_d / d["coef"] ** 4, 0.0)))
     fired = bool(np.sign(dl["coef"]) != np.sign(d["coef"]) or abs(dl["coef"]) < 0.5 * abs(d["coef"]))
     used = c_l != 0
+    # prereg P3(b): "the primary identified set is the 10 / 10 / 8 groups, with the 7 / 8 / 6
+    # all-four subset reported beside it in every table; both go into results.json". The side-
+    # estimate on the all-four subset, its interval and whether it fires, computed here.
+    all_four = None
+    if leg == "b" and kw.get("subset", "identified") == "identified":
+        c_af, info_af = leg_coefficients(an, qw, "b", subset="all_four",
+                                         **{k: v for k, v in kw.items() if k != "subset"})
+        if c_af is not None:
+            e = H.linear_stat(c_af, p, n)
+            fired_af = bool(np.sign(e["coef"]) != np.sign(d["coef"])
+                            or abs(e["coef"]) < 0.5 * abs(d["coef"]))
+            all_four = dict(coef=e["coef"], ci=e["ci"], se=e["se"], mde=e["mde"],
+                            r=e["coef"] / d["coef"], fired=fired_af,
+                            groups=info_af["groups_all_four"],
+                            n_groups=info_af["n_groups_all_four"],
+                            mass_share_q1_q4=info_af["mass_share_q1_q4_used"])
     return dict(leg=leg, wave=wave, D=d["coef"], D_ci=d["ci"], D_se=d["se"],
                 D_L=dl["coef"], D_L_ci=dl["ci"], D_L_se=dl["se"], D_L_mde=dl["mde"],
                 r=r, r_se=se_r, r_ci=[r - Z * se_r, r + Z * se_r], r_mde=MDE_K * se_r,
@@ -172,6 +200,7 @@ def leg_row(an: pd.DataFrame, qw: np.ndarray, leg: str, wave: str, **kw) -> dict
                 fired_on_sign=bool(np.sign(dl["coef"]) != np.sign(d["coef"])),
                 fired_on_half=bool(abs(dl["coef"]) < 0.5 * abs(d["coef"])),
                 contrast_interval_straddles_zero=bool(contrast["ci"][0] <= 0 <= contrast["ci"][1]),
+                D_L_all_four_subset=all_four,
                 info=info)
 
 
@@ -232,6 +261,46 @@ def use_case_mix_by_quartile(an: pd.DataFrame, qw: np.ndarray) -> dict:
         tot = float(cells.sum())
         out[name] = {c: float(100 * cells["uc_" + c] / tot) for c in UC_CATS}
         out[name]["automation_share"] = float(np.average(an.p[m], weights=qw[m, col]))
+    return out
+
+
+def composition_figures(an: pd.DataFrame, qw: np.ndarray, group_col: str = "group2019") -> dict:
+    """The composition figures `posts/post1/notes/referee-results.md` item 12 asks the analyst to
+    reproduce from the build table, so that the post may cite them: the named software tasks' share
+    of Q4, the top-minus-bottom contrast **inside** SOC-15, and what is left of Q4 once SOC-15 is
+    excluded. Description of the sample's composition, in no decision rule and no new test — each is
+    a re-weighting of the per-task shares already estimated for leg (a)."""
+    w4, w1 = qw[:, 3], qw[:, 0]
+    p, n = an.p.to_numpy(), an.n5.to_numpy()
+    is15 = (an[group_col] == "15").to_numpy()
+    out: dict = {}
+    # (i) the largest software tasks' share of Q4's usage mass
+    keys = ["modify existing software to correct errors",
+            "write new programs or modify existing programs"]
+    m_two = an.task.str.startswith(keys[0]).to_numpy()
+    m_three = m_two | an.task.str.startswith(keys[1]).to_numpy()
+    out["largest_software_tasks"] = dict(
+        task_prefixes=keys,
+        tasks_matching_first=int(m_two.sum()), tasks_matching_either=int(m_three.sum()),
+        q4_mass_first=float(w4[m_two].sum()), q4_mass_either=float(w4[m_three].sum()),
+        q4_mass_total=float(w4.sum()),
+        q4_share_first=float(w4[m_two].sum() / w4.sum() * 100),
+        q4_share_either=float(w4[m_three].sum() / w4.sum() * 100))
+    # (ii) the top-minus-bottom contrast inside SOC-15 alone
+    a4, a1 = np.where(is15, w4, 0.0), np.where(is15, w1, 0.0)
+    if a4.sum() > 0 and a1.sum() > 0:
+        c = a4 / a4.sum() - a1 / a1.sum()
+        e = H.linear_stat(c, p, n)
+        out["within_soc15_contrast"] = dict(coef=e["coef"], ci=e["ci"], se=e["se"], mde=e["mde"],
+                                            q4_mass=float(a4.sum()), q1_mass=float(a1.sum()),
+                                            q4_tasks=int((a4 > 0).sum()), q1_tasks=int((a1 > 0).sum()))
+    # (iii) what is left of Q4 and Q1 once SOC-15 is excluded (leg (a)'s residual sample)
+    r4, r1 = np.where(~is15, w4, 0.0), np.where(~is15, w1, 0.0)
+    out["residual_after_soc15_exclusion"] = dict(
+        q4_tasks=int((r4 > 0).sum()), q4_mass=float(r4.sum()), q4_kish=B.kish(r4),
+        q4_share=float(np.average(p, weights=r4)),
+        q1_tasks=int((r1 > 0).sum()), q1_mass=float(r1.sum()), q1_kish=B.kish(r1),
+        q1_share=float(np.average(p, weights=r1)))
     return out
 
 
@@ -307,6 +376,12 @@ def main():
             print(f"              tasks {r['n_tasks']}  conversations {r['n_conversations']:,.0f}  "
                   f"FIRED: {r['fired']} (on sign {r['fired_on_sign']}, on half {r['fired_on_half']})")
             print(f"              coverage: {r['info']}")
+            if r.get("D_L_all_four_subset"):
+                af = r["D_L_all_four_subset"]
+                print(f"              [all-four subset, the P3(b) side-estimate] D_(b) {af['coef']:+.4f} "
+                      f"[{af['ci'][0]:+.4f}, {af['ci'][1]:+.4f}]  SE {af['se']:.4f}  r {af['r']:+.4f}  "
+                      f"FIRED {af['fired']}  over {af['n_groups']} groups carrying "
+                      f"{af['mass_share_q1_q4']:.2f}% of Q1+Q4 mass")
             r2 = leg_row(an, qw, leg, wave, group_col="group2010") if leg in ("a", "b") else None
             if r2:
                 rows2010.append(r2)
@@ -321,6 +396,7 @@ def main():
                       f"r_L {rs['r']:+.4f}  FIRED {rs['fired']}")
         # descriptive material
         d = out["descriptive"].setdefault(wave, {})
+        d["composition_figures"] = composition_figures(an, qw)
         d["leave_one_group_out"] = leave_one_group_out(an, qw)
         d["ten_largest_out"] = ten_largest_out(an, qw)
         if has_uc:
@@ -371,6 +447,20 @@ def main():
               f"{worst['left_out']} ({worst['move']:+.4f} pp), second {second['left_out']} "
               f"({second['move']:+.4f} pp); |largest| > sum of the others: "
               f"{abs(worst['move']) > sum(abs(r['move']) for r in logo if r is not worst)}")
+        cf = d["composition_figures"]
+        print(f"          composition (referee-results item 12): the two \"modify existing "
+              f"software…\" tasks hold {cf['largest_software_tasks']['q4_mass_first']:.2f} pp of "
+              f"Q4's {cf['largest_software_tasks']['q4_mass_total']:.2f} pp "
+              f"({cf['largest_software_tasks']['q4_share_first']:.1f}%), "
+              f"{cf['largest_software_tasks']['q4_mass_either']:.2f} pp with the third; within "
+              f"SOC-15 alone D = {cf['within_soc15_contrast']['coef']:+.4f} "
+              f"[{cf['within_soc15_contrast']['ci'][0]:+.4f}, "
+              f"{cf['within_soc15_contrast']['ci'][1]:+.4f}]; the residual Q4 after the SOC-15 "
+              f"exclusion is {cf['residual_after_soc15_exclusion']['q4_tasks']} tasks, "
+              f"{cf['residual_after_soc15_exclusion']['q4_mass']:.2f} pp, Kish "
+              f"{cf['residual_after_soc15_exclusion']['q4_kish']:.1f}, share "
+              f"{cf['residual_after_soc15_exclusion']['q4_share']:.2f} against a residual Q1 of "
+              f"{cf['residual_after_soc15_exclusion']['q1_share']:.2f}")
         t10 = d["ten_largest_out"]
         print(f"          ten largest tasks out: D {t10['D']:+.4f} [{t10['ci'][0]:+.4f}, "
               f"{t10['ci'][1]:+.4f}] (move {t10['move']:+.4f} pp; {t10['dropped_mass_wave']:.4f} pp "
@@ -472,8 +562,12 @@ if __name__ == "__main__":
         logo = O["descriptive"][wave]["leave_one_group_out"]
         assert len([r for r in logo if r["left_out"] != "group-spanning bucket"]) == 22, (wave, len(logo))
         assert any(r["left_out"] == "group-spanning bucket" for r in logo), wave
+        # referee-results item 15: this is a RESULT, not a fact about the code — the SOC-15
+        # leave-out dominating the series is what H3 predicts and a failure would have been a
+        # finding. Printed, not asserted.
         moves = {r["left_out"]: abs(r["move"]) for r in logo if r.get("D") is not None}
-        assert max(moves, key=moves.get) == "15", (wave, sorted(moves.items(), key=lambda kv: -kv[1])[:3])
+        top = sorted(moves.items(), key=lambda kv: -kv[1])[:3]
+        print(f"  [{wave}] largest leave-one-group-out movers (printed, not asserted): {top}")
         t10 = O["descriptive"][wave]["ten_largest_out"]
         assert len(t10["movers"]) == 10 and t10["dropped_mass_wave"] > 0, (wave, t10)
 

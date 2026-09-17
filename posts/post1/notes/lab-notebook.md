@@ -474,3 +474,156 @@ reproduces except the identified-group count for leg (b), which is 9 / 9 / 9 aga
 the X3 / X5 / modal-holder owner moves are reported in `results.json` under
 `facts.owner_under_robustness`; which of them the post must carry in its first sentence is the
 referee's and the director's call, not mine.
+
+---
+
+# Referee-results revision pass · 2026-09-17
+
+One entry per item of `posts/post1/notes/referee-results.md` (PASS WITH CHANGES, zero blocking).
+Every number below was recomputed from the build table, never copied from the verdict; every
+affected script was re-run and all eight check blocks (02–09) pass. **No headline number moved:** D,
+Δ_W, the slope, the three legs, their SEs, the declared owner (**O-A** under both quartile
+readings), the H3 declaration (**declared**, 6 of 8 leg tests) and the owners under every robustness
+cut are identical to the last decimal to the pre-revision `results.json` (checked mechanically
+against `git show HEAD:…/results.json`).
+
+## 2026-09-17 · CORRECTION (item 3) — the boundary occupation is now named in results.json
+
+`facts.quartile_boundaries_<wave>.boundary_occupation` = "15-1199 Computer Occupations, All Other
+($90,270 ÷ 2,080 = $43.40/hr)", the referee's exact string, with a computed
+`boundary_occupations` block beside it: `02_build.py` now reads the wage file at the quartile step
+and records, for each of the three boundaries, the annual salary, the number of detailed codes at
+it and their titles. The third boundary is **thirteen** `15-1199.xx` codes all at $90,270 (Computer
+Occupations All Other, Business Intelligence Analysts, Computer Systems Engineers/Architects,
+Database Architects and nine siblings); the first and second boundaries are 1–4 codes. So the tie
+the quartile deviation is about sits **inside** the coding family, as the referee says.
+
+## 2026-09-17 · CORRECTION (item 6) — the fourth mis-transcription: leg (b) identifies 10 / 10 / 9 groups, not 9 / 9 / 9
+
+The `05_legs.py` entry above and open question (ii) of the close say "9 / 9 / 9 identified groups
+carrying 71–76% of Q1+Q4 mass". Wrong. `legs.json` and `05_legs.out.txt` have always carried
+**10 / 10 / 9** groups holding analysis-set tasks in both the global Q1 and the global Q4, carrying
+**80.04 / 80.31 / 75.52%** of Q1+Q4 usage mass; my own recomputation and the referee's re-derivation
+agree. The recorded expectation in `feasibility.md` §4 is 10 / 10 / 8, so the count differs from the
+record in **February only** (9 against 8), not in all three waves — which also corrects open
+question (ii) of the close: read it as "10 / 10 / 9 against the recorded 10 / 10 / 8". No estimate
+changes: the leg was always computed from the identified-group mask itself.
+
+## 2026-09-17 · CORRECTION (item 7) — figure 3's caption said "nine … thirteen" groups for all three waves
+
+The caption described February's counts as though they held everywhere. Replaced with the referee's
+exact text: "over the ten (August, November) or nine (February) major groups that hold analysis-set
+tasks in both the global bottom and the global top quartile, each group weighted by its usage mass
+in those two quartiles; the other twelve or thirteen groups are reported as not identified, never as
+zeros." Noted for the future: script 09's verifier checks **numerals only**, so a word-number in a
+caption passes it; the check block cannot catch "nine".
+
+## 2026-09-17 · CORRECTION (item 8) — figure 4's caption misstated February's Δ_W
+
+"less than a tenth of a point in two windows" is false for February, where Δ_W = **−0.1466** pp.
+Replaced with the referee's exact text: "**Weighting the published automation share by the wage of
+the work moves it by less than a fifth of a point in two windows and by eight tenths of a point in
+the third, and not in the same direction as the quartile gap in two of the three.**"
+
+## 2026-09-17 · CORRECTION (item 9) — figure 1's bold sentence was garbled
+
+It read "and in none of them does the difference clear a percentage point in every window", which is
+both ungrammatical and wrong about August and November. Replaced with the referee's exact text:
+"**In all three Claude.ai windows the delegated share is higher on top-quartile than on
+bottom-quartile tasks; the difference clears a percentage point in two windows on the pre-registered
+quartile rule and in none once the boundary wage is shared, and it does not clear a point in every
+window under either rule.**"
+
+## 2026-09-17 · CORRECTION (item 10) — the second wage source is the SOC-15 exclusion in disguise, and results.json now says so
+
+Recomputed from the build table, not copied: BLS-EP prices **10.89 / 10.49 / 11.65%** of SOC-15's
+analysis mass and **26.36 / 27.67 / 31.81%** of Q4's; SOC-15 is **7.56 / 6.42 / 5.91%** of the
+C7-priced Q4 on the C6 masks (**8.54 / 7.00 / 6.35%** once the C7 quartiles are re-drawn) against
+**73.06 / 71.26 / 65.46%** of the C6 Q4; and leg (a) inside the C7 frame retains
+**r = 0.9685 / 0.9267 / 0.9811** of C7's own D — removing the coding family from a frame it is
+already absent from changes nothing. All four triples reproduce the referee's. Added to
+`facts.C7_sign_agreement` with a `mechanism` line, and the `rob_C7_*` verdict is now the referee's
+exact sentence: the sign disagreement is leg (a) again on 55–62% of the mass, **not** an independent
+second source, and the owner is unchanged. Downstream: the post's P6 first sentence must say this.
+
+## 2026-09-17 · CORRECTION (item 11) — the P3(b) all-four side-estimate had not been computed
+
+P3(b) registers the all-four-quartile subset as "reported beside it in every table; both go into
+`results.json`". `legs.json` listed the all-four groups but carried no D_(b) on them. `05_legs.py`
+now takes a `subset` argument and computes it: D_(b) on the all-four subset =
+**−4.0541 [−4.5703, −3.5379] / −1.7940 [−2.3520, −1.2361] / −6.0851 [−6.5615, −5.6087]** pp over
+8 / 9 / 8 groups carrying 75.42 / 79.39 / 74.74% of Q1+Q4 mass — the referee's figures exactly. The
+leg **fires on sign under both readings**, so H3's declaration does not depend on the identified
+set. Added as the `D_L_all_four_subset` term of each `leg_b_*` entry.
+
+## 2026-09-17 · CORRECTION (item 12) — the pre-registered variants and the composition figures are now in results.json
+
+Six new `facts` so the post can cite what previously lived only in `robustness.json` / `legs.json`:
+`X7_none_node_variant` (inert for D; the wave-level mean moves 51.2001 → 51.7424 in August),
+`A1_allocation_variants_of_the_legs` (leg (a) D_L −13.71 / −14.07 / −13.03 in August and the same
+three rules in the other waves; D and Δ_W cannot move), `C7_legs`,
+`leg_e_substantive_cell_denominator` (+3.8538 / +2.7392, not firing),
+`leg_table_2010_grouping` (6 of 6 fired, same verdict), and
+`composition_of_the_top_quartile` — the referee-derived figures, reproduced by me from the build
+table in `05_legs.py`: the two "modify existing software to correct errors…" tasks hold
+**6.53 / 8.54 / 5.98 pp** of Q4 (11.40 / 12.21 / 8.83 pp with "write new programs or modify existing
+programs…"), the top-minus-bottom contrast **inside** SOC-15 is **−0.1421 [−0.7180, +0.4339] /
++6.4656 [+5.8658, +7.0654] / +0.8039 [+0.1631, +1.4447]** pp, and the residual Q4 after the SOC-15
+exclusion is **286 / 327 / 355** tasks, **6.10 / 6.47 / 7.77** pp, Kish **98.0 / 85.5 / 83.3**, share
+**38.69 / 34.75 / 36.02** against a residual Q1 of **51.72 / 45.22 / 47.91**. Plus
+`seychelles_worst_case_bound`, on the referee's stated algebra (p_clean = (p − s·p_SC)/(1 − s) with
+p_SC = 1 in Q4 and 0 in Q1, weights netted): November's D falls +7.3854 → +6.5463 (weights netted)
+→ **+4.5038** pp, matching the referee's +4.50. All are description or bounds, in no decision rule;
+no new test was run.
+
+## 2026-09-17 · CORRECTION (item 13) — the Δ_W verdict called an interval containing zero "signed"
+
+August's Δ_W interval contains zero, so "signed and small, never wrong" was wrong. `verdict_DW` now
+branches, in the referee's exact words: an interval containing zero reads "contains zero; |Δ_W| = …
+pp, below the separate 1 pp materiality line, so the weighting of a published automation share is
+small and, in this window, of undetermined sign."
+
+## 2026-09-17 · CORRECTION (item 14) — leg (e)'s non-firing verdict was the wrong null sentence
+
+"nothing bigger than the MDE of 0.6058 pp is shown on this leg" is false: D_L is +3.7160 ± 0.2164
+pp. What is undetermined is whether the leg retains more or less than half of D. `verdict_leg` now
+reads the half judgement from the contrast, in the referee's words for the straddling case
+("D_L retains 0.50 of D and the contrast D_L − ½D is +0.02 [−0.33, +0.37] pp, so whether this leg's
+set retains more or less than half of D is undetermined at this precision; not composition
+excluded") and states the other case explicitly where the contrast excludes zero (February leg (e):
++2.46 [+2.02, +2.89] pp, so D_L keeps more than half of D at this precision).
+
+## 2026-09-17 · CORRECTION (item 15) — two check-block assertions were on results, not on facts
+
+`03_headline.py`'s |Δ_W| < max(1, ½|D|) and `05_legs.py`'s "SOC-15 is the largest leave-one-out
+mover" both encoded pre-registered **expectations**: had either failed it would have been a finding,
+and the pipeline would have stopped on it. Both are now **printed, not asserted** — Δ_W/D per wave
+(−0.0160 / +0.1131 / −0.2193 pp per point of gap; the brief's arithmetic of 0.11–0.12 holds in
+November only) and the three largest leave-one-group-out movers per wave. Every other assertion in
+both scripts is a fact about the data or an internal consistency and stays.
+
+## 2026-09-17 · CORRECTION (item 16) — SE and MDE added to the citable estimates that lacked them
+
+Empirical standard 6 wants an interval **and** an MDE beside every citable coefficient. The
+exploratory API slopes, the exploratory Job-Zone quartile differences and every robustness Δ_W
+carried a `ci` but no `se`/`mde`. All now carry both, and the API Δ_W is added as a term beside the
+API D. No estimate changed: the SEs were already computed by the same closed form, only not
+assembled into `results.json`.
+
+## 2026-09-17 · CORRECTION (item 17) — P2's constant-D assumption is falsified by the realised D's
+
+New fact `between_window_dispersion_of_D`: the three D's are +1.3836 / +7.3854 / +0.6689 pp, whose
+between-window SD is **3.6928 pp against a mean within-window SE of 0.1416 pp — a ratio of 26**. A
+line in `facts.rule_power.notes` now says what follows: none of P2's probabilities (H1 80% at
+≈1.5 pp, O-A-or-stronger from ≈0.5 pp, O-B 0.043 at 0.5 pp) is the probability of **this** outcome,
+because they all assume a constant true D, and no probability under a non-constant D has been
+computed. This resolves the referee's carried item 15(c); the O-A label's "persistent" is about the
+sign only.
+
+## 2026-09-17 · CORRECTION (item 18) — the generalisation sentence must carry the realised bound
+
+The pre-registration said "resolves nothing below about twelve points" on model (b) MDEs of
+12.5 / 17.4 / 16.1 pp. The realised MDEs are **14.07 / 20.16 / 16.12 pp**.
+`facts.generalisation_sentence` now carries both triples and the sentence the post must use: "a
+design that resamples tasks resolves nothing below about **fourteen to twenty** points" — never
+"about twelve". Figure 1's caption already said "about 14 to 20".

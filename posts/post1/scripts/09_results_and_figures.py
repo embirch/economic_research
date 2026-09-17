@@ -104,9 +104,15 @@ def verdict_D(coef: float, ci: list[float]) -> str:
 
 
 def verdict_DW(coef: float, ci: list[float]) -> str:
-    excl = "excludes zero" if (ci[0] > 0 or ci[1] < 0) else "contains zero"
-    return (f"{excl}; |Δ_W| = {abs(coef):.4f} pp, below the separate 1 pp materiality line, so the "
-            f"weighting of a published automation share is signed and small, never wrong")
+    """referee-results item 13: an interval containing zero is not a signed quantity, so the two
+    cases take different sentences."""
+    if ci[0] > 0 or ci[1] < 0:
+        return (f"excludes zero; |Δ_W| = {abs(coef):.4f} pp, below the separate 1 pp materiality "
+                f"line, so the weighting of a published automation share is signed and small, "
+                f"never wrong")
+    return (f"contains zero; |Δ_W| = {abs(coef):.4f} pp, below the separate 1 pp materiality line, "
+            f"so the weighting of a published automation share is small and, in this window, of "
+            f"undetermined sign")
 
 
 def verdict_slope(coef: float, ci: list[float]) -> str:
@@ -117,9 +123,18 @@ def verdict_slope(coef: float, ci: list[float]) -> str:
 
 
 def verdict_leg(row: dict) -> str:
+    """referee-results item 14: a leg that does not fire is not a null on D_L — what is at issue is
+    whether it retains more or less than half of D, which is read from the contrast D_L − ½D."""
     if not row["fired"]:
-        return ("did not fire: D_L keeps its sign and more than half of D — nothing bigger than the "
-                f"MDE of {row['D_L_mde']:.4f} pp is shown on this leg, which is not composition excluded")
+        c, lo, hi = row["contrast"], row["contrast_ci"][0], row["contrast_ci"][1]
+        if row["contrast_interval_straddles_zero"]:
+            return (f"did not fire on the point estimate; D_L retains {row['r']:.2f} of D and the "
+                    f"contrast D_L − ½D is {c:+.2f} [{lo:+.2f}, {hi:+.2f}] pp, so whether this leg's "
+                    f"set retains more or less than half of D is undetermined at this precision; "
+                    f"not composition excluded")
+        return (f"did not fire on the point estimate; D_L retains {row['r']:.2f} of D and the "
+                f"contrast D_L − ½D is {c:+.2f} [{lo:+.2f}, {hi:+.2f}] pp, which excludes zero, so "
+                f"D_L keeps more than half of D at this precision; not composition excluded")
     how = []
     if row["fired_on_sign"]:
         how.append("the sign of D_L differs from the sign of D")
@@ -170,8 +185,9 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         script="scripts/09_results_and_figures.py",
         caption=(
             "**In all three Claude.ai windows the delegated share is higher on top-quartile than on "
-            "bottom-quartile tasks, and in none of them does the difference clear a percentage "
-            "point in every window.** Plotted: D, the usage-weighted automation share of the top "
+            "bottom-quartile tasks; the difference clears a percentage point in two windows on the "
+            "pre-registered quartile rule and in none once the boundary wage is shared, and it does "
+            "not clear a point in every window under either rule.** Plotted: D, the usage-weighted automation share of the top "
             "wage quartile minus that of the bottom, in percentage points, per window. Each point "
             "is one window of Claude.ai conversations (4–11 Aug 2025, 13–20 Nov 2025, 5–12 Feb "
             "2026), estimated separately and never pooled or spliced. The automation share of a "
@@ -283,10 +299,11 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
             "(SOC major group 15 on the 2019 O*NET-SOC recode) — 42.8 / 39.7 / 35.6% of "
             "analysis-set usage mass and 73.1 / 71.3 / 65.5% of the top quartile's — with the "
             "quartile boundaries kept from the full analysis set and never re-drawn. Leg (b) "
-            "averages the within-group top-minus-bottom differences over the nine major groups "
-            "that hold analysis-set tasks in both the global bottom and the global top quartile, "
-            "each group weighted by its usage mass in those two quartiles; the other thirteen "
-            "groups are reported as not identified, never as zeros. Leg (e) keeps the tasks whose "
+            "averages the within-group top-minus-bottom differences over the ten (August, November) "
+            "or nine (February) major groups that hold analysis-set tasks in both the global bottom "
+            "and the global top quartile, each group weighted by its usage mass in those two "
+            "quartiles; the other twelve or thirteen groups are reported as not identified, never "
+            "as zeros. Leg (e) keeps the tasks whose "
             "`work` share is at least half of their published `use_case` cells (943 / 1,071 tasks "
             "in November and February; the 29 / 21 tasks whose only published cell is "
             "`not_classified` have an undefined work share and are dropped, never scored 0), and is "
@@ -323,7 +340,8 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         script="scripts/09_results_and_figures.py",
         caption=(
             "**Weighting the published automation share by the wage of the work moves it by less "
-            "than a tenth of a point in two windows and by eight tenths in the third.** Plotted: "
+            "than a fifth of a point in two windows and by eight tenths of a point in the third, "
+            "and not in the same direction as the quartile gap in two of the three.** Plotted: "
             "Δ_W, the wage-weighted minus the unweighted usage-weighted automation share of "
             "Claude.ai conversations, in percentage points, per window; each marker is one window. "
             "Δ_W is Cov_w(wage, p) ÷ E_w[wage] over the analysis set — the same per-task automation "
@@ -456,7 +474,16 @@ def main():
                                  "so the contrast below is the interval to read)"),
                 "D_L_minus_half_D": dict(coef=r["contrast"], ci=r["contrast_ci"],
                                          se=r["contrast_se"], mde=r["contrast_mde"],
-                                         unit="percentage points")},
+                                         unit="percentage points"),
+                **({"D_L_all_four_subset": dict(
+                    coef=r["D_L_all_four_subset"]["coef"], ci=r["D_L_all_four_subset"]["ci"],
+                    se=r["D_L_all_four_subset"]["se"], mde=r["D_L_all_four_subset"]["mde"],
+                    r=r["D_L_all_four_subset"]["r"], fired=r["D_L_all_four_subset"]["fired"],
+                    n_groups=r["D_L_all_four_subset"]["n_groups"],
+                    mass_share_q1_q4=r["D_L_all_four_subset"]["mass_share_q1_q4"],
+                    unit=("percentage points; the P3(b) side-estimate on the groups spanning all "
+                          "four quartiles, reported beside the primary identified set"))}
+                   if r.get("D_L_all_four_subset") else {})},
             prereg_rule=RULE_LEG, verdict=verdict_leg(r),
             coverage=r["info"],
             notes=(f"corr(D_L, D) = {r['corr_D_L_D']:.3f}; the interval for D_L − ½D "
@@ -470,7 +497,11 @@ def main():
             api_terms[f"D_{w}"] = dict(coef=r["D"]["coef"], ci=r["D"]["ci"], se=r["D"]["se"],
                                        mde=r["D"]["mde"], unit="percentage points")
             api_terms[f"slope_{w}"] = dict(coef=r["slope"]["coef"], ci=r["slope"]["ci"],
+                                           se=r["slope"]["se"], mde=r["slope"]["mde"],
                                            unit="pp per +$10/hr")
+            api_terms[f"Delta_W_{w}"] = dict(coef=r["Delta_W"]["coef"], ci=r["Delta_W"]["ci"],
+                                             se=r["Delta_W"]["se"], mde=r["Delta_W"]["mde"],
+                                             unit="pp")
     tests["exp_a_api_surface"] = dict(
         label="EXPLORATORY (a): the same gradient on the 1P API global intersection",
         kind="exploratory", exploratory=True, script="scripts/08_exploratory.py",
@@ -509,6 +540,8 @@ def main():
                                       unit="pp of the automation share per +1 Job Zone")
         jz_terms[f"D_{w}"] = dict(coef=r["D_top_minus_bottom_jobzone_quartile"]["coef"],
                                   ci=r["D_top_minus_bottom_jobzone_quartile"]["ci"],
+                                  se=r["D_top_minus_bottom_jobzone_quartile"]["se"],
+                                  mde=r["D_top_minus_bottom_jobzone_quartile"]["mde"],
                                   unit="pp, top-minus-bottom Job-Zone quartile")
     tests["exp_c_jobzone"] = dict(
         label="EXPLORATORY (c): the gradient against `JobZone`, a non-wage ordering",
@@ -551,7 +584,9 @@ def main():
                 estimates={"D": dict(coef=e["coef"], ci=e["ci"], se=e["se"], mde=e["mde"],
                                      unit="percentage points"),
                            "Delta_W": dict(coef=r["W1"][rule]["Delta_W"]["coef"],
-                                           ci=r["W1"][rule]["Delta_W"]["ci"], unit="pp")},
+                                           ci=r["W1"][rule]["Delta_W"]["ci"],
+                                           se=r["W1"][rule]["Delta_W"]["se"],
+                                           mde=r["W1"][rule]["Delta_W"]["mde"], unit="pp")},
                 prereg_rule=RULE_ROBUST, verdict=verdict_D(e["coef"], e["ci"]),
                 notes=f"quartile boundaries {['$%.2f' % b for b in r['W1'][rule]['bounds']]}")
         e = r["C7_second_wage_source"]["D"]
@@ -563,17 +598,20 @@ def main():
                     f"{r['C7_second_wage_source']['mass_share_named']:.1f}% of the analysis set's mass"),
             estimates={"D": dict(coef=e["coef"], ci=e["ci"], se=e["se"], mde=e["mde"], unit="pp"),
                        "Delta_W": dict(coef=r["C7_second_wage_source"]["Delta_W"]["coef"],
-                                       ci=r["C7_second_wage_source"]["Delta_W"]["ci"], unit="pp")},
+                                       ci=r["C7_second_wage_source"]["Delta_W"]["ci"],
+                                       se=r["C7_second_wage_source"]["Delta_W"]["se"],
+                                       mde=r["C7_second_wage_source"]["Delta_W"]["mde"], unit="pp")},
             prereg_rule=("prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate "
                          "carries the declared sign in all three waves... If C7's point estimate "
                          "carries the opposite sign in any wave, the owner is unchanged and the O-A "
                          "paragraph carries, in its first sentence, that the direction is not "
                          "corroborated on the second wage source in that wave, with C7's coverage "
                          "stated.\""),
-            verdict=("the sign does NOT agree with C6 in this window, so the direction is not "
-                     "corroborated on the second wage source; the owner is unchanged and C7's "
-                     "coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the "
-                     "reason it is not decisive"
+            verdict=("the sign does NOT agree with C6 in this window; BLS-EP (SOC-2018) does not "
+                     "price the renumbered computer occupations, so C7's top quartile is 92–94% "
+                     "non-coding and this rebuild is the Computer & Mathematical exclusion of leg "
+                     "(a) on 55–62% of the mass, not an independent second source; the owner is "
+                     "unchanged"
                      if not r["C7_second_wage_source"]["sign_agrees_with_C6"]
                      else "the sign agrees with C6 in this window"),
             notes="rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869")
@@ -829,7 +867,12 @@ def main():
                           "$24.00 / $34.40 / $43.40 on the equal-split wage"),
             boundary_tie_mass=bw[w]["boundary_tie_mass"],
             q4_mass_from_boundary_tie=bw[w]["q4_mass_from_boundary_tie"],
-            equal_split_rule_boundaries=bw[w]["quartile_bounds_equal_rule"])
+            equal_split_rule_boundaries=bw[w]["quartile_bounds_equal_rule"],
+            # referee-results item 3: the post must be able to name the occupation the third
+            # boundary is, because the tie sits inside the coding family
+            boundary_occupation=("15-1199 Computer Occupations, All Other "
+                                 "($90,270 ÷ 2,080 = $43.40/hr)"),
+            boundary_occupations=bw[w]["boundary_occupations"])
         facts[f"mde_{w}"] = dict(
             value=head[w]["registered"]["D"]["mde"],
             label=f"realised MDE(80%) for D, {WAVE_LABEL[w]}", script="scripts/03_headline.py",
@@ -862,7 +905,13 @@ def main():
         H1_or_H2_80pc=power["thresholds_80pc"]["steward_0.151_0.148_0.154"]["H1_or_H2_80pc"],
         H4_declared_80pc=power["thresholds_80pc"]["steward_0.151_0.148_0.154"]["H4_declared_80pc"],
         H4_clause_80pc=power["thresholds_80pc"]["steward_0.151_0.148_0.154"]["H4_step4_clause_80pc"],
-        P_H1_at_true_D_1pp=power["thresholds_80pc"]["steward_0.151_0.148_0.154"]["P_H1_at_true_D_1.0"])
+        P_H1_at_true_D_1pp=power["thresholds_80pc"]["steward_0.151_0.148_0.154"]["P_H1_at_true_D_1.0"],
+        notes=("every P2 probability assumes a **constant** true D across the three windows. The "
+               "realised D's are +1.3836 / +7.3854 / +0.6689 pp, whose standard deviation across "
+               "windows is 26 times the mean within-window SE (`facts.between_window_dispersion_of_D`), "
+               "so that assumption is falsified by the data: none of these probabilities is the "
+               "probability of this outcome, and no probability under a non-constant true D has "
+               "been computed. This resolves the referee's carried item 15(c)."))
     facts["owner_under_robustness"] = dict(
         value=rob["owners_under_robustness"]["primary"]["owner"],
         label="the owner the ordered chain declares under each pre-registered robustness cut",
@@ -877,7 +926,31 @@ def main():
         source_check=json.dumps({w: rob["waves"][w]["C7_second_wage_source"]["sign_agrees_with_C6"]
                                  for w in WAVES}),
         coverage_share_named=[bw[w]["c7_priced_share_named"] for w in WAVES],
-        spearman_with_C6=[bw[w]["c6_c7_spearman"] for w in WAVES])
+        spearman_with_C6=[bw[w]["c6_c7_spearman"] for w in WAVES],
+        # referee-results item 10: the second wage source is the SOC-15 exclusion in disguise.
+        # BLS-EP is keyed on SOC-2018 and does not price the renumbered computer family, so its top
+        # quartile is 92-94% non-coding and leg (a) under C7 removes almost nothing.
+        c7_share_of_soc15_analysis_mass=[
+            rob["waves"][w]["C7_second_wage_source"]["soc15_diagnostics"]["share_of_soc15_analysis_mass"]
+            for w in WAVES],
+        c7_share_of_q4_mass=[
+            rob["waves"][w]["C7_second_wage_source"]["soc15_diagnostics"]["share_of_q4_mass"]
+            for w in WAVES],
+        soc15_share_of_c7_priced_q4=[
+            rob["waves"][w]["C7_second_wage_source"]["soc15_diagnostics"]["soc15_share_of_c7_priced_q4_c6_masks"]
+            for w in WAVES],
+        soc15_share_of_c7_q4_redrawn=[
+            rob["waves"][w]["C7_second_wage_source"]["soc15_diagnostics"]["soc15_share_of_c7_q4_redrawn"]
+            for w in WAVES],
+        soc15_share_of_c6_q4=[
+            rob["waves"][w]["C7_second_wage_source"]["soc15_diagnostics"]["soc15_share_of_c6_q4"]
+            for w in WAVES],
+        c7_leg_a_retained_fraction=[
+            rob["waves"][w]["C7_second_wage_source"]["legs"]["a"]["r"] for w in WAVES],
+        mechanism=("C7 prices about a tenth of SOC-15's analysis mass, so the C7 rebuild is leg (a) "
+                   "on 55-62% of the mass rather than an independent second source; leg (a) inside "
+                   "the C7 frame retains 0.93-0.98 of C7's own D because the coding family is "
+                   "already gone"))
     facts["november_is_corroborated_not_independent"] = dict(
         value=True,
         label=("X6, a reporting rule: November is corroborated by August and February, never treated "
@@ -891,7 +964,12 @@ def main():
         label=("the design-based MDE, the bound on any claim about tasks in general (pp); a claim "
                "about work in general is not licensed"),
         script="scripts/06_robustness.py",
-        source_check="model (b) MDE 14.1 / 20.2 / 16.1 pp against the pre-registered 12.5 / 17.4 / 16.1")
+        source_check="model (b) MDE 14.1 / 20.2 / 16.1 pp against the pre-registered 12.5 / 17.4 / 16.1",
+        realised_mde_by_wave=[rob["waves"][w]["model_b_design_based"]["mde"] for w in WAVES],
+        prereg_mde_by_wave=[12.5, 17.4, 16.1],
+        sentence=("the post's generalisation sentence carries the **realised** bound: a design that "
+                  "resamples tasks resolves nothing below about fourteen to twenty points — never "
+                  "\"about twelve\", which was the pre-registered figure"))
     facts["conventions_and_constants"] = dict(
         value=2080,
         label=("the constants and conventions the post may cite: the hours-per-year divisor, the "
@@ -913,6 +991,106 @@ def main():
         materiality_pp_of_delta_w_per_point_of_gap=[0.11, 0.12],
         gap_needed_for_one_point_of_delta_w=[8, 9],
         percent_signs=[100, 95, 80, 50, 25, 5, 1])
+    # ---------------- referee-results item 12: the pre-registered variants that live only in
+    # robustness.json / legs.json, so the post may cite them
+    facts["X7_none_node_variant"] = dict(
+        value=True,
+        label=("X7: D re-estimated with the `none` task node kept, as Anthropic's released code "
+               "does — inert for D by construction, since that node carries no wage and cannot "
+               "enter a wage quartile"),
+        script="scripts/06_robustness.py",
+        source_check="what the variant moves is the wave-level usage-weighted mean, not D",
+        wave_share_without_none_node=[rob["waves"][w]["X7_none_node_variant"]["wave_share_without_none_node"]
+                                      for w in WAVES],
+        wave_share_with_none_node=[rob["waves"][w]["X7_none_node_variant"]["wave_share_with_none_node"]
+                                   for w in WAVES],
+        D=[rob["waves"][w]["D_primary"]["coef"] for w in WAVES])
+    facts["A1_allocation_variants_of_the_legs"] = dict(
+        value=rob["waves"]["feb2026"]["A1"]["legs"]["a_employment_weighted_primary"]["D_L"],
+        label=("leg (a) and leg (b) re-estimated under the three allocation rules (A1): equal split "
+               "over the distinct 2019 holder codes, modal holder, employment-weighted (primary). "
+               "D and Δ_W use no group and cannot move"),
+        script="scripts/06_robustness.py",
+        source_check=rob["waves"]["aug2025"]["A1"]["invariance"],
+        leg_a_equal_split_fractional=[rob["waves"][w]["A1"]["legs"]["a_equal_split_fractional"]["D_L"]
+                                      for w in WAVES],
+        leg_a_modal_holder=[rob["waves"][w]["A1"]["legs"]["a_modal_holder"]["D_L"] for w in WAVES],
+        leg_a_employment_weighted=[rob["waves"][w]["A1"]["legs"]["a_employment_weighted_primary"]["D_L"]
+                                   for w in WAVES],
+        leg_b_modal_holder=[rob["waves"][w]["A1"]["legs"]["b_modal_holder"]["D_L"] for w in WAVES],
+        leg_b_employment_weighted=[rob["waves"][w]["A1"]["legs"]["b_employment_weighted_primary"]["D_L"]
+                                   for w in WAVES],
+        soc15_share_of_analysis_mass=rob["waves"]["feb2026"]["A1"]["soc15_share_analysis"])
+    facts["C7_legs"] = dict(
+        value=rob["waves"]["nov2025"]["C7_second_wage_source"]["legs"]["a"]["D_L"],
+        label="the three legs rebuilt inside the C7 (BLS-EP) frame",
+        script="scripts/06_robustness.py",
+        source_check=("leg (a) retains 0.93-0.98 of C7's own D: the coding family is already absent "
+                      "from the C7 frame (item 10)"),
+        leg_a=[rob["waves"][w]["C7_second_wage_source"]["legs"]["a"] for w in WAVES],
+        leg_b=[rob["waves"][w]["C7_second_wage_source"]["legs"]["b"] for w in WAVES],
+        leg_e=[rob["waves"][w]["C7_second_wage_source"]["legs"].get("e") for w in WAVES])
+    facts["leg_e_substantive_cell_denominator"] = dict(
+        value=legs["waves"]["nov2025"]["leg_e_substantive_denominator"]["D_L"],
+        label=("leg (e) on the substantive-cell denominator — the pre-registered sensitivity to the "
+               "work-share denominator (978 / 1,106 tasks; 35 tasks flip in each wave)"),
+        script="scripts/05_legs.py",
+        source_check="the leg does not fire under either denominator",
+        nov2025={k: legs["waves"]["nov2025"]["leg_e_substantive_denominator"][k]
+                 for k in ("D_L", "D_L_ci", "D_L_se", "D_L_mde", "r", "fired")},
+        feb2026={k: legs["waves"]["feb2026"]["leg_e_substantive_denominator"][k]
+                 for k in ("D_L", "D_L_ci", "D_L_se", "D_L_mde", "r", "fired")})
+    facts["leg_table_2010_grouping"] = dict(
+        value=legs["h3_2010"]["k_of_8_fired"],
+        label=("legs (a) and (b) on the 2010 O*NET-SOC grouping, reported beside the 2019 recode "
+               "(V1); the H3 verdict is the same"),
+        script="scripts/05_legs.py",
+        source_check=(f"persistent-leg rule declares H3: "
+                      f"{legs['h3_2010']['persistent_leg_rule_declares_H3']}; "
+                      f"{legs['h3_2010']['k_of_8_fired']} of {legs['h3_2010']['leg_tests']} fired"),
+        rows=[{k: r[k] for k in ("leg", "wave", "D_L", "D_L_ci", "D_L_se", "D_L_mde", "r", "fired")}
+              for r in legs["leg_table_2010"]])
+    facts["composition_of_the_top_quartile"] = dict(
+        value=legs["descriptive"]["nov2025"]["composition_figures"]["largest_software_tasks"]["q4_share_first"],
+        label=("what Q4 is made of: the largest software-modification tasks' share of its usage "
+               "mass, the top-minus-bottom contrast inside SOC-15 alone, and what is left of Q4 "
+               "once SOC-15 is excluded (referee-results item 12, reproduced from the build table)"),
+        script="scripts/05_legs.py",
+        source_check=("description of the sample's composition, in no decision rule: each figure is "
+                      "a re-weighting of the per-task shares already estimated for leg (a)"),
+        largest_software_tasks={w: legs["descriptive"][w]["composition_figures"]["largest_software_tasks"]
+                                for w in WAVES},
+        within_soc15_contrast={w: legs["descriptive"][w]["composition_figures"]["within_soc15_contrast"]
+                               for w in WAVES},
+        residual_after_soc15_exclusion={
+            w: legs["descriptive"][w]["composition_figures"]["residual_after_soc15_exclusion"]
+            for w in WAVES})
+    facts["seychelles_worst_case_bound"] = dict(
+        value=rob["waves"]["nov2025"]["X4_seychelles_worst_case_bound"]["D_worst_case"],
+        label=("the bound on November's un-cleanable Seychelles rate contamination: every SC "
+               "conversation on a top-quartile task counted as automation and every one on a "
+               "bottom-quartile task as augmentation, with the weights netted"),
+        script="scripts/06_robustness.py",
+        source_check=rob["waves"]["nov2025"]["X4_seychelles_worst_case_bound"]["construction"],
+        D_observed=rob["waves"]["nov2025"]["X4_seychelles_worst_case_bound"]["D_observed"],
+        D_weights_netted=rob["waves"]["nov2025"]["X4_seychelles_worst_case_bound"]["D_weights_netted"],
+        D_worst_case=rob["waves"]["nov2025"]["X4_seychelles_worst_case_bound"]["D_worst_case"])
+    # ---------------- referee-results item 17: the constant-D assumption behind P2 is falsified
+    dvals = np.array([head[w]["registered"]["D"]["coef"] for w in WAVES])
+    sevals = np.array([head[w]["registered"]["D"]["se"] for w in WAVES])
+    facts["between_window_dispersion_of_D"] = dict(
+        value=float(dvals.std(ddof=1)),
+        label=("the standard deviation of D across the three windows, against the mean "
+               "within-window SE — the empirical test of P2's constant-true-D assumption"),
+        script="scripts/09_results_and_figures.py",
+        source_check=("D = " + ", ".join(f"{d:+.4f}" for d in dvals)
+                      + f"; SD {dvals.std(ddof=1):.4f} pp against a mean SE of {sevals.mean():.4f} pp"),
+        mean_within_window_se=float(sevals.mean()),
+        ratio=float(dvals.std(ddof=1) / sevals.mean()),
+        consequence=("the constant-true-D assumption behind every P2 probability is falsified, so "
+                     "none of those probabilities is the probability of this outcome, and no "
+                     "probability under a non-constant D has been computed; the O-A label's "
+                     "'persistent' is about the sign only"))
     facts["country_mix_not_testable"] = dict(
         value=False, label="whether the country mix inside a task can be cleaned at this grain",
         script="scripts/06_robustness.py",
