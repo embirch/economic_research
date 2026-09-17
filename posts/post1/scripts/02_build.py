@@ -516,10 +516,13 @@ def build_wave(wave: str, verbose: bool = True) -> tuple[pd.DataFrame, dict]:
             t["uc_" + c] = (utab[c].reindex(t.task).values if c in utab.columns else 0.0)
         cells = t[["uc_" + c for c in UC_CATS]].sum(1)
         subst = t[["uc_" + c for c in UC_CATS if c != "not_classified"]].sum(1)
-        with np.errstate(invalid="ignore", divide="ignore"):
-            t["work_share"] = np.where(cells > 0, t.uc_work / cells, np.nan)
-            t["work_share_subst"] = np.where(subst > 0, t.uc_work / subst, np.nan)
         t["uc_only_nc"] = (cells > 0) & (subst == 0)
+        with np.errstate(invalid="ignore", divide="ignore"):
+            # a task whose only published cell is `not_classified` has an UNDEFINED work share and
+            # is dropped by the leg-(e) rule, never scored 0 (prereg P3(e)); its count and mass are
+            # printed and asserted.
+            t["work_share"] = np.where((cells > 0) & ~t.uc_only_nc, t.uc_work / cells, np.nan)
+            t["work_share_subst"] = np.where(subst > 0, t.uc_work / subst, np.nan)
         an = t[t.in_analysis]
         facts["uc_analysis_covered"] = int((cells[t.in_analysis.values] > 0).sum())
         facts["uc_only_nc_analysis"] = int(an.uc_only_nc.sum())

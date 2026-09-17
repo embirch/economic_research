@@ -224,3 +224,61 @@ model. Both are computed here: registered 0.1444 / 0.1404 / 0.1399 pp, pooled 0.
 still more than twice the MDE), and the realised SE and MDE are printed beside every coefficient as
 the pre-registration requires. The SE remains a **lower bound** under within-task dependence
 (P1(a)), which no public file lets us correct.
+
+## 2026-09-17 · Stage 2 step 5c — `04_second_implementation.py`: the second code path, the bootstrap, the recoveries
+
+**Run:** `posts/post1/scripts/04_second_implementation.py` (output
+`posts/post1/outputs/checks/04_second_implementation.out.txt`, numbers
+`posts/post1/data/processed/second_implementation.json`).
+
+**What it showed.** The second path — p_i from the `_pct` rows renormalised, w_i from
+`onet_task_count` renormalised, the wage built from the **SOC side** (C6 → C5 → task text), the
+quartiles cut by an independent lexsort-and-cumsum route, D in pooled form, Δ_W as
+Cov_w(wage, p)/E_w[wage], the slope as a weighted covariance ÷ a weighted variance and again through
+`statsmodels` WLS — selects the **same analysis set** (set difference 0), the same quartile labels
+(0 differences), an identical task→wage map (0 differences), and reproduces D, Δ_W and the slope to
+**1.8e-14 pp or better** in all three waves. The published `_pct` rows turn out to be exact, not
+rounded (max |Δp| 2.1e-14), so P6's fallback 0.01 pp clause was not needed. The seeded parametric
+bootstrap (10,000 draws) reproduces the closed-form SEs to 0.04–0.93% and covers at
+95.0–95.3%. Synthetic recovery: D recovered exactly at implanted gaps of 0 / 0.5 / 1 / 3 pp with
+coverage 94.4–95.4% over 2,000 replications and the zero case's interval covering zero; Δ_W and the
+slope recovered to 3e-15; leg (b) returns the implanted **within-group** average +0.1655 while the
+total gap is +16.2423 (the property the leg is run for) and the bottom-only group is reported as not
+identified, never zeroed; leg (e)'s threshold selects the implanted set and drops the
+only-`not_classified` tasks rather than scoring them 0; the design-based bootstrap SE is within
+3.6% of its analytic value; the permutation test's size is **4.93%** on 1,500 independent trials;
+Kish N exact.
+
+**Decided.** The headline numbers are confirmed by an independent implementation, so scripts 05 and
+06 estimate every leg and every robustness cut through the primary path and compare against this
+script's stored leg values. Check block passed.
+
+## 2026-09-17 · DEVIATION — P6's 2% SE-agreement tolerance is unattainable for the ratio r_L; the half judgement is read from D_L − ½D
+
+**Pre-registered:** P6's last two rows require the retained fraction r_L = D_L/D to agree between the
+delta method and the parametric bootstrap "to 2%". **What the data does:** D is +1.38 pp (Aug) and
++0.67 pp (Feb), so r_L is a ratio with a small denominator; its sampling distribution is
+heavy-tailed and the delta method understates the bootstrap SE by 5% (Aug leg (b): 0.450 vs 0.473)
+and by up to **21%** (Feb leg (a): 3.93 vs 4.75). No implementation can make them agree to 2%: the
+tolerance was mis-specified, not the code.
+
+**Both are run and both are reported.** The tolerance actually asserted for r_L is 25%, and the
+statistic whose agreement **is** asserted at 2% is the **linear** contrast **D_L − ½D**, which the
+pre-registration already requires beside every leg and whose closed-form SE the bootstrap reproduces
+to 0.1–2.0%. This is the reading the referee's carried item 10 asked for (the half judgement read
+from D_L − ½D, r_L descriptive with its instability named); r_L and both of its SEs go into
+`results.json` with the gap between them. **The declaration itself is unaffected:** §9(3) declares a
+leg on the point estimates, and the point estimates are identical across implementations.
+
+## 2026-09-17 · DEVIATION — recovery test 7's size band widened from ±1 pp to ±2 pp, with the reason
+
+Prereg's synthetic test 7 asks the permutation null to reject at "5.0% ± 1 pp" under a zero
+gradient. The size estimate itself is a Monte Carlo quantity: at 1,500 independent trials its
+binomial error is 0.6 pp, and the seed-to-seed spread is about ±1.2 pp (three 1,000-trial runs gave
+5.7 / 3.5 / 5.8%) because the permutation structure and the 29 / 31 quartile sizes are discrete.
+The check therefore asserts ±2 pp and prints the Monte Carlo error beside the estimate; the realised
+size is **4.93%** on 1,500 trials. Two implementation notes recorded with it: the test is the exact
+two-sided permutation p-value (1 + #{|perm| ≥ |obs|})/(B + 1), not a quantile-band comparison (the
+band is noisy at small B and is reported as a band, not as the test); and the wage vector and the
+outcome are re-drawn in every trial, so the trials are independent. The placebo is in no decision
+rule.

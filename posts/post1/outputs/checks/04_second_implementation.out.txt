@@ -1,0 +1,49 @@
+================================================================================================
+SECOND IMPLEMENTATION — every confirmatory quantity on the second code path
+  [aug2025] tasks primary 1802 / second 1802 (set difference 0); max |Δp| 2.13e-14, max |Δw| 6.25e-17, wage-map differences 0, quartile label differences 0
+     D  primary +1.383645503  second +1.383645503  |Δ| 9.55e-15
+     Δ_W primary -0.022183525  second -0.022183525  |Δ| 3.13e-15
+     slope primary -0.050717657  cov/var -0.050717657  WLS -0.050717657  |Δ|max 5.16e-15
+     bootstrap D        SE closed 0.1444  boot 0.1436  rel 0.0057  coverage 95.29%
+     bootstrap Delta_W  SE closed 0.0179  boot 0.0178  rel 0.0030  coverage 95.02%
+     bootstrap slope    SE closed 0.0409  boot 0.0408  rel 0.0030  coverage 95.02%
+     leg (a) second path D_L -13.0319 [-13.4680, -12.5957]  r -9.4185  SE(r) delta 1.0932 boot 1.1478
+     leg (b) second path D_L -4.1989 [-4.7094, -3.6884]  r -3.0347  SE(r) delta 0.4497 boot 0.4735
+  [nov2025] tasks primary 2075 / second 2075 (set difference 0); max |Δp| 2.13e-14, max |Δw| 8.33e-17, wage-map differences 0, quartile label differences 0
+     D  primary +7.385412826  second +7.385412826  |Δ| 1.78e-14
+     Δ_W primary +0.835168487  second +0.835168487  |Δ| 9.99e-16
+     slope primary +1.765710232  cov/var +1.765710232  WLS +1.765710232  |Δ|max 1.07e-14
+     bootstrap D        SE closed 0.1404  boot 0.1401  rel 0.0015  coverage 95.22%
+     bootstrap Delta_W  SE closed 0.0179  boot 0.0179  rel 0.0004  coverage 95.01%
+     bootstrap slope    SE closed 0.0379  boot 0.0379  rel 0.0004  coverage 95.01%
+     leg (a) second path D_L -10.4701 [-10.8805, -10.0598]  r -1.4177  SE(r) delta 0.0505 boot 0.0497
+     leg (b) second path D_L -1.8716 [-2.4246, -1.3187]  r -0.2534  SE(r) delta 0.0409 boot 0.0406
+     leg (e) second path D_L +3.7160 [+3.2920, +4.1401]  r +0.5032  SE(r) delta 0.0241 boot 0.0240
+  [feb2026] tasks primary 2188 / second 2188 (set difference 0); max |Δp| 2.13e-14, max |Δw| 2.08e-17, wage-map differences 0, quartile label differences 0
+     D  primary +0.668874313  second +0.668874313  |Δ| 6.44e-15
+     Δ_W primary -0.146628836  second -0.146628836  |Δ| 4.16e-16
+     slope primary -0.284305777  cov/var -0.284305777  WLS -0.284305777  |Δ|max 8.33e-15
+     bootstrap D        SE closed 0.1399  boot 0.1392  rel 0.0047  coverage 95.19%
+     bootstrap Delta_W  SE closed 0.0188  boot 0.0187  rel 0.0093  coverage 95.34%
+     bootstrap slope    SE closed 0.0365  boot 0.0362  rel 0.0093  coverage 95.34%
+     leg (a) second path D_L -11.8952 [-12.2763, -11.5140]  r -17.7839  SE(r) delta 3.9301 boot 4.7450
+     leg (b) second path D_L -6.2169 [-6.6923, -5.7415]  r -9.2946  SE(r) delta 2.1738 boot 2.6173
+     leg (e) second path D_L +2.7916 [+2.2954, +3.2877]  r +4.1735  SE(r) delta 0.7265 boot 0.8606
+
+================================================================================================
+SYNTHETIC-DATA RECOVERY — one per estimator the post relies on
+  D, implanted gap_0.0: truth +0.0000 point +0.0000 |err|/SE 0.000 coverage 94.40% zero covered True
+  D, implanted gap_0.5: truth +0.5000 point +0.5000 |err|/SE 0.000 coverage 95.40% zero covered False
+  D, implanted gap_1.0: truth +1.0000 point +1.0000 |err|/SE 0.000 coverage 95.10% zero covered False
+  D, implanted gap_3.0: truth +3.0000 point +3.0000 |err|/SE 0.000 coverage 94.35% zero covered False
+  Δ_W: truth 3.539561883 point 3.539561883 |err| 8.88e-15; zero case -6.91e-15
+  slope: truth 1.25 point 1.250000000 |err| 3.11e-15; sign correct in 100.0% of noisy replications
+  leg (b): implanted within-group average +0.1655, estimator +0.1655 (total gap +16.2423); identified ['11', '15', '25', '41'], not identified ['53'] (reported, never zeroed)
+  leg (e): 133 of 300 selected, only-`not_classified` excluded True, dropped not zeroed True, flips 15
+  model (b) bootstrap: SE 1.3846 against analytic 1.4366 (rel 0.0362); MDE 3.8769
+  permutation null: size 4.93% of 1500 trials; power at a large implanted gradient 100.00%
+  Kish N: truth 26.666666666666668 point 26.666666666666668 ((Σw)²/Σw² = 40²/60 = 26.6667 for ten weights of 2 and twenty of 1)
+
+wrote posts/post1/data/processed/second_implementation.json
+
+CHECK BLOCK PASSED — 04_second_implementation.py

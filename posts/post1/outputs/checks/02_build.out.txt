@@ -49,7 +49,7 @@
   groups (2019 recode, A2): present 22; containing Q1 and Q4 10; spanning all four 9 (2010: 9 / 8)
   C9 use_case rows 13,908 (facets with 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case'])
      coverage of the analysis set 2075 of 2075; only-`not_classified` 29 tasks (0.0779 pp); work-dominant 943 tasks, 48.9382 pp = 54.38% of analysis mass; substantive-cell rule 978 tasks, flips 35
-     work share by wage quartile Q1->Q4 [32.8, 48.34, 45.99, 60.82]
+     work share by wage quartile Q1->Q4 [32.83, 48.39, 46.02, 60.89]
   C8 Seychelles: usage 24,715 (2.47181%), task nodes 67, onet_task::collaboration rows 0; analysis-set tasks with SC > 10% of the global count 23 (11.594 pp), > 20% 14 (1.966 pp); max share 64.3%
   C10 reach: 1843 of 2075 analysis-set tasks (88.6343 of 89.9892 pp = 98.49%); filtered == 1.0 on 251 (1.8378 pp)
   top-10 concentration 24.2471 pp of the wave = 25.9288% of named mass
@@ -78,7 +78,7 @@
   groups (2019 recode, A2): present 22; containing Q1 and Q4 9; spanning all four 8 (2010: 7 / 6)
   C9 use_case rows 14,430 (facets with 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case'])
      coverage of the analysis set 2188 of 2188; only-`not_classified` 21 tasks (0.0527 pp); work-dominant 1071 tasks, 47.4364 pp = 52.86% of analysis mass; substantive-cell rule 1106 tasks, flips 35
-     work share by wage quartile Q1->Q4 [29.05, 51.14, 43.97, 60.54]
+     work share by wage quartile Q1->Q4 [29.06, 51.19, 43.99, 60.56]
   C10 reach: 1904 of 2188 analysis-set tasks (88.0125 of 89.7348 pp = 98.08%); filtered == 1.0 on 286 (2.3135 pp)
   top-10 concentration 19.4410 pp of the wave = 20.9107% of named mass
 ==============================================================================
