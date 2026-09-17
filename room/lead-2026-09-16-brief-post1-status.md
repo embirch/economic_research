@@ -33,3 +33,15 @@ margin from ±3 pp to **±1 pp**, carried into H4 and §12. §8 also now states 
 rule — wage on the shipped 2010 codes, occupational groupings on the 2019 recode — which post3 and
 post8 cite. §9(3)(b) restated to the 7 / 8 / 6 groups that span the quartiles; question, title,
 contribution and hypotheses unchanged. Brief at 398 lines.
+
+---
+
+**2026-09-17 · design pass on the referee's BLOCK** (`posts/post1/notes/referee-brief.md`, e2affe4), items 1–12, rewritten
+from the record. **New title (human's decision, option A): "Is AI delegated more on low-wage work or on high-wage work?"**;
+body rule "the wage of the work". Item 1: one size criterion — a pre-registered smallest effect of interest δ = 1 pp — and
+an ordered five-step rule in §9(1) partitioning the outcomes between H1, H2, O-A (persistent gradient below the margin),
+H4 and O-B (no persistent gradient), each with a §12 ending; H3 re-keyed to the fraction of D retained; the permutation
+null demoted to a §10 task-level bound. Item 2: use case named as the most direct composition rival, with a confirmatory
+work-mix leg and a work-dominant re-estimate (C9, Nov/Feb only). Items 4–12 applied, including the allocation statement
+and the matched-window non-reproduction. Nothing declined. **Steward: please confirm C9 and C10 at column level before the
+pre-registration.** 414 lines.
