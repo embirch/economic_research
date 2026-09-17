@@ -1,0 +1,69 @@
+================================================================================================
+D, the usage-weighted top-minus-bottom wage-quartile difference in the automation share (pp)
+  model (a), conversation-level binomial with the task mix held fixed; SE is a LOWER BOUND
+  under unmeasurable within-task dependence (prereg P1(a)). z = 1.959964, MDE = 2.8 × SE.
+
+  [pre-registered quartile rule (ties split by order)]
+    aug2025  D  +1.3836  [+1.1006, +1.6667]  SE 0.1444  MDE 0.4044   tasks 960  conversations 410,494   (pooled-binomial SE 0.1557)
+    nov2025  D  +7.3854  [+7.1103, +7.6605]  SE 0.1404  MDE 0.3930   tasks 1102  conversations 422,953   (pooled-binomial SE 0.1534)
+    feb2026  D  +0.6689  [+0.3947, +0.9431]  SE 0.1399  MDE 0.3917   tasks 1131  conversations 422,207   (pooled-binomial SE 0.1539)
+    §9(1) ordered chain, first match winning -> OWNER = O-A
+      step (1) all lower bounds > +1 pp: False | step (2) all upper bounds < −1 pp: False | step (3) all signed, zero excluded: True | step (4) all inside ±1 pp: False
+  [corrected quartile rule (boundary wage shared in proportion)]
+    aug2025  D  +0.5434  [+0.2671, +0.8196]  SE 0.1409  MDE 0.3946   tasks 1040  conversations 442,256   (pooled-binomial SE 0.1507)
+    nov2025  D  +7.1793  [+6.9116, +7.4470]  SE 0.1366  MDE 0.3824   tasks 1191  conversations 460,999   (pooled-binomial SE 0.1474)
+    feb2026  D  +0.3387  [+0.0696, +0.6077]  SE 0.1373  MDE 0.3843   tasks 1168  conversations 444,026   (pooled-binomial SE 0.1502)
+    §9(1) ordered chain, first match winning -> OWNER = O-A
+      step (1) all lower bounds > +1 pp: False | step (2) all upper bounds < −1 pp: False | step (3) all signed, zero excluded: True | step (4) all inside ±1 pp: False
+
+================================================================================================
+Quartile automation shares (pre-registered quartile rule), `none` and `not_classified` beside each
+  [aug2025]  analysis set 1802 tasks, 818,673 classified conversations, Kish 94.4
+     Q1  share +53.0510  [+52.8482, +53.2539]  SE 0.1035  MDE 0.2898  none 3.5922  not_classified 3.6443  mean wage $19.82  Kish 62.4
+     Q2  share +47.0082  [+46.8033, +47.2132]  SE 0.1046  MDE 0.2928  none 1.8661  not_classified 3.0277  mean wage $31.02  Kish 43.4
+     Q3  share +49.8439  [+49.6456, +50.0422]  SE 0.1012  MDE 0.2833  none 1.8905  not_classified 2.1333  mean wage $40.45  Kish 29.3
+     Q4  share +54.4347  [+54.2373, +54.6321]  SE 0.1007  MDE 0.2820  none 1.2136  not_classified 2.2518  mean wage $50.12  Kish 10.6
+  [nov2025]  analysis set 2075 tasks, 854,432 classified conversations, Kish 83.4
+     Q1  share +46.5846  [+46.3837, +46.7855]  SE 0.1025  MDE 0.2871  none 3.1176  not_classified 4.3892  mean wage $18.99  Kish 55.0
+     Q2  share +41.3192  [+41.1239, +41.5145]  SE 0.0996  MDE 0.2790  none 1.0825  not_classified 3.5573  mean wage $30.66  Kish 38.3
+     Q3  share +45.9792  [+45.7885, +46.1699]  SE 0.0973  MDE 0.2724  none 1.8887  not_classified 2.3737  mean wage $39.97  Kish 29.0
+     Q4  share +53.9700  [+53.7821, +54.1579]  SE 0.0959  MDE 0.2684  none 1.2252  not_classified 2.5529  mean wage $50.96  Kish 8.9
+  [feb2026]  analysis set 2188 tasks, 848,716 classified conversations, Kish 125.7
+     Q1  share +48.8471  [+48.6491, +49.0451]  SE 0.1010  MDE 0.2829  none 3.4187  not_classified 4.1771  mean wage $17.99  Kish 51.0
+     Q2  share +41.5513  [+41.3577, +41.7448]  SE 0.0988  MDE 0.2765  none 1.1043  not_classified 3.9779  mean wage $29.56  Kish 50.5
+     Q3  share +43.5149  [+43.3230, +43.7068]  SE 0.0979  MDE 0.2742  none 2.1670  not_classified 2.6060  mean wage $39.36  Kish 37.2
+     Q4  share +49.5160  [+49.3263, +49.7056]  SE 0.0967  MDE 0.2709  none 1.1390  not_classified 3.0981  mean wage $50.82  Kish 16.4
+
+================================================================================================
+Δ_W (wage-weighted minus unweighted usage-weighted automation share) and the continuous slope
+  aug2025  Δ_W  -0.0222  [-0.0572, +0.0129]  SE 0.0179  MDE 0.0501   (wage-weighted 51.0936 − unweighted 51.1158)
+  nov2025  Δ_W  +0.8352  [+0.8001, +0.8703]  SE 0.0179  MDE 0.0501   (wage-weighted 47.7997 − unweighted 46.9645)
+  feb2026  Δ_W  -0.1466  [-0.1836, -0.1097]  SE 0.0188  MDE 0.0527   (wage-weighted 45.7103 − unweighted 45.8569)
+  aug2025  slope per +$10/hr  -0.0507  [-0.1309, +0.0294]  SE 0.0409  MDE 0.1145   significant at 5%: False   (sign and significance only; in no decision rule)
+  nov2025  slope per +$10/hr  +1.7657  [+1.6915, +1.8399]  SE 0.0379  MDE 0.1060   significant at 5%: True   (sign and significance only; in no decision rule)
+  feb2026  slope per +$10/hr  -0.2843  [-0.3559, -0.2127]  SE 0.0365  MDE 0.1023   significant at 5%: True   (sign and significance only; in no decision rule)
+
+================================================================================================
+The five pattern shares by quartile (description, in no decision rule; P5's clause)
+  [aug2025]  augmentation patterns weakly increasing across quartiles: 0 of 3
+     directive         44.899   43.721   34.677   37.915
+     feedback loop      8.152    3.287   15.167   16.519
+     learning          22.578   19.263   25.243   18.129
+     task iteration    19.831   30.343   20.074   23.566
+     validation         4.540    3.386    4.840    3.870
+  [nov2025]  augmentation patterns weakly increasing across quartiles: 0 of 3
+     directive         37.490   37.490   27.820   27.991
+     feedback loop      9.095    3.829   18.160   25.979
+     learning          23.877   16.415   24.269   17.466
+     task iteration    25.178   38.691   24.362   24.821
+     validation         4.360    3.575    5.390    3.743
+  [feb2026]  augmentation patterns weakly increasing across quartiles: 0 of 3
+     directive         39.961   37.272   29.085   30.033
+     feedback loop      8.886    4.279   14.430   19.483
+     learning          25.333   18.744   26.631   22.046
+     task iteration    21.932   35.942   24.693   24.125
+     validation         3.888    3.763    5.161    4.313
+
+wrote posts/post1/data/processed/headline.json
+
+CHECK BLOCK PASSED — 03_headline.py

@@ -185,3 +185,42 @@ A2's SOC-15 drop mass is now 43.00 / 39.75 / 35.55% of analysis mass on the 2019
 40.04 / 37.29 / 33.11% on 2010, against the A1 equal-split shares of 43.02 / 39.82 / 35.70% (2019)
 and 40.04 / 37.29 / 33.26% (2010) and the recorded 39.86 / 37.12 / 33.11% (2010, MULTI bucket).
 Downstream: leg (a) is run on the 2019 recode as primary (V1) with the 2010 grouping beside it.
+
+## 2026-09-17 · Stage 2 step 5b — `03_headline.py`: D, Δ_W, the slope, and the ordered chain
+
+**Run:** `posts/post1/scripts/03_headline.py` (output
+`posts/post1/outputs/checks/03_headline.out.txt`, numbers
+`posts/post1/data/processed/headline.json`). The §9(1) chain is imported from `01_power_rules.py`,
+so the code that declares the owner is the code whose power was pre-registered.
+
+**What it showed.** On the pre-registered quartile rule, D = **+1.3836** [+1.1006, +1.6667],
+**+7.3854** [+7.1103, +7.6605] and **+0.6689** [+0.3947, +0.9431] pp (Aug / Nov / Feb), SE
+0.1444 / 0.1404 / 0.1399 pp and MDE 0.404 / 0.393 / 0.392 pp; the ordered chain gives step (1)
+false, step (2) false, **step (3) true → OWNER = O-A**. On the corrected quartile rule D =
++0.5434 / +7.1793 / +0.3387 pp and the owner is **O-A** as well. Δ_W = −0.0222 / +0.8352 / −0.1466
+pp (its own intervals, MDE 0.05); the slope per +$10/hr is −0.0507 (not significant) / +1.7657 /
+−0.2843 pp, so the continuous companion's sign disagrees across waves. The quartile shares are
+**not monotone**: 53.05 / 47.01 / 49.84 / 54.43 (Aug), 46.58 / 41.32 / 45.98 / 53.97 (Nov),
+48.85 / 41.55 / 43.51 / 49.52 (Feb) — a U shape, which is why Δ_W is near zero while D is positive,
+and 0 of 3 augmentation patterns are weakly increasing across quartiles in any wave (P5's clause
+fails; the `none` share falls 3.6 → 1.2, 3.1 → 1.2, 3.4 → 1.1 from Q1 to Q4).
+
+**Decided.** The owner is read off the pre-registered rule and is **O-A** under both quartile
+readings, so the tie deviation does not change the owner; both sets of three intervals go into
+`results.json`. Check block passed (D equals the difference of the two quartile shares it is built
+from; the five pattern shares sum to 100 in every quartile; directive + feedback loop equals the
+automation share; each quartile holds a quarter of the usage mass; mean wage rises across
+quartiles; MDE = 2.8 × SE exactly; the imported chain still resolves the referee's problem triples).
+
+## 2026-09-17 · Note on the variance model — the registered formula and the steward's arithmetic agree to 0.01–0.02 pp
+
+The pre-registered formula (P1(a)) is Var(D) = Σ_{i∈Q4}(w_i/W_4)² p_i(1−p_i)/n_i + the same over Q1,
+i.e. the variance of the **usage-weighted** difference. `data/replication/post1_variance_mde.py`
+computes model (a) as a pooled binomial on each quartile's total classified conversations at that
+quartile's aggregate share, which ignores the usage weights: a different statistic on the same
+model. Both are computed here: registered 0.1444 / 0.1404 / 0.1399 pp, pooled 0.1557 / 0.1534 /
+0.1539 pp, against the recorded 0.151 / 0.148 / 0.154 pp. The realised MDE is therefore
+0.40 / 0.39 / 0.39 pp against the pre-registered 0.42 / 0.42 / 0.43 pp — no rule moves (δ = 1 pp is
+still more than twice the MDE), and the realised SE and MDE are printed beside every coefficient as
+the pre-registration requires. The SE remains a **lower bound** under within-task dependence
+(P1(a)), which no public file lets us correct.
