@@ -1,0 +1,56 @@
+C5 keys 18,428; C6 priced codes 1,084; BLS-EP wage rows 825, emp rows 831; crosswalk 2010 codes 1110
+====================================================================================================
+[aug2025] named 2616 (91.8727 pp); analysis set 1802 tasks, 89.2530 pp, 818,673 classified conversations   (analyst: 1802 tasks, 89.2530 pp, 818,673)
+  quartile bounds $25.78 / $35.56 / $43.40   (analyst ['$25.78', '$35.56', '$43.40'])
+  Q1 600 tasks Kish 62.4; Q4 360 tasks Kish 10.6; SOC-15 share of Q4 mass 73.06%
+  D  (registered rule)  mine +1.3836 [+1.1006, +1.6667] se 0.1444
+                        analyst +1.3836 [+1.1006, +1.6667] se 0.1444   |Δ| = 6.66e-16 pp, |Δse| = 0.00e+00
+  D  (fractional rule)  mine +0.5434 [+0.2671, +0.8196] se 0.1409   analyst +0.5434   |Δ| = 2.00e-15
+  Δ_W                   mine -0.0222 [-0.0572, +0.0129] se 0.0179
+                        analyst -0.0222 [-0.0572, +0.0129] se 0.0179   |Δ| = 3.75e-16 pp
+  leg (a) SOC-15 out    mine -13.0319 [-13.4680, -12.5957] se 0.2226
+                        analyst -13.0319 [-13.4680, -12.5957] se 0.2226   |Δ| = 5.33e-15 pp
+  -- red-team checks --
+  C7 prices 26.4% of Q4 mass; SOC-15 is 7.6% of the C7-priced Q4 mass; C7 prices 10.9% of SOC-15 analysis mass
+  C7 rebuild D (quartiles on C7 wage) mine -15.5899 [-15.9665, -15.2133] se 0.1921   analyst -15.5899; SOC-15 share of the C7 Q4 = 8.5%
+  modal-holder wage rule D mine +0.3172 [+0.0341, +0.6003] se 0.1444   analyst +0.3172
+====================================================================================================
+[nov2025] named 3168 (93.5144 pp); analysis set 2075 tasks, 89.9892 pp, 854,432 classified conversations   (analyst: 2075 tasks, 89.9892 pp, 854,432)
+  quartile bounds $25.78 / $34.87 / $43.40   (analyst ['$25.78', '$34.87', '$43.40'])
+  Q1 699 tasks Kish 55.0; Q4 403 tasks Kish 8.9; SOC-15 share of Q4 mass 71.26%
+  D  (registered rule)  mine +7.3854 [+7.1103, +7.6605] se 0.1404
+                        analyst +7.3854 [+7.1103, +7.6605] se 0.1404   |Δ| = 0.00e+00 pp, |Δse| = 0.00e+00
+  D  (fractional rule)  mine +7.1793 [+6.9116, +7.4470] se 0.1366   analyst +7.1793   |Δ| = 2.22e-14
+  Δ_W                   mine +0.8352 [+0.8001, +0.8703] se 0.0179
+                        analyst +0.8352 [+0.8001, +0.8703] se 0.0179   |Δ| = 5.55e-16 pp
+  leg (a) SOC-15 out    mine -10.4701 [-10.8805, -10.0598] se 0.2094
+                        analyst -10.4701 [-10.8805, -10.0598] se 0.2094   |Δ| = 5.33e-15 pp
+  leg (e) work-dominant mine +3.7160 [+3.2920, +4.1401] se 0.2164   analyst +3.7160 se 0.2164   |Δ| = 1.33e-15 pp
+  -- red-team checks --
+  C7 prices 27.7% of Q4 mass; SOC-15 is 6.4% of the C7-priced Q4 mass; C7 prices 10.5% of SOC-15 analysis mass
+  C7 rebuild D (quartiles on C7 wage) mine -11.8901 [-12.2565, -11.5236] se 0.1870   analyst -11.8901; SOC-15 share of the C7 Q4 = 7.0%
+  modal-holder wage rule D mine +7.7044 [+7.4289, +7.9799] se 0.1406   analyst +7.7044
+  X5 drop SC>10%: 23 tasks, 8.913 pp of Q4 mass; D mine -4.5815 [-4.9003, -4.2628] se 0.1626   analyst -4.5815
+====================================================================================================
+[feb2026] named 3258 (92.9714 pp); analysis set 2188 tasks, 89.7348 pp, 848,716 classified conversations   (analyst: 2188 tasks, 89.7348 pp, 848,716)
+  quartile bounds $24.00 / $34.45 / $43.40   (analyst ['$24.00', '$34.45', '$43.40'])
+  Q1 649 tasks Kish 51.0; Q4 482 tasks Kish 16.4; SOC-15 share of Q4 mass 65.46%
+  D  (registered rule)  mine +0.6689 [+0.3947, +0.9431] se 0.1399
+                        analyst +0.6689 [+0.3947, +0.9431] se 0.1399   |Δ| = 2.48e-14 pp, |Δse| = 2.78e-17
+  D  (fractional rule)  mine +0.3387 [+0.0696, +0.6077] se 0.1373   analyst +0.3387   |Δ| = 1.17e-15
+  Δ_W                   mine -0.1466 [-0.1836, -0.1097] se 0.0188
+                        analyst -0.1466 [-0.1836, -0.1097] se 0.0188   |Δ| = 6.66e-16 pp
+  leg (a) SOC-15 out    mine -11.8952 [-12.2763, -11.5140] se 0.1945
+                        analyst -11.8952 [-12.2763, -11.5140] se 0.1945   |Δ| = 0.00e+00 pp
+  leg (e) work-dominant mine +2.7916 [+2.2954, +3.2877] se 0.2531   analyst +2.7916 se 0.2531   |Δ| = 1.78e-15 pp
+  -- red-team checks --
+  C7 prices 31.8% of Q4 mass; SOC-15 is 5.9% of the C7-priced Q4 mass; C7 prices 11.6% of SOC-15 analysis mass
+  C7 rebuild D (quartiles on C7 wage) mine -16.7141 [-17.0612, -16.3670] se 0.1771   analyst -16.7141; SOC-15 share of the C7 Q4 = 6.3%
+  modal-holder wage rule D mine -0.1701 [-0.4438, +0.1037] se 0.1397   analyst -0.1701
+====================================================================================================
+§9(1) ordered chain applied to the ANALYST's three intervals (results.json facts.declared_owner.intervals):
+  step1 all lower > +1: False; step2 all upper < -1: False; step3 all same-signed excl. 0: True; step4 all inside ±1: False
+  OWNER (mine) = O-A; analyst declared O-A
+  OWNER on my own re-derived intervals = O-A
+  leg (a) fires by wave (mine): [np.True_, np.True_, np.True_]  → persistent-leg rule on leg (a) alone: True
+  leg (e) fires by wave (mine): [False, False]

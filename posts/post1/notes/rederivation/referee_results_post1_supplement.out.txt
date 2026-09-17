@@ -1,0 +1,42 @@
+================================================================================================
+aug2025
+  leg (b) Q1&Q4-identified (primary)           -4.1989 [-4.7094, -3.6884] se 0.2605  groups 10 ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41']   analyst -4.1989 se 0.2605  |Δ| = 0.0e+00
+  leg (b) all-four subset (P3(b) 'beside it')  -4.0541 [-4.5703, -3.5379] se 0.2634  groups 8 ['11', '13', '15', '17', '19', '25', '29', '41']
+  within SOC-15 alone: Q4 p 60.24 (74 tasks, 16.55 pp) − Q1 p 60.38 (24 tasks, 3.42 pp) = -0.14 pp
+  Q4: 360 tasks, 22.65 pp, Kish 10.6; SOC-15 73.1% of its mass; three largest tasks 11.40 pp
+  Q4 without SOC-15: 286 tasks, 6.10 pp, Kish 98.0, p 38.69
+  Q1 without SOC-15: 576 tasks, 18.89 pp, Kish 74.7, p 51.72
+  Q4 residual by major group (top 5): 11: 2.11 pp, n 102, p 43.1; 19: 1.32 pp, n 52, p 34.88; 17: 1.06 pp, n 51, p 45.56; 29: 0.89 pp, n 57, p 27.33; 23: 0.41 pp, n 10, p 34.89
+  Q1 by major group (top 5): 43: 4.34 pp, n 120, p 66.46; 25: 4.12 pp, n 56, p 39.5; 15: 3.42 pp, n 24, p 60.38; 19: 1.58 pp, n 39, p 49.57; 27: 1.49 pp, n 46, p 56.66
+  Q4 three largest: 'write new programs or modify existing programs to meet …' w 4.87 p 66.0 g 15 $43.40 | 'modify existing software to correct errors, allow it to…' w 3.82 p 69.6 g 15 $49.82 | 'modify existing software to correct errors, to adapt it…' w 2.71 p 69.8 g 15 $52.88
+================================================================================================
+nov2025
+  leg (b) Q1&Q4-identified (primary)           -1.8716 [-2.4246, -1.3187] se 0.2821  groups 10 ['11', '13', '15', '17', '19', '23', '25', '27', '29', '41']   analyst -1.8716 se 0.2821  |Δ| = 1.6e-15
+  leg (b) all-four subset (P3(b) 'beside it')  -1.7940 [-2.3520, -1.2361] se 0.2847  groups 9 ['11', '13', '15', '17', '19', '25', '27', '29', '41']
+  within SOC-15 alone: Q4 p 61.72 (76 tasks, 16.04 pp) − Q1 p 55.25 (23 tasks, 3.03 pp) = +6.47 pp
+  Q4: 403 tasks, 22.51 pp, Kish 8.9; SOC-15 71.3% of its mass; three largest tasks 12.21 pp
+  Q4 without SOC-15: 327 tasks, 6.47 pp, Kish 85.5, p 34.75
+  Q1 without SOC-15: 676 tasks, 19.28 pp, Kish 56.6, p 45.22
+  Q4 residual by major group (top 5): 11: 2.59 pp, n 122, p 38.44; 19: 1.14 pp, n 56, p 29.88; 17: 1.08 pp, n 58, p 41.11; 29: 0.9 pp, n 61, p 23.38; 23: 0.3 pp, n 12, p 38.06
+  Q1 by major group (top 5): 25: 4.7 pp, n 66, p 38.15; 43: 4.22 pp, n 149, p 56.54; 15: 3.03 pp, n 23, p 55.25; 27: 1.83 pp, n 68, p 47.77; 41: 1.56 pp, n 55, p 42.09
+  Q4 three largest: 'modify existing software to correct errors, allow it to…' w 5.97 p 74.1 g 15 $49.82 | 'write new programs or modify existing programs to meet …' w 3.67 p 63.2 g 15 $43.40 | 'modify existing software to correct errors, to adapt it…' w 2.57 p 73.7 g 15 $52.88
+  SC>10%: 23 tasks, 11.594 pp; in Q4 8.913 pp (5 tasks); SOC-15 among them 9; usage-weighted p of the SC>10% tasks 72.7
+  the two largest SC>10% tasks are the two 'modify existing software to correct errors…' tasks (8.54 pp of Q4's 22.51 pp, p 74.0); in Aug and Feb the same two tasks carry p 69.6/69.8 and 72.4/72.0 — the X5 flip removes the two largest coding tasks, not only Seychelles
+================================================================================================
+feb2026
+  leg (b) Q1&Q4-identified (primary)           -6.2169 [-6.6923, -5.7415] se 0.2426  groups 9 ['11', '13', '15', '19', '23', '25', '27', '29', '41']   analyst -6.2169 se 0.2426  |Δ| = 8.9e-16
+  leg (b) all-four subset (P3(b) 'beside it')  -6.0851 [-6.5615, -5.6087] se 0.2431  groups 8 ['11', '13', '15', '19', '25', '27', '29', '41']
+  within SOC-15 alone: Q4 p 56.64 (127 tasks, 14.74 pp) − Q1 p 55.83 (14 tasks, 2.63 pp) = +0.80 pp
+  Q4: 482 tasks, 22.51 pp, Kish 16.4; SOC-15 65.5% of its mass; three largest tasks 8.83 pp
+  Q4 without SOC-15: 355 tasks, 7.77 pp, Kish 83.3, p 36.02
+  Q1 without SOC-15: 635 tasks, 19.73 pp, Kish 53.6, p 47.91
+  Q4 residual by major group (top 5): 11: 3.16 pp, n 137, p 39.32; 19: 1.29 pp, n 56, p 28.84; 17: 1.09 pp, n 59, p 39.55; 29: 0.97 pp, n 61, p 21.29; 13: 0.33 pp, n 9, p 56.22
+  Q1 by major group (top 5): 43: 5.23 pp, n 152, p 58.37; 25: 3.33 pp, n 48, p 36.53; 15: 2.63 pp, n 14, p 55.83; 41: 2.43 pp, n 51, p 54.51; 27: 1.38 pp, n 62, p 43.84
+  Q4 three largest: 'modify existing software to correct errors, allow it to…' w 4.16 p 72.4 g 15 $49.82 | 'write new programs or modify existing programs to meet …' w 2.85 p 64.8 g 15 $43.40 | 'modify existing software to correct errors, to adapt it…' w 1.82 p 72.0 g 15 $52.88
+================================================================================================
+Between-window dispersion of D against its within-window SE:
+  D = [1.3836, 7.3854, 0.6689]; SD across windows 3.689 pp; mean SE 0.142 pp; ratio 26×
+  Δ_W / D per wave = [-0.016, 0.1131, -0.2192]  (the brief's arithmetic said 0.11–0.12 per point of gap; it holds in Nov only)
+================================================================================================
+November Seychelles bound: D observed +7.385 pp; weights netted (X4) +6.546 pp; weights netted AND every SC conversation counted against the gradient +4.504 pp
+  → even the worst-case cleaning leaves November's D far above August's +1.38 and February's +0.67; Seychelles does not account for November's excess. The X5 flip to −4.58 comes from removing the two largest software-modification tasks (8.5 pp of Q4), which carry p ≈ 70–74 in every wave.
