@@ -350,3 +350,57 @@ permutation distribution of D is centred on the composition effect, not on zero:
 the pre-registration calls it, a task-level bound, and it is in no decision rule. The observed D
 lies inside that band in all three waves (p = 0.83 / 0.68 / 0.95). One sentence of reading, as the
 notebook allows: the gradient is no larger than the wage-group composition alone produces.
+
+## 2026-09-17 · Stage 2 step 5f — `07_fourth_window.py`: C10, design-based only
+
+**Run:** `posts/post1/scripts/07_fourth_window.py` (output
+`posts/post1/outputs/checks/07_fourth_window.out.txt`, numbers
+`posts/post1/data/processed/fourth_window.json`).
+
+**What it showed.** Every C10 column-level fact reproduces: 3,364 × 7 with no `collaboration`
+column and no counts, rows summing to 1 within 4.4e-16, `filtered` median 0.3000 with 1,066 rows at
+1.0, the merge 3,365 in / 3,364 matched / 1 unmatched (`none`), 98.2183 of 100 `pct` carried and
+90.1561 after the classified weighting, and the usage-weighted global automation share **43.2902%**
+against the published **43.0619%** (a 0.23 pp gap, reported wherever a C10 number is). The window
+reaches 1,635 / 1,843 / 1,904 analysis-set tasks (98.78 / 98.49 / 98.08% of their mass) and
+179 / 251 / 286 of them are entirely `filtered` and are dropped, never zeroed. D in the fourth
+window, on each wave's own quartiles: **+3.9809 / +3.7534 / +5.7598** pp with **design-based**
+intervals [−7.32, +15.28], [−8.19, +15.69], [−4.56, +16.08] and MDE 16.1 / 17.1 / 14.7 pp; the
+`pct × (1 − filtered)` weighting gives +4.25 / +4.03 / +6.10.
+
+**Decided.** The window is reported as the pre-registration has it — in no decision rule, positive
+in sign, resolved by nothing below about fifteen points. Check block passed.
+
+## 2026-09-17 · Stage 2 step 5g — `08_exploratory.py`: the three exploratory tests, and nothing more
+
+**Run:** `posts/post1/scripts/08_exploratory.py` (output
+`posts/post1/outputs/checks/08_exploratory.out.txt`, numbers
+`posts/post1/data/processed/exploratory.json`), after the whole confirmatory set.
+
+**What it showed.** (a) On the 1P API global intersection (the February file's 11,660 rows at global
+confirm; API analysis sets 1,738 / 1,908 / 1,886 tasks; the surface's own five-pattern automation
+share is 87.44 / 85.16 / 81.81% against Claude.ai's 51.07 / 46.74 / 45.55), D = **−2.4030 /
+−2.4670 / −5.1547** pp — the sign is the opposite of Claude.ai's in all three waves. (b) The
+pattern-level split: `directive` carries a **negative** gradient in all three waves (−6.98 / −9.50 /
+−9.93 pp) while `feedback loop` carries a large positive one (+8.37 / +16.88 / +10.60), so the
+positive D is carried entirely by feedback loops; `learning` is negative in all three, `validation`
+in two, `task iteration` in one; the five differences sum to zero by construction. (c) Against
+`JobZone` (119 sentinel occupations dropped, 99.22 / 98.83 / 99.06% of named mass), the slope is
+**−6.70 / −6.02 / −6.77 pp per +1 Job Zone** and the top-minus-bottom Job-Zone quartile difference
+is −8.00 / −11.87 / −11.47 pp — the non-wage ordering runs the other way.
+
+**Decided.** Three exploratory tests, labelled exploratory in `results.json`, none in a headline and
+none in a decision rule. No fourth cut was run. Check block passed.
+
+## 2026-09-17 · CORRECTION — JobZone is taken from the >100-filtered wage frame (119 sentinels, not 121)
+
+BRIEF §9 and the prereg's exploratory (c) quote 99.22 / 98.83 / 99.06% of named mass "with the 119
+`-1` sentinel occupations dropped"; `feasibility.md` §1 C6 records 121 sentinels and
+99.86 / 99.85 / 99.77% coverage. Both are right about different frames: the unfiltered
+`wage_data.csv` has 121 `JobZone == -1` rows, and the `MedianSalary > 100` frame this post joins on
+has **119** (two of the six hourly-wage rows carry the sentinel). My first implementation took
+JobZone from the unfiltered file and reproduced the steward's 99.86 / 99.85 / 99.77. Changed to the
+**pre-registered** construction — JobZone from the same >100-filtered frame the wage comes from —
+which reproduces 99.2166 / 98.8329 / 99.0637 and 119 sentinels exactly. Downstream: nothing
+confirmatory moves (JobZone enters exploratory (c) only); scripts 02–08 were re-run and every check
+block still passes.

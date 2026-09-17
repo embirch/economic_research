@@ -1,0 +1,164 @@
+{
+  "script": "posts/post1/scripts/07_fourth_window.py",
+  "prereg": "posts/post1/prereg/prereg.md content c9b1b45",
+  "in_no_decision_rule": true,
+  "audit": {
+    "by_task_shape": [
+      3364,
+      7
+    ],
+    "columns": [
+      "task_name",
+      "feedback_loop",
+      "directive",
+      "task_iteration",
+      "validation",
+      "learning",
+      "filtered"
+    ],
+    "has_collaboration_column": false,
+    "count_or_pct_columns": [],
+    "max_abs_row_sum_minus_one": 4.440892098500626e-16,
+    "filtered_median": 0.3,
+    "rows_filtered_one": 1066,
+    "v2_rows": 3365,
+    "v2_pct_sum": 99.99999999999983,
+    "merge_rows_in": 3365,
+    "merge_matched": 3364,
+    "merge_unmatched_names": [
+      "none"
+    ],
+    "matched_pct_carried": 98.21832799937536,
+    "classified_weighted_pct": 90.15607475483642,
+    "global_automation_share": 43.29020998140789,
+    "published_global_automation_share": NaN,
+    "published_global_row": {
+      "directive": 29.420541308119624,
+      "feedback loop": 12.245083676255144,
+      "learning": 27.08040620609309,
+      "none": 3.2389485842287637,
+      "task iteration": 24.03856057840868,
+      "validation": 3.972959594393916
+    },
+    "global_none_pct": 3.2389485842287637,
+    "filtered_pp_of_task_base": 8.062253244538937
+  },
+  "none_share_note": "there is no task-level `none` share in this release: `filtered` is `none` plus about 4.8 pp of unpublished exclusions and cannot be decomposed, so \u00a79(1)'s `none`-beside-every-share rule holds at the global level only in this window",
+  "not_a_panel": "the release's own v1 \u2229 v2 is 2,781 of 3,513 / 3,364, so entry and exit are not random and the window is a design-based check",
+  "waves": {
+    "aug2025": {
+      "matched_tasks": 1635,
+      "unmatched_tasks": 167,
+      "matched_mass": 88.16426022349535,
+      "matched_mass_share": 98.7801449746759,
+      "dropped_filtered_one_tasks": 179,
+      "dropped_filtered_one_mass": 1.4209523335552028,
+      "usable_tasks": 1456,
+      "usable_mass": 86.74330788994016,
+      "dropped_never_zeroed": true,
+      "D_pct_weights": {
+        "coef": 3.9809345080459195,
+        "se": 5.764528739781629,
+        "ci": [
+          -7.317334298891442,
+          15.279203314983281
+        ],
+        "mde": 16.14068047138856,
+        "draws": 4000,
+        "n_tasks_q4": 299,
+        "n_tasks_q1": 454,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "D_classified_weights": {
+        "coef": 4.252403614194101,
+        "se": 5.817658109741998,
+        "ci": [
+          -7.149996845208266,
+          15.654804073596468
+        ],
+        "mde": 16.289442707277594,
+        "draws": 4000,
+        "n_tasks_q4": 299,
+        "n_tasks_q1": 454,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "quartile_masks": "kept from the long wave's analysis set, never re-drawn"
+    },
+    "nov2025": {
+      "matched_tasks": 1843,
+      "unmatched_tasks": 232,
+      "matched_mass": 88.63427928491052,
+      "matched_mass_share": 98.494298606326,
+      "dropped_filtered_one_tasks": 251,
+      "dropped_filtered_one_mass": 1.837829728716077,
+      "usable_tasks": 1592,
+      "usable_mass": 86.79644955619445,
+      "dropped_never_zeroed": true,
+      "D_pct_weights": {
+        "coef": 3.753392510198516,
+        "se": 6.09142816072898,
+        "ci": [
+          -8.1855873934165,
+          15.692372413813532
+        ],
+        "mde": 17.055998850041142,
+        "draws": 4000,
+        "n_tasks_q4": 323,
+        "n_tasks_q1": 498,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "D_classified_weights": {
+        "coef": 4.025458954936127,
+        "se": 6.1529389063122535,
+        "ci": [
+          -8.034079795635263,
+          16.08499770550752
+        ],
+        "mde": 17.22822893767431,
+        "draws": 4000,
+        "n_tasks_q4": 323,
+        "n_tasks_q1": 498,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "quartile_masks": "kept from the long wave's analysis set, never re-drawn"
+    },
+    "feb2026": {
+      "matched_tasks": 1904,
+      "unmatched_tasks": 284,
+      "matched_mass": 88.01249999999997,
+      "matched_mass_share": 98.08067773037887,
+      "dropped_filtered_one_tasks": 286,
+      "dropped_filtered_one_mass": 2.3134999999999954,
+      "usable_tasks": 1618,
+      "usable_mass": 85.69899999999998,
+      "dropped_never_zeroed": true,
+      "D_pct_weights": {
+        "coef": 5.759821611779294,
+        "se": 5.264804855669797,
+        "ci": [
+          -4.559006372358704,
+          16.07864959591729
+        ],
+        "mde": 14.74145359587543,
+        "draws": 4000,
+        "n_tasks_q4": 378,
+        "n_tasks_q1": 449,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "D_classified_weights": {
+        "coef": 6.100434327414057,
+        "se": 5.3190414907707675,
+        "ci": [
+          -4.32469550900298,
+          16.525564163831092
+        ],
+        "mde": 14.893316174158148,
+        "draws": 4000,
+        "n_tasks_q4": 378,
+        "n_tasks_q1": 449,
+        "interval_type": "design-based task resampling (no counts exist in this window)"
+      },
+      "quartile_masks": "kept from the long wave's analysis set, never re-drawn"
+    }
+  }
+}

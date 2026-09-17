@@ -203,11 +203,15 @@ def wage_tables():
                      keep_default_na=False, na_values=[])
     kept = wg[wg.MedianSalary > 100]                      # our threshold, applied BEFORE the join
     c6 = (kept.set_index("SOCcode").MedianSalary / 2080.0).astype(float)
-    jz = wg.set_index("SOCcode").JobZone
+    # JobZone is taken from the same >100-filtered frame the wage is taken from, which is the
+    # construction the pre-registration's exploratory (c) coverage figures are computed on
+    # (119 sentinels there; the unfiltered file carries 121, two of them on hourly-wage rows)
+    jz = kept.set_index("SOCcode").JobZone
     jz = jz[jz > 0].astype(float)                         # -1 is a missing sentinel
     audit = dict(rows=len(wg), kept=int(len(kept)), dropped=int(len(wg) - len(kept)),
                  dropped_values=sorted(wg.loc[wg.MedianSalary <= 100, "MedianSalary"].tolist()),
-                 jobzone_sentinels=int((wg.JobZone == -1).sum()),
+                 jobzone_sentinels=int((kept.JobZone == -1).sum()),
+                 jobzone_sentinels_unfiltered=int((wg.JobZone == -1).sum()),
                  chanceauto_sentinels=int((wg.ChanceAuto == -1).sum()),
                  top_code_annual=float(wg.MedianSalary.max()),
                  top_code_hourly=float(wg.MedianSalary.max() / 2080.0),

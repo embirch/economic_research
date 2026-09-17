@@ -1,0 +1,22 @@
+================================================================================================
+C10 (Feb–Mar 2025): [3364, 7] columns ['task_name', 'feedback_loop', 'directive', 'task_iteration', 'validation', 'learning', 'filtered']
+  no `collaboration` column: True; no count/pct columns: True; row sums to 1 within 4.4e-16
+  MERGE AUDIT task_pct_v2 -> by_task: 3365 in, 3364 matched, unmatched ['none']; matched carry 98.2183 of 100 pct; classified-weighted 90.1561
+  filtered median 0.3000; rows at filtered == 1.0 1066
+  usage-weighted global automation share 43.2902% against the release's published 43.0619% — a 0.23 pp gap, reported wherever a C10 number is
+------------------------------------------------------------------------------------------------
+  [aug2025] matched 1635 of 1802 analysis-set tasks (98.78% of their mass); filtered == 1.0 dropped on 179 tasks (1.4210 pp), never zeroed; usable 1456
+          D in the fourth window (task_pct_v2 weights, this wave's quartiles): +3.9809 [-7.3173, +15.2792] design-based SE 5.7645, MDE 16.1407  — in no decision rule
+          same, weighted by pct × (1 − filtered): +4.2524 [-7.1500, +15.6548]  MDE 16.2894
+------------------------------------------------------------------------------------------------
+  [nov2025] matched 1843 of 2075 analysis-set tasks (98.49% of their mass); filtered == 1.0 dropped on 251 tasks (1.8378 pp), never zeroed; usable 1592
+          D in the fourth window (task_pct_v2 weights, this wave's quartiles): +3.7534 [-8.1856, +15.6924] design-based SE 6.0914, MDE 17.0560  — in no decision rule
+          same, weighted by pct × (1 − filtered): +4.0255 [-8.0341, +16.0850]  MDE 17.2282
+------------------------------------------------------------------------------------------------
+  [feb2026] matched 1904 of 2188 analysis-set tasks (98.08% of their mass); filtered == 1.0 dropped on 286 tasks (2.3135 pp), never zeroed; usable 1618
+          D in the fourth window (task_pct_v2 weights, this wave's quartiles): +5.7598 [-4.5590, +16.0786] design-based SE 5.2648, MDE 14.7415  — in no decision rule
+          same, weighted by pct × (1 − filtered): +6.1004 [-4.3247, +16.5256]  MDE 14.8933
+
+wrote posts/post1/data/processed/fourth_window.json
+
+CHECK BLOCK PASSED — 07_fourth_window.py

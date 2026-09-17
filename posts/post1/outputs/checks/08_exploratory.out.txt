@@ -1,0 +1,35 @@
+================================================================================================
+EXPLORATORY (a) · the same gradient on the 1P API global intersection
+  context, not a replication: the API is automation-dominant and its February sample
+  includes Claude Code, which moves its automation share by construction
+  [aug2025] API analysis set 1738 tasks (98.68% of named mass, 724,755 classified conversations); wave automation share 87.4399%
+          D -2.4030 [-2.6063, -2.1996] MDE 0.2905   Δ_W -0.3631   slope per +$10/hr -0.8413 [-0.8969, -0.7857]
+  [nov2025] API analysis set 1908 tasks (97.75% of named mass, 733,073 classified conversations); wave automation share 85.1590%
+          D -2.4670 [-2.6780, -2.2561] MDE 0.3014   Δ_W -0.4143   slope per +$10/hr -0.9829 [-1.0411, -0.9247]
+  [feb2026] API analysis set 1886 tasks (97.92% of named mass, 733,798 classified conversations); wave automation share 81.8066%
+          D -5.1547 [-5.3755, -4.9339] MDE 0.3155   Δ_W -0.6986   slope per +$10/hr -1.6877 [-1.7499, -1.6255]
+
+================================================================================================
+EXPLORATORY (b) · the pattern-level split: which pattern carries the gradient
+  [aug2025]  directive: -6.984 [-7.268, -6.699]  feedback loop: +8.367 [+8.186, +8.548]  learning: -4.449 [-4.662, -4.236]  task iteration: +3.734 [+3.497, +3.972]  validation: -0.669 [-0.784, -0.554]
+          the five Q4−Q1 differences sum to -9.10e-15 (they must, by construction); automation patterns with a positive gradient: ['feedback loop']; augmentation patterns negative: ['learning', 'validation']
+  [nov2025]  directive: -9.499 [-9.765, -9.233]  feedback loop: +16.884 [+16.693, +17.076]  learning: -6.411 [-6.620, -6.202]  task iteration: -0.357 [-0.598, -0.116]  validation: -0.618 [-0.730, -0.505]
+          the five Q4−Q1 differences sum to -7.77e-15 (they must, by construction); automation patterns with a positive gradient: ['feedback loop']; augmentation patterns negative: ['learning', 'task iteration', 'validation']
+  [feb2026]  directive: -9.929 [-10.194, -9.663]  feedback loop: +10.597 [+10.419, +10.776]  learning: -3.287 [-3.505, -3.068]  task iteration: +2.193 [+1.960, +2.426]  validation: +0.425 [+0.312, +0.539]
+          the five Q4−Q1 differences sum to -1.15e-14 (they must, by construction); automation patterns with a positive gradient: ['feedback loop']; augmentation patterns negative: ['learning']
+
+================================================================================================
+EXPLORATORY (c) · the gradient against `JobZone` (the `-1` sentinel occupations dropped)
+  [aug2025] 1791 tasks, 99.87% of analysis mass (97.02% of named mass); 119 occupations carry the `-1` sentinel and are dropped
+          slope per +1 Job Zone -6.7012 [-6.8265, -6.5758] MDE 0.1791;  top-minus-bottom Job-Zone quartile -8.0035 [-8.2792, -7.7278]
+          automation share by Job Zone: 1: 54.09 (14 tasks), 2: 60.71 (191 tasks), 3: 54.50 (339 tasks), 4: 53.56 (721 tasks), 5: 39.47 (526 tasks)
+  [nov2025] 2064 tasks, 99.85% of analysis mass (96.09% of named mass); 119 occupations carry the `-1` sentinel and are dropped
+          slope per +1 Job Zone -6.0188 [-6.1404, -5.8971] MDE 0.1737;  top-minus-bottom Job-Zone quartile -11.8653 [-12.1406, -11.5900]
+          automation share by Job Zone: 1: 43.28 (20 tasks), 2: 52.13 (218 tasks), 3: 50.14 (400 tasks), 4: 50.86 (855 tasks), 5: 34.30 (571 tasks)
+  [feb2026] 2176 tasks, 99.77% of analysis mass (96.30% of named mass); 119 occupations carry the `-1` sentinel and are dropped
+          slope per +1 Job Zone -6.7681 [-6.8803, -6.6560] MDE 0.1602;  top-minus-bottom Job-Zone quartile -11.4733 [-11.7414, -11.2053]
+          automation share by Job Zone: 1: 39.16 (24 tasks), 2: 56.85 (236 tasks), 3: 49.42 (414 tasks), 4: 48.33 (920 tasks), 5: 33.71 (582 tasks)
+
+wrote posts/post1/data/processed/exploratory.json
+
+CHECK BLOCK PASSED — 08_exploratory.py
