@@ -718,3 +718,16 @@ are `figures.fig1/fig3/fig4.caption`, and 1 is `generated`, the timestamp. **No 
 fact, the declared owner (O-A), the H3 declaration and the check block's 3,186 other leaves are
 byte-identical. Figure 2's caption text is unchanged; only its in-image title moved. Check block
 passed on the re-run.
+
+## 2026-09-17 · CORRECTION (referee-draft item 9, referee-draft-2 §"The Figure 4 departure") — fig4's caption title now carries the hedge
+
+One string in `posts/post1/scripts/09_results_and_figures.py`'s figure-4 caption, re-run: the title
+ended "…and **not** in the same direction as the quartile gap in **two of the three**", which
+asserts a direction for August, whose Δ_W interval is −0.0222 [−0.0572, +0.0129] and contains zero.
+Replaced with item 9's text, now byte-identical to the editor's POST.md title on `post1-draft`:
+"…and in the same direction as the quartile gap in only one of the three, August's interval
+containing zero." The record no longer states what the exhibit does not establish. Asserted on the
+re-run: of 3,216 `results.json` leaves exactly two changed — `figures.fig4.caption` and `generated`
+— and all four PNGs are **byte-identical** (the in-image titles are descriptive and carry no caption
+text, so no image needed regenerating). No estimate, figure or other caption touched; check block
+passed.

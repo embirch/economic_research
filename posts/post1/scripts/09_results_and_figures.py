@@ -343,7 +343,8 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         caption=(
             "**Weighting the published automation share by the wage of the work moves it by less "
             "than a fifth of a point in two windows and by eight tenths of a point in the third, "
-            "and not in the same direction as the quartile gap in two of the three.** Plotted: "
+            "and in the same direction as the quartile gap in only one of the three, August's "
+            "interval containing zero.** Plotted: "
             "Δ_W, the wage-weighted minus the unweighted usage-weighted automation share of "
             "Claude.ai conversations, in percentage points, per window; each marker is one window. "
             "Δ_W is Cov_w(wage, p) ÷ E_w[wage] over the analysis set — the same per-task automation "
