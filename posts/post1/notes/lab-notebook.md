@@ -282,3 +282,31 @@ two-sided permutation p-value (1 + #{|perm| ≥ |obs|})/(B + 1), not a quantile-
 band is noisy at small B and is reported as a band, not as the test); and the wage vector and the
 outcome are re-drawn in every trial, so the trials are independent. The placebo is in no decision
 rule.
+
+## 2026-09-17 · Stage 2 step 5d — `05_legs.py`: the eight leg tests and the P4 verdicts
+
+**Run:** `posts/post1/scripts/05_legs.py` (output `posts/post1/outputs/checks/05_legs.out.txt`,
+numbers `posts/post1/data/processed/legs.json`).
+
+**What it showed.** Eight leg tests, legs (a) and (b) in three waves and leg (e) in two.
+Leg (a) (SOC-15 excluded, 2019 recode, 43.0 / 39.8 / 35.6% of analysis mass and 73.7 / 71.5 / 65.5%
+of Q4 mass removed): D_L = **−13.0319 / −10.4701 / −11.8952** pp against D = +1.3836 / +7.3854 /
++0.6689, so r_L = −9.42 / −1.42 / −17.78 and the leg **fires on sign in all three waves**.
+Leg (b) (within major group, 9 / 9 / 9 identified groups carrying 71–76% of Q1+Q4 mass, the rest
+reported as not identified): D_L = **−4.1989 / −1.8716 / −6.2169** pp, fires on sign in all three.
+Leg (e) (work-dominant, 943 / 1,071 tasks = 54.38 / 52.86% of analysis mass, 29 / 21
+only-`not_classified` tasks dropped): D_L = **+3.7160 / +2.7916** pp, r_L = +0.50 / +4.17, and it
+does **not** fire in either wave (the substantive-cell denominator gives +3.85 / +2.74, also not
+firing). **6 of 8 leg tests fired.** The persistent-leg rule and the literal any-wave reading
+**agree**: H3 is declared, on legs (a) and (b), each firing in every wave in which it is testable.
+The 2010 grouping gives the same verdict (6 of 6 fired). H1's signature clause fails in all three
+waves. Description: the leave-one-group-out series is dominated by SOC-15 in every wave
+(−14.42 / −17.86 / −12.56 pp against a second-largest of +3.24 / +2.32 / +2.91), and its removal
+exceeds the sum of all other moves in Aug and Nov but not in Feb; the ten largest tasks out moves D
+to −11.62 / −13.08 / −11.43 pp; the work share rises Q1→Q4 32.80 → 60.82 (Nov) and 29.05 → 60.54
+(Feb) while corr(wage, work share) is only +0.34 (VIF 1.13–1.14), and the wage slope falls from
++1.78 to −0.06 (Nov) and from −0.28 to −1.63 (Feb) once the work share is in the regression.
+
+**Decided.** H3 is declared under the pre-registered rule and under the literal reading, so no
+disagreement to report; every leg point estimate matches the independent implementation of script 04
+to better than 1e-6 pp. Check block passed.
