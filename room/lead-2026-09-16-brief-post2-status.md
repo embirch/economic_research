@@ -35,3 +35,13 @@ reproducing specification (+14.3885% API / −17.5208% Claude.ai) with the shipp
 **Open for the referee.** The published "+14%" is not reproducible from the public files alone, and
 one recode (43-9011 → 15-1299.\*) carrying 9.32 pp of February API mass — largely one task — sits
 inside both the replication target and H4.
+
+---
+
+**2026-09-16, design pass on the referee's BLOCK** (`posts/post2/BRIEF.md`, 419 lines). §6: H1 becomes
+*negative correspondence*, naming the two readings these frames cannot separate — a flow, and anti-aligned
+inflows (R5 p.6) — its old signature being shared by Anthropic's own gloss; H3 widens to both denominators
+(consumer inflow; Claude Code's share of sampled API traffic); H2 redefined so its prediction follows from
+its premise, fixing the smallest effect of interest. §5 drops "leading-indicator" and "loses its anchor":
+nothing here tests timing, and the exposure measure never used a migration. Items 2–4 and 5–10, 12 applied;
+11 as the director ruled. The attribution above is wrong: 43-9111.01 → 15-2099.01, 9.7110. Declined nothing.

@@ -51,3 +51,6 @@ room/steward-2026-09-16-feasibility-post2.md
 room/steward-2026-09-16-feasibility-post1.md
 room/steward-2026-09-16-feasibility-post4.md
 room/steward-2026-09-16-feasibility-post3.md
+room/referee-2026-09-16-brief-post2-verdict.md
+room/steward-2026-09-16-recode-correction-applied.md
+room/director-2026-09-16-session-1-4-resume.md
