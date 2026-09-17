@@ -1,0 +1,29 @@
+population tasks=3540; real Nov named nodes=3168, Feb=3258, matched=2886
+== null correlation of published yes_pct with share growth (true success independent of share)
+   rule = minimum November node size; control = partial on log November share
+  outcome=log control=False n_nov>= 15: N≈ 2647  null r mean=+0.0295 sd=0.0192
+  outcome=log control=False n_nov>= 30: N≈ 2179  null r mean=-0.0072 sd=0.0207
+  outcome=log control=False n_nov>= 50: N≈ 1619  null r mean=-0.0014 sd=0.0260
+  outcome=log control=False n_nov>=100: N≈ 1005  null r mean=+0.0009 sd=0.0344
+  outcome=log control=True  n_nov>= 15: N≈ 2667  null r mean=+0.0329 sd=0.0194
+  outcome=log control=True  n_nov>= 30: N≈ 2205  null r mean=-0.0025 sd=0.0213
+  outcome=log control=True  n_nov>= 50: N≈ 1636  null r mean=-0.0006 sd=0.0265
+  outcome=log control=True  n_nov>=100: N≈ 1000  null r mean=+0.0022 sd=0.0318
+  outcome=pp  control=False n_nov>= 15: N≈ 2634  null r mean=+0.0068 sd=0.0201
+  outcome=pp  control=False n_nov>= 30: N≈ 2228  null r mean=-0.0002 sd=0.0207
+  outcome=pp  control=False n_nov>= 50: N≈ 1654  null r mean=+0.0006 sd=0.0242
+  outcome=pp  control=False n_nov>=100: N≈  988  null r mean=-0.0029 sd=0.0306
+  outcome=pp  control=True  n_nov>= 15: N≈ 2679  null r mean=+0.0034 sd=0.0212
+  outcome=pp  control=True  n_nov>= 30: N≈ 2172  null r mean=+0.0012 sd=0.0205
+  outcome=pp  control=True  n_nov>= 50: N≈ 1634  null r mean=-0.0001 sd=0.0238
+  outcome=pp  control=True  n_nov>=100: N≈  995  null r mean=+0.0042 sd=0.0312
+== published yes_pct by node size under the null (one draw), to compare with the real gradient
+  n in [15,20]: published N= 109 mean published yes_pct=88.16  (true mean p among them=80.93)
+  n in [21,30]: published N= 418 mean published yes_pct=76.26  (true mean p among them=73.60)
+  n in [31,50]: published N= 554 mean published yes_pct=68.61  (true mean p among them=68.19)
+  n in [51,100]: published N= 633 mean published yes_pct=67.21  (true mean p among them=67.23)
+  n in [101,500]: published N= 709 mean published yes_pct=66.39  (true mean p among them=66.41)
+  n in [501,9999999]: published N= 274 mean published yes_pct=66.74  (true mean p among them=66.72)
+== effective N of a pp-change regression: Kish N with weights s^2 (pp change scales with level)
+  weights s   : Kish N_eff = 88.4
+  weights s^2 : Kish N_eff = 5.9

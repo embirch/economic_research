@@ -1,0 +1,71 @@
+== 1. Global task_success facet (Figure 2.2 anchor)
+  Nov Claude.ai: yes_pct=66.9060  count sum=999875  cats=['no', 'yes']
+  Feb Claude.ai: yes_pct=69.9385  count sum=1000000  cats=['no', 'yes']
+  Nov 1P API: yes_pct=49.3638  count sum=971525  cats=['no', 'yes']
+== 2. onet_task global L0 panel
+  aug: nodes=2618 pct sum=100.0000 count sum=964494 min count=15
+  nov: nodes=3170 pct sum=100.0000 count sum=999875 min count=15
+  feb: nodes=3260 pct sum=100.0000 count sum=1000000 min count=15
+  matched Nov∩Feb named=2886  Nov-only=282  Feb-only=372  in Aug too=2282
+== 3. onet_task::task_success intersection (Nov) and samples
+  Nov task keys=3169 cats=['no', 'not_classified', 'yes']; Feb task keys=3259
+  Nov partition (sum of published cell counts == onet_task_count): 3168 of 3168
+  Nov min published yes count=15, min no count=15, not_classified count range=(1,27)
+  sample A: N=2524 Nov mass=92.2879 with Aug instrument=2140
+  sample B: N=2427 Nov mass=91.9470 with Aug instrument=2065
+  sample C: N=1553 Nov mass=88.6094 with Aug instrument=1493
+  B mass as % of Nov named mass: 98.32
+  A-instrumented mass 90.9914 pp = 98.60% of A mass
+  A nodes with a folded cell: 971; median folded pct=22.73, max=48.28
+== 4. Kish N_eff and MDE (2.8/sqrt(N-3))
+  A: N=2524 Kish Nov=87.1 Feb=129.6  MDE nominal=0.0558  weighted Nov=0.3052 Feb=0.2489
+  B: N=2427 Kish Nov=86.5 Feb=128.2  MDE nominal=0.0569  weighted Nov=0.3064 Feb=0.2503
+  C: N=1553 Kish Nov=80.4 Feb=118.2  MDE nominal=0.0711  weighted Nov=0.3184 Feb=0.2608
+  ten largest matched tasks: 19.4410 pp of Feb all-conversation base; 20.9% of Feb named mass
+== 5. First stage and placebo (no success variable enters)
+  corr(Aug, Nov share) levels on A-instrumented (N=2140): 0.9167; logs: 0.8753
+  Aug→Nov change: mean=0.00024 sd=0.08373; Nov→Feb change on A (N=2524): mean=-0.00039 sd=0.05297
+  corr(Nov→Feb, Aug→Nov) on instrumented A: -0.4251
+  corr(Δlog Nov→Feb, Δlog Aug→Nov): -0.1213
+== 6. Distribution of the pp outcome on sample B
+  sd=0.0540 pp; excess kurtosis=592.4
+  top 1 movers carry 46.6% of the outcome sum of squares
+  top 5 movers carry 78.2% of the outcome sum of squares
+  top 10 movers carry 86.9% of the outcome sum of squares
+  top 50 movers carry 97.0% of the outcome sum of squares
+  variance-effective N of the outcome (Σz²)²/Σz⁴ = 4.1
+  tasks with n_nov<100: 1478 of 2427, carrying 0.12% of the sum of squares
+  log change: sd=0.3205, excess kurtosis=1.7; sd by n_nov bin: 15-50: 0.324, 50-200: 0.325, 200-1000: 0.316, 1000-10000000: 0.268
+  log change top-10 share of sum of squares: 8.7%
+== 7. Publication floor and yes_pct by November node size (sample B)
+  a yes cell publishes only if yes count >= 15, i.e. yes_pct >= 1500/n_nov
+  n_nov in [15,20]: N=  76 mean yes_pct=86.34 median=85.00 min possible yes_pct=100.0
+  n_nov in [21,30]: N= 324 mean yes_pct=73.80 median=73.62 min possible yes_pct=71.4
+  n_nov in [31,50]: N= 498 mean yes_pct=69.64 median=70.27 min possible yes_pct=48.4
+  n_nov in [51,100]: N= 588 mean yes_pct=66.47 median=68.21 min possible yes_pct=29.4
+  n_nov in [101,500]: N= 678 mean yes_pct=67.69 median=69.33 min possible yes_pct=14.9
+  n_nov in [501,9999999]: N= 263 mean yes_pct=68.32 median=69.85 min possible yes_pct=3.0
+  sample B nodes with n_nov<30: 358; <100: 1478
+  A nodes with only a `no` cell (yes folded): 97; their n_nov median=32
+== 8. H4 margin: exits (Nov-only) and entrants (Feb-only)
+  exits N=282, with n_nov<=20: 213; entrants N=372, with n_feb<=20: 264
+  exits with any Nov label=86, with a yes cell=78, only-no=8
+  entrants with any Feb label=140, with a yes cell=130, only-no=10
+  exits published yes_pct: mean=80.97 (N=78); with only-no imputed 0: mean=73.44
+  entrants published yes_pct: mean=81.25 (N=130); with only-no imputed 0: mean=75.45
+  survivors Nov yes_pct mean (B, published)=69.26; (A, only-no as 0)=66.60
+  survivors Feb yes_pct mean (published)=72.66; (A-type, only-no as 0)=71.40
+  share of exits-with-yes at yes_pct>=75: 79.5%; entrants: 77.7%
+== 9. Seychelles
+  SC onet_task nodes=67 count sum=24715; SC usage_count=24715.0
+  SC rows in Feb release: 0
+  largest panel task: "modify existing software to correct errors, allow it to adap…" n_nov=59739, SC part=6790 (11.37%)
+  its Nov→Feb change raw=-1.8160 pp; with SC netted from Nov numerator only=-1.1370 pp
+  with SC netted from numerator and the November base (999,875−24,715): -1.2712 pp  [steward convention]
+  SC named nodes inside sample A: 65, conversations=23173
+== 10. Controls
+  human_education_years keys=3169 vars=['onet_task_human_education_years_count', 'onet_task_human_education_years_mean', 'onet_task_human_education_years_mean_ci_lower', 'onet_task_human_education_years_mean_ci_upper', 'onet_task_human_education_years_median', 'onet_task_human_education_years_median_ci_lower', 'onet_task_human_education_years_median_ci_upper', 'onet_task_human_education_years_pct', 'onet_task_human_education_years_stdev']
+  edu mean published for 2524 of 2524; range 1.009–17.512
+  corr(yes_pct, edu) on A (only-no as 0, as steward): unweighted=-0.0703; weighted=-0.1752
+  corr(yes_pct, edu) on B (published yes only): unweighted=-0.1492
+  use_case cats=['coursework', 'not_classified', 'personal', 'work']; work published for 1782 of 2524; median published work=59.91; median with folded=0: 41.37
