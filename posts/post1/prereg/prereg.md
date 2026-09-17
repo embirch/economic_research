@@ -2,7 +2,7 @@
 
 **Date written.** 2026-09-17, before any primary test: before D, Δ_W, any quartile automation share,
 the continuous slope, any H3 leg, any robustness re-estimate and any exploratory test.
-**Committed as** `<git hash, filled by the director>`.
+**Committed as** `c9b1b45` (content of record, analyst's revision after `posts/post1/notes/referee-prereg.md` PASS WITH CHANGES; second-read sign-off `0a6513f`; this line filled by the director at the pre-registration commit — the only director edit to this file).
 
 **Authority and scope.** `posts/post1/BRIEF.md` at `8fbffbd` (question, title, contribution and
 hypotheses frozen at Gate 1b), `posts/post1/notes/feasibility.md` at `3ef51e9` including §7,
