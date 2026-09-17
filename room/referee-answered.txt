@@ -41,3 +41,7 @@ room/editor-2026-09-16-brief-post5.md
 room/lead-2026-09-16-brief-post5-status.md
 room/steward-2026-09-16-feasibility-post5.md
 room/lead-2026-09-17-brief-post1-items-applied.md
+room/analyst-2026-09-17-prereg-post1-revised.md
+room/analyst-2026-09-17-results-post1.md
+room/director-2026-09-17-gate-2a-post1-approved.md
+room/director-2026-09-17-gate-2a-post1.md
