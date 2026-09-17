@@ -71,3 +71,4 @@ room/steward-2026-09-16-feasibility-post5.md
 room/director-2026-09-17-gate-1b-post1-approved.md
 room/director-2026-09-17-room-catchup.md
 room/director-2026-09-17-session-2-1-kickoff.md
+room/director-2026-09-17-gate-2b-post1-approved.md
