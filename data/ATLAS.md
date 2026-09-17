@@ -1064,7 +1064,12 @@ or `…_2025_02_10.py` and is already in the cache.
 - **BLS Employment Projections** — `https://data.bls.gov/projections/occupationProj`, an HTML
   table, 831 detailed-SOC rows with employment 2025/2035, percent change and median annual wage;
   US Government work, public domain. Merge audit on `occ_code`: 756 in, **755 matched, 1
-  unmatched (11-1031 Legislators)** `[LMI §Verification V20]`.
+  unmatched (11-1031 Legislators)** `[LMI §Verification V20]`. Fetched and checksummed by
+  `data/fetch/supplementary_bls_ep.py` (added 2026-09-17) into
+  `data/cache/supplementary/bls_employment_projections/`: 1,397,448 B, sha256
+  `bbde16e0…5e795` on 2026-09-17. It is a **live page, not a pinned artefact**, so the script
+  reports a hash change and *fails* only if the structure (the 831 rows, the `Occupation Code` /
+  `Median Annual Wage 2025` / `Employment 2025` columns) moves.
 - **Census ACS table-based summary file** —
   `https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/1YRData/acsdt1y2023-c24010.dat`
   (200; cached at `data/cache/supplementary/`). Used as the workforce-share substitute for the
@@ -1598,8 +1603,11 @@ block non-browser downloads).
       20.1 statements and `wage_data.csv` (mean over holder SOCs, ÷2080, 92.6% / 92.3% of named-task
       mass priced) and **$37.69 → $37.55** using the BLS-EP 2025 median annual wage (54.7% / 57.8%
       priced). Alternative aggregations (max holder, employment-weighted, ÷1920) span $34–$38 and
-      none approaches $49. The **direction** reproduces on the 2019 scrape (−$0.72 against the
-      published −$1.40) and is nearly flat on EP (−$0.14). The likeliest cause is the OEWS *mean*
+      none approaches $49. The **direction** reproduces on the 2019 scrape — on **matched windows**
+      (corrected 2026-09-17, log (o) 3) published −$0.40 against a rebuilt −$0.72 for Nov→Feb and
+      published −$1.00 against −$0.98 for Aug→Feb; the "−$1.40" first written here is the published
+      **Jan-2025 → Feb-2026** change and must not be paired with a Nov→Feb rebuild — and is nearly
+      flat on EP (−$0.14). The likeliest cause is the OEWS *mean*
       hourly series, which returns 403 here; record both readings and compare changes, never levels.
   14. **Sub-national collaboration panel**: units at or above 100 conversations are **545 of 981**
       (Nov 2025, 109 parent countries) and **570 of 1,137** (Feb 2026, 125 parents); at 385 they are
@@ -2189,4 +2197,74 @@ block non-browser downloads).
   # the two identifying reads:
   #   g[(g.geography=='global') & (g.facet=='onet_task::use_case')]  -> 13908 / 14430 / absent in Aug
   #   list(pd.read_csv('.../automation_vs_augmentation_by_task.csv').columns)  -> no 'collaboration'
+  ```
+
+- **2026-09-17 (o) — post1 Stage 2: the cache rebuilds in a bare sandbox, every post1 check
+  re-runs byte-identically, and the task-value level gap is now three-quarters attributed.**
+  Written for `posts/post1/notes/replication.md`. Two scripts added under `data/replication/`
+  (`post1_taskvalue_matched.py`, `post1_c8_concentration.py`, both with failing check blocks) and
+  one under `data/fetch/` (`supplementary_bls_ep.py`). What is new:
+
+  1. **Rebuild confirmed a second time on an empty cache**, for the five folders post1 uses:
+     `release_2025_09_15` (38 files, 60,997,757 B), `release_2026_01_15` (4; 141,659,531),
+     `release_2026_03_24` (3; 147,262,094), `release_2025_02_10` (14; 5,239,526),
+     `release_2025_03_27` (16; 10,308,805) — **75 files, 365,467,713 B**, every size and sha256
+     equal to `INDEX.md`, and `sha256sum -c CHECKSUMS.txt` inside each folder **14/16/38/4/3 OK,
+     0 failed**, in under three minutes with no retry. Supplementary: `supplementary_onet.py`
+     2 files / 11,612,403 B at the 2026-09-16 pins.
+  2. **C7 had no fetch script**; the BLS-EP table was pulled ad hoc to `/tmp` inside a replication
+     script, so the cut was not rebuildable from `data/fetch/`. `data/fetch/supplementary_bls_ep.py`
+     now caches and checksums it (200, 1,397,448 B, sha256 `bbde16e0…5e795`, 831 detailed-SOC rows,
+     2026-09-17). Because the page is live the hash is reported, not enforced; the **structure** is
+     enforced. `www.bls.gov` / `download.bls.gov` still **403** (OEWS still unobtainable).
+  3. **The task-value series on matched windows, and the correction to log (f) 13's pairing.**
+     Rebuilt levels $35.3420 (Aug 2025) / $35.0758 (Nov 2025) / $34.3590 (Feb 2026) on
+     `wage_data.csv` and $37.6440 / $37.6911 / $37.5460 on BLS-EP, against Fig. 1.4's
+     $48.9 / $48.3 / $47.9 (2026-03 report, p. 8). **Changes on matched windows: Nov→Feb published
+     −$0.40 against a rebuilt −$0.7168; Aug→Feb published −$1.00 against −$0.9830.** The "−$1.40"
+     of (f) 13 is the published **Jan-2025 → Feb-2026** change and was being set against a Nov→Feb
+     rebuild; (f) 13 is corrected in place.
+  4. **Three quarters of the $13.5 level gap is the wage vintage, and it is now measured.** On the
+     **2,042 / 2,534 / 2,593** tasks priced by *both* sources, BLS-EP 2025 medians sit
+     **+24.06 / +24.88 / +25.15%** above the 2019 O\*NET website scrape ($30.34 / $30.18 / $30.00
+     against $37.64 / $37.69 / $37.55). Carrying that uplift onto the full C6 set gives
+     **$43.85 / $43.80 / $43.00**, leaving a residual of **$5.05 / $4.50 / $4.90** (≈10%) for the
+     causes the public files cannot supply: no time-on-task weights, equal-split or employment
+     weights instead of employment-and-time, and a different occupational universe. A six-variant
+     specification search (equal-split, employment-weighted, modal holder, `onet_task_count`
+     weights, unweighted task mean, top-code-excluded) spans **$33.11–$35.37** over the three
+     waves: **no available specification reaches the published level**, so the rank-based design
+     stands.
+  5. **Every committed post1 script reproduces byte-identically on the fresh cache** —
+     `post1_cuts_c1_c8.py`, `post1_joins_c5_c7.py`, `post1_variance_mde.py` and
+     `post1_replicate_fig211.py` pool to the first 238 lines of
+     `results/post1_feasibility_checks.txt` with an empty `diff`, and `post1_cuts_c9_c10.py`
+     rewrites its own results file identically. Seeded bootstraps included. Figure 2.11 again
+     returns **−3.111834 / 0.393687 / p 1.721e-13 / N 111 / n_tasks 1808** from Anthropic's
+     released library (stub `geopandas`, `chdir` into `code/`).
+  6. **The C8 and §10 figures were not re-runnable and now are.** Lines 239–274 of
+     `results/post1_feasibility_checks.txt` came from an uncommitted scratch script, although C8
+     and §10 pre-register cuts that depend on them. `post1_c8_concentration.py` reproduces all of
+     them with assertions: SC 24,715 conversations / 67 nodes / 65 named at 93.7609% of its own
+     mass, **0** `onet_task::collaboration` rows, max named-weight shift **0.5823 pp** (mean
+     0.00119), SC up to **64.3%** of one task's global count (median 4.77%), **23 tasks >10%** of a
+     task's global count holding **11.594 pp** of the wave of which **9.039 pp in Q4**, 14 tasks
+     >20% at 1.966 pp, top-10 concentration 22.9409 / 24.2471 / 19.4410 = 24.9703 / 25.9288 /
+     20.9107% of named mass, and the intersection count split (100.00% of base named counts;
+     `not_classified` pattern 41,134 / 52,693 / 54,893). **Note the two SC shift statistics**:
+     0.5823 pp nets SC's named nodes out of the named weights (the C8 cut), 0.54487 pp nets all 67
+     nodes out of all base nodes — both correct, different frames.
+
+  ```bash
+  # (o) commands, run 2026-09-17 from /workspace/economic_research
+  for r in release_2025_09_15 release_2026_01_15 release_2026_03_24 release_2025_02_10 \
+           release_2025_03_27; do python data/fetch/$r.py; done
+  for r in release_2025_02_10 release_2025_03_27 release_2025_09_15 release_2026_01_15 \
+           release_2026_03_24; do (cd data/cache/$r && sha256sum -c CHECKSUMS.txt); done
+  python data/fetch/supplementary_onet.py ; python data/fetch/supplementary_bls_ep.py
+  python data/replication/post1_taskvalue_matched.py   # levels, matched-window changes, uplift
+  python data/replication/post1_c8_concentration.py    # C8 + concentration + count splits
+  for s in post1_cuts_c1_c8 post1_joins_c5_c7 post1_variance_mde post1_cuts_c9_c10 \
+           post1_replicate_fig211; do python data/replication/$s.py; done
+  # the vintage uplift: mean(C7)/mean(C6) over tasks priced by both, usage-weighted by onet_task_pct
   ```

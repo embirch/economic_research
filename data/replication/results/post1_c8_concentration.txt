@@ -1,0 +1,64 @@
+aug2025 base residual node mass: none 5.7162  not_classified 2.4111 ; named 91.8727
+   top-10 named tasks: 22.9409 of 100 ; 24.9703% of named mass
+aug2025 | intersection counts over named tasks: total 886107 ; classified 823192 ; none 21781 ; not_classified 41134
+   base named onet_task_count 886107 -> intersection publishes 100.00% of it ; classified 92.90%
+   wave collaboration_count: total 964494 ; classified 927255 ; base facet residual none 37238 not_classified 1
+nov2025 base residual node mass: none 3.7124  not_classified 2.7732 ; named 93.5144
+   top-10 named tasks: 24.2471 of 100 ; 25.9288% of named mass
+nov2025 | intersection counts over named tasks: total 935027 ; classified 863409 ; none 18925 ; not_classified 52693
+   base named onet_task_count 935027 -> intersection publishes 100.00% of it ; classified 92.34%
+   wave collaboration_count: total 999875 ; classified 970267 ; base facet residual none 29608 not_classified 0
+feb2026 base residual node mass: none 4.2922  not_classified 2.7364 ; named 92.9714
+   top-10 named tasks: 19.4410 of 100 ; 20.9107% of named mass
+feb2026 | intersection counts over named tasks: total 929714 ; classified 854785 ; none 20036 ; not_classified 54893
+   base named onet_task_count 929714 -> intersection publishes 100.00% of it ; classified 91.94%
+   wave collaboration_count: total 1000000 ; classified 969510 ; base facet residual none 30490 not_classified 0
+======================================================================
+SC onet_task nodes 67 ; none 0.6393 not_classified 5.5998 ; named nodes 65 carrying 93.7609% of SC mass
+SC named counts sum 23173 of SC usage 24715
+netting SC named task weights: 65 of 65 SC named nodes are in the global named set ; max |shift| 0.5823 pp on modify existing software to correct errors, allow it ; mean |shift| 0.00119
+SC named mass as share of global named counts: 2.4783%
+SC share of the GLOBAL count of the tasks it publishes (top 6):
+   64.3%  break systems into their component parts, assign numerical values to e
+   60.1%  complete models and simulations, using manual or automated tools, to a
+   55.1%  perform or evaluate research, such as detailed company or industry ana
+   51.9%  enter codes and instructions to program computer-controlled machinery.
+   39.1%  write computer or microprocessor software programs.
+   37.0%  program electronic equipment.
+median SC share over its 67 nodes: 4.77%
+analysis set rebuilt here: 2075 tasks, 89.9892 pp of the wave (cross-check against 2,075 / 89.9892)
+SC>50% of a task's global count: 4 tasks in the analysis set, 0.263 pp of wave mass, quartiles [np.int64(1), np.int64(3), np.int64(4)]
+     of which Q4: 2 tasks, 0.150 pp ; Q1: 1
+SC>20% of a task's global count: 14 tasks in the analysis set, 1.966 pp of wave mass, quartiles [np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+     of which Q4: 3 tasks, 0.231 pp ; Q1: 5
+SC>10% of a task's global count: 23 tasks in the analysis set, 11.594 pp of wave mass, quartiles [np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+     of which Q4: 6 tasks, 9.039 pp ; Q1: 8
+======================================================================
+CHECKS (expected = posts/post1/notes/feasibility.md §1/§5 and data/ATLAS.md log (h) 3, 5, 9)
+  aug2025 top10                              expected 22.9409    got 22.9409    OK
+  aug2025 top10 of named                     expected 24.9703    got 24.9703    OK
+  nov2025 top10                              expected 24.2471    got 24.2471    OK
+  nov2025 top10 of named                     expected 25.9288    got 25.9288    OK
+  feb2026 top10                              expected 19.441     got 19.441     OK
+  feb2026 top10 of named                     expected 20.9107    got 20.9107    OK
+  aug2025 named mass                         expected 91.8727    got 91.8727    OK
+  nov2025 named mass                         expected 93.5144    got 93.5144    OK
+  feb2026 named mass                         expected 92.9714    got 92.9714    OK
+  aug2025 intersection share of base named   expected 100.0      got 100.0      OK
+  nov2025 intersection share of base named   expected 100.0      got 100.0      OK
+  feb2026 intersection share of base named   expected 100.0      got 100.0      OK
+  aug2025 intersection not_classified        expected 41134      got 41134.0    OK
+  nov2025 intersection not_classified        expected 52693      got 52693.0    OK
+  feb2026 intersection not_classified        expected 54893      got 54893.0    OK
+  SC usage_count                             expected 24715      got 24715.0    OK
+  SC named nodes                             expected 65         got 65.0       OK
+  SC named share of its own mass             expected 93.7609    got 93.7609    OK
+  SC max weight shift (named)                expected 0.5823     got 0.5823     OK
+  SC max share of one global task count      expected 64.3       got 64.276     OK
+  SC>10% tasks                               expected 23         got 23.0       OK
+  SC>10% wave mass                           expected 11.594     got 11.5936    OK
+  SC>10% Q4 mass                             expected 9.039      got 9.0393     OK
+  SC>20% tasks                               expected 14         got 14.0       OK
+  SC>20% wave mass                           expected 1.966      got 1.9656     OK
+  nov analysis-set tasks                     expected 2075       got 2075.0     OK
+  nov analysis-set mass                      expected 89.9892    got 89.9892    OK

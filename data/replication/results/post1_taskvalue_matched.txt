@@ -1,0 +1,65 @@
+C5  O*NET 20.1 statements: 19530 rows -> 18428 keys ; 974 10-char codes ; 775 7-char SOCs
+C6  wage_data.csv: 1090 rows, 1084 after MedianSalary>100 ; 10-char key matches 970 of 974 O*NET codes
+C7  BLS-EP: 831 detailed-SOC rows, 825 with a median wage ; soc7 -> occ_code matches 670 of 775
+======================================================================
+[aug2025] named task nodes 2616 (mass 91.8727 of 100) ; C5 MERGE AUDIT: 2616 in, 2616 matched, 0 unmatched
+  C6: 2607 tasks priced, mass 91.2787 pp = 99.35% of named ; usage-weighted mean hourly wage $35.3420
+  C7: 2042 tasks priced, mass 51.1357 pp = 55.66% of named ; usage-weighted mean hourly wage $37.6440
+  common set (priced by both): N 2042 ; C6 $30.3422 vs C7 $37.6440 -> BLS-EP is +24.06% on the same tasks
+  vintage-adjusted C6 level (C6 full set x that uplift): $43.85 against published $48.9 -> residual $5.05
+  specification search on the C6 level: equal-split (primary) $35.34 ; employment-weighted holders $35.35 ; modal holder $35.37 ; weights = onet_task_count $35.34 ; unweighted task mean $33.84 ; top-coded tasks excluded $35.30
+======================================================================
+[nov2025] named task nodes 3168 (mass 93.5144 of 100) ; C5 MERGE AUDIT: 3168 in, 3168 matched, 0 unmatched
+  C6: 3154 tasks priced, mass 92.5622 pp = 98.98% of named ; usage-weighted mean hourly wage $35.0758
+  C7: 2534 tasks priced, mass 54.7271 pp = 58.52% of named ; usage-weighted mean hourly wage $37.6911
+  common set (priced by both): N 2534 ; C6 $30.1823 vs C7 $37.6911 -> BLS-EP is +24.88% on the same tasks
+  vintage-adjusted C6 level (C6 full set x that uplift): $43.80 against published $48.3 -> residual $4.50
+  specification search on the C6 level: equal-split (primary) $35.08 ; employment-weighted holders $35.09 ; modal holder $35.06 ; weights = onet_task_count $35.08 ; unweighted task mean $33.11 ; top-coded tasks excluded $35.04
+======================================================================
+[feb2026] named task nodes 3258 (mass 92.9714 of 100) ; C5 MERGE AUDIT: 3258 in, 3258 matched, 0 unmatched
+  C6: 3244 tasks priced, mass 92.3171 pp = 99.30% of named ; usage-weighted mean hourly wage $34.3590
+  C7: 2593 tasks priced, mass 57.8478 pp = 62.22% of named ; usage-weighted mean hourly wage $37.5460
+  common set (priced by both): N 2593 ; C6 $30.0017 vs C7 $37.5460 -> BLS-EP is +25.15% on the same tasks
+  vintage-adjusted C6 level (C6 full set x that uplift): $43.00 against published $47.9 -> residual $4.90
+  specification search on the C6 level: equal-split (primary) $34.36 ; employment-weighted holders $34.37 ; modal holder $34.36 ; weights = onet_task_count $34.36 ; unweighted task mean $33.26 ; top-coded tasks excluded $34.32
+======================================================================
+MATCHED WINDOWS  (published: Fig. 1.4, economic-index-2026-03-report p. 8)
+  wave      published   C6 rebuilt   C7 rebuilt
+  aug2025   $ 48.9      $ 35.34      $ 37.64
+  nov2025   $ 48.3      $ 35.08      $ 37.69
+  feb2026   $ 47.9      $ 34.36      $ 37.55
+  nov->feb change: published -0.40 ; C6 rebuilt -0.7168 ; C7 rebuilt -0.1450
+  aug->feb change: published -1.00 ; C6 rebuilt -0.9830 ; C7 rebuilt -0.0980
+  (the "-$1.40" of the first brief set a published Jan-2025->Feb-2026 change against a
+   Nov->Feb rebuild; on matched windows the pairs are -0.40 vs -0.72 and -1.00 vs -0.98)
+======================================================================
+CHECKS
+  aug2025  c6         expected 35.34    got 35.342     OK
+  aug2025  c7         expected 37.64    got 37.644     OK
+  aug2025  c6_mass    expected 99.35    got 99.3535    OK
+  aug2025  c7_mass    expected 55.66    got 55.6593    OK
+  aug2025  c6_tasks   expected 2607     got 2607       OK
+  aug2025  c7_tasks   expected 2042     got 2042       OK
+  aug2025  common_n   expected 2042     got 2042       OK
+  nov2025  c6         expected 35.08    got 35.0758    OK
+  nov2025  c7         expected 37.69    got 37.6911    OK
+  nov2025  c6_mass    expected 98.98    got 98.9817    OK
+  nov2025  c7_mass    expected 58.52    got 58.5227    OK
+  nov2025  c6_tasks   expected 3154     got 3154       OK
+  nov2025  c7_tasks   expected 2534     got 2534       OK
+  nov2025  common_n   expected 2534     got 2534       OK
+  feb2026  c6         expected 34.36    got 34.359     OK
+  feb2026  c7         expected 37.55    got 37.546     OK
+  feb2026  c6_mass    expected 99.3     got 99.2962    OK
+  feb2026  c7_mass    expected 62.22    got 62.2211    OK
+  feb2026  c6_tasks   expected 3244     got 3244       OK
+  feb2026  c7_tasks   expected 2593     got 2593       OK
+  feb2026  common_n   expected 2593     got 2593       OK
+  nov->feb pub        expected -0.4     got -0.4       OK
+  nov->feb c6         expected -0.72    got -0.7168    OK
+  aug->feb pub        expected -1.0     got -1.0       OK
+  aug->feb c6         expected -0.98    got -0.983     OK
+  aug2025  level gap to published: $13.56 (recorded non-reproduction, OK)
+  nov2025  level gap to published: $13.22 (recorded non-reproduction, OK)
+  feb2026  level gap to published: $13.54 (recorded non-reproduction, OK)
+  specification search: 18 variants over three waves, range $33.11-$35.37 ; none within $10 of the published level (OK)
