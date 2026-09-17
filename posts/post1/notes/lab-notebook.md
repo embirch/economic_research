@@ -113,3 +113,75 @@ new sentences rather than a substitution — item 10 would also shift which inte
 directed to for the half judgement — so both are left for the director's call at the commit or for
 Stage 3. No rule, hypothesis, threshold or exploratory test moved. `01_power_rules.py` was not changed
 and was re-run: check block passes. "Committed as" left unfilled for the director.
+
+## 2026-09-17 · Stage 2 step 5a — `02_build.py`: frames, joins, the analysis set, the quartiles
+
+**Run:** `posts/post1/scripts/02_build.py` (output `posts/post1/outputs/checks/02_build.out.txt`,
+facts `posts/post1/data/processed/build_facts.json`, diagnostic plots
+`posts/post1/outputs/diagnostics/`). Room notes addressed to the analyst and not yet recorded:
+three, all `needs-reply: no` (`director-…-gate-2a-post1.md`, `director-…-gate-2a-post1-approved.md`,
+`referee2-…-prereg-post1-reverdict.md`); recorded in `room/analyst-answered.txt` and answered in one
+note. `reference/` not opened; no file owned by another agent edited.
+
+**What it showed.** Every recorded construction fact reproduces: intersection rows 14,454 / 16,778 /
+17,530 at global only, seven patterns, min count 1; named nodes 2,616 / 3,168 / 3,258 at
+91.8727 / 93.5144 / 92.9714 pp; C5 all matched, 0 unmatched, 0 collisions; C6 priced
+2,607 / 3,154 / 3,244 (99.35 / 98.98 / 99.30% of named mass); **analysis set 1,802 / 2,075 / 2,188
+tasks, 89.2530 / 89.9892 / 89.7348 pp = 97.15 / 96.23 / 96.52% of named mass, on 818,673 / 854,432 /
+848,716 classified conversations**, with X1 = 805 / 1,079 / 1,056 and X2 = 5 / 12 / 12 dropped and
+never zeroed; Kish 99.7 / 89.5 / 134.3 named and 94.4 / 83.4 / 125.7 on the analysis set. Published
+splits 49.0980 / 51.0698, 45.3554 / 46.7394, 44.1569 / 45.5456; the §8(iii) internal check
++0.1303 / +0.2931 / +0.3510 pp; the `none`-node variant 51.7424 in August; Anthropic's released
+library returns Figure 2.11 at −3.111834 / 0.393687 / N 111. C9 covers 100% of the analysis set in
+Nov and Feb (943 / 1,071 work-dominant tasks, 29 / 21 only-`not_classified`, 35 flips each wave);
+C8 SC 24,715 conversations with 0 intersection rows, 23 tasks > 10% (11.594 pp) and 14 > 20%
+(1.966 pp); C10 reaches 1,635 / 1,843 / 1,904 analysis-set tasks.
+
+**Decided.** The build table is the single source for scripts 03–09 (`/tmp/post1/build_<wave>.parquet`,
+rebuilt by re-running this script); quartiles, quartile weights and the analysis set are imported
+from it rather than re-implemented. Check block passed (110 assertions).
+
+## 2026-09-17 · DEVIATION — the quartile rule is under-specified at a wage mass point; both readings run
+
+**Pre-registered rule** (prereg §Definitions 3, from BRIEF §9(1)): "quartile boundaries are drawn on
+usage-weighted wage over the analysis set of that wave, on the primary wage rule". **What the data
+does:** the third boundary is $43.40/hr in all three waves and it is a *mass point* — 99 / 106 / 111
+analysis-set tasks share exactly that wage, carrying **10.6012 / 8.3586 / 7.9528 pp** of the wave,
+against a Q4 of about 22.5 pp. Cutting the cumulative usage mass at 0.75 therefore splits a tie, and
+**which** of the tied tasks lands in Q4 is decided by the sort order, not by the rule: 4.9 / 5.2 /
+6.1 pp of Q4's mass comes from inside the tie. The steward's feasibility run (an unstable sort on
+the equal-split wage) put 431 / 480 / 496 tasks in Q4 with Kish 13.7 / 11.5 / 16.5; this script's
+order gives 360 / 403 / 482 tasks and Kish 10.6 / 8.9 / 16.4. Neither is more faithful to the
+pre-registered sentence.
+
+**Reason it is a mis-specification and not a coding choice:** two tasks with the same wage are
+assigned to different quartiles, so "the top quarter of usage-weighted wage" is not a function of
+the wage alone, and D inherits the arbitrary part.
+
+**Both rules are run** (script 03, both reported in `results.json`):
+1. **the pre-registered rule**, made reproducible by fixing the order inside a tie on (wage, task
+   text) — each quartile exactly a quarter of the usage mass, ties split;
+2. **the corrected rule**, fractional allocation: a wage value straddling a boundary contributes to
+   the two adjacent quartiles **in proportion**, so each quartile is still exactly a quarter of the
+   usage mass and no choice is made among tasks that share a wage.
+The primary owner declaration is read off the pre-registered rule, as registered; the corrected
+rule's three intervals and its owner are reported beside it.
+
+## 2026-09-17 · CORRECTION — BLS-EP employment does not reach the 2010 computer codes, and the A2 rule had to fall back
+
+`feasibility.md` §1 C7 records that BLS-EP employment is 7-character only and says the
+employment-weighted rule "degenerates to the equal-split mean for the two tasks whose holders sit
+inside one 7-char SOC". The larger gap is the **vintage**: BLS-EP is keyed on SOC-2018 codes and
+matches 670 of the 775 7-character O\*NET-SOC **2010** codes, and the codes it misses include the
+renumbered computer family (`15-1132` → `15-1252`). Consequences, both handled by rules the brief
+already states: (i) W1's employment-weighted wage has **no** employment figure for any holder on
+620 / 651 / 620-odd tasks — almost all of them single-holder, where all three wage rules coincide;
+of the 74 / 93 / 86 genuinely multi-priced-holder tasks the rule is identified on 42 / 55 / 51 and
+falls back to the equal-split mean on the rest (printed by the script). (ii) A2 ("each task in
+exactly one group") must use the brief's stated fallback — where employment is missing or tied, the
+**lexicographically smallest 10-character code** — which my first implementation skipped, leaving
+the group unassigned and the SOC-15 drop mass at a nonsense 4.66%. Fixed before any estimate:
+A2's SOC-15 drop mass is now 43.00 / 39.75 / 35.55% of analysis mass on the 2019 recode and
+40.04 / 37.29 / 33.11% on 2010, against the A1 equal-split shares of 43.02 / 39.82 / 35.70% (2019)
+and 40.04 / 37.29 / 33.26% (2010) and the recorded 39.86 / 37.12 / 33.11% (2010, MULTI bucket).
+Downstream: leg (a) is run on the 2019 recode as primary (V1) with the 2010 grouping beside it.

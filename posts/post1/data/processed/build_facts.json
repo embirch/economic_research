@@ -1,0 +1,913 @@
+{
+  "script": "posts/post1/scripts/02_build.py",
+  "prereg": "posts/post1/prereg/prereg.md content c9b1b45",
+  "fig211": {
+    "slope": -3.111834,
+    "partial_r2": 0.393687,
+    "n_countries": 111,
+    "published": [
+      -3.112,
+      0.394,
+      111
+    ]
+  },
+  "diagnostics": [
+    "posts/post1/outputs/diagnostics/diag_distributions.png",
+    "posts/post1/outputs/diagnostics/diag_wage_distribution.png"
+  ],
+  "waves": {
+    "aug2025": {
+      "wave": "aug2025",
+      "release": "release_2025_09_15",
+      "window": "4\u201311 Aug 2025",
+      "frame_rows": 100062,
+      "global_rows": 29656,
+      "platform": [
+        "Claude AI (Free and Pro)"
+      ],
+      "date_start": [
+        "2025-08-04"
+      ],
+      "date_end": [
+        "2025-08-11"
+      ],
+      "c5_audit": {
+        "rows": 19530,
+        "codes": 974,
+        "task_ids": 19530,
+        "task_texts": 18429,
+        "keys": 18428,
+        "max_rows_per_key": 34,
+        "soc7": 775,
+        "major_groups": 22
+      },
+      "c6_audit": {
+        "rows": 1090,
+        "kept": 1084,
+        "dropped": 6,
+        "dropped_values": [
+          15.94,
+          16.31,
+          17.54,
+          28.15,
+          28.15,
+          28.15
+        ],
+        "jobzone_sentinels": 121,
+        "chanceauto_sentinels": 424,
+        "top_code_annual": 208000.0,
+        "top_code_hourly": 100.0,
+        "at_top_code": 6
+      },
+      "c7_audit": {
+        "rows": 831,
+        "codes": 831,
+        "wage_rows": 825,
+        "emp_rows": 831
+      },
+      "crosswalk_audit": {
+        "rows": 1164,
+        "codes_2010": 1110,
+        "one_to_many": 44
+      },
+      "ix_rows": 14454,
+      "ix_rows_outside_global": 0,
+      "ix_levels": [
+        "0"
+      ],
+      "ix_patterns": [
+        "directive",
+        "feedback loop",
+        "learning",
+        "none",
+        "not_classified",
+        "task iteration",
+        "validation"
+      ],
+      "ix_base_tasks": 2617,
+      "ix_named_tasks": 2616,
+      "ix_min_count": 1.0,
+      "pct_row_sum_min": 99.99999999999997,
+      "pct_row_sum_max": 100.00000000000003,
+      "base_nodes": 2618,
+      "base_pct_sum": 99.99999999999989,
+      "base_min_count": 15.0,
+      "residual_nodes_in_base": [
+        "none",
+        "not_classified"
+      ],
+      "residual_nodes_in_ix": [
+        "none"
+      ],
+      "named_nodes": 2616,
+      "named_mass": 91.87273326739191,
+      "residual_node_mass": 8.12726673260798,
+      "named_conversations": 886107.0,
+      "split_all_patterns": 49.09797261569279,
+      "split_five_patterns": 51.06977045149392,
+      "wave_none_pattern_pct": 3.860884567451949,
+      "c5_in": 2616,
+      "c5_matched": 2616,
+      "c5_unmatched": 0,
+      "c5_unmatched_names": [],
+      "c5_unmatched_mass": 0.0,
+      "c5_key_collisions": 0,
+      "ix_not_classified_pattern_pct": 4.64210304173198,
+      "ix_none_pattern_pct": 2.4580552912910067,
+      "priced_tasks": 2607,
+      "priced_mass": 91.27874305076017,
+      "priced_share_named": 99.35346408503712,
+      "c7_priced_tasks": 2042,
+      "c7_priced_share_named": 55.659305253203016,
+      "jobzone_share_named": 99.86186769769337,
+      "multi_holder10": 74,
+      "multi_holder7": 72,
+      "span_major_group": 6,
+      "multi_priced_holders": 74,
+      "wage_rule_degenerate": 565,
+      "w1_multi_priced_no_employment": 11,
+      "w1_multi_priced_with_employment": 63,
+      "wage_rule_max_gap": 6.377403846153847,
+      "wage_rule_corr": 0.9998034350114704,
+      "c6_c7_spearman": 0.9870791749000217,
+      "c6_c7_n": 2042,
+      "at_wage_cap": 11,
+      "group_set_changes_vintage": 55,
+      "a2_group_missing": 0,
+      "analysis_tasks": 1802,
+      "analysis_mass_wave": 89.253017644485,
+      "analysis_share_named": 97.14853849478678,
+      "analysis_conversations": 818673.0,
+      "x1_wage_no_cell": 805,
+      "x1_mass": 2.0257254062751695,
+      "x2_cell_no_wage": 5,
+      "x2_mass": 0.5843478549374074,
+      "kish_named": 99.67961222202567,
+      "kish_analysis": 94.4052414607331,
+      "internal_check_value": 51.20005312722551,
+      "internal_check_gap": 0.13028267573158558,
+      "none_node_p": 60.26531339031339,
+      "none_node_weight": 5.716157902485656,
+      "internal_check_with_none_node": 51.74235085991072,
+      "uc_rows": 0,
+      "uc_facets_containing_use_case": [],
+      "c10_matched": 1635,
+      "c10_unmatched": 167,
+      "c10_matched_mass": 88.16426022349535,
+      "c10_filtered_one": 179,
+      "c10_filtered_one_mass": 1.4209523335552028,
+      "top10_wave_mass": 22.94094105302884,
+      "top10_named_share": 24.970347824811252,
+      "quartile_bounds": [
+        25.78365384615385,
+        35.55769230769231,
+        43.39903846153846
+      ],
+      "quartile_bounds_equal_rule": [
+        25.85576923076923,
+        35.78846153846154,
+        43.39903846153846
+      ],
+      "quartiles": {
+        "Q1": {
+          "tasks": 600,
+          "mass_wave": 22.310766059716258,
+          "mass_share": 24.997212025463494,
+          "kish": 62.390508224067354,
+          "conversations": 199614.0,
+          "wage_min": 10.403846153846153,
+          "wage_max": 25.78365384615385,
+          "mean_wage": 19.820740086438523
+        },
+        "Q2": {
+          "tasks": 499,
+          "mass_wave": 21.868150553554486,
+          "mass_share": 24.5013010547837,
+          "kish": 43.36084598257434,
+          "conversations": 200595.0,
+          "wage_min": 25.85576923076923,
+          "wage_max": 35.55769230769231,
+          "mean_wage": 31.021708569250546
+        },
+        "Q3": {
+          "tasks": 343,
+          "mass_wave": 22.424919180419977,
+          "mass_share": 25.125110357325408,
+          "kish": 29.264461291568136,
+          "conversations": 207584.0,
+          "wage_min": 35.63765818149862,
+          "wage_max": 43.39903846153846,
+          "mean_wage": 40.4490826262345
+        },
+        "Q4": {
+          "tasks": 360,
+          "mass_wave": 22.649181850794285,
+          "mass_share": 25.376376562427406,
+          "kish": 10.64482888090708,
+          "conversations": 210880.0,
+          "wage_min": 43.39903846153846,
+          "wage_max": 100.0,
+          "mean_wage": 50.11509503142771
+        }
+      },
+      "boundary_tie_mass": {
+        "b1_25.78": {
+          "tasks": 3,
+          "mass": 0.602595765240634,
+          "quartiles_spanned": [
+            1
+          ]
+        },
+        "b2_35.56": {
+          "tasks": 12,
+          "mass": 0.1290832291336177,
+          "quartiles_spanned": [
+            2
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 99,
+          "mass": 10.601206435706178,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "quartiles_fractional": {
+        "Q1": {
+          "tasks_with_weight": 606,
+          "mass_wave": 22.313254411121257,
+          "mass_share": 25.000000000000007,
+          "kish": 62.40440946427289
+        },
+        "Q2": {
+          "tasks_with_weight": 500,
+          "mass_wave": 22.313254411121243,
+          "mass_share": 24.999999999999993,
+          "kish": 44.339541619172394
+        },
+        "Q3": {
+          "tasks_with_weight": 368,
+          "mass_wave": 22.313254411121253,
+          "mass_share": 25.000000000000007,
+          "kish": 26.54395665759816
+        },
+        "Q4": {
+          "tasks_with_weight": 434,
+          "mass_wave": 22.313254411121214,
+          "mass_share": 24.99999999999996,
+          "kish": 14.524777022062542
+        }
+      },
+      "q4_mass_from_boundary_tie": 7.32549917365997,
+      "q1_q4_soc15_a1_2019": 73.7637903410392,
+      "soc15_share_analysis_a1_2019": 43.018911760605945,
+      "soc15_share_analysis_a1_2010": 40.0354305097347,
+      "soc15_share_analysis_a2_2019": 42.84152688072119,
+      "soc15_share_analysis_a2_2010": 39.85804562984995,
+      "soc15_share_q4_a2_2019": 73.06477454795153,
+      "groups_present_2019": 22,
+      "groups_with_q1_and_q4": 10,
+      "groups_all_four": 8,
+      "groups_with_q1_and_q4_2010": 9,
+      "groups_all_four_2010": 7
+    },
+    "nov2025": {
+      "wave": "nov2025",
+      "release": "release_2026_01_15",
+      "window": "13\u201320 Nov 2025",
+      "frame_rows": 458778,
+      "global_rows": 264808,
+      "platform": [
+        "Claude AI (Free and Pro)"
+      ],
+      "date_start": [
+        "2025-11-13"
+      ],
+      "date_end": [
+        "2025-11-20"
+      ],
+      "c5_audit": {
+        "rows": 19530,
+        "codes": 974,
+        "task_ids": 19530,
+        "task_texts": 18429,
+        "keys": 18428,
+        "max_rows_per_key": 34,
+        "soc7": 775,
+        "major_groups": 22
+      },
+      "c6_audit": {
+        "rows": 1090,
+        "kept": 1084,
+        "dropped": 6,
+        "dropped_values": [
+          15.94,
+          16.31,
+          17.54,
+          28.15,
+          28.15,
+          28.15
+        ],
+        "jobzone_sentinels": 121,
+        "chanceauto_sentinels": 424,
+        "top_code_annual": 208000.0,
+        "top_code_hourly": 100.0,
+        "at_top_code": 6
+      },
+      "c7_audit": {
+        "rows": 831,
+        "codes": 831,
+        "wage_rows": 825,
+        "emp_rows": 831
+      },
+      "crosswalk_audit": {
+        "rows": 1164,
+        "codes_2010": 1110,
+        "one_to_many": 44
+      },
+      "ix_rows": 16778,
+      "ix_rows_outside_global": 0,
+      "ix_levels": [
+        "0"
+      ],
+      "ix_patterns": [
+        "directive",
+        "feedback loop",
+        "learning",
+        "none",
+        "not_classified",
+        "task iteration",
+        "validation"
+      ],
+      "ix_base_tasks": 3169,
+      "ix_named_tasks": 3168,
+      "ix_min_count": 1.0,
+      "pct_row_sum_min": 99.99999999999997,
+      "pct_row_sum_max": 100.00000000000003,
+      "base_nodes": 3170,
+      "base_pct_sum": 99.99999999999986,
+      "base_min_count": 15.0,
+      "residual_nodes_in_base": [
+        "none",
+        "not_classified"
+      ],
+      "residual_nodes_in_ix": [
+        "none"
+      ],
+      "named_nodes": 3168,
+      "named_mass": 93.5143892986622,
+      "residual_node_mass": 6.485610701337668,
+      "named_conversations": 935027.0,
+      "split_all_patterns": 45.35536942117765,
+      "split_five_patterns": 46.73940265926802,
+      "wave_none_pattern_pct": 2.961170146268284,
+      "c5_in": 3168,
+      "c5_matched": 3168,
+      "c5_unmatched": 0,
+      "c5_unmatched_names": [],
+      "c5_unmatched_mass": 0.0,
+      "c5_key_collisions": 0,
+      "ix_not_classified_pattern_pct": 5.635452238277612,
+      "ix_none_pattern_pct": 2.024005723898882,
+      "priced_tasks": 3154,
+      "priced_mass": 92.56217027128376,
+      "priced_share_named": 98.98174063422766,
+      "c7_priced_tasks": 2534,
+      "c7_priced_share_named": 58.522695066559535,
+      "jobzone_share_named": 99.84770493258483,
+      "multi_holder10": 93,
+      "multi_holder7": 91,
+      "span_major_group": 10,
+      "multi_priced_holders": 93,
+      "wage_rule_degenerate": 620,
+      "w1_multi_priced_no_employment": 11,
+      "w1_multi_priced_with_employment": 82,
+      "wage_rule_max_gap": 6.377403846153847,
+      "wage_rule_corr": 0.9997860116043618,
+      "c6_c7_spearman": 0.986091143376725,
+      "c6_c7_n": 2534,
+      "at_wage_cap": 10,
+      "group_set_changes_vintage": 71,
+      "a2_group_missing": 0,
+      "analysis_tasks": 2075,
+      "analysis_mass_wave": 89.98924865608191,
+      "analysis_share_named": 96.2303762351248,
+      "analysis_conversations": 854432.0,
+      "x1_wage_no_cell": 1079,
+      "x1_mass": 2.5729216152018566,
+      "x2_cell_no_wage": 12,
+      "x2_mass": 0.947518439804975,
+      "kish_named": 89.47529710538038,
+      "kish_analysis": 83.37889799110593,
+      "internal_check_value": 47.03247012106165,
+      "internal_check_gap": 0.2930674617936262,
+      "none_node_p": 46.28405760957666,
+      "none_node_weight": 3.712364045505688,
+      "internal_check_with_none_node": 47.00311560226852,
+      "uc_rows": 13908,
+      "uc_facets_containing_use_case": [
+        "onet_task::use_case",
+        "request::use_case",
+        "use_case"
+      ],
+      "uc_categories": [
+        "coursework",
+        "not_classified",
+        "personal",
+        "work"
+      ],
+      "uc_analysis_covered": 2075,
+      "uc_only_nc_analysis": 29,
+      "uc_only_nc_mass": 0.0779097387173381,
+      "work_dominant_tasks": 943,
+      "work_dominant_mass_wave": 48.93821727715961,
+      "work_dominant_share_analysis": 54.3822934495099,
+      "work_dominant_subst_tasks": 978,
+      "uc_flips": 35,
+      "sc_usage_count": 24715.0,
+      "sc_usage_pct": 2.471808976122015,
+      "sc_task_nodes": 67,
+      "sc_ix_rows": 0,
+      "sc_over10_tasks": 23,
+      "sc_over10_mass": 11.59364920615077,
+      "sc_over20_tasks": 14,
+      "sc_over20_mass": 1.965645705713214,
+      "sc_max_share": 64.27604871447903,
+      "c10_matched": 1843,
+      "c10_unmatched": 232,
+      "c10_matched_mass": 88.63427928491052,
+      "c10_filtered_one": 251,
+      "c10_filtered_one_mass": 1.837829728716077,
+      "top10_wave_mass": 24.24713089136142,
+      "top10_named_share": 25.92876997134846,
+      "quartile_bounds": [
+        25.78365384615385,
+        34.86538461538461,
+        43.39903846153846
+      ],
+      "quartile_bounds_equal_rule": [
+        25.783653846153847,
+        34.86538461538461,
+        43.39903846153846
+      ],
+      "quartiles": {
+        "Q1": {
+          "tasks": 699,
+          "mass_wave": 22.31188898612323,
+          "mass_share": 24.793949632132286,
+          "kish": 54.96256571063227,
+          "conversations": 206344.0,
+          "wage_min": 10.216346153846153,
+          "wage_max": 25.78365384615385,
+          "mean_wage": 18.987145318596234
+        },
+        "Q2": {
+          "tasks": 576,
+          "mass_wave": 22.478009751218877,
+          "mass_share": 24.978550312298562,
+          "kish": 38.32999209712632,
+          "conversations": 214324.0,
+          "wage_min": 25.78365384615385,
+          "wage_max": 34.86538461538461,
+          "mean_wage": 30.659062193742855
+        },
+        "Q3": {
+          "tasks": 397,
+          "mass_wave": 22.685135641955227,
+          "mass_share": 25.208717686545608,
+          "kish": 29.00841630000841,
+          "conversations": 217155.0,
+          "wage_min": 34.86538461538461,
+          "wage_max": 43.39903846153846,
+          "mean_wage": 39.967623245510104
+        },
+        "Q4": {
+          "tasks": 403,
+          "mass_wave": 22.51421427678458,
+          "mass_share": 25.018782369023544,
+          "kish": 8.870371430625289,
+          "conversations": 216609.0,
+          "wage_min": 43.39903846153846,
+          "wage_max": 100.0,
+          "mean_wage": 50.95971007827819
+        }
+      },
+      "boundary_tie_mass": {
+        "b1_25.78": {
+          "tasks": 6,
+          "mass": 0.5585698212276533,
+          "quartiles_spanned": [
+            1,
+            2
+          ]
+        },
+        "b2_34.87": {
+          "tasks": 4,
+          "mass": 0.5521690211276408,
+          "quartiles_spanned": [
+            2,
+            3
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 106,
+          "mass": 8.358644830603822,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "quartiles_fractional": {
+        "Q1": {
+          "tasks_with_weight": 704,
+          "mass_wave": 22.49731216402047,
+          "mass_share": 24.999999999999993,
+          "kish": 55.76331203754149
+        },
+        "Q2": {
+          "tasks_with_weight": 580,
+          "mass_wave": 22.497312164020514,
+          "mass_share": 25.00000000000004,
+          "kish": 38.56124026666762
+        },
+        "Q3": {
+          "tasks_with_weight": 420,
+          "mass_wave": 22.497312164020432,
+          "mass_share": 24.99999999999995,
+          "kish": 25.861436222485832
+        },
+        "Q4": {
+          "tasks_with_weight": 487,
+          "mass_wave": 22.497312164020453,
+          "mass_share": 24.99999999999997,
+          "kish": 10.485171762246981
+        }
+      },
+      "q4_mass_from_boundary_tie": 4.933916739592448,
+      "q1_q4_soc15_a1_2019": 71.93088834990277,
+      "soc15_share_analysis_a1_2019": 39.820567249772196,
+      "soc15_share_analysis_a1_2010": 37.28839271822004,
+      "soc15_share_analysis_a2_2019": 39.65347084842964,
+      "soc15_share_analysis_a2_2010": 37.12129631687749,
+      "soc15_share_q4_a2_2019": 71.26300452215327,
+      "groups_present_2019": 22,
+      "groups_with_q1_and_q4": 10,
+      "groups_all_four": 9,
+      "groups_with_q1_and_q4_2010": 9,
+      "groups_all_four_2010": 8,
+      "work_share_by_q": [
+        32.80365411424037,
+        48.34217270591586,
+        45.99489469762766,
+        60.8225165915936
+      ],
+      "uc_mix_by_q": {
+        "Q1": {
+          "work": 32.80365411424038,
+          "personal": 44.515915030189475,
+          "coursework": 20.773137419259406,
+          "not_classified": 1.9072934363107432,
+          "none": 0.0
+        },
+        "Q2": {
+          "work": 48.34217270591586,
+          "personal": 32.42329322987115,
+          "coursework": 17.600288317790277,
+          "not_classified": 1.6342457464227238,
+          "none": 0.0
+        },
+        "Q3": {
+          "work": 45.994894697627664,
+          "personal": 26.66440352168872,
+          "coursework": 26.35402935328428,
+          "not_classified": 0.9866724273993378,
+          "none": 0.0
+        },
+        "Q4": {
+          "work": 60.82251659159359,
+          "personal": 24.58620965377542,
+          "coursework": 13.437191822809776,
+          "not_classified": 1.1540819318212105,
+          "none": 0.0
+        }
+      }
+    },
+    "feb2026": {
+      "wave": "feb2026",
+      "release": "release_2026_03_24",
+      "window": "5\u201312 Feb 2026",
+      "frame_rows": 477717,
+      "global_rows": 271313,
+      "platform": [
+        "Claude AI (Free, Pro, and Max)"
+      ],
+      "date_start": [
+        "2026-02-05"
+      ],
+      "date_end": [
+        "2026-02-12"
+      ],
+      "c5_audit": {
+        "rows": 19530,
+        "codes": 974,
+        "task_ids": 19530,
+        "task_texts": 18429,
+        "keys": 18428,
+        "max_rows_per_key": 34,
+        "soc7": 775,
+        "major_groups": 22
+      },
+      "c6_audit": {
+        "rows": 1090,
+        "kept": 1084,
+        "dropped": 6,
+        "dropped_values": [
+          15.94,
+          16.31,
+          17.54,
+          28.15,
+          28.15,
+          28.15
+        ],
+        "jobzone_sentinels": 121,
+        "chanceauto_sentinels": 424,
+        "top_code_annual": 208000.0,
+        "top_code_hourly": 100.0,
+        "at_top_code": 6
+      },
+      "c7_audit": {
+        "rows": 831,
+        "codes": 831,
+        "wage_rows": 825,
+        "emp_rows": 831
+      },
+      "crosswalk_audit": {
+        "rows": 1164,
+        "codes_2010": 1110,
+        "one_to_many": 44
+      },
+      "ix_rows": 17530,
+      "ix_rows_outside_global": 0,
+      "ix_levels": [
+        "0"
+      ],
+      "ix_patterns": [
+        "directive",
+        "feedback loop",
+        "learning",
+        "none",
+        "not_classified",
+        "task iteration",
+        "validation"
+      ],
+      "ix_base_tasks": 3259,
+      "ix_named_tasks": 3258,
+      "ix_min_count": 1.0,
+      "pct_row_sum_min": 99.99999999999997,
+      "pct_row_sum_max": 100.00000000000003,
+      "base_nodes": 3260,
+      "base_pct_sum": 99.99999999999996,
+      "base_min_count": 15.0,
+      "residual_nodes_in_base": [
+        "none",
+        "not_classified"
+      ],
+      "residual_nodes_in_ix": [
+        "none"
+      ],
+      "named_nodes": 3258,
+      "named_mass": 92.97139999999996,
+      "residual_node_mass": 7.028600000000001,
+      "named_conversations": 929714.0,
+      "split_all_patterns": 44.156899999999986,
+      "split_five_patterns": 45.54558488308526,
+      "wave_none_pattern_pct": 3.0489999999999995,
+      "c5_in": 3258,
+      "c5_matched": 3258,
+      "c5_unmatched": 0,
+      "c5_unmatched_names": [],
+      "c5_unmatched_mass": 0.0,
+      "c5_key_collisions": 0,
+      "ix_not_classified_pattern_pct": 5.904288845817101,
+      "ix_none_pattern_pct": 2.1550713445210032,
+      "priced_tasks": 3244,
+      "priced_mass": 92.31709999999995,
+      "priced_share_named": 99.2962351863046,
+      "c7_priced_tasks": 2593,
+      "c7_priced_share_named": 62.22107013554705,
+      "jobzone_share_named": 99.76756292795417,
+      "multi_holder10": 86,
+      "multi_holder7": 84,
+      "span_major_group": 9,
+      "multi_priced_holders": 86,
+      "wage_rule_degenerate": 651,
+      "w1_multi_priced_no_employment": 13,
+      "w1_multi_priced_with_employment": 73,
+      "wage_rule_max_gap": 5.807692307692307,
+      "wage_rule_corr": 0.9998553985373693,
+      "c6_c7_spearman": 0.9869133024792749,
+      "c6_c7_n": 2593,
+      "at_wage_cap": 9,
+      "group_set_changes_vintage": 70,
+      "a2_group_missing": 0,
+      "analysis_tasks": 2188,
+      "analysis_mass_wave": 89.73479999999996,
+      "analysis_share_named": 96.51871435731849,
+      "analysis_conversations": 848716.0,
+      "x1_wage_no_cell": 1056,
+      "x1_mass": 2.582299999999983,
+      "x2_cell_no_wage": 12,
+      "x2_mass": 0.6502999999999998,
+      "kish_named": 134.3172208115801,
+      "kish_analysis": 125.69438830722775,
+      "internal_check_value": 45.89657970472861,
+      "internal_check_gap": 0.35099482164334717,
+      "none_node_p": 46.25986295681063,
+      "none_node_weight": 4.2922,
+      "internal_check_with_none_node": 45.913049168629534,
+      "uc_rows": 14430,
+      "uc_facets_containing_use_case": [
+        "onet_task::use_case",
+        "request::use_case",
+        "use_case"
+      ],
+      "uc_categories": [
+        "coursework",
+        "none",
+        "not_classified",
+        "personal",
+        "work"
+      ],
+      "uc_analysis_covered": 2188,
+      "uc_only_nc_analysis": 21,
+      "uc_only_nc_mass": 0.052699999999999886,
+      "work_dominant_tasks": 1071,
+      "work_dominant_mass_wave": 47.43639999999998,
+      "work_dominant_share_analysis": 52.862880398685895,
+      "work_dominant_subst_tasks": 1106,
+      "uc_flips": 35,
+      "c10_matched": 1904,
+      "c10_unmatched": 284,
+      "c10_matched_mass": 88.01249999999997,
+      "c10_filtered_one": 286,
+      "c10_filtered_one_mass": 2.3134999999999954,
+      "top10_wave_mass": 19.441000000000003,
+      "top10_named_share": 20.91073168737914,
+      "quartile_bounds": [
+        24.004807692307693,
+        34.44711538461539,
+        43.39903846153846
+      ],
+      "quartile_bounds_equal_rule": [
+        24.004807692307693,
+        34.44711538461539,
+        43.39903846153846
+      ],
+      "quartiles": {
+        "Q1": {
+          "tasks": 649,
+          "mass_wave": 22.362399999999994,
+          "mass_share": 24.92054364638914,
+          "kish": 51.028732801733,
+          "conversations": 206638.0,
+          "wage_min": 10.216346153846153,
+          "wage_max": 24.004807692307693,
+          "mean_wage": 17.98722818534157
+        },
+        "Q2": {
+          "tasks": 641,
+          "mass_wave": 22.49439999999999,
+          "mass_share": 25.067643768081055,
+          "kish": 50.53816850399023,
+          "conversations": 213512.0,
+          "wage_min": 24.004807692307693,
+          "wage_max": 34.44711538461539,
+          "mean_wage": 29.56280696001097
+        },
+        "Q3": {
+          "tasks": 416,
+          "mass_wave": 22.367299999999993,
+          "mass_share": 24.92600418120952,
+          "kish": 37.220416545230954,
+          "conversations": 212997.0,
+          "wage_min": 34.44711538461539,
+          "wage_max": 43.39903846153846,
+          "mean_wage": 39.35638729114298
+        },
+        "Q4": {
+          "tasks": 482,
+          "mass_wave": 22.510699999999993,
+          "mass_share": 25.085808404320286,
+          "kish": 16.447384869350277,
+          "conversations": 215569.0,
+          "wage_min": 43.39903846153846,
+          "wage_max": 100.0,
+          "mean_wage": 50.817208790489836
+        }
+      },
+      "boundary_tie_mass": {
+        "b1_24.00": {
+          "tasks": 8,
+          "mass": 0.7113999999999998,
+          "quartiles_spanned": [
+            1,
+            2
+          ]
+        },
+        "b2_34.45": {
+          "tasks": 5,
+          "mass": 0.0760999999999999,
+          "quartiles_spanned": [
+            2,
+            3
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 111,
+          "mass": 7.952799999999998,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "quartiles_fractional": {
+        "Q1": {
+          "tasks_with_weight": 651,
+          "mass_wave": 22.433699999999988,
+          "mass_share": 24.999999999999996,
+          "kish": 51.36228645302204
+        },
+        "Q2": {
+          "tasks_with_weight": 651,
+          "mass_wave": 22.433700000000023,
+          "mass_share": 25.000000000000032,
+          "kish": 50.84778899663312
+        },
+        "Q3": {
+          "tasks_with_weight": 493,
+          "mass_wave": 22.43369999999998,
+          "mass_share": 24.99999999999999,
+          "kish": 37.02803228927175
+        },
+        "Q4": {
+          "tasks_with_weight": 517,
+          "mass_wave": 22.433699999999977,
+          "mass_share": 24.999999999999982,
+          "kish": 18.390493017967096
+        }
+      },
+      "q4_mass_from_boundary_tie": 6.138399999999999,
+      "q1_q4_soc15_a1_2019": 66.05606815129397,
+      "soc15_share_analysis_a1_2019": 35.700178006005856,
+      "soc15_share_analysis_a1_2010": 33.25954182026743,
+      "soc15_share_analysis_a2_2019": 35.55131342578354,
+      "soc15_share_analysis_a2_2010": 33.11067724004512,
+      "soc15_share_q4_a2_2019": 65.46264665248083,
+      "groups_present_2019": 22,
+      "groups_with_q1_and_q4": 9,
+      "groups_all_four": 8,
+      "groups_with_q1_and_q4_2010": 7,
+      "groups_all_four_2010": 6,
+      "work_share_by_q": [
+        29.050549136049785,
+        51.139839248879724,
+        43.96999190782974,
+        60.53565637674529
+      ],
+      "uc_mix_by_q": {
+        "Q1": {
+          "work": 29.0505491360498,
+          "personal": 56.328927127678604,
+          "coursework": 12.986978141881014,
+          "not_classified": 1.633545594390584,
+          "none": 0.0
+        },
+        "Q2": {
+          "work": 51.139839248879724,
+          "personal": 36.017408777295685,
+          "coursework": 11.169446617824882,
+          "not_classified": 1.6733053559997155,
+          "none": 0.0
+        },
+        "Q3": {
+          "work": 43.96999190782974,
+          "personal": 37.23694858118772,
+          "coursework": 17.683850978884355,
+          "not_classified": 1.1002669074944227,
+          "none": 0.00894162460377426
+        },
+        "Q4": {
+          "work": 60.53565637674528,
+          "personal": 30.22784720155304,
+          "coursework": 7.885583300386038,
+          "not_classified": 1.350913121315641,
+          "none": 0.0
+        }
+      }
+    }
+  }
+}

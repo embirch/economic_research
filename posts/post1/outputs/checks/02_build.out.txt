@@ -1,0 +1,91 @@
+==============================================================================
+[aug2025] release_2025_09_15 (4–11 Aug 2025)  frame rows 100,062  global rows 29,656  platform ['Claude AI (Free and Pro)']
+  C1-C3 intersection rows 14,454 (outside global: 0) levels ['0'] patterns 7 min count 1
+  C4 base nodes 2618 (named 2616); onet_task_pct sums to 100.000000; named mass 91.8727 pp; residual node mass 8.1273 pp; residual in base ['none', 'not_classified'] vs intersection ['none']
+  MERGE AUDIT C5 (task text -> O*NET 20.1 key): in 2616, matched 2616, unmatched 0 (0.0000 pp), key collisions 0
+  MERGE AUDIT C6 (10-char O*NET-SOC -> SOCcode, MedianSalary>100 applied first): priced 2607 tasks, 91.2787 pp = 99.35% of named mass; at the $100.00/hr top code 11 tasks
+  MERGE AUDIT C7 (soc7 -> BLS-EP occ_code): priced 2042 tasks = 55.66% of named mass; Spearman with C6 0.9871 on N=2042
+  multi-holder: 10-char 74, 7-char 72, spanning a major group 6; multi-priced 74; W1 degenerate on 565; max |equal - empw| $6.38/hr; corr 0.9998
+  ANALYSIS SET (S1): 1802 tasks, 89.2530 pp of the wave = 97.15% of named mass, on 818,673 classified conversations
+  DROPPED, NEVER ZEROED: X1 wage & no classified cell 805 tasks (2.0257 pp); X2 classified cell & no wage 5 tasks (0.5843 pp)
+  Kish effective N: named 99.7 (nominal 2616); analysis set 94.4 (nominal 1802)
+  REPLICATION (i) published split: all-pattern 49.0980 | five-pattern 51.0698
+  REPLICATION (iii) internal check: usage-weighted mean of per-task automation 51.2001 vs wave five-pattern 51.0698 -> gap +0.1303 pp; with the `none` task node kept 51.7424
+  intersection `not_classified` pattern 4.6421% of named counts; `none` pattern 2.4581%
+  QUARTILE BOUNDARIES (primary W1 wage) $25.78 / $35.56 / $43.40  (equal-split rule: [25.86, 35.79, 43.4])
+     Q1  tasks  600  mass 22.311 pp (25.00%)  Kish   62.4  conversations   199,614  $10.40-$25.78  mean $19.82
+     Q2  tasks  499  mass 21.868 pp (24.50%)  Kish   43.4  conversations   200,595  $25.86-$35.56  mean $31.02
+     Q3  tasks  343  mass 22.425 pp (25.13%)  Kish   29.3  conversations   207,584  $35.64-$43.40  mean $40.45
+     Q4  tasks  360  mass 22.649 pp (25.38%)  Kish   10.6  conversations   210,880  $43.40-$100.00  mean $50.12
+  mass at a boundary wage (ties split): b1_25.78 -> 3 tasks, 0.6026 pp, quartiles [1]; b2_35.56 -> 12 tasks, 0.1291 pp, quartiles [2]; b3_43.40 -> 99 tasks, 10.6012 pp, quartiles [3, 4]
+  Q4 mass coming from the tie at the third boundary: 7.3255 pp of 22.6492 pp; fractional-rule quartile Kish [62.4, 44.3, 26.5, 14.5]
+  SOC-15: A1 equal-split share of analysis mass 2019 43.02% (2010 40.04%); A2 drop mass 2019 42.84% (2010 39.86%); A1 share of Q4 mass 73.8%, A2 share of Q4 73.1%
+  groups (2019 recode, A2): present 22; containing Q1 and Q4 10; spanning all four 8 (2010: 9 / 7)
+  C9 use_case rows 0 (facets with 'use_case': [])
+  C10 reach: 1635 of 1802 analysis-set tasks (88.1643 of 89.2530 pp = 98.78%); filtered == 1.0 on 179 (1.4210 pp)
+  top-10 concentration 22.9409 pp of the wave = 24.9703% of named mass
+==============================================================================
+[nov2025] release_2026_01_15 (13–20 Nov 2025)  frame rows 458,778  global rows 264,808  platform ['Claude AI (Free and Pro)']
+  C1-C3 intersection rows 16,778 (outside global: 0) levels ['0'] patterns 7 min count 1
+  C4 base nodes 3170 (named 3168); onet_task_pct sums to 100.000000; named mass 93.5144 pp; residual node mass 6.4856 pp; residual in base ['none', 'not_classified'] vs intersection ['none']
+  MERGE AUDIT C5 (task text -> O*NET 20.1 key): in 3168, matched 3168, unmatched 0 (0.0000 pp), key collisions 0
+  MERGE AUDIT C6 (10-char O*NET-SOC -> SOCcode, MedianSalary>100 applied first): priced 3154 tasks, 92.5622 pp = 98.98% of named mass; at the $100.00/hr top code 10 tasks
+  MERGE AUDIT C7 (soc7 -> BLS-EP occ_code): priced 2534 tasks = 58.52% of named mass; Spearman with C6 0.9861 on N=2534
+  multi-holder: 10-char 93, 7-char 91, spanning a major group 10; multi-priced 93; W1 degenerate on 620; max |equal - empw| $6.38/hr; corr 0.9998
+  ANALYSIS SET (S1): 2075 tasks, 89.9892 pp of the wave = 96.23% of named mass, on 854,432 classified conversations
+  DROPPED, NEVER ZEROED: X1 wage & no classified cell 1079 tasks (2.5729 pp); X2 classified cell & no wage 12 tasks (0.9475 pp)
+  Kish effective N: named 89.5 (nominal 3168); analysis set 83.4 (nominal 2075)
+  REPLICATION (i) published split: all-pattern 45.3554 | five-pattern 46.7394
+  REPLICATION (iii) internal check: usage-weighted mean of per-task automation 47.0325 vs wave five-pattern 46.7394 -> gap +0.2931 pp; with the `none` task node kept 47.0031
+  intersection `not_classified` pattern 5.6355% of named counts; `none` pattern 2.0240%
+  QUARTILE BOUNDARIES (primary W1 wage) $25.78 / $34.87 / $43.40  (equal-split rule: [25.78, 34.87, 43.4])
+     Q1  tasks  699  mass 22.312 pp (24.79%)  Kish   55.0  conversations   206,344  $10.22-$25.78  mean $18.99
+     Q2  tasks  576  mass 22.478 pp (24.98%)  Kish   38.3  conversations   214,324  $25.78-$34.87  mean $30.66
+     Q3  tasks  397  mass 22.685 pp (25.21%)  Kish   29.0  conversations   217,155  $34.87-$43.40  mean $39.97
+     Q4  tasks  403  mass 22.514 pp (25.02%)  Kish    8.9  conversations   216,609  $43.40-$100.00  mean $50.96
+  mass at a boundary wage (ties split): b1_25.78 -> 6 tasks, 0.5586 pp, quartiles [1, 2]; b2_34.87 -> 4 tasks, 0.5522 pp, quartiles [2, 3]; b3_43.40 -> 106 tasks, 8.3586 pp, quartiles [3, 4]
+  Q4 mass coming from the tie at the third boundary: 4.9339 pp of 22.5142 pp; fractional-rule quartile Kish [55.8, 38.6, 25.9, 10.5]
+  SOC-15: A1 equal-split share of analysis mass 2019 39.82% (2010 37.29%); A2 drop mass 2019 39.65% (2010 37.12%); A1 share of Q4 mass 71.9%, A2 share of Q4 71.3%
+  groups (2019 recode, A2): present 22; containing Q1 and Q4 10; spanning all four 9 (2010: 9 / 8)
+  C9 use_case rows 13,908 (facets with 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case'])
+     coverage of the analysis set 2075 of 2075; only-`not_classified` 29 tasks (0.0779 pp); work-dominant 943 tasks, 48.9382 pp = 54.38% of analysis mass; substantive-cell rule 978 tasks, flips 35
+     work share by wage quartile Q1->Q4 [32.8, 48.34, 45.99, 60.82]
+  C8 Seychelles: usage 24,715 (2.47181%), task nodes 67, onet_task::collaboration rows 0; analysis-set tasks with SC > 10% of the global count 23 (11.594 pp), > 20% 14 (1.966 pp); max share 64.3%
+  C10 reach: 1843 of 2075 analysis-set tasks (88.6343 of 89.9892 pp = 98.49%); filtered == 1.0 on 251 (1.8378 pp)
+  top-10 concentration 24.2471 pp of the wave = 25.9288% of named mass
+==============================================================================
+[feb2026] release_2026_03_24 (5–12 Feb 2026)  frame rows 477,717  global rows 271,313  platform ['Claude AI (Free, Pro, and Max)']
+  C1-C3 intersection rows 17,530 (outside global: 0) levels ['0'] patterns 7 min count 1
+  C4 base nodes 3260 (named 3258); onet_task_pct sums to 100.000000; named mass 92.9714 pp; residual node mass 7.0286 pp; residual in base ['none', 'not_classified'] vs intersection ['none']
+  MERGE AUDIT C5 (task text -> O*NET 20.1 key): in 3258, matched 3258, unmatched 0 (0.0000 pp), key collisions 0
+  MERGE AUDIT C6 (10-char O*NET-SOC -> SOCcode, MedianSalary>100 applied first): priced 3244 tasks, 92.3171 pp = 99.30% of named mass; at the $100.00/hr top code 9 tasks
+  MERGE AUDIT C7 (soc7 -> BLS-EP occ_code): priced 2593 tasks = 62.22% of named mass; Spearman with C6 0.9869 on N=2593
+  multi-holder: 10-char 86, 7-char 84, spanning a major group 9; multi-priced 86; W1 degenerate on 651; max |equal - empw| $5.81/hr; corr 0.9999
+  ANALYSIS SET (S1): 2188 tasks, 89.7348 pp of the wave = 96.52% of named mass, on 848,716 classified conversations
+  DROPPED, NEVER ZEROED: X1 wage & no classified cell 1056 tasks (2.5823 pp); X2 classified cell & no wage 12 tasks (0.6503 pp)
+  Kish effective N: named 134.3 (nominal 3258); analysis set 125.7 (nominal 2188)
+  REPLICATION (i) published split: all-pattern 44.1569 | five-pattern 45.5456
+  REPLICATION (iii) internal check: usage-weighted mean of per-task automation 45.8966 vs wave five-pattern 45.5456 -> gap +0.3510 pp; with the `none` task node kept 45.9130
+  intersection `not_classified` pattern 5.9043% of named counts; `none` pattern 2.1551%
+  QUARTILE BOUNDARIES (primary W1 wage) $24.00 / $34.45 / $43.40  (equal-split rule: [24.0, 34.45, 43.4])
+     Q1  tasks  649  mass 22.362 pp (24.92%)  Kish   51.0  conversations   206,638  $10.22-$24.00  mean $17.99
+     Q2  tasks  641  mass 22.494 pp (25.07%)  Kish   50.5  conversations   213,512  $24.00-$34.45  mean $29.56
+     Q3  tasks  416  mass 22.367 pp (24.93%)  Kish   37.2  conversations   212,997  $34.45-$43.40  mean $39.36
+     Q4  tasks  482  mass 22.511 pp (25.09%)  Kish   16.4  conversations   215,569  $43.40-$100.00  mean $50.82
+  mass at a boundary wage (ties split): b1_24.00 -> 8 tasks, 0.7114 pp, quartiles [1, 2]; b2_34.45 -> 5 tasks, 0.0761 pp, quartiles [2, 3]; b3_43.40 -> 111 tasks, 7.9528 pp, quartiles [3, 4]
+  Q4 mass coming from the tie at the third boundary: 6.1384 pp of 22.5107 pp; fractional-rule quartile Kish [51.4, 50.8, 37.0, 18.4]
+  SOC-15: A1 equal-split share of analysis mass 2019 35.70% (2010 33.26%); A2 drop mass 2019 35.55% (2010 33.11%); A1 share of Q4 mass 66.1%, A2 share of Q4 65.5%
+  groups (2019 recode, A2): present 22; containing Q1 and Q4 9; spanning all four 8 (2010: 7 / 6)
+  C9 use_case rows 14,430 (facets with 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case'])
+     coverage of the analysis set 2188 of 2188; only-`not_classified` 21 tasks (0.0527 pp); work-dominant 1071 tasks, 47.4364 pp = 52.86% of analysis mass; substantive-cell rule 1106 tasks, flips 35
+     work share by wage quartile Q1->Q4 [29.05, 51.14, 43.97, 60.54]
+  C10 reach: 1904 of 2188 analysis-set tasks (88.0125 of 89.7348 pp = 98.08%); filtered == 1.0 on 286 (2.3135 pp)
+  top-10 concentration 19.4410 pp of the wave = 20.9107% of named mass
+==============================================================================
+REPLICATION (ii): Anthropic's released library, Figure 2.11
+  released library: slope -3.111834  partial R² 0.393687  N countries 111  (published −3.112 / 0.394 / 111)
+==============================================================================
+plot before modelling -> ['posts/post1/outputs/diagnostics/diag_distributions.png', 'posts/post1/outputs/diagnostics/diag_wage_distribution.png']
+wrote posts/post1/data/processed/build_facts.json
+
+CHECK BLOCK PASSED — 02_build.py
