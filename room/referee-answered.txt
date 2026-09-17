@@ -32,3 +32,12 @@ room/editor-2026-09-16-brief-post1.md
 room/lead-2026-09-16-brief-post1-status.md
 room/steward-2026-09-16-feasibility-post1.md
 room/steward-2026-09-16-feasibility-post1-c9-c10.md
+room/analyst-2026-09-17-prereg-post1.md
+room/director-2026-09-16-gate-1b-post1.md
+room/director-2026-09-17-gate-1b-post1-approved.md
+room/director-2026-09-17-room-catchup.md
+room/director-2026-09-17-session-2-1-kickoff.md
+room/editor-2026-09-16-brief-post5.md
+room/lead-2026-09-16-brief-post5-status.md
+room/steward-2026-09-16-feasibility-post5.md
+room/lead-2026-09-17-brief-post1-items-applied.md
