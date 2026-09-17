@@ -28,3 +28,4 @@ room/lead-2026-09-16-brief-post5-status.md
 room/referee-2026-09-16-post2-recode-correction.md
 room/director-2026-09-16-session-1-4-resume.md
 room/director-2026-09-16-session-1-4-halt.md
+room/lead-2026-09-16-brief-post1-status.md

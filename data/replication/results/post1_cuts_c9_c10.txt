@@ -1,0 +1,104 @@
+==============================================================================
+ANALYSIS SET (rebuilt; must equal feasibility.md §4: 1,802 / 2,075 / 2,188 tasks)
+  aug2025: named nodes 2616 ; analysis-set tasks 1802 ; mass 89.2530 pp of wave = 97.15% of named
+  nov2025: named nodes 3168 ; analysis-set tasks 2075 ; mass 89.9892 pp of wave = 96.23% of named
+  feb2026: named nodes 3258 ; analysis-set tasks 2188 ; mass 89.7348 pp of wave = 96.52% of named
+==============================================================================
+C9  onet_task::use_case at geography == global
+------------------------------------------------------------------------------
+  [aug2025] rows at global 0 ; rows at other geographies 0
+      -> facet absent in this wave; facets containing "use_case": []
+------------------------------------------------------------------------------
+  [nov2025] rows at global 13908 ; rows at other geographies 0
+      variables ['onet_task_use_case_count', 'onet_task_use_case_pct'] ; level values ['0']
+      categories present: ['coursework', 'not_classified', 'personal', 'work']
+      base tasks 3169 (named 3168)
+      count column coursework     cells   888  min    15  max     25615
+      count column not_classified cells  2534  min     1  max        39
+      count column personal       cells  1627  min    15  max     10863
+      count column work           cells  1901  min    15  max     43710
+      per-task _pct row sum: min 100.0000 median 100.0000 max 100.0000
+      counts vs base onet_task_count over 3168 shared nodes: max |diff| 0 ; exact on 3168
+      publication patterns (top 6): {('not_classified', 'work'): 684, ('not_classified',): 571, ('coursework', 'personal', 'work'): 511, ('not_classified', 'personal'): 506, ('not_classified', 'personal', 'work'): 405, ('coursework', 'not_classified', 'work'): 163}
+      COVERAGE of analysis set: 2075 of 2075 tasks carry a use_case row (89.9892 of 89.9892 pp)
+      of those: published `work` cell 1594 ; published `coursework` cell 861 ; both 728
+      named-task mass, work AND coursework cell both published: 76.9463 of 93.5144 pp of the wave
+      named-task mass, work OR coursework cell published: 89.2976 of 93.5144 pp of the wave
+      named-task mass with ANY substantive use_case cell: 92.4336 of 93.5144 pp of the wave
+      analysis-set tasks whose ONLY published use_case cell is `not_classified`: 29 (0.0779 pp of the wave)
+      work share of published cells over the analysis set: defined 2075 ; median 0.4348 ; mean 0.4210
+      WORK-DOMINANT, brief's rule (work / all published cells >= 0.50): 943 tasks, 48.9382 pp of the wave = 54.38% of the analysis-set mass
+      WORK-DOMINANT, substantive-cell denominator (the rival rule): 978 tasks, 49.2182 pp ; tasks flipping between the two rules 35
+      bound width = published `not_classified` _pct on the analysis set: median 4.8246 pp ; max 100.0000 pp
+      named-task mass by published cell: {'coursework': 78.3286, 'not_classified': 44.3613, 'personal': 86.6246, 'work': 87.9153}
+      global share of the intersection's counts by category: {'coursework': 18.8848, 'not_classified': 2.7462, 'personal': 32.2497, 'work': 46.1193}
+         Q1  tasks  701  mass 22.461 pp  use_case rows on  701  counts   224,581  mix {'coursework': 20.83, 'not_classified': 1.9, 'personal': 44.67, 'work': 32.6}
+         Q2  tasks  573  mass 22.265 pp  use_case rows on  573  counts   222,623  mix {'coursework': 17.56, 'not_classified': 1.64, 'personal': 32.11, 'work': 48.69}
+         Q3  tasks  321  mass 19.499 pp  use_case rows on  321  counts   194,969  mix {'coursework': 28.98, 'not_classified': 0.95, 'personal': 28.02, 'work': 42.05}
+         Q4  tasks  480  mass 25.764 pp  use_case rows on  480  counts   257,607  mix {'coursework': 13.02, 'not_classified': 1.16, 'personal': 23.91, 'work': 61.91}
+      folded `not_classified` on the analysis set: cells 1498 ; max count 38 ; median share of node 0.0482
+------------------------------------------------------------------------------
+  [feb2026] rows at global 14430 ; rows at other geographies 0
+      variables ['onet_task_use_case_count', 'onet_task_use_case_pct'] ; level values ['0']
+      categories present: ['coursework', 'none', 'not_classified', 'personal', 'work']
+      base tasks 3259 (named 3258)
+      count column coursework     cells   648  min    15  max     17890
+      count column none           cells     1  min    20  max        20
+      count column not_classified cells  2670  min     1  max        36
+      count column personal       cells  1813  min    15  max     10793
+      count column work           cells  2079  min    15  max     30068
+      per-task _pct row sum: min 100.0000 median 100.0000 max 100.0000
+      counts vs base onet_task_count over 3258 shared nodes: max |diff| 0 ; exact on 3258
+      publication patterns (top 6): {('not_classified', 'work'): 809, ('not_classified', 'personal'): 576, ('not_classified', 'personal', 'work'): 575, ('not_classified',): 455, ('coursework', 'personal', 'work'): 387, ('coursework', 'not_classified', 'personal', 'work'): 89}
+      COVERAGE of analysis set: 2188 of 2188 tasks carry a use_case row (89.7348 of 89.7348 pp)
+      of those: published `work` cell 1706 ; published `coursework` cell 633 ; both 566
+      named-task mass, work AND coursework cell both published: 69.6432 of 92.9714 pp of the wave
+      named-task mass, work OR coursework cell published: 87.9329 of 92.9714 pp of the wave
+      named-task mass with ANY substantive use_case cell: 92.1255 of 92.9714 pp of the wave
+      analysis-set tasks whose ONLY published use_case cell is `not_classified`: 21 (0.0527 pp of the wave)
+      work share of published cells over the analysis set: defined 2188 ; median 0.4854 ; mean 0.4504
+      WORK-DOMINANT, brief's rule (work / all published cells >= 0.50): 1071 tasks, 47.4364 pp of the wave = 52.86% of the analysis-set mass
+      WORK-DOMINANT, substantive-cell denominator (the rival rule): 1106 tasks, 47.7765 pp ; tasks flipping between the two rules 35
+      bound width = published `not_classified` _pct on the analysis set: median 3.9216 pp ; max 100.0000 pp
+      named-task mass by published cell: {'coursework': 70.6206, 'none': 0.8063, 'not_classified': 50.9746, 'personal': 86.8901, 'work': 86.9555}
+      global share of the intersection's counts by category: {'coursework': 12.0303, 'none': 0.0022, 'not_classified': 2.5722, 'personal': 39.8144, 'work': 45.581}
+         Q1  tasks  648  mass 22.354 pp  use_case rows on  648  counts   223,537  mix {'coursework': 12.99, 'none': 0.0, 'not_classified': 1.63, 'personal': 56.4, 'work': 28.97}
+         Q2  tasks  641  mass 22.500 pp  use_case rows on  641  counts   224,999  mix {'coursework': 11.17, 'none': 0.0, 'not_classified': 1.67, 'personal': 35.95, 'work': 51.21}
+         Q3  tasks  403  mass 22.384 pp  use_case rows on  403  counts   223,839  mix {'coursework': 17.77, 'none': 0.01, 'not_classified': 1.08, 'personal': 38.3, 'work': 42.85}
+         Q4  tasks  496  mass 22.497 pp  use_case rows on  496  counts   224,973  mix {'coursework': 7.8, 'none': 0.0, 'not_classified': 1.38, 'personal': 29.17, 'work': 61.65}
+      folded `not_classified` on the analysis set: cells 1680 ; max count 30 ; median share of node 0.0392
+==============================================================================
+C10  release_2025_03_27, task-level collaboration (Feb-Mar 2025 window)
+  files present: ['SOC_Structure.csv', 'automation_vs_augmentation_by_task.csv', 'automation_vs_augmentation_v1.csv', 'automation_vs_augmentation_v2.csv', 'onet_task_statements.csv', 'task_pct_v1.csv', 'task_pct_v2.csv', 'task_thinking_fractions.csv']
+  automation_vs_augmentation_by_task.csv shape (3364, 7)
+    COLUMNS: ['task_name', 'feedback_loop', 'directive', 'task_iteration', 'validation', 'learning', 'filtered']
+    a column literally named "collaboration": False ; columns containing "collab": []
+    any *_count / *_pct column: []
+    dtypes ['float64'] ; row sums: max |sum-1| 4.44e-16 ; filtered median 0.3000 ; rows at filtered==1.0 1066
+  task_pct_v2.csv shape (3365, 2) columns ['task_name', 'pct'] ; pct sum 100.000000000000 ; `none` pseudo-task pct 1.781672
+  task_thinking_fractions.csv shape (3365, 2) columns ['task_name', 'thinking_fraction']
+  MERGE AUDIT task_pct_v2 -> by_task: 3365 rows in, 3364 matched, unmatched ['none']
+    matched tasks carry 98.2183 of 100 pct ; v2-only is the `none` pseudo-task
+    pct weighted by the five classified ratios: 90.1561 of 100 (usage-weighted filtered 0.082085)
+    usage-weighted automation share on the five-classified base: 43.2902%
+  three task files: task_pct_v2 3365 rows ; by_task 3364 ; thinking 3365 ; by_task set == v2 minus `none`: True
+------------------------------------------------------------------------------
+  INTERSECTION with post1's analysis set (task keys lower-cased stripped on both sides)
+    by_task distinct lower-stripped keys 3364 (of 3364 rows)
+      aug2025: 1802 analysis-set tasks in, 1635 matched in the Mar-2025 file, 167 unmatched ; matched mass 88.1643 of 89.2530 pp of the wave (98.78%)
+         of the matched: filtered == 1.0 on 179 tasks (1.4210 pp of the wave) ; filtered median 0.1005
+         with a usable five-pattern split (filtered < 1): 1456 tasks, 86.7433 pp of the wave
+      nov2025: 2075 analysis-set tasks in, 1843 matched in the Mar-2025 file, 232 unmatched ; matched mass 88.6343 of 89.9892 pp of the wave (98.49%)
+         of the matched: filtered == 1.0 on 251 tasks (1.8378 pp of the wave) ; filtered median 0.1196
+         with a usable five-pattern split (filtered < 1): 1592 tasks, 86.7964 pp of the wave
+      feb2026: 2188 analysis-set tasks in, 1904 matched in the Mar-2025 file, 284 unmatched ; matched mass 88.0125 of 89.7348 pp of the wave (98.08%)
+         of the matched: filtered == 1.0 on 286 tasks (2.3135 pp of the wave) ; filtered median 0.1226
+         with a usable five-pattern split (filtered < 1): 1618 tasks, 85.6990 pp of the wave
+------------------------------------------------------------------------------
+  `none` AT TASK LEVEL DOES NOT EXIST IN THIS RELEASE (the brief's §9(1) requires the `none`
+  share beside every automation share). Arithmetic:
+    global v2 file: rows ['directive', 'feedback loop', 'learning', 'none', 'task iteration', 'validation'] ; total 99.996500 ; `none` 3.238949 ; five classified 96.757551
+    per-task file: no `none` column (confirmed absent); filtered mass over the 100-pct task base 8.0623 pp
+    so `filtered` (8.0623 pp of the task base) exceeds the global `none` share (3.2389 pp) by about
+    4.82 pp of conversations, and the two components cannot be separated from the files.
+    three-wave analysis-set intersection 1518 tasks ; also in the Mar-2025 file 1430

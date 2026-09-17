@@ -391,6 +391,17 @@ top quartile. The pre-registration must name one variance model, state its MDE, 
 the task mix fixed by construction or widen the indifference band; otherwise the H4 branch can
 only be reported as underpowered.
 
+**2026-09-17 — the two cuts added at the design pass do not change this verdict.** C9 and C10 are
+both **CONFIRMED WITH CAVEAT** in §7. C9 covers **100%** of the analysis set in Nov and Feb (2,075
+of 2,075; 2,188 of 2,188) and none of August, where the facet does not exist at all and has no
+substitute; §8's "87.92 / 86.96" is the mass of tasks with a published **`work`** cell, not with a
+work/coursework split. C10's every figure in §8 confirms, with three things §8 and §10 should add:
+no column in that release is named `collaboration` (the five underscored pattern columns are the
+split), the file carries **no counts**, and there is **no task-level `none` share** — its `filtered`
+residual is `none` plus about 4.8 pp of unpublished exclusions and cannot be decomposed — so the
+window reaches 1,635 / 1,843 / 1,904 of the 1,802 / 2,075 / 2,188 analysis-set tasks (98.78 / 98.49
+/ 98.08% of their mass) and can carry only the design-based bound §10 gives it.
+
 ---
 
 ## Verification — commands run, 2026-09-16
@@ -413,3 +424,166 @@ Per-cut one-liners are inline in §1. Full output:
 the analyst are `/tmp/p1/tk_{aug2025,nov2025,feb2026}.csv`
 (task, key, weight, count, holders, four wage variants, JobZone, automation share, classified
 base) — these are scratch, not deliverables, and rebuild in ~3 minutes from the scripts above.
+
+---
+
+## 7. Cuts added at the design pass (C9, C10)
+
+*2026-09-17. Written on the lead's request in the last dated block of
+`room/lead-2026-09-16-brief-post1-status.md` (94161d8), against `posts/post1/BRIEF.md` §8 C9/C10
+and the §9(3)(d)–(e) / §10 tests that use them (9af7bad). One new script,
+`data/replication/post1_cuts_c9_c10.py`; output
+`data/replication/results/post1_cuts_c9_c10.txt`. The March-2025 folder was **absent from the
+cache** and was rebuilt before anything was confirmed — `python data/fetch/release_2025_03_27.py`
+→ 16 files, 10,308,805 B = `data/releases/INDEX.md`, then `sha256sum -c CHECKSUMS.txt` inside the
+folder, 16/16 OK. The script rebuilds the §4 analysis set from scratch and reproduces it exactly
+(**1,802 / 2,075 / 2,188** tasks at **89.2530 / 89.9892 / 89.7348** pp of the wave), so every
+coverage figure below is on the same set as the rest of this note. Nothing here is confirmed from
+the atlas alone.*
+
+### C9 · `onet_task::use_case` at global, Nov 2025 and Feb 2026 — **CONFIRMED WITH CAVEAT**
+
+- **Release and file.** `release_2026_01_15/data/intermediate/aei_raw_claude_ai_2025-11-13_to_2025-11-20`
+  and `release_2026_03_24/data/aei_raw_claude_ai_2026-02-05_to_2026-02-12` (Parquet siblings, every
+  non-`value` column cast to `str`). **Grain `geography == 'global'` only: 13,908 rows (Nov) and
+  14,430 rows (Feb), 0 rows at any other geography** — both counts in §8 confirm.
+- **August 2025 is not an empty cut, it is an absent facet.** In
+  `release_2025_09_15/.../aei_raw_claude_ai_2025-08-04_to_2025-08-11.csv` **no facet name contains
+  `use_case`** (0 rows at any geography). §8's "0 rows in Aug 2025" is right and can be stated more
+  strongly.
+- **Metric columns.** `onet_task_use_case_count` and `onet_task_use_case_pct`, `level == '0'`
+  throughout; `cluster_name` is `task::category`, split on the **last** `::`. 3,169 / 3,259 base
+  nodes, **3,168 / 3,258 named**.
+- **Categories.** Nov: `coursework`, `personal`, `work`, `not_classified`. Feb: those four **plus
+  `none`** — and Feb's `none` is **exactly one cell, 20 conversations, on one task** (that task
+  holds 0.8063 pp of named mass; `none` is 0.0022% of the intersection's counts). So §8's rule
+  "neither residual label may be hard-coded" is confirmed as a coding rule, while as a quantity the
+  Feb `none` is negligible; the operative residual in both waves is `not_classified`.
+- **Threshold / suppression.** Every substantive cell is **≥ 15** (minimum exactly 15 in `work`,
+  `personal` and `coursework`); `not_classified` runs **1–39** (Nov) and **1–36** (Feb); the cells
+  **partition the base `onet_task_count` exactly** (3,168 of 3,168 Nov nodes, 3,258 of 3,258 Feb,
+  max |diff| = 0) and per-task `_pct` sums to **exactly 100.0000** at min, median and max. This is
+  the folding rule of `data/ATLAS.md` log (j) 1, now confirmed with numbers for `use_case`: a
+  sub-15 cell is relabelled, never dropped. Consequences, as in (j) 2: a per-task work share is a
+  share of the node and must **not** be renormalised over substantive cells, and the published
+  `not_classified` `_pct` is the **bound width** — median **4.82 pp** (Nov) / **3.92 pp** (Feb) over
+  the analysis set, and 100 pp on the tasks whose only published cell is `not_classified`.
+- **Coverage of this post's analysis set: 100%, confirmed.** 2,075 of 2,075 (Nov) and 2,188 of
+  2,188 (Feb) analysis-set tasks carry a `use_case` row — all of the mass, 89.9892 / 89.7348 pp.
+  §9(3)(d)'s quartile version is also fully covered: every task in every usage-weighted wage
+  quartile carries a row (701 / 573 / 321 / 480 tasks Nov, 648 / 641 / 403 / 496 Feb).
+- **Correction §8's C9 cell needs (and `data/ATLAS.md` log (g) 2 with it).** "Tasks with a published
+  work/coursework split hold 87.92 / 86.96 of the 93.51 / 92.97 named mass" is the mass of tasks
+  with a published **`work` cell** — 87.9153 (Nov) and 86.9555 (Feb) — not of tasks with a
+  work-and-coursework split. On the named base: **both** cells published 76.9463 / 69.6432; **work
+  or coursework** 89.2976 / 87.9329; **any substantive cell** 92.4336 / 92.1255 of 93.5144 /
+  92.9714. The numbers quoted are right for the `work` cell; the words are wrong.
+- **§9(3)(e)'s work-dominant set is identified, and its denominator barely matters.** Work / **all
+  published cells** ≥ 0.50 (the brief's rule, and the right one under (j) 2b) gives **943 tasks,
+  48.9382 pp of the wave = 54.38% of analysis-set mass** (Nov) and **1,071 tasks, 47.4364 pp =
+  52.86%** (Feb). The substantive-cell denominator gives 978 / 1,106 tasks, and **35 tasks flip**
+  in each wave. One thing the pre-registration must name: **29 Nov (21 Feb) analysis-set tasks
+  publish only `not_classified`** (0.0779 / 0.0527 pp) — work share 0 under the brief's rule,
+  undefined under the rival; drop them by a stated rule rather than scoring them 0.
+- **Data fact the leg will meet, recorded as coverage and not as the test.** The folded residual is
+  only **2.75% (Nov) / 2.57% (Feb)** of the intersection's counts, so quartile-level mixes are well
+  determined; and the `work` share **rises with the wage quartile** — Q1→Q4 **32.60 / 48.69 / 42.05
+  / 61.91%** (Nov) and **28.97 / 51.21 / 42.85 / 61.65%** (Feb), with `personal` falling 44.67 →
+  23.91 and 56.40 → 29.17. The composition rival the referee's item 2 names therefore has a real
+  gradient in this data, which is an argument for running leg (e), not against it.
+- **Caveats carried.** (i) August publishes no `use_case`, so legs (d)–(e) are a **two-wave**
+  statement — §8 and §9(3) already say so, and there is **no substitute**: `request::use_case`
+  exists in the 2026 waves only and is keyed to requests, not tasks, and the Aug-2025 file has no
+  use-case classifier output at any grain. The cost of the gap is that the work-mix rival is tested
+  on Nov and Feb and asserted, not tested, for August. (ii) `use_case` is one of the metrics that
+  breaks at the June-2026 boundary (`data/ATLAS.md` log (g) 1–2); irrelevant inside these two
+  waves, but it forecloses a June extension of the leg.
+
+### C10 · `release_2025_03_27` per-task collaboration (Feb–Mar 2025) — **CONFIRMED WITH CAVEAT**
+
+- **Release and file.** `data/cache/release_2025_03_27/automation_vs_augmentation_by_task.csv`,
+  **3,364 × 7**, flat and global: no geography, date, model, product or platform column exists
+  anywhere in the release, so "global" here is an absence of any other grain, not a `geography`
+  value.
+- **The task-level columns, verbatim:** `task_name`, `feedback_loop`, `directive`,
+  `task_iteration`, `validation`, `learning`, `filtered`. **There is no column named
+  `collaboration`**, and no column whose name contains "collab" (checked by name). The five
+  patterns *are* the columns, and the names are **underscored** (`feedback_loop`,
+  `task_iteration`) — not the spaced labels the 2026 facets use (`feedback loop`), and not the
+  `collaboration:<pattern>_ratio` form, which exists in this release only in
+  `cluster_level_data/cluster_level_dataset.tsv` at the **630-cluster** grain. §8's "per-task
+  collaboration split" is right as a description and must not be read as a column name; any script
+  that filters `facet == 'onet_task::collaboration'` finds nothing here.
+- **No counts.** The file has **no `_count` and no `_pct` column**: six `float64` ratio columns,
+  rows summing to exactly 1.0 (max |sum − 1| = 4.4e-16). §10's "publishes no counts (so no
+  conversation-level interval)" is confirmed at column level.
+- **Weights and the merge audit.** `task_pct_v2.csv` (3,365 rows; `pct` sums to exactly 100; the
+  `none` pseudo-task is 1.781672). `task_pct_v2` → `by_task`: **3,365 in, 3,364 matched, 1
+  unmatched and it is `none`**; the matched set carries **98.2183** of 100 `pct`; weighting `pct` by
+  the five classified ratios leaves **90.1561** of 100 (usage-weighted `filtered` **0.082085**);
+  `filtered` median **0.3000**, **1,066** rows at `filtered == 1.0`. All of §8's C10 figures
+  confirm. One citation fix: those numbers are `data/ATLAS.md` log **(f) 4**, not (j) 4.
+- **Intersection with the analysis set** (lower-cased stripped task text on both sides; 3,364
+  distinct keys, 0 collisions):
+
+  | wave | analysis-set tasks in | matched in the Mar-2025 file | unmatched | matched mass | `filtered == 1.0` among matched | usable split (`filtered` < 1) |
+  |---|---|---|---|---|---|---|
+  | Aug 2025 | 1,802 | **1,635** | 167 | 88.1643 of 89.2530 pp = **98.78%** | 179 (1.4210 pp) | 1,456 (86.7433 pp) |
+  | Nov 2025 | 2,075 | **1,843** | 232 | 88.6343 of 89.9892 pp = **98.49%** | 251 (1.8378 pp) | 1,592 (86.7964 pp) |
+  | Feb 2026 | 2,188 | **1,904** | 284 | 88.0125 of 89.7348 pp = **98.08%** | 286 (2.3135 pp) | 1,618 (85.6990 pp) |
+
+  The three-wave analysis intersection is **1,518** tasks, **1,430** of them in the March file. So
+  the fourth window covers 98% of the mass of each wave's analysis set and about seven eighths of
+  its tasks; the taxonomy is unchanged, but the **task list is not a panel** (the release's own
+  v1 ∩ v2 is 2,781 of 3,513 / 3,364), so entry and exit are not random and the window is a
+  design-based check, as §10 has it.
+- **New caveat §8/§10 should carry: there is no task-level `none` share in this release.** The
+  per-task residual is `filtered`, and `filtered` is **not** `none`. `filtered` is **8.0623 pp** of
+  the 100-`pct` task base, while the global `automation_vs_augmentation_v2.csv` `none` row is
+  **3.238949** (of a file summing to 99.9965) — so `filtered` ≈ `none` **plus about 4.8 pp of
+  conversations** removed for privacy/safety, and the files do not let the two be separated. §9(1)
+  requires the `none` share printed beside every automation share so the base is never implicit; in
+  the C10 window that is possible **at the global level only**, and the per-task automation share is
+  necessarily on the five classified ratios renormalised over 1 − `filtered`. On that base the
+  usage-weighted automation share is **43.2902%** against the release's published global
+  **43.0619%** — a 0.23 pp gap, the same "not a strict decomposition" gap recorded in
+  `data/releases/release_2025_03_27.md` §Metrics, and the C10 analogue of §8(ii)'s
+  +0.13 / +0.29 / +0.35 pp. Nearest substitute for the missing counts: none at task level. The
+  cluster TSV carries collaboration ratios at 630-cluster grain with its own blank-cell
+  suppression and 100-bucket prevalence, so it cannot support an interval either; the design-based
+  bound §10 already specifies is the whole of what this window can carry.
+
+**Verdicts.** C9 **CONFIRMED WITH CAVEAT** (100% coverage of the analysis set in both waves; the
+87.92 / 86.96 pair is the published-`work`-cell mass, not a work/coursework split; August's facet
+does not exist and has no substitute). C10 **CONFIRMED WITH CAVEAT** (every column and figure in
+§8 confirms, but no column is named `collaboration`, there are no counts, there is no task-level
+`none`, and the window covers 1,635 / 1,843 / 1,904 of the 1,802 / 2,075 / 2,188 analysis-set
+tasks). Neither cut changes §6's verdict.
+
+```bash
+# Verification — commands run 2026-09-17 from /workspace/economic_research
+python data/fetch/release_2025_03_27.py                 # 16 files, 10,308,805 B -> MATCH INDEX.md
+(cd data/cache/release_2025_03_27 && sha256sum -c CHECKSUMS.txt)          # 16 OK, 0 failed
+python data/replication/post1_cuts_c9_c10.py            # all of §7; ~20 s
+#   -> data/replication/results/post1_cuts_c9_c10.txt
+```
+
+The one-liners behind the two verdicts:
+
+```python
+# C9: the facet, its categories, its floor, and the partition
+uc = g[(g.geography=='global') & (g.facet=='onet_task::use_case')]
+t, c = uc.cluster_name.str.rsplit('::', n=1).str[0], uc.cluster_name.str.rsplit('::', n=1).str[1]
+len(uc), sorted(c.unique()), sorted(uc.variable.unique())
+# Nov -> 13908, ['coursework','not_classified','personal','work'],
+#        ['onet_task_use_case_count','onet_task_use_case_pct']
+# Feb -> 14430, [... 'none' ...]  (one cell, 20 conversations)
+# Aug -> 0 rows, and [f for f in g.facet.unique() if 'use_case' in f] == []
+
+# C10: the columns, and the absence of a `collaboration` column or any count
+bt = pd.read_csv('data/cache/release_2025_03_27/automation_vs_augmentation_by_task.csv',
+                 keep_default_na=False, na_values=[])
+list(bt.columns), 'collaboration' in bt.columns, [c for c in bt.columns if c.endswith(('_count','_pct'))]
+# -> ['task_name','feedback_loop','directive','task_iteration','validation','learning','filtered'],
+#    False, []
+```

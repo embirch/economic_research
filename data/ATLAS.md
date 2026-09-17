@@ -2129,3 +2129,64 @@ block non-browser downloads).
   #   classified base = alloc.sum() per frame; 43->15 = c2010[:2]=='43' & c2019[:2]=='15'
   # without-task legs: drop the key before the merge, renormalise over the remaining matched mass
   ```
+
+- **2026-09-17 (n) — post1's two design-pass cuts: `onet_task::use_case` folds like every other
+  task intersection, and the March-2025 per-task file has no `none`.** Confirmed at column level
+  for `posts/post1/notes/feasibility.md` §7 on the lead's request; one script,
+  `data/replication/post1_cuts_c9_c10.py`, output
+  `data/replication/results/post1_cuts_c9_c10.txt`. The `release_2025_03_27` cache folder was
+  absent and was rebuilt (`python data/fetch/release_2025_03_27.py` → 16 files, 10,308,805 B =
+  `INDEX.md`; `sha256sum -c` 16/16 OK). What is new:
+
+  1. **Correction to (g) 2 and to `## Components`: the 87.92 / 86.96 pair is the mass of tasks with
+     a published `work` cell**, not of tasks with a work/coursework split. On the named base
+     (93.5144 Nov / 92.9714 Feb): `work` cell published **87.9153 / 86.9555**, `personal`
+     86.6246 / 86.8901, `coursework` 78.3286 / 70.6206; **both** work and coursework
+     **76.9463 / 69.6432**; work **or** coursework 89.2976 / 87.9329; **any** substantive cell
+     92.4336 / 92.1255. (g) 2's numbers are right, its words are not.
+  2. **`onet_task::use_case` obeys the fold rule of (j) 1 exactly.** Global only (13,908 Nov /
+     14,430 Feb rows; **0 rows at any other geography**), variables
+     `onet_task_use_case_{count,pct}`, `level '0'`, 3,169 / 3,259 base nodes. Substantive cells have
+     a minimum of **exactly 15**; `not_classified` runs **1–39** (Nov) and **1–36** (Feb); the cells
+     **partition `onet_task_count` exactly** (3,168 of 3,168 named Nov nodes, 3,258 of 3,258 Feb,
+     max |diff| 0) and per-task `_pct` sums to exactly 100.0000 at min, median and max. Feb's
+     `none` label — the flip of trap 24 — is **one cell of 20 conversations on one task**
+     (0.0022% of the intersection's counts), so "do not hard-code the residual" is a coding rule,
+     not a quantity. Per-task bound width (`not_classified` `_pct`) median 4.82 / 3.92 pp.
+  3. **August 2025 has no `use_case` classifier at all**: no facet name in
+     `aei_raw_claude_ai_2025-08-04_to_2025-08-11.csv` contains `use_case` (0 rows at any
+     geography). The facet is introduced in the November wave, consistent with the (b)/(c) appendix
+     finding; there is no substitute at task grain.
+  4. **The use-case mix has a wage gradient** (data fact, unpublished; on post1's analysis set,
+     usage-weighted wage quartiles). `work` share of the intersection's counts Q1→Q4:
+     **32.60 / 48.69 / 42.05 / 61.91%** (Nov) and **28.97 / 51.21 / 42.85 / 61.65%** (Feb);
+     `personal` falls 44.67 → 23.91 and 56.40 → 29.17; folded residual only 2.75% / 2.57% of
+     counts, so quartile aggregates are well determined. Global mix over named tasks: work
+     46.1193 / 45.5810, personal 32.2497 / 39.8144, coursework 18.8848 / 12.0303.
+  5. **`release_2025_03_27/automation_vs_augmentation_by_task.csv` has no `collaboration` column
+     and no counts.** Columns are exactly `task_name, feedback_loop, directive, task_iteration,
+     validation, learning, filtered` — underscored, unlike the 2026 facets' spaced labels, and no
+     column name contains "collab" or ends in `_count`/`_pct`. The `collaboration:<pattern>_ratio`
+     form exists in this release only in the 630-row cluster TSV.
+  6. **`filtered` is `none` plus an unpublished exclusion, and the two cannot be separated.**
+     `filtered` is **8.0623 pp** of the 100-`pct` `task_pct_v2` base (98.2183 matched − 90.1561
+     classified), while the global `automation_vs_augmentation_v2.csv` `none` row is **3.238949**
+     of a file summing to 99.9965 — so roughly **4.8 pp** of conversations are removed at task
+     level beyond the `none` pattern. **There is therefore no task-level `none` share anywhere in
+     the March-2025 release**, and any per-task automation rate from it is on the five classified
+     ratios over 1 − `filtered`: usage-weighted **43.2902%** against the published global
+     **43.0619%** (the "not a strict decomposition" gap of `[R2 §Metrics]`).
+  7. **March 2025 as a fourth task-level window on post1's analysis set** (lower-cased stripped
+     task text, 3,364 keys, 0 collisions): **1,635 of 1,802** Aug tasks, **1,843 of 2,075** Nov,
+     **1,904 of 2,188** Feb matched — 98.78 / 98.49 / 98.08% of analysis-set mass — of which
+     `filtered == 1.0` on 179 / 251 / 286, leaving 1,456 / 1,592 / 1,618 with a usable split. The
+     three-wave analysis intersection is 1,518 tasks, 1,430 of them in the March file.
+
+  ```bash
+  # (n) commands, run 2026-09-17 from /workspace/economic_research
+  python data/fetch/release_2025_03_27.py && (cd data/cache/release_2025_03_27 && sha256sum -c CHECKSUMS.txt)
+  python data/replication/post1_cuts_c9_c10.py    # ~20 s; rebuilds post1's analysis set first
+  # the two identifying reads:
+  #   g[(g.geography=='global') & (g.facet=='onet_task::use_case')]  -> 13908 / 14430 / absent in Aug
+  #   list(pd.read_csv('.../automation_vs_augmentation_by_task.csv').columns)  -> no 'collaboration'
+  ```
