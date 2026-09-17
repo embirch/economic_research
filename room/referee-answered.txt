@@ -45,3 +45,5 @@ room/analyst-2026-09-17-prereg-post1-revised.md
 room/analyst-2026-09-17-results-post1.md
 room/director-2026-09-17-gate-2a-post1-approved.md
 room/director-2026-09-17-gate-2a-post1.md
+room/analyst-2026-09-17-results-post1-revised.md
+room/director-2026-09-17-gate-2b-post1-approved.md

@@ -36,7 +36,10 @@ first-sentence rule for the second wage source.
    Occupations, All Other — and the 99 / 106 / 111 tasks at that wage carry 8 to 11 percentage points of a window,
    so the top quartile's membership is decided partly inside the coding family." ←
    `facts.quartile_boundaries_*.boundary_tie_mass.b3_43.40` (tasks 99 / 106 / 111; mass 10.60 / 8.36 / 7.95),
-   `q4_mass_from_boundary_tie` 7.33 / 4.93 / 6.14; the occupation from referee item 3 once the analyst adds the fact.
+   `q4_mass_from_boundary_tie` 7.33 / 4.93 / 6.14; `facts.quartile_boundaries_*.boundary_occupation` "15-1199
+   Computer Occupations, All Other ($90,270 ÷ 2,080 = $43.40/hr)" — thirteen detailed `15-1199.xx` codes at one
+   salary (`boundary_occupations.b3_43.40.detailed_codes` 13). **Bound:** "Computer Occupations, All Other" names the
+   7-character group; the four titles listed in `results.json` are a truncated sample of the thirteen, not the set.
 5. "The intervals are two-sided 95% under a conversation-level binomial with the task mix held fixed; no release
    carries a user, session or account identifier, so they are a lower bound on the sampling variance."
    ← `D_*.notes`. **Required at the first interval.**
@@ -53,9 +56,14 @@ first-sentence rule for the second wage source.
    November's difference to −4.6 points; netting Seychelles from the task weights alone moves it to +6.5; the
    November rates themselves cannot be cleaned." ← `rob_X5_drop_sc_over_10pc_nov2025.D` −4.5815 [−4.9003, −4.2628];
    `rob_X4_sc_netted_weights_nov2025.D` +6.5463; `facts.november_is_corroborated_not_independent` (the 23 tasks
-   carry 8.9 pp of the top quartile's 22.5). **Bound:** the sentence says that those 23 tasks include the two largest
-   software tasks, so the flip is not attributed to Seychelles alone (red-team 1.5; the 8.5 pp those two carry is
-   the referee's figure and may be cited only once the analyst adds it to `results.json`).
+   carry 8.9 pp of the top quartile's 22.5). **Bound:** the sentence says that those 23 tasks include the two
+   "modify existing software to correct errors…" tasks, which alone carry 8.5 of the top quartile's 22.5 pp in
+   November (6.5 in August, 6.0 in February), so the flip is not attributed to Seychelles alone (red-team 1.5) ←
+   `facts.composition_of_the_top_quartile.largest_software_tasks.<wave>.q4_mass_first` 6.5266 / 8.5413 / 5.9802,
+   `q4_share_first` 28.8 / 37.9 / 26.6%. The post may also state the bound: "counting every Seychelles conversation
+   on a top-quartile task as automation and every one on a bottom-quartile task as augmentation, with the weights
+   netted, leaves November's difference at +4.5 points" ← `facts.seychelles_worst_case_bound` D_worst_case 4.5038,
+   D_weights_netted 6.5463, D_observed 7.3854.
 9. "Under the modal-holder wage rule the February difference is −0.2 points with an interval containing zero, and
    under the pre-registered rule the ordered chain would then record no persistent sign; under the equal-split rule
    the three differences are unchanged to a tenth of a point." ← `rob_W1_modal_holder_feb2026.D` −0.1701 [−0.4438,
@@ -139,6 +147,29 @@ first-sentence rule for the second wage source.
 27. "The two implementations agree to 1.8 × 10⁻¹⁴ points; the bootstrap standard errors are within 0.9% of the
     closed form and cover 95.2–95.3%." ← `facts.second_implementation_agreement`.
 
+### Side-estimates (description, in no decision rule; each cited only beside the primary it qualifies)
+
+31. Leg (a) under the equal-split and modal allocation rules: "−13.7 / −11.1 / −12.4 and −14.1 / −11.4 / −12.6 points"
+    ← `facts.A1_allocation_variants_of_the_legs.leg_a_equal_split_fractional`, `.leg_a_modal_holder` (−13.7133 /
+    −11.0752 / −12.3739; −14.0697 / −11.3999 / −12.6167). The C7-frame legs: "inside the BLS-EP frame, excluding
+    Computer & Mathematical leaves 0.97 / 0.93 / 0.98 of that frame's own difference" ← `facts.C7_legs.leg_a[*].r`
+    0.9685 / 0.9267 / 0.9811. Leg (e) on the substantive-cell denominator: "+3.9 and +2.7 points, not firing" ←
+    `facts.leg_e_substantive_cell_denominator` +3.8538 [+3.4345, +4.2731] / +2.7392 [+2.2466, +3.2318]. The
+    2010-grouping leg table: "the same verdict on the 2010 O*NET-SOC grouping, 6 of 6 leg tests firing" ←
+    `facts.leg_table_2010_grouping` (value 6). X7: "keeping the `none` task node moves the wave share from 51.20 to
+    51.74% in August and leaves the difference unchanged" ← `facts.X7_none_node_variant`. The P3(b) all-four subset:
+    "−4.1 / −1.8 / −6.1 points on the 8 / 9 / 8 groups spanning all four quartiles (the pre-registration expected
+    7 / 8 / 6), firing either way" ← `leg_b_*.estimates.D_L_all_four_subset` −4.0541 [−4.5703, −3.5379] / −1.7940
+    [−2.3520, −1.2361] / −6.0851 [−6.5615, −5.6087], `n_groups` 8 / 9 / 8. The within-SOC-15 contrast: "inside
+    Computer & Mathematical alone the top-minus-bottom difference is −0.1 (interval containing zero), +6.5 and +0.8
+    points, on 24 / 23 / 14 bottom-quartile tasks" ← `facts.composition_of_the_top_quartile.within_soc15_contrast`
+    −0.1421 [−0.7180, +0.4339] / +6.4656 [+5.8658, +7.0654] / +0.8039 [+0.1631, +1.4447]. The residual quartiles after
+    the SOC-15 exclusion: "what is left of the top quartile is 286 / 327 / 355 tasks and 6.1 / 6.5 / 7.8 points of
+    usage, with an automation share of 38.7 / 34.8 / 36.0% against 51.7 / 45.2 / 47.9% in the bottom quartile's
+    remainder" ← `facts.composition_of_the_top_quartile.residual_after_soc15_exclusion` (Kish 98 / 85 / 83 and
+    75 / 57 / 54). **Bound on all of these:** description; none may headline, none is a decision, and the
+    within-SOC-15 and residual figures are cited only with the composition reading of sentence 14 (red-team 2.1).
+
 ### Exploratory (labelled exploratory; not in any headline, heading, caption title or close)
 
 28. "The `directive` pattern alone is lower in the top quartile in every window (−7.0, −9.5, −9.9 points) while
@@ -174,8 +205,8 @@ first-sentence rule for the second wage source.
   its rebuild is the SOC-15 exclusion again (−15.6 / −11.9 / −16.7) and is not an independent test."
 - "The gradient survives every robustness check" — it does not survive X5, the modal-holder rule, or the ten-largest
   leave-out (`facts.owner_under_robustness`).
-- Any number from `robustness.json` or `legs.json` that is not in `results.json` (A1 leg variants, C7 legs, the
-  substantive-cell leg (e), the 2010 leg table, X7's wave share) until the analyst adds it (referee item 12).
+- Any number that is not in `results.json` at `698a2f1` (the side-estimates of referee item 12 are now in it; sentence
+  31 gives their permitted form).
 - "Resolves nothing below about twelve points" — the realised bound is 14–20 (sentence 7).
 - Any statement about a country, about the wage bill, about displaced labour, about tasks automated, about AI
   autonomy, or about work in general (prereg "What no outcome may be read as").

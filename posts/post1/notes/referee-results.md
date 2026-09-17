@@ -65,7 +65,10 @@ instability. **No change.**
 
 **5. DEVIATION 3 (permutation size band ±1 pp → ±2 pp at 1,500 trials) — legitimate, but the cheaper fix was more
 trials.** Monte Carlo SE at 1,500 trials is 0.6 pp; a ±1 pp band fails by chance about 10% of the time. Realised size
-4.93%. The placebo is in no decision rule. **Could:** 10,000 trials would have kept the registered band.
+4.87% (73 of 1,500; the 4.93% of the first run was not reproducible because `set(group)` iteration order varied
+between processes — the analyst's later CORRECTION, `698a2f1`, sorts the groups and the seeded run now repeats
+exactly; 4.87% is inside the registered ±1 pp band, so the deviation is no longer load-bearing). The placebo is in
+no decision rule. **Could:** 10,000 trials would have kept the registered band.
 
 **6. CORRECTION entries — all three sound; a fourth mis-transcription remains uncorrected.** The A2 fallback fix
 matches the brief's stated rule and my independent A2 implementation (leg (a) drop mass 42.84 / 39.65 / 35.55%
@@ -175,7 +178,7 @@ within 0.9% of closed form, coverage 95.2–95.3%. It shares the loader, the `::
 function with 02, so leg (a)'s exclusion set is not independently implemented there — my own A2 covers it (item 1).
 The eight recoveries pass (D coverage 94.4–95.4% at gaps 0 / 0.5 / 1 / 3; Δ_W and slope to 1e-14; leg (b) returns
 the within-group +0.17 against a total gap of +16.2; leg (e) drops the only-`not_classified` tasks; permutation size
-4.93%; Kish exact). MDE = 2.8 × SE beside every confirmatory coefficient; the two nulls in the confirmatory set (Aug
+4.87% at `698a2f1` (4.93% in the first, non-reproducible run); Kish exact). MDE = 2.8 × SE beside every confirmatory coefficient; the two nulls in the confirmatory set (Aug
 slope, Aug Δ_W) carry theirs. All nine check blocks pass on a clean re-run (notebook close). **No change.**
 
 ## Independent re-derivations
