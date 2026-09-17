@@ -330,7 +330,9 @@ def permutation_null(p_pp, w, wage, group, draws: int = 10_000, seed: int = SEED
     w = np.asarray(w, float)
     wage = np.asarray(wage, float)
     group = np.asarray(group, dtype=object)
-    idx_by_group = {gg: np.flatnonzero(group == gg) for gg in set(group)}
+    # sorted, not set order: a set of strings iterates in hash order, which differs between
+    # processes, so an unsorted loop makes a seeded permutation non-reproducible across runs
+    idx_by_group = {gg: np.flatnonzero(group == gg) for gg in sorted(set(group))}
     stats = np.empty(draws)
     for b in range(draws):
         wp = wage.copy()

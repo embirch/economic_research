@@ -627,3 +627,19 @@ The pre-registration said "resolves nothing below about twelve points" on model 
 `facts.generalisation_sentence` now carries both triples and the sentence the post must use: "a
 design that resamples tasks resolves nothing below about **fourteen to twenty** points" — never
 "about twelve". Figure 1's caption already said "about 14 to 20".
+
+## 2026-09-17 · CORRECTION (found while re-running the revision) — the seeded placebo was not reproducible across processes
+
+Re-running `06_robustness.py` twice gave different permutation bands from the same seed
+(mean +3.412 then +3.396 in August). Cause: `permutation_null` built its group index as
+`{gg: … for gg in set(group)}`, and a Python set of strings iterates in **hash order, which differs
+between processes**, so the per-group permutations consumed the seeded random stream in a different
+order each run. Fixed by iterating `sorted(set(group))`; two consecutive runs now agree exactly
+(mean +3.3697 / +8.8214 / +4.7682 pp, two-sided p 0.8304 / 0.6689 / 0.9494, and the recovery test's
+size 4.87% on 1,500 trials). Nothing else in the pipeline was exposed: every other loop over a set
+of group labels was already sorted (`02_build.a1_group_weights`, `05_legs.leg_coefficients`,
+`05_legs.leave_one_group_out`, `08_exploratory`), which is why every other number is bit-identical
+across runs. Downstream: the placebo's band moves within Monte Carlo error, the observed D still
+sits inside it in all three waves, and the placebo is in no decision rule; no headline number
+changed. `results.json`'s `generated` timestamp is the only field that differs between runs by
+design.

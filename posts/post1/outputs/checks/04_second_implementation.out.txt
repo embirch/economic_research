@@ -41,7 +41,7 @@ SYNTHETIC-DATA RECOVERY — one per estimator the post relies on
   leg (b): implanted within-group average +0.1655, estimator +0.1655 (total gap +16.2423); identified ['11', '15', '25', '41'], not identified ['53'] (reported, never zeroed)
   leg (e): 133 of 300 selected, only-`not_classified` excluded True, dropped not zeroed True, flips 15
   model (b) bootstrap: SE 1.3846 against analytic 1.4366 (rel 0.0362); MDE 3.8769
-  permutation null: size 5.33% of 1500 trials; power at a large implanted gradient 100.00%
+  permutation null: size 4.87% of 1500 trials; power at a large implanted gradient 100.00%
   Kish N: truth 26.666666666666668 point 26.666666666666668 ((Σw)²/Σw² = 40²/60 = 26.6667 for ten weights of 2 and twenty of 1)
 
 wrote posts/post1/data/processed/second_implementation.json
