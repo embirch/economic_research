@@ -598,7 +598,7 @@ excluded") and states the other case explicitly where the contrast excludes zero
 `03_headline.py`'s |Δ_W| < max(1, ½|D|) and `05_legs.py`'s "SOC-15 is the largest leave-one-out
 mover" both encoded pre-registered **expectations**: had either failed it would have been a finding,
 and the pipeline would have stopped on it. Both are now **printed, not asserted** — Δ_W/D per wave
-(−0.0160 / +0.1131 / −0.2193 pp per point of gap; the brief's arithmetic of 0.11–0.12 holds in
+(−0.0160 / +0.1131 / −0.2192 pp per point of gap; the brief's arithmetic of 0.11–0.12 holds in
 November only) and the three largest leave-one-group-out movers per wave. Every other assertion in
 both scripts is a fact about the data or an internal consistency and stays.
 
