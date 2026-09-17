@@ -30,6 +30,9 @@ may say.
 | Claims list finalised (the boundary) | `notes/claims.md`, `notes/red-team.md` | `3556471` |
 | Gate 2b — results approved by the human | `room/director-2026-09-17-gate-2b-post1-approved.md` | `cfe0064` |
 | Lead's sharpened why-it-matters and close | `room/lead-2026-09-17-why-it-matters-post1.md` | `31898a5` |
+| Referee verification of the draft — PASS WITH CHANGES, 4 blocking, 12 should, 6 could; all 44 mapped sentences audited against their own bindings | `notes/referee-draft.md` | `67f1d66` |
+| Analyst's caption fix on main (draft items 1, 8, 22): `figures.json`, the `figures` block of `results.json`, new `facts.quartile_task_counts`, regenerated PNGs with descriptive in-image titles | `outputs/figures.json`, `data/processed/results.json` | `283f346` |
+| Editor's revision pass — all 4 blocking and all 12 should items applied; 4 of 6 could items applied | this branch | see below |
 
 ## Files in this pull request
 
@@ -42,6 +45,7 @@ may say.
 | `site/tools/build_page.py` | editor | shared page builder: figures, evidence drawers, contents rail |
 | `site/tools/verify_page.py` | editor | shared verifier: every number on the page against `results.json` |
 | `site/tools/make_claims_map.py` | editor | generates post1's claims map from POST.md |
+| `room/editor-2026-09-17-post1-draft-revised.md` | editor | the revision note: the 22 items, applied or left |
 | `site/posts/post1/index.html` | editor | the built page (replaces the earlier programme's page at this path) |
 | `site/posts/post1/figures/*.png` | editor | the four figures, copied from `outputs/figures/` |
 | `site/index.html` | editor | the post1 card retitled to this post |
@@ -58,11 +62,45 @@ python3 site/tools/build_page.py post1
 python3 site/tools/verify_page.py post1
 ```
 
-**PASS.** 216 claims-map bindings resolved against `results.json`; 44 quantitative sentences in
-POST.md checked, all mapped; 215 numbers in POST.md and 1,099 numbers in the built page's prose,
-captions, contents rail and generated tables checked, all bound. Output kept at
+**PASS.** 222 claims-map bindings resolved against `results.json`; 45 quantitative sentences in
+POST.md checked, all mapped; 222 numbers in POST.md checked **against their own sentence's
+bindings**, and 1,107 numbers in the built page's prose, captions, contents rail and generated
+tables checked against the whole of `results.json`. Output kept at
 `posts/post1/notes/verify_page.out.txt`. The build fails on any number that is not in
 `results.json`; the rule is fix the text, never the numbers.
+
+The per-sentence check is new in this pass: the referee's draft review showed that matching a
+number against a global index of a 187 KB `results.json` is necessary and not sufficient, since
+small integers pass regardless of what they mean. `verify_page.py` check 3 now resolves each
+sentence's own bindings and accepts only roundings of those. It found exactly the three numbers
+the referee's audit found by hand — `23`, `100` and `$10` — each of which is a true number that
+was passing by coincidence; all three are now bound to the field that carries them
+(`facts.november_is_corroborated_not_independent.source_check`, the X3 test's `label`, the slope's
+`unit`), and the one laundered binding (draft item 14) is gone, the placebo band being written in
+words.
+
+## Revision after the referee's draft review
+
+All **4 blocking** items applied (Figure 1's caption count; the opening's "establishes the sign";
+the close's superlative and its missing attribution; the new construct in the close). All **12
+should** items applied (Anthropic's bounding results carried into the opening and finding 2; the
+modeller sentence fenced; three deviations, not four, with the disclosure of what had been seen;
+Figure 3's "gradient"; Figure 4's August direction; "the correction exists"; "shows"; "an order of
+magnitude"; limitation 2's conjecture; the claims-map binding; "higher than"; the caption count in
+the assistance disclosure). **4 of 6 could** items applied (17, 18, 19, 21). Left: **20**, the
+fourth window's result, which would be a new claim rather than wording; and **22**, the in-image
+titles, which are the analyst's file and were applied by the analyst at `283f346`. Figure captions
+bind to the analyst's corrected `figures.json`, except Figure 4's title, where draft item 9
+prescribes text `figures.json` does not yet carry.
+
+## Length, declared
+
+6,001 words excluding captions (7,035 with). The post proper — the puzzle through "What this
+means" — is about 3,300 words; the rest is the template's own additions, which the corpus exports
+to appendices and the working criteria require as sections a referee can test. Inside the post
+proper the excess over a special report is the caveats `claims.md` makes mandatory in the same
+paragraph as each finding. This is the cost of the caveat rule, not an oversight; the referee's
+draft review found no section to cut.
 
 ## What a reviewer should check first
 

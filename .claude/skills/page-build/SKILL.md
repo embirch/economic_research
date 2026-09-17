@@ -46,7 +46,7 @@ builder and the page changes with it.
 
 ## What the verifier does
 
-Three checks; any failure exits non-zero and prints every problem.
+Four checks; any failure exits non-zero and prints every problem.
 
 1. **The claims map resolves.** Every binding names a real path in
    `results.json` and records that path's current value. This is the drift
@@ -55,11 +55,20 @@ Three checks; any failure exits non-zero and prints every problem.
    every sentence carrying a bindable number must appear in `claims-map.json`
    verbatim. Editing a mapped sentence therefore breaks the build until the map
    is regenerated — which is the point.
-3. **Every number is bound.** Each bindable number in POST.md, and each in the
-   built page's prose, captions, rail and generated tables, must either occur
-   in `results.json` (at any rounding from zero to four decimal places, and
-   including numbers inside `results.json` strings) or be declared for its
-   sentence in the map's `as_printed`.
+3. **Every number in POST.md is bound to its own sentence's entry.** Each
+   bindable number must be a rounding (zero to four decimals) of a value that
+   sentence's own bindings resolve to — a numeric value, or a number inside a
+   bound string — or be declared for it in `as_printed`. A number that merely
+   occurs somewhere in `results.json` does not pass. This is the referee's
+   draft-review audit made part of the tool: a global index accepts small
+   integers regardless of what they mean, so a PASS on it is necessary and not
+   sufficient. When this check fires on a true number, the fix is usually to
+   bind the sentence to the field that carries it (a floor named in a test's
+   `label`, a unit named in an estimate's `unit`), not to add `as_printed`.
+4. **Every number on the built page is in `results.json`.** The page's prose,
+   captions, contents rail and generated tables are scanned against the whole
+   of `results.json` — the weaker global check, and the right one there,
+   because the generated tables print entries verbatim.
 
 **Bindable** excludes what is not a claim, each exclusion listed with its
 reason in `EXCLUDE` at the top of `verify_page.py`: code spans and fenced
@@ -105,10 +114,12 @@ Draft POST.md → regenerate the claims map → build → verify → repeat. Fou
 failures account for most of the loop:
 
 - **`[unmapped sentence]`** — a mapped sentence was edited. Regenerate the map.
-- **`[unbound number]`** — a number is on the page that is not in
-  `results.json`. It is almost always a number remembered from a note or a
-  brief rather than read from the results; write a room note to its owner, or
-  cut the sentence.
+- **`[number not bound to this sentence]`** — either the number is not in
+  `results.json` at all (almost always one remembered from a note or a brief:
+  write a room note to its owner, or cut the sentence), or it is real but the
+  sentence is not bound to the field that carries it. Add the binding.
+- **`[unbound number on page]`** — a number reached the page that is in no
+  field of `results.json`.
 - **A rounding that is not a rounding.** 97.15 does not round to 97.2 at one
   decimal place. Print the exact figure rather than the coarsening a memo used.
 - **A number only a memo has.** Counts that live in the lab notebook (trial

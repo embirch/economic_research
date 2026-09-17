@@ -33,3 +33,4 @@ room/director-2026-09-17-gate-2a-post1-approved.md
 room/director-2026-09-17-gate-2b-post1-approved.md
 room/lead-2026-09-17-why-it-matters-post1.md
 room/referee-2026-09-17-results-post1-verdict.md
+room/referee-2026-09-17-draft-post1-verdict.md

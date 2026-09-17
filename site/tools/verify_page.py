@@ -11,10 +11,17 @@ Three checks, all of which must pass; the script exits non-zero otherwise.
      map is that path's value (to the precision the map states).
   2. **Every quantitative sentence is mapped.** Every sentence of `POST.md`
      that carries a bindable number appears in the claims map, verbatim.
-  3. **Every number is bound.** Every bindable number in `POST.md`, and every
-     bindable number in the prose and captions of the built page, is either a
-     value that occurs in `results.json` or a number the claims map declares
-     for the sentence that carries it.
+  3. **Every number is bound to its own sentence's entry.** Every bindable
+     number in `POST.md` is a rounding (to between zero and four decimals) of a
+     value the claims map binds *that sentence* to — of a numeric value, or of a
+     number inside a bound string — or is declared for it in `as_printed`. A
+     number that merely occurs somewhere in `results.json` does not pass; the
+     referee's draft-review audit showed that a global index accepts small
+     integers regardless of what they mean.
+  4. **Every number on the built page is in `results.json`.** The page's prose,
+     captions, contents rail and generated tables are scanned against the whole
+     of `results.json`, which is the weaker global check and the right one
+     there, because the generated tables print entries verbatim.
 
 "Bindable" excludes what is not a finding: calendar years and window dates,
 page and figure locators, section and hypothesis labels, SOC and O*NET codes,
@@ -38,6 +45,7 @@ EXCLUDE = [
     (r"```.*?```", "fenced block: the rebuild command"),
     (r"\bp{1,2}\.\s?\d+(?:[–-]\d+)?", "page locator in a citation"),
     (r"\bfootnote\s+\d+", "footnote locator in a citation"),
+    (r"\bLimitations?,?\s+\d+", "cross-reference to a numbered limitation"),
     (r"\bFigure\s+\d+(?:\.\d+)?", "figure locator"),
     (r"\bAppendix\s+[A-Z]\.?\d*(?:\.\d+)?", "appendix locator"),
     (r"\bH[1-4]\b|\bO-[AB]\b|\bQ[1-4]\b", "hypothesis, outcome and quartile labels"),
@@ -215,6 +223,7 @@ def main(post):
                                 f"[map] {c['id']}: {b['key']} is {a}, map records {w}")
                     elif w != a:
                         failures.append(f"[map] {c['id']}: {b['key']} is {a!r}, map records {w!r}")
+            index_results(actual, declared[key_sentence])
             for tok in b.get("as_printed", []):
                 v = norm_num(str(tok))
                 if v is not None:
@@ -230,13 +239,14 @@ def main(post):
         if normalise(s) not in mapped:
             failures.append("[unmapped sentence] " + (s[:150] + ("…" if len(s) > 150 else "")))
 
-    # ---- 3. every bindable number in POST.md and on the page is bound -------
+    # ---- 3. every number in POST.md is bound to its own sentence's entry ----
     for s in sentences(post_md):
-        allowed = index | declared.get(normalise(s), set())
+        allowed = declared.get(normalise(s), set())
         for tok, v in numbers_in(s):
             checked["numbers"] += 1
-            if f"{abs(v):.{max(0, len(tok.split('.')[1]) if '.' in tok else 0)}f}" not in allowed:
-                failures.append(f"[unbound number] {tok} in: {s[:120]}")
+            nd = len(tok.split(".")[1]) if "." in tok else 0
+            if f"{abs(v):.{nd}f}" not in allowed:
+                failures.append(f"[number not bound to this sentence] {tok} in: {s[:110]}")
 
     if os.path.exists(page_path):
         all_declared = set().union(*declared.values()) if declared else set()
@@ -251,7 +261,7 @@ def main(post):
     print(f"verify_page {post}")
     print(f"  claims-map bindings resolved against results.json : {checked['bindings']}")
     print(f"  quantitative sentences in POST.md checked         : {checked['sentences']}")
-    print(f"  numbers in POST.md checked                        : {checked['numbers']}")
+    print(f"  numbers in POST.md checked against their own entry : {checked['numbers']}")
     print(f"  numbers in the built page's prose checked         : {checked['page_numbers']}")
     if failures:
         print(f"\nFAIL — {len(failures)} problem(s). Fix the text, never the numbers.\n")

@@ -67,6 +67,9 @@ SPEC = [
    d("facts.sample_{w}.classified_conversations"), d("facts.kish_{w}.value"),
    d("facts.sample_{w}.dropped_wage_no_classified_cell"),
    d("facts.sample_{w}.dropped_classified_cell_no_wage")), []),
+ ("Filled circles are the pre-registered quartile rule", "4 (Figure 1 caption)", flat(
+   ["facts.quartile_boundaries_aug2025.value"],
+   d('facts.quartile_boundaries_{w}.boundary_tie_mass."b3_43.40".mass')), []),
  ("Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release",
   "5 (Figure 1 caption)", [CONV + ".percent_signs"], []),
  ("The shaded band is the pre-registered indifference region",
@@ -81,14 +84,15 @@ SPEC = [
  ("Dropping the 23 November tasks", "8",
   ["tests.rob_X5_drop_sc_over_10pc_nov2025.estimates.D.coef",
    "tests.rob_X4_sc_netted_weights_nov2025.estimates.D.coef",
-   "facts.november_is_corroborated_not_independent.value"], []),
+   "facts.november_is_corroborated_not_independent.source_check"], []),
  ("Those 23 tasks include", "8 (the bound on attribution)", flat(
    d("facts.composition_of_the_top_quartile.largest_software_tasks.{w}.q4_mass_first"),
    ["facts.composition_of_the_top_quartile.largest_software_tasks.nov2025.q4_mass_total"]), []),
  ("Counting every Seychelles conversation", "8 (the Seychelles worst case)",
   ["facts.seychelles_worst_case_bound.D_worst_case"], []),
- ("In the other direction, dropping tasks", "10",
-  d("tests.rob_X3_drop_under_100_classified_{w}.estimates.D.coef"), []),
+ ("In the other direction, dropping tasks", "10", flat(
+   d("tests.rob_X3_drop_under_100_classified_{w}.estimates.D.coef"),
+   ["tests.rob_X3_drop_under_100_classified_aug2025.label"]), []),
  ("The third quartile boundary is $43.40 an hour", "4", flat(
    ["facts.quartile_boundaries_aug2025.value"],
    d('facts.quartile_boundaries_{w}.boundary_tie_mass."b3_43.40".tasks'),
@@ -97,7 +101,10 @@ SPEC = [
   flat(d("facts.kish_{w}.value"), d("facts.kish_{w}.by_quartile[3]")), []),
  ("The continuous slope of the automation share", "12", flat(
    d("tests.slope_{w}.estimates.slope.coef"),
-   ["tests.slope_aug2025.estimates.slope.mde", CONV + ".percent_signs"]), []),
+   ["tests.slope_aug2025.estimates.slope.mde",
+    "tests.slope_aug2025.estimates.slope.unit", CONV + ".percent_signs"]), []),
+ ("The unit inside a panel is the quartile", "the n (Figure 2 caption)",
+  ["facts.quartile_task_counts.Q1", "facts.quartile_task_counts.Q4"], []),
  ("Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed and are a lower bound",
   "5 (Figure 2 caption)", [CONV + ".percent_signs"], []),
  ("The excess is carried by Computer & Mathematical tasks", "13",
@@ -172,9 +179,6 @@ SPEC = [
   [CONV + ".materiality_pp_of_delta_w_per_point_of_gap"], []),
  ("The quartile rule at the $43.40 wage mass point.", "4 (deviation 1)",
   ["facts.quartile_boundaries_aug2025.value"], []),
- ("The permutation placebo's size band", "deviation 3",
-  [CONV + ".delta_pp",
-   "facts.composition_of_the_top_quartile.largest_software_tasks.aug2025.tasks_matching_first"], []),
 ]
 
 
