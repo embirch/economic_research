@@ -172,9 +172,15 @@ def main(post):
     figures = json.loads(read(os.path.join(post_dir, "outputs", "figures.json")))
     claims_map = json.loads(read(os.path.join(post_dir, "notes", "claims-map.json")))
 
+    wanted = set()
     for fig in figures.values():
         src = os.path.join(post_dir, fig["file"])
         shutil.copy(src, os.path.join(site_dir, "figures", os.path.basename(src)))
+        wanted.add(os.path.basename(src))
+    # the figures directory is the builder's output: nothing figures.json does not name belongs
+    for stale in os.listdir(os.path.join(site_dir, "figures")):
+        if stale not in wanted:
+            os.remove(os.path.join(site_dir, "figures", stale))
 
     # figure number -> basename, from figures.json
     fig_file = {}
