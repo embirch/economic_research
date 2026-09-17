@@ -1,0 +1,7 @@
+verify_page post1
+  claims-map bindings resolved against results.json : 216
+  quantitative sentences in POST.md checked         : 44
+  numbers in POST.md checked                        : 215
+  numbers in the built page's prose checked         : 1099
+
+PASS — every number on the page is in results.json.

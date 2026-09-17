@@ -24,3 +24,12 @@ room/lead-2026-09-16-brief-post2-status.md
 room/lead-2026-09-16-brief-post3-status.md
 room/lead-2026-09-16-brief-post4-status.md
 room/lead-2026-09-16-brief-post5-status.md
+room/director-2026-09-16-gate-1b-post1.md
+room/director-2026-09-16-session-1-4-halt.md
+room/director-2026-09-16-session-1-4-resume.md
+room/director-2026-09-17-gate-1b-post1-approved.md
+room/director-2026-09-17-gate-2a-post1.md
+room/director-2026-09-17-gate-2a-post1-approved.md
+room/director-2026-09-17-gate-2b-post1-approved.md
+room/lead-2026-09-17-why-it-matters-post1.md
+room/referee-2026-09-17-results-post1-verdict.md
