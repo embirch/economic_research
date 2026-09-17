@@ -246,7 +246,7 @@ slope recovered to 3e-15; leg (b) returns the implanted **within-group** average
 total gap is +16.2423 (the property the leg is run for) and the bottom-only group is reported as not
 identified, never zeroed; leg (e)'s threshold selects the implanted set and drops the
 only-`not_classified` tasks rather than scoring them 0; the design-based bootstrap SE is within
-3.6% of its analytic value; the permutation test's size is **4.93%** on 1,500 independent trials;
+3.6% of its analytic value; the permutation test's size is **4.87%** on 1,500 independent trials;
 Kish N exact.
 
 **Decided.** The headline numbers are confirmed by an independent implementation, so scripts 05 and
@@ -277,7 +277,7 @@ gradient. The size estimate itself is a Monte Carlo quantity: at 1,500 independe
 binomial error is 0.6 pp, and the seed-to-seed spread is about ±1.2 pp (three 1,000-trial runs gave
 5.7 / 3.5 / 5.8%) because the permutation structure and the 29 / 31 quartile sizes are discrete.
 The check therefore asserts ±2 pp and prints the Monte Carlo error beside the estimate; the realised
-size is **4.93%** on 1,500 trials. Two implementation notes recorded with it: the test is the exact
+size is **4.87%** on 1,500 trials. Two implementation notes recorded with it: the test is the exact
 two-sided permutation p-value (1 + #{|perm| ≥ |obs|})/(B + 1), not a quantile-band comparison (the
 band is noisy at small B and is reported as a band, not as the test); and the wage vector and the
 outcome are re-drawn in every trial, so the trials are independent. The placebo is in no decision
@@ -613,7 +613,7 @@ assembled into `results.json`.
 ## 2026-09-17 · CORRECTION (item 17) — P2's constant-D assumption is falsified by the realised D's
 
 New fact `between_window_dispersion_of_D`: the three D's are +1.3836 / +7.3854 / +0.6689 pp, whose
-between-window SD is **3.6928 pp against a mean within-window SE of 0.1416 pp — a ratio of 26**. A
+between-window SD is **3.6888 pp against a mean within-window SE of 0.1416 pp — a ratio of 26**. A
 line in `facts.rule_power.notes` now says what follows: none of P2's probabilities (H1 80% at
 ≈1.5 pp, O-A-or-stronger from ≈0.5 pp, O-B 0.043 at 0.5 pp) is the probability of **this** outcome,
 because they all assume a constant true D, and no probability under a non-constant D has been
@@ -643,3 +643,28 @@ across runs. Downstream: the placebo's band moves within Monte Carlo error, the 
 sits inside it in all three waves, and the placebo is in no decision rule; no headline number
 changed. `results.json`'s `generated` timestamp is the only field that differs between runs by
 design.
+
+## 2026-09-17 · CORRECTION (referee-results-2) — two transcription slips in this notebook, no number elsewhere
+
+`posts/post1/notes/referee-results-2.md` (09f05ab) found two figures in this notebook that do not
+match the files. Both corrected in place above; results are frozen and nothing outside this notebook
+was touched — no script, no `results.json`, no figure.
+
+1. **The between-window SD of D read 3.6928 pp; the computed value is 3.6888 pp.** A transcription
+   slip when the entry for item 17 was written. `results.json`
+   `facts.between_window_dispersion_of_D.value` = 3.6888118786929347 with
+   `source_check` "SD 3.6888 pp against a mean SE of 0.1416 pp" and `ratio` 26.0593, so the
+   consequence the entry draws — a ratio of 26, the constant-true-D assumption behind every P2
+   probability falsified — is unchanged.
+2. **The permutation test's realised size read 4.93% in two entries; it is 4.87%.** These two
+   entries were written *before* the placebo's group loop was sorted, when the realised size was
+   4.93%; the fix changed the draws the seeded stream produces and with them the size, and only the
+   third entry (the one that records the fix) carried the new figure. `results.json`
+   `facts.synthetic_recovery.source_check` and
+   `second_implementation.json` `synthetic.permutation.size_zero_gradient.reject_rate` both carry
+   4.8667% on 1,500 trials, printed as "size 4.87% of 1500 trials" in
+   `outputs/checks/04_second_implementation.out.txt`. The recovery still passes at the ±2 pp band
+   with a Monte Carlo error of 0.56 pp, and the placebo is in no decision rule.
+
+No headline number is touched by either slip: D, Δ_W, the slope, the eight legs, the declared owner
+(O-A) and the H3 declaration are as committed.
