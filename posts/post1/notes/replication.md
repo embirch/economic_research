@@ -1,7 +1,10 @@
 # post1 (LL-07) — replication and cache manifest
 
 *Data steward, 2026-09-17 (session 2.1, Stage 2 step 1), written against `posts/post1/BRIEF.md`
-§8–§9 at `0e41a50` and `posts/post1/notes/feasibility.md` §2/§4/§7. Scope: rebuild the cache in a
+§8–§9 at `0e41a50` and re-checked against the lead's items-14–20/23 pass (`8fbffbd`), which changes
+no replication target: §8(iv)'s matched-window pairs and §9(4)'s MDEs are unaltered, and the C9/C10
+wordings it corrects are the ones §3 below confirms. Also written against
+`posts/post1/notes/feasibility.md` §2/§4/§7. Scope: rebuild the cache in a
 fresh sandbox, reproduce the published numbers post1 extends with Anthropic's released code where
 it exists, and re-run every committed post1 check. **Nothing in the headline was computed** — see
 §5, "what has been seen". Authority for conventions and traps: `data/ATLAS.md`; every fact below
