@@ -310,3 +310,43 @@ to −11.62 / −13.08 / −11.43 pp; the work share rises Q1→Q4 32.80 → 60.
 **Decided.** H3 is declared under the pre-registered rule and under the literal reading, so no
 disagreement to report; every leg point estimate matches the independent implementation of script 04
 to better than 1e-6 pp. Check block passed.
+
+## 2026-09-17 · Stage 2 step 5e — `06_robustness.py`: every pre-registered cut, and nothing else
+
+**Run:** `posts/post1/scripts/06_robustness.py` (output
+`posts/post1/outputs/checks/06_robustness.out.txt`, numbers
+`posts/post1/data/processed/robustness.json`).
+
+**What it showed.** D primary +1.3836 / +7.3854 / +0.6689. X3 (drop tasks with < 100 classified
+conversations; 1,140 / 1,222 / 1,278 tasks, 7.0–7.6 pp) gives **+2.6049 / +9.0725 / +1.5934**, and
+the ordered chain on those three would declare **H1**. X4 (SC netted from the November weights, max
+shift 0.5391 pp) gives +6.5463; X5 (drop the 23 tasks where SC exceeds 10% of their global count,
+11.594 pp of the wave, 8.913 pp of it in Q4) turns November **negative, −4.5815**, and with that
+wave the chain declares **O-B**; the > 20% variant (14 tasks, 1.966 pp) leaves it at +7.5042 (O-A).
+X7 is inert for D by construction (the `none` node carries no wage, so it cannot enter a quartile);
+what it moves is the wave-level mean, 51.2001 → 51.7424 in August. W1: the equal-split wage gives
++1.3770 / +7.3853 / +0.6581 (O-A) and the **modal holder** gives +0.3172 / +7.7044 / **−0.1701**
+(O-B). A1 moves only the group statistics, as it must — leg (a) D_L −13.71 / −14.07 / −13.03 across
+the three allocation rules — and cannot move D or Δ_W (asserted, not assumed). Model (b), the
+design-based bound: SE 5.03 / 7.20 / 5.76 pp, **MDE 14.1 / 20.2 / 16.1 pp**. C7, the second wage
+source (55.4 / 58.4 / 62.1% of the analysis set's mass): D **−15.5899 / −11.8901 / −16.7141** —
+the sign **disagrees with C6 in all three waves**, so under P6's O-A rule the owner is unchanged and
+the non-corroboration is carried in the first sentence with C7's coverage as the reason it is not
+decisive. The placebo (10,000 permutations of the wage within SOC major group) has mean
++3.3797 / +8.8871 / +4.7632 pp, sd 3.31 / 4.47 / 3.68 pp, and two-sided p of 0.83 / 0.68 / 0.95 —
+the observed D sits inside the band in every wave.
+
+**Decided.** Nothing was added to the pre-registered list, and model (c) was not run (P1(c) records
+it as neither primary nor reported). The owner under every cut is reported in `results.json` so that
+the cuts which would move it — X3 → H1, X5 → O-B, the modal-holder wage rule → O-B — are visible
+beside the declared O-A. Check block passed.
+
+## 2026-09-17 · Note on the placebo — the permutation null is not centred on zero, and cannot be
+
+The pre-registered placebo permutes the wage **within** SOC major group. That destroys the
+within-group wage–automation relation and **preserves the between-group composition**, so the
+permutation distribution of D is centred on the composition effect, not on zero: +3.38 / +8.89 /
++4.76 pp. Its band must therefore not be read as a null distribution for "no gradient"; it is what
+the pre-registration calls it, a task-level bound, and it is in no decision rule. The observed D
+lies inside that band in all three waves (p = 0.83 / 0.68 / 0.95). One sentence of reading, as the
+notebook allows: the gradient is no larger than the wage-group composition alone produces.
