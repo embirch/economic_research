@@ -1,0 +1,104 @@
+C5 statements file: (19530, 10) codes 974 7-char 775 keys 18428 max rows/key 34
+C6 wage_data: (1090, 10) SOCcode len [10] unique True
+C6 MedianSalary>100 keeps 1084 of 1090 | removed: [15.94, 16.31, 17.54, 28.15, 28.15, 28.15]
+C6 join full 10-char code: 970 of 974
+C6 join [:7] prefix: 0 of 775
+C6 top-code $208,000 occupations: 6 | JobZone -1: 119 | ChanceAuto -1: 421
+Crosswalk 2010->2019: (1164, 4) 2010 codes 1110 one-to-many 2010 codes: 44
+BLS May-2023 major-group employment joined: 22 of 22 groups
+US occupation wage on wage_data.csv, group-employment-weighted median ≈ $22.88/hr (unweighted median over 1084 occupations $25.66/hr)
+
+===== aug2025 ===== rows 100,062 | platform ['Claude AI (Free and Pro)']
+intersection rows 14454 | level ['0'] | tasks 2617 | named 2616 | patterns ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation'] | min _count 1.0 | non-global intersection rows 0
+per-task _pct sum min/median/max 100.0 100.0 100.0
+named intersection counts 886,107 | classified % 92.9 | none % 2.46 | not_classified % 4.64
+wave automation: all-conversation base 49.098 | five-classified base 51.0698 | not_classified in marginal facet 1.0
+onet_task nodes 2618 | named 2616 | pct sum 100.0 | min count 15.0 | none mass 5.7162 | not_classified mass 2.4111 | named mass 91.8727 | named conversations 886,107
+base-facet task set minus intersection task set: ['not_classified'] | intersection minus base: []
+intersection publishes % of base named counts: 100.0
+Kish N on onet_task_pct, named nodes: 99.7 of 2616
+internal check: usage-weighted mean per-task automation 51.2001 | minus wave five-pattern value 0.1303
+C5 join: named in 2616 | matched 2616 | unmatched 0 | key collisions 0
+multi-holder tasks: 10-char 74 | 7-char 72 | span >1 major group 6 | multi mass pp of wave 4.08 | % of named mass 4.44
+2019 recode of this wave's holder rows: 3428 rows | 2010 codes without a crosswalk row 0 | duplicate (task key, 2019 code) rows 6 | tasks whose 2019 group set differs from 2010 group set 55
+C6 coverage: priced tasks 2607 of 2616 | % of named mass 99.35
+JobZone coverage % of named mass, -1 sentinels dropped 99.22 | any JobZone value incl. -1 99.35
+analysis set: 1802 tasks | 89.25 pp of wave | 97.15 % of named | classified conversations 818,673 | classified-but-no-wage 5 | wage-but-no-classified 805
+Kish N, analysis set: 94.4
+SOC-15 share of analysis mass (2010 codes): equal-split 40.04 | modal-group 40.12
+usage-weighted wage quartile boundaries (equal-split wage): [np.float64(25.86), np.float64(35.85), np.float64(43.4)] | Q4 max 100.0
+per quartile: tasks [599, 501, 268, 434] | Kish N [62.3, 43.3, 22.1, 13.8] | mass pp [22.29, 21.86, 19.18, 25.92]
+classified conversations per quartile ['199,428', '200,457', '177,532', '241,256']
+conversation-level binomial SE for Q4-Q1 at p=0.511: 0.151 pp | MDE(80%, two-sided 5%) = 2.80*SE = 0.42 pp (quartile automation shares NOT computed)
+share of (group-employment-weighted) US occupation wage mass below Q1 boundary $25.86: 58.2%
+SOC-15 (equal-split) share of Q4 mass: 77.1 %
+quartile mean wages [19.83, 31.01, 39.9, 49.24] | a symmetric 1 pp Q4-Q1 gap moves (wage-weighted minus unweighted) automation share by 0.112 pp
+onet_task::use_case rows 0 | onet_task::human_only_time rows 0
+
+===== nov2025 ===== rows 458,778 | platform ['Claude AI (Free and Pro)']
+intersection rows 16778 | level ['0'] | tasks 3169 | named 3168 | patterns ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation'] | min _count 1.0 | non-global intersection rows 0
+per-task _pct sum min/median/max 100.0 100.0 100.0
+named intersection counts 935,027 | classified % 92.34 | none % 2.02 | not_classified % 5.64
+wave automation: all-conversation base 45.3554 | five-classified base 46.7394 | not_classified in marginal facet 0.0
+onet_task nodes 3170 | named 3168 | pct sum 100.0 | min count 15.0 | none mass 3.7124 | not_classified mass 2.7732 | named mass 93.5144 | named conversations 935,027
+base-facet task set minus intersection task set: ['not_classified'] | intersection minus base: []
+intersection publishes % of base named counts: 100.0
+Kish N on onet_task_pct, named nodes: 89.5 of 3168
+internal check: usage-weighted mean per-task automation 47.0325 | minus wave five-pattern value 0.2931
+C5 join: named in 3168 | matched 3168 | unmatched 0 | key collisions 0
+multi-holder tasks: 10-char 93 | 7-char 91 | span >1 major group 10 | multi mass pp of wave 5.6 | % of named mass 5.98
+2019 recode of this wave's holder rows: 4135 rows | 2010 codes without a crosswalk row 0 | duplicate (task key, 2019 code) rows 6 | tasks whose 2019 group set differs from 2010 group set 71
+C6 coverage: priced tasks 3154 of 3168 | % of named mass 98.98
+JobZone coverage % of named mass, -1 sentinels dropped 98.83 | any JobZone value incl. -1 98.98
+analysis set: 2075 tasks | 89.99 pp of wave | 96.23 % of named | classified conversations 854,432 | classified-but-no-wage 12 | wage-but-no-classified 1079
+Kish N, analysis set: 83.4
+SOC-15 share of analysis mass (2010 codes): equal-split 37.29 | modal-group 37.36
+usage-weighted wage quartile boundaries (equal-split wage): [np.float64(25.78), np.float64(34.87), np.float64(43.4)] | Q4 max 100.0
+per quartile: tasks [696, 578, 314, 487] | Kish N [54.7, 38.3, 21.6, 11.7] | mass pp [22.27, 22.46, 19.32, 25.94]
+classified conversations per quartile ['205,919', '214,144', '185,056', '249,313']
+conversation-level binomial SE for Q4-Q1 at p=0.467: 0.149 pp | MDE(80%, two-sided 5%) = 2.80*SE = 0.42 pp (quartile automation shares NOT computed)
+share of (group-employment-weighted) US occupation wage mass below Q1 boundary $25.78: 58.1%
+SOC-15 (equal-split) share of Q4 mass: 75.7 %
+quartile mean wages [18.99, 30.64, 39.3, 49.94] | a symmetric 1 pp Q4-Q1 gap moves (wage-weighted minus unweighted) automation share by 0.117 pp
+onet_task::use_case rows 13908 | onet_task::human_only_time rows 28533
+use_case categories: ['coursework', 'not_classified', 'personal', 'work'] | tasks 3169
+per-task work share (of all use_case cells) p10/p50/p90: [np.float64(0.0), np.float64(28.2), np.float64(85.4)] | coverage of analysis set 100.0 %
+usage-weighted work share by wage quartile Q1..Q4: [32.8, 48.4, 41.8, 62.0]
+wave use_case mix %: {'coursework': np.float64(19.3), 'not_classified': np.float64(0.0), 'personal': np.float64(34.7), 'work': np.float64(46.0)}
+Seychelles: SC rows 410 | SYC rows 0 | usage_count 24,715 | usage_pct 2.4718 | SC onet_task::collaboration rows 0
+SC share of a task's global count: max 64.3 % | median 4.8 % | tasks >10%: 23 | >20%: 14
+in analysis set, tasks with SC >10%: 23 | mass pp 11.59 | of which in Q4 9.04 pp | Q4 total 25.94
+SC collaboration mix: feedback loop % 60.0 | global feedback loop % 13.6
+
+===== feb2026 ===== rows 477,717 | platform ['Claude AI (Free, Pro, and Max)']
+intersection rows 17530 | level ['0'] | tasks 3259 | named 3258 | patterns ['directive', 'feedback loop', 'learning', 'none', 'not_classified', 'task iteration', 'validation'] | min _count 1.0 | non-global intersection rows 0
+per-task _pct sum min/median/max 100.0 100.0 100.0
+named intersection counts 929,714 | classified % 91.94 | none % 2.16 | not_classified % 5.9
+wave automation: all-conversation base 44.1569 | five-classified base 45.5456 | not_classified in marginal facet 0.0
+onet_task nodes 3260 | named 3258 | pct sum 100.0 | min count 15.0 | none mass 4.2922 | not_classified mass 2.7364 | named mass 92.9714 | named conversations 929,714
+base-facet task set minus intersection task set: ['not_classified'] | intersection minus base: []
+intersection publishes % of base named counts: 100.0
+Kish N on onet_task_pct, named nodes: 134.3 of 3258
+internal check: usage-weighted mean per-task automation 45.8966 | minus wave five-pattern value 0.351
+C5 join: named in 3258 | matched 3258 | unmatched 0 | key collisions 0
+multi-holder tasks: 10-char 86 | 7-char 84 | span >1 major group 9 | multi mass pp of wave 4.53 | % of named mass 4.87
+2019 recode of this wave's holder rows: 4185 rows | 2010 codes without a crosswalk row 0 | duplicate (task key, 2019 code) rows 6 | tasks whose 2019 group set differs from 2010 group set 70
+C6 coverage: priced tasks 3244 of 3258 | % of named mass 99.3
+JobZone coverage % of named mass, -1 sentinels dropped 99.06 | any JobZone value incl. -1 99.3
+analysis set: 2188 tasks | 89.73 pp of wave | 96.52 % of named | classified conversations 848,716 | classified-but-no-wage 12 | wage-but-no-classified 1056
+Kish N, analysis set: 125.7
+SOC-15 share of analysis mass (2010 codes): equal-split 33.26 | modal-group 33.32
+usage-weighted wage quartile boundaries (equal-split wage): [np.float64(24.0), np.float64(34.45), np.float64(43.4)] | Q4 max 100.0
+per quartile: tasks [642, 647, 382, 517] | Kish N [50.0, 51.5, 32.3, 19.0] | mass pp [22.08, 22.78, 20.56, 24.33]
+classified conversations per quartile ['203,894', '216,241', '195,649', '232,932']
+conversation-level binomial SE for Q4-Q1 at p=0.455: 0.151 pp | MDE(80%, two-sided 5%) = 2.80*SE = 0.42 pp (quartile automation shares NOT computed)
+share of (group-employment-weighted) US occupation wage mass below Q1 boundary $24.00: 54.1%
+SOC-15 (equal-split) share of Q4 mass: 69.9 %
+quartile mean wages [17.93, 29.5, 38.96, 50.24] | a symmetric 1 pp Q4-Q1 gap moves (wage-weighted minus unweighted) automation share by 0.121 pp
+onet_task::use_case rows 14430 | onet_task::human_only_time rows 29291
+use_case categories: ['coursework', 'none', 'not_classified', 'personal', 'work'] | tasks 3259
+per-task work share (of all use_case cells) p10/p50/p90: [np.float64(0.0), np.float64(38.3), np.float64(89.1)] | coverage of analysis set 100.0 %
+usage-weighted work share by wage quartile Q1..Q4: [28.4, 51.5, 41.6, 61.3]
+wave use_case mix %: {'coursework': np.float64(12.4), 'none': np.float64(0.0), 'personal': np.float64(42.3), 'work': np.float64(45.2)}
+
+Done.
