@@ -1,0 +1,79 @@
+
+===== aug2025 =====
+analysis set rebuilt: 1802 tasks | 89.2530 pp of wave | quartile boundaries (equal-split wage) [np.float64(25.86), np.float64(35.85), np.float64(43.4)] | tasks per quartile [599, 501, 268, 434]
+C9 onet_task::use_case: rows at global 0 | rows at other geographies 0 | any facet name containing 'use_case': []
+  -> facet ABSENT in this wave (not an empty cut): legs (d)-(e) untestable, no substitute at task grain
+
+===== nov2025 =====
+analysis set rebuilt: 2075 tasks | 89.9892 pp of wave | quartile boundaries (equal-split wage) [np.float64(25.78), np.float64(34.87), np.float64(43.4)] | tasks per quartile [696, 578, 314, 487]
+C9 onet_task::use_case: rows at global 13908 | rows at other geographies 0 | any facet name containing 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case']
+  variables: ['onet_task_use_case_count', 'onet_task_use_case_pct'] | level: ['0'] | categories: ['coursework', 'not_classified', 'personal', 'work'] | base nodes: 3169 | named: 3168
+  min published substantive cell: 15 | not_classified range: 1-39 | per-task _pct sum min/max: 100.0000/100.0000 | max |sum of cells - onet_task_count|: 0
+  named mass 93.5144 | mass of tasks with a published WORK cell 87.9153 | with BOTH work and coursework 76.9463 | work OR coursework 89.2976 | any substantive cell 92.4336
+  coverage of the analysis set: 2075 of 2075 tasks, 89.9892 of 89.9892 pp | per quartile all covered: [True, True, True, True]
+  usage-weighted use-case mix by wage quartile Q1..Q4 (% of node counts):
+    work            [32.77, 48.38, 41.81, 61.95]
+    personal        [44.54, 32.34, 28.14, 23.84]
+    coursework      [20.77, 17.65, 29.11, 13.03]
+    not_classified  [1.91, 1.63, 0.93, 1.17]
+  work-dominant (>= 50%): denominator ALL published cells -> 943 tasks, 48.9382 pp = 54.38% of analysis mass | denominator SUBSTANTIVE cells -> 978 tasks | tasks that flip between the two: 35 | analysis-set tasks publishing only not_classified: 29 (0.0779 pp)
+  folded residual share of the intersection's counts: 2.75% | median per-task not_classified pct over the analysis set: 4.82 pp
+
+===== feb2026 =====
+analysis set rebuilt: 2188 tasks | 89.7348 pp of wave | quartile boundaries (equal-split wage) [np.float64(24.0), np.float64(34.45), np.float64(43.4)] | tasks per quartile [642, 647, 382, 517]
+C9 onet_task::use_case: rows at global 14430 | rows at other geographies 0 | any facet name containing 'use_case': ['onet_task::use_case', 'request::use_case', 'use_case']
+  variables: ['onet_task_use_case_count', 'onet_task_use_case_pct'] | level: ['0'] | categories: ['coursework', 'none', 'not_classified', 'personal', 'work'] | base nodes: 3259 | named: 3258
+  `none` category: 1 task cell(s), 20 conversations, 0.0022% of the intersection's counts
+  min published substantive cell: 15 | not_classified range: 1-36 | per-task _pct sum min/max: 100.0000/100.0000 | max |sum of cells - onet_task_count|: 0
+  named mass 92.9714 | mass of tasks with a published WORK cell 86.9555 | with BOTH work and coursework 69.6432 | work OR coursework 87.9329 | any substantive cell 92.1255
+  coverage of the analysis set: 2188 of 2188 tasks, 89.7348 of 89.7348 pp | per quartile all covered: [True, True, True, True]
+  usage-weighted use-case mix by wage quartile Q1..Q4 (% of node counts):
+    work            [28.45, 51.45, 41.57, 61.32]
+    personal        [56.81, 35.81, 38.49, 29.7]
+    coursework      [13.11, 11.08, 18.8, 7.67]
+    not_classified  [1.64, 1.66, 1.13, 1.31]
+  work-dominant (>= 50%): denominator ALL published cells -> 1071 tasks, 47.4364 pp = 52.86% of analysis mass | denominator SUBSTANTIVE cells -> 1106 tasks | tasks that flip between the two: 35 | analysis-set tasks publishing only not_classified: 21 (0.0527 pp)
+  folded residual share of the intersection's counts: 2.57% | median per-task not_classified pct over the analysis set: 3.92 pp
+
+===== C10 release_2025_03_27 =====
+columns: ['task_name', 'feedback_loop', 'directive', 'task_iteration', 'validation', 'learning', 'filtered'] | shape: (3364, 7)
+  column named 'collaboration': False | any column containing 'collab': [] | any _count / _pct column: [] | dtypes: ['float64', 'object']
+  row sums: min 1.000000000000 median 1.000000000000 max 1.000000000000 | max |sum-1| 4.4e-16
+  filtered: median 0.3000 | rows at 1.0: 1066 | rows at 0: 4
+  task_pct_v2: (3365, 2) ['task_name', 'pct'] | pct sum 100.000000 | none row 1.781672
+  task_pct_v2 -> by_task: 3365 in, 3364 matched, 1 unmatched (['none']) | matched pct 98.2183 | after weighting by (1 - filtered) 90.1561 | usage-weighted filtered 0.082085 | filtered pp of the 100-pct base 8.0623
+  global automation_vs_augmentation_v2.csv: ['interaction_type', 'pct'] [{'interaction_type': 'directive', 'pct': 29.420541308119624}, {'interaction_type': 'feedback loop', 'pct': 12.245083676255144}, {'interaction_type': 'learning', 'pct': 27.08040620609309}, {'interaction_type': 'none', 'pct': 3.2389485842287637}, {'interaction_type': 'task iteration', 'pct': 24.03856057840868}, {'interaction_type': 'validation', 'pct': 3.972959594393916}]
+  distinct lower-cased keys 3364 of 3364 rows
+  aug2025: analysis-set tasks 1802 | in the Mar-2025 file 1635 | unmatched 167 | matched mass 88.1643 of 89.2530 pp = 98.78% | filtered == 1.0 among matched 179 | usable split 1456
+  nov2025: analysis-set tasks 2075 | in the Mar-2025 file 1843 | unmatched 232 | matched mass 88.6343 of 89.9892 pp = 98.49% | filtered == 1.0 among matched 251 | usable split 1592
+  feb2026: analysis-set tasks 2188 | in the Mar-2025 file 1904 | unmatched 284 | matched mass 88.0125 of 89.7348 pp = 98.08% | filtered == 1.0 among matched 286 | usable split 1618
+
+===== §9(1) ordered rule =====
+41^3 grid of point-estimate triples, half-width 0.294 pp (SE 0.15 pp): owners {'H2': 512, 'O-A': 10640, 'O-B': 54132, 'H4': 3125, 'H1': 512} | total 68921 = 68,921, each triple exactly one owner (ordered 'otherwise' chain)
+  O-A triples 10640: with ALL three point estimates beyond ±1 pp 976; with AT LEAST one beyond ±1 pp 9616
+  points [1.2, 1.15, 1.5] -> O-A
+  points [0.8, 0.8, -0.2] -> O-B
+  points [0.6, 0.6, -0.2] -> H4
+  points [0.6, 0.6, 0.6] -> O-A
+  points [1.5, 1.5, 0.9] -> O-A
+  points [0.2, -0.2, 0.1] -> H4
+  power of the three-wave rules at the conversation-level SE (independent waves, true D constant across waves):
+    true D = 1.00 pp: P(H1 declared) = 0.000
+    true D = 1.30 pp: P(H1 declared) = 0.137
+    true D = 1.42 pp: P(H1 declared) = 0.511
+    true D = 1.52 pp: P(H1 declared) = 0.815
+    true D = 1.60 pp: P(H1 declared) = 0.939
+    true D = 2.00 pp: P(H1 declared) = 1.000
+    true D = 0.30 pp: P(all three intervals exclude zero, same sign; i.e. O-A or H1) = 0.137
+    true D = 0.42 pp: P(all three intervals exclude zero, same sign; i.e. O-A or H1) = 0.511
+    true D = 0.52 pp: P(all three intervals exclude zero, same sign; i.e. O-A or H1) = 0.815
+    true D = 0.60 pp: P(all three intervals exclude zero, same sign; i.e. O-A or H1) = 0.939
+    true D = 0.80 pp: P(all three intervals exclude zero, same sign; i.e. O-A or H1) = 0.999
+    true D = 0.00 pp: P(all three intervals inside ±1) = 1.000
+    true D = 0.42 pp: P(all three intervals inside ±1) = 0.918
+    true D = 0.50 pp: P(all three intervals inside ±1) = 0.767
+    true D = 0.60 pp: P(all three intervals inside ±1) = 0.439
+    true D = 0.70 pp: P(all three intervals inside ±1) = 0.137
+    true D = 0.80 pp: P(all three intervals inside ±1) = 0.019
+  smallest true D declared H1 with 80% joint power: 1.51 pp | smallest true D with 80% joint power of three same-sign zero-excluding intervals: 0.51 pp | largest true D at which H4 still fires with 80% joint power: 0.49 pp
+  (per-wave MDE(80%) for D != 0 at this SE: 2.80 x SE = 0.42 pp — the number the brief carries)

@@ -28,3 +28,7 @@ room/steward-2026-09-16-recode-correction-applied.md
 room/steward-2026-09-16-feasibility-post4.md
 room/editor-2026-09-16-brief-post4.md
 room/lead-2026-09-16-brief-post4-status.md
+room/editor-2026-09-16-brief-post1.md
+room/lead-2026-09-16-brief-post1-status.md
+room/steward-2026-09-16-feasibility-post1.md
+room/steward-2026-09-16-feasibility-post1-c9-c10.md
