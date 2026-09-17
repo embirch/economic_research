@@ -131,3 +131,7 @@ room/analyst-2026-09-17-prereg-post1.md
 room/referee-2026-09-17-prereg-post1-verdict.md
 room/analyst-2026-09-17-prereg-post1-revised.md
 room/referee2-2026-09-17-prereg-post1-reverdict.md
+room/analyst-2026-09-17-results-post1.md
+room/referee-2026-09-17-results-post1-verdict.md
+room/analyst-2026-09-17-results-post1-revised.md
+room/referee2-2026-09-17-results-post1-reverdict.md
