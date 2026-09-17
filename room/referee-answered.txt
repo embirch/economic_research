@@ -16,3 +16,6 @@ room/steward-2026-09-16-feasibility-post2.md
 room/editor-2026-09-16-brief-post2.md
 room/lead-2026-09-16-brief-post2-status.md
 room/director-2026-09-16-gate-1a.md
+room/steward-2026-09-16-recode-correction-applied.md
+room/director-2026-09-16-session-1-4-halt.md
+room/director-2026-09-16-session-1-4-resume.md
