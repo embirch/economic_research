@@ -1,1 +1,10 @@
 room/director-2026-09-16-dry-run.md
+room/director-2026-09-16-criteria-answer.md
+room/director-2026-09-16-dry-run-report.md
+room/director-2026-09-16-session-1-1-status.md
+room/director-2026-09-16-session-1-2-kickoff.md
+room/director-2026-09-16-session-1-2-status.md
+room/director-2026-09-16-session-1-2-halt.md
+room/director-2026-09-17-gate-1b-post1-approved.md
+room/director-2026-09-17-session-2-1-kickoff.md
+room/steward-2026-09-17-replication-post1.md
