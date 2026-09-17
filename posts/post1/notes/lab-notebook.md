@@ -80,3 +80,36 @@ asserted, not tested, for August. The March-2025 window publishes no counts, so 
 conversation-level interval and no `none` share at task level. The wage is an occupational aggregate
 for work that *resembles* the task, and its level does not reproduce Anthropic's published series —
 which is why the design is rank-based and no wage level is reported as Anthropic's.
+
+## 2026-09-17 · Stage 2 step 3b — referee's pre-registration items applied
+
+**Read:** `posts/post1/notes/referee-prereg.md` (`f859206`, PASS WITH CHANGES, zero blocking) and
+`room/referee-2026-09-17-prereg-post1-verdict.md`. **Applied to `posts/post1/prereg/prereg.md`,
+exactly as the referee words them:** item **4** (P4's justification replaced: the persistent-leg rule
+is primary for a reason of specification, not of text — the any-wave reading declares H3 with no
+composition present in ≈60 / 50 / 27 / 12% of declared gradients at a true D of 0.5 / 0.6 / 0.8 /
+1.0 pp against ≤1–2% for the persistent rule); item **5** (H3's "rule against" rewritten as the
+complement of the support rule, so H3's space is a partition; "rule for support" now reads "when H1,
+H2 or O-A has been declared (a declaration spans the three waves)"); item **6** (new bullet giving
+the H3 *rule's* power and false-declaration rate under the referee's covariance model, and the
+Interpretation table's last row now says a non-declaration under O-A is "nothing shown" and may not
+say composition has been ruled out); item **7** (H1's and H2's "rule against" re-worded to the
+every-wave leg language); item **9** (model (a)'s SE stated as a **lower bound** under unmeasurable
+within-task dependence); item **11** (new P6 bullet under H1/H2, and the O-A bullet's consequence, for
+a C7 sign disagreement: the owner is unchanged, the §12 first sentence carries the non-corroboration
+with C7's coverage); item **14** (the work-share covariate listed, with the usage-weighted pairwise
+correlation and VIF of wage and work share printed beside it).
+
+**Also applied, as pure wording substitutions with exact text and no rule effect:** item **15(a)**
+(O-A's expected-MDE line: O-A-or-stronger 80% from ≈0.5 pp; O-A as declared ≈1.00 near 1.0 pp and
+yielding to H1 above ≈1.4 pp — both read off the committed `power_rules.json` curve: O-A 1.000 at
+D = 1.0; H1 0.501 against O-A 0.499 at 1.42) and item **15(b)** ("(the figure BRIEF §9(4) quotes)"
+on the P2 table's H4-clause row).
+
+**Not applied, and why.** Item **10** (make the D_L − ½D interval the one read for the half judgement,
+r_L descriptive with its instability named) and item **15(c)** (state that O-B's probability under a
+non-constant true D is not computed) are "could" items with no exact replacement text; both require
+new sentences rather than a substitution — item 10 would also shift which interval a reader is
+directed to for the half judgement — so both are left for the director's call at the commit or for
+Stage 3. No rule, hypothesis, threshold or exploratory test moved. `01_power_rules.py` was not changed
+and was re-run: check block passes. "Committed as" left unfilled for the director.

@@ -179,7 +179,10 @@ p_i(1−p_i)/n_i, so the variance is **heteroskedastic by construction** across 
 cross-section analogue the standards require. **No clustering is applied, and none is available:**
 no release carries a user, account, session or any unit identifier, and the waves are never pooled,
 so there is no cluster dimension and no panel (`ATLAS` §Traps 27b, §Cuts 7); the task enters as a
-weight, not as a cluster of repeated observations. Intervals are **two-sided 95%**
+weight, not as a cluster of repeated observations. Conversations within a task are not known to be
+independent — one user or one session may contribute several — and no identifier exists to correct
+for it, so model (a)'s SE is a lower bound on the sampling variance of D under within-task
+dependence and is stated as such wherever it appears. Intervals are **two-sided 95%**
 (z = 1.959964); tests are **two-sided at 5%**; δ = 1 pp; MDE(80%) = 2.8 × SE.
 
 Because Q1 and Q4 are **disjoint task sets** with disjoint conversation sets, their terms are
@@ -269,7 +272,7 @@ be constant, every threshold is reported to **±0.05 pp**.
 |---|---|---|---|
 | **H1** (step 1), and **H2** by symmetry | **≈ 1.5 pp** (1.517 at the steward's SEs; 1.515 at the referee's; 1.514 at a flat 0.15) | **0.000** | 0.501 at 1.42 pp = δ + MDE |
 | **O-A or stronger** (all three intervals signed and excluding zero) | **≈ 0.5 pp** (0.517 / 0.515 / 0.514) | 1.000 | 0.51 at the per-wave MDE of 0.42 pp |
-| **H4**, step (4)'s clause alone (all three intervals inside ±1 pp) | **up to ≈ 0.5 pp** (0.483 / 0.485 / 0.486) | 0.000 | 0.133 at 0.70 pp |
+| **H4**, step (4)'s clause alone (all three intervals inside ±1 pp) (the figure BRIEF §9(4) quotes) | **up to ≈ 0.5 pp** (0.483 / 0.485 / 0.486) | 0.000 | 0.133 at 0.70 pp |
 | **H4 as declared** under the ordered rule (the clause *and* step 3 failing) | **up to ≈ 0.32 pp** (0.324 / 0.323 / 0.322) | 0.000 | 0.228 at 0.49 pp |
 
 **The completion, marked.** Item 23 of `referee-brief-2.md` and BRIEF §9(4) state H4's power as
@@ -294,11 +297,18 @@ triples resolving as §9(1) says (+0.8 / +0.8 / −0.2 → O-B; +0.6 / +0.6 / �
   D keeps more than half its size, with the same sign, on **every composition leg testable in that
   wave** — legs (a) and (b) in all three waves, leg (e) in November and February only.
 - **Rule against.** Any wave whose lower bound does not clear +1 pp (the outcome passes to H2, O-A,
-  H4 or O-B by the same rule); losing more than half the size, or the sign, on any testable leg
-  (H3 qualifies the declaration); a sign that disagrees between the two wage sources (P6).
+  H4 or O-B by the same rule); losing more than half the size, or the sign, on a leg in every wave in
+  which that leg is testable (H3 qualifies the declaration, P4); a leg firing in some waves only is
+  reported with both readings' verdicts; a sign that disagrees between the two wage sources (P6).
 - **Expected MDE.** Per wave 0.42 / 0.42 / 0.43 pp; the rule itself reaches 80% power at a true D of
   ≈ 1.5 pp and 0.000 at 1.0 pp (P2). A true D of exactly δ is therefore **not** detected by this
   rule at 80%, which the post states.
+- **P6 · The second wage source under H1 / H2.** The C7 rebuild's point estimate carries the declared
+  sign in all three waves, and its intervals are reported. If it does not, the owner is unchanged —
+  the ordered rule runs on C6 — and the §12 H1 (H2) paragraph carries, in its first sentence, that
+  the gradient is not corroborated on the second wage source in the wave(s) named, with C7's coverage
+  (55.66 / 58.52 / 62.22% of named mass) stated as the reason it is not decisive; H3 is still
+  evaluated.
 - **Specification risks.** SOC-15 is 77.1 / 75.7 / 69.9% of top-quartile mass, so leg (a) removes
   most of Q4 by construction and its SE rises accordingly (the leave-one-group-out series is
   dominated by that one leave-out, which the post states); Q4's Kish effective N is 11.5–16.5 tasks,
@@ -312,7 +322,7 @@ triples resolving as §9(1) says (+0.8 / +0.8 / −0.2 → O-B; +0.6 / +0.6 / �
 - **Rule for support.** Step (2): the upper bound of D is below **−1 pp in all three waves**. The
   declaration rests on the interval alone.
 - **Rule against.** Any wave whose upper bound does not fall below −1 pp; losing more than half the
-  size, or the sign, on a testable leg (H3).
+  size, or the sign, on a leg in every wave in which it is testable (H3, P4).
 - **Expected MDE.** As H1 by symmetry: 80% power at a true D of ≈ −1.5 pp.
 - **P5 · What is written when step (2) fires and the augmentation clause fails.** The augmentation
   clause is not part of the declaration. If fewer than two of `learning`, `task iteration` and
@@ -403,10 +413,17 @@ which is the reason to run leg (e).
 (November and February) — 3 + 3 + 2 = 8.
 
 *The completion, marked.* §9(3) says H3 is declared if D loses more than half its size, or its sign,
-"on at least one of (a), (b) and (e)" and does not say in how many waves. Mirroring §9(1)'s
-persistence rule for D — which requires its condition in **all three waves** — and BRIEF §6 H3's
-"against it" clause, which requires D to keep half its size and its sign on all three legs "in all
-three waves":
+"on at least one of (a), (b) and (e)" and does not say in how many waves. BRIEF §6 does not settle
+it: §6 H3's "against it" (D keeping half its size on all three legs in all three waves) and §6 H1's
+"against it" (losing on any composition leg) are both complements of the any-wave reading. The
+persistent-leg rule is nevertheless primary, for a reason of specification rather than of text: on
+point estimates at these SEs the any-wave reading declares H3 with no composition present in roughly
+60 / 50 / 27 / 12% of declared gradients at a true D of 0.5 / 0.6 / 0.8 / 1.0 pp, whereas the
+persistent-leg rule does so in at most 1–2% at any D
+(`posts/post1/notes/rederivation/referee_prereg_post1.py` §C, covariance model stated there). A rule
+that fires under the null in a quarter to two-thirds of cases in the O-A range is not a test, so the
+literal reading is reported beside the primary rather than used as it. Mirroring §9(1)'s
+all-three-waves persistence for D:
 
 - **Primary (the persistent-leg rule).** H3 is declared if **at least one leg fires in every wave in
   which that leg is testable** — legs (a) and (b) in all three waves, leg (e) in both waves in which
@@ -424,9 +441,14 @@ retained mass, and a **fired / did not fire** flag. The headline count is report
 (e) out of 2), together with the per-leg persistence counts ("leg (a) fired in j of 3 waves"), so the
 count is never read as a single test.
 
-- **Rule for support (H3).** As above, on a wave in which H1, H2 or O-A has been declared.
-- **Rule against (H3).** D keeping more than half its size and its sign on all three legs and across
-  all 22 leave-one-group-out re-estimates, in all three waves.
+- **Rule for support (H3).** As above, when H1, H2 or O-A has been declared (a declaration spans the
+  three waves).
+- **Rule against (H3).** No leg fires in every wave in which it is testable — the complement of the
+  support rule, so every declared gradient is either H3-qualified or not. The strongest form, D
+  keeping more than half its size and its sign on all three legs in every wave and across all 22
+  leave-one-group-out re-estimates, is BRIEF §6 H3's "against it" and is reported as such when it
+  obtains; a leg firing in some waves but not all is "not declared" and is reported with the literal
+  reading's verdict in the same sentence (above).
 - **Expected MDE.** Each leg's MDE is 2.8 × SE(D_L) computed by the same formula on the leg's own
   sub-sample and **printed beside every leg estimate**, together with the MDE for the contrast
   D_L − ½D. A pre-commit expectation, from the mass each leg removes: leg (a) removes 70–77% of
@@ -436,6 +458,23 @@ count is never read as a single test.
   results: the pre-registered commitment is that the MDE is computed on the same variance model and
   printed beside every leg, and that a leg which does not fire is reported as "nothing bigger than
   the MDE" rather than as a confirmation.
+- **Power of the H3 rule, per rule and not per leg** (referee's re-derivation,
+  `posts/post1/notes/rederivation/referee_prereg_post1.py` §C; covariance model: Var(A1) = Var(A4) =
+  ½Var(D); a leg's quartile mean has variance Var(A_q)/f_q for retained mass fraction f_q and
+  covariance Var(A_q) with the full mean; leg (a) f4 = 0.229 / 0.243 / 0.301, f1 = 1; leg (e)
+  f1 = 0.35, f4 = 0.65; leg (b) SE ratio 2.0; constant true D; conditional on a declared positive
+  gradient; thresholds approximate to about ±0.05). Expected SE(D_(a)) ≈ 0.23–0.25 pp,
+  corr(D, D_(a)) ≈ 0.6–0.7, SE(D_(a) − ½D) ≈ 0.18–0.21 pp. Under the persistent-leg rule, false
+  declaration of H3 with no composition present ≤ 0.01–0.02 at every true D; power to declare H3
+  when one leg truly loses three-quarters of D — leg (a): 0.37 / 0.46 / 0.60 / 0.72 / 0.92 at a true
+  D of 0.5 / 0.6 / 0.8 / 1.0 / 1.5 pp; leg (e), two waves: 0.54 / 0.63 / 0.75 / 0.84 / 0.96;
+  leg (b): 0.29 / 0.35 / 0.45 / 0.55 / 0.77. At the boundary (a leg truly retaining exactly half)
+  each wave fires with probability ½ and the persistent rule with ⅛. Under the literal any-wave
+  reading the false-declaration rate is 0.60 / 0.49 / 0.27 / 0.12 / 0.01 at the same true D.
+  Consequence, fixed now: in the O-A range an H3 non-declaration is "nothing shown", not composition
+  excluded; the post's sentence for that case is in the Interpretation table. Script 04 or 01 may
+  reproduce these figures on the same model with a ±0.03 tolerance; the pre-registered commitment is
+  the realised SE, MDE and D_L − ½D interval printed beside every leg.
 - **Specification risks.** Leg (a) and the leave-one-group-out series are not independent evidence
   (SOC-15 dominates both); r_L is a ratio of two correlated estimates, which is why its interval is
   formed from the exact covariance rather than by treating D and D_L as independent; leg (b)'s
@@ -469,9 +508,13 @@ count is never read as a single test.
   14): O-A means "not shown to clear the margin in every window", never "smaller than a point".
 - **Rule against.** Any wave whose interval contains zero, or a sign that disagrees across waves
   (O-B); all three lower bounds clearing +1 pp or all three upper bounds below −1 pp (H1 / H2).
-- **Expected MDE.** 80% power at a true \|D\| of ≈ 0.5 pp; per-wave MDE 0.42 / 0.42 / 0.43 pp.
+- **Expected MDE.** O-A or stronger reaches 80% from ≈ 0.5 pp; O-A as declared is ≈ 1.00 near 1.0 pp
+  and yields to H1 above ≈ 1.4 pp. Per-wave MDE 0.42 / 0.42 / 0.43 pp.
 - **P6 · The second wage source under O-A.** Sign agreement: the C7 rebuild's point estimate carries
-  the declared sign in **all three waves**, and its intervals are reported.
+  the declared sign in **all three waves**, and its intervals are reported. If C7's point estimate
+  carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its
+  first sentence, that the direction is not corroborated on the second wage source in that wave, with
+  C7's coverage stated.
 
 ### O-B · No persistent gradient
 
@@ -502,7 +545,9 @@ count is never read as a single test.
 
 Reported beside them, in no decision rule: each quartile's automation share with its `none` and
 `not_classified` shares (4 per wave), leg (c)'s 22 + 1 leave-one-group-out re-estimates, leg (d)'s
-quartile use-case mixes (Nov, Feb), and every robustness cut listed below.
+quartile use-case mixes (Nov, Feb), the continuous slope with the task's work share as a covariate
+(§9(3)(e); Nov and Feb), with the usage-weighted pairwise correlation and VIF of wage and work share
+printed beside it, since the two predictors compete, and every robustness cut listed below.
 
 ### P6 · Two implementations of every confirmatory quantity
 
@@ -651,7 +696,7 @@ Each owner's reading is fixed before it is known, and is the corresponding parag
 | **H4** (step 4) | "If H4 holds (the null, at the stated margin)" | that the two quartiles differed by less than one percentage point, and by X with Computer & Mathematical tasks excluded, at an MDE of 0.42–0.43 pp **on these windows' conversations**; a second null beside Anthropic's null for the education level of the prompt; that for weighting purposes an unweighted automation share is, in these windows, the right number after all | that the SOC-15-excluded difference is smaller (it is not constrained to be); a null about tasks in general (nothing below about twelve points is resolved) |
 | **O-B** (step 5) | "If O-B holds (no persistent gradient)" | that the gradient is not a stable feature of these three windows; what a longer released series would settle | a sign; a magnitude claim for any single wave read as the finding |
 | **H3 declared** (legs, after H1, H2 or O-A) | "If H3 holds (composition, not price)" — **qualifying** the declared owner's paragraph, not replacing it | that the relation is carried by a mix travelling with wage — coding, or use case, with the leg that fired named and its retained fraction given; that anyone weighting an automation share by wage must know which | that the price mechanism is refuted; a use-case claim for August, where the leg is untestable |
-| **H3 not declared, or not evaluated (H4 / O-B)** | the owner's paragraph, plus one sentence | that the legs were computed and reported and that no H3 declaration is made | an H3 declaration under H4 or O-B |
+| **H3 not declared, or not evaluated (H4 / O-B)** | the owner's paragraph, plus one sentence | that the legs were computed and reported and that no H3 declaration is made; where the owner is O-A, that the pre-registered rule detects a three-quarters loss on a single leg with a probability of roughly 0.4–0.7 at a true D of 0.5–1.0 pp, so non-declaration is nothing shown, not composition excluded | an H3 declaration under H4 or O-B; that composition has been ruled out |
 
 The post's body says **"the wage of the work"**, never "cheap" or "expensive"; low-wage and high-wage
 mean the bottom and top usage-weighted wage quartile of the tasks brought to Claude, defined in the

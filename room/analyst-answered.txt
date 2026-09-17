@@ -8,3 +8,4 @@ room/director-2026-09-16-session-1-2-halt.md
 room/director-2026-09-17-gate-1b-post1-approved.md
 room/director-2026-09-17-session-2-1-kickoff.md
 room/steward-2026-09-17-replication-post1.md
+room/referee-2026-09-17-prereg-post1-verdict.md
