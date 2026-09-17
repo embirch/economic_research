@@ -668,3 +668,53 @@ was touched — no script, no `results.json`, no figure.
 
 No headline number is touched by either slip: D, Δ_W, the slope, the eight legs, the declared owner
 (O-A) and the H3 declaration are as committed.
+
+## 2026-09-17 · CORRECTION (referee-draft items 1, 8, 22 and §(b)) — three caption corrections, regenerated from code
+
+`room/referee-2026-09-17-figures-post1.md` and `posts/post1/notes/referee-draft.md` items 1, 8, 22
+and §(b). Applied to the caption source in `posts/post1/scripts/09_results_and_figures.py` and
+re-run, so `outputs/figures.json`, the four PNGs, the `figures` block of
+`data/processed/results.json` and `outputs/checks/09_results_and_figures.out.txt` all regenerate
+from code; nothing was hand-edited in a JSON. Results are frozen and no estimate was re-run.
+
+1. **Figure 1's title stated a count the exhibit contradicts (item 1).** "and in none once the
+   boundary wage is shared" is false: on the corrected quartile rule the differences are
+   +0.5434 / **+7.1793** / +0.3387 pp, so November clears a point and the count is *one*. Replaced
+   with the referee's text: "…clears a percentage point in two windows on the pre-registered
+   quartile rule and in one once the boundary wage is shared, and under neither rule in every
+   window." Provenance, since it matters for the record: this sentence was prescribed at the results
+   review (`referee-results.md` item 9), applied here in good faith, and copied faithfully by the
+   editor; the referee's second read caught its own error. What it should have been checked against
+   was `tests.D_*.estimates.D_corrected_quartile_rule.coef`, which was in `results.json` all along.
+2. **Figure 4 carried a sentence `claims.md` forbids and a brief assumption read as a result
+   (item 8's §(b)).** Deleted "so it is the size of the error made when a conversation-counting
+   automation share is read as though it were weighted by the wage bill at stake" — Δ_W has no hours
+   in it, so it is the error against an hourly-wage weighting, not against a wage-bill one — and the
+   trailing "about 0.11 to 0.12 pp of Δ_W per point of quartile gap, so a full point of Δ_W needs a
+   gap of roughly 8 to 9 points", which is the brief's assumption and would read, under three
+   realised markers, as a realised relation; the realised ratios are −0.0160 / +0.1131 / −0.2192 pp
+   per point of gap. The two sentences are replaced by the editor's POST.md text, which the referee
+   names as the model: the null value glossed, and the materiality line stated as the brief's and
+   separate from the quartile margin.
+3. **Figure 3's title called D "the gradient" (item 8).** Replaced with the referee's text: "**The
+   top-minus-bottom difference does not survive either composition leg: …**", which is what
+   `claims.md` sentence 1 allows.
+4. **The two "could" items, both pure caption or label edits (item 22).** Every PNG's in-image title
+   duplicated its caption's claim — figure 2's "the bottom quartile is delegated nearly as often as
+   the top" is false for November (46.58 against 53.97) and figure 3's said "reverses the gradient".
+   All four in-image titles are now descriptive: "Top-minus-bottom difference in the automation
+   share, three Claude.ai windows"; "Automation share by usage-weighted wage quartile, three
+   Claude.ai windows"; "Top-minus-bottom difference under each composition leg, three Claude.ai
+   windows"; "Wage-weighted minus unweighted automation share (Δ_W), three Claude.ai windows". And
+   the quartile task counts are now a fact a caption may carry —
+   `facts.quartile_task_counts`, read from `build_facts.json` and not typed: Q1 **600 / 699 / 649**
+   and Q4 **360 / 403 / 482**, with all four quartiles per wave and their classified conversation
+   counts beside them.
+
+**Nothing else moved, asserted rather than asserted-to.** The JSON was flattened to its leaves
+before and after the re-run: of 34 changed leaves, 30 are the new `facts.quartile_task_counts`, 3
+are `figures.fig1/fig3/fig4.caption`, and 1 is `generated`, the timestamp. **No leaf outside the
+`figures` block, the new fact and the timestamp changed** — every test, every estimate, every other
+fact, the declared owner (O-A), the H3 declaration and the check block's 3,186 other leaves are
+byte-identical. Figure 2's caption text is unchanged; only its in-image title moved. Check block
+passed on the re-run.

@@ -174,7 +174,8 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
     ax.set_xticks(x)
     ax.set_xticklabels([WAVE_LABEL[w] for w in WAVES])
     ax.set_ylabel("Top-minus-bottom wage-quartile difference\nin the automation share (pp)")
-    ax.set_title("Delegation and the wage of the work, three Claude.ai windows", loc="left")
+    ax.set_title("Top-minus-bottom difference in the automation share, three Claude.ai windows",
+                 loc="left")
     ax.legend(frameon=False, fontsize=8, loc="upper right")
     fig.tight_layout()
     f1 = FIGDIR / "fig1_D_by_wave.png"
@@ -186,8 +187,8 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         caption=(
             "**In all three Claude.ai windows the delegated share is higher on top-quartile than on "
             "bottom-quartile tasks; the difference clears a percentage point in two windows on the "
-            "pre-registered quartile rule and in none once the boundary wage is shared, and it does "
-            "not clear a point in every window under either rule.** Plotted: D, the usage-weighted automation share of the top "
+            "pre-registered quartile rule and in one once the boundary wage is shared, and under "
+            "neither rule in every window.** Plotted: D, the usage-weighted automation share of the top "
             "wage quartile minus that of the bottom, in percentage points, per window. Each point "
             "is one window of Claude.ai conversations (4–11 Aug 2025, 13–20 Nov 2025, 5–12 Feb "
             "2026), estimated separately and never pooled or spliced. The automation share of a "
@@ -230,7 +231,7 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         axes[i].set_xticklabels([f"Q{k}\n${sh[f'Q{k}']['mean_wage']:.0f}/hr" for k in (1, 2, 3, 4)])
         axes[i].set_title(WAVE_LABEL[w], loc="left", fontsize=10)
     axes[0].set_ylabel("Automation share (pp of classified conversations)")
-    fig.suptitle("The relation is not monotone: the bottom quartile is delegated nearly as often as the top",
+    fig.suptitle("Automation share by usage-weighted wage quartile, three Claude.ai windows",
                  x=0.01, ha="left")
     fig.tight_layout()
     f2 = FIGDIR / "fig2_quartile_shares.png"
@@ -282,7 +283,8 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         axes[i].set_title(WAVE_LABEL[w], loc="left", fontsize=10)
         axes[i].legend(frameon=False, fontsize=7, loc="upper left")
     axes[0].set_ylabel("Top-minus-bottom difference under the leg (pp)")
-    fig.suptitle("Removing the coding family reverses the gradient in every window", x=0.01, ha="left")
+    fig.suptitle("Top-minus-bottom difference under each composition leg, three Claude.ai windows",
+                 x=0.01, ha="left")
     fig.tight_layout()
     f3 = FIGDIR / "fig3_h3_legs.png"
     fig.savefig(f3, dpi=200)
@@ -291,7 +293,7 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         file="outputs/figures/fig3_h3_legs.png",
         script="scripts/09_results_and_figures.py",
         caption=(
-            "**The gradient does not survive either composition leg: excluding Computer & "
+            "**The top-minus-bottom difference does not survive either composition leg: excluding Computer & "
             "Mathematical tasks, or holding the occupational group fixed, turns it negative in all "
             "three windows; restricting to work-dominant tasks does not.** Plotted: D re-estimated "
             "under each pre-registered composition leg, in percentage points, one panel per "
@@ -329,7 +331,7 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
     ax.set_xticks(x)
     ax.set_xticklabels([WAVE_LABEL[w] for w in WAVES])
     ax.set_ylabel("Wage-weighted minus unweighted\nautomation share, Δ_W (pp)")
-    ax.set_title("What weighting a published automation share by the wage of the work would move it by",
+    ax.set_title("Wage-weighted minus unweighted automation share (Δ_W), three Claude.ai windows",
                  loc="left", fontsize=11)
     fig.tight_layout()
     f4 = FIGDIR / "fig4_delta_w.png"
@@ -346,13 +348,13 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
             "Claude.ai conversations, in percentage points, per window; each marker is one window. "
             "Δ_W is Cov_w(wage, p) ÷ E_w[wage] over the analysis set — the same per-task automation "
             "share p as Figure 1, the same `onet_task_pct` weights, and the task's hourly wage as "
-            "the re-weighting variable — so it is the size of the error made when a conversation-"
-            "counting automation share is read as though it were weighted by the wage bill at "
-            "stake. It is an hourly rate, not a bill: no hours enter it. Sample as Figure 1. Bars "
+            "the re-weighting variable. It is an hourly rate, not a bill: no hours enter it. "
+            "Sample as Figure 1. Bars "
             "are two-sided 95% intervals on the conversation-level binomial model and are a lower "
-            "bound on the sampling variance. The null value is zero; the pre-registered materiality "
-            "line is separate and higher than the quartile margin — about 0.11 to 0.12 pp of Δ_W "
-            "per point of quartile gap, so a full point of Δ_W needs a gap of roughly 8 to 9 points."))
+            "bound on the sampling variance. The null value is zero — the value Δ_W takes when the "
+            "automation share is uncorrelated with the wage across the task mix. The materiality "
+            "line for this quantity, one percentage point, is the brief's and is separate from the "
+            "one-point margin applied to the quartile difference."))
     return out
 
 
@@ -1091,6 +1093,19 @@ def main():
                      "none of those probabilities is the probability of this outcome, and no "
                      "probability under a non-constant D has been computed; the O-A label's "
                      "'persistent' is about the sign only"))
+    facts["quartile_task_counts"] = dict(
+        value=[bw[w]["quartiles"]["Q4"]["tasks"] for w in WAVES],
+        label=("the number of tasks in each usage-weighted wage quartile, per window — each "
+               "quartile holds a quarter of the usage mass, so the four are not equally many "
+               "tasks, and a caption may carry the counts"),
+        script="scripts/02_build.py",
+        source_check=("from `build_facts.json` quartiles[Qk].tasks; Q1 and Q4 are the two the "
+                      "headline difference is formed from"),
+        by_wave={w: [bw[w]["quartiles"][f"Q{k}"]["tasks"] for k in (1, 2, 3, 4)] for w in WAVES},
+        Q1=[bw[w]["quartiles"]["Q1"]["tasks"] for w in WAVES],
+        Q4=[bw[w]["quartiles"]["Q4"]["tasks"] for w in WAVES],
+        conversations_Q1=[bw[w]["quartiles"]["Q1"]["conversations"] for w in WAVES],
+        conversations_Q4=[bw[w]["quartiles"]["Q4"]["conversations"] for w in WAVES])
     facts["country_mix_not_testable"] = dict(
         value=False, label="whether the country mix inside a task can be cleaned at this grain",
         script="scripts/06_robustness.py",
