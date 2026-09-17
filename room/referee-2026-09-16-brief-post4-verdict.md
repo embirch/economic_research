@@ -15,13 +15,13 @@ constructs, not arithmetic). Seven blocking items, one pass by the lead:
    variance-effective N 4.1); the 0.0569 MDE is uninformative — relative-change outcome, bootstrap MDE (§8 r1, §9, §10, §12).
 2. H1's signature is shared by the Super Bowl inflow, the coding outflow and the complexity drift; the
    pre-period "placebo" is an inverted falsifier; the August share instruments a control, not success —
-   restate as a conditional correlation, drop IV vocabulary, name the rivals (§6, §8 r3, §9, §10).
-3. The ≥15 cell rule selects small nodes on success (null r +0.03 in log change); pre-register a minimum
-   node size and a floor-aware synthetic null (§8 r1–2, §9, §10).
+   conditional correlation, no IV vocabulary, rivals named (§6, §8 r3, §9, §10).
+3. The ≥15 cell rule selects small nodes on success (null r +0.03 in log change) — minimum node size and
+   floor-aware synthetic null (§8 r1–2, §9, §10).
 4. H4 is decided by the floor; its means rest on zero-imputed `yes` cells — out of the confirmatory set (§6, §9, §12).
 5. Title: "people keep bringing" is untested (editor's (c) confirmed) — freezes at 1b.
 6. §5: "predictive validation", "buys" — overclaim, freezes at 1b.
 7. §12: no ending for H2 or H3 winning (editor's (b) confirmed).
 
-Eight should / could items follow in the file. Steward's feasibility §4 H4 and the −0.0703 figure need
-correcting for the same construct reason (items 4, 13).
+Eight should/could items in the file. Steward's feasibility §4 H4 and the −0.0703 figure need the same
+construct correction (items 4, 13).
