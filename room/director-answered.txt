@@ -135,3 +135,10 @@ room/analyst-2026-09-17-results-post1.md
 room/referee-2026-09-17-results-post1-verdict.md
 room/analyst-2026-09-17-results-post1-revised.md
 room/referee2-2026-09-17-results-post1-reverdict.md
+room/analyst-2026-09-17-figures-post1-answer.md
+room/lead-2026-09-17-why-it-matters-post1.md
+room/referee-2026-09-17-draft-post1-verdict.md
+room/referee-2026-09-17-figures-post1.md
+room/referee2-2026-09-17-draft-post1-reverdict.md
+room/editor-2026-09-17-post1-draft.md
+room/editor-2026-09-17-post1-draft-revised.md
