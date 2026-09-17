@@ -108,21 +108,22 @@ prompt.
 
 One size criterion serves all four: the pre-registered **smallest effect of interest δ = 1 pp** on the usage-weighted top-minus-bottom
 wage-quartile difference D in the automation share, on two-sided 95% intervals under §9(4)'s conversation-level model (MDE(80%) 0.42–0.43 pp). The
-ordered rule in §9(1) partitions D's outcome space between H1, H2, H4 and two further named outcomes — **O-A, a persistent gradient below the
-margin**, and **O-B, no persistent gradient** — so no result is unowned and none has two owners. H3 is a rival *explanation* of a gradient, not a
-rival value of D, evaluated only when one is declared.
+ordered rule in §9(1) partitions D's outcome space between H1, H2, H4 and two further named outcomes — **O-A, a persistent gradient not shown to
+clear the margin in every window**, and **O-B, no persistent gradient** — so no result is unowned and none has two owners. H3 is a rival
+*explanation* of a gradient, not a rival value of D, evaluated only when one is declared.
 
 **H1 · Price gradient (delegation rises with the wage of the work).** The usage-weighted automation share is higher for high-wage than for
 low-wage tasks. *Signature only it predicts:* D's lower bound above **+1 pp in all three waves** (§9(1) step 1) **and** D keeping more than half
-its size, with the same sign, on all three composition legs — SOC-15 excluded, within major group, work-dominant tasks (§9(3)). *Against it:* any
-wave whose lower bound does not clear +1 pp (the outcome goes to H2, O-A, H4 or O-B by the same rule); losing more than half the size, or the
-sign, on any composition leg (H3); a sign that disagrees between the two wage sources.
+its size, with the same sign, on every composition leg testable in that wave (leg (e) is not testable in August) — SOC-15 excluded, within major
+group, work-dominant tasks (§9(3)). *Against it:* any wave whose lower bound does not clear +1 pp (the outcome goes to H2, O-A, H4 or O-B by the
+same rule); losing more than half the size, or the sign, on any composition leg (H3); a sign that disagrees between the two wage sources.
 
 **H2 · Inverse gradient (the high-wage work is the collaborative work).** The automation share falls with the wage of the work — the reading
 Anthropic has offered for its own turn counts, "the pattern looks more labor-augmenting than labor-displacing" (2026-06, pp. 13–14). *Signature
 only it predicts:* D's upper bound below **−1 pp in all three waves** (step 2), with augmentation components rising in wage — at least two of
 learning, task iteration and validation weakly increasing across quartiles — and the `none` and `not_classified` shares by quartile beside them,
-so a shift in the classified base is visible. *Against it:* any wave whose upper bound does not fall below −1 pp; the movement sitting in the
+so a shift in the classified base is visible (step 2 of §9(1) declares H2 on the interval alone; the augmentation clause qualifies the §12
+sentence and, where it fails, the close says so). *Against it:* any wave whose upper bound does not fall below −1 pp; the movement sitting in the
 `none`/`not_classified` composition rather than in the augmentation patterns (a negative D without the augmentation signature, reported as such);
 losing more than half the size, or the sign, on a composition leg (H3).
 
@@ -131,7 +132,8 @@ family — Anthropic's own definition makes the mechanism explicit, "automative 
 errors" (2025-03), and SOC-15 is **77.1 / 75.7 / 69.9% of top-quartile mass** ⟨ref⟩ — or the use-case mix, the bottom quartile being two-thirds
 personal and coursework against three-fifths work in the top (§7(3)). *Signature only it predicts:* a D declared under H1, H2 or O-A that **loses
 more than half its size, or its sign,** on at least one of the three legs, with a leave-one-group-out series in which one group's removal moves
-the estimate by more than all others combined. *Against it:* D keeping more than half its size and its sign on all three legs and across all 22
+the estimate by more than all others combined (the leave-one-out series is reported under §10 as description; H3 is declared on legs (a), (b) and
+(e) alone, §9(3)). *Against it:* D keeping more than half its size and its sign on all three legs and across all 22
 leave-one-group-out re-estimates, in all three waves.
 
 **H4 · No relation at the stated margin (the null the design can deliver).** The automation share does not track the price of the work by as much
@@ -239,8 +241,8 @@ signing.
 | C6 | `release_2025_02_10/wage_data.csv` (O\*NET website wage scrape, Kilbourne-Quirk 2019 — **not** a BLS series) | — | occupation wage, primary | `MedianSalary` (annual), filtered `> 100` (1,084 of 1,090 rows) | join on the **full 10-character `O*NET-SOC Code` → `SOCcode`**, which is what Anthropic's released `plots.ipynb` (cell 26) does: **970 of 974** occupations; the `[:7]` prefix key of the first version matches **0 of 775** and is withdrawn. Anthropic applies the `> 100` filter *after* the join and after an `agg('first')` to occupation title, so the pre-filter here is this post's choice and is labelled as such, as is the ÷ 2080 hourly conversion. `MedianSalary` is top-coded at $208,000 (6 occupations, 0.05–0.06% of analysis mass); `-1` is a missing sentinel in `JobZone`/`ChanceAuto` (§Traps 10). Coverage: 2,607 / 3,154 / 3,244 tasks = **99.35 / 98.98 / 99.30% of named mass** |
 | C7 | BLS Employment Projections (`data.bls.gov/projections/occupationProj`, 200, 831 detailed-SOC rows) | — | occupation wage, second source | `Median Annual Wage 2025` on `occ_code`; `Employment 2025` for the multi-holder wage rule | join `soc7` → `occ_code`, 775 in, **670 matched**. Prices **55.66 / 58.52 / 62.22% of named mass** (51.14 / 54.73 / 57.85 pp of the wave) against C6's 99%; used for rank and sign agreement (Spearman 0.9869 / 0.9859 / 0.9870 against C6), never for a level. OEWS, Anthropic's own source, 403s from this sandbox |
 | C8 | `release_2026_01_15`, country rows | `geography = country` | `onet_task` | `onet_task_count` for **`SC`** (ISO-2 in this wave; `SYC` returns 0 rows) | Seychelles is 24,715 conversations, 2.47% of the wave. **The netting reaches the weights only**: `SC` has 0 rows of `onet_task::collaboration`, intersections being global only, so the per-task automation *rates* cannot be cleaned of it. Two cuts: (a) net `SC` out of the November task weights (mean \|shift\| 0.0012 pp, up to 0.58 pp on one task); (b) a pre-registered drop of the tasks where `SC` exceeds 10% of the global count (23 tasks, 11.59 pp of wave mass, of which **9.04 pp sits in the top wage quartile**), with the >20% variant (14 tasks, 1.97 pp) beside it |
-| C9 ⟨new⟩ | `release_2026_01_15`, `release_2026_03_24` | `geography = global` | `onet_task::use_case` (13,908 rows Nov; 14,430 Feb; **0 rows in Aug 2025**) | `_pct`, `_count` per (task, category) | categories `coursework` / `personal` / `work` / `not_classified`, plus `none` in Feb — neither residual label may be hard-coded (§Facets). A per-task work share is a share of published cells: up to three cells can fold into `not_classified` (maximum 39 conversations, §Thresholds), and tasks with a published work/coursework split hold 87.92 / 86.96 of the 93.51 / 92.97 named mass. Coverage of this post's analysis set: 100% of tasks in both waves ⟨ref⟩ |
-| C10 ⟨new⟩ | `release_2025_03_27/automation_vs_augmentation_by_task.csv` (Feb–Mar 2025) | flat file, global | per-task collaboration split, five patterns plus a `filtered` residual | row ratios summing to exactly 1.0; `task_pct_v2.csv` weights | a fourth task-level window on the unchanged taxonomy: 3,364 tasks matched across the release's three task files, carrying 98.2183 of 100 `pct`. **No counts**, `filtered` median 0.30 with **1,066 rows at filtered = 1.0**, and weighting `pct` by the five classified ratios leaves 90.1561 of 100 (`data/ATLAS.md` log (j) 4) — which is why it sits outside the confirmatory persistence set and is design-based only (§10) |
+| C9 ⟨new⟩ | `release_2026_01_15`, `release_2026_03_24` | `geography = global` | `onet_task::use_case` (13,908 rows Nov; 14,430 Feb; **0 rows in Aug 2025**) | `_pct`, `_count` per (task, category) | categories `coursework` / `personal` / `work` / `not_classified`, plus `none` in Feb — neither residual label may be hard-coded (§Facets). A per-task work share is a share of published cells: up to three cells can fold into `not_classified` (maximum 39 conversations, §Thresholds), and tasks with a published `work` cell hold 87.92 / 86.96 of the 93.51 / 92.97 named mass (both a `work` and a `coursework` cell: 76.95 / 69.64; any substantive cell: 92.43 / 92.13). Feb's `none` is one cell of 20 conversations on one task; the operative residual in both waves is `not_classified` (1–39 Nov, 1–36 Feb), and the cells partition `onet_task_count` exactly. August: no facet name in the file contains `use_case` — an absent facet, not an empty cut — and `request::use_case` (2026 waves) is keyed to requests, not tasks, so there is no substitute. Coverage of this post's analysis set: 100% of tasks in both waves ⟨ref⟩ |
+| C10 ⟨new⟩ | `release_2025_03_27/automation_vs_augmentation_by_task.csv` (Feb–Mar 2025) | flat file, global | per-task split in five underscored pattern columns (`feedback_loop`, `directive`, `task_iteration`, `validation`, `learning`) plus `filtered`; no column is named `collaboration` and none is a count or a pct | row ratios summing to exactly 1.0; `task_pct_v2.csv` weights | a fourth task-level window on the unchanged taxonomy: 3,364 tasks matched across the release's three task files, carrying 98.2183 of 100 `pct`. **No counts**, `filtered` median 0.30 with **1,066 rows at filtered = 1.0**, and weighting `pct` by the five classified ratios leaves 90.1561 of 100 (`data/ATLAS.md` log (f) 4) — which is why it sits outside the confirmatory persistence set and is design-based only (§10). There is no task-level `none` share: `filtered` (8.06 pp of the task base) is `none` (3.24 pp globally) plus about 4.8 pp of unpublished exclusions and cannot be decomposed, so §9(1)'s `none`-beside-every-share rule holds at the global level only in this window and per-task shares are the five ratios renormalised over 1 − `filtered` (usage-weighted 43.29% against the published global 43.06%). The window reaches 1,635 / 1,843 / 1,904 of the analysis-set tasks, 98.78 / 98.49 / 98.08% of their mass |
 
 Grain rule observed: intersections are **global only** in all three long waves (`data/ATLAS.md` §Cuts 10), so there is no country or state version
 of this post; `soc_occupation` is absent as a facet in the two 2026 waves (§Cuts 13), which is why H3's occupational split runs through C5.
@@ -275,7 +277,9 @@ equal split over distinct holder codes**, the released convention, with modal-ho
 on a *share*: across allocation rules the SOC-15 share moves by **≤ 0.17–0.18 pp** (LL-32 at ≤0.17 pp; ≤0.18 pp on the four-rule set in
 `posts/post3/notes/feasibility.md` §4; the referee's equal-split and modal shares are 40.04 / 37.29 / 33.26 against 40.12 / 37.36 / 33.32) and the
 22-group ranking by at most one position (Aug) or none (Nov, Feb). It is **not** a bound on a within-category statistic, which moves up to 0.39
-pp, nor on this post's gradient, re-estimated under all three rules (§10).
+pp, nor on this post's gradient, re-estimated under all three rules (§10). Rule (iv) governs every share statistic — a group's or SOC-15's share
+of usage mass, and the bound below; rule (iii) governs every statistic that needs each task in exactly one group — the SOC-15 exclusion
+(§9(3)(a)), the within-group leg (b) and the leave-one-group-out series (c).
 
 **The published numbers this reproduces first.** (i) Each wave's global collaboration split on the base its report used: 49.0980 (Aug 2025, all
 seven patterns, published "49%"), 45.3554 (Nov 2025, "45%"), 44.1569 (Feb 2026, "44%") — and the same three on the five-classified-pattern
@@ -311,7 +315,8 @@ $19 / $31 / $39 / $49–50 ⟨ref⟩.
    pp in all three waves → **H1**; **(2)** upper bound < −1 pp in all three → **H2**; **(3)** otherwise, every interval excluding zero with the
    same sign in all three → **O-A**; **(4)** otherwise, every interval inside ±1 pp → **H4**; **(5)** otherwise → **O-B** (signs disagreeing
    across waves, or one wave past the margin while another does not resolve — the +0.8 / +0.8 / −0.2 pp case). H3 then qualifies whichever of H1,
-   H2 or O-A was declared; under H4 or O-B it is not evaluated and the post says so.
+   H2 or O-A was declared; under H4 or O-B the legs are still computed and reported — the H4 close carries leg (a)'s number — but no H3
+   declaration is made, and the post says so.
 2. **The continuous companion.** The usage-weighted slope of the automation share in the task's hourly wage, per +$10/hr in Anthropic's own
    Opus-gradient form, sign and significance only.
 3. **H3 — composition, five legs, confirmatory, all keyed to the fraction of D retained.** (a) D with SOC-15 excluded — 39.86 / 37.12 / 33.11% of
@@ -325,8 +330,11 @@ $19 / $31 / $39 / $49–50 ⟨ref⟩.
 4. **The variance model, named in advance.** Primary: **conversation-level binomial on the classified counts, task mix held fixed** — the right
    model for a statement about the conversations in these three windows. Its MDE(80%, two-sided 5%) is **0.42 / 0.42 / 0.43 pp**
    (`posts/post1/notes/feasibility.md` §4; the referee reproduces SE 0.151 / 0.149 / 0.151 pp), so δ = 1 pp is deliverable where the first
-   version's ±3 pp was not under its own task-resampling bootstrap (MDE 3.26 / 3.44 / 3.68 pp). The design-based model — resampling tasks
-   equal-probability, which is what generalises to other task mixes — is reported beside it as the bound it is: MDE **12.5 / 17.4 / 16.1 pp**,
+   version's ±3 pp was not under its own task-resampling bootstrap (MDE 3.26 / 3.44 / 3.68 pp). The rules' own power, three waves conjoined at
+   SE ≈ 0.15 pp: H1 or H2 is declared with 80% probability at a true |D| of about 1.5 pp and never at 1.0; H4 at a true |D| up to about 0.5 pp;
+   O-A from about 0.5 pp. Between roughly 0.5 and 1.5 pp the owner depends on the draw, and the post reports the three intervals whatever the
+   owner. The design-based model — resampling tasks equal-probability, which is what generalises to other task mixes — is reported beside it as
+   the bound it is: MDE **12.5 / 17.4 / 16.1 pp**,
    resolving nothing below about 12 pp as a statement about tasks, so every close in §12 is written about these windows' conversations. The **Kish
    effective N** on the `onet_task_pct` weights is printed beside the nominal count throughout: **99.7 / 89.5 / 134.3** against a nominal 2,616 /
    3,168 / 3,258, and **11.5 to 19 tasks** in the top quartile depending on the wage rule — which is why the task-level models cannot carry a
@@ -346,8 +354,8 @@ from required preparation. No further tests; any additional cut is a logged devi
 
 - **Persistence across windows** — in the confirmatory rule: three waves, estimated and reported separately, never pooled or spliced. C10's
   Feb–Mar 2025 file is a **fourth** task-level window on the unchanged taxonomy, reported design-based only and outside the confirmatory set: it
-  publishes no counts (so no conversation-level interval), its residual is a `filtered` ratio with 1,066 tasks entirely filtered, and its weights
-  are `task_pct_v2`.
+  publishes no counts (so no conversation-level interval), its residual is a `filtered` ratio with 1,066 tasks entirely filtered, not a `none`
+  share, so the base is stated globally only, and its weights are `task_pct_v2`.
 - **Leave-one-out** — 22 leave-one-group-out re-estimates plus the group-spanning bucket (confirmatory under H3) and a leave-out of the ten
   largest tasks by usage mass, 19.4410 pp of the Feb-2026 wave and **20.91% of named** mass (Aug 24.97%, Nov 25.93%); the denominator is stated
   each time.
@@ -382,19 +390,20 @@ intersection, in three waves.
 **If H1 holds (a gradient above the margin, upward).** In each of the three windows, Claude.ai conversations on top-quartile tasks were delegated
 at a rate more than a point above those on bottom-quartile tasks — and X points above with Computer & Mathematical tasks excluded, the number that
 matters, that family being 70–77% of the top quartile's usage. Weighting the published automation share by the wage of the work raises it by Δ_W
-points, the number a model of labour payments should take; a claim about work in general is not licensed, since a design that resamples tasks
-resolves nothing below about twelve points.
+points, the nearer of the two published numbers to what a model of labour payments weights by — an hourly rate, not a bill; a claim about work in
+general is not licensed, since a design that resamples tasks resolves nothing below about twelve points.
 
 **If H2 holds (a gradient above the margin, downward).** In each of the three windows, Claude.ai conversations on high-wage tasks were delegated
 at a rate more than a point *below* those on low-wage tasks, with the learning, task-iteration and validation shares rising across quartiles.
 Anthropic had offered this reading for its own turn counts — "If the human remains involved in the highest-value tasks, the pattern looks more
 labor-augmenting than labor-displacing" (2026-06, pp. 13–14) — and it holds on the measure that defines delegation, on these windows'
-conversations.
+conversations. A claim about work in general is not licensed: a design that resamples tasks resolves nothing below about twelve points.
 
-**If O-A holds (a persistent gradient below the margin).** Delegation on Claude.ai does track the price of the work, in the direction stated and
-in all three windows, and the gradient is smaller than a point: weighting a published automation share by the wage bill moves it by roughly a
-tenth of a point per point of gap, so the direction is the finding and the correction is not a repair. For anyone calibrating an exposure
-parameter the sign is then known and the magnitude bounds how much it matters.
+**If O-A holds (a persistent gradient not shown to clear the margin in every window).** Delegation on Claude.ai does track the wage of the work,
+in the direction stated and in all three windows — D of X, Y and Z points — without the interval clearing a full point in every window: weighting
+a published automation share by the hourly wage of the work moves it by roughly a tenth of a point per point of gap, so the direction is the
+finding and the correction is not a repair. For anyone calibrating an exposure parameter the sign is then known and the magnitude bounds how much
+it matters. A claim about work in general is not licensed: a design that resamples tasks resolves nothing below about twelve points.
 
 **If H3 holds (composition, not price).** The relation between delegation on Claude.ai and the price of the work is a mix that travels with wage:
 coding tasks, both the best paid and, by Anthropic's own definition of automative use, the most fully handed over — or use case, since the
@@ -403,7 +412,7 @@ directive by construction. What looks like a statement about the wage distributi
 an automation share by wage must know which.
 
 **If H4 holds (the null, at the stated margin).** In each of the three windows the delegated share of Claude.ai conversations on top-quartile and
-bottom-quartile tasks differed by less than one percentage point — and by less again with Computer & Mathematical tasks excluded — a margin the
+bottom-quartile tasks differed by less than one percentage point — and by X with Computer & Mathematical tasks excluded — a margin the
 design resolves with an MDE of 0.42 to 0.43 percentage points on these windows' conversations, though not as a statement about tasks in general,
 where nothing below about twelve points is resolved. That sets a second null beside Anthropic's null for the education level of the prompt: for
 weighting purposes an unweighted automation share is, in these windows, the right number after all.
@@ -411,4 +420,4 @@ weighting purposes an unweighted automation share is, in these windows, the righ
 **If O-B holds (no persistent gradient).** The gradient is not a stable feature of these three Claude.ai windows: it reaches past the margin in
 one and is unresolved or reversed in another, over a period in which Anthropic reports its own user base moving toward lower-wage tasks. The wage
 of the work then does not order delegation in a way that survives a change of window, and the post says what a longer released series would
-settle.
+settle. A claim about work in general is not licensed: a design that resamples tasks resolves nothing below about twelve points.
