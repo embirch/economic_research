@@ -23,9 +23,9 @@
     "./team/agents/director.md": {
       "kind": "agent",
       "id": "agent_0193GKsjm8DYDiTFrrXKtBgy",
-      "version": "3",
-      "hash": "94e8232177add9b8e460c529c9b88609",
-      "remote_hash": "c3fe12fab5f0f7fd5944f00558c32fd4"
+      "version": "4",
+      "hash": "c13792dfb8b0e8d7d87a89168184c0c8",
+      "remote_hash": "ec44efb5b6cfb60dfc724ae105575fa8"
     },
     "./team/agents/editor.md": {
       "kind": "agent",
@@ -40,6 +40,13 @@
       "version": "2",
       "hash": "5ee8b4bddb22a3454ac6c862e54d6d88",
       "remote_hash": "0ea75b0188c7d3255c2cb1ea1f13bcdd"
+    },
+    "./team/agents/referee-second-read.md": {
+      "kind": "agent",
+      "id": "agent_0111jFz9U8BioBJNbfoGfW1V",
+      "version": "1",
+      "hash": "816a68b6c1ef21963e277408f8b3a102",
+      "remote_hash": "026242687736b614f4fb7c8dda596d5d"
     },
     "./team/agents/referee.md": {
       "kind": "agent",

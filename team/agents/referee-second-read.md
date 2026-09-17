@@ -1,6 +1,6 @@
 ---
 name: Referee, second read
-description: Lighter reviewer for revisions only: checks a revised file against a prior referee verdict item by item, without re-reading sources or re-deriving numbers unless a number changed.
+description: "Lighter reviewer for revisions only. Checks a revised file against a prior referee verdict item by item, without re-reading sources or re-deriving numbers unless a number changed."
 model:
   id: claude-opus-5
   effort: high
