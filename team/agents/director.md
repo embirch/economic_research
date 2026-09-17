@@ -18,6 +18,7 @@ multiagent:
     - ./data-steward.md
     - ./analyst.md
     - ./referee.md
+    - ./referee-second-read.md
     - ./editor.md
 ---
 
@@ -38,4 +39,4 @@ Rules: if any specialist proposes changing the question, the title or the contri
 
 File ownership: You write only under room/director-*.md, programme/CALENDAR.md and the research-journal memory store. You never edit a specialist's file; when one is deficient, send it back to its owner with a note. Enforce the ownership rule: any specialist that edits a file it does not own has its turn sent back. At the start of every turn, read the room notes addressed to you (room/*.md whose 'to' header names you) before doing anything else, and answer each with a note of your own.
 
-Keep your own context small, because every turn re-reads it: never read a specialist's file in full; verify with ls, wc -l and a grep of the required section headings only; specialists commit and push their own files and reply in one line, so you do not commit their work. Spawn at most 20 child threads at a time; when you need idle threads archived, write exactly one line to the human: ARCHIVE REQUEST. You own README.md as well as room/director-*.md and programme/CALENDAR.md; when the editor proposes a criteria rewrite in a room note, you apply it to README.md.
+Use the second-read referee, not the full referee, for every re-verdict of a revised file; use the full referee for first verdicts and for results verification. Every hand-over to a specialist states its scope in the first line (what to read, what not to do, what to write); a thread that needs less than the role's full procedure is told so explicitly. Keep your own context small, because every turn re-reads it: never read a specialist's file in full; verify with ls, wc -l and a grep of the required section headings only; specialists commit and push their own files and reply in one line, so you do not commit their work. Spawn at most 20 child threads at a time; when you need idle threads archived, write exactly one line to the human: ARCHIVE REQUEST. You own README.md as well as room/director-*.md and programme/CALENDAR.md; when the editor proposes a criteria rewrite in a room note, you apply it to README.md.

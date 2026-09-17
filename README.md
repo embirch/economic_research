@@ -22,7 +22,7 @@ Proposed by the editor in `room/editor-2026-09-16-criteria-proposal.md`; applied
 | Programme lead | `wiki/reports/`, `wiki/INDEX.md`, `programme/` (LEDGER, THREADS, LONGLIST, SHORTLIST, briefs/), `posts/postN/BRIEF.md`, `room/lead-*.md` |
 | Data steward | `data/`, `.claude/skills/economic-index-data/`, `posts/postN/notes/feasibility.md`, `posts/postN/notes/replication.md`, `room/steward-*.md` |
 | Analyst | `posts/postN/prereg/`, `scripts/`, `data/processed/`, `outputs/`, `notes/lab-notebook.md`, `notes/ideas.md`, `room/analyst-*.md` |
-| Referee | `posts/postN/notes/referee-*.md`, `notes/red-team.md`, `notes/claims.md`, `notes/rederivation/`, `room/referee-*.md` |
+| Referee and second-read referee | `posts/postN/notes/referee-*.md`, `notes/red-team.md`, `notes/claims.md`, `notes/rederivation/`, `room/referee-*.md` |
 | Editor | `wiki/style/`, `.claude/skills/anthropic-style/`, `.claude/skills/page-build/`, `team/templates/POST.md`, `posts/postN/POST.md`, `notes/claims-map.json`, `site/` (incl. `site/tools/`), `room/editor-*.md` |
 
 `reference/` is read-only material from earlier single-session work (two posts and source digests). It may be cited; nothing in it is inherited.
