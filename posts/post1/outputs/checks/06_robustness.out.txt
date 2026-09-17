@@ -8,7 +8,7 @@
   A1  allocation rules move the group statistics only: leg (a) D_L equal-split -13.7133 | modal -14.0697 | employment-weighted -13.0319
   (b) design-based task bootstrap: SE 5.026 pp, MDE 14.07 pp -> nothing below about 14 pp is resolved as a statement about tasks
   C7  second wage source (1389 tasks, 55.4% of the analysis set's mass): D -15.5899  [-15.9665, -15.2133]  MDE 0.5380  Δ_W -1.8725  sign agrees with C6: False
-  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +3.3623, sd 3.3736, 95% band [-4.0089, +9.0487], observed +1.3836, two-sided p 0.8246 — a TASK-level bound, in no decision rule
+  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +3.4003, sd 3.3448, 95% band [-3.8148, +9.0949], observed +1.3836, two-sided p 0.8313 — a TASK-level bound, in no decision rule
 ====================================================================================================
 [nov2025]  D primary  +7.3854  [+7.1103, +7.6605]  MDE 0.3930   (tasks 1102)
   X3  drop tasks with < 100 classified conversations (1222 tasks, 7.2718 pp):  +9.0725  [+8.7810, +9.3640]  MDE 0.4164
@@ -22,7 +22,7 @@
   A1  allocation rules move the group statistics only: leg (a) D_L equal-split -11.0752 | modal -11.3999 | employment-weighted -10.4701
   (b) design-based task bootstrap: SE 7.199 pp, MDE 20.16 pp -> nothing below about 20 pp is resolved as a statement about tasks
   C7  second wage source (1630 tasks, 58.4% of the analysis set's mass): D -11.8901  [-12.2565, -11.5236]  MDE 0.5235  Δ_W -1.3398  sign agrees with C6: False
-  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +8.9648, sd 4.4307, 95% band [-1.5698, +16.0848], observed +7.3854, two-sided p 0.6790 — a TASK-level bound, in no decision rule
+  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +8.8813, sd 4.5008, 95% band [-1.9184, +15.9805], observed +7.3854, two-sided p 0.6712 — a TASK-level bound, in no decision rule
 ====================================================================================================
 [feb2026]  D primary  +0.6689  [+0.3947, +0.9431]  MDE 0.3917   (tasks 1131)
   X3  drop tasks with < 100 classified conversations (1278 tasks, 7.6482 pp):  +1.5934  [+1.3032, +1.8836]  MDE 0.4146
@@ -33,7 +33,7 @@
   A1  allocation rules move the group statistics only: leg (a) D_L equal-split -12.3739 | modal -12.6167 | employment-weighted -11.8952
   (b) design-based task bootstrap: SE 5.756 pp, MDE 16.12 pp -> nothing below about 16 pp is resolved as a statement about tasks
   C7  second wage source (1718 tasks, 62.1% of the analysis set's mass): D -16.7141  [-17.0612, -16.3670]  MDE 0.4958  Δ_W -2.0324  sign agrees with C6: False
-  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +4.8418, sd 3.7135, 95% band [-3.3715, +11.1657], observed +0.6689, two-sided p 0.9503 — a TASK-level bound, in no decision rule
+  P   permutation null (10,000 draws, wage permuted within SOC major group): mean +4.7789, sd 3.6681, 95% band [-3.3898, +11.0893], observed +0.6689, two-sided p 0.9459 — a TASK-level bound, in no decision rule
 ====================================================================================================
   §9(1) owner under primary                 : O-A   D = +1.3836, +7.3854, +0.6689
   §9(1) owner under X3_under_100_dropped    : H1   D = +2.6049, +9.0725, +1.5934

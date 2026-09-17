@@ -426,7 +426,7 @@
     },
     "permutation": {
       "size_zero_gradient": {
-        "reject_rate": 4.933333333333334,
+        "reject_rate": 5.333333333333333,
         "trials": 1500,
         "mc_se_pp": 0.5627314338711377
       },

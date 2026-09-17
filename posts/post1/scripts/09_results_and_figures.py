@@ -207,8 +207,9 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
         axes[i].errorbar(np.arange(4), vals, yerr=err, fmt="o-", color="#8a3324", capsize=3)
         for k in (1, 2, 3, 4):
             axes[i].annotate(f"none {sh[f'Q{k}']['none_share']:.1f}", (k - 1, vals[k - 1]),
-                             textcoords="offset points", xytext=(0, -16), ha="center", fontsize=7,
+                             textcoords="offset points", xytext=(0, 11), ha="center", fontsize=7,
                              color="#5a5a5a")
+        axes[i].margins(x=0.16, y=0.22)
         axes[i].set_xticks(np.arange(4))
         axes[i].set_xticklabels([f"Q{k}\n${sh[f'Q{k}']['mean_wage']:.0f}/hr" for k in (1, 2, 3, 4)])
         axes[i].set_title(WAVE_LABEL[w], loc="left", fontsize=10)
@@ -255,10 +256,15 @@ def figures(head: dict, legs: dict, rob: dict) -> dict:
                              fmt="o", color="#4a6fa5", capsize=4)
             axes[i].annotate(f"{r['D_L']:+.1f}", (j, r["D_L"]), textcoords="offset points",
                              xytext=(10, -3), fontsize=8, color="#4a6fa5")
-        axes[i].set_xticks(np.arange(len(rows)))
-        axes[i].set_xticklabels([names[r["leg"]] for r in rows], fontsize=8)
+        # the three leg positions are fixed across panels so that August's missing leg (e) reads as
+        # untestable rather than as a different leg
+        axes[i].set_xlim(-0.6, 2.6)
+        axes[i].set_xticks(np.arange(3))
+        labels = [names["a"], names["b"], names["e"] if len(rows) == 3 else
+                  "(e) work-dominant tasks\n(no `use_case` facet)"]
+        axes[i].set_xticklabels(labels, fontsize=8)
         axes[i].set_title(WAVE_LABEL[w], loc="left", fontsize=10)
-        axes[i].legend(frameon=False, fontsize=7, loc="lower left")
+        axes[i].legend(frameon=False, fontsize=7, loc="upper left")
     axes[0].set_ylabel("Top-minus-bottom difference under the leg (pp)")
     fig.suptitle("Removing the coding family reverses the gradient in every window", x=0.01, ha="left")
     fig.tight_layout()

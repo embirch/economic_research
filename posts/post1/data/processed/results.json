@@ -1,7 +1,7 @@
 {
   "post": "post1",
   "question": "Is AI delegated more on low-wage work or on high-wage work?",
-  "generated": "2026-09-17T12:09:50Z",
+  "generated": "2026-09-17T12:14:35Z",
   "prereg": "posts/post1/prereg/prereg.md (content c9b1b45, committed 066b761)",
   "scripts": [
     "scripts/01_*.py",
@@ -1338,28 +1338,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 3.3622740692039197,
+          "coef": 3.400269705059567,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 3.37359243219618,
+          "coef": 3.3447972742226133,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 3.3622740692039197,
+          "coef": 3.400269705059567,
           "ci": [
-            -4.008867348373709,
-            9.048739324997289
+            -3.814791466066089,
+            9.094896622491245
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.8246175382461753,
+          "coef": 0.8313168683131686,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.8246); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.8313); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_aug2025": {
@@ -1604,28 +1604,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 8.96479694889722,
+          "coef": 8.881281318258003,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 4.430691779351156,
+          "coef": 4.5008266947044895,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 8.96479694889722,
+          "coef": 8.881281318258003,
           "ci": [
-            -1.569760243528152,
-            16.08476929182087
+            -1.9183574234032004,
+            15.98052775894798
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.679032096790321,
+          "coef": 0.6712328767123288,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.6790); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.6712); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_nov2025": {
@@ -1804,28 +1804,28 @@
           "unit": "pp"
         },
         "permutation_mean": {
-          "coef": 4.841788595211245,
+          "coef": 4.7788652074335065,
           "unit": "pp"
         },
         "permutation_sd": {
-          "coef": 3.713526434580539,
+          "coef": 3.6680574660597007,
           "unit": "pp"
         },
         "permutation_band_95": {
-          "coef": 4.841788595211245,
+          "coef": 4.7788652074335065,
           "ci": [
-            -3.3714975517374817,
-            11.165715875815303
+            -3.389786785426645,
+            11.08932911996451
           ],
           "unit": "pp"
         },
         "two_sided_p": {
-          "coef": 0.9503049695030497,
+          "coef": 0.9459054094590541,
           "unit": "probability"
         }
       },
       "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
-      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.9503); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.9459); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
       "notes": "a task-level bound of the order of model (b)'s MDE"
     },
     "rob_fourth_window_feb2026": {
@@ -3827,7 +3827,7 @@
       "value": true,
       "label": "every estimator the post relies on recovers a known effect and returns zero for zero",
       "script": "scripts/04_second_implementation.py",
-      "source_check": "{\"D_coverage_by_implanted_gap\": {\"gap_0.0\": 94.39999999999999, \"gap_0.5\": 95.39999999999999, \"gap_1.0\": 95.1, \"gap_3.0\": 94.35}, \"Delta_W_abs_err\": 8.881784197001252e-15, \"slope_abs_err\": 3.1086244689504383e-15, \"leg_b_within_group_vs_total\": [0.1654533031549772, 16.24230573350707], \"leg_e_only_not_classified_dropped\": true, \"design_bootstrap_rel_err\": 0.036220157423986384, \"permutation_size_pc\": 4.933333333333334, \"kish_exact\": true}"
+      "source_check": "{\"D_coverage_by_implanted_gap\": {\"gap_0.0\": 94.39999999999999, \"gap_0.5\": 95.39999999999999, \"gap_1.0\": 95.1, \"gap_3.0\": 94.35}, \"Delta_W_abs_err\": 8.881784197001252e-15, \"slope_abs_err\": 3.1086244689504383e-15, \"leg_b_within_group_vs_total\": [0.1654533031549772, 16.24230573350707], \"leg_e_only_not_classified_dropped\": true, \"design_bootstrap_rel_err\": 0.036220157423986384, \"permutation_size_pc\": 5.333333333333333, \"kish_exact\": true}"
     },
     "sample_aug2025": {
       "value": 1802,

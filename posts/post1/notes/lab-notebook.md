@@ -443,3 +443,34 @@ captions in `posts/post1/outputs/figures.json`.
 a real number passes; one inventing 99.87 fails), and it already governs the figure captions: no
 caption may carry a number that is not in `results.json`, which is how the mis-transcribed SOC-15
 shares above were caught. Check block passed.
+
+## 2026-09-17 · Stage 2 step 5 close — the whole set re-run from an empty scratch directory
+
+**Run:** `/tmp/post1` deleted, then `01_power_rules.py` … `09_results_and_figures.py` in order.
+All nine check blocks pass (3 / 17 / 2 / 88 / 2 / 9 / 1 / 4 / 2 seconds), and the passing output of
+each is committed in `posts/post1/outputs/checks/<script>.out.txt`.
+
+**Tests run against tests registered.** 17 of 17 confirmatory estimates (D, Δ_W and the slope in
+three waves each; leg (a) and leg (b) in three waves each; leg (e) in two — the eight leg tests of
+P4), the pre-registered robustness set (X3, X4, X5 and its > 20% variant, X7, the three W1 wage
+rules, the three A1 allocation rules, model (b), C7, the placebo, leg (c)'s 22 + 1
+leave-one-group-out series, the ten-largest-tasks leave-out, the fourth window) and the three named
+exploratory tests. **Nothing else was run:** model (c) is not reported (P1(c)), the country mix is
+named and not testable, and no fourth exploratory cut exists.
+
+**Deviations: four**, all logged above with the registered rule and the corrected rule both run —
+the quartile rule at the $43.40 wage mass point (both readings of D, same owner); P6's 2%
+SE-agreement tolerance for the ratio r_L (25% asserted for the ratio, 2% asserted for the linear
+contrast D_L − ½D that the half judgement is read from); recovery test 7's ±1 pp size band widened
+to ±2 pp with the Monte Carlo error printed; and, as part of the first, the tie order fixed on
+(wage, task) so the pre-registered cut is reproducible. **Corrections: three** — the A2 group
+fallback, JobZone's frame, and two SOC-15 mass figures mis-transcribed into this notebook.
+
+**Open questions for the referee's verification, not decided here.** (i) The recorded SE
+0.151 / 0.148 / 0.154 pp is the pooled-binomial arithmetic; the pre-registered formula gives
+0.1444 / 0.1404 / 0.1399 pp and both are in `results.json`. (ii) Every prereg leg-coverage figure
+reproduces except the identified-group count for leg (b), which is 9 / 9 / 9 against the recorded
+10 / 10 / 8 — the A2 assignment and the tie split move a group. (iii) The C7 sign disagreement and
+the X3 / X5 / modal-holder owner moves are reported in `results.json` under
+`facts.owner_under_robustness`; which of them the post must carry in its first sentence is the
+referee's and the director's call, not mine.

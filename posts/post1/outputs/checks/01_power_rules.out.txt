@@ -1,0 +1,57 @@
+Power of the §9(1) rules, three waves conjoined, exact normal calculation
+SE set: steward model (a) 0.151 / 0.148 / 0.154 pp   (z = 1.959964, delta = 1.0 pp)
+
+ true D (pp)       H1       H2      O-A       H4      O-B  inside±1   signed
+        0.00    0.000    0.000    0.000    1.000    0.000     1.000    0.000
+        0.20    0.000    0.000    0.018    0.981    0.001     0.999    0.018
+        0.30    0.000    0.000    0.133    0.858    0.008     0.989    0.133
+        0.32    0.000    0.000    0.179    0.810    0.011     0.983    0.179
+        0.40    0.000    0.000    0.430    0.542    0.028     0.935    0.430
+        0.49    0.000    0.000    0.730    0.228    0.042     0.783    0.730
+        0.50    0.000    0.000    0.757    0.200    0.043     0.757    0.757
+        0.51    0.000    0.000    0.783    0.175    0.042     0.730    0.783
+        0.70    0.000    0.000    0.989    0.003    0.008     0.133    0.989
+        1.00    0.000    0.000    1.000    0.000    0.000     0.000    1.000
+        1.42    0.501    0.000    0.499    0.000    0.000     0.000    1.000
+        1.50    0.757    0.000    0.243    0.000    0.000     0.000    1.000
+        1.51    0.783    0.000    0.217    0.000    0.000     0.000    1.000
+        2.00    1.000    0.000    0.000    0.000   -0.000     0.000    1.000
+
+Smallest / largest true |D| declared with 80% probability (pp)
+  steward_0.151_0.148_0.154:
+    H1 (or H2, by symmetry)              80% from  1.517
+    O-A or stronger (all three signed)   80% from  0.517
+    H4, step (4)'s clause alone          80% up to 0.483
+    H4, DECLARED under the ordered rule  80% up to 0.324
+    P(H1 | true D = 1.0 pp)              0.0000
+  referee_0.151_0.149_0.151:
+    H1 (or H2, by symmetry)              80% from  1.515
+    O-A or stronger (all three signed)   80% from  0.515
+    H4, step (4)'s clause alone          80% up to 0.485
+    H4, DECLARED under the ordered rule  80% up to 0.323
+    P(H1 | true D = 1.0 pp)              0.0000
+  flat_0.15:
+    H1 (or H2, by symmetry)              80% from  1.514
+    O-A or stronger (all three signed)   80% from  0.514
+    H4, step (4)'s clause alone          80% up to 0.486
+    H4, DECLARED under the ordered rule  80% up to 0.322
+    P(H1 | true D = 1.0 pp)              0.0000
+
+Monte Carlo (400,000 triples per point, seed 20260917) against the formulas
+  true D = 0.00 pp: max |MC - exact| over the five owners = 0.0000
+  true D = 0.32 pp: max |MC - exact| over the five owners = 0.0000
+  true D = 0.51 pp: max |MC - exact| over the five owners = 0.0007
+  true D = 1.00 pp: max |MC - exact| over the five owners = 0.0000
+  true D = 1.51 pp: max |MC - exact| over the five owners = 0.0007
+
+Partition check: 68921 triples on a 41^3 grid, owners ['H1', 'H2', 'H4', 'O-A', 'O-B']
+  counts: {'H1': 512, 'H2': 512, 'H4': 3125, 'O-A': 10640, 'O-B': 54132}
+
+MDE(80%, two-sided 5%) = 2.8 x SE on the printed (3 dp) SEs: {'aug2025': 0.4228, 'nov2025': 0.4144, 'feb2026': 0.4312}
+  the steward prints 0.42 / 0.42 / 0.43 pp; 2.8 x 0.148 = 0.4144 rounds to 0.41,
+  so the November figure is computed on the unrounded SE (any SE in [0.1482, 0.1518]
+  prints 0.42). Script 03 recomputes SE to four decimals and asserts MDE = 2.8 x SE.
+
+wrote posts/post1/data/processed/power_rules.json
+
+CHECK BLOCK PASSED — 01_power_rules.py
