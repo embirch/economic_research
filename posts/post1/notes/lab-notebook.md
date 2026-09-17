@@ -404,3 +404,42 @@ JobZone from the unfiltered file and reproduced the steward's 99.86 / 99.85 / 99
 which reproduces 99.2166 / 98.8329 / 99.0637 and 119 sentinels exactly. Downstream: nothing
 confirmatory moves (JobZone enters exploratory (c) only); scripts 02–08 were re-run and every check
 block still passes.
+
+## 2026-09-17 · CORRECTION — two SOC-15 mass figures were mis-transcribed into this notebook
+
+The entries above for `02_build.py` (the A2 correction) and `05_legs.py` quote leg (a)'s exclusion
+as "43.00 / 39.75 / 35.55%" and "43.0 / 39.8 / 35.6%" of analysis mass with "73.7 / 71.5 / 65.5%"
+of Q4 mass. Those are wrong: 43.02 / 39.82 / 35.70% is the **A1 equal-split share** and
+73.76 / 71.93 / 66.06% is the A1 share of Q4. The figures leg (a) actually drops, under **A2** on
+the 2019 recode, are **42.8415 / 39.6535 / 35.5513%** of analysis mass and **73.06 / 71.26 /
+65.46%** of Q4 mass (`build_facts.json`, `legs.json`, both recomputed). On the **2010** grouping A2
+drops **39.8580 / 37.1213 / 33.1107%**, which is the 39.86 / 37.12 / 33.11% `feasibility.md` §4
+records — so the recorded triple is the A2 2010 assignment, not the A1 share. Downstream: no
+estimate changes (the leg was always computed from the A2 mask, not from these printed shares);
+`results.json` and the figure-3 caption carry the corrected numbers, and the caption was re-written
+from 43.0 / 39.8 / 35.6 and 73.7 / 71.5 / 65.5 to 42.8 / 39.7 / 35.6 and 73.1 / 71.3 / 65.5 before
+the check block would pass, since script 09 refuses any caption number that is not in
+`results.json`.
+
+## 2026-09-17 · Stage 2 step 5h — `09_results_and_figures.py`: results.json, the figures, the verifier
+
+**Run:** `posts/post1/scripts/09_results_and_figures.py` (output
+`posts/post1/outputs/checks/09_results_and_figures.out.txt`).
+
+**What it showed.** `posts/post1/data/processed/results.json` holds **17 confirmatory estimates of
+which 8 are the leg tests**, **3 exploratory tests**, 24 pre-registered robustness entries and 16
+descriptive entries, each with its script, its sample, its `prereg_rule` quoted from the
+pre-registration and a `verdict` set mechanically by a function in the script (the check block
+re-derives every D verdict and every leg verdict from the numbers and compares). `facts` carries the
+declared owner under both quartile readings (**O-A** under each), the H3 declaration (**declared**,
+6 of 8 leg tests fired, legs (a) and (b) firing in every testable wave, both rules agreeing), the
+second-implementation agreement (largest |ΔD| 1.8e-14 pp, 0 wage-map differences), the eight
+synthetic recoveries, the per-wave sample counts and masses, the Kish N, the quartile boundaries
+with their tie mass, both SE models, the replication targets, the C7 sign disagreement, the
+design-based bound and the owner under every robustness cut. Four figures with Anthropic-style
+captions in `posts/post1/outputs/figures.json`.
+
+**Decided.** The verifier `verify_post_numbers` is in place and tested both ways (a sentence quoting
+a real number passes; one inventing 99.87 fails), and it already governs the figure captions: no
+caption may carry a number that is not in `results.json`, which is how the mis-transcribed SOC-15
+shares above were caught. Check block passed.

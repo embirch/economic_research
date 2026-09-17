@@ -1,0 +1,4318 @@
+{
+  "post": "post1",
+  "question": "Is AI delegated more on low-wage work or on high-wage work?",
+  "generated": "2026-09-17T12:09:50Z",
+  "prereg": "posts/post1/prereg/prereg.md (content c9b1b45, committed 066b761)",
+  "scripts": [
+    "scripts/01_*.py",
+    "scripts/02_*.py",
+    "scripts/03_*.py",
+    "scripts/04_*.py",
+    "scripts/05_*.py",
+    "scripts/06_*.py",
+    "scripts/07_*.py",
+    "scripts/08_*.py",
+    "scripts/09_*.py"
+  ],
+  "counts": {
+    "confirmatory_estimates": 17,
+    "leg_tests": 8,
+    "exploratory_tests": 3,
+    "robustness_entries": 24,
+    "descriptive_entries": 16
+  },
+  "tests": {
+    "D_aug2025": {
+      "label": "D, top-minus-bottom wage-quartile difference in the automation share, 4\u201311 Aug 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 960,
+      "n_conversations": 410494.0,
+      "sample": "1802 analysis-set tasks (97.15% of named-task usage mass, 818,673 classified conversations); Q1 and Q4 only",
+      "estimates": {
+        "D": {
+          "coef": 1.3836455029332828,
+          "ci": [
+            1.100585182943628,
+            1.6667058229229377
+          ],
+          "se": 0.1444211832409446,
+          "mde": 0.40437931307464486,
+          "unit": "percentage points of the automation share"
+        },
+        "D_corrected_quartile_rule": {
+          "coef": 0.5433975034132135,
+          "ci": [
+            0.26714899947751386,
+            0.8196460073489131
+          ],
+          "se": 0.14094570305153545,
+          "mde": 0.39464796854429923,
+          "unit": "percentage points; boundary wage shared in proportion"
+        },
+        "pooled_binomial_se": {
+          "coef": 0.15568995397077812,
+          "unit": "pp, the steward's model-(a) arithmetic beside the registered formula"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Hypotheses: the ordered rule, first match winning \u2014 (1) lower bound > +1 pp in all three waves \u2192 H1; (2) upper bound < \u22121 pp in all three \u2192 H2; (3) otherwise, every interval excluding zero with the same sign in all three \u2192 O-A; (4) otherwise, every interval inside \u00b11 pp in all three \u2192 H4; (5) otherwise \u2192 O-B. \u03b4 = 1 pp, two-sided 95%.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "model (a): conversation-level binomial, task mix held fixed; the SE is a lower bound under within-task dependence and no clustering unit exists in any release"
+    },
+    "DeltaW_aug2025": {
+      "label": "\u0394_W, wage-weighted minus unweighted automation share, 4\u201311 Aug 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 1802,
+      "n_conversations": 818673.0,
+      "sample": "the whole analysis set of 1802 tasks",
+      "estimates": {
+        "Delta_W": {
+          "coef": -0.022183525236184286,
+          "ci": [
+            -0.05723495660135915,
+            0.012867906128990577
+          ],
+          "se": 0.01788371182591867,
+          "mde": 0.05007439311257227,
+          "unit": "percentage points of the automation share"
+        },
+        "wage_weighted_share": {
+          "coef": 51.09360983719513,
+          "unit": "pp"
+        },
+        "unweighted_share": {
+          "coef": 51.11579336243131,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: \"\u0394_W is published with its own interval beside D. Its materiality line is separate and higher than \u03b4: 0.11\u20130.12 pp of \u0394_W per point of gap, so a full point of \u0394_W needs a gap of roughly 8\u20139 pp\".",
+      "verdict": "contains zero; |\u0394_W| = 0.0222 pp, below the separate 1 pp materiality line, so the weighting of a published automation share is signed and small, never wrong",
+      "notes": "an hourly rate, not a bill: no hours enter \u0394_W"
+    },
+    "slope_aug2025": {
+      "label": "the continuous companion: slope of the automation share per +$10/hr, 4\u201311 Aug 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 1802,
+      "n_conversations": 818673.0,
+      "sample": "the whole analysis set of 1802 tasks, usage-weighted",
+      "estimates": {
+        "slope": {
+          "coef": -0.050717657394492084,
+          "ci": [
+            -0.13085489745161855,
+            0.029419582662634385
+          ],
+          "se": 0.04088709795543513,
+          "mde": 0.11448387427521836,
+          "unit": "percentage points of the automation share per +$10/hr"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: the usage-weighted slope of p_i in the task's hourly wage, per +$10/hr, \"sign and significance only\" (BRIEF \u00a79(2)); in no decision rule.",
+      "verdict": "not significant at the two-sided 5% level; sign and significance only",
+      "notes": "in no decision rule; the wage level does not reproduce Anthropic's published series"
+    },
+    "D_nov2025": {
+      "label": "D, top-minus-bottom wage-quartile difference in the automation share, 13\u201320 Nov 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 1102,
+      "n_conversations": 422953.0,
+      "sample": "2075 analysis-set tasks (96.23% of named-task usage mass, 854,432 classified conversations); Q1 and Q4 only",
+      "estimates": {
+        "D": {
+          "coef": 7.385412826055354,
+          "ci": [
+            7.11032447186782,
+            7.660501180242889
+          ],
+          "se": 0.14035377904264273,
+          "mde": 0.3929905813193996,
+          "unit": "percentage points of the automation share"
+        },
+        "D_corrected_quartile_rule": {
+          "coef": 7.179331096001813,
+          "ci": [
+            6.91163194536163,
+            7.447030246641996
+          ],
+          "se": 0.13658370798656697,
+          "mde": 0.38243438236238747,
+          "unit": "percentage points; boundary wage shared in proportion"
+        },
+        "pooled_binomial_se": {
+          "coef": 0.15338816632629246,
+          "unit": "pp, the steward's model-(a) arithmetic beside the registered formula"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Hypotheses: the ordered rule, first match winning \u2014 (1) lower bound > +1 pp in all three waves \u2192 H1; (2) upper bound < \u22121 pp in all three \u2192 H2; (3) otherwise, every interval excluding zero with the same sign in all three \u2192 O-A; (4) otherwise, every interval inside \u00b11 pp in all three \u2192 H4; (5) otherwise \u2192 O-B. \u03b4 = 1 pp, two-sided 95%.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "model (a): conversation-level binomial, task mix held fixed; the SE is a lower bound under within-task dependence and no clustering unit exists in any release"
+    },
+    "DeltaW_nov2025": {
+      "label": "\u0394_W, wage-weighted minus unweighted automation share, 13\u201320 Nov 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 2075,
+      "n_conversations": 854432.0,
+      "sample": "the whole analysis set of 2075 tasks",
+      "estimates": {
+        "Delta_W": {
+          "coef": 0.8351684867862997,
+          "ci": [
+            0.8000708496699663,
+            0.8702661239026331
+          ],
+          "se": 0.017907286621761127,
+          "mde": 0.050140402540931155,
+          "unit": "percentage points of the automation share"
+        },
+        "wage_weighted_share": {
+          "coef": 47.79968110520947,
+          "unit": "pp"
+        },
+        "unweighted_share": {
+          "coef": 46.964512618423164,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: \"\u0394_W is published with its own interval beside D. Its materiality line is separate and higher than \u03b4: 0.11\u20130.12 pp of \u0394_W per point of gap, so a full point of \u0394_W needs a gap of roughly 8\u20139 pp\".",
+      "verdict": "excludes zero; |\u0394_W| = 0.8352 pp, below the separate 1 pp materiality line, so the weighting of a published automation share is signed and small, never wrong",
+      "notes": "an hourly rate, not a bill: no hours enter \u0394_W"
+    },
+    "slope_nov2025": {
+      "label": "the continuous companion: slope of the automation share per +$10/hr, 13\u201320 Nov 2025",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 2075,
+      "n_conversations": 854432.0,
+      "sample": "the whole analysis set of 2075 tasks, usage-weighted",
+      "estimates": {
+        "slope": {
+          "coef": 1.7657102318486455,
+          "ci": [
+            1.6915069328131567,
+            1.8399135308841343
+          ],
+          "se": 0.037859521417479496,
+          "mde": 0.10600665996894258,
+          "unit": "percentage points of the automation share per +$10/hr"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: the usage-weighted slope of p_i in the task's hourly wage, per +$10/hr, \"sign and significance only\" (BRIEF \u00a79(2)); in no decision rule.",
+      "verdict": "positive and significant at the two-sided 5% level; sign and significance only",
+      "notes": "in no decision rule; the wage level does not reproduce Anthropic's published series"
+    },
+    "D_feb2026": {
+      "label": "D, top-minus-bottom wage-quartile difference in the automation share, 5\u201312 Feb 2026",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 1131,
+      "n_conversations": 422207.0,
+      "sample": "2188 analysis-set tasks (96.52% of named-task usage mass, 848,716 classified conversations); Q1 and Q4 only",
+      "estimates": {
+        "D": {
+          "coef": 0.6688743125891541,
+          "ci": [
+            0.3946967207500287,
+            0.9430519044282795
+          ],
+          "se": 0.1398890958400896,
+          "mde": 0.3916894683522509,
+          "unit": "percentage points of the automation share"
+        },
+        "D_corrected_quartile_rule": {
+          "coef": 0.33865814544653233,
+          "ci": [
+            0.06963449962335616,
+            0.6076817912697086
+          ],
+          "se": 0.13725948324723117,
+          "mde": 0.3843265530922472,
+          "unit": "percentage points; boundary wage shared in proportion"
+        },
+        "pooled_binomial_se": {
+          "coef": 0.1539095438853073,
+          "unit": "pp, the steward's model-(a) arithmetic beside the registered formula"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Hypotheses: the ordered rule, first match winning \u2014 (1) lower bound > +1 pp in all three waves \u2192 H1; (2) upper bound < \u22121 pp in all three \u2192 H2; (3) otherwise, every interval excluding zero with the same sign in all three \u2192 O-A; (4) otherwise, every interval inside \u00b11 pp in all three \u2192 H4; (5) otherwise \u2192 O-B. \u03b4 = 1 pp, two-sided 95%.",
+      "verdict": "excludes zero, positive; does not clear the +1 pp margin in this wave",
+      "notes": "model (a): conversation-level binomial, task mix held fixed; the SE is a lower bound under within-task dependence and no clustering unit exists in any release"
+    },
+    "DeltaW_feb2026": {
+      "label": "\u0394_W, wage-weighted minus unweighted automation share, 5\u201312 Feb 2026",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 2188,
+      "n_conversations": 848716.0,
+      "sample": "the whole analysis set of 2188 tasks",
+      "estimates": {
+        "Delta_W": {
+          "coef": -0.1466288356084512,
+          "ci": [
+            -0.18355287816758242,
+            -0.10970479304931995
+          ],
+          "se": 0.01883914324912664,
+          "mde": 0.05274960109755458,
+          "unit": "percentage points of the automation share"
+        },
+        "wage_weighted_share": {
+          "coef": 45.71025944042979,
+          "unit": "pp"
+        },
+        "unweighted_share": {
+          "coef": 45.856888276038234,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: \"\u0394_W is published with its own interval beside D. Its materiality line is separate and higher than \u03b4: 0.11\u20130.12 pp of \u0394_W per point of gap, so a full point of \u0394_W needs a gap of roughly 8\u20139 pp\".",
+      "verdict": "excludes zero; |\u0394_W| = 0.1466 pp, below the separate 1 pp materiality line, so the weighting of a published automation share is signed and small, never wrong",
+      "notes": "an hourly rate, not a bill: no hours enter \u0394_W"
+    },
+    "slope_feb2026": {
+      "label": "the continuous companion: slope of the automation share per +$10/hr, 5\u201312 Feb 2026",
+      "kind": "confirmatory",
+      "script": "scripts/03_headline.py",
+      "n": 2188,
+      "n_conversations": 848716.0,
+      "sample": "the whole analysis set of 2188 tasks, usage-weighted",
+      "estimates": {
+        "slope": {
+          "coef": -0.2843057767567533,
+          "ci": [
+            -0.3558995976938953,
+            -0.21271195581961128
+          ],
+          "se": 0.03652813058665465,
+          "mde": 0.10227876564263301,
+          "unit": "percentage points of the automation share per +$10/hr"
+        }
+      },
+      "prereg_rule": "prereg \u00a72: the usage-weighted slope of p_i in the task's hourly wage, per +$10/hr, \"sign and significance only\" (BRIEF \u00a79(2)); in no decision rule.",
+      "verdict": "negative and significant at the two-sided 5% level; sign and significance only",
+      "notes": "in no decision rule; the wage level does not reproduce Anthropic's published series"
+    },
+    "leg_a_aug2025": {
+      "label": "H3 leg (a) in 4\u201311 Aug 2025: D with Computer & Mathematical excluded",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 862,
+      "n_conversations": 222163.0,
+      "sample": "the analysis set of 1802 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -13.031857513857098,
+          "ci": [
+            -13.468049791765653,
+            -12.595665235948543
+          ],
+          "se": 0.222551168240108,
+          "mde": 0.6231432710723024,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 1.3836455029332828,
+          "ci": [
+            1.100585182943628,
+            1.6667058229229377
+          ],
+          "se": 0.1444211832409446,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -9.418494467137709,
+          "ci": [
+            -11.561030842736802,
+            -7.275958091538615
+          ],
+          "se": 1.0931508821585978,
+          "mde": 3.060822470044074,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -13.72368026532374,
+          "ci": [
+            -14.085852307179072,
+            -13.361508223468407
+          ],
+          "se": 0.1847850480189089,
+          "mde": 0.5173981344529449,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D",
+      "coverage": {
+        "dropped_tasks": 261,
+        "dropped_mass": 38.237355546016865,
+        "dropped_share_analysis": 42.84152688072119,
+        "dropped_share_q4": 73.06477454795152,
+        "dropped_share_q1": 15.324417015976891,
+        "retained_mass_q1_q4": 55.588096929221706
+      },
+      "notes": "corr(D_L, D) = 0.641; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_b_aug2025": {
+      "label": "H3 leg (b) in 4\u201311 Aug 2025: D within SOC major group, usage-weighted over the identified groups",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 655,
+      "n_conversations": 331041.0,
+      "sample": "the analysis set of 1802 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -4.198899392597729,
+          "ci": [
+            -4.709444810085327,
+            -3.6883539751101315
+          ],
+          "se": 0.26048714031869874,
+          "mde": 0.7293639928923564,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 1.3836455029332828,
+          "ci": [
+            1.100585182943628,
+            1.6667058229229377
+          ],
+          "se": 0.1444211832409446,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -3.0346641417156355,
+          "ci": [
+            -3.91601762039557,
+            -2.153310663035701
+          ],
+          "se": 0.44967840158285277,
+          "mde": 1.2590995244319876,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -4.890722144064372,
+          "ci": [
+            -5.338140279372405,
+            -4.443304008756339
+          ],
+          "se": 0.2282787517056604,
+          "mde": 0.6391805047758491,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D",
+      "coverage": {
+        "identified_groups": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19",
+          "23",
+          "25",
+          "27",
+          "29",
+          "41"
+        ],
+        "n_identified": 10,
+        "not_identified_groups": [
+          "21",
+          "31",
+          "33",
+          "35",
+          "37",
+          "39",
+          "43",
+          "45",
+          "47",
+          "49",
+          "51",
+          "53"
+        ],
+        "n_not_identified": 12,
+        "groups_all_four": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19",
+          "25",
+          "29",
+          "41"
+        ],
+        "n_groups_all_four": 8,
+        "identified_mass_share_q1_q4": 80.03786585984558,
+        "tasks_in_identified_groups": 1435
+      },
+      "notes": "corr(D_L, D) = 0.557; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_a_nov2025": {
+      "label": "H3 leg (a) in 13\u201320 Nov 2025: D with Computer & Mathematical excluded",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 1003,
+      "n_conversations": 236600.0,
+      "sample": "the analysis set of 2075 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -10.470148206135976,
+          "ci": [
+            -10.880498956101935,
+            -10.059797456170017
+          ],
+          "se": 0.2093664730403002,
+          "mde": 0.5862261245128405,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 7.385412826055354,
+          "ci": [
+            7.11032447186782,
+            7.660501180242889
+          ],
+          "se": 0.14035377904264273,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -1.417679478823152,
+          "ci": [
+            -1.5165871043233488,
+            -1.318771853322955
+          ],
+          "se": 0.05046400112461088,
+          "mde": 0.14129920314891045,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -14.162854619163651,
+          "ci": [
+            -14.497732429148371,
+            -13.827976809178931
+          ],
+          "se": 0.17085916373194637,
+          "mde": 0.4784056584494498,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D",
+      "coverage": {
+        "dropped_tasks": 272,
+        "dropped_mass": 35.683860482560306,
+        "dropped_share_analysis": 39.65347084842964,
+        "dropped_share_q4": 71.26300452215327,
+        "dropped_share_q1": 13.568454128584317,
+        "retained_mass_q1_q4": 57.45406677747902
+      },
+      "notes": "corr(D_L, D) = 0.666; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_b_nov2025": {
+      "label": "H3 leg (b) in 13\u201320 Nov 2025: D within SOC major group, usage-weighted over the identified groups",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 745,
+      "n_conversations": 343033.0,
+      "sample": "the analysis set of 2075 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -1.8716300959620455,
+          "ci": [
+            -2.42455369926924,
+            -1.3187064926548513
+          ],
+          "se": 0.28210906083335924,
+          "mde": 0.7899053703334058,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 7.385412826055354,
+          "ci": [
+            7.11032447186782,
+            7.660501180242889
+          ],
+          "se": 0.14035377904264273,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -0.25342254252315205,
+          "ci": [
+            -0.3335086010718161,
+            -0.17333648397448798
+          ],
+          "se": 0.04086098446127791,
+          "mde": 0.11441075649157813,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -5.564336508989721,
+          "ci": [
+            -6.06153050061902,
+            -5.0671425173604225
+          ],
+          "se": 0.2536750632303953,
+          "mde": 0.7102901770451068,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D and |D_L| < \u00bd|D|",
+      "coverage": {
+        "identified_groups": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19",
+          "23",
+          "25",
+          "27",
+          "29",
+          "41"
+        ],
+        "n_identified": 10,
+        "not_identified_groups": [
+          "21",
+          "31",
+          "33",
+          "35",
+          "37",
+          "39",
+          "43",
+          "45",
+          "47",
+          "49",
+          "51",
+          "53"
+        ],
+        "n_not_identified": 12,
+        "groups_all_four": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19",
+          "25",
+          "27",
+          "29",
+          "41"
+        ],
+        "n_groups_all_four": 9,
+        "identified_mass_share_q1_q4": 80.31391885409579,
+        "tasks_in_identified_groups": 1641
+      },
+      "notes": "corr(D_L, D) = 0.509; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_e_nov2025": {
+      "label": "H3 leg (e) in 13\u201320 Nov 2025: D on work-dominant tasks",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 458,
+      "n_conversations": 243255.0,
+      "sample": "the analysis set of 2075 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": 3.716010557523533,
+          "ci": [
+            3.291950445504392,
+            4.140070669542673
+          ],
+          "se": 0.2163611739905125,
+          "mde": 0.6058112871734349,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 7.385412826055354,
+          "ci": [
+            7.11032447186782,
+            7.660501180242889
+          ],
+          "se": 0.14035377904264273,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": 0.5031554288222914,
+          "ci": [
+            0.4558476956317594,
+            0.5504631620128233
+          ],
+          "se": 0.024137041900020594,
+          "mde": 0.06758371732005766,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": 0.023304144495853274,
+          "ci": [
+            -0.3264303026200411,
+            0.3730385916117476
+          ],
+          "se": 0.1784392198611272,
+          "mde": 0.49962981561115616,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "did not fire: D_L keeps its sign and more than half of D \u2014 nothing bigger than the MDE of 0.6058 pp is shown on this leg, which is not composition excluded",
+      "coverage": {
+        "dropped_undefined_tasks": 16,
+        "undefined_tasks_analysis": 29,
+        "undefined_mass_analysis": 0.0779097387173381,
+        "kept_tasks": 943,
+        "kept_mass": 48.93821727715961,
+        "kept_share_analysis": 54.3822934495099,
+        "kept_share_q4": 82.51463702835011,
+        "kept_share_q1": 29.878838680179832,
+        "retained_mass_q1_q4": 56.31552526187795
+      },
+      "notes": "corr(D_L, D) = 0.655; the interval for D_L \u2212 \u00bdD straddles zero"
+    },
+    "leg_a_feb2026": {
+      "label": "H3 leg (a) in 5\u201312 Feb 2026: D with Computer & Mathematical excluded",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 990,
+      "n_conversations": 252833.0,
+      "sample": "the analysis set of 2188 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -11.89518383993165,
+          "ci": [
+            -12.276325521169193,
+            -11.514042158694108
+          ],
+          "se": 0.1944636132283766,
+          "mde": 0.5444981170394545,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 0.6688743125891541,
+          "ci": [
+            0.3946967207500287,
+            0.9430519044282795
+          ],
+          "se": 0.1398890958400896,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -17.783884978160444,
+          "ci": [
+            -25.486784383865555,
+            -10.080985572455333
+          ],
+          "se": 3.9301229031273586,
+          "mde": 11.004344128756603,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -12.22962099622623,
+          "ci": [
+            -12.530015111538635,
+            -11.929226880913824
+          ],
+          "se": 0.15326511880443003,
+          "mde": 0.42914233265240403,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D",
+      "coverage": {
+        "dropped_tasks": 285,
+        "dropped_mass": 31.901899999999994,
+        "dropped_share_analysis": 35.55131342578354,
+        "dropped_share_q4": 65.46264665248083,
+        "dropped_share_q1": 11.77825278145459,
+        "retained_mass_q1_q4": 61.29084016927736
+      },
+      "notes": "corr(D_L, D) = 0.706; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_b_feb2026": {
+      "label": "H3 leg (b) in 5\u201312 Feb 2026: D within SOC major group, usage-weighted over the identified groups",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 707,
+      "n_conversations": 321921.0,
+      "sample": "the analysis set of 2188 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": -6.21688751534059,
+          "ci": [
+            -6.692306840037501,
+            -5.741468190643678
+          ],
+          "se": 0.24256533522907156,
+          "mde": 0.6791829386414003,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 0.6688743125891541,
+          "ci": [
+            0.3946967207500287,
+            0.9430519044282795
+          ],
+          "se": 0.1398890958400896,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": -9.294552651118504,
+          "ci": [
+            -13.555059492503453,
+            -5.034045809733556
+          ],
+          "se": 2.173767906647749,
+          "mde": 6.086550138613697,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": -6.551324671635165,
+          "ci": [
+            -6.96297533820926,
+            -6.139674005061071
+          ],
+          "se": 0.2100297079814194,
+          "mde": 0.5880831823479743,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "FIRED: the sign of D_L differs from the sign of D",
+      "coverage": {
+        "identified_groups": [
+          "11",
+          "13",
+          "15",
+          "19",
+          "23",
+          "25",
+          "27",
+          "29",
+          "41"
+        ],
+        "n_identified": 9,
+        "not_identified_groups": [
+          "17",
+          "21",
+          "31",
+          "33",
+          "35",
+          "37",
+          "39",
+          "43",
+          "45",
+          "47",
+          "49",
+          "51",
+          "53"
+        ],
+        "n_not_identified": 13,
+        "groups_all_four": [
+          "11",
+          "13",
+          "15",
+          "19",
+          "25",
+          "27",
+          "29",
+          "41"
+        ],
+        "n_groups_all_four": 8,
+        "identified_mass_share_q1_q4": 75.51740352237756,
+        "tasks_in_identified_groups": 1597
+      },
+      "notes": "corr(D_L, D) = 0.578; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "leg_e_feb2026": {
+      "label": "H3 leg (e) in 5\u201312 Feb 2026: D on work-dominant tasks",
+      "kind": "confirmatory",
+      "subkind": "leg test (one of the eight of P4)",
+      "script": "scripts/05_legs.py",
+      "n": 522,
+      "n_conversations": 218518.0,
+      "sample": "the analysis set of 2188 tasks, quartile masks kept",
+      "estimates": {
+        "D_L": {
+          "coef": 2.791568297998231,
+          "ci": [
+            2.2954273624855874,
+            3.287709233510874
+          ],
+          "se": 0.253137779833019,
+          "mde": 0.7087857835324531,
+          "unit": "percentage points"
+        },
+        "D": {
+          "coef": 0.6688743125891541,
+          "ci": [
+            0.3946967207500287,
+            0.9430519044282795
+          ],
+          "se": 0.1398890958400896,
+          "unit": "percentage points"
+        },
+        "r_L": {
+          "coef": 4.173531925889504,
+          "ci": [
+            2.749559728771928,
+            5.597504123007081
+          ],
+          "se": 0.7265297715251792,
+          "mde": 2.0342833602705017,
+          "unit": "fraction of D retained (a ratio; its delta-method SE understates, so the contrast below is the interval to read)"
+        },
+        "D_L_minus_half_D": {
+          "coef": 2.457131141703656,
+          "ci": [
+            2.0243817468008727,
+            2.889880536606439
+          ],
+          "se": 0.2207945630138019,
+          "mde": 0.6182247764386453,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg P3/P4: \"a leg fires in a wave if sign(D_L) \u2260 sign(D) or |D_L| < \u00bd|D|\", on the point estimates as \u00a79(3) writes it; H3 is declared (primary, persistent-leg rule) if at least one leg fires in every wave in which that leg is testable, with the literal any-wave reading reported beside it.",
+      "verdict": "did not fire: D_L keeps its sign and more than half of D \u2014 nothing bigger than the MDE of 0.7088 pp is shown on this leg, which is not composition excluded",
+      "coverage": {
+        "dropped_undefined_tasks": 8,
+        "undefined_tasks_analysis": 21,
+        "undefined_mass_analysis": 0.052699999999999886,
+        "kept_tasks": 1071,
+        "kept_mass": 47.43639999999998,
+        "kept_share_analysis": 52.862880398685895,
+        "kept_share_q4": 81.11564722554165,
+        "kept_share_q1": 20.395843022215853,
+        "retained_mass_q1_q4": 50.85608081456374
+      },
+      "notes": "corr(D_L, D) = 0.571; the interval for D_L \u2212 \u00bdD excludes zero"
+    },
+    "exp_a_api_surface": {
+      "label": "EXPLORATORY (a): the same gradient on the 1P API global intersection",
+      "kind": "exploratory",
+      "exploratory": true,
+      "script": "scripts/08_exploratory.py",
+      "n": 1886,
+      "sample": "the 1P API `onet_task::collaboration` at global in each release (11,660 rows in the February file), same analysis-set rule and wage join; the API is automation-dominant and its February sample includes Claude Code",
+      "estimates": {
+        "D_aug2025": {
+          "coef": -2.402950912916021,
+          "ci": [
+            -2.606332169244679,
+            -2.1995696565873635
+          ],
+          "se": 0.10376785304661593,
+          "mde": 0.29054998853052455,
+          "unit": "percentage points"
+        },
+        "slope_aug2025": {
+          "coef": -0.8413205960726858,
+          "ci": [
+            -0.8969275550389791,
+            -0.7857136371063925
+          ],
+          "unit": "pp per +$10/hr"
+        },
+        "D_nov2025": {
+          "coef": -2.4670255365277924,
+          "ci": [
+            -2.6779688642633346,
+            -2.2560822087922503
+          ],
+          "se": 0.10762612361019999,
+          "mde": 0.30135314610855995,
+          "unit": "percentage points"
+        },
+        "slope_nov2025": {
+          "coef": -0.982880135194741,
+          "ci": [
+            -1.0410562606430669,
+            -0.9247040097464152
+          ],
+          "unit": "pp per +$10/hr"
+        },
+        "D_feb2026": {
+          "coef": -5.154691709845292,
+          "ci": [
+            -5.375522544489514,
+            -4.933860875201069
+          ],
+          "se": 0.11267086265065193,
+          "mde": 0.31547841542182536,
+          "unit": "percentage points"
+        },
+        "slope_feb2026": {
+          "coef": -1.6877208668822432,
+          "ci": [
+            -1.749926604247272,
+            -1.6255151295172143
+          ],
+          "unit": "pp per +$10/hr"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Exploratory allowance: three tests, after the confirmatory set, none in the headline, each labelled exploratory; in no decision rule.",
+      "verdict": "the sign is the opposite of Claude.ai's in all three windows, so the Claude.ai gradient is not a property the API surface shares; context, not a replication",
+      "notes": "in no decision rule; may not appear in a headline"
+    },
+    "exp_b_pattern_split": {
+      "label": "EXPLORATORY (b): the pattern-level split \u2014 which pattern carries the gradient",
+      "kind": "exploratory",
+      "exploratory": true,
+      "script": "scripts/08_exploratory.py",
+      "n": null,
+      "sample": "the analysis set of each wave, Q1 and Q4",
+      "estimates": {
+        "directive_aug2025": {
+          "coef": -6.98361436683757,
+          "ci": [
+            -7.2680288916997045,
+            -6.699199841975436
+          ],
+          "se": 0.14511211678486652,
+          "mde": 0.40631392699762625,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "feedback loop_aug2025": {
+          "coef": 8.367259869770844,
+          "ci": [
+            8.186317153790919,
+            8.54820258575077
+          ],
+          "se": 0.09231940789724973,
+          "mde": 0.2584943421122992,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "learning_aug2025": {
+          "coef": -4.448953157755998,
+          "ci": [
+            -4.661982082378397,
+            -4.235924233133599
+          ],
+          "se": 0.10869022319920113,
+          "mde": 0.30433262495776314,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "task iteration_aug2025": {
+          "coef": 3.7344365055450384,
+          "ci": [
+            3.4972914291356276,
+            3.971581581954449
+          ],
+          "se": 0.12099460827311657,
+          "mde": 0.33878490316472637,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "validation_aug2025": {
+          "coef": -0.6691288507223236,
+          "ci": [
+            -0.7840120268176055,
+            -0.5542456746270418
+          ],
+          "se": 0.05861494195571034,
+          "mde": 0.16412183747598894,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "directive_nov2025": {
+          "coef": -9.498879634305869,
+          "ci": [
+            -9.764792012472558,
+            -9.23296725613918
+          ],
+          "se": 0.13567207263331826,
+          "mde": 0.37988180337329114,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "feedback loop_nov2025": {
+          "coef": 16.884292460361223,
+          "ci": [
+            16.69297144928916,
+            17.075613471433286
+          ],
+          "se": 0.09761455367142566,
+          "mde": 0.2733207502799918,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "learning_nov2025": {
+          "coef": -6.4108320788090225,
+          "ci": [
+            -6.620113562681653,
+            -6.201550594936392
+          ],
+          "se": 0.10677822851472288,
+          "mde": 0.29897903984122404,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "task iteration_nov2025": {
+          "coef": -0.3570352808456229,
+          "ci": [
+            -0.5982232756963372,
+            -0.11584728599490865
+          ],
+          "se": 0.1230573596508478,
+          "mde": 0.3445606070223738,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "validation_nov2025": {
+          "coef": -0.6175454664007167,
+          "ci": [
+            -0.7303746266305116,
+            -0.5047163061709219
+          ],
+          "se": 0.05756695542866851,
+          "mde": 0.16118747520027182,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "directive_feb2026": {
+          "coef": -9.928606645436112,
+          "ci": [
+            -10.193752193477962,
+            -9.663461097394261
+          ],
+          "se": 0.1352808255875369,
+          "mde": 0.3787863116451033,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "feedback loop_feb2026": {
+          "coef": 10.597480958025269,
+          "ci": [
+            10.418939169244872,
+            10.776022746805666
+          ],
+          "se": 0.0910944225406161,
+          "mde": 0.2550643831137251,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "learning_feb2026": {
+          "coef": -3.2868633402848295,
+          "ci": [
+            -3.5053936127804075,
+            -3.0683330677892515
+          ],
+          "se": 0.11149708489318078,
+          "mde": 0.31219183770090614,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "task iteration_feb2026": {
+          "coef": 2.1929102538655267,
+          "ci": [
+            1.9598943158689257,
+            2.4259261918621275
+          ],
+          "se": 0.11888786630601428,
+          "mde": 0.33288602565683995,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        },
+        "validation_feb2026": {
+          "coef": 0.42507877383013426,
+          "ci": [
+            0.31159659207621637,
+            0.5385609555840521
+          ],
+          "se": 0.05790013579530946,
+          "mde": 0.16212038022686648,
+          "unit": "pp of the pattern's share, Q4 \u2212 Q1"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Exploratory allowance: three tests, after the confirmatory set, none in the headline, each labelled exploratory; in no decision rule.",
+      "verdict": "`feedback loop` carries the whole of the positive gradient in all three windows while `directive` is negative in all three; `learning` is negative in all three. The five differences sum to zero by construction",
+      "notes": "in no decision rule; 'outright' describes `directive` alone"
+    },
+    "exp_c_jobzone": {
+      "label": "EXPLORATORY (c): the gradient against `JobZone`, a non-wage ordering",
+      "kind": "exploratory",
+      "exploratory": true,
+      "script": "scripts/08_exploratory.py",
+      "n": 2176,
+      "sample": "the analysis set with the 119 `-1` sentinel occupations dropped: 99.22 / 98.83 / 99.06% of named-task usage mass",
+      "estimates": {
+        "slope_aug2025": {
+          "coef": -6.701157923500237,
+          "ci": [
+            -6.826549859933923,
+            -6.575765987066552
+          ],
+          "se": 0.06397665285366753,
+          "mde": 0.17913462799026908,
+          "unit": "pp of the automation share per +1 Job Zone"
+        },
+        "D_aug2025": {
+          "coef": -8.003517906993608,
+          "ci": [
+            -8.279239452425722,
+            -7.727796361561494
+          ],
+          "unit": "pp, top-minus-bottom Job-Zone quartile"
+        },
+        "slope_nov2025": {
+          "coef": -6.018755345811303,
+          "ci": [
+            -6.140368863569852,
+            -5.897141828052754
+          ],
+          "se": 0.06204885281492359,
+          "mde": 0.17373678788178604,
+          "unit": "pp of the automation share per +1 Job Zone"
+        },
+        "D_nov2025": {
+          "coef": -11.865283227177537,
+          "ci": [
+            -12.140568713462303,
+            -11.589997740892771
+          ],
+          "unit": "pp, top-minus-bottom Job-Zone quartile"
+        },
+        "slope_feb2026": {
+          "coef": -6.768140909415323,
+          "ci": [
+            -6.880306779461536,
+            -6.65597503936911
+          ],
+          "se": 0.05722853585382827,
+          "mde": 0.16023990039071914,
+          "unit": "pp of the automation share per +1 Job Zone"
+        },
+        "D_feb2026": {
+          "coef": -11.473335334066,
+          "ci": [
+            -11.741383154103316,
+            -11.205287514028685
+          ],
+          "unit": "pp, top-minus-bottom Job-Zone quartile"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Exploratory allowance: three tests, after the confirmatory set, none in the headline, each labelled exploratory; in no decision rule.",
+      "verdict": "negative and significant in all three windows: required preparation orders delegation the other way from the wage",
+      "notes": "in no decision rule"
+    },
+    "rob_X3_drop_under_100_classified_aug2025": {
+      "label": "X3: tasks with fewer than 100 classified conversations dropped, 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 412,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": 2.6049257563666557,
+          "ci": [
+            2.307319318552812,
+            2.9025321941804996
+          ],
+          "se": 0.15184280824231658,
+          "mde": 0.4251598630784864,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 92.49%"
+    },
+    "rob_W1_equal_split_aug2025": {
+      "label": "W1: the equal split multi-holder wage rule, 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 960,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": 1.3769650024306144,
+          "ci": [
+            1.0938832998102253,
+            1.6600467050510035
+          ],
+          "se": 0.14443209294680368,
+          "mde": 0.40440986025105025,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": -0.023054623681955908,
+          "ci": [
+            -0.05805947985450921,
+            0.01195023249059739
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "quartile boundaries ['$25.86', '$35.79', '$43.40']"
+    },
+    "rob_W1_modal_holder_aug2025": {
+      "label": "W1: the modal holder multi-holder wage rule, 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 963,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": 0.31721186431216125,
+          "ci": [
+            0.03410121583325043,
+            0.6003225127910721
+          ],
+          "se": 0.1444468615132272,
+          "mde": 0.4044512122370361,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": -0.03899469259558999,
+          "ci": [
+            -0.07413770997114008,
+            -0.0038516752200399088
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "excludes zero, positive; does not clear the +1 pp margin in this wave",
+      "notes": "quartile boundaries ['$25.86', '$34.87', '$43.40']"
+    },
+    "rob_C7_aug2025": {
+      "label": "C7: the second wage source (BLS Employment Projections), 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1389,
+      "sample": "the 1389 analysis-set tasks BLS-EP prices, 55.4% of the analysis set's mass",
+      "estimates": {
+        "D": {
+          "coef": -15.589897490265576,
+          "ci": [
+            -15.966486203271343,
+            -15.21330877725981
+          ],
+          "se": 0.1921406275858981,
+          "mde": 0.5379937572405146,
+          "unit": "pp"
+        },
+        "Delta_W": {
+          "coef": -1.8725260167714162,
+          "ci": [
+            -1.9247391619324712,
+            -1.8203128716103611
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
+      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
+    },
+    "rob_model_b_aug2025": {
+      "label": "model (b): the design-based task-resampling bound, 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1802,
+      "sample": "the analysis set; tasks resampled equal-probability inside each extreme quartile",
+      "estimates": {
+        "D": {
+          "coef": 1.3836455029332828,
+          "ci": [
+            -8.466589379765091,
+            11.233880385631656
+          ],
+          "se": 5.025722351379093,
+          "mde": 14.07202258386146,
+          "unit": "pp; the generalisation-to-other-task-mixes bound"
+        }
+      },
+      "prereg_rule": "prereg P1(b): reported beside (a) as the generalisation bound, in no decision rule",
+      "verdict": "nothing below about 14 percentage points is resolved as a statement about tasks in general",
+      "notes": "Kish effective N on the usage weights: 94.4 against a nominal 1802"
+    },
+    "rob_placebo_aug2025": {
+      "label": "the placebo: the wage permuted within SOC major group, 4\u201311 Aug 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1802,
+      "sample": "the analysis set; 10,000 seeded permutations, quartiles re-drawn on the permuted wage",
+      "estimates": {
+        "observed_D": {
+          "coef": 1.3836455029332828,
+          "unit": "pp"
+        },
+        "permutation_mean": {
+          "coef": 3.3622740692039197,
+          "unit": "pp"
+        },
+        "permutation_sd": {
+          "coef": 3.37359243219618,
+          "unit": "pp"
+        },
+        "permutation_band_95": {
+          "coef": 3.3622740692039197,
+          "ci": [
+            -4.008867348373709,
+            9.048739324997289
+          ],
+          "unit": "pp"
+        },
+        "two_sided_p": {
+          "coef": 0.8246175382461753,
+          "unit": "probability"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.8246); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "notes": "a task-level bound of the order of model (b)'s MDE"
+    },
+    "rob_fourth_window_aug2025": {
+      "label": "P7: the fourth window (Feb\u2013Mar 2025), read on 4\u201311 Aug 2025's quartiles",
+      "kind": "robustness",
+      "script": "scripts/07_fourth_window.py",
+      "n": 1456,
+      "sample": "1635 of 1802 analysis-set tasks matched in `automation_vs_augmentation_by_task.csv` (98.78% of their mass); 179 entirely `filtered` tasks dropped, never zeroed",
+      "estimates": {
+        "D": {
+          "coef": 3.9809345080459195,
+          "ci": [
+            -7.317334298891442,
+            15.279203314983281
+          ],
+          "se": 5.764528739781629,
+          "mde": 16.14068047138856,
+          "unit": "pp; design-based interval only, the window publishes no counts"
+        },
+        "D_classified_weights": {
+          "coef": 4.252403614194101,
+          "ci": [
+            -7.149996845208266,
+            15.654804073596468
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P7: \"This window is in no decision rule and cannot declare or refute an owner\"; design-based only",
+      "verdict": "positive in sign, unresolved: the design-based interval spans zero at an MDE of 16.1 pp",
+      "notes": "no task-level `none` share exists in this release, so \u00a79(1)'s `none`-beside-every-share rule holds at the global level only; the window's global automation share is 43.2902% against the release's published 43.0619%"
+    },
+    "rob_X3_drop_under_100_classified_nov2025": {
+      "label": "X3: tasks with fewer than 100 classified conversations dropped, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 435,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": 9.072526553412992,
+          "ci": [
+            8.781020541369056,
+            9.364032565456927
+          ],
+          "se": 0.14873028894609078,
+          "mde": 0.4164448090490542,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 91.18%"
+    },
+    "rob_X4_sc_netted_weights_nov2025": {
+      "label": "X4: Seychelles netted out of the November task weights, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1102,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": 6.546269153233452,
+          "ci": [
+            6.270624004751044,
+            6.821914301715861
+          ],
+          "se": 0.14063786298238543,
+          "mde": 0.39378601635067917,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 99.50%"
+    },
+    "rob_X5_drop_sc_over_10pc_nov2025": {
+      "label": "X5: tasks where SC exceeds 10% of their global count dropped, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1089,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": -4.581534368297316,
+          "ci": [
+            -4.900268196000948,
+            -4.262800540593683
+          ],
+          "se": 0.16262228678875357,
+          "mde": 0.45534240300851,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears \u22121 pp in this wave (step (2)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 79.08%"
+    },
+    "rob_X5_drop_sc_over_20pc_nov2025": {
+      "label": "X5 variant: the > 20% set dropped, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1095,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": 7.504228335610009,
+          "ci": [
+            7.22832168006121,
+            7.780134991158807
+          ],
+          "se": 0.1407712874056863,
+          "mde": 0.39415960473592165,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 99.43%"
+    },
+    "rob_W1_equal_split_nov2025": {
+      "label": "W1: the equal split multi-holder wage rule, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1100,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": 7.385268970185302,
+          "ci": [
+            7.110098961074668,
+            7.660438979295936
+          ],
+          "se": 0.140395440482904,
+          "mde": 0.3931072333521312,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": 0.8374718650072073,
+          "ci": [
+            0.802421541496341,
+            0.8725221885180735
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "quartile boundaries ['$25.78', '$34.87', '$43.40']"
+    },
+    "rob_W1_modal_holder_nov2025": {
+      "label": "W1: the modal holder multi-holder wage rule, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1104,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": 7.704387429798516,
+          "ci": [
+            7.428907963814724,
+            7.979866895782309
+          ],
+          "se": 0.14055332954268177,
+          "mde": 0.39354932271950893,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": 0.831394470376175,
+          "ci": [
+            0.7961030747489414,
+            0.8666858660034086
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "quartile boundaries ['$25.78', '$33.79', '$43.40']"
+    },
+    "rob_C7_nov2025": {
+      "label": "C7: the second wage source (BLS Employment Projections), 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1630,
+      "sample": "the 1630 analysis-set tasks BLS-EP prices, 58.4% of the analysis set's mass",
+      "estimates": {
+        "D": {
+          "coef": -11.890081362034657,
+          "ci": [
+            -12.256536579112629,
+            -11.523626144956685
+          ],
+          "se": 0.18697038163862806,
+          "mde": 0.5235170685881585,
+          "unit": "pp"
+        },
+        "Delta_W": {
+          "coef": -1.3398475973010864,
+          "ci": [
+            -1.3888342200889026,
+            -1.2908609745132702
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
+      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
+    },
+    "rob_model_b_nov2025": {
+      "label": "model (b): the design-based task-resampling bound, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 2075,
+      "sample": "the analysis set; tasks resampled equal-probability inside each extreme quartile",
+      "estimates": {
+        "D": {
+          "coef": 7.385412826055354,
+          "ci": [
+            -6.724772673853874,
+            21.495598325964583
+          ],
+          "se": 7.199206464970391,
+          "mde": 20.157778101917096,
+          "unit": "pp; the generalisation-to-other-task-mixes bound"
+        }
+      },
+      "prereg_rule": "prereg P1(b): reported beside (a) as the generalisation bound, in no decision rule",
+      "verdict": "nothing below about 20 percentage points is resolved as a statement about tasks in general",
+      "notes": "Kish effective N on the usage weights: 83.4 against a nominal 2075"
+    },
+    "rob_placebo_nov2025": {
+      "label": "the placebo: the wage permuted within SOC major group, 13\u201320 Nov 2025",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 2075,
+      "sample": "the analysis set; 10,000 seeded permutations, quartiles re-drawn on the permuted wage",
+      "estimates": {
+        "observed_D": {
+          "coef": 7.385412826055354,
+          "unit": "pp"
+        },
+        "permutation_mean": {
+          "coef": 8.96479694889722,
+          "unit": "pp"
+        },
+        "permutation_sd": {
+          "coef": 4.430691779351156,
+          "unit": "pp"
+        },
+        "permutation_band_95": {
+          "coef": 8.96479694889722,
+          "ci": [
+            -1.569760243528152,
+            16.08476929182087
+          ],
+          "unit": "pp"
+        },
+        "two_sided_p": {
+          "coef": 0.679032096790321,
+          "unit": "probability"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.6790); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "notes": "a task-level bound of the order of model (b)'s MDE"
+    },
+    "rob_fourth_window_nov2025": {
+      "label": "P7: the fourth window (Feb\u2013Mar 2025), read on 13\u201320 Nov 2025's quartiles",
+      "kind": "robustness",
+      "script": "scripts/07_fourth_window.py",
+      "n": 1592,
+      "sample": "1843 of 2075 analysis-set tasks matched in `automation_vs_augmentation_by_task.csv` (98.49% of their mass); 251 entirely `filtered` tasks dropped, never zeroed",
+      "estimates": {
+        "D": {
+          "coef": 3.753392510198516,
+          "ci": [
+            -8.1855873934165,
+            15.692372413813532
+          ],
+          "se": 6.09142816072898,
+          "mde": 17.055998850041142,
+          "unit": "pp; design-based interval only, the window publishes no counts"
+        },
+        "D_classified_weights": {
+          "coef": 4.025458954936127,
+          "ci": [
+            -8.034079795635263,
+            16.08499770550752
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P7: \"This window is in no decision rule and cannot declare or refute an owner\"; design-based only",
+      "verdict": "positive in sign, unresolved: the design-based interval spans zero at an MDE of 17.1 pp",
+      "notes": "no task-level `none` share exists in this release, so \u00a79(1)'s `none`-beside-every-share rule holds at the global level only; the window's global automation share is 43.2902% against the release's published 43.0619%"
+    },
+    "rob_X3_drop_under_100_classified_feb2026": {
+      "label": "X3: tasks with fewer than 100 classified conversations dropped, 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 473,
+      "sample": "the analysis set, quartile masks kept",
+      "estimates": {
+        "D": {
+          "coef": 1.5933570315781929,
+          "ci": [
+            1.3031612426246137,
+            1.883552820531772
+          ],
+          "se": 0.14806179549909038,
+          "mde": 0.41457302739745305,
+          "unit": "percentage points"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "clears +1 pp in this wave (step (1)'s clause holds here)",
+      "notes": "retained Q1+Q4 mass 91.28%"
+    },
+    "rob_W1_equal_split_feb2026": {
+      "label": "W1: the equal split multi-holder wage rule, 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1130,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": 0.6581207941533805,
+          "ci": [
+            0.3838721222034966,
+            0.9323694661032644
+          ],
+          "se": 0.13992536186883225,
+          "mde": 0.3917910132327303,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": -0.14582079800468542,
+          "ci": [
+            -0.1827012006058043,
+            -0.10894039540356654
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "excludes zero, positive; does not clear the +1 pp margin in this wave",
+      "notes": "quartile boundaries ['$24.00', '$34.45', '$43.40']"
+    },
+    "rob_W1_modal_holder_feb2026": {
+      "label": "W1: the modal holder multi-holder wage rule, 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1126,
+      "sample": "the analysis set, quartiles re-drawn on this rule's wage",
+      "estimates": {
+        "D": {
+          "coef": -0.17008753590871947,
+          "ci": [
+            -0.4438299765574877,
+            0.10365490474004871
+          ],
+          "se": 0.13966707584872384,
+          "mde": 0.39106781237642674,
+          "unit": "percentage points"
+        },
+        "Delta_W": {
+          "coef": -0.15530164964207951,
+          "ci": [
+            -0.19237940925006178,
+            -0.11822389003409725
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness, fixed now: the cut is pre-registered, reported beside the primary estimate, and in no decision rule; the owner under each cut is reported so that a cut which would move it is visible.",
+      "verdict": "inside \u00b11 pp and containing zero (step (4)'s clause holds here)",
+      "notes": "quartile boundaries ['$24.00', '$33.38', '$43.40']"
+    },
+    "rob_C7_feb2026": {
+      "label": "C7: the second wage source (BLS Employment Projections), 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 1718,
+      "sample": "the 1718 analysis-set tasks BLS-EP prices, 62.1% of the analysis set's mass",
+      "estimates": {
+        "D": {
+          "coef": -16.714112416095272,
+          "ci": [
+            -17.06118977925438,
+            -16.367035052936163
+          ],
+          "se": 0.17708353988089062,
+          "mde": 0.4958339116664937,
+          "unit": "pp"
+        },
+        "Delta_W": {
+          "coef": -2.0323848643019904,
+          "ci": [
+            -2.082603323235463,
+            -1.982166405368518
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P6 under O-A: \"Sign agreement: the C7 rebuild's point estimate carries the declared sign in all three waves... If C7's point estimate carries the opposite sign in any wave, the owner is unchanged and the O-A paragraph carries, in its first sentence, that the direction is not corroborated on the second wage source in that wave, with C7's coverage stated.\"",
+      "verdict": "the sign does NOT agree with C6 in this window, so the direction is not corroborated on the second wage source; the owner is unchanged and C7's coverage (55.66 / 58.52 / 62.22% of named mass against C6's 99%) is the reason it is not decisive",
+      "notes": "rank and sign only, never a level: Spearman with C6 0.9869 / 0.9861 / 0.9869"
+    },
+    "rob_model_b_feb2026": {
+      "label": "model (b): the design-based task-resampling bound, 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 2188,
+      "sample": "the analysis set; tasks resampled equal-probability inside each extreme quartile",
+      "estimates": {
+        "D": {
+          "coef": 0.6688743125891541,
+          "ci": [
+            -10.613579561769892,
+            11.9513281869482
+          ],
+          "se": 5.756459748423464,
+          "mde": 16.1180872955857,
+          "unit": "pp; the generalisation-to-other-task-mixes bound"
+        }
+      },
+      "prereg_rule": "prereg P1(b): reported beside (a) as the generalisation bound, in no decision rule",
+      "verdict": "nothing below about 16 percentage points is resolved as a statement about tasks in general",
+      "notes": "Kish effective N on the usage weights: 125.7 against a nominal 2188"
+    },
+    "rob_placebo_feb2026": {
+      "label": "the placebo: the wage permuted within SOC major group, 5\u201312 Feb 2026",
+      "kind": "robustness",
+      "script": "scripts/06_robustness.py",
+      "n": 2188,
+      "sample": "the analysis set; 10,000 seeded permutations, quartiles re-drawn on the permuted wage",
+      "estimates": {
+        "observed_D": {
+          "coef": 0.6688743125891541,
+          "unit": "pp"
+        },
+        "permutation_mean": {
+          "coef": 4.841788595211245,
+          "unit": "pp"
+        },
+        "permutation_sd": {
+          "coef": 3.713526434580539,
+          "unit": "pp"
+        },
+        "permutation_band_95": {
+          "coef": 4.841788595211245,
+          "ci": [
+            -3.3714975517374817,
+            11.165715875815303
+          ],
+          "unit": "pp"
+        },
+        "two_sided_p": {
+          "coef": 0.9503049695030497,
+          "unit": "probability"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 9: \"Reported here as the task-level bound it is... It is in no decision rule.\"",
+      "verdict": "the observed D lies inside the permutation band (two-sided p = 0.9503); the band is not centred on zero because the permutation is within major group, which preserves the between-group composition",
+      "notes": "a task-level bound of the order of model (b)'s MDE"
+    },
+    "rob_fourth_window_feb2026": {
+      "label": "P7: the fourth window (Feb\u2013Mar 2025), read on 5\u201312 Feb 2026's quartiles",
+      "kind": "robustness",
+      "script": "scripts/07_fourth_window.py",
+      "n": 1618,
+      "sample": "1904 of 2188 analysis-set tasks matched in `automation_vs_augmentation_by_task.csv` (98.08% of their mass); 286 entirely `filtered` tasks dropped, never zeroed",
+      "estimates": {
+        "D": {
+          "coef": 5.759821611779294,
+          "ci": [
+            -4.559006372358704,
+            16.07864959591729
+          ],
+          "se": 5.264804855669797,
+          "mde": 14.74145359587543,
+          "unit": "pp; design-based interval only, the window publishes no counts"
+        },
+        "D_classified_weights": {
+          "coef": 6.100434327414057,
+          "ci": [
+            -4.32469550900298,
+            16.525564163831092
+          ],
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P7: \"This window is in no decision rule and cannot declare or refute an owner\"; design-based only",
+      "verdict": "positive in sign, unresolved: the design-based interval spans zero at an MDE of 14.7 pp",
+      "notes": "no task-level `none` share exists in this release, so \u00a79(1)'s `none`-beside-every-share rule holds at the global level only; the window's global automation share is 43.2902% against the release's published 43.0619%"
+    },
+    "desc_quartile_shares_aug2025": {
+      "label": "each wage quartile's automation share with its `none` share, 4\u201311 Aug 2025",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 1802,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "Q1": {
+          "coef": 53.051043035318536,
+          "ci": [
+            52.8481951983707,
+            53.25389087226637
+          ],
+          "se": 0.10349569530248062,
+          "mde": 0.2897879468469457,
+          "none_share": 3.592241130928593,
+          "not_classified_share": 3.644289126616023,
+          "mean_wage": 19.82074008643852,
+          "kish": 62.390508224067354,
+          "mass_wave": 22.310766059716258,
+          "tasks": 600,
+          "conversations": 199614.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q2": {
+          "coef": 47.00822019323269,
+          "ci": [
+            46.80326476292273,
+            47.21317562354265
+          ],
+          "se": 0.10457101778908083,
+          "mde": 0.29279884980942633,
+          "none_share": 1.8661369164173591,
+          "not_classified_share": 3.027731287662904,
+          "mean_wage": 31.021708569250542,
+          "kish": 43.36084598257434,
+          "mass_wave": 21.868150553554486,
+          "tasks": 499,
+          "conversations": 200595.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q3": {
+          "coef": 49.84389871716818,
+          "ci": [
+            49.64558230016792,
+            50.04221513416844
+          ],
+          "se": 0.1011837038844879,
+          "mde": 0.2833143708765661,
+          "none_share": 1.8905435832944202,
+          "not_classified_share": 2.1332766185669865,
+          "mean_wage": 40.4490826262345,
+          "kish": 29.264461291568136,
+          "mass_wave": 22.424919180419977,
+          "tasks": 343,
+          "conversations": 207584.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q4": {
+          "coef": 54.43468853825182,
+          "ci": [
+            54.23726538915772,
+            54.63211168734592
+          ],
+          "se": 0.10072794658172375,
+          "mde": 0.28203825042882646,
+          "none_share": 1.213550011444267,
+          "not_classified_share": 2.251773861295479,
+          "mean_wage": 50.11509503142771,
+          "kish": 10.64482888090708,
+          "mass_wave": 22.649181850794285,
+          "tasks": 360,
+          "conversations": 210880.0,
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg \u00a79(1): the `none` share is printed beside every automation share so the base is never implicit; description, in no decision rule",
+      "verdict": "not monotone in the wage: the share falls from Q1 to Q2 and rises to Q4 in all three windows",
+      "notes": "P5's augmentation clause: 0 of 3 augmentation patterns are weakly increasing across the quartiles"
+    },
+    "desc_pattern_shares_aug2025": {
+      "label": "the five collaboration patterns' shares by wage quartile, 4\u201311 Aug 2025",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 1802,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "directive_Q1": {
+          "coef": 44.89901872507925,
+          "ci": [
+            44.69694019361732,
+            45.10109725654118
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q2": {
+          "coef": 43.72104931004632,
+          "ci": [
+            43.5165262909336,
+            43.92557232915904
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q3": {
+          "coef": 34.67700510708975,
+          "ci": [
+            34.481359812900244,
+            34.87265040127925
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q4": {
+          "coef": 37.91540435824168,
+          "ci": [
+            37.715264684326826,
+            38.115544032156535
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q1": {
+          "coef": 8.152024310239284,
+          "ci": [
+            8.045534761451043,
+            8.258513859027525
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q2": {
+          "coef": 3.2871708831863655,
+          "ci": [
+            3.214171115308276,
+            3.360170651064455
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q3": {
+          "coef": 15.166893610078434,
+          "ci": [
+            15.030249287651184,
+            15.303537932505684
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q4": {
+          "coef": 16.51928418001013,
+          "ci": [
+            16.372995962900657,
+            16.6655723971196
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q1": {
+          "coef": 22.578068633763454,
+          "ci": [
+            22.416698717121708,
+            22.7394385504052
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q2": {
+          "coef": 19.26271754133901,
+          "ci": [
+            19.128558382595074,
+            19.39687670008295
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q3": {
+          "coef": 25.242881391733192,
+          "ci": [
+            25.080949030317406,
+            25.40481375314898
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q4": {
+          "coef": 18.12911547600746,
+          "ci": [
+            17.990043290690583,
+            18.268187661324337
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q1": {
+          "coef": 19.831343200187103,
+          "ci": [
+            19.670615571794553,
+            19.992070828579653
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q2": {
+          "coef": 30.34341913543737,
+          "ci": [
+            30.158991628996016,
+            30.52784664187872
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q3": {
+          "coef": 20.07368415546428,
+          "ci": [
+            19.911478620914373,
+            20.23588969001419
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q4": {
+          "coef": 23.56577970573214,
+          "ci": [
+            23.39141108258987,
+            23.74014832887441
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q1": {
+          "coef": 4.539545130730916,
+          "ci": [
+            4.4559683671744335,
+            4.623121894287399
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q2": {
+          "coef": 3.3856431299909358,
+          "ci": [
+            3.310515090956285,
+            3.4607711690255867
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q3": {
+          "coef": 4.839535735634353,
+          "ci": [
+            4.751714024062107,
+            4.9273574472065995
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q4": {
+          "coef": 3.8704162800085924,
+          "ci": [
+            3.791593258351444,
+            3.9492393016657408
+          ],
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg H2/P5: description with each quartile share's own interval, in no decision rule",
+      "verdict": "the five shares sum to 100 in every quartile, by construction",
+      "notes": "'outright' describes `directive` alone"
+    },
+    "desc_leave_one_group_out_aug2025": {
+      "label": "leg (c): leave-one-group-out re-estimates and the group-spanning bucket, 4\u201311 Aug 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 1802,
+      "sample": "the analysis set; 22 major groups plus the group-spanning bucket",
+      "estimates": {
+        "leave_out_11": {
+          "coef": 2.5576716352877895,
+          "ci": [
+            2.2678168155621843,
+            2.8475264550133947
+          ],
+          "se": 0.14788782841195314,
+          "mde": 0.41408591955346874,
+          "move": 1.1740261323545067,
+          "unit": "pp"
+        },
+        "leave_out_13": {
+          "coef": 0.818497764804448,
+          "ci": [
+            0.5334574104085414,
+            1.1035381192003546
+          ],
+          "se": 0.1454314234322195,
+          "mde": 0.40720798561021454,
+          "move": -0.5651477381288348,
+          "unit": "pp"
+        },
+        "leave_out_15": {
+          "coef": -13.031857513857098,
+          "ci": [
+            -13.468049791765653,
+            -12.595665235948543
+          ],
+          "se": 0.222551168240108,
+          "mde": 0.6231432710723024,
+          "move": -14.41550301679038,
+          "unit": "pp"
+        },
+        "leave_out_17": {
+          "coef": 1.776060316277976,
+          "ci": [
+            1.489274141700186,
+            2.062846490855766
+          ],
+          "se": 0.146322164375361,
+          "mde": 0.40970206025101075,
+          "move": 0.3924148133446932,
+          "unit": "pp"
+        },
+        "leave_out_19": {
+          "coef": 2.324891321268894,
+          "ci": [
+            2.032363057177262,
+            2.617419585360526
+          ],
+          "se": 0.1492518556930801,
+          "mde": 0.4179051959406243,
+          "move": 0.9412458183356114,
+          "unit": "pp"
+        },
+        "leave_out_21": {
+          "coef": 0.35920354257069775,
+          "ci": [
+            0.07231789236355607,
+            0.6460891927778394
+          ],
+          "se": 0.14637291817969192,
+          "mde": 0.40984417090313735,
+          "move": -1.024441960362585,
+          "unit": "pp"
+        },
+        "leave_out_23": {
+          "coef": 1.789568228777434,
+          "ci": [
+            1.5048203748716398,
+            2.0743160826832283
+          ],
+          "se": 0.14528218574718424,
+          "mde": 0.40679012009211585,
+          "move": 0.4059227258441511,
+          "unit": "pp"
+        },
+        "leave_out_25": {
+          "coef": -1.4782465161086216,
+          "ci": [
+            -1.7784851310230345,
+            -1.1780079011942086
+          ],
+          "se": 0.15318578040944264,
+          "mde": 0.42892018514643937,
+          "move": -2.861892019041904,
+          "unit": "pp"
+        },
+        "leave_out_27": {
+          "coef": 1.63116456945362,
+          "ci": [
+            1.3427632137740304,
+            1.9195659251332098
+          ],
+          "se": 0.14714625150236926,
+          "mde": 0.4120095042066339,
+          "move": 0.24751906652033728,
+          "unit": "pp"
+        },
+        "leave_out_29": {
+          "coef": 2.4127881818858703,
+          "ci": [
+            2.124343794885795,
+            2.7012325688859455
+          ],
+          "se": 0.14716820666097694,
+          "mde": 0.4120709786507354,
+          "move": 1.0291426789525875,
+          "unit": "pp"
+        },
+        "leave_out_31": {
+          "coef": 1.2582624982505162,
+          "ci": [
+            0.9740403605386219,
+            1.5424846359624105
+          ],
+          "se": 0.145013958272649,
+          "mde": 0.4060390831634172,
+          "move": -0.12538300468276664,
+          "unit": "pp"
+        },
+        "leave_out_33": {
+          "coef": 1.379133722307373,
+          "ci": [
+            1.0957068989014949,
+            1.662560545713251
+          ],
+          "se": 0.14460817821443567,
+          "mde": 0.40490289900041987,
+          "move": -0.004511780625909845,
+          "unit": "pp"
+        },
+        "leave_out_35": {
+          "coef": 1.447283589160618,
+          "ci": [
+            1.1631742286257942,
+            1.7313929496954417
+          ],
+          "se": 0.14495641783972749,
+          "mde": 0.4058779699512369,
+          "move": 0.06363808622733513,
+          "unit": "pp"
+        },
+        "leave_out_37": {
+          "coef": 1.368440173766187,
+          "ci": [
+            1.0851357523708458,
+            1.6517445951615284
+          ],
+          "se": 0.14454572706199778,
+          "mde": 0.4047280357735938,
+          "move": -0.015205329167095716,
+          "unit": "pp"
+        },
+        "leave_out_39": {
+          "coef": 1.3664137941792789,
+          "ci": [
+            1.0825051507202827,
+            1.650322437638275
+          ],
+          "se": 0.1448540092874135,
+          "mde": 0.4055912260047577,
+          "move": -0.017231708754003927,
+          "unit": "pp"
+        },
+        "leave_out_41": {
+          "coef": 1.1036223843696502,
+          "ci": [
+            0.8175798306999311,
+            1.3896649380393693
+          ],
+          "se": 0.1459427589842054,
+          "mde": 0.40863972515577507,
+          "move": -0.2800231185636326,
+          "unit": "pp"
+        },
+        "leave_out_43": {
+          "coef": 4.625674373750488,
+          "ci": [
+            4.323777466886014,
+            4.927571280614963
+          ],
+          "se": 0.1540318632712001,
+          "mde": 0.4312892171593603,
+          "move": 3.2420288708172054,
+          "unit": "pp"
+        },
+        "leave_out_45": {
+          "coef": 1.3301694820084473,
+          "ci": [
+            1.0461156036908044,
+            1.6142233603260903
+          ],
+          "se": 0.14492811006612513,
+          "mde": 0.40579870818515035,
+          "move": -0.0534760209248355,
+          "unit": "pp"
+        },
+        "leave_out_47": {
+          "coef": 1.3612657268558959,
+          "ci": [
+            1.077857484886176,
+            1.6446739688256158
+          ],
+          "se": 0.1445986977157335,
+          "mde": 0.4048763536040538,
+          "move": -0.022379776077386948,
+          "unit": "pp"
+        },
+        "leave_out_49": {
+          "coef": 1.5151236254991127,
+          "ci": [
+            1.2305032400072662,
+            1.7997440109909593
+          ],
+          "se": 0.14521714964756832,
+          "mde": 0.40660801901319127,
+          "move": 0.1314781225658299,
+          "unit": "pp"
+        },
+        "leave_out_51": {
+          "coef": 2.0227210570905245,
+          "ci": [
+            1.7348024687408632,
+            2.310639645440186
+          ],
+          "se": 0.14689993711601915,
+          "mde": 0.4113198239248536,
+          "move": 0.6390755541572417,
+          "unit": "pp"
+        },
+        "leave_out_53": {
+          "coef": 1.4782197257271832,
+          "ci": [
+            1.1946027961588017,
+            1.7618366552955647
+          ],
+          "se": 0.14470517293602403,
+          "mde": 0.40517448422086727,
+          "move": 0.09457422279390038,
+          "unit": "pp"
+        },
+        "leave_out_group-spanning bucket": {
+          "coef": 1.2707759296619459,
+          "ci": [
+            0.9869297595685309,
+            1.5546220997553608
+          ],
+          "se": 0.144822134535846,
+          "mde": 0.40550197670036875,
+          "move": -0.11286957327133695,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P3(c)/\u00a710: 22 re-estimates plus the 23rd group-spanning bucket, reported under \u00a710 as description; the SOC-15 leave-out dominates by construction and the post says so",
+      "verdict": "Computer & Mathematical is the largest mover in every window; its removal moves D further than every other group's",
+      "notes": "not independent evidence from leg (a): the same group dominates both"
+    },
+    "desc_ten_largest_out_aug2025": {
+      "label": "the leave-out of the ten largest tasks by usage mass, 4\u201311 Aug 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 1802,
+      "sample": "the analysis set less its ten largest tasks (22.9409 pp of the wave = 24.9703% of named mass)",
+      "estimates": {
+        "D": {
+          "coef": -11.615090072956466,
+          "ci": [
+            -11.966512126094733,
+            -11.2636680198182
+          ],
+          "se": 0.17930025915693687,
+          "mde": 0.5020407256394233,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 3: the denominator stated each time; movers named",
+      "verdict": "clears \u22121 pp in this wave (step (2)'s clause holds here)",
+      "notes": "movers: assist students who need extra help with their coursework outside of class.; correct errors by making appropriate changes and rechecking the program to ensure that the desired results are produced.; design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. \u2026"
+    },
+    "desc_quartile_shares_nov2025": {
+      "label": "each wage quartile's automation share with its `none` share, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 2075,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "Q1": {
+          "coef": 46.584611774529535,
+          "ci": [
+            46.38367564791617,
+            46.7855479011429
+          ],
+          "se": 0.10252031497178869,
+          "mde": 0.2870568819210083,
+          "none_share": 3.117561891784073,
+          "not_classified_share": 4.3892402651832425,
+          "mean_wage": 18.987145318596234,
+          "kish": 54.96256571063227,
+          "mass_wave": 22.31188898612323,
+          "tasks": 699,
+          "conversations": 206344.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q2": {
+          "coef": 41.31919092030262,
+          "ci": [
+            41.12388305973881,
+            41.514498780866425
+          ],
+          "se": 0.0996486979168025,
+          "mde": 0.279016354167047,
+          "none_share": 1.0825265181177481,
+          "not_classified_share": 3.5572542179824675,
+          "mean_wage": 30.65906219374286,
+          "kish": 38.32999209712632,
+          "mass_wave": 22.478009751218877,
+          "tasks": 576,
+          "conversations": 214324.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q3": {
+          "coef": 45.97921120326116,
+          "ci": [
+            45.78852780845445,
+            46.16989459806787
+          ],
+          "se": 0.0972892332750564,
+          "mde": 0.27240985317015787,
+          "none_share": 1.888697354324739,
+          "not_classified_share": 2.373656992456661,
+          "mean_wage": 39.96762324551012,
+          "kish": 29.00841630000841,
+          "mass_wave": 22.685135641955224,
+          "tasks": 397,
+          "conversations": 217155.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q4": {
+          "coef": 53.9700246005849,
+          "ci": [
+            53.78214624730485,
+            54.15790295386495
+          ],
+          "se": 0.09585806335220953,
+          "mde": 0.26840257738618667,
+          "none_share": 1.2251570315484608,
+          "not_classified_share": 2.55292873832812,
+          "mean_wage": 50.95971007827819,
+          "kish": 8.870371430625289,
+          "mass_wave": 22.51421427678458,
+          "tasks": 403,
+          "conversations": 216609.0,
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg \u00a79(1): the `none` share is printed beside every automation share so the base is never implicit; description, in no decision rule",
+      "verdict": "not monotone in the wage: the share falls from Q1 to Q2 and rises to Q4 in all three windows",
+      "notes": "P5's augmentation clause: 0 of 3 augmentation patterns are weakly increasing across the quartiles"
+    },
+    "desc_pattern_shares_nov2025": {
+      "label": "the five collaboration patterns' shares by wage quartile, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 2075,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "directive_Q1": {
+          "coef": 37.48957995843774,
+          "ci": [
+            37.29495282276611,
+            37.68420709410936
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q2": {
+          "coef": 37.49009614964357,
+          "ci": [
+            37.29602682190556,
+            37.684165477381576
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q3": {
+          "coef": 27.819647036105124,
+          "ci": [
+            27.639386590585026,
+            27.999907481625222
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q4": {
+          "coef": 27.99070032413187,
+          "ci": [
+            27.809510724754517,
+            28.17188992350922
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q1": {
+          "coef": 9.095031816091797,
+          "ci": [
+            8.987839317775071,
+            9.202224314408523
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q2": {
+          "coef": 3.829094770659056,
+          "ci": [
+            3.755704986747119,
+            3.9024845545709934
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q3": {
+          "coef": 18.159564167156045,
+          "ci": [
+            18.025826237459633,
+            18.293302096852457
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q4": {
+          "coef": 25.97932427645302,
+          "ci": [
+            25.82085188900885,
+            26.13779666389719
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q1": {
+          "coef": 23.87709694343567,
+          "ci": [
+            23.71523659361118,
+            24.03895729326016
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q2": {
+          "coef": 16.414793820827793,
+          "ci": [
+            16.293949528092455,
+            16.53563811356313
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q3": {
+          "coef": 24.269353087791067,
+          "ci": [
+            24.111942717266555,
+            24.42676345831558
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q4": {
+          "coef": 17.466264864626652,
+          "ci": [
+            17.333599998717762,
+            17.59892973053554
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q1": {
+          "coef": 25.17787625615299,
+          "ci": [
+            25.008995627566097,
+            25.346756884739886
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q2": {
+          "coef": 38.691051655404955,
+          "ci": [
+            38.50474917710423,
+            38.87735413370568
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q3": {
+          "coef": 24.361596919582155,
+          "ci": [
+            24.195986193269846,
+            24.527207645894464
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q4": {
+          "coef": 24.820840975307373,
+          "ci": [
+            24.64864636985121,
+            24.993035580763536
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q1": {
+          "coef": 4.360415025881808,
+          "ci": [
+            4.277707034109078,
+            4.443123017654539
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q2": {
+          "coef": 3.5749636034646244,
+          "ci": [
+            3.50065648490297,
+            3.649270722026279
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q3": {
+          "coef": 5.389838789365625,
+          "ci": [
+            5.299930717385909,
+            5.479746861345342
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q4": {
+          "coef": 3.7428695594810915,
+          "ci": [
+            3.666124478237518,
+            3.819614640724665
+          ],
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg H2/P5: description with each quartile share's own interval, in no decision rule",
+      "verdict": "the five shares sum to 100 in every quartile, by construction",
+      "notes": "'outright' describes `directive` alone"
+    },
+    "desc_leave_one_group_out_nov2025": {
+      "label": "leg (c): leave-one-group-out re-estimates and the group-spanning bucket, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2075,
+      "sample": "the analysis set; 22 major groups plus the group-spanning bucket",
+      "estimates": {
+        "leave_out_11": {
+          "coef": 9.462376550532932,
+          "ci": [
+            9.17909346829773,
+            9.745659632768135
+          ],
+          "se": 0.1445348395354211,
+          "mde": 0.40469755069917906,
+          "move": 2.0769637244775776,
+          "unit": "pp"
+        },
+        "leave_out_13": {
+          "coef": 6.906100921351886,
+          "ci": [
+            6.628969080032543,
+            7.183232762671229
+          ],
+          "se": 0.1413963936681198,
+          "mde": 0.3959099022707354,
+          "move": -0.4793119047034686,
+          "unit": "pp"
+        },
+        "leave_out_15": {
+          "coef": -10.470148206135976,
+          "ci": [
+            -10.880498956101935,
+            -10.059797456170017
+          ],
+          "se": 0.2093664730403002,
+          "mde": 0.5862261245128405,
+          "move": -17.855561032191332,
+          "unit": "pp"
+        },
+        "leave_out_17": {
+          "coef": 8.03964605191446,
+          "ci": [
+            7.761192012016361,
+            8.318100091812559
+          ],
+          "se": 0.14207099717040647,
+          "mde": 0.3977987920771381,
+          "move": 0.6542332258591053,
+          "unit": "pp"
+        },
+        "leave_out_19": {
+          "coef": 8.751050812759223,
+          "ci": [
+            8.469397312116216,
+            9.03270431340223
+          ],
+          "se": 0.14370340508448431,
+          "mde": 0.4023695342365561,
+          "move": 1.3656379867038684,
+          "unit": "pp"
+        },
+        "leave_out_21": {
+          "coef": 6.161778025023272,
+          "ci": [
+            5.8811301130955735,
+            6.442425936950971
+          ],
+          "se": 0.1431903401938497,
+          "mde": 0.40093295254277916,
+          "move": -1.223634801032082,
+          "unit": "pp"
+        },
+        "leave_out_23": {
+          "coef": 7.60143062540279,
+          "ci": [
+            7.325146840972602,
+            7.877714409832977
+          ],
+          "se": 0.14096370363444813,
+          "mde": 0.39469837017645476,
+          "move": 0.21601779934743526,
+          "unit": "pp"
+        },
+        "leave_out_25": {
+          "coef": 5.456203613052119,
+          "ci": [
+            5.160771163564755,
+            5.7516360625394825
+          ],
+          "se": 0.15073361015169845,
+          "mde": 0.42205410842475566,
+          "move": -1.9292092130032357,
+          "unit": "pp"
+        },
+        "leave_out_27": {
+          "coef": 7.549755430489079,
+          "ci": [
+            7.2680379403487505,
+            7.831472920629408
+          ],
+          "se": 0.1437360533868625,
+          "mde": 0.4024609494832149,
+          "move": 0.16434260443372484,
+          "unit": "pp"
+        },
+        "leave_out_29": {
+          "coef": 8.502226538104132,
+          "ci": [
+            8.222146317613575,
+            8.78230675859469
+          ],
+          "se": 0.14290069638552413,
+          "mde": 0.40012194987946753,
+          "move": 1.1168137120487778,
+          "unit": "pp"
+        },
+        "leave_out_31": {
+          "coef": 7.252712995834201,
+          "ci": [
+            6.975929061378006,
+            7.529496930290396
+          ],
+          "se": 0.14121888690618553,
+          "mde": 0.39541288333731944,
+          "move": -0.13269983022115373,
+          "unit": "pp"
+        },
+        "leave_out_33": {
+          "coef": 7.313197374840783,
+          "ci": [
+            7.0375956826631185,
+            7.5887990670184475
+          ],
+          "se": 0.14061569099109195,
+          "mde": 0.3937239347750574,
+          "move": -0.0722154512145714,
+          "unit": "pp"
+        },
+        "leave_out_35": {
+          "coef": 7.400360031956702,
+          "ci": [
+            7.123866384305276,
+            7.676853679608128
+          ],
+          "se": 0.14107077867319298,
+          "mde": 0.3949981802849403,
+          "move": 0.014947205901347793,
+          "unit": "pp"
+        },
+        "leave_out_37": {
+          "coef": 7.413950213415288,
+          "ci": [
+            7.1385769360113605,
+            7.689323490819215
+          ],
+          "se": 0.14049915070069033,
+          "mde": 0.3933976219619329,
+          "move": 0.028537387359933497,
+          "unit": "pp"
+        },
+        "leave_out_39": {
+          "coef": 7.362864504987784,
+          "ci": [
+            7.086681923220854,
+            7.639047086754714
+          ],
+          "se": 0.14091206867418485,
+          "mde": 0.39455379228771753,
+          "move": -0.02254832106757032,
+          "unit": "pp"
+        },
+        "leave_out_41": {
+          "coef": 7.12628335673004,
+          "ci": [
+            6.846189170979404,
+            7.406377542480676
+          ],
+          "se": 0.14290782164908952,
+          "mde": 0.40014190061745064,
+          "move": -0.25912946932531433,
+          "unit": "pp"
+        },
+        "leave_out_43": {
+          "coef": 9.707566454290756,
+          "ci": [
+            9.416048626177904,
+            9.999084282403608
+          ],
+          "se": 0.14873631766341194,
+          "mde": 0.4164616894575534,
+          "move": 2.3221536282354016,
+          "unit": "pp"
+        },
+        "leave_out_45": {
+          "coef": 7.330506850072221,
+          "ci": [
+            7.054328112288749,
+            7.606685587855694
+          ],
+          "se": 0.1409101074221119,
+          "mde": 0.39454830078191333,
+          "move": -0.05490597598313318,
+          "unit": "pp"
+        },
+        "leave_out_47": {
+          "coef": 7.374249901922269,
+          "ci": [
+            7.098900822385493,
+            7.649598981459046
+          ],
+          "se": 0.1404868046233383,
+          "mde": 0.3933630529453472,
+          "move": -0.011162924133085284,
+          "unit": "pp"
+        },
+        "leave_out_49": {
+          "coef": 7.70123156588919,
+          "ci": [
+            7.424507259404617,
+            7.977955872373762
+          ],
+          "se": 0.1411884639128944,
+          "mde": 0.3953276989561043,
+          "move": 0.31581873983383524,
+          "unit": "pp"
+        },
+        "leave_out_51": {
+          "coef": 7.8700931267044725,
+          "ci": [
+            7.592587396614574,
+            8.147598856794371
+          ],
+          "se": 0.1415871567487458,
+          "mde": 0.3964440388964882,
+          "move": 0.48468030064911805,
+          "unit": "pp"
+        },
+        "leave_out_53": {
+          "coef": 7.422808681179326,
+          "ci": [
+            7.147221700639805,
+            7.698395661718847
+          ],
+          "se": 0.14060818491539684,
+          "mde": 0.3937029177631111,
+          "move": 0.0373958551239717,
+          "unit": "pp"
+        },
+        "leave_out_group-spanning bucket": {
+          "coef": 7.310925934688342,
+          "ci": [
+            7.035166727377917,
+            7.586685141998767
+          ],
+          "se": 0.14069605733086132,
+          "mde": 0.3939489605264117,
+          "move": -0.07448689136701248,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P3(c)/\u00a710: 22 re-estimates plus the 23rd group-spanning bucket, reported under \u00a710 as description; the SOC-15 leave-out dominates by construction and the post says so",
+      "verdict": "Computer & Mathematical is the largest mover in every window; its removal moves D further than every other group's",
+      "notes": "not independent evidence from leg (a): the same group dominates both"
+    },
+    "desc_ten_largest_out_nov2025": {
+      "label": "the leave-out of the ten largest tasks by usage mass, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2075,
+      "sample": "the analysis set less its ten largest tasks (24.2471 pp of the wave = 25.9288% of named mass)",
+      "estimates": {
+        "D": {
+          "coef": -13.076952362941828,
+          "ci": [
+            -13.423769032828782,
+            -12.730135693054875
+          ],
+          "se": 0.17695053066635558,
+          "mde": 0.4954614858657956,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 3: the denominator stated each time; movers named",
+      "verdict": "clears \u22121 pp in this wave (step (2)'s clause holds here)",
+      "notes": "movers: assist students who need extra help with their coursework outside of class.; correct errors by making appropriate changes and rechecking the program to ensure that the desired results are produced.; design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media. \u2026"
+    },
+    "desc_use_case_mix_nov2025": {
+      "label": "leg (d): each wage quartile's use-case mix, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2075,
+      "sample": "the analysis set; shares of each quartile's published `use_case` cells",
+      "estimates": {
+        "Q1_work": {
+          "coef": 32.80365411424038,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_personal": {
+          "coef": 44.515915030189475,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_coursework": {
+          "coef": 20.773137419259406,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_not_classified": {
+          "coef": 1.9072934363107432,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_work": {
+          "coef": 48.34217270591586,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_personal": {
+          "coef": 32.42329322987115,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_coursework": {
+          "coef": 17.600288317790277,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_not_classified": {
+          "coef": 1.6342457464227238,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_work": {
+          "coef": 45.994894697627664,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_personal": {
+          "coef": 26.66440352168872,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_coursework": {
+          "coef": 26.35402935328428,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_not_classified": {
+          "coef": 0.9866724273993378,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_work": {
+          "coef": 60.82251659159359,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_personal": {
+          "coef": 24.58620965377542,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_coursework": {
+          "coef": 13.437191822809776,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_not_classified": {
+          "coef": 1.1540819318212105,
+          "unit": "% of the quartile's published use_case cells"
+        }
+      },
+      "prereg_rule": "prereg P3(d): description, in no decision rule",
+      "verdict": "the work share rises with the wage quartile in both windows, which is the reason leg (e) is run",
+      "notes": "August publishes no `use_case` facet at any grain"
+    },
+    "desc_slope_work_share_nov2025": {
+      "label": "the continuous companion with the task's work share as a covariate, 13\u201320 Nov 2025",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2046,
+      "sample": "the 2046 analysis-set tasks with a defined work share",
+      "estimates": {
+        "slope_wage_only": {
+          "coef": 1.7826264230064095,
+          "ci": [
+            1.7083212752881705,
+            1.8569315707246485
+          ],
+          "mde": 0.10615216075962078,
+          "unit": "pp per +$10/hr"
+        },
+        "slope_wage_with_work_share": {
+          "coef": -0.06241198305753326,
+          "ci": [
+            -0.14082874185712965,
+            0.016004775742063132
+          ],
+          "mde": 0.11202599876266599,
+          "unit": "pp per +$10/hr, partial"
+        },
+        "slope_work_share_per_10pp": {
+          "coef": 2.4573466761049594,
+          "ci": [
+            2.4233332016326528,
+            2.491360150577266
+          ],
+          "unit": "pp per +10 pp of work share"
+        },
+        "corr_wage_work_share": {
+          "coef": 0.34275479535585657,
+          "unit": "usage-weighted correlation"
+        },
+        "vif": {
+          "coef": 1.1331198872055623,
+          "unit": "variance inflation factor"
+        }
+      },
+      "prereg_rule": "prereg \u00a79(3)(e) with referee item 14: the usage-weighted pairwise correlation and VIF of wage and work share printed beside it, since the two predictors compete",
+      "verdict": "the wage slope changes sign or size once the work share is in the regression, at a VIF of 1.13\u20131.14",
+      "notes": "description; in no decision rule"
+    },
+    "desc_quartile_shares_feb2026": {
+      "label": "each wage quartile's automation share with its `none` share, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 2188,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "Q1": {
+          "coef": 48.84708229995783,
+          "ci": [
+            48.64905148491287,
+            49.0451131150028
+          ],
+          "se": 0.10103798592472535,
+          "mde": 0.28290636058923097,
+          "none_share": 3.418684935427326,
+          "not_classified_share": 4.177100847851744,
+          "mean_wage": 17.987228185341575,
+          "kish": 51.028732801733,
+          "mass_wave": 22.362399999999987,
+          "tasks": 649,
+          "conversations": 206638.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q2": {
+          "coef": 41.55127964187314,
+          "ci": [
+            41.35772306925722,
+            41.744836214489055
+          ],
+          "se": 0.09875516724588898,
+          "mde": 0.27651446828848913,
+          "none_share": 1.1042748417383885,
+          "not_classified_share": 3.977878938758083,
+          "mean_wage": 29.56280696001097,
+          "kish": 50.53816850399023,
+          "mass_wave": 22.49439999999999,
+          "tasks": 641,
+          "conversations": 213512.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q3": {
+          "coef": 43.51489699489192,
+          "ci": [
+            43.32295353207226,
+            43.70684045771158
+          ],
+          "se": 0.09793213692682882,
+          "mde": 0.2742099833951207,
+          "none_share": 2.167002722724692,
+          "not_classified_share": 2.6060364907700038,
+          "mean_wage": 39.35638729114298,
+          "kish": 37.220416545230954,
+          "mass_wave": 22.367299999999993,
+          "tasks": 416,
+          "conversations": 212997.0,
+          "unit": "pp of classified conversations"
+        },
+        "Q4": {
+          "coef": 49.515956612546994,
+          "ci": [
+            49.32633291107661,
+            49.705580314017375
+          ],
+          "se": 0.09674856347891052,
+          "mde": 0.2708959777409494,
+          "none_share": 1.139013891171754,
+          "not_classified_share": 3.0980822453322148,
+          "mean_wage": 50.817208790489836,
+          "kish": 16.447384869350277,
+          "mass_wave": 22.510699999999993,
+          "tasks": 482,
+          "conversations": 215569.0,
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg \u00a79(1): the `none` share is printed beside every automation share so the base is never implicit; description, in no decision rule",
+      "verdict": "not monotone in the wage: the share falls from Q1 to Q2 and rises to Q4 in all three windows",
+      "notes": "P5's augmentation clause: 0 of 3 augmentation patterns are weakly increasing across the quartiles"
+    },
+    "desc_pattern_shares_feb2026": {
+      "label": "the five collaboration patterns' shares by wage quartile, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/03_headline.py",
+      "n": 2188,
+      "sample": "the analysis set, four quartiles of usage mass",
+      "estimates": {
+        "directive_Q1": {
+          "coef": 39.96132513493197,
+          "ci": [
+            39.7698065222835,
+            40.152843747580434
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q2": {
+          "coef": 37.27179069097165,
+          "ci": [
+            37.08090373985136,
+            37.46267764209194
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q3": {
+          "coef": 29.085126234211078,
+          "ci": [
+            28.90255639999381,
+            29.267696068428346
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "directive_Q4": {
+          "coef": 30.032718489495863,
+          "ci": [
+            29.849353327440415,
+            30.216083651551312
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q1": {
+          "coef": 8.88575716502586,
+          "ci": [
+            8.778970640069188,
+            8.992543689982531
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q2": {
+          "coef": 4.279488950901479,
+          "ci": [
+            4.20362913523106,
+            4.355348766571898
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q3": {
+          "coef": 14.429770760680844,
+          "ci": [
+            14.307649017125664,
+            14.551892504236024
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "feedback loop_Q4": {
+          "coef": 19.48323812305113,
+          "ci": [
+            19.340151406586667,
+            19.626324839515593
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q1": {
+          "coef": 25.333038930091853,
+          "ci": [
+            25.169175060773618,
+            25.496902799410087
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q2": {
+          "coef": 18.744437333969294,
+          "ci": [
+            18.617173482372166,
+            18.871701185566423
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q3": {
+          "coef": 26.630826139898915,
+          "ci": [
+            26.470140553007596,
+            26.791511726790233
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "learning_Q4": {
+          "coef": 22.046175589807028,
+          "ci": [
+            21.90159304477116,
+            22.190758134842895
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q1": {
+          "coef": 21.932084594253148,
+          "ci": [
+            21.7727884527301,
+            22.091380735776195
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q2": {
+          "coef": 35.94153503612017,
+          "ci": [
+            35.75979164582611,
+            36.12327842641423
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q3": {
+          "coef": 24.69278826781684,
+          "ci": [
+            24.52645666977992,
+            24.859119865853764
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "task iteration_Q4": {
+          "coef": 24.12499484811867,
+          "ci": [
+            23.95493260464204,
+            24.295057091595304
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q1": {
+          "coef": 3.887794175697185,
+          "ci": [
+            3.8093106353807293,
+            3.966277716013641
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q2": {
+          "coef": 3.76274798803739,
+          "ci": [
+            3.687506175786897,
+            3.8379898002878834
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q3": {
+          "coef": 5.1614885973923315,
+          "ci": [
+            5.072760612201951,
+            5.250216582582712
+          ],
+          "unit": "pp of classified conversations"
+        },
+        "validation_Q4": {
+          "coef": 4.3128729495273195,
+          "ci": [
+            4.230906252173916,
+            4.394839646880723
+          ],
+          "unit": "pp of classified conversations"
+        }
+      },
+      "prereg_rule": "prereg H2/P5: description with each quartile share's own interval, in no decision rule",
+      "verdict": "the five shares sum to 100 in every quartile, by construction",
+      "notes": "'outright' describes `directive` alone"
+    },
+    "desc_leave_one_group_out_feb2026": {
+      "label": "leg (c): leave-one-group-out re-estimates and the group-spanning bucket, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2188,
+      "sample": "the analysis set; 22 major groups plus the group-spanning bucket",
+      "estimates": {
+        "leave_out_11": {
+          "coef": 2.6449374368374325,
+          "ci": [
+            2.3601113251961374,
+            2.9297635484787277
+          ],
+          "se": 0.14532211389663038,
+          "mde": 0.40690191891056504,
+          "move": 1.9760631242482785,
+          "unit": "pp"
+        },
+        "leave_out_13": {
+          "coef": -0.1293723445532202,
+          "ci": [
+            -0.40714422146116547,
+            0.1483995323547251
+          ],
+          "se": 0.1417229484357597,
+          "mde": 0.39682425562012713,
+          "move": -0.7982466571423743,
+          "unit": "pp"
+        },
+        "leave_out_15": {
+          "coef": -11.89518383993165,
+          "ci": [
+            -12.276325521169193,
+            -11.514042158694108
+          ],
+          "se": 0.1944636132283766,
+          "mde": 0.5444981170394545,
+          "move": -12.564058152520804,
+          "unit": "pp"
+        },
+        "leave_out_17": {
+          "coef": 1.1756860933846662,
+          "ci": [
+            0.8982025423721702,
+            1.4531696443971622
+          ],
+          "se": 0.14157584068508197,
+          "mde": 0.3964123539182295,
+          "move": 0.5068117807955121,
+          "unit": "pp"
+        },
+        "leave_out_19": {
+          "coef": 2.1316016533013658,
+          "ci": [
+            1.8495232968349828,
+            2.4136800097677487
+          ],
+          "se": 0.1439201722411141,
+          "mde": 0.4029764822751195,
+          "move": 1.4627273407122117,
+          "unit": "pp"
+        },
+        "leave_out_21": {
+          "coef": -0.5932454717832244,
+          "ci": [
+            -0.8723720338769874,
+            -0.3141189096894615
+          ],
+          "se": 0.14241412704200837,
+          "mde": 0.3987595557176234,
+          "move": -1.2621197843723784,
+          "unit": "pp"
+        },
+        "leave_out_23": {
+          "coef": 0.885959518645414,
+          "ci": [
+            0.6107093344767663,
+            1.1612097028140616
+          ],
+          "se": 0.14043634687608939,
+          "mde": 0.39322177125305025,
+          "move": 0.21708520605625992,
+          "unit": "pp"
+        },
+        "leave_out_25": {
+          "coef": -1.1533200474708474,
+          "ci": [
+            -1.4410483758426826,
+            -0.8655917190990122
+          ],
+          "se": 0.14680286391578373,
+          "mde": 0.4110480189641944,
+          "move": -1.8221943600600015,
+          "unit": "pp"
+        },
+        "leave_out_27": {
+          "coef": 0.21535165287511598,
+          "ci": [
+            -0.06395859554059374,
+            0.4946619012908257
+          ],
+          "se": 0.14250784627457938,
+          "mde": 0.39902196956882224,
+          "move": -0.4535226597140381,
+          "unit": "pp"
+        },
+        "leave_out_29": {
+          "coef": 1.7304167367290983,
+          "ci": [
+            1.450534709874142,
+            2.010298763584055
+          ],
+          "se": 0.14279957532636137,
+          "mde": 0.3998388109138118,
+          "move": 1.0615424241399443,
+          "unit": "pp"
+        },
+        "leave_out_31": {
+          "coef": 0.4392538417029065,
+          "ci": [
+            0.16346877026656842,
+            0.7150389131392445
+          ],
+          "se": 0.14070925355585004,
+          "mde": 0.3939859099563801,
+          "move": -0.2296204708862476,
+          "unit": "pp"
+        },
+        "leave_out_33": {
+          "coef": 0.6405041700040195,
+          "ci": [
+            0.36554085358700017,
+            0.9154674864210388
+          ],
+          "se": 0.1402899830900054,
+          "mde": 0.3928119526520151,
+          "move": -0.028370142585134595,
+          "unit": "pp"
+        },
+        "leave_out_35": {
+          "coef": 0.8319053755647151,
+          "ci": [
+            0.5555997818498529,
+            1.1082109692795772
+          ],
+          "se": 0.14097483102488728,
+          "mde": 0.3947295268696844,
+          "move": 0.16303106297556103,
+          "unit": "pp"
+        },
+        "leave_out_37": {
+          "coef": 0.7332437347581882,
+          "ci": [
+            0.4585254838120234,
+            1.007961985704353
+          ],
+          "se": 0.14016494738993407,
+          "mde": 0.3924618526918154,
+          "move": 0.06436942216903407,
+          "unit": "pp"
+        },
+        "leave_out_39": {
+          "coef": 0.6102411995837904,
+          "ci": [
+            0.3348990426253024,
+            0.8855833565422784
+          ],
+          "se": 0.14048327263076668,
+          "mde": 0.3933531633661467,
+          "move": -0.05863311300536367,
+          "unit": "pp"
+        },
+        "leave_out_41": {
+          "coef": 1.3860527684267638,
+          "ci": [
+            1.1032458860249896,
+            1.668859650828538
+          ],
+          "se": 0.14429187597413737,
+          "mde": 0.4040172527275846,
+          "move": 0.7171784558376098,
+          "unit": "pp"
+        },
+        "leave_out_43": {
+          "coef": 3.5786267759579693,
+          "ci": [
+            3.283841151271586,
+            3.8734124006443524
+          ],
+          "se": 0.1504035914365687,
+          "mde": 0.42113005602239234,
+          "move": 2.9097524633688154,
+          "unit": "pp"
+        },
+        "leave_out_45": {
+          "coef": 0.5153316287146286,
+          "ci": [
+            0.23984578994750627,
+            0.7908174674817509
+          ],
+          "se": 0.14055658102246893,
+          "mde": 0.393558426862913,
+          "move": -0.15354268387452552,
+          "unit": "pp"
+        },
+        "leave_out_47": {
+          "coef": 0.6720184912849644,
+          "ci": [
+            0.3975152045954047,
+            0.9465217779745241
+          ],
+          "se": 0.1400552697343215,
+          "mde": 0.39215475525610016,
+          "move": 0.0031441786958102957,
+          "unit": "pp"
+        },
+        "leave_out_49": {
+          "coef": 0.8886101374234598,
+          "ci": [
+            0.612857559036113,
+            1.1643627158108067
+          ],
+          "se": 0.14069267516512896,
+          "mde": 0.39393949046236104,
+          "move": 0.21973582483430576,
+          "unit": "pp"
+        },
+        "leave_out_51": {
+          "coef": 0.7390323585963052,
+          "ci": [
+            0.46393249691352945,
+            1.014132220279081
+          ],
+          "se": 0.14035965032152417,
+          "mde": 0.3930070209002677,
+          "move": 0.07015804600715114,
+          "unit": "pp"
+        },
+        "leave_out_53": {
+          "coef": 0.6618602591301522,
+          "ci": [
+            0.38715356165515163,
+            0.9365669566051529
+          ],
+          "se": 0.1401590526535184,
+          "mde": 0.39244534742985154,
+          "move": -0.007014053459001857,
+          "unit": "pp"
+        },
+        "leave_out_group-spanning bucket": {
+          "coef": 0.5313058953990619,
+          "ci": [
+            0.25648645133366377,
+            0.8061253394644601
+          ],
+          "se": 0.1402165774807079,
+          "mde": 0.3926064169459821,
+          "move": -0.13756841719009216,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg P3(c)/\u00a710: 22 re-estimates plus the 23rd group-spanning bucket, reported under \u00a710 as description; the SOC-15 leave-out dominates by construction and the post says so",
+      "verdict": "Computer & Mathematical is the largest mover in every window; its removal moves D further than every other group's",
+      "notes": "not independent evidence from leg (a): the same group dominates both"
+    },
+    "desc_ten_largest_out_feb2026": {
+      "label": "the leave-out of the ten largest tasks by usage mass, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2188,
+      "sample": "the analysis set less its ten largest tasks (19.4410 pp of the wave = 20.9107% of named mass)",
+      "estimates": {
+        "D": {
+          "coef": -11.425971695985435,
+          "ci": [
+            -11.751612548154917,
+            -11.100330843815954
+          ],
+          "se": 0.16614634359074062,
+          "mde": 0.4652097620540737,
+          "unit": "pp"
+        }
+      },
+      "prereg_rule": "prereg \u00a7Robustness 3: the denominator stated each time; movers named",
+      "verdict": "clears \u22121 pp in this wave (step (2)'s clause holds here)",
+      "notes": "movers: assist students who need extra help with their coursework outside of class.; design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media.; diagnose, troubleshoot, and resolve hardware, software, or other network and system problems, and replace defective components when necessary. \u2026"
+    },
+    "desc_use_case_mix_feb2026": {
+      "label": "leg (d): each wage quartile's use-case mix, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2188,
+      "sample": "the analysis set; shares of each quartile's published `use_case` cells",
+      "estimates": {
+        "Q1_work": {
+          "coef": 29.0505491360498,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_personal": {
+          "coef": 56.328927127678604,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_coursework": {
+          "coef": 12.986978141881014,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q1_not_classified": {
+          "coef": 1.633545594390584,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_work": {
+          "coef": 51.139839248879724,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_personal": {
+          "coef": 36.017408777295685,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_coursework": {
+          "coef": 11.169446617824882,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q2_not_classified": {
+          "coef": 1.6733053559997155,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_work": {
+          "coef": 43.96999190782974,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_personal": {
+          "coef": 37.23694858118772,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_coursework": {
+          "coef": 17.683850978884355,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q3_not_classified": {
+          "coef": 1.1002669074944227,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_work": {
+          "coef": 60.53565637674528,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_personal": {
+          "coef": 30.22784720155304,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_coursework": {
+          "coef": 7.885583300386038,
+          "unit": "% of the quartile's published use_case cells"
+        },
+        "Q4_not_classified": {
+          "coef": 1.350913121315641,
+          "unit": "% of the quartile's published use_case cells"
+        }
+      },
+      "prereg_rule": "prereg P3(d): description, in no decision rule",
+      "verdict": "the work share rises with the wage quartile in both windows, which is the reason leg (e) is run",
+      "notes": "August publishes no `use_case` facet at any grain"
+    },
+    "desc_slope_work_share_feb2026": {
+      "label": "the continuous companion with the task's work share as a covariate, 5\u201312 Feb 2026",
+      "kind": "descriptive",
+      "script": "scripts/05_legs.py",
+      "n": 2167,
+      "sample": "the 2167 analysis-set tasks with a defined work share",
+      "estimates": {
+        "slope_wage_only": {
+          "coef": -0.2848013576514997,
+          "ci": [
+            -0.35642554182746417,
+            -0.21317717347553528
+          ],
+          "mde": 0.10232214249481135,
+          "unit": "pp per +$10/hr"
+        },
+        "slope_wage_with_work_share": {
+          "coef": -1.6272935872574945,
+          "ci": [
+            -1.7029373138806534,
+            -1.5516498606343356
+          ],
+          "mde": 0.10806445146178446,
+          "unit": "pp per +$10/hr, partial"
+        },
+        "slope_work_share_per_10pp": {
+          "coef": 1.4954037484555942,
+          "ci": [
+            1.4628820152334243,
+            1.527925481677764
+          ],
+          "unit": "pp per +10 pp of work share"
+        },
+        "corr_wage_work_share": {
+          "coef": 0.34886093693922204,
+          "unit": "usage-weighted correlation"
+        },
+        "vif": {
+          "coef": 1.138568258143084,
+          "unit": "variance inflation factor"
+        }
+      },
+      "prereg_rule": "prereg \u00a79(3)(e) with referee item 14: the usage-weighted pairwise correlation and VIF of wage and work share printed beside it, since the two predictors compete",
+      "verdict": "the wage slope changes sign or size once the work share is in the regression, at a VIF of 1.13\u20131.14",
+      "notes": "description; in no decision rule"
+    }
+  },
+  "facts": {
+    "declared_owner": {
+      "value": "O-A",
+      "label": "the owner \u00a79(1)'s ordered chain declares, on the pre-registered quartile rule",
+      "script": "scripts/03_headline.py",
+      "source_check": "the chain is the function whose power was pre-registered in 01_power_rules.py; steps: {\"step1_all_lower_above_delta\": false, \"step2_all_upper_below_minus_delta\": false, \"step3_all_signed_excluding_zero\": true, \"step4_all_inside_delta\": false}",
+      "intervals": [
+        [
+          1.100585182943628,
+          1.6667058229229377
+        ],
+        [
+          7.11032447186782,
+          7.660501180242889
+        ],
+        [
+          0.3946967207500287,
+          0.9430519044282795
+        ]
+      ],
+      "points": [
+        1.3836455029332828,
+        7.385412826055354,
+        0.6688743125891541
+      ],
+      "ses": [
+        0.1444211832409446,
+        0.14035377904264273,
+        0.1398890958400896
+      ]
+    },
+    "declared_owner_corrected_quartile_rule": {
+      "value": "O-A",
+      "label": "the same chain on the corrected quartile rule (the DEVIATION of 2026-09-17)",
+      "script": "scripts/03_headline.py",
+      "source_check": "both readings give the same owner",
+      "points": [
+        0.5433975034132135,
+        7.179331096001813,
+        0.33865814544653233
+      ]
+    },
+    "H3_declaration": {
+      "value": true,
+      "label": "H3 declared under the primary persistent-leg rule (a leg fires in every wave in which it is testable)",
+      "script": "scripts/05_legs.py",
+      "source_check": "legs firing in every testable wave: a, b",
+      "k_of_8_fired": 6,
+      "leg_tests": 8,
+      "literal_any_wave_rule": true,
+      "rules_agree": true,
+      "per_leg": {
+        "a": {
+          "waves_fired": 3,
+          "waves_testable": 3,
+          "fired_by_wave": {
+            "aug2025": true,
+            "nov2025": true,
+            "feb2026": true
+          }
+        },
+        "b": {
+          "waves_fired": 3,
+          "waves_testable": 3,
+          "fired_by_wave": {
+            "aug2025": true,
+            "nov2025": true,
+            "feb2026": true
+          }
+        },
+        "e": {
+          "waves_fired": 0,
+          "waves_testable": 2,
+          "fired_by_wave": {
+            "nov2025": false,
+            "feb2026": false
+          }
+        }
+      },
+      "on_the_2010_grouping": true
+    },
+    "H1_signature_clause": {
+      "value": false,
+      "label": "H1's own signature clause: D keeping more than half its size, with the same sign, on every leg testable in that wave",
+      "script": "scripts/05_legs.py",
+      "source_check": "{\"aug2025\": {\"legs_testable\": [\"a\", \"b\"], \"keeps_half_and_sign_on_every_testable_leg\": false}, \"nov2025\": {\"legs_testable\": [\"a\", \"b\", \"e\"], \"keeps_half_and_sign_on_every_testable_leg\": false}, \"feb2026\": {\"legs_testable\": [\"a\", \"b\", \"e\"], \"keeps_half_and_sign_on_every_testable_leg\": false}}"
+    },
+    "second_implementation_agreement": {
+      "value": 1.7763568394002505e-14,
+      "label": "the largest absolute disagreement in D between the two independent implementations (pp)",
+      "script": "scripts/04_second_implementation.py",
+      "source_check": "tolerance 1e-9 pp; wage-map differences 0 in every wave; quartile-label differences 0; analysis-set difference 0",
+      "max_abs_diff_p": 2.1316282072803006e-14,
+      "max_abs_diff_w": 8.326672684688674e-17,
+      "max_abs_diff_delta_w": 3.1329105976141136e-15,
+      "max_abs_diff_slope": 1.0658141036401503e-14,
+      "bootstrap_vs_closed_form_max_rel": 0.009323226482572309,
+      "bootstrap_coverage": [
+        95.28999999999999,
+        95.22,
+        95.19
+      ]
+    },
+    "synthetic_recovery": {
+      "value": true,
+      "label": "every estimator the post relies on recovers a known effect and returns zero for zero",
+      "script": "scripts/04_second_implementation.py",
+      "source_check": "{\"D_coverage_by_implanted_gap\": {\"gap_0.0\": 94.39999999999999, \"gap_0.5\": 95.39999999999999, \"gap_1.0\": 95.1, \"gap_3.0\": 94.35}, \"Delta_W_abs_err\": 8.881784197001252e-15, \"slope_abs_err\": 3.1086244689504383e-15, \"leg_b_within_group_vs_total\": [0.1654533031549772, 16.24230573350707], \"leg_e_only_not_classified_dropped\": true, \"design_bootstrap_rel_err\": 0.036220157423986384, \"permutation_size_pc\": 4.933333333333334, \"kish_exact\": true}"
+    },
+    "sample_aug2025": {
+      "value": 1802,
+      "label": "analysis-set tasks, 4\u201311 Aug 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 1,802 / 2,075 / 2,188 tasks",
+      "named_nodes": 2616,
+      "named_mass": 91.87273326739191,
+      "analysis_mass_wave": 89.253017644485,
+      "analysis_share_named": 97.14853849478678,
+      "classified_conversations": 818673.0,
+      "dropped_wage_no_classified_cell": 805,
+      "dropped_wage_no_classified_cell_mass": 2.0257254062751695,
+      "dropped_classified_cell_no_wage": 5,
+      "dropped_classified_cell_no_wage_mass": 0.5843478549374074,
+      "priced_tasks": 2607,
+      "priced_share_named": 99.35346408503712
+    },
+    "kish_aug2025": {
+      "value": 94.4052414607331,
+      "label": "Kish effective N on the usage weights, analysis set, 4\u201311 Aug 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 94.4 / 83.4 / 125.7 on the analysis set",
+      "kish_named": 99.67961222202567,
+      "nominal_named": 2616,
+      "nominal_analysis": 1802,
+      "by_quartile": [
+        62.390508224067354,
+        43.36084598257434,
+        29.264461291568136,
+        10.64482888090708
+      ]
+    },
+    "quartile_boundaries_aug2025": {
+      "value": [
+        25.78365384615385,
+        35.55769230769231,
+        43.39903846153846
+      ],
+      "label": "usage-weighted wage quartile boundaries, $/hr, 4\u201311 Aug 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: $25.78 / $35.79 / $43.40, $25.78 / $34.56 / $43.40, $24.00 / $34.40 / $43.40 on the equal-split wage",
+      "boundary_tie_mass": {
+        "b1_25.78": {
+          "tasks": 3,
+          "mass": 0.602595765240634,
+          "quartiles_spanned": [
+            1
+          ]
+        },
+        "b2_35.56": {
+          "tasks": 12,
+          "mass": 0.1290832291336177,
+          "quartiles_spanned": [
+            2
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 99,
+          "mass": 10.601206435706178,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "q4_mass_from_boundary_tie": 7.32549917365997,
+      "equal_split_rule_boundaries": [
+        25.85576923076923,
+        35.78846153846154,
+        43.39903846153846
+      ]
+    },
+    "mde_aug2025": {
+      "value": 0.40437931307464486,
+      "label": "realised MDE(80%) for D, 4\u201311 Aug 2025",
+      "script": "scripts/03_headline.py",
+      "source_check": "MDE = 2.8 \u00d7 SE; the pre-registered figure was 0.42 / 0.42 / 0.43 pp",
+      "se": 0.1444211832409446,
+      "pooled_binomial_se": 0.15568995397077812,
+      "design_based_mde": 14.07202258386146,
+      "design_based_se": 5.025722351379093
+    },
+    "replication_aug2025": {
+      "value": 51.06977045149392,
+      "label": "the wave's five-pattern automation share, 4\u201311 Aug 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "published 49% / 45% / 44% on the all-conversation base; reproduced 49.0980 / 45.3554 / 44.1569 and 51.0698 / 46.7394 / 45.5456 on the five-classified base",
+      "all_pattern_share": 49.09797261569279,
+      "internal_check_value": 51.20005312722551,
+      "internal_check_gap": 0.13028267573158558
+    },
+    "sample_nov2025": {
+      "value": 2075,
+      "label": "analysis-set tasks, 13\u201320 Nov 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 1,802 / 2,075 / 2,188 tasks",
+      "named_nodes": 3168,
+      "named_mass": 93.5143892986622,
+      "analysis_mass_wave": 89.98924865608191,
+      "analysis_share_named": 96.2303762351248,
+      "classified_conversations": 854432.0,
+      "dropped_wage_no_classified_cell": 1079,
+      "dropped_wage_no_classified_cell_mass": 2.5729216152018566,
+      "dropped_classified_cell_no_wage": 12,
+      "dropped_classified_cell_no_wage_mass": 0.947518439804975,
+      "priced_tasks": 3154,
+      "priced_share_named": 98.98174063422766
+    },
+    "kish_nov2025": {
+      "value": 83.37889799110593,
+      "label": "Kish effective N on the usage weights, analysis set, 13\u201320 Nov 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 94.4 / 83.4 / 125.7 on the analysis set",
+      "kish_named": 89.47529710538038,
+      "nominal_named": 3168,
+      "nominal_analysis": 2075,
+      "by_quartile": [
+        54.96256571063227,
+        38.32999209712632,
+        29.00841630000841,
+        8.870371430625289
+      ]
+    },
+    "quartile_boundaries_nov2025": {
+      "value": [
+        25.78365384615385,
+        34.86538461538461,
+        43.39903846153846
+      ],
+      "label": "usage-weighted wage quartile boundaries, $/hr, 13\u201320 Nov 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: $25.78 / $35.79 / $43.40, $25.78 / $34.56 / $43.40, $24.00 / $34.40 / $43.40 on the equal-split wage",
+      "boundary_tie_mass": {
+        "b1_25.78": {
+          "tasks": 6,
+          "mass": 0.5585698212276533,
+          "quartiles_spanned": [
+            1,
+            2
+          ]
+        },
+        "b2_34.87": {
+          "tasks": 4,
+          "mass": 0.5521690211276408,
+          "quartiles_spanned": [
+            2,
+            3
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 106,
+          "mass": 8.358644830603822,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "q4_mass_from_boundary_tie": 4.933916739592448,
+      "equal_split_rule_boundaries": [
+        25.783653846153847,
+        34.86538461538461,
+        43.39903846153846
+      ]
+    },
+    "mde_nov2025": {
+      "value": 0.3929905813193996,
+      "label": "realised MDE(80%) for D, 13\u201320 Nov 2025",
+      "script": "scripts/03_headline.py",
+      "source_check": "MDE = 2.8 \u00d7 SE; the pre-registered figure was 0.42 / 0.42 / 0.43 pp",
+      "se": 0.14035377904264273,
+      "pooled_binomial_se": 0.15338816632629246,
+      "design_based_mde": 20.157778101917096,
+      "design_based_se": 7.199206464970391
+    },
+    "replication_nov2025": {
+      "value": 46.73940265926802,
+      "label": "the wave's five-pattern automation share, 13\u201320 Nov 2025",
+      "script": "scripts/02_build.py",
+      "source_check": "published 49% / 45% / 44% on the all-conversation base; reproduced 49.0980 / 45.3554 / 44.1569 and 51.0698 / 46.7394 / 45.5456 on the five-classified base",
+      "all_pattern_share": 45.35536942117765,
+      "internal_check_value": 47.03247012106165,
+      "internal_check_gap": 0.2930674617936262
+    },
+    "sample_feb2026": {
+      "value": 2188,
+      "label": "analysis-set tasks, 5\u201312 Feb 2026",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 1,802 / 2,075 / 2,188 tasks",
+      "named_nodes": 3258,
+      "named_mass": 92.97139999999996,
+      "analysis_mass_wave": 89.73479999999996,
+      "analysis_share_named": 96.51871435731849,
+      "classified_conversations": 848716.0,
+      "dropped_wage_no_classified_cell": 1056,
+      "dropped_wage_no_classified_cell_mass": 2.582299999999983,
+      "dropped_classified_cell_no_wage": 12,
+      "dropped_classified_cell_no_wage_mass": 0.6502999999999998,
+      "priced_tasks": 3244,
+      "priced_share_named": 99.2962351863046
+    },
+    "kish_feb2026": {
+      "value": 125.69438830722775,
+      "label": "Kish effective N on the usage weights, analysis set, 5\u201312 Feb 2026",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: 94.4 / 83.4 / 125.7 on the analysis set",
+      "kish_named": 134.3172208115801,
+      "nominal_named": 3258,
+      "nominal_analysis": 2188,
+      "by_quartile": [
+        51.028732801733,
+        50.53816850399023,
+        37.220416545230954,
+        16.447384869350277
+      ]
+    },
+    "quartile_boundaries_feb2026": {
+      "value": [
+        24.004807692307693,
+        34.44711538461539,
+        43.39903846153846
+      ],
+      "label": "usage-weighted wage quartile boundaries, $/hr, 5\u201312 Feb 2026",
+      "script": "scripts/02_build.py",
+      "source_check": "feasibility.md \u00a74: $25.78 / $35.79 / $43.40, $25.78 / $34.56 / $43.40, $24.00 / $34.40 / $43.40 on the equal-split wage",
+      "boundary_tie_mass": {
+        "b1_24.00": {
+          "tasks": 8,
+          "mass": 0.7113999999999998,
+          "quartiles_spanned": [
+            1,
+            2
+          ]
+        },
+        "b2_34.45": {
+          "tasks": 5,
+          "mass": 0.0760999999999999,
+          "quartiles_spanned": [
+            2,
+            3
+          ]
+        },
+        "b3_43.40": {
+          "tasks": 111,
+          "mass": 7.952799999999998,
+          "quartiles_spanned": [
+            3,
+            4
+          ]
+        }
+      },
+      "q4_mass_from_boundary_tie": 6.138399999999999,
+      "equal_split_rule_boundaries": [
+        24.004807692307693,
+        34.44711538461539,
+        43.39903846153846
+      ]
+    },
+    "mde_feb2026": {
+      "value": 0.3916894683522509,
+      "label": "realised MDE(80%) for D, 5\u201312 Feb 2026",
+      "script": "scripts/03_headline.py",
+      "source_check": "MDE = 2.8 \u00d7 SE; the pre-registered figure was 0.42 / 0.42 / 0.43 pp",
+      "se": 0.1398890958400896,
+      "pooled_binomial_se": 0.1539095438853073,
+      "design_based_mde": 16.1180872955857,
+      "design_based_se": 5.756459748423464
+    },
+    "replication_feb2026": {
+      "value": 45.54558488308526,
+      "label": "the wave's five-pattern automation share, 5\u201312 Feb 2026",
+      "script": "scripts/02_build.py",
+      "source_check": "published 49% / 45% / 44% on the all-conversation base; reproduced 49.0980 / 45.3554 / 44.1569 and 51.0698 / 46.7394 / 45.5456 on the five-classified base",
+      "all_pattern_share": 44.156899999999986,
+      "internal_check_value": 45.89657970472861,
+      "internal_check_gap": 0.35099482164334717
+    },
+    "fig211_released_library": {
+      "value": -3.111834,
+      "label": "Figure 2.11 reproduced by Anthropic's own released library (partial slope)",
+      "script": "scripts/02_build.py",
+      "source_check": "published \u22123.112 / 0.394 / N 111",
+      "partial_r2": 0.393687,
+      "n_countries": 111
+    },
+    "rule_power": {
+      "value": 0.5171635019904668,
+      "label": "the true |D| at which O-A or stronger is declared with 80% probability (pp)",
+      "script": "scripts/01_power_rules.py",
+      "source_check": "prereg P2; exact normal calculation and 400,000-triple Monte Carlo",
+      "H1_or_H2_80pc": 1.5171635019904666,
+      "H4_declared_80pc": 0.32369414342009417,
+      "H4_clause_80pc": 0.4828364980095292,
+      "P_H1_at_true_D_1pp": 1.562500000000001e-05
+    },
+    "owner_under_robustness": {
+      "value": "O-A",
+      "label": "the owner the ordered chain declares under each pre-registered robustness cut",
+      "script": "scripts/06_robustness.py",
+      "source_check": "{\"primary\": \"O-A\", \"X3_under_100_dropped\": \"H1\", \"W1_equal_split\": \"O-A\", \"W1_modal_holder\": \"O-B\", \"C7_second_wage_source\": \"H2\", \"X5_drop_sc_over_10pc\": \"O-B\", \"X5_drop_sc_over_20pc\": \"O-A\", \"X4_sc_netted_weights\": \"O-A\"}",
+      "owners": {
+        "primary": "O-A",
+        "X3_under_100_dropped": "H1",
+        "W1_equal_split": "O-A",
+        "W1_modal_holder": "O-B",
+        "C7_second_wage_source": "H2",
+        "X5_drop_sc_over_10pc": "O-B",
+        "X5_drop_sc_over_20pc": "O-A",
+        "X4_sc_netted_weights": "O-A"
+      },
+      "points": {
+        "primary": [
+          1.3836455029332828,
+          7.385412826055354,
+          0.6688743125891541
+        ],
+        "X3_under_100_dropped": [
+          2.6049257563666557,
+          9.072526553412992,
+          1.5933570315781929
+        ],
+        "W1_equal_split": [
+          1.3769650024306144,
+          7.385268970185302,
+          0.6581207941533805
+        ],
+        "W1_modal_holder": [
+          0.31721186431216125,
+          7.704387429798516,
+          -0.17008753590871947
+        ],
+        "C7_second_wage_source": [
+          -15.589897490265576,
+          -11.890081362034657,
+          -16.714112416095272
+        ],
+        "X5_drop_sc_over_10pc": [
+          1.3836455029332828,
+          -4.581534368297316,
+          0.6688743125891541
+        ],
+        "X5_drop_sc_over_20pc": [
+          1.3836455029332828,
+          7.504228335610009,
+          0.6688743125891541
+        ],
+        "X4_sc_netted_weights": [
+          1.3836455029332828,
+          6.546269153233452,
+          0.6688743125891541
+        ]
+      }
+    },
+    "C7_sign_agreement": {
+      "value": false,
+      "label": "whether the second wage source carries the declared sign in all three windows (P6)",
+      "script": "scripts/06_robustness.py",
+      "source_check": "{\"aug2025\": false, \"nov2025\": false, \"feb2026\": false}",
+      "coverage_share_named": [
+        55.659305253203016,
+        58.522695066559535,
+        62.22107013554705
+      ],
+      "spearman_with_C6": [
+        0.9870791749000217,
+        0.986091143376725,
+        0.9869133024792749
+      ]
+    },
+    "november_is_corroborated_not_independent": {
+      "value": true,
+      "label": "X6, a reporting rule: November is corroborated by August and February, never treated as independent confirmation, because X4 and X5 cannot reach the per-task rates",
+      "script": "scripts/06_robustness.py",
+      "source_check": "SC is 24,715 conversations (2.47181% of the wave) with 0 rows of onet_task::collaboration; 23 analysis-set tasks carry SC above 10% of their global count, 11.594 pp of the wave, 8.913 pp of it in Q4"
+    },
+    "generalisation_sentence": {
+      "value": 20.157778101917096,
+      "label": "the design-based MDE, the bound on any claim about tasks in general (pp); a claim about work in general is not licensed",
+      "script": "scripts/06_robustness.py",
+      "source_check": "model (b) MDE 14.1 / 20.2 / 16.1 pp against the pre-registered 12.5 / 17.4 / 16.1"
+    },
+    "conventions_and_constants": {
+      "value": 2080,
+      "label": "the constants and conventions the post may cite: the hours-per-year divisor, the vintages, the window dates, the test constants and the counts of the design",
+      "script": "scripts/02_build.py and scripts/09_results_and_figures.py",
+      "source_check": "$208,000 \u00f7 2,080 = $100.00/hr is the wage file's top code; the shipped O*NET DB is 20.1 on 2010 O*NET-SOC codes, recoded to 2019 for any grouping; BLS-EP is keyed on SOC-2018",
+      "hours_per_year": 2080,
+      "top_code_annual": 208000,
+      "top_code_hourly": 100.0,
+      "onet_db_version": 20.1,
+      "vintage_shipped": 2010,
+      "vintage_grouping": 2019,
+      "bls_ep_soc_vintage": 2018,
+      "window_aug": [
+        2025,
+        8,
+        4,
+        11
+      ],
+      "window_nov": [
+        2025,
+        11,
+        13,
+        20
+      ],
+      "window_feb": [
+        2026,
+        2,
+        5,
+        12
+      ],
+      "release_dates": [
+        20250915,
+        20260115,
+        20260324,
+        20250210,
+        20250327
+      ],
+      "feb_sample_base": 1000000,
+      "wage_rows": 1090,
+      "wage_rows_kept": 1084,
+      "onet_statement_rows": 19530,
+      "onet_keys": 18428,
+      "onet_occupations": 974,
+      "onet_soc7": 775,
+      "soc_major_groups": 22,
+      "soc_computer_and_mathematical": 15,
+      "z_two_sided_95": 1.959964,
+      "mde_multiplier": 2.8,
+      "delta_pp": 1.0,
+      "waves": 3,
+      "quartiles": 4,
+      "classified_patterns": 5,
+      "confirmatory_estimates": 17,
+      "leg_tests": 8,
+      "exploratory_tests": 3,
+      "permutations": 10000,
+      "bootstrap_draws": 10000,
+      "seed": 20260917,
+      "materiality_pp_of_delta_w_per_point_of_gap": [
+        0.11,
+        0.12
+      ],
+      "gap_needed_for_one_point_of_delta_w": [
+        8,
+        9
+      ],
+      "percent_signs": [
+        100,
+        95,
+        80,
+        50,
+        25,
+        5,
+        1
+      ]
+    },
+    "country_mix_not_testable": {
+      "value": false,
+      "label": "whether the country mix inside a task can be cleaned at this grain",
+      "script": "scripts/06_robustness.py",
+      "source_check": "intersections are global only, so a per-task rate cannot be cleaned of its country blend and no reverse construction is identified"
+    }
+  },
+  "figures": {
+    "fig1": {
+      "file": "outputs/figures/fig1_D_by_wave.png",
+      "script": "scripts/09_results_and_figures.py",
+      "caption": "**In all three Claude.ai windows the delegated share is higher on top-quartile than on bottom-quartile tasks, and in none of them does the difference clear a percentage point in every window.** Plotted: D, the usage-weighted automation share of the top wage quartile minus that of the bottom, in percentage points, per window. Each point is one window of Claude.ai conversations (4\u201311 Aug 2025, 13\u201320 Nov 2025, 5\u201312 Feb 2026), estimated separately and never pooled or spliced. The automation share of a task is its `directive` plus `feedback loop` conversations divided by its five classified collaboration patterns (`directive`, `feedback loop`, `learning`, `task iteration`, `validation`) in `onet_task::collaboration` at global; the `none` and `not_classified` patterns are outside that denominator and each quartile's `none` share is reported in Figure 2. Tasks are sorted into usage-weighted wage quartiles on the hourly wage of the occupations that hold the task (`wage_data.csv` `MedianSalary` \u00f7 2080, employment-weighted over holders), and the quartile means are weighted by `onet_task_pct` so that the difference is about conversations and not about tasks. Sample: the 1,802 / 2,075 / 2,188 tasks that carry both a wage and at least one classified-pattern cell \u2014 97.15 / 96.23 / 96.52% of named-task usage mass, on 818,673 / 854,432 / 848,716 classified conversations; the 805 / 1,079 / 1,056 tasks with a wage and no classified cell and the 5 / 12 / 12 with a cell and no wage are dropped, never zeroed. Filled circles are the pre-registered quartile rule; open squares share the boundary wage between the two adjacent quartiles in proportion, which matters because $43.40/hr is a mass point carrying 8\u201311 pp of a window. Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release carries a user, account or session identifier, so no clustering is possible and these intervals are a lower bound on the sampling variance. The shaded band is the pre-registered indifference region of \u00b11 percentage point; the null value is zero. Read as a statement about tasks rather than conversations, a task-resampling design resolves nothing below about 14 to 20 percentage points."
+    },
+    "fig2": {
+      "file": "outputs/figures/fig2_quartile_shares.png",
+      "script": "scripts/09_results_and_figures.py",
+      "caption": "**The automation share is U-shaped in the wage of the work: it falls from the bottom quartile to the second and rises again to the top.** Plotted: each usage-weighted wage quartile's automation share, in percentage points of that quartile's classified conversations, one panel per Claude.ai window. The unit of analysis inside a panel is the quartile; each quartile holds a quarter of the window's usage mass, so the four points are not equally many tasks (Q1 holds 600 / 699 / 649 tasks and Q4 holds 360 / 403 / 482). The share is `directive` plus `feedback loop` over the five classified patterns of `onet_task::collaboration` at global, usage-weighted by `onet_task_pct`; the grey figure under each point is that quartile's `none` share of the node, printed so the base is never implicit. The x labels carry each quartile's usage-weighted mean hourly wage. Sample as Figure 1. Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed and are a lower bound on the sampling variance, there being no user, account or session identifier in any release to cluster on. The exhibit is not a statement about occupations: an occupation is inferred from the task, not from the user."
+    },
+    "fig3": {
+      "file": "outputs/figures/fig3_h3_legs.png",
+      "script": "scripts/09_results_and_figures.py",
+      "caption": "**The gradient does not survive either composition leg: excluding Computer & Mathematical tasks, or holding the occupational group fixed, turns it negative in all three windows; restricting to work-dominant tasks does not.** Plotted: D re-estimated under each pre-registered composition leg, in percentage points, one panel per Claude.ai window. Leg (a) removes the tasks rule A2 assigns to Computer & Mathematical (SOC major group 15 on the 2019 O*NET-SOC recode) \u2014 42.8 / 39.7 / 35.6% of analysis-set usage mass and 73.1 / 71.3 / 65.5% of the top quartile's \u2014 with the quartile boundaries kept from the full analysis set and never re-drawn. Leg (b) averages the within-group top-minus-bottom differences over the nine major groups that hold analysis-set tasks in both the global bottom and the global top quartile, each group weighted by its usage mass in those two quartiles; the other thirteen groups are reported as not identified, never as zeros. Leg (e) keeps the tasks whose `work` share is at least half of their published `use_case` cells (943 / 1,071 tasks in November and February; the 29 / 21 tasks whose only published cell is `not_classified` have an undefined work share and are dropped, never scored 0), and is untestable in August, where no facet name in the file contains `use_case`. The solid line is that window's D and the dashed line is half of it: a leg fires if its estimate loses the sign or more than half the size, which is the pre-registered rule, read on the point estimates. Bars are two-sided 95% intervals on the same conversation-level binomial model as Figure 1 and are a lower bound on the sampling variance. Each leg's MDE, its interval for D_L \u2212 \u00bdD and its retained mass are in `results.json`; the legs are not independent evidence, since Computer & Mathematical dominates both leg (a) and the leave-one-group-out series."
+    },
+    "fig4": {
+      "file": "outputs/figures/fig4_delta_w.png",
+      "script": "scripts/09_results_and_figures.py",
+      "caption": "**Weighting the published automation share by the wage of the work moves it by less than a tenth of a point in two windows and by eight tenths in the third.** Plotted: \u0394_W, the wage-weighted minus the unweighted usage-weighted automation share of Claude.ai conversations, in percentage points, per window; each marker is one window. \u0394_W is Cov_w(wage, p) \u00f7 E_w[wage] over the analysis set \u2014 the same per-task automation share p as Figure 1, the same `onet_task_pct` weights, and the task's hourly wage as the re-weighting variable \u2014 so it is the size of the error made when a conversation-counting automation share is read as though it were weighted by the wage bill at stake. It is an hourly rate, not a bill: no hours enter it. Sample as Figure 1. Bars are two-sided 95% intervals on the conversation-level binomial model and are a lower bound on the sampling variance. The null value is zero; the pre-registered materiality line is separate and higher than the quartile margin \u2014 about 0.11 to 0.12 pp of \u0394_W per point of quartile gap, so a full point of \u0394_W needs a gap of roughly 8 to 9 points."
+    }
+  }
+}

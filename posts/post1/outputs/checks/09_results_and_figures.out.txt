@@ -1,0 +1,9 @@
+wrote posts/post1/data/processed/results.json and posts/post1/outputs/figures.json
+  tests: {'confirmatory_estimates': 17, 'leg_tests': 8, 'exploratory_tests': 3, 'robustness_entries': 24, 'descriptive_entries': 16}
+  fig1: outputs/figures/fig1_D_by_wave.png  caption 350 words
+  fig2: outputs/figures/fig2_quartile_shares.png  caption 202 words
+  fig3: outputs/figures/fig3_h3_legs.png  caption 310 words
+  fig4: outputs/figures/fig4_delta_w.png  caption 195 words
+  POST.md does not exist yet: the verifier is tested on a synthetic sentence in the check block and will run at the writing stage
+
+CHECK BLOCK PASSED — 09_results_and_figures.py
