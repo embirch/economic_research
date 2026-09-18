@@ -23,16 +23,16 @@
     "./team/agents/director.md": {
       "kind": "agent",
       "id": "agent_0193GKsjm8DYDiTFrrXKtBgy",
-      "version": "4",
-      "hash": "c13792dfb8b0e8d7d87a89168184c0c8",
-      "remote_hash": "ec44efb5b6cfb60dfc724ae105575fa8"
+      "version": "5",
+      "hash": "8ceb93ad50b50b59dda0eb6c7f800a88",
+      "remote_hash": "cdfc279bfa2ff67b3e3b899c056a35f6"
     },
     "./team/agents/editor.md": {
       "kind": "agent",
       "id": "agent_013EeUahpP5iNHCwbW22aF7M",
-      "version": "3",
-      "hash": "e469058e7d29e79cbd72239a87cca884",
-      "remote_hash": "d5ba88190dcbc2d92e5b8eca23c1f16f"
+      "version": "4",
+      "hash": "dd441a40c7b1be7c249d706760a9b4b0",
+      "remote_hash": "9c4a8b62e6a92810b775067546751d67"
     },
     "./team/agents/programme-lead.md": {
       "kind": "agent",
