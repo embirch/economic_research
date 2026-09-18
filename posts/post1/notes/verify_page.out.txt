@@ -1,7 +1,7 @@
 verify_page post1
-  claims-map bindings resolved against results.json : 222
-  quantitative sentences in POST.md checked         : 45
-  numbers in POST.md checked against their own entry : 222
-  numbers in the built page's prose checked         : 1107
+  claims-map bindings resolved against results.json : 258
+  quantitative sentences in POST.md checked         : 56
+  numbers in POST.md checked against their own entry : 249
+  numbers in the built page's prose checked         : 1722
 
 PASS — every number on the page is in results.json.

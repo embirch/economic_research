@@ -43,24 +43,27 @@ CONV = "facts.conventions_and_constants"
 # editing the prose around a sentence cannot silently re-point its bindings.
 #   anchor -> (claims.md sentence id(s), [results.json keys], [as_printed])
 SPEC = [
- ("| Explanation | What it says", "2, 16, and the pre-registered margin",
+ ("| If the truth were this", "2, 16, and the pre-registered margin",
   ["facts.declared_owner.value", "facts.H3_declaration.value",
    "facts.H1_signature_clause.value", CONV + ".delta_pp"], []),
- ("The shares themselves are not monotone", "11", flat(
+ ("In every week it falls from the worst-paid quarter", "11", flat(
    d("tests.desc_quartile_shares_{w}.estimates.Q1.coef"),
    d("tests.desc_quartile_shares_{w}.estimates.Q2.coef"),
    d("tests.desc_quartile_shares_{w}.estimates.Q3.coef"),
-   d("tests.desc_quartile_shares_{w}.estimates.Q4.coef"),
+   d("tests.desc_quartile_shares_{w}.estimates.Q4.coef")), []),
+ ("Printed beside each quarter", "11 (the none share)", flat(
    d("tests.desc_quartile_shares_{w}.estimates.Q1.none_share"),
    d("tests.desc_quartile_shares_{w}.estimates.Q2.none_share"),
    d("tests.desc_quartile_shares_{w}.estimates.Q3.none_share"),
    d("tests.desc_quartile_shares_{w}.estimates.Q4.none_share")), []),
- ("In each of the three Claude.ai windows the automation share", "1 and 5", flat(
-   d("tests.D_{w}.estimates.D.coef"), d("tests.D_{w}.estimates.D.ci"),
-   [CONV + ".percent_signs", CONV + ".z_two_sided_95"]), []),
- ("On the corrected quartile rule", "3",
-  d("tests.D_{w}.estimates.D_corrected_quartile_rule.coef"), []),
- ("Tasks are sorted into usage-weighted wage quartiles",
+ ("In each of the three Claude.ai weeks the delegation share", "1", flat(
+   d("tests.D_{w}.estimates.D.coef"), d("tests.D_{w}.estimates.D.ci")), []),
+ ("The intervals around those numbers treat every conversation", "5",
+  [CONV + ".percent_signs", CONV + ".z_two_sided_95"], []),
+ ("On the corrected rule for drawing the quarters", "3", flat(
+   d("tests.D_{w}.estimates.D_corrected_quartile_rule.coef"),
+   ["facts.declared_owner_corrected_quartile_rule.value"]), []),
+ ("Tasks are ranked on the hourly wage of the occupations that hold them",
   "Figure 1 caption: the construction", [CONV + ".hours_per_year"], []),
  ("Sample: the 1,802", "24 and 25 (Figure 1 caption)", flat(
    d("facts.sample_{w}.value"), d("facts.sample_{w}.analysis_share_named"),
@@ -70,13 +73,11 @@ SPEC = [
  ("Filled circles are the pre-registered quartile rule", "4 (Figure 1 caption)", flat(
    ["facts.quartile_boundaries_aug2025.value"],
    d('facts.quartile_boundaries_{w}.boundary_tie_mass."b3_43.40".mass')), []),
- ("Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release",
+ ("held fixed; no release carries a user, account or session identifier",
   "5 (Figure 1 caption)", [CONV + ".percent_signs"], []),
- ("The shaded band is the pre-registered indifference region",
-  "the pre-registered margin (Figure 1 caption)", [CONV + ".delta_pp"], []),
- ("Read as a statement about tasks rather than about these windows' conversations, a task-resampling",
+ ("Read as a statement about tasks rather than about these weeks' conversations",
   "7 (Figure 1 caption)", ["facts.generalisation_sentence.realised_mde_by_wave"], []),
- ("Under the modal-holder wage rule", "9",
+ ("Under the rule that prices a task at the wage of the single occupation", "9",
   ["tests.rob_W1_modal_holder_feb2026.estimates.D.coef",
    "tests.rob_W1_modal_holder_feb2026.estimates.D.ci",
    "facts.owner_under_robustness.owners.W1_modal_holder",
@@ -87,73 +88,95 @@ SPEC = [
    "facts.november_is_corroborated_not_independent.source_check"], []),
  ("Those 23 tasks include", "8 (the bound on attribution)", flat(
    d("facts.composition_of_the_top_quartile.largest_software_tasks.{w}.q4_mass_first"),
-   ["facts.composition_of_the_top_quartile.largest_software_tasks.nov2025.q4_mass_total"]), []),
+   ["facts.composition_of_the_top_quartile.largest_software_tasks.nov2025.q4_mass_total",
+    "facts.november_is_corroborated_not_independent.source_check"]), []),
  ("Counting every Seychelles conversation", "8 (the Seychelles worst case)",
   ["facts.seychelles_worst_case_bound.D_worst_case"], []),
  ("In the other direction, dropping tasks", "10", flat(
    d("tests.rob_X3_drop_under_100_classified_{w}.estimates.D.coef"),
    ["tests.rob_X3_drop_under_100_classified_aug2025.label"]), []),
- ("The third quartile boundary is $43.40 an hour", "4", flat(
+ ("The boundary between the third and the fourth quarter falls at", "4", flat(
    ["facts.quartile_boundaries_aug2025.value"],
    d('facts.quartile_boundaries_{w}.boundary_tie_mass."b3_43.40".tasks'),
    d('facts.quartile_boundaries_{w}.boundary_tie_mass."b3_43.40".mass')), []),
- ("And the top quartile is small where it counts", "25",
+ ("A count that discounts a list of tasks for being dominated", "25",
   flat(d("facts.kish_{w}.value"), d("facts.kish_{w}.by_quartile[3]")), []),
- ("The continuous slope of the automation share", "12", flat(
+ ("The slope taken over the whole wage range has no steady sign", "12", flat(
    d("tests.slope_{w}.estimates.slope.coef"),
    ["tests.slope_aug2025.estimates.slope.mde",
-    "tests.slope_aug2025.estimates.slope.unit", CONV + ".percent_signs"]), []),
+    "tests.slope_aug2025.estimates.slope.unit"]), []),
  ("The unit inside a panel is the quartile", "the n (Figure 2 caption)",
   ["facts.quartile_task_counts.Q1", "facts.quartile_task_counts.Q4"], []),
- ("Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed and are a lower bound",
+ ("a lower bound on the sampling variance, there being no user",
   "5 (Figure 2 caption)", [CONV + ".percent_signs"], []),
  ("The excess is carried by Computer & Mathematical tasks", "13",
   flat(d("tests.leg_a_{w}.coverage.dropped_share_q4"),
        d("tests.leg_a_{w}.coverage.dropped_share_analysis")), []),
- ("With Computer & Mathematical tasks excluded", "14 and 31", flat(
-   d("tests.leg_a_{w}.estimates.D_L.coef"),
-   d("facts.composition_of_the_top_quartile.residual_after_soc15_exclusion.{w}.q4_mass")), []),
- ("The leave-one-group-out series is the same evidence", "17", flat(
+ ("With Computer & Mathematical tasks excluded and the quartile boundaries kept", "14",
+  d("tests.leg_a_{w}.estimates.D_L.coef"), []),
+ ("That is a comparison of task types and not of pay", "14 and 31 (the residual)",
+  d("facts.composition_of_the_top_quartile.residual_after_soc15_exclusion.{w}.q4_mass"), []),
+ ("Dropping one occupational group at a time", "17", flat(
    d("tests.desc_leave_one_group_out_{w}.estimates.leave_out_15.move"),
    d("tests.desc_leave_one_group_out_{w}.estimates.leave_out_43.move")), []),
- ("Within SOC major group \u2014", "15 and 18", flat(
+ ("Comparing within occupational groups", "15", flat(
    d("tests.leg_b_{w}.estimates.D_L.coef"),
-   d("tests.leg_b_{w}.coverage.identified_mass_share_q1_q4"),
-   d("tests.desc_ten_largest_out_{w}.estimates.D.coef")), []),
- ("Leg (a) removes the tasks assigned", "13 (Figure 3 caption)", flat(
+   d("tests.leg_b_{w}.coverage.identified_mass_share_q1_q4")), []),
+ ("A blunter cut agrees", "18", d("tests.desc_ten_largest_out_{w}.estimates.D.coef"), []),
+ ("And inside the coding family alone", "31 (the within-family contrast)", flat(
+   d("facts.composition_of_the_top_quartile.within_soc15_contrast.{w}.coef"),
+   d("facts.composition_of_the_top_quartile.within_soc15_contrast.{w}.ci"),
+   d("facts.composition_of_the_top_quartile.within_soc15_contrast.{w}.q1_tasks")), []),
+ ("The first test removes the tasks assigned", "13 (Figure 3 caption)", flat(
    d("tests.leg_a_{w}.coverage.dropped_share_analysis"),
-   d("tests.leg_a_{w}.coverage.dropped_share_q4"),
-   [CONV + ".soc_computer_and_mathematical"]), []),
- ("Leg (e) keeps the tasks whose", "19 (Figure 3 caption)", flat(
+   d("tests.leg_a_{w}.coverage.dropped_share_q4")), []),
+ ("The third keeps the tasks whose published use-case cells", "19 (Figure 3 caption)", flat(
    d("tests.leg_e_{w}.coverage.kept_tasks", W[1:]),
    d("tests.leg_e_{w}.coverage.undefined_tasks_analysis", W[1:])), []),
- ("Bars are two-sided 95% intervals on the same conversation-level binomial model as Figure 1",
+ ("on the same conversation-level binomial model as Figure 1",
   "5 (Figure 3 caption)", [CONV + ".percent_signs"], []),
  ("Restricting to work-dominant tasks", "19", flat(
    d("tests.leg_e_{w}.coverage.kept_tasks", W[1:]),
    d("tests.leg_e_{w}.estimates.D_L.coef", W[1:]),
-   ["tests.leg_e_nov2025.estimates.r_L.coef"],
+   ["tests.leg_e_nov2025.estimates.r_L.coef"]), []),
+ ("A test that does not fire is nothing shown", "19 (the coding overlap)", flat(
    d("tests.leg_e_{w}.coverage.kept_share_q4", W[1:]),
    d("tests.leg_e_{w}.coverage.kept_share_q1", W[1:])), []),
- ("The mix it is drawn from is stark", "20", flat(
+ ("The work share of the bottom quartile's conversations", "20", flat(
    d("tests.desc_use_case_mix_{w}.estimates.Q1_work.coef", W[1:]),
    d("tests.desc_use_case_mix_{w}.estimates.Q4_work.coef", W[1:]),
    d("tests.desc_use_case_mix_{w}.estimates.Q1_personal.coef", W[1:])), []),
- ("One exploratory reading is recorded", "28 (exploratory)", flat(
+ ("It was labelled exploratory in advance", "28 (exploratory)", flat(
    d("tests.exp_b_pattern_split.estimates.directive_{w}.coef"),
    d("tests.exp_b_pattern_split.estimates.feedback loop_{w}.coef")), []),
- ("Weighting the published automation share by the hourly wage", "22",
+ ("Weighting the published delegation share by the hourly wage", "22",
   d("tests.DeltaW_{w}.estimates.Delta_W.coef"), []),
  ("August's null is a tight one", "22 (the MDE beside the null)",
   ["tests.DeltaW_aug2025.estimates.Delta_W.mde"], []),
  ("In levels:", "23", flat(d("tests.DeltaW_{w}.estimates.unweighted_share.coef"),
                            d("tests.DeltaW_{w}.estimates.wage_weighted_share.coef")), []),
- ("Bars are two-sided 95% intervals on the conversation-level binomial model and are a lower bound",
+ ("on the conversation-level binomial model and are a lower bound",
   "5 (Figure 4 caption)", [CONV + ".percent_signs"], []),
- ("The top quartile's effective size, and the threshold", "25 and 4 (limitation 4)", flat(
+ ("Add each task's work share to the wage regression", "21", flat(
+   d("tests.desc_slope_work_share_{w}.estimates.slope_wage_only.coef", W[1:]),
+   d("tests.desc_slope_work_share_{w}.estimates.slope_wage_with_work_share.coef", W[1:]),
+   d("tests.desc_slope_work_share_{w}.estimates.vif.coef", W[1:]),
+   ["tests.desc_slope_work_share_nov2025.estimates.slope_wage_only.unit"]), []),
+ ("On the first-party API, where businesses run Claude", "29 (exploratory)",
+  d("tests.exp_a_api_surface.estimates.D_{w}.coef"), []),
+ ("Against Job Zone", "30 (exploratory)",
+  d("tests.exp_c_jobzone.estimates.slope_{w}.coef"), []),
+ ("What calls for it is that the cross changes the reading", "1 and 15", flat(
+   d("tests.D_{w}.estimates.D.coef"), d("tests.leg_b_{w}.estimates.D_L.coef")), []),
+ ("What calls for it is the leave-one-group-out series", "17", flat(
+   d("tests.desc_leave_one_group_out_{w}.estimates.leave_out_43.move"),
+   d("tests.desc_leave_one_group_out_{w}.estimates.leave_out_15.move")), []),
+ ("What calls for it is that the two differ by", "22",
+  d("tests.DeltaW_{w}.estimates.Delta_W.coef"), []),
+ ("Its Kish effective number of tasks is", "25 and 4 (limitation 4)", flat(
    d("facts.kish_{w}.by_quartile[3]"),
    d("facts.quartile_boundaries_{w}.q4_mass_from_boundary_tie")), []),
- ("The generalisation bound.", "7 (limitation 9)",
+ ("Treated as a statement about tasks rather than", "7 (limitation 9)",
   ["facts.generalisation_sentence.realised_mde_by_wave"], []),
  ("Tasks are priced through the shipped", "the construction constants",
   [CONV + ".hours_per_year", CONV + ".source_check"], []),
@@ -162,12 +185,13 @@ SPEC = [
    d("facts.sample_{w}.classified_conversations"), d("facts.kish_{w}.value"),
    d("facts.sample_{w}.dropped_wage_no_classified_cell"),
    d("facts.sample_{w}.dropped_classified_cell_no_wage")), []),
- ("D and the composition legs are estimated", "5", [CONV + ".percent_signs"], []),
+ ("The difference and the composition legs are estimated", "5",
+  [CONV + ".percent_signs"], []),
  ("Every confirmatory quantity is produced twice", "27",
   ["facts.second_implementation_agreement.value",
    "facts.second_implementation_agreement.bootstrap_vs_closed_form_max_rel",
    "facts.second_implementation_agreement.bootstrap_coverage"], ["1.8", "0.9"]),
- ("Each wave's own five-pattern automation share reproduces", "26", flat(
+ ("Each wave's own five-pattern delegation share reproduces", "26", flat(
    d("facts.replication_{w}.value"),
    ["facts.fig211_released_library.value", "facts.fig211_released_library.partial_r2",
     "facts.fig211_released_library.n_countries", "facts.replication_aug2025.source_check"]), []),

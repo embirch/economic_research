@@ -8,8 +8,8 @@
   {
    "id": "S01",
    "claims_md": "2, 16, and the pre-registered margin",
-   "section": "How to tell the explanations apart",
-   "sentence": "| Explanation | What it says | The signature only it predicts | What the three windows show | |---|---|---|---| | **H1 · Price** | delegation rises with the wage of the work | D's lower bound above +1 pp in all three windows, **and** D keeping its sign and more than half its size on every composition leg testable in that window | The lower bound clears +1 pp in two windows and not in the third; the leg clause fails in every window | | **H2 · Inverse** | the high-wage work is the collaborative work | D's upper bound below −1 pp in all three windows | Not found: D is positive in all three | | **O-A · A persistent difference not shown to clear the margin** | the direction holds in every window; the size is not shown to clear a point in every window | after H1 and H2 fail, all three intervals excluding zero with the same sign | **Declared** | | **H4 · No relation at the margin** | the share does not track the wage by as much as a point | all three intervals inside ±1 pp *and* not all excluding zero with one sign | Not found | | **O-B · No persistent difference** | — | anything else | Not found | | **H3 · Composition, not price** | a declared difference is carried by a mix that travels with wage — the coding family, or the use-case mix | a declared D losing its sign, or more than half its size, on at least one composition leg, in every window in which that leg is testable | **Declared**, on the Computer & Mathematical leg and the within-group leg, each firing in all three windows |",
+   "section": "What each possible answer would have looked like in the data",
+   "sentence": "| If the truth were this | The pattern only it would leave | What the three weeks showed | |---|---|---| | The more the work pays, the more it is handed over | the gap positive and more than 1 percentage point from zero in all three weeks, and still of that sign and at least half that size whenever the kind of work is held fixed | the gap is more than a point from zero in two weeks of three, and the second half of the signature fails in every week | | The opposite: the best-paid work is the work people stay involved in | the gap negative and more than a point from zero in all three weeks | not found — the gap is positive in all three | | A difference whose direction holds but whose size the design cannot pin down | all three gaps of one sign and none of them zero, once the first two answers have failed | **this is the answer the rule recorded** | | Pay makes no difference worth the name | all three gaps within a point of zero, and not all of one sign | not found | | No steady difference at all | anything else | not found | | It is the kind of work, not the pay | a difference that loses its sign, or more than half its size, when the coding family is set aside or the occupational group is held fixed, in every week in which that test can be run | **this too, on both tests, in every week** |",
    "bindings": [
     {
      "key": "facts.declared_owner.value",
@@ -32,8 +32,8 @@
   {
    "id": "S02",
    "claims_md": "11",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "The shares themselves are not monotone in the wage: in every window the share falls from the bottom quartile to the second and rises to the top — 53.1, 47.0, 49.8 and 54.4% in August (`none` 3.6, 1.9, 1.9 and 1.2); 46.6, 41.3, 46.0 and 54.0% in November (`none` 3.1, 1.1, 1.9 and 1.2); 48.8, 41.6, 43.5 and 49.5% in February (`none` 3.4, 1.1, 2.2 and 1.1).",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "In every week it falls from the worst-paid quarter to the second and rises again to the best-paid: 53.1, 47.0, 49.8 and 54.4% in August 2025; 46.6, 41.3, 46.0 and 54.0% in November 2025; 48.8, 41.6, 43.5 and 49.5% in February 2026.",
    "bindings": [
     {
      "key": "tests.desc_quartile_shares_aug2025.estimates.Q1.coef",
@@ -82,7 +82,15 @@
     {
      "key": "tests.desc_quartile_shares_feb2026.estimates.Q4.coef",
      "value": 49.515957
-    },
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "claims_md": "11 (the none share)",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Printed beside each quarter, so that the base is never implicit, the share of conversations fitting none of the five patterns runs 3.6, 1.9, 1.9 and 1.2% in August; 3.1, 1.1, 1.9 and 1.2% in November; 3.4, 1.1, 2.2 and 1.1% in February.",
+   "bindings": [
     {
      "key": "tests.desc_quartile_shares_aug2025.estimates.Q1.none_share",
      "value": 3.592241
@@ -134,10 +142,10 @@
    ]
   },
   {
-   "id": "S03",
-   "claims_md": "1 and 5",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "**In each of the three Claude.ai windows the automation share of conversations on top-wage-quartile tasks exceeded that of conversations on bottom-quartile tasks: by 1.4 points (4–11 August 2025), 7.4 points (13–20 November 2025) and 0.7 points (5–12 February 2026).** The intervals are two-sided 95% under a conversation-level binomial with the task mix held fixed; no release carries a user, session or account identifier, so they are a lower bound on the sampling variance.",
+   "id": "S04",
+   "claims_md": "1",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "**In each of the three Claude.ai weeks the delegation share of conversations on top-wage-quartile tasks exceeded that of conversations on bottom-quartile tasks: by 1.4 points (4–11 August 2025), 7.4 points (13–20 November 2025) and 0.7 points (5–12 February 2026).",
    "bindings": [
     {
      "key": "tests.D_aug2025.estimates.D.coef",
@@ -171,7 +179,15 @@
       0.394697,
       0.943052
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "claims_md": "5",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "The intervals around those numbers treat every conversation as an independent draw with the task mix held fixed, at two-sided 95%; no release carries a user, session or account identifier, so nothing can be clustered on and the intervals are a lower bound on the sampling variance.",
+   "bindings": [
     {
      "key": "facts.conventions_and_constants.percent_signs",
      "value": [
@@ -191,10 +207,10 @@
    ]
   },
   {
-   "id": "S04",
+   "id": "S06",
    "claims_md": "3",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "On the corrected quartile rule, which shares the boundary wage between the two adjacent quartiles instead of letting sort order decide, the differences are 0.5, 7.2 and 0.3 points, and August no longer exceeds one point.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "On the corrected rule for drawing the quarters, which shares the boundary wage between the two adjacent quarters instead of letting sort order decide, the differences are 0.5, 7.2 and 0.3 points, and August no longer exceeds one point.",
    "bindings": [
     {
      "key": "tests.D_aug2025.estimates.D_corrected_quartile_rule.coef",
@@ -207,14 +223,18 @@
     {
      "key": "tests.D_feb2026.estimates.D_corrected_quartile_rule.coef",
      "value": 0.338658
+    },
+    {
+     "key": "facts.declared_owner_corrected_quartile_rule.value",
+     "value": "O-A"
     }
    ]
   },
   {
-   "id": "S05",
+   "id": "S07",
    "claims_md": "Figure 1 caption: the construction",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Tasks are sorted into usage-weighted wage quartiles on the hourly wage of the occupations that hold the task (`wage_data.csv` `MedianSalary` ÷ 2,080, employment-weighted over holders), and quartile means are weighted by `onet_task_pct`, so the difference is about conversations and not about tasks.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Tasks are ranked on the hourly wage of the occupations that hold them (median annual salary ÷ 2,080, averaged over holders by employment) and cut into quartiles of conversation volume, and each quartile's mean is weighted by conversations, so the difference is about conversations and not about tasks.",
    "bindings": [
     {
      "key": "facts.conventions_and_constants.hours_per_year",
@@ -223,10 +243,10 @@
    ]
   },
   {
-   "id": "S06",
+   "id": "S08",
    "claims_md": "24 and 25 (Figure 1 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Sample: the 1,802 / 2,075 / 2,188 tasks carrying both a wage and at least one classified-pattern cell — 97.15 / 96.23 / 96.52% of named-task usage mass, on 818,673 / 854,432 / 848,716 classified conversations, with a Kish effective 94 / 83 / 126 tasks; the 805 / 1,079 / 1,056 tasks with a wage and no classified cell and the 5 / 12 / 12 with a cell and no wage are dropped, never zeroed.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Sample: the 1,802 / 2,075 / 2,188 tasks carrying both a wage and at least one classified-pattern cell — 97.15 / 96.23 / 96.52% of the conversations mapped to a named task, on 818,673 / 854,432 / 848,716 classified conversations, with a Kish effective 94 / 83 / 126 tasks; the 805 / 1,079 / 1,056 tasks with a wage and no classified cell and the 5 / 12 / 12 with a cell and no wage are dropped, never zeroed.",
    "bindings": [
     {
      "key": "facts.sample_aug2025.value",
@@ -303,10 +323,10 @@
    ]
   },
   {
-   "id": "S07",
+   "id": "S09",
    "claims_md": "4 (Figure 1 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Filled circles are the pre-registered quartile rule; open squares share the boundary wage between the two adjacent quartiles in proportion, which matters because $43.40/hr is a mass point carrying 8–11 pp of a window.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Filled circles are the pre-registered quartile rule; open squares share the boundary wage between the two adjacent quartiles in proportion, which matters because $43.40 an hour is one wage shared by many tasks, carrying 8 to 11 points of a week's conversations.",
    "bindings": [
     {
      "key": "facts.quartile_boundaries_aug2025.value",
@@ -331,9 +351,9 @@
    ]
   },
   {
-   "id": "S08",
+   "id": "S10",
    "claims_md": "5 (Figure 1 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
    "sentence": "Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed; no release carries a user, account or session identifier, so no clustering is possible and these intervals are a lower bound on the sampling variance.",
    "bindings": [
     {
@@ -351,22 +371,10 @@
    ]
   },
   {
-   "id": "S09",
-   "claims_md": "the pre-registered margin (Figure 1 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "The shaded band is the pre-registered indifference region of ±1 percentage point; the null value is zero.",
-   "bindings": [
-    {
-     "key": "facts.conventions_and_constants.delta_pp",
-     "value": 1.0
-    }
-   ]
-  },
-  {
-   "id": "S10",
+   "id": "S11",
    "claims_md": "7 (Figure 1 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Read as a statement about tasks rather than about these windows' conversations, a task-resampling design resolves nothing below about 14 to 20 percentage points.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Read as a statement about tasks rather than about these weeks' conversations, a design that resamples tasks resolves nothing below about 14 to 20 percentage points.",
    "bindings": [
     {
      "key": "facts.generalisation_sentence.realised_mde_by_wave",
@@ -379,10 +387,10 @@
    ]
   },
   {
-   "id": "S11",
+   "id": "S12",
    "claims_md": "9",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Under the modal-holder wage rule the February difference is −0.2 points with an interval containing zero, and under the pre-registered rule the ordered chain would then record no persistent sign; under the equal-split rule the three differences are unchanged to a tenth of a point.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Under the rule that prices a task at the wage of the single occupation holding most of it, the February difference is −0.2 points with an interval containing zero, and the rule set in advance would then record no persistent sign at all; under the rule that splits a shared task's wage equally between its holders, the three differences are unchanged to a tenth of a point.",
    "bindings": [
     {
      "key": "tests.rob_W1_modal_holder_feb2026.estimates.D.coef",
@@ -410,10 +418,10 @@
    ]
   },
   {
-   "id": "S12",
+   "id": "S13",
    "claims_md": "8",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Dropping the 23 November tasks in which Seychelles exceeds a tenth of the global conversation count turns November's difference to −4.6 points; netting Seychelles from the task weights alone moves it to +6.5; the November rates themselves cannot be cleaned.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Dropping the 23 November tasks in which Seychelles sent more than a tenth of the world's conversations turns that week's difference to −4.6 points, while netting Seychelles out of the task weights alone moves it to +6.5; the rates themselves cannot be cleaned.",
    "bindings": [
     {
      "key": "tests.rob_X5_drop_sc_over_10pc_nov2025.estimates.D.coef",
@@ -430,10 +438,10 @@
    ]
   },
   {
-   "id": "S13",
+   "id": "S14",
    "claims_md": "8 (the bound on attribution)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Those 23 tasks include the two \"modify existing software to correct errors…\" tasks, which alone carry 8.5 of the top quartile's 22.5 points of mass in November (6.5 in August, 6.0 in February), so the flip is not attributed to Seychelles alone.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Those 23 tasks include the two \"modify existing software to correct errors…\" tasks, which by themselves carry 8.5 of the top quartile's 22.5 points of conversations in November (6.5 in August, 6.0 in February), so the reversal is not Seychelles' doing.",
    "bindings": [
     {
      "key": "facts.composition_of_the_top_quartile.largest_software_tasks.aug2025.q4_mass_first",
@@ -450,14 +458,18 @@
     {
      "key": "facts.composition_of_the_top_quartile.largest_software_tasks.nov2025.q4_mass_total",
      "value": 22.514214
+    },
+    {
+     "key": "facts.november_is_corroborated_not_independent.source_check",
+     "value": "SC is 24,715 conversations (2.47181% of the wave) with 0 rows of onet_task::collaboration; 23 analysis-set tasks carry SC above 10% of their global count, 11.594 pp of the wave, 8.913 pp of it in Q4"
     }
    ]
   },
   {
-   "id": "S14",
+   "id": "S15",
    "claims_md": "8 (the Seychelles worst case)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Counting every Seychelles conversation on a top-quartile task as automation and every one on a bottom-quartile task as augmentation, with the weights netted, leaves November's difference at +4.5 points.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Counting every Seychelles conversation on a top-quartile task as delegation and every one on a bottom-quartile task as collaboration, with the weights netted, still leaves November's difference at +4.5 points.",
    "bindings": [
     {
      "key": "facts.seychelles_worst_case_bound.D_worst_case",
@@ -466,9 +478,9 @@
    ]
   },
   {
-   "id": "S15",
+   "id": "S16",
    "claims_md": "10",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
    "sentence": "In the other direction, dropping tasks with fewer than 100 classified conversations raises the differences to 2.6, 9.1 and 1.6 points.",
    "bindings": [
     {
@@ -490,10 +502,10 @@
    ]
   },
   {
-   "id": "S16",
+   "id": "S17",
    "claims_md": "4",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "The third quartile boundary is $43.40 an hour in every window — the wage the file assigns to Computer Occupations, All Other — and the 99 / 106 / 111 tasks at that wage carry 8 to 11 percentage points of a window, so the top quartile's membership is decided partly inside the coding family.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "The boundary between the third and the fourth quarter falls at $43.40 an hour in every week — the wage the file assigns to Computer Occupations, All Other — and the 99 / 106 / 111 tasks priced at exactly that wage carry 8 to 11 percentage points of a week's conversations, so the top quarter's membership is settled partly inside the coding family.",
    "bindings": [
     {
      "key": "facts.quartile_boundaries_aug2025.value",
@@ -530,10 +542,10 @@
    ]
   },
   {
-   "id": "S17",
+   "id": "S18",
    "claims_md": "25",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "And the top quartile is small where it counts: the Kish effective number of tasks is 94 / 83 / 126 on the analysis set and 10.6 / 8.9 / 16.4 in the top quartile.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "A count that discounts a list of tasks for being dominated by a few large ones — the Kish effective number of tasks — gives 94 / 83 / 126 for the whole analysis set and 10.6 / 8.9 / 16.4 for the top quarter, where a handful of software tasks carry most of the conversations.",
    "bindings": [
     {
      "key": "facts.kish_aug2025.value",
@@ -562,10 +574,10 @@
    ]
   },
   {
-   "id": "S18",
+   "id": "S19",
    "claims_md": "12",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "**The continuous slope of the automation share in the hourly wage has no stable sign: −0.05 points per $10 (not distinguishable from zero at the two-sided 5% level, against a minimum detectable slope of 0.11 points per $10) in August, +1.77 in November, −0.28 in February.** A relation that is positive at the extremes, negative in the middle and sign-switching in the slope is not a gradient; it is a contrast between two ends of a distribution, and Figure 2 is what the contrast is drawn from.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "The slope taken over the whole wage range has no steady sign either: −0.05 points per $10 in August, against a smallest detectable slope of 0.11 and not distinguishable from zero; +1.77 in November; −0.28 in February.",
    "bindings": [
     {
      "key": "tests.slope_aug2025.estimates.slope.coef",
@@ -586,26 +598,14 @@
     {
      "key": "tests.slope_aug2025.estimates.slope.unit",
      "value": "percentage points of the automation share per +$10/hr"
-    },
-    {
-     "key": "facts.conventions_and_constants.percent_signs",
-     "value": [
-      100,
-      95,
-      80,
-      50,
-      25,
-      5,
-      1
-     ]
     }
    ]
   },
   {
-   "id": "S19",
+   "id": "S20",
    "claims_md": "the n (Figure 2 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "The unit inside a panel is the quartile; each quartile holds a quarter of the window's usage mass, so the four points are not equally many tasks (the bottom quartile holds 600 / 699 / 649 tasks and the top 360 / 403 / 482).",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "The unit inside a panel is the quartile, and each quartile holds a quarter of the week's conversations rather than a quarter of its tasks, so the four markers rest on different numbers of tasks (the bottom quartile holds 600 / 699 / 649 tasks and the top 360 / 403 / 482).",
    "bindings": [
     {
      "key": "facts.quartile_task_counts.Q1",
@@ -626,10 +626,10 @@
    ]
   },
   {
-   "id": "S20",
+   "id": "S21",
    "claims_md": "5 (Figure 2 caption)",
-   "section": "In each of three Claude.ai windows the top wage quartile was delegated more than the bottom, and only the sign is steady",
-   "sentence": "Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed and are a lower bound on the sampling variance, there being no user, account or session identifier in any release to cluster on, and narrower than the markers at this scale.",
+   "section": "In all three weeks the best-paid quarter of the work on Claude.ai was delegated a little more than the worst-paid, and only the direction is steady",
+   "sentence": "Bars are two-sided 95% intervals from a conversation-level binomial with the task mix held fixed, a lower bound on the sampling variance, there being no user, account or session identifier in any release to cluster on, and narrower than the markers at this scale.",
    "bindings": [
     {
      "key": "facts.conventions_and_constants.percent_signs",
@@ -646,10 +646,10 @@
    ]
   },
   {
-   "id": "S21",
+   "id": "S22",
    "claims_md": "13",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "**The excess is carried by Computer & Mathematical tasks, which hold 73, 71 and 65% of the top quartile's Claude.ai usage in the three windows and 43, 40 and 36% of the analysis set's.**",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "The excess is carried by Computer & Mathematical tasks, which hold 73, 71 and 65% of the top quartile's Claude.ai conversations in the three weeks against 43, 40 and 36% of the analysis set's.",
    "bindings": [
     {
      "key": "tests.leg_a_aug2025.coverage.dropped_share_q4",
@@ -678,10 +678,10 @@
    ]
   },
   {
-   "id": "S22",
-   "claims_md": "14 and 31",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "**With Computer & Mathematical tasks excluded and the quartile boundaries kept, the top quartile's automation share was 13.0, 10.5 and 11.9 points *below* the bottom quartile's.** That comparison is of task types, not of pay: what is left of the top quartile is managerial, scientific, engineering and clinical work carrying 6.1, 6.5 and 7.8 percentage points of usage mass, set against clerical, educational and sales work in the bottom quartile.",
+   "id": "S23",
+   "claims_md": "14",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "**With Computer & Mathematical tasks excluded and the quartile boundaries kept where they were, the top quartile's delegation share was 13.0, 10.5 and 11.9 points *below* the bottom quartile's.",
    "bindings": [
     {
      "key": "tests.leg_a_aug2025.estimates.D_L.coef",
@@ -694,7 +694,15 @@
     {
      "key": "tests.leg_a_feb2026.estimates.D_L.coef",
      "value": -11.895184
-    },
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "claims_md": "14 and 31 (the residual)",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "That is a comparison of task types and not of pay: what is left of the best-paid quarter is a small set of managerial, scientific, engineering and clinical tasks carrying 6.1, 6.5 and 7.8 percentage points of a week's conversations, set against clerical, educational and sales tasks at the bottom.",
+   "bindings": [
     {
      "key": "facts.composition_of_the_top_quartile.residual_after_soc15_exclusion.aug2025.q4_mass",
      "value": 6.100608
@@ -710,10 +718,10 @@
    ]
   },
   {
-   "id": "S23",
+   "id": "S25",
    "claims_md": "17",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "The leave-one-group-out series is the same evidence seen from the other side, not a second test — **removing any single major group other than Computer & Mathematical moves the difference by at most 3.2, 2.3 and 2.9 points; removing Computer & Mathematical moves it by 14.4, 17.9 and 12.6.**",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "Dropping one occupational group at a time is the same evidence seen from the other side rather than a second test — removing any single major group other than Computer & Mathematical moves the difference by at most 3.2, 2.3 and 2.9 points; removing Computer & Mathematical moves it by 14.4, 17.9 and 12.6.",
    "bindings": [
     {
      "key": "tests.desc_leave_one_group_out_aug2025.estimates.leave_out_15.move",
@@ -742,10 +750,10 @@
    ]
   },
   {
-   "id": "S24",
-   "claims_md": "15 and 18",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "**Within SOC major group — averaging the top-minus-bottom difference over the ten (August, November) or nine (February) groups that hold tasks in both extreme quartiles, weighted by their usage in those quartiles — the difference was −4.2, −1.9 and −6.2 points; those groups carry 80, 80 and 76% of the two quartiles' mass and the other twelve or thirteen groups are not identified.** A third, blunter cut agrees: **removing the ten largest tasks by usage — one fifth to one quarter of named mass — turns the difference to −11.6, −13.1 and −11.4 points.**",
+   "id": "S26",
+   "claims_md": "15",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "Comparing within occupational groups — averaging the top-minus-bottom difference over the ten (August, November) or nine (February) groups that hold tasks in both extreme quarters, weighted by their conversations there — the difference was −4.2, −1.9 and −6.2 points; those groups carry 80, 80 and 76% of the two quarters' conversations, and the other twelve or thirteen groups hold tasks at only one end and cannot be compared.",
    "bindings": [
     {
      "key": "tests.leg_b_aug2025.estimates.D_L.coef",
@@ -770,7 +778,15 @@
     {
      "key": "tests.leg_b_feb2026.coverage.identified_mass_share_q1_q4",
      "value": 75.517404
-    },
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "claims_md": "18",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "A blunter cut agrees: removing the ten largest tasks by conversation volume, a fifth to a quarter of all named conversations and mostly software, turns the difference to −11.6, −13.1 and −11.4 points.",
+   "bindings": [
     {
      "key": "tests.desc_ten_largest_out_aug2025.estimates.D.coef",
      "value": -11.61509
@@ -786,10 +802,63 @@
    ]
   },
   {
-   "id": "S25",
+   "id": "S28",
+   "claims_md": "31 (the within-family contrast)",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "And inside the coding family alone there is no pay relation to speak of: the difference within it is −0.1 points in August on an interval containing zero, +6.5 in November and +0.8 in February, on a bottom quarter of 24, 23 and 14 tasks.",
+   "bindings": [
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.aug2025.coef",
+     "value": -0.142063
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.nov2025.coef",
+     "value": 6.465582
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.feb2026.coef",
+     "value": 0.803886
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.aug2025.ci",
+     "value": [
+      -0.71805,
+      0.433924
+     ]
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.nov2025.ci",
+     "value": [
+      5.865795,
+      7.065368
+     ]
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.feb2026.ci",
+     "value": [
+      0.16307,
+      1.444701
+     ]
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.aug2025.q1_tasks",
+     "value": 24
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.nov2025.q1_tasks",
+     "value": 23
+    },
+    {
+     "key": "facts.composition_of_the_top_quartile.within_soc15_contrast.feb2026.q1_tasks",
+     "value": 14
+    }
+   ]
+  },
+  {
+   "id": "S29",
    "claims_md": "13 (Figure 3 caption)",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "Leg (a) removes the tasks assigned to Computer & Mathematical (SOC major group 15 on the 2019 O*NET-SOC recode) — 42.8 / 39.7 / 35.6% of analysis-set usage mass and 73.1 / 71.3 / 65.5% of the top quartile's — with the quartile boundaries kept from the full analysis set and never re-drawn.",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "The first test removes the tasks assigned to Computer & Mathematical occupations — 42.8 / 39.7 / 35.6% of the analysis set's conversations and 73.1 / 71.3 / 65.5% of the top quartile's — with the quartile boundaries kept from the full set and never re-drawn.",
    "bindings": [
     {
      "key": "tests.leg_a_aug2025.coverage.dropped_share_analysis",
@@ -814,18 +883,14 @@
     {
      "key": "tests.leg_a_feb2026.coverage.dropped_share_q4",
      "value": 65.462647
-    },
-    {
-     "key": "facts.conventions_and_constants.soc_computer_and_mathematical",
-     "value": 15
     }
    ]
   },
   {
-   "id": "S26",
+   "id": "S30",
    "claims_md": "19 (Figure 3 caption)",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "Leg (e) keeps the tasks whose `work` share is at least half of their published `use_case` cells (943 / 1,071 tasks in November and February; the 29 / 21 tasks whose only published cell is `not_classified` have an undefined work share and are dropped, never scored zero), and is untestable in August, where no facet name in the file contains `use_case`.",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "The third keeps the tasks whose published use-case cells are at least half work (943 and 1,071 tasks in November and February; the 29 and 21 tasks whose only published cell is unclassified have an undefined work share and are dropped, never scored zero), and cannot be run in August, where the release publishes no use-case facet.",
    "bindings": [
     {
      "key": "tests.leg_e_nov2025.coverage.kept_tasks",
@@ -846,9 +911,9 @@
    ]
   },
   {
-   "id": "S27",
+   "id": "S31",
    "claims_md": "5 (Figure 3 caption)",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
    "sentence": "Bars are two-sided 95% intervals on the same conversation-level binomial model as Figure 1 and are a lower bound on the sampling variance.",
    "bindings": [
     {
@@ -866,10 +931,10 @@
    ]
   },
   {
-   "id": "S28",
+   "id": "S32",
    "claims_md": "19",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "**Restricting to work-dominant tasks (work at least half of a task's published use-case cells; 943 and 1,071 tasks) leaves the difference at 3.7 points in November and 2.8 in February, keeping the sign and at least half the size, so the use-case leg does not fire — in November the retained fraction is 0.50 with a contrast interval straddling zero, so whether it keeps more or less than half is undetermined; August publishes no use-case facet and is untested.** A leg that does not fire is nothing shown, not a rival excluded, and this leg is not independent of the first: the work-dominant top quartile is the coding top quartile, 81 to 83% of its mass kept against 20 to 30% of the bottom quartile's.",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "Restricting to work-dominant tasks — work at least half of a task's published use-case cells, 943 and 1,071 tasks — leaves the difference at 3.7 points in November and 2.8 in February, keeping its sign and at least half its size, so this test does not fire; in November the fraction of the difference that survives the restriction is 0.50, exactly the halfway line, with an interval that straddles it, so whether the restriction keeps more or less than half is undetermined, and August publishes no use-case facet and is untested.",
    "bindings": [
     {
      "key": "tests.leg_e_nov2025.coverage.kept_tasks",
@@ -890,7 +955,15 @@
     {
      "key": "tests.leg_e_nov2025.estimates.r_L.coef",
      "value": 0.503155
-    },
+    }
+   ]
+  },
+  {
+   "id": "S33",
+   "claims_md": "19 (the coding overlap)",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "A test that does not fire is nothing shown rather than a rival excluded, and this one is not independent of the first: the work-dominant top quarter is the coding top quarter under another name, since 81 to 83% of the top quartile's conversations are kept against 20 to 30% of the bottom quartile's.",
+   "bindings": [
     {
      "key": "tests.leg_e_nov2025.coverage.kept_share_q4",
      "value": 82.514637
@@ -910,10 +983,10 @@
    ]
   },
   {
-   "id": "S29",
+   "id": "S34",
    "claims_md": "20",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "The mix it is drawn from is stark on its own terms — **the work share of the bottom quartile's conversations is 33% (November) and 29% (February) against 61% in the top; the bottom quartile is 45–56% personal requests.**",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "The work share of the bottom quartile's conversations is 33% in November and 29% in February, against 61% in the top quartile, and the bottom quartile is 45 to 56% personal requests.",
    "bindings": [
     {
      "key": "tests.desc_use_case_mix_nov2025.estimates.Q1_work.coef",
@@ -942,10 +1015,10 @@
    ]
   },
   {
-   "id": "S30",
+   "id": "S35",
    "claims_md": "28 (exploratory)",
-   "section": "The excess is Computer & Mathematical work: with that family excluded, the top wage quartile on Claude.ai is delegated less than the bottom",
-   "sentence": "One exploratory reading is recorded because it bears on the word in the question, and it is exploratory, in no decision rule: **the `directive` pattern alone is lower in the top quartile in every window (−7.0, −9.5, −9.9 points) while `feedback loop` is higher (+8.4, +16.9, +10.6); the positive difference in the automation share is a feedback-loop difference.** Both the reversal outside coding and the lower `directive` share at the top are consistent with that turns reading — consistent with, not confirmation of it — and the U-shape of Figure 2 echoes the one published cross of the collaboration facet with occupational category, which was not monotone in wage either.",
+   "section": "The whole of the excess is software: set that family aside and the best-paid quarter on Claude.ai is delegated less than the worst-paid",
+   "sentence": "It was labelled exploratory in advance and sits in no decision rule: the fully directive conversations alone are *less* common on top-quartile tasks in every week, by 7.0, 9.5 and 9.9 points, while feedback-loop conversations are more common, by 8.4, 16.9 and 10.6 points — so the positive difference in the delegation share is a feedback-loop difference.",
    "bindings": [
     {
      "key": "tests.exp_b_pattern_split.estimates.directive_aug2025.coef",
@@ -974,10 +1047,10 @@
    ]
   },
   {
-   "id": "S31",
+   "id": "S36",
    "claims_md": "22",
-   "section": "Wage-weighting the published automation share of Claude.ai conversations moves it by less than a point, and not in one direction",
-   "sentence": "**Weighting the published automation share by the hourly wage of the work would move it by −0.02 points in August (an interval containing zero), +0.84 in November and −0.15 in February — below one point in every window, and in the same direction as the quartile gap in one window of three.** It is an hourly rate, not a bill: no hours enter it, and the wage is the wage of the occupation a task resembles.",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "**Weighting the published delegation share by the hourly wage of the work would move it by −0.02 points in August, on an interval containing zero, by +0.84 points in November and by −0.15 points in February — below one point in every week, and in the same direction as the quartile difference in one week of three.",
    "bindings": [
     {
      "key": "tests.DeltaW_aug2025.estimates.Delta_W.coef",
@@ -994,10 +1067,10 @@
    ]
   },
   {
-   "id": "S32",
+   "id": "S37",
    "claims_md": "22 (the MDE beside the null)",
-   "section": "Wage-weighting the published automation share of Claude.ai conversations moves it by less than a point, and not in one direction",
-   "sentence": "August's null is a tight one: the minimum detectable difference there is 0.05 points, so a wage-weighting error as large as a twentieth of a point would have been seen in that window and was not.",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "August's null is a tight one: the smallest movement the design would have detected there is 0.05 points, so a weighting error as large as a twentieth of a point would have shown and did not.",
    "bindings": [
     {
      "key": "tests.DeltaW_aug2025.estimates.Delta_W.mde",
@@ -1006,10 +1079,10 @@
    ]
   },
   {
-   "id": "S33",
+   "id": "S38",
    "claims_md": "23",
-   "section": "Wage-weighting the published automation share of Claude.ai conversations moves it by less than a point, and not in one direction",
-   "sentence": "In levels: **the published five-pattern automation shares of the analysis set are 51.1, 47.0 and 45.9%; wage-weighted they are 51.1, 47.8 and 45.7%.**",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "In levels: the delegation shares of the tasks in the analysis are 51.1, 47.0 and 45.9% unweighted and 51.1, 47.8 and 45.7% weighted by the wage of the work.",
    "bindings": [
     {
      "key": "tests.DeltaW_aug2025.estimates.unweighted_share.coef",
@@ -1038,9 +1111,9 @@
    ]
   },
   {
-   "id": "S34",
+   "id": "S39",
    "claims_md": "5 (Figure 4 caption)",
-   "section": "Wage-weighting the published automation share of Claude.ai conversations moves it by less than a point, and not in one direction",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
    "sentence": "Bars are two-sided 95% intervals on the conversation-level binomial model and are a lower bound on the sampling variance.",
    "bindings": [
     {
@@ -1058,10 +1131,170 @@
    ]
   },
   {
-   "id": "S35",
+   "id": "S40",
+   "claims_md": "21",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "Add each task's work share to the wage regression and the wage slope moves from +1.78 to −0.06 points per $10 in November, and from −0.28 to −1.63 in February, with the two predictors far from interchangeable when it happens (a variance inflation factor of 1.13 to 1.14).",
+   "bindings": [
+    {
+     "key": "tests.desc_slope_work_share_nov2025.estimates.slope_wage_only.coef",
+     "value": 1.782626
+    },
+    {
+     "key": "tests.desc_slope_work_share_feb2026.estimates.slope_wage_only.coef",
+     "value": -0.284801
+    },
+    {
+     "key": "tests.desc_slope_work_share_nov2025.estimates.slope_wage_with_work_share.coef",
+     "value": -0.062412
+    },
+    {
+     "key": "tests.desc_slope_work_share_feb2026.estimates.slope_wage_with_work_share.coef",
+     "value": -1.627294
+    },
+    {
+     "key": "tests.desc_slope_work_share_nov2025.estimates.vif.coef",
+     "value": 1.13312
+    },
+    {
+     "key": "tests.desc_slope_work_share_feb2026.estimates.vif.coef",
+     "value": 1.138568
+    },
+    {
+     "key": "tests.desc_slope_work_share_nov2025.estimates.slope_wage_only.unit",
+     "value": "pp per +$10/hr"
+    }
+   ]
+  },
+  {
+   "id": "S41",
+   "claims_md": "29 (exploratory)",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "On the first-party API, where businesses run Claude and delegation dominates, the difference is negative in every week: −2.4, −2.5 and −5.2 points.",
+   "bindings": [
+    {
+     "key": "tests.exp_a_api_surface.estimates.D_aug2025.coef",
+     "value": -2.402951
+    },
+    {
+     "key": "tests.exp_a_api_surface.estimates.D_nov2025.coef",
+     "value": -2.467026
+    },
+    {
+     "key": "tests.exp_a_api_surface.estimates.D_feb2026.coef",
+     "value": -5.154692
+    }
+   ]
+  },
+  {
+   "id": "S42",
+   "claims_md": "30 (exploratory)",
+   "section": "Weighting the published delegation share by the wage of the work moves it by less than a point, and not in one direction",
+   "sentence": "Against Job Zone, the O\\*NET ordering of work by how much preparation it requires, the delegation share falls by 6.7, 6.0 and 6.8 points per zone.",
+   "bindings": [
+    {
+     "key": "tests.exp_c_jobzone.estimates.slope_aug2025.coef",
+     "value": -6.701158
+    },
+    {
+     "key": "tests.exp_c_jobzone.estimates.slope_nov2025.coef",
+     "value": -6.018755
+    },
+    {
+     "key": "tests.exp_c_jobzone.estimates.slope_feb2026.coef",
+     "value": -6.768141
+    }
+   ]
+  },
+  {
+   "id": "S43",
+   "claims_md": "1 and 15",
+   "section": "Recommendations to Anthropic",
+   "sentence": "What calls for it is that the cross changes the reading rather than decorating it: the top-minus-bottom difference is +1.4, +7.4 and +0.7 points as the facets are published and −4.2, −1.9 and −6.2 points once the occupational group is held fixed, and no reader of the release can get from the first three numbers to the second three.",
+   "bindings": [
+    {
+     "key": "tests.D_aug2025.estimates.D.coef",
+     "value": 1.383646
+    },
+    {
+     "key": "tests.D_nov2025.estimates.D.coef",
+     "value": 7.385413
+    },
+    {
+     "key": "tests.D_feb2026.estimates.D.coef",
+     "value": 0.668874
+    },
+    {
+     "key": "tests.leg_b_aug2025.estimates.D_L.coef",
+     "value": -4.198899
+    },
+    {
+     "key": "tests.leg_b_nov2025.estimates.D_L.coef",
+     "value": -1.87163
+    },
+    {
+     "key": "tests.leg_b_feb2026.estimates.D_L.coef",
+     "value": -6.216888
+    }
+   ]
+  },
+  {
+   "id": "S44",
+   "claims_md": "17",
+   "section": "Recommendations to Anthropic",
+   "sentence": "What calls for it is the leave-one-group-out series: removing any single occupational group other than Computer & Mathematical moves the wage difference by at most 3.2, 2.3 and 2.9 points, while removing that one group moves it by 14.4, 17.9 and 12.6.",
+   "bindings": [
+    {
+     "key": "tests.desc_leave_one_group_out_aug2025.estimates.leave_out_43.move",
+     "value": 3.242029
+    },
+    {
+     "key": "tests.desc_leave_one_group_out_nov2025.estimates.leave_out_43.move",
+     "value": 2.322154
+    },
+    {
+     "key": "tests.desc_leave_one_group_out_feb2026.estimates.leave_out_43.move",
+     "value": 2.909752
+    },
+    {
+     "key": "tests.desc_leave_one_group_out_aug2025.estimates.leave_out_15.move",
+     "value": -14.415503
+    },
+    {
+     "key": "tests.desc_leave_one_group_out_nov2025.estimates.leave_out_15.move",
+     "value": -17.855561
+    },
+    {
+     "key": "tests.desc_leave_one_group_out_feb2026.estimates.leave_out_15.move",
+     "value": -12.564058
+    }
+   ]
+  },
+  {
+   "id": "S45",
+   "claims_md": "22",
+   "section": "Recommendations to Anthropic",
+   "sentence": "What calls for it is that the two differ by −0.02, +0.84 and −0.15 points in these three weeks — small, but not of one sign, and not knowable in advance without the cross.",
+   "bindings": [
+    {
+     "key": "tests.DeltaW_aug2025.estimates.Delta_W.coef",
+     "value": -0.022184
+    },
+    {
+     "key": "tests.DeltaW_nov2025.estimates.Delta_W.coef",
+     "value": 0.835168
+    },
+    {
+     "key": "tests.DeltaW_feb2026.estimates.Delta_W.coef",
+     "value": -0.146629
+    }
+   ]
+  },
+  {
+   "id": "S46",
    "claims_md": "25 and 4 (limitation 4)",
    "section": "Limitations",
-   "sentence": "**The top quartile's effective size, and the threshold at which the conclusion flips.** Its Kish effective number of tasks is 10.6, 8.9 and 16.4; the two largest software-modification tasks are a quarter to two fifths of its mass; and the third quartile boundary sits on a single computer occupation's wage, so sort order places 5 to 7 percentage points of the top quartile's mass.",
+   "sentence": "Its Kish effective number of tasks is 10.6, 8.9 and 16.4; the two largest software-modification tasks are a quarter to two fifths of its conversations; and the third-quartile boundary sits on a single computer occupation's wage, so sort order places 5 to 7 percentage points of the top quarter's conversations.",
    "bindings": [
     {
      "key": "facts.kish_aug2025.by_quartile[3]",
@@ -1090,10 +1323,10 @@
    ]
   },
   {
-   "id": "S36",
+   "id": "S47",
    "claims_md": "7 (limitation 9)",
    "section": "Limitations",
-   "sentence": "**The generalisation bound.** Treated as a statement about tasks rather than about these windows' conversations, the design resolves nothing below about 14 to 20 percentage points — twice the largest difference reported here and twenty to thirty times the smallest.",
+   "sentence": "Treated as a statement about tasks rather than about these weeks' conversations, the design resolves nothing below about 14 to 20 percentage points — twice the largest difference reported here and twenty to thirty times the smallest.",
    "bindings": [
     {
      "key": "facts.generalisation_sentence.realised_mde_by_wave",
@@ -1106,10 +1339,10 @@
    ]
   },
   {
-   "id": "S37",
+   "id": "S48",
    "claims_md": "the construction constants",
    "section": "Methodology",
-   "sentence": "Tasks are priced through the shipped O\\*NET 20.1 task statements to `release_2025_02_10/wage_data.csv`, joined on the full ten-character O\\*NET-SOC code, `MedianSalary` filtered above 100 and divided by 2,080 for an hourly rate.",
+   "sentence": "Tasks are priced through the shipped O\\*NET 20.1 task statements to `release_2025_02_10/wage_data.csv`, joined on the full ten-character O\\*NET-SOC code, with `MedianSalary` filtered above 100 and divided by 2,080 for an hourly rate and averaged over holding occupations by employment.",
    "bindings": [
     {
      "key": "facts.conventions_and_constants.hours_per_year",
@@ -1122,10 +1355,10 @@
    ]
   },
   {
-   "id": "S38",
+   "id": "S49",
    "claims_md": "24 and 25",
    "section": "Methodology",
-   "sentence": "Analysis set: the 1,802 / 2,075 / 2,188 named global tasks with a wage and at least one classified collaboration cell — 97.15 / 96.23 / 96.52% of named-task usage mass, on 818,673 / 854,432 / 848,716 classified conversations, Kish effective 94 / 83 / 126 tasks; 805 / 1,079 / 1,056 tasks with a wage and no classified cell and 5 / 12 / 12 with a cell and no wage are dropped, never zeroed.",
+   "sentence": "Analysis set: the 1,802 / 2,075 / 2,188 named global tasks with a wage and at least one classified collaboration cell — 97.15 / 96.23 / 96.52% of the conversations mapped to a named task, on 818,673 / 854,432 / 848,716 classified conversations, Kish effective 94 / 83 / 126 tasks; 805 / 1,079 / 1,056 tasks with a wage and no classified cell and 5 / 12 / 12 with a cell and no wage are dropped, never zeroed.",
    "bindings": [
     {
      "key": "facts.sample_aug2025.value",
@@ -1202,10 +1435,10 @@
    ]
   },
   {
-   "id": "S39",
+   "id": "S50",
    "claims_md": "5",
    "section": "Methodology",
-   "sentence": "**Models.** D and the composition legs are estimated with the task mix held fixed, on a conversation-level binomial; intervals are two-sided 95% and are lower bounds under within-task dependence, since no clustering unit exists in any release.",
+   "sentence": "The difference and the composition legs are estimated with the task mix held fixed, on a conversation-level binomial; intervals are two-sided 95% and are lower bounds under within-task dependence, since no clustering unit exists in any release.",
    "bindings": [
     {
      "key": "facts.conventions_and_constants.percent_signs",
@@ -1222,10 +1455,10 @@
    ]
   },
   {
-   "id": "S40",
+   "id": "S51",
    "claims_md": "27",
    "section": "Methodology",
-   "sentence": "Every confirmatory quantity is produced twice by two independent code paths; the largest disagreement in D between them is 1.8 × 10⁻¹⁴ points, the bootstrap standard errors are within 0.9% of the closed form, and their intervals cover 95.2–95.3%.",
+   "sentence": "Every confirmatory quantity is produced twice by two independent code paths; the largest disagreement in the headline difference between them is 1.8 × 10⁻¹⁴ points, the bootstrap standard errors are within 0.9% of the closed form, and their intervals cover 95.2–95.3%.",
    "bindings": [
     {
      "key": "facts.second_implementation_agreement.value",
@@ -1250,10 +1483,10 @@
    ]
   },
   {
-   "id": "S41",
+   "id": "S52",
    "claims_md": "26",
    "section": "Methodology",
-   "sentence": "**Reproduction of the published numbers first.** Each wave's own five-pattern automation share reproduces at 51.07 / 46.74 / 45.55% (published 49 / 45 / 44% on the all-conversation base), and Anthropic's released regression returns Figure 2.11 exactly (−3.112, partial R² 0.394, N 111).",
+   "sentence": "Each wave's own five-pattern delegation share reproduces at 51.07 / 46.74 / 45.55% against the published 49 / 45 / 44% on the all-conversation base, and Anthropic's released country regression returns its published figure exactly (−3.112, partial R² 0.394, N 111).",
    "bindings": [
     {
      "key": "facts.replication_aug2025.value",
@@ -1286,10 +1519,10 @@
    ]
   },
   {
-   "id": "S42",
+   "id": "S53",
    "claims_md": "the confirmatory count",
    "section": "What was set in advance",
-   "sentence": "The confirmatory set was named and counted in advance: **17 confirmatory estimates** — D, Δ_W and the slope in three windows each, leg (a) and leg (b) in three each, leg (e) in two — **of which 8 are the leg tests**, plus **3 exploratory tests** labelled as such.",
+   "sentence": "The confirmatory set was named and counted in advance: **17 confirmatory estimates** — the difference, the wage-weighting correction and the slope in three weeks each, the coding-excluded and within-group legs in three each, the work-dominant leg in two — **of which 8 are the leg tests**, plus **3 exploratory tests** labelled as such.",
    "bindings": [
     {
      "key": "counts.confirmatory_estimates",
@@ -1306,10 +1539,10 @@
    ]
   },
   {
-   "id": "S43",
+   "id": "S54",
    "claims_md": "1 (the MDE) and the registered margin",
    "section": "What was set in advance",
-   "sentence": "The assumed effect and its provenance: a smallest effect of interest of one percentage point on D, chosen so that the rule could fail, with a realised minimum detectable effect of 0.40 / 0.39 / 0.39 points per window at 80% power.",
+   "sentence": "The assumed effect and its provenance: a smallest effect of interest of one percentage point on the difference, chosen so that the rule could fail, with a realised minimum detectable effect of 0.40 / 0.39 / 0.39 points per week at 80% power.",
    "bindings": [
     {
      "key": "facts.mde_aug2025.value",
@@ -1342,10 +1575,10 @@
    ]
   },
   {
-   "id": "S44",
+   "id": "S55",
    "claims_md": "the brief's materiality line",
    "section": "What was set in advance",
-   "sentence": "The separate materiality line for Δ_W — 0.11 to 0.12 points of Δ_W per point of quartile gap — came from the referee's arithmetic on the brief and is reported here as an assumption, not as a realised relation: Δ_W depends on all four quartiles, and the arithmetic holds in one window of three.",
+   "sentence": "The separate materiality line for the wage-weighting correction — 0.11 to 0.12 points of correction per point of quartile difference — came from the referee's arithmetic on the brief and is reported here as an assumption, not as a realised relation: the correction depends on all four quarters, and the arithmetic holds in one week of three.",
    "bindings": [
     {
      "key": "facts.conventions_and_constants.materiality_pp_of_delta_w_per_point_of_gap",
@@ -1357,10 +1590,10 @@
    ]
   },
   {
-   "id": "S45",
+   "id": "S56",
    "claims_md": "4 (deviation 1)",
    "section": "What was set in advance",
-   "sentence": "**The quartile rule at the $43.40 wage mass point.** The registered sentence does not say which of the tasks sharing the boundary wage fall in the top quartile; the registered rule was made reproducible by fixing the tie order on (wage, task text), an order-free fractional rule was run beside it, and both declare the same owner.",
+   "sentence": "**The quartile rule at the $43.40 wage mass point.",
    "bindings": [
     {
      "key": "facts.quartile_boundaries_aug2025.value",

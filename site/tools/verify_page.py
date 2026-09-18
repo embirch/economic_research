@@ -41,12 +41,14 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 
 # Patterns removed before numbers are extracted, with the reason each is not a claim.
 EXCLUDE = [
+    (r"https?://\S+", "URL in a hyperlink target or citation: a link is not a claim"),
     (r"`[^`]*`", "code span: column, file, facet and commit identifiers"),
     (r"```.*?```", "fenced block: the rebuild command"),
     (r"\bp{1,2}\.\s?\d+(?:[–-]\d+)?", "page locator in a citation"),
     (r"\bfootnote\s+\d+", "footnote locator in a citation"),
     (r"\bLimitations?,?\s+\d+", "cross-reference to a numbered limitation"),
     (r"\bFigure\s+\d+(?:\.\d+)?", "figure locator"),
+    (r"\bTable\s+\d+(?:\.\d+)?", "table locator in a citation"),
     (r"\bAppendix\s+[A-Z]\.?\d*(?:\.\d+)?", "appendix locator"),
     (r"\bH[1-4]\b|\bO-[AB]\b|\bQ[1-4]\b", "hypothesis, outcome and quartile labels"),
     (r"\bSOC-\d+\b|\bSOC-SOC\b|\b\d{2}-\d{4}(?:\.\w+)?\b", "SOC codes"),
@@ -159,7 +161,8 @@ def sentences(text):
             items = [" ".join(" ".join(lines).split())]
         for item in items:
             item = " ".join(item.split())
-            parts = re.split(r"(?<=[.!?])\s+(?=[A-Z\*\u201c\"`])", item)
+            # a sentence may end inside emphasis — "…0.7 points.** The intervals…"
+            parts = re.split(r"(?<=[.!?])\*{0,2}\s+(?=[A-Z\*\u201c\"`])", item)
             out += [p.strip() for p in parts if p.strip()]
     return out
 
