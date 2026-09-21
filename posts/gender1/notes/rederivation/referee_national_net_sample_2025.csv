@@ -1,0 +1,37 @@
+geo,net_individuals_16_74_D,how_read,csv_n_used_by_script01,note
+AL,4702,row [D] single figure,8749,"csv 'implied' = yes/proportion gives 8,749; the page's net sample is 4,702; the reference proportion is on a different base"
+AT,5550,row [D] third column (individuals 16-74),5415,
+BA,5814,row [D] (households = individuals),5386,
+BE,6081,row [D] third column,5906,
+BG,7272,row [D] third column,6951,
+CH,2767,row [D] third column,2742,
+CY,3275,row [D] second column (individuals 16-74; first is households 16-89),2976,
+CZ,4494,row [D] third column,7705,"csv 'achieved' 7,705 does not appear on the page; published SE / SRS SE = 1.01 with 4,494 (1.32 with 7,705)"
+DE,12701,row [D] second column (households 8,722; individuals 12,701),12235,
+DK,3876,row [D] second column,3892,
+EE,3866,row [D],3847,
+EL,3440,row [D],3440,
+ES,14251,row [D] third column,13577,
+FI,3023,row [D] third column,2994,
+FR,11513,row [D] third column,10781,
+HR,3116,row [D],2892,
+HU,,row [D] gives households only (6,262 and 743); individuals not stated,6142,"keep implied 6,142; say so"
+IE,,row [D] not parseable; reference-indicator block cites the 2022 questionnaire and INFOSOC_HHNSI_A_2023_IE,3326,"IE's precision figures may be stale; 2,644 may be the net sample rather than the yes-count; verify"
+IT,31536,row [D] second column,31536,matches
+LT,4389,row [D] single figure,4079,
+LU,2514,row [D] third column,3086,"yes-count 2,514 equals the net sample, so implied = n/proportion overstates; published SE / SRS SE = 1.01 with 2,514"
+LV,5237,row [D] single figure,5025,
+ME,1831,row [D],,not in isoc_ai_iaiu
+MK,,page not served (236 bytes),,
+MT,1725,row [D],1750,
+NL,5603,row [D] first column (individuals 16-74; 637 is 75-89); reference block: 5,256 yes of 16-75-year-olds at 93.8%,,"csv has no n for NL; the page gives 5,603, so NL can have a bound"
+NO,2071,row [D] third column,2072,
+PL,10013,row [D] third column,10295,reference indicator SE 0.81 (csv blank)
+PT,8261,row [D],7136,
+RO,14987,row [D] second column,13668,
+RS,2633,row [D] first column,2634,
+SE,4450,row [D] third column,4938,"yes-count 4,450 equals the net sample, so implied overstates by 11%"
+SI,2859,row [D] third column,2837,
+SK,3225,row [D] third column,3070,
+TR,,row [D] 11,924 is household addresses (the page says the final sampling unit is the address),24062,"keep implied 24,062; say so"
+XK,,page not served (236 bytes),,

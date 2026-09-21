@@ -48,3 +48,7 @@ room/director-2026-09-17-gate-2a-post1.md
 room/analyst-2026-09-17-results-post1-revised.md
 room/director-2026-09-17-gate-2b-post1-approved.md
 room/editor-2026-09-17-post1-draft.md
+room/analyst-2026-09-17-figures-post1-answer.md
+room/director-2026-09-17-gate-3-post1.md
+room/human-2026-09-21-gender-series-kickoff.md
+room/human-2026-09-21-longlist-themes.md

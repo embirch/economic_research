@@ -1,0 +1,128 @@
+=== A · EU27 2025 age weights from demo_pjan (own code)
+population 16-74 (T): 333,651,751
+  Y16_24: pop   43,548,477  weight 0.130521  power_rules 0.130521  diff 0.0e+00
+  Y25_34: pop   52,879,564  weight 0.158487  power_rules 0.158487  diff 0.0e+00
+  Y35_44: pop   59,873,182  weight 0.179448  power_rules 0.179448  diff 0.0e+00
+  Y45_54: pop   63,022,131  weight 0.188886  power_rules 0.188886  diff 0.0e+00
+  Y55_64: pop   62,720,004  weight 0.187980  power_rules 0.187980  diff 0.0e+00
+  Y65_74: pop   51,608,393  weight 0.154677  power_rules 0.154677  diff 0.0e+00
+sum of weights: 1.000000000000 | status flags in file: ['ep']
+prereg's rounded weights (0.131, 0.158, 0.179, 0.189, 0.188, 0.155): [0.131, 0.158, 0.179, 0.189, 0.188, 0.155]
+T = M + F at every single age: True
+  female share of population Y16_24: 0.483
+  female share of population Y25_34: 0.487
+  female share of population Y35_44: 0.496
+  female share of population Y45_54: 0.501
+  female share of population Y55_64: 0.510
+  female share of population Y65_74: 0.536
+
+=== B · sampling bound for IT, DE, MT
+IT: n(csv)=31,536 p=19.86 -> se/sex 0.32 gap-se 0.45 half-width 0.88 mde80 1.26 | power_rules: 0.32 0.45 0.88 1.26
+     with net sample [D]=31,536: half-width 0.88
+DE: n(csv)=12,235 p=32.25 -> se/sex 0.60 gap-se 0.85 half-width 1.66 mde80 2.37 | power_rules: 0.6 0.85 1.66 2.37
+     with net sample [D]=12,701: half-width 1.63
+MT: n(csv)=1,750 p=46.46 -> se/sex 1.69 gap-se 2.38 half-width 4.67 mde80 6.68 | power_rules: 1.69 2.38 4.67 6.68
+     with net sample [D]=1,725: half-width 4.71
+
+sample-size table against the national pages (net individuals 16-74, row [D]):
+geo    csv n      src  net[D]  ratio  half-width csv -> [D]
+AL     8,749  implied   4,702   1.86  1.87 -> 2.55  <-- 
+AT     5,415  implied   5,550   0.98  2.60 -> 2.57
+BA     5,386  implied   5,814   0.93  2.15 -> 2.07
+BE     5,906  implied   6,081   0.97  2.52 -> 2.48
+BG     6,951  implied   7,272   0.96  1.96 -> 1.92
+CH     2,742  implied   2,767   0.99  3.74 -> 3.72
+CY     2,976  implied   3,275   0.91  3.57 -> 3.40
+CZ     7,705 achieved   4,494   1.71  2.13 -> 2.80  <-- 
+DE    12,235  implied  12,701   0.96  1.66 -> 1.63
+DK     3,892  implied   3,876   1.00  3.14 -> 3.15
+EE     3,847  implied   3,866   1.00  3.15 -> 3.15
+EL     3,440  implied   3,440   1.00  3.32 -> 3.32
+ES    13,577  implied  14,251   0.95  1.63 -> 1.59
+FI     2,994  implied   3,023   0.99  3.57 -> 3.55
+FR    10,781  implied  11,513   0.94  1.83 -> 1.77
+HR     2,892  implied   3,116   0.93  3.26 -> 3.14
+IT    31,536 achieved  31,536   1.00  0.88 -> 0.88
+LT     4,079  implied   4,389   0.93  2.96 -> 2.86
+LU     3,086  implied   2,514   1.23  3.49 -> 3.87  <-- 
+LV     5,025  implied   5,237   0.96  2.61 -> 2.55
+MT     1,750  implied   1,725   1.01  4.67 -> 4.71
+NL         -     none   5,603      -  (no bound in power_rules)  -> 2.60
+NO     2,072  implied   2,071   1.00  4.27 -> 4.27
+PL    10,295  implied  10,013   1.03  1.62 -> 1.64
+PT     7,136  implied   8,261   0.86  2.26 -> 2.10  <-- 
+RO    13,668  implied  14,987   0.91  1.28 -> 1.22
+RS     2,634  implied   2,633   1.00  2.97 -> 2.98
+SE     4,938  implied   4,450   1.11  2.75 -> 2.90  <-- 
+SI     2,837  implied   2,859   0.99  3.56 -> 3.55
+SK     3,070  implied   3,225   0.95  3.27 -> 3.19
+rows off by more than 10%, or missing a bound: ['AL', 'CZ', 'LU', 'NL', 'PT', 'SE']
+
+reference indicator: published SE / SRS SE (own computation from the csv)
+median 1.11 over 30 | IT 0.89 DE 1.08 MT 0.99 RO 2.77 | >1.3: {'AT': 1.3, 'BA': 1.59, 'BG': 1.74, 'CH': 1.92, 'CZ': 1.32, 'RO': 2.77, 'RS': 1.65, 'TR': 1.61}
+  AL: published/SRS with csv n = nan; with net [D] n = 0.01
+  CZ: published/SRS with csv n = 1.32; with net [D] n = 1.01
+  LU: published/SRS with csv n = 1.11; with net [D] n = 1.01  (LU and SE report the yes-count equal to the net sample, so 'implied' n = n / proportion overstates n)
+  PT: published/SRS with csv n = 1.12; with net [D] n = 1.21
+  SE: published/SRS with csv n = 1.29; with net [D] n = 1.23  (LU and SE report the yes-count equal to the net sample, so 'implied' n = n / proportion overstates n)
+
+=== C · coverage for the registered rules (usable = non-missing and not flagged u)
+overall usable pairs I_IUAI PC_IND: 36 of 36
+overall usable pairs I_IUAI PC_IND_IU3 (reversed rule's second leg): 36 of 36
+all twelve sex-by-age cells usable I_IUAI PC_IND: 33 of 36; incomplete: ['IE', 'MK', 'RS']
+  EU27 members with all twelve: 26 of 27; extension: 6 of 8
+   IE missing or flagged band pairs: ['Y16_24']
+   MK missing or flagged band pairs: ['Y16_24']
+   RS missing or flagged band pairs: ['Y16_24']
+EU27 with all twelve band pairs on PC_IND_IU3 (internet-composition share by band): 26 of 27
+  band Y16_24: EU27 usable pairs PC_IND 26, PC_IND_IU3 26
+  band Y25_34: EU27 usable pairs PC_IND 27, PC_IND_IU3 27
+  band Y35_44: EU27 usable pairs PC_IND 27, PC_IND_IU3 27
+  band Y45_54: EU27 usable pairs PC_IND 27, PC_IND_IU3 27
+  band Y55_64: EU27 usable pairs PC_IND 27, PC_IND_IU3 27
+  band Y65_74: EU27 usable pairs PC_IND 27, PC_IND_IU3 27
+H-work usable EU27 (work and private pairs, PC_IND): 27 of 27; excluded: []
+H-work secondary (PC_IND_IUAI) usable EU27: 27 of 27
+H-education usable EU27 (three education pairs, PC_IND): 26 of 27; excluded: ['HR']
+robustness 8, purpose I_IUAIPR: EU27 geographies with all twelve band pairs usable = 7 (rule needs >= 15)
+   per band: [26, 27, 27, 27, 21, 7]
+robustness 8, purpose I_IUAIWP: EU27 geographies with all twelve band pairs usable = 7 (rule needs >= 15)
+   per band: [26, 27, 27, 27, 21, 7]
+robustness 8, purpose I_IUAIFE: EU27 geographies with all twelve band pairs usable = 7 (rule needs >= 15)
+   per band: [26, 27, 27, 27, 21, 7]
+EU27 members with a bound in power_rules.json: 26 of 27; without: ['NL']
+extension with a bound: ['AL', 'BA', 'CH', 'NO', 'RS', 'TR'] without: ['MK', 'XK']
+
+=== D · the disclosed EU27 aggregate values, from the aggregate cells
+headline both sexes 16-74: 32.66 | women 30.45 | men 34.91 | gap 4.46
+  purpose private   PC_IND gap: 5.51   (F 22.76, M 28.27)
+  purpose work      PC_IND gap: 3.00   (F 13.87, M 16.87)
+  purpose education PC_IND gap: 0.05   (F 9.3, M 9.35)
+  education among AI users (PC_IND_IUAI): F 30.53 M 26.77
+  age profile of the gap: [-1.67, 4.67, 4.83, 2.84, 4.24, 4.14]
+  education profile of the gap: [3.76, 4.61, 6.97]
+  both-sex band rates (for section F): {'Y16_24': 63.81, 'Y25_34': 50.65, 'Y35_44': 38.96, 'Y45_54': 28.35, 'Y55_64': 16.49, 'Y65_74': 6.5}
+  EU27 standardised with its own weights: M 34.52 F 31.16 (published M 34.91 F 30.45; the survey's household population differs from demo_pjan, so equality is not expected)
+
+=== E · count rules: expected raw counts under a null of no pattern and under the disclosed EU27 profile
+EU27 members with a bound: 26; majority = 14
+H-age under a null of six equal true band gaps (4.5 pp) with the band bounds: expected count satisfying (a) 5.6, (b) 8.5 of 26
+H-age if every country had the EU27 profile [-1.67, 4.67, 4.83, 2.84, 4.24, 4.14]: expected count (a) 20.0, (b) 13.3 of 26
+  P(raw majority) for (a): null 0.000, EU profile 0.999
+  P(raw majority) for (b): null 0.028, EU profile 0.475
+H-work under a null of equal work and private gaps: P(country shows work > private) = 1/2; P(raw majority of 27) = 0.500
+  if every country had the EU27 purpose gaps (work-private = -2.51): expected count work > private = 2.5 of 26
+H-education under a null of three equal gaps: P(high is largest) = 1/3; P(raw majority of 26) = 0.025
+H-composition: 'at most one third' of 26 = at most 8 changes; 'more than one third' = 9 or more
+
+class rule under a null of one common true gap (4.0 pp) and each country's own SRS noise (gap, ratio = 1 - gap/p_M, standardised = gap + small age term):
+  expected number classed large-gap 4.2, small-gap 5.9 of 26 when NO country differs from another
+  (if the three measures were independent the expectation would be 1.0)
+
+=== F · A4 at band level: overall rate vs EU27 band rate in the binomial variance
+  Y16_24: EU27 both-sex rate 63.81 vs overall 32.66; true SRS half-width / stated = 1.02
+  Y25_34: EU27 both-sex rate 50.65 vs overall 32.66; true SRS half-width / stated = 1.07
+  Y35_44: EU27 both-sex rate 38.96 vs overall 32.66; true SRS half-width / stated = 1.04
+  Y45_54: EU27 both-sex rate 28.35 vs overall 32.66; true SRS half-width / stated = 0.96
+  Y55_64: EU27 both-sex rate 16.49 vs overall 32.66; true SRS half-width / stated = 0.79
+  Y65_74: EU27 both-sex rate  6.50 vs overall 32.66; true SRS half-width / stated = 0.53
