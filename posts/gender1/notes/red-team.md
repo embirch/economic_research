@@ -1,10 +1,12 @@
 # Red-team memo · gender1
 
 The strongest case against each finding, written as a referee would, followed by the concession the post must
-make. Numbers are from `data/processed/results.json` at `9b54be0` unless marked *(referee)*, in which case they
+make. Numbers are from `data/processed/results.json` at `acda4f7` unless marked *(referee)*, in which case they
 come from `notes/rederivation/referee_results_gender1_supp.out.txt` and this memo, and the post may use them only
-if the analyst adds them to `results.json`. The design is a secondary analysis of published cells with no
-standard errors; every point below is a version of that fact.
+if the analyst adds them to `results.json`. (Refreshed at acda4f7: the sign-beyond-bound counts, the EU27 band
+ratios and the internet-use decomposition, all *(referee)* at first read, now have keys and are cited by key.) The
+design is a secondary analysis of published cells with no standard errors; every point below is a version of that
+fact.
 
 **Exposure.** Five registered count rules, each run once; one registered exploratory correlation (a second,
 unregistered, was also run); no p-value governs any verdict. The smallest samples the claims rest on: a country's
@@ -20,15 +22,18 @@ structure, and that attribution depends on (i) the resident population (`demo_pj
 standing in for the survey's household population, (ii) sex-pooled EU27 weights being the right common structure,
 and (iii) reading a difference between two weightings as "the part due to age". Own-sex weights reproduce the
 published rates to 0.15 point, so (i) is fair; (ii) is a convention (equal band weights give 3.17, not 3.36);
-(iii) is the standard direct-standardisation reading and no more. The measure is any use in three months, as the
-respondent understood "generative AI"; it is not intensity, skill or benefit, and Pew's US result (ever-use
-converged, daily use not) says participation is the weakest of the gender measures. Fieldwork is early 2025 with
-no earlier wave; Henseke (2026) cites Bick et al. (2026) as finding "substantially smaller gender differences in
+(iii) is the standard direct-standardisation reading and no more. The measure is any use in the three months before the
+interview, as the respondent understood "generative AI"; it is not intensity, skill or benefit, and Pew's US result
+(ever-use converged, daily use not) says participation is the weakest of the gender measures. Fieldwork ran mostly
+from late March to early August 2025 (Serbia in February, Greece from July to September, Denmark's tables referring
+to August to December), so the reference window differs by country and the EU27 aggregate pools them; there is no
+earlier wave; Henseke (2026) cites Bick et al. (2026) as finding "substantially smaller gender differences in
 generative AI use by late 2025", so the gap may already be smaller than the one measured here.
 
 *Concede.* State the 1.1 points as points, never as a share ("a quarter"); name the weights and the provisional
-flag; say the sensitivity (equal weights 3.17); say the measure is participation in one quarter of 2025 with no
-trend possible, and cite the later-2025 evidence of narrowing as a reason not to carry the number forward.
+flag; say the sensitivity (equal weights 3.17); say the measure is participation in the three months before a 2025
+interview, with fieldwork windows that differ by country and no trend possible, and cite the later-2025 evidence of
+narrowing as a reason not to carry the number forward.
 
 ## 2. The country map and the persistent classes (6 large-gap, 7 small-gap, 13 not distinguishable, IE unclassifiable)
 
@@ -42,10 +47,11 @@ the null produces 0.2 to 0.6 of those per class, so six marks is a real signal; 
 
 *Against, second form.* "Reversed" is empty as a class (D1: the four countries reversed on both denominators are
 classed small-gap) yet the map will be read as showing five countries where women lead. None of the five female
-leads (−1.3 to −1.7 points) exceeds its country's SRS half-width (2.9 to 4.7) *(referee, `.out.txt` §G)*. The
+leads (−1.3 to −1.7 points) exceeds its country's SRS half-width (2.9 to 4.7) (`classes.sign_beyond_bound`: female
+0 of 5). The
 small-gap ● marks mean "further than the half-width from the 2.51 cut", not "distinguishable from zero", and a
 reader will take the mark on Estonia's negative bar as the latter. Of the 22 male leads, 17 exceed the country's
-half-width; BE, BG, EL, FI and LV do not. So the published map has 17 countries with a male lead the bound
+half-width; BE, BG, EL, FI and LV do not (`classes.sign_beyond_bound`: male 17, neither 10). So the published map has 17 countries with a male lead the bound
 supports, 10 whose sign it does not, and no country with a female lead it supports.
 
 *Against, third form.* Ireland has the highest published value (9.3) and cannot be classed because its 16–24 cells
@@ -74,7 +80,7 @@ large share of it; women's tertiary enrolment lead is the likeliest mechanism, a
 and 9 of 26 is the null expectation for two bands of six. The most frequent largest band is 65–74 (9 of 26), where
 the bounds are tightest — a pattern the equal-gap null makes *less* likely, not more (P ≈ 0.02 for 9 or more at
 one band of six) — and where in relative terms the EU27 gap is by far the widest (women's rate 0.53 of men's
-against 0.88–0.91 at 25–54) *(referee; ratios of disclosed EU27 cells)*. The brief's hypothesis was framed in
+against 0.88–0.91 at 25–54; `eu27.age_profile_ratio`). The brief's hypothesis was framed in
 points; in ratios the "mid-life peak" is not where the gap is largest at all.
 
 *Concede.* Report (a) with the 8 beside the 20 and Poland named as the exception the bound supports; say the
@@ -131,7 +137,8 @@ The registered threshold was set by "one third" with no calibration, and the pre
 bound few changes will be"). So "supported" is not evidence that the ordering is robust to age; it is a statement
 that the shifts are small relative to the spread of gaps, which the shifts themselves show directly. The
 distinguishable count is 0: no tercile change survives the bound, and equally no *stability* is shown at the
-bound. The count itself is 2 under the registered text and 3 under the analyst's re-cut (D3).
+bound. The count itself is 2 under the registered text and 3 under the analyst's re-cut (D3;
+`tests.H_composition.tercile_changes_registered_reading` 2, `.tercile_changes` 3).
 
 *What the shifts do show.* Twenty-five of 26 move down: the crude gap overstates the standardised one almost
 everywhere because women are older and older bands use less. The largest downward shifts are in the reversed set
@@ -145,34 +152,45 @@ it; give both counts; say nothing about stability "at the bound".
 ## 7. The internet-user denominator: "little of the gap is an internet-use gap"
 
 *Against.* The registered quantity — gap on `PC_IND` minus gap on `PC_IND_IU3` — is negative in every band at the
-EU27 level (−0.25 to −0.98) and in ten countries exceeds a point at 65–74. Read as "composition", that says
-internet use works in women's favour, which is false: it is arithmetic. With `r` the internet-use rate of a sex-band,
-`gap_IND = r̄ (q_M − q_F) + q̄ (r_M − r_F)`; the first term rescales the internet-user gap by the internet-use rate
-(0.79 at 65–74, so a 4.1-point gap becomes 5.1 among internet users), and the second is the internet-use gap by
-sex, which at the EU27 level is within ±0.3 in every band because `r_F` and `r_M` are within one point *(referee,
-this memo and the verdict, item 12)*. The direction of the registered finding is right — none of the AI gap is a
-recent-internet-use gap — and the reason is that recent internet use no longer differs by sex in any band, not that
-composition offsets anything.
+EU27 level (−0.21 to −0.98; `internet_composition.eu27.bands`) and in ten countries exceeds a point at 65–74
+(`internet_composition.over_one_point_by_band`: 3, 1, 2, 1, 5, 10). Read as "composition", that says internet use
+works in women's favour, which is false: it is arithmetic. With `r` the implied share of recent internet users in a
+sex-band (`p_IND / p_IU3`), `gap_IND = r̄ (q_M − q_F) + q̄ (r_M − r_F)`; the first term rescales the internet-user gap
+by the internet-use rate (0.79 at 65–74, so a 4.1-point gap becomes 5.1 among internet users; `rescaling_term`
+−1.07), and the second is the internet-use gap by sex, which at the EU27 level is under 0.3 points in absolute value
+in every band (`internet_use_gap_term` −0.27 at 16–24 to +0.09 at 65–74) because `r_F` and `r_M` differ by at most
+1.1 points — 0.926 against 0.915 at 55–64, 0.786 against 0.796 at 65–74, and by under 0.5 points below 55
+(`internet_composition.eu27_decomposition`). The two terms sum to the registered share exactly. The direction of
+the registered finding is right — none of the AI gap is a recent-internet-use gap — and the reason is that recent
+internet use differs by sex by at most 1.1 points in any band, not that composition offsets anything. Note the sign at
+65–74: men's implied internet use is the higher there, so the small internet-use term (+0.09) runs *with* the male
+AI lead, not against it.
 
 *Concede.* Report the registered quantity with its definition and say its negative sign is the denominator
-rescaling; state the strong form plainly (recent internet use differs by sex by under a point in every band at the
-EU27 level, so the AI gap is not an internet-access gap); do not call the values "composition" or "share".
+rescaling; state the strong form with its two numbers (the implied share of recent internet users differs by sex by
+at most 1.1 points in any band at the EU27 level and that difference moves the gap by under 0.3 points, so the gap
+in generative-AI use is not a gap in recent internet use); do not write "within a point", "no difference" or
+"internet access"; do not call the values "composition" or "share".
 
 ## 8. Triangulation: Spearman −0.17 (N 26) between the Eurostat gap and OpenAI Signals' feminine message share
 
 *Against.* Unregistered p-values were computed and the rank correlation is uninformative in both directions:
 Signals measures messages, not people, with name-inferred gender on consumer ChatGPT, within-country shares that
-run only 0.455 to 0.594 across the EU26, and June 2025 against fieldwork in Q1 2025. A near-zero Spearman on 26
+run only 0.455 to 0.594 across the EU26, and one month of messages (June 2025) against survey fieldwork spread
+mostly from late March to early August 2025 and, in Greece, July to September. A second correlation (the ratio
+against the share, +0.04) was run unregistered and is logged as D4; it adds nothing citable. A near-zero Spearman on 26
 points neither supports nor contradicts the map. Leg (ii) was not run (D2), so the promised "two independent
 sources" is one, and Henseke's Figure 2 is the only country-level gender comparator in the literature.
 
-*Concede.* Report the correlation as exploratory with N and the caveats and no p-value; say leg (ii) was not run
-and why; say the post has no external check on the country ordering.
+*Concede.* Report the correlation as exploratory with N and the caveats and no p-value (the
+`scipy_p_not_for_citation_*` keys may not be cited); say leg (ii) was not run and why; name the unregistered ratio
+correlation as such if it is mentioned at all; say the post has no external check on the country ordering.
 
 ## What a later wave would need to show
 
 A 2026 `isoc_ai_iaiu` wave with the same cells would allow: the trend statement this post cannot make (is the
-4.5-point gap narrowing, as Bick et al. report for late 2025?); persistence of the six marked classes (DK, PL; EE,
+4.5-point gap narrowing, as Bick et al. report for late 2025?) — with the caveat that national fieldwork windows
+differ within a wave, so even a two-wave comparison is country-by-country in its own calendar, not a common one; persistence of the six marked classes (DK, PL; EE,
 HR, LT, SI) across two independent samples, which is the noise check the programme requires for any geographic
 claim and which one wave cannot provide; whether Poland's young-male lead and the Baltic reversals recur; and, if
 Eurostat publishes cell counts or standard errors, a bound that is not a lower bound under SRS. Without the second

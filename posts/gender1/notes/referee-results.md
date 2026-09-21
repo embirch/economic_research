@@ -264,3 +264,38 @@ Output: `referee_results_gender1.out.txt`, `referee_results_gender1_supp.out.txt
   use, and the post cites the leg.
 - Anything about the 2025 fieldwork beyond Eurostat's metadata (the bound assumes SRS and equal sex split; the
   design-effect list in `power_rules.json` says where it is loose: AT, BG, HR, RO, SK).
+
+## Confirmation at acda4f7 (2026-09-21, closing session)
+
+Checked without re-deriving: `git diff 4ec7b45 acda4f7 -- posts/gender1`, the three PNGs viewed, `outputs/figures.json`
+and `results.json internet_composition` read. Every open item of `referee-results-2.md` landed as worded:
+
+- **Fig 1 legend** — `loc="lower center", bbox_to_anchor=(0.5, -0.115), ncol=2, frameon=False`; the legend sits
+  below the axis, Ireland's men bar (49.6) and Malta's bars are both fully visible.
+- **Fig 2 zero cells** — formatter `"0" if round(M[i, j]) == 0 else f"{M[i, j]:+.0f}"`; Belgium at 25–34 (−0.50)
+  prints "0"; no "−0" or "+0" cell in the 27 × 6 matrix.
+- **Fig 5 caption and `internet_composition.reading`** — "at most 1.1 points in any age band and moves the gap by
+  under 0.3 points", exactly the prescribed sentence; the decomposition key gives 1.10 at 55–64 and 1.08 at 65–74
+  and terms of −0.27 to +0.09.
+- **Fig 1 caption, 13 of 27** — "13 of 27 countries sit in the same tercile on all three measures (6 large-gap,
+  7 small-gap)", as prescribed.
+- **`internet_composition.over_one_point_by_band`** — {3, 1, 2, 1, 5, 10}, the counts the caption's "ten countries"
+  now binds to; computed in script 08 as |composition_share| > 1 over the EU27 members with the band usable.
+
+Nothing else in `results.json` changed between 4ec7b45 and acda4f7 except `generated`; the two remaining keys the
+claims list asks for (`tests.H_age.men_lead_by_band`, `tests.H_age.largest_band_counts`) are still absent and are
+marked **[key missing]** in `notes/claims.md`; until they exist the two sentences in Figure 2's caption that rest on
+them may not be carried into the post, and the caption itself is bound to the same rule at the draft review.
+
+`notes/claims.md` and `notes/red-team.md` refreshed to acda4f7 in this session: the registered-reading count 2 beside
+3 and the renamed `tercile_changes` keys; the extension median 4.4; the band medians 0.00 to −0.87; the true median
+−1.31; `classes.sign_beyond_bound`, `eu27.age_profile_ratio`, `eu27_decomposition` and `over_one_point_by_band`
+bound by key; the internet-use sentence as "at most 1.1 points … under 0.3 points"; the second implementation at
+293; the fieldwork-timing correction (mostly late March to early August 2025, Serbia February, Greece July to
+September; the country comparison is not a common calendar window) carried into the permitted sentences, the
+forbidden sentences, required caveat 1, limitation 7 and the opening claim ("In 2025", not "In early 2025").
+
+**SIGN OFF — results, gender1, at acda4f7 — 2026-09-21.** The results may go to the editor with `notes/claims.md`
+as the boundary document. Conditions carried to the draft review: the two **[key missing]** items above; the
+deviations list order (D1–D4) when script 08 is next touched; the four unverified items under "What I could not
+verify" stand.
