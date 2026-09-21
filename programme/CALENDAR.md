@@ -46,3 +46,5 @@ Per post: POST.md → page → referee review → pull request (Gate 3). Set rev
 | 1.3 | 2 persistent (lead, steward) for the long-list loop + lead scoring + referee audit ×2 + editor notes ×2 + lead revisions ×2 ≈ 9 | two persistent threads with director relays; zero tree conflicts |
 | 2.1 post1 Stage 2 + Stage 3 (Gate 2a → 2b → 3) | 11 threads, ~19 turns: lead ×2 turns, steward ×1, analyst ×7 turns (prereg 2, results 2, tidies 3), referee ×3 (prereg, results+tidy, draft), second-read ×3, editor ×2 turns | zero billing stops, zero send-backs, zero tree conflicts; Gates 2a, 2b and 3 reached in one session; Stage 3 cap $200 |
 | 1.4 batch 1 | ~40 threads: 5 lead briefs, 5 lead amendment/design passes, 7 steward, 1 editor, ~12 referee attempts (7 verdicts landed) | four billing stops; cap $190 → $240 → $290 → $315; scope narrowed by the human to post1 at the third stop; Gate 1b (post1) reached |
+
+| 2026-09-21 | gender1 | Gate 1b approved (brief v1.1); pre-registration rev 2 referee BLOCK→applied→second read SIGN OFF; **Gate 2a approved** by the human; analysis runs locally | human |
