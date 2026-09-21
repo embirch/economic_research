@@ -4,7 +4,7 @@ Standardised rate = Σ_b w_b p_{s,b} with the EU27 2025 sex-pooled population we
 where all twelve band cells are usable; never renormalised, never imputed. Equal-weight standardisation is
 computed as a labelled sensitivity (robustness item 6). Terciles and classes follow the registered class rule.
 """
-import json, os, sys
+import json, os, sys, statistics
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gender1_common import *
 
@@ -27,11 +27,15 @@ for g in EU27 + EXT + ["EU27_2020"]:
 comp_set = [g for g in EU27 if g in std]
 crude_vals = {g: std[g]["crude_gap"] for g in comp_set}; std_vals = {g: std[g]["std_gap"] for g in comp_set}
 t_crude, k_c = tercile(crude_vals, True, TIE_GAP); t_std, k_s = tercile(std_vals, True, TIE_GAP)
-changes = [g for g in comp_set if t_crude[g] != t_std[g]]
+changes = [g for g in comp_set if t_crude[g] != t_std[g]]          # analyst's reading: crude tercile re-cut on the 26 with a standardised gap
+# registered literal reading (referee item 2 / deviation D3): the crude tercile over all 27 usable geographies, compared on the intersection
+T27 = json.load(open(os.path.join(PROC, "gaps.json")))["terciles"]["gap"]
+changes_registered = [g for g in comp_set if T27[g] != t_std[g]]
 # distinguishable change: both crude and standardised lie further than the overall half-width from the (k+1)-th value they cross
 def cut_values(vals, k):
     items = sorted(vals.values(), reverse=True); return items[k], items[-k - 1]   # top cut, bottom cut
 tc_top, tc_bot = cut_values(crude_vals, k_c); ts_top, ts_bot = cut_values(std_vals, k_s)
+gap27_vals = {g: overall[g]["I_IUAI|PC_IND"]["gap"] for g in EU27}; g27_top, g27_bot = cut_values(gap27_vals, int(round(27 / 3)))   # the class table's gap cut (27-set)
 dist_changes = []
 for g in changes:
     hw = halfwidth(pw, g)
@@ -43,10 +47,13 @@ for g in changes:
     if crossed and all(crossed): dist_changes.append(g)
 N_c = len(comp_set)
 h_comp = {"usable_set": comp_set, "N": N_c, "k": k_c, "tercile_changes": len(changes), "changed": changes,
+          "reading": "crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading, deviation D3)",
+          "tercile_changes_registered_reading": len(changes_registered), "changed_registered_reading": changes_registered,
+          "registered_reading": "crude tercile over all 27 usable geographies, compared on the intersection (the pre-registration's literal text)",
           "rule": "supported if at most 8 of 26 change; against if 9 or more", "raw_verdict": "supported" if len(changes) <= 8 else "against",
           "distinguishable_changes": len(dist_changes), "distinguishable_changed": dist_changes,
           "eu27_calibration": {"crude": overall["EU27_2020"]["I_IUAI|PC_IND"]["gap"], "standardised": std["EU27_2020"]["std_gap"]},
-          "median_change_pp": sorted(std[g]["change_pp"] for g in comp_set)[N_c // 2],
+          "median_change_pp": statistics.median(std[g]["change_pp"] for g in comp_set),
           "changes_pp": {g: std[g]["change_pp"] for g in comp_set}}
 
 # ---- persistent class table (gap, ratio, standardised) on EU27; extension placed against EU27 cut values
@@ -67,8 +74,8 @@ for g in EU27:
     else:
         cls = "not distinguishable"
     hw = halfwidth(pw, g); gv = gap_vals[g]
-    if cls == "large-gap": dist = abs(gv - tc_top) > hw if hw else None
-    elif cls == "small-gap": dist = abs(gv - tc_bot) > hw if hw else None
+    if cls == "large-gap": dist = abs(gv - g27_top) > hw if hw else None     # the registered mark: distance from the (k+1)-th value on the gap measure (27-set)
+    elif cls == "small-gap": dist = abs(gv - g27_bot) > hw if hw else None
     elif cls == "reversed": dist = abs(gv) > hw if hw else None
     else: dist = None
     classes[g] = {"class": cls, "distinguishable": dist, "tercile_gap": t_gap[g], "tercile_ratio": t_ratio[g], "tercile_std": t_std.get(g), "reversed_both_denominators": rev,
@@ -84,7 +91,7 @@ ext_classes = {}
 for g in EXT:
     o = overall[g].get("I_IUAI|PC_IND")
     if not o: continue
-    tg = place(o["gap"], tc_top, tc_bot); tr = place(o["ratio"], r_top, r_bot, False, TIE_RATIO); ts = place(std.get(g, {}).get("std_gap"), ts_top, ts_bot)
+    tg = place(o["gap"], g27_top, g27_bot); tr = place(o["ratio"], r_top, r_bot, False, TIE_RATIO); ts = place(std.get(g, {}).get("std_gap"), ts_top, ts_bot)
     rev = o["F"] > o["M"] and "I_IUAI|PC_IND_IU3" in overall[g] and overall[g]["I_IUAI|PC_IND_IU3"]["F"] > overall[g]["I_IUAI|PC_IND_IU3"]["M"]
     if ts is None: cls = "not classifiable"
     elif tg == tr == ts == "top": cls = "large-gap"
@@ -97,8 +104,14 @@ counts = {c: sum(1 for v in classes.values() if v["class"] == c) for c in ["larg
 dist_counts = {c: sum(1 for v in classes.values() if v["class"] == c and v["distinguishable"]) for c in ["large-gap", "small-gap", "reversed"]}
 write_json("standardise.json", {"weights": w, "standardised": std, "h_composition": h_comp,
                                 "classes_eu27": classes, "class_counts": counts, "class_counts_distinguishable": dist_counts,
-                                "classes_extension": ext_classes, "cuts": {"gap": [tc_top, tc_bot], "std": [ts_top, ts_bot], "ratio": [r_top, r_bot]},
-                                "changes_ratio_vs_std": sum(1 for g in comp_set if t_ratio[g] != t_std[g])})
+                                "classes_extension": ext_classes, "cuts": {"gap_27": [g27_top, g27_bot], "crude_26": [tc_top, tc_bot], "std": [ts_top, ts_bot], "ratio": [r_top, r_bot]},
+                                "changes_ratio_vs_std": sum(1 for g in comp_set if t_ratio[g] != t_std[g]),
+                                "changes_ratio_vs_std_reading": "ratio tercile over 27 against the standardised tercile over 26, on the intersection (the registered reading)",
+                                "changes_ratio_vs_std_recut_26": sum(1 for g in comp_set if tercile({h: ratio_vals[h] for h in comp_set}, False, TIE_RATIO)[0][g] != t_std[g]),
+                                "sign_beyond_bound": {"male": sum(1 for g in EU27 if gap_vals[g] > 0 and halfwidth(pw, g) and gap_vals[g] > halfwidth(pw, g)),
+                                                      "female": sum(1 for g in EU27 if gap_vals[g] < 0 and halfwidth(pw, g) and -gap_vals[g] > halfwidth(pw, g)),
+                                                      "neither": sum(1 for g in EU27 if not (halfwidth(pw, g) and abs(gap_vals[g]) > halfwidth(pw, g))),
+                                                      "male_lead_countries": sum(1 for g in EU27 if gap_vals[g] > 0), "female_lead_countries": sum(1 for g in EU27 if gap_vals[g] < 0)}})
 
 # ---- check block
 assert abs(sum(w.values()) - 1) < 1e-9
@@ -106,8 +119,7 @@ assert N_c == 26 and k_c == 9 and "IE" not in std
 eu = std["EU27_2020"]
 assert abs(eu["std_gap"] - 3.36) < 0.01 and abs(eu["crude_gap"] - 4.46) < 1e-9, eu   # the referee's disclosed EU27 calibration
 assert classes["IE"]["class"] == "not classifiable"
-assert all(v["class"] != "not distinguishable" or True for v in classes.values())
 print(f"standardised for {len(std)} geographies; EU27 crude {eu['crude_gap']:.2f} -> standardised {eu['std_gap']:.2f}")
-print(f"H-composition: N={N_c}; tercile changes {len(changes)} ({changes}); distinguishable {len(dist_changes)}; verdict {h_comp['raw_verdict']}; median change {h_comp['median_change_pp']:.2f} pp")
+print(f"H-composition: N={N_c}; tercile changes {len(changes)} ({changes}) analyst's reading, {len(changes_registered)} ({changes_registered}) registered reading; distinguishable {len(dist_changes)}; verdict {h_comp['raw_verdict']}; median change {h_comp['median_change_pp']:.2f} pp")
 print(f"classes EU27: {counts}; distinguishable {dist_counts}")
 print("CHECKS PASSED")

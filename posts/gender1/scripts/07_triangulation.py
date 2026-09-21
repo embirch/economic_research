@@ -23,13 +23,15 @@ rho, pval = spearmanr(gaps, shares)
 ratios = [overall[g]["I_IUAI|PC_IND"]["ratio"] for g, _, _ in pairs]
 rho_r, pval_r = spearmanr(ratios, shares)
 out = {"leg_i": {"source": "OpenAI Signals share_of_messages_by_gender_country_month.csv, feminine, 2025-06-01", "N": len(pairs), "missing_eu27": [g for g in EU27 if code[g] not in fem],
-                 "spearman_gap_vs_feminine_share": rho, "p_value_gap": pval, "spearman_ratio_vs_feminine_share": rho_r, "p_value_ratio": pval_r,
+                 "spearman_gap_vs_feminine_share": rho, "scipy_p_not_for_citation_gap": pval,
+                 "spearman_ratio_vs_feminine_share_UNREGISTERED_ADDITION": rho_r, "scipy_p_not_for_citation_ratio": pval_r,
+                 "note": "one Spearman registered (gap vs share); the ratio correlation is an unregistered exploratory addition logged in the notebook; no p-value is registered and none may be cited",
                  "expected_sign": "negative for the gap (a larger male lead in the survey should go with a smaller feminine share of messages), positive for the ratio",
                  "values": [{"geo": g, "gap": a, "feminine_share": b} for g, a, b in pairs],
                  "caveats": "name-inferred gender; message share, not people; consumer ChatGPT; a share of messages within a country, not a use rate; exploratory, in no rule"},
        "leg_ii": {"status": "dropped by rule", "reason": "Henseke (2026) Figure 2 gives the country gender gaps only as an image; the figure-values ruling forbids reading values off a chart; no table is published"}}
 write_json("triangulation.json", out)
 assert len(pairs) == 26 and out["leg_i"]["missing_eu27"] and -1 <= rho <= 1
-print(f"Signals leg: N={len(pairs)} (missing {out['leg_i']['missing_eu27']}); Spearman gap vs feminine share {rho:+.3f} (p={pval:.3f}); ratio vs feminine share {rho_r:+.3f} (p={pval_r:.3f})")
+print(f"Signals leg: N={len(pairs)} (missing {out['leg_i']['missing_eu27']}); Spearman gap vs feminine share {rho:+.3f}; ratio vs feminine share {rho_r:+.3f} (unregistered addition; no p-value citable)")
 print("Henseke leg: dropped by rule (figure-only values)")
 print("CHECKS PASSED")

@@ -93,7 +93,6 @@ assert abs(overall["EU27_2020"]["I_IUAIWP|PC_IND"]["gap"] - 3.00) < 1e-9 and abs
 assert abs(bands["EU27_2020"]["PC_IND"]["Y16_24"]["gap"] - (-1.67)) < 1e-9
 assert k_gap == 9 and k_ratio == 9
 assert all(v in ("top", "middle", "bottom") for v in t_gap.values())
-assert all(t_gap[g] == "top" for g in list(t_gap)[:0])  # placeholder, structure only
 for g in EU27:
     for b, d in bands[g]["PC_IND"].items():
         assert abs(d["gap"] - (d["M"] - d["F"])) < 1e-12

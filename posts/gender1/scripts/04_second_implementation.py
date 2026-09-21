@@ -70,6 +70,33 @@ t_c = tercile(crude); t_s = tercile(std)
 assert sum(1 for g in crude if t_c[g] != t_s[g]) == S["h_composition"]["tercile_changes"]
 gap_all = {g: G["overall"][g]["I_IUAI|PC_IND"]["gap"] for g in EU27}; ratio_all = {g: G["overall"][g]["I_IUAI|PC_IND"]["ratio"] for g in EU27}
 assert tercile(gap_all) == G["terciles"]["gap"] and tercile(ratio_all, False, 0.01) == G["terciles"]["ratio"]
+# registered literal reading of H-composition (27-set crude tercile against the 26-set standardised tercile, on the intersection)
+t27 = tercile(gap_all); assert sum(1 for g in std if t27[g] != t_s[g]) == S["h_composition"]["tercile_changes_registered_reading"]
+# persistent class table, marks and H-work (referee item 9): recomputed here from the independent read
+D = json.load(open(os.path.join(PROC, "denominators_purposes.json"))); P27 = P["countries"]
+t_r = tercile(ratio_all, False, 0.01)
+def cuts(vals, larger=True):
+    items = sorted(vals.values(), reverse=larger); k = int(round(len(vals) / 3)); return items[k], items[-k - 1]
+g_top, g_bot = cuts(gap_all); s_top, s_bot = cuts(std)
+for g in EU27:
+    o = pr(g, "I_IUAI", "PC_IND", "Y16_74"); o3 = pr(g, "I_IUAI", "PC_IND_IU3", "Y16_74")
+    rev = o[0] > o[1] and o3 is not None and o3[0] > o3[1]
+    if g not in std: cls = "not classifiable"
+    elif t27[g] == t_r[g] == t_s[g] == "top": cls = "large-gap"
+    elif t27[g] == t_r[g] == t_s[g] == "bottom": cls = "small-gap"
+    elif rev: cls = "reversed"
+    else: cls = "not distinguishable"
+    assert cls == S["classes_eu27"][g]["class"], (g, cls, S["classes_eu27"][g]["class"])
+    hw = P27.get(g, {}).get("gap_halfwidth95_pp"); gv = o[1] - o[0]
+    mark = (abs(gv - g_top) > hw) if cls == "large-gap" else (abs(gv - g_bot) > hw) if cls == "small-gap" else (abs(gv) > hw) if cls == "reversed" else None
+    assert mark == S["classes_eu27"][g]["distinguishable"], (g, mark)
+fav = dfav = dag = 0
+for g in EU27:
+    w_ = pr(g, "I_IUAIWP", "PC_IND", "Y16_74"); p_ = pr(g, "I_IUAIPR", "PC_IND", "Y16_74")
+    d = (w_[1] - w_[0]) - (p_[1] - p_[0]); fav += d > 0
+    hw = P27[g]["gap_halfwidth95_pp"]; dfav += d > math.sqrt(2) * hw; dag += d < -math.sqrt(2) * hw
+assert (fav, dfav, dag) == (D["h_work"]["raw_favour"], D["h_work"]["distinguishable_favour"], D["h_work"]["distinguishable_against"]), (fav, dfav, dag)
+n_checked += 27 * 2 + 3
 
 # ---- synthetic recovery
 rng_bands = {"Y16_24": (60, 62), "Y25_34": (50, 55), "Y35_44": (40, 44), "Y45_54": (30, 32), "Y55_64": (18, 20), "Y65_74": (6, 9)}
@@ -96,6 +123,6 @@ t1 = tercile(syn); assert [g for g, v in t1.items() if v == "top"] == ["DK"]
 json.dump({"tolerance": tol, "checked": n_checked, "max_abs_difference": worst,
            "synthetic": {"standardised_gap_recovered": True, "equal_rates_all_middle": True, "composition_effect_recovered_pp": crude2, "single_large_gap_geography": "DK"}},
           open(os.path.join(PROC, "second_implementation.json"), "w"), indent=1)
-print(f"second implementation: {n_checked} quantities agree to {worst:.1e}; H-age {a_raw}/{b_raw}, H-education {hi}, composition changes {S['h_composition']['tercile_changes']} reproduced")
+print(f"second implementation: {n_checked} quantities agree to {worst:.1e}; H-age {a_raw}/{b_raw}, H-education {hi}, composition changes {S['h_composition']['tercile_changes']} (registered reading {S['h_composition']['tercile_changes_registered_reading']}), class table, marks and H-work {fav}/{dfav}/{dag} reproduced")
 print(f"synthetic: standardised gap recovered; equal rates -> all middle; composition effect {crude2:.2f} pp crude vs 0 standardised; single large-gap geography recovered")
 print("CHECKS PASSED")

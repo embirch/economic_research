@@ -310,6 +310,13 @@
    "FR",
    "LV"
   ],
+  "reading": "crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading, deviation D3)",
+  "tercile_changes_registered_reading": 2,
+  "changed_registered_reading": [
+   "CZ",
+   "LV"
+  ],
+  "registered_reading": "crude tercile over all 27 usable geographies, compared on the intersection (the pre-registration's literal text)",
   "rule": "supported if at most 8 of 26 change; against if 9 or more",
   "raw_verdict": "supported",
   "distinguishable_changes": 0,
@@ -318,7 +325,7 @@
    "crude": 4.459999999999997,
    "standardised": 3.362738211345391
   },
-  "median_change_pp": -1.3014802795984792,
+  "median_change_pp": -1.3066574641324173,
   "changes_pp": {
    "AT": -1.177156023557032,
    "BE": -0.2556091915729297,
@@ -769,7 +776,11 @@
   }
  },
  "cuts": {
-  "gap": [
+  "gap_27": [
+   4.530000000000001,
+   2.510000000000005
+  ],
+  "crude_26": [
    4.25,
    2.510000000000005
   ],
@@ -782,5 +793,14 @@
    0.9309309309309309
   ]
  },
- "changes_ratio_vs_std": 8
+ "changes_ratio_vs_std": 8,
+ "changes_ratio_vs_std_reading": "ratio tercile over 27 against the standardised tercile over 26, on the intersection (the registered reading)",
+ "changes_ratio_vs_std_recut_26": 7,
+ "sign_beyond_bound": {
+  "male": 17,
+  "female": 0,
+  "neither": 10,
+  "male_lead_countries": 22,
+  "female_lead_countries": 5
+ }
 }

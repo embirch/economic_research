@@ -37,7 +37,8 @@
   "distinguishable_against": 9,
   "no_bound": [],
   "verdict": "against",
-  "reading": "beyond the 0.026 chance threshold",
+  "reading": "beyond the 0.026 chance threshold (19 or more of 27 in favour, or 23 or more against, each one-sided 0.026 under an even split)",
+  "one_sided_probability_of_realised_count_under_even_split": 0.0001553744077682495,
   "among_users": {
    "AT": 5.88000000000001,
    "BE": -0.03999999999999915,
@@ -1607,13 +1608,51 @@
  },
  "internet_composition_band_medians": {
   "Y16_24": 0.0,
-  "Y25_34": -0.13000000000000256,
-  "Y35_44": -0.21000000000000085,
+  "Y25_34": -0.134999999999998,
+  "Y35_44": -0.21499999999999986,
   "Y45_54": -0.17999999999999972,
-  "Y55_64": -0.4499999999999993,
-  "Y65_74": -0.8200000000000003
+  "Y55_64": -0.4549999999999983,
+  "Y65_74": -0.8700000000000006
  },
  "internet_set_N": 26,
+ "internet_decomposition_eu27": {
+  "Y16_24": {
+   "implied_internet_use_F": 0.9902005818404532,
+   "implied_internet_use_M": 0.986069807481609,
+   "rescaling_term": 0.01684802358133597,
+   "internet_use_gap_term": -0.26684802358133763
+  },
+  "Y25_34": {
+   "implied_internet_use_F": 0.9845056065239551,
+   "implied_internet_use_M": 0.9811041126343091,
+   "rescaling_term": -0.08477204227487878,
+   "internet_use_gap_term": -0.17522795772511662
+  },
+  "Y35_44": {
+   "implied_internet_use_F": 0.9822485207100593,
+   "implied_internet_use_M": 0.978466635115949,
+   "rescaling_term": -0.09978350420193927,
+   "internet_use_gap_term": -0.15021649579806118
+  },
+  "Y45_54": {
+   "implied_internet_use_F": 0.9662840746054521,
+   "implied_internet_use_M": 0.9628192693178145,
+   "rescaling_term": -0.10811740051701868,
+   "internet_use_gap_term": -0.1018825994829835
+  },
+  "Y55_64": {
+   "implied_internet_use_F": 0.9261400128452152,
+   "implied_internet_use_M": 0.9151544874938695,
+   "rescaling_term": -0.3824802541828056,
+   "internet_use_gap_term": -0.19751974581719517
+  },
+  "Y65_74": {
+   "implied_internet_use_F": 0.7855917667238422,
+   "implied_internet_use_M": 0.7963470319634705,
+   "rescaling_term": -1.070236675360479,
+   "internet_use_gap_term": 0.09023667536048077
+  }
+ },
  "flagged_appendix": [],
  "sets": {
   "eu27": {
@@ -1629,7 +1668,7 @@
   },
   "extension": {
    "N": 8,
-   "median": 4.649999999999999,
+   "median": 4.365,
    "reversed": [
     "MK"
    ]

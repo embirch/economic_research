@@ -6,9 +6,10 @@
    "MT"
   ],
   "spearman_gap_vs_feminine_share": -0.17376434645689617,
-  "p_value_gap": 0.39591601168364476,
-  "spearman_ratio_vs_feminine_share": 0.03967847281299204,
-  "p_value_ratio": 0.847392605995324,
+  "scipy_p_not_for_citation_gap": 0.39591601168364476,
+  "spearman_ratio_vs_feminine_share_UNREGISTERED_ADDITION": 0.03967847281299204,
+  "scipy_p_not_for_citation_ratio": 0.847392605995324,
+  "note": "one Spearman registered (gap vs share); the ratio correlation is an unregistered exploratory addition logged in the notebook; no p-value is registered and none may be cited",
   "expected_sign": "negative for the gap (a larger male lead in the survey should go with a smaller feminine share of messages), positive for the ratio",
   "values": [
    {

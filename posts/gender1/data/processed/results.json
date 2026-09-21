@@ -1,7 +1,7 @@
 {
  "post": "gender1",
  "question": "Where is the gender gap in generative AI use widest, and how much of that is measurement?",
- "generated": "2026-09-21T16:01:40Z",
+ "generated": "2026-09-21T16:26:47Z",
  "prereg": "posts/gender1/prereg/prereg.md (revision 2, content 6050e38, committed c128906; opens applied 625440e)",
  "data": {
   "tsv_sha256": "7f668f7be9aaefaa5662ab2ab059875de8ccbe050c5c38a8de4b2c33a96896ab",
@@ -101,6 +101,14 @@
     "M": 8.72,
     "gap": 4.140000000000001
    }
+  },
+  "age_profile_ratio": {
+   "Y16_24": 1.0265079365079366,
+   "Y25_34": 0.9118202416918428,
+   "Y35_44": 0.883192261185006,
+   "Y45_54": 0.9046339825386165,
+   "Y55_64": 0.7727759914255091,
+   "Y65_74": 0.5252293577981652
   },
   "education_profile": {
    "I0_2": {
@@ -6377,7 +6385,8 @@
    "distinguishable_against": 9,
    "no_bound": [],
    "verdict": "against",
-   "reading": "beyond the 0.026 chance threshold",
+   "reading": "beyond the 0.026 chance threshold (19 or more of 27 in favour, or 23 or more against, each one-sided 0.026 under an even split)",
+   "one_sided_probability_of_realised_count_under_even_split": 0.0001553744077682495,
    "among_users": {
     "AT": 5.88000000000001,
     "BE": -0.03999999999999915,
@@ -6527,6 +6536,13 @@
     "FR",
     "LV"
    ],
+   "reading": "crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading, deviation D3)",
+   "tercile_changes_registered_reading": 2,
+   "changed_registered_reading": [
+    "CZ",
+    "LV"
+   ],
+   "registered_reading": "crude tercile over all 27 usable geographies, compared on the intersection (the pre-registration's literal text)",
    "rule": "supported if at most 8 of 26 change; against if 9 or more",
    "raw_verdict": "supported",
    "distinguishable_changes": 0,
@@ -6535,7 +6551,7 @@
     "crude": 4.459999999999997,
     "standardised": 3.362738211345391
    },
-   "median_change_pp": -1.3014802795984792
+   "median_change_pp": -1.3066574641324173
   }
  },
  "classes": {
@@ -6585,7 +6601,11 @@
    "IE"
   ],
   "cuts": {
-   "gap": [
+   "gap_27": [
+    4.530000000000001,
+    2.510000000000005
+   ],
+   "crude_26": [
     4.25,
     2.510000000000005
    ],
@@ -6598,10 +6618,19 @@
     0.9309309309309309
    ]
   },
+  "sign_beyond_bound": {
+   "male": 17,
+   "female": 0,
+   "neither": 10,
+   "male_lead_countries": 22,
+   "female_lead_countries": 5
+  },
   "tercile_changes": {
    "gap_vs_ratio": 6,
-   "crude_vs_standardised": 3,
-   "ratio_vs_standardised": 8
+   "crude_vs_standardised_analyst_reading": 3,
+   "crude_vs_standardised_registered_reading": 2,
+   "ratio_vs_standardised_registered_reading": 8,
+   "ratio_vs_standardised_recut_26": 7
   }
  },
  "purposes": {
@@ -6690,11 +6719,11 @@
  "internet_composition": {
   "band_medians": {
    "Y16_24": 0.0,
-   "Y25_34": -0.13000000000000256,
-   "Y35_44": -0.21000000000000085,
+   "Y25_34": -0.134999999999998,
+   "Y35_44": -0.21499999999999986,
    "Y45_54": -0.17999999999999972,
-   "Y55_64": -0.4499999999999993,
-   "Y65_74": -0.8200000000000003
+   "Y55_64": -0.4549999999999983,
+   "Y65_74": -0.8700000000000006
   },
   "N": 26,
   "eu27": {
@@ -6733,7 +6762,46 @@
      "composition_share": -0.9799999999999986
     }
    }
-  }
+  },
+  "eu27_decomposition": {
+   "Y16_24": {
+    "implied_internet_use_F": 0.9902005818404532,
+    "implied_internet_use_M": 0.986069807481609,
+    "rescaling_term": 0.01684802358133597,
+    "internet_use_gap_term": -0.26684802358133763
+   },
+   "Y25_34": {
+    "implied_internet_use_F": 0.9845056065239551,
+    "implied_internet_use_M": 0.9811041126343091,
+    "rescaling_term": -0.08477204227487878,
+    "internet_use_gap_term": -0.17522795772511662
+   },
+   "Y35_44": {
+    "implied_internet_use_F": 0.9822485207100593,
+    "implied_internet_use_M": 0.978466635115949,
+    "rescaling_term": -0.09978350420193927,
+    "internet_use_gap_term": -0.15021649579806118
+   },
+   "Y45_54": {
+    "implied_internet_use_F": 0.9662840746054521,
+    "implied_internet_use_M": 0.9628192693178145,
+    "rescaling_term": -0.10811740051701868,
+    "internet_use_gap_term": -0.1018825994829835
+   },
+   "Y55_64": {
+    "implied_internet_use_F": 0.9261400128452152,
+    "implied_internet_use_M": 0.9151544874938695,
+    "rescaling_term": -0.3824802541828056,
+    "internet_use_gap_term": -0.19751974581719517
+   },
+   "Y65_74": {
+    "implied_internet_use_F": 0.7855917667238422,
+    "implied_internet_use_M": 0.7963470319634705,
+    "rescaling_term": -1.070236675360479,
+    "internet_use_gap_term": 0.09023667536048077
+   }
+  },
+  "reading": "a difference of gaps on two denominators; where internet use is below 100% its sign is a rescaling of the internet-user gap, not a composition that favours women; the sex difference in implied internet use is within a point in every band at EU27 level"
  },
  "sets": {
   "eu27": {
@@ -6749,7 +6817,7 @@
   },
   "extension": {
    "N": 8,
-   "median": 4.649999999999999,
+   "median": 4.365,
    "reversed": [
     "MK"
    ]
@@ -6831,7 +6899,7 @@
  },
  "second_implementation": {
   "tolerance": 1e-09,
-  "checked": 236,
+  "checked": 293,
   "max_abs_difference": 0.0,
   "synthetic": {
    "standardised_gap_recovered": true,
@@ -6848,9 +6916,10 @@
     "MT"
    ],
    "spearman_gap_vs_feminine_share": -0.17376434645689617,
-   "p_value_gap": 0.39591601168364476,
-   "spearman_ratio_vs_feminine_share": 0.03967847281299204,
-   "p_value_ratio": 0.847392605995324,
+   "scipy_p_not_for_citation_gap": 0.39591601168364476,
+   "spearman_ratio_vs_feminine_share_UNREGISTERED_ADDITION": 0.03967847281299204,
+   "scipy_p_not_for_citation_ratio": 0.847392605995324,
+   "note": "one Spearman registered (gap vs share); the ratio correlation is an unregistered exploratory addition logged in the notebook; no p-value is registered and none may be cited",
    "expected_sign": "negative for the gap (a larger male lead in the survey should go with a smaller feminine share of messages), positive for the ratio",
    "caveats": "name-inferred gender; message share, not people; consumer ChatGPT; a share of messages within a country, not a use rate; exploratory, in no rule"
   },
@@ -6860,6 +6929,16 @@
   }
  },
  "deviations": [
+  {
+   "id": "D3",
+   "what": "H-composition's crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading) rather than the registered literal reading (crude tercile over all 27, compared on the intersection); both counts reported",
+   "effect": "3 changes (CZ, FR, LV) against 2 (CZ, LV); verdict supported under either; distinguishable 0 under either"
+  },
+  {
+   "id": "D4",
+   "what": "an unregistered exploratory addition: the Spearman of the ratio against the feminine message share, beside the registered gap correlation; scipy p-values stored under not-for-citation keys",
+   "effect": "no rule touched; nothing citable added"
+  },
   {
    "id": "D1",
    "what": "class-rule precedence: a geography in the bottom tercile on all three measures that is also reversed on both denominators is classed small-gap, with its reversed flag reported beside it (the registered rule lists both classes without precedence)",
