@@ -29,9 +29,12 @@ os.makedirs(PROC, exist_ok=True)
 # ---- national sample sizes (steward table)
 ns = {}
 for r in csv.DictReader(open(os.path.join(PROC, "national_sample_sizes_2025.csv"))):
-    n = r["n_individuals_16_74_achieved"] or r["n_implied"]
+    # preference (referee item 1): the national page's row [D] net sample of individuals 16-74; else the implied
+    # yes-count / proportion (HU, TR: row [D] gives households only; IE: row not parseable, precision block dated 2022-23)
+    n = r["n_net_individuals_16_74_D"] or r["n_implied"]
     ns[r["geo"]] = dict(n=int(float(n)) if n else None, ref_p=float(r["ref_prop_pct"]) if r["ref_prop_pct"] else None,
-                       ref_se=float(r["ref_se_pp"]) if r["ref_se_pp"] else None, source="achieved" if r["n_individuals_16_74_achieved"] else "implied")
+                       ref_se=float(r["ref_se_pp"]) if r["ref_se_pp"] else None,
+                       source="net sample, row [D]" if r["n_net_individuals_16_74_D"] else "implied (yes-count / proportion)")
 
 # ---- EU27 age shares from demo_pjan (JSON-stat)
 d = json.load(open(os.path.join(REPO, "data", "cache", "eurostat", "demo_pjan_EU27_2025.json")))
@@ -48,14 +51,14 @@ for b, ages in bands.items():
     pop[b] = sum(d["value"].get(str(idx({"freq": "A", "unit": "NR", "age": f"Y{a}", "sex": "T", "geo": "EU27_2020", "time": "2025"})), 0) for a in ages)
 tot = sum(pop.values()); w = {b: pop[b] / tot for b in bands}
 
-# ---- country overall use rates (both sexes), the published headline figures, from the official TSV
-rates = {}
+# ---- country overall use rates (both sexes), the published headline figures, and the EU27 both-sex band rates
+rates = {}; eu_band = {}
 for r in csv.reader(open(os.path.join(REPO, "data", "cache", "eurostat", "isoc_ai_iaiu.tsv")), delimiter="\t"):
     if r[0].startswith("freq"): continue
     freq, grp, ind, unit, geo = r[0].split(",")
-    if ind == "I_IUAI" and unit == "PC_IND" and grp == "IND_TOTAL":
-        v = r[1].strip()
-        if not v.startswith(":"): rates[geo] = float(v.split()[0])
+    v = r[1].strip()
+    if ind == "I_IUAI" and unit == "PC_IND" and grp == "IND_TOTAL" and not v.startswith(":"): rates[geo] = float(v.split()[0])
+    if ind == "I_IUAI" and unit == "PC_IND" and geo == "EU27_2020" and grp in bands and not v.startswith(":"): eu_band[grp] = float(v.split()[0])
 
 def se_rate(p, n): return 100 * math.sqrt((p / 100) * (1 - p / 100) / n)
 
@@ -63,15 +66,15 @@ out = {"assumptions": {
     "A1": "the national sample is split equally between women and men",
     "A2": "simple random sampling; design effects widen the true standard error, so every figure here is a lower bound",
     "A3": "each sex-by-age band's share of the national sample equals the EU27 2025 population share of that band (demo_pjan, provisional)",
-    "A4": "the rate used in the binomial variance is the country's published overall use rate; a sex-specific rate would move the bound by less than the rounding shown"},
-    "eu27_age_weights": w, "countries": {}, "class_rule": {}}
+    "A4": "the rate in the binomial variance is the country's published overall both-sex rate for the overall bound, and the EU27 both-sex rate of the band for the band bounds; a sex-specific rate would move either by less than the rounding shown; using a country's own band rate would move the older-band bounds further and is not done, to avoid inspecting country-by-age cells before the commit"},
+    "eu27_age_weights": w, "eu27_band_rates_pct": eu_band, "countries": {}, "class_rule": {}}
 for geo, p in sorted(rates.items()):
     if geo not in ns or not ns[geo]["n"]: out["countries"][geo] = {"n": None, "note": "no national sample figure found"}; continue
     n = ns[geo]["n"]; n_sex = n / 2
     se_s = se_rate(p, n_sex); se_gap = math.sqrt(2) * se_s
     band = {}
     for b in bands:
-        nb = n_sex * w[b]; se_b = se_rate(p, nb) if nb > 0 else None
+        nb = n_sex * w[b]; se_b = se_rate(eu_band[b], nb) if nb > 0 else None
         band[b] = {"n_per_sex": round(nb), "gap_se_pp": round(math.sqrt(2) * se_b, 2), "gap_halfwidth95_pp": round(1.96 * math.sqrt(2) * se_b, 2)}
     ref_srs = se_rate(ns[geo]["ref_p"], n) if ns[geo]["ref_p"] else None
     out["countries"][geo] = {"n": n, "n_source": ns[geo]["source"], "overall_rate_pct": p, "rate_se_per_sex_pp": round(se_s, 2),
@@ -83,14 +86,20 @@ for geo, p in sorted(rates.items()):
 hw = [c["gap_halfwidth95_pp"] for c in out["countries"].values() if c.get("n")]
 hwb = {b: [c["bands"][b]["gap_halfwidth95_pp"] for c in out["countries"].values() if c.get("n")] for b in bands}
 med = lambda x: sorted(x)[len(x) // 2]
+ratio_tbl = {g: round(c["ref_indicator_published_se_pp"] / c["ref_indicator_srs_se_pp"], 2) for g, c in out["countries"].items()
+             if c.get("ref_indicator_published_se_pp") and c.get("ref_indicator_srs_se_pp") and c["ref_indicator_published_se_pp"] > 0.05}
+out["design_effect_check"] = {"published_over_srs_se_on_reference_indicator": ratio_tbl,
+                              "above_1_3": sorted([g for g, v in ratio_tbl.items() if v > 1.3]),
+                              "reading": "the SRS bound is a lower bound everywhere and a loose one where the ratio exceeds 1.3"}
 out["class_rule"] = {"countries_with_bound": len(hw), "median_gap_halfwidth95_pp_overall": med(hw), "max": max(hw), "min": min(hw),
                      "median_gap_halfwidth95_pp_by_band": {b: med(v) for b, v in hwb.items()},
-                     "reading": "two countries' overall gaps are not distinguishable at this bound unless they differ by more than roughly the sum of their half-widths; within age bands the bound is several points, so the class rule, not a rank, is the unit of reporting"}
+                     "reading": "two countries' overall gaps are not distinguishable at this bound unless they differ by more than the root-sum-square of their half-widths; within age bands the bound is several points, so the class rule, not a rank, is the unit of reporting"}
 json.dump(out, open(os.path.join(PROC, "power_rules.json"), "w"), indent=1)
 
 # ---- check block
 assert abs(sum(w.values()) - 1) < 1e-9, "age weights must sum to one"
 assert 0.10 < w["Y16_24"] < 0.20 and 0.10 < w["Y65_74"] < 0.20, f"implausible EU age weights {w}"
+assert len(eu_band) == 6, f"EU27 band rates missing: {eu_band}"
 assert len(rates) >= 35, f"expected the 35 geographies plus aggregates, got {len(rates)}"
 assert abs(rates["EU27_2020"] - 32.7) < 0.3, f"EU27 headline should be about 32.7, got {rates['EU27_2020']}"
 ratios = [c["ref_indicator_published_se_pp"] / c["ref_indicator_srs_se_pp"] for c in out["countries"].values()

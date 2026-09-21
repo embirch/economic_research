@@ -1,0 +1,25 @@
+# Lab notebook · gender1
+
+Dated entries; deviations from the pre-registration are marked **Deviation** and carry the registered rule beside the corrected one.
+
+## 2026-09-21 · pre-registration revision 1 (content aef0b5d, commit 3d4ae45)
+
+Written from BRIEF v1.1 after script 01. Sent to the referee in a direct session (sesn_016KhWjfXPeHZcwrE3cyHmg3, $7.08). Verdict: BLOCK, sixteen items, all with fixes written out (`notes/referee-prereg.md`).
+
+## 2026-09-21 · pre-registration revision 2, applying the verdict
+
+1. **Sample sizes (item 1).** The national metadata's row [D] net sample of individuals 16–74 replaces the achieved/implied figures where the row gives it (30 geographies; the referee's transcription `notes/rederivation/referee_national_net_sample_2025.csv` merged into `data/processed/national_sample_sizes_2025.csv` as `n_net_individuals_16_74_D`). Corrections in the anti-conservative direction: CZ 7,705 → 4,494; LU 3,086 → 2,514; SE 4,938 → 4,450; AL 8,749 → 4,702. NL added (5,603). HU and TR stay on the implied figure (row [D] gives households); IE stays implied with its 2022–23 caveat. The `response_rate_pct` column was the household unit non-response rate where it matched anything and is relabelled `household_unit_nonresponse_pct_if_parsed`; it is not used.
+2. **Band variance (item 2).** Script 01 now uses the EU27 both-sex band rate for each band's binomial variance instead of the country's overall rate; band half-widths change from a flat 6.3–7.6 to 7.8 (16–24) down to 3.7 (65–74). Assumption A4 rewritten as the referee specified.
+3. **Design-effect list.** After the corrections the published-over-SRS ratio exceeds 1.3 for AT, BG, HR, RO, SK and for BA, CH, RS, TR; the median over 30 is 1.09. CZ falls to 1.01 once its n is corrected, as the referee predicted.
+4. **Class rule (item 3).** Ratio now ranked ascending; per-measure tercile with k = round(N/3) and a 0.1-point (ratio 0.01) tie rule; persistent class over three measures; "not classifiable" for a geography lacking a measure (IE); distinguishable mark from the bound; class changes defined per pair of measures. BRIEF §4's "top tercile of the male-to-female ratio" and §7's `p_F / p_M` were inconsistent; §4 corrected to "the tercile of the largest male lead on the ratio" with a note that the pre-registration governs.
+5. **Distinguishable counts (item 4).** Defined per rule; raw count is the registered verdict; both reported together; no-bound geographies listed by name.
+6. **Expected resolution (items 5–6).** H-work's coin-flip null and the 19-of-27 threshold; H-age (a)/(b) simulation figures; H-education's ⅓ null and 0.025.
+7. **Counts (items 7–8).** "At most 24" corrected to 26 of 27; coverage at commit added to §4; robustness item 8 omitted by rule (7 usable geographies per purpose).
+8. **Disclosure (items 11–12).** The whole audit pairs file treated as seen; the referee's EU27 standardised gap (3.36 against 4.46) added.
+9. **Smaller (items 13–16).** Root-sum-square wording; Signals leg is Spearman only; H-education renamed to "high is the largest" with the monotone count descriptive; commit hash recorded in the commit message rather than inside the file.
+
+**Fact for the assumptions sweep (referee item 12):** at the EU27 level the sex difference in age structure alone accounts for about 1.1 of the 4.5-point gap.
+
+## What the data cannot show (running list)
+
+No sex within employment, occupation or urbanisation; no trend; no intensity; no confidence intervals; no gender beyond female and male; no age-by-education by sex; the household population differs from the resident population used for weights; no education-cell sampling bound.

@@ -77,7 +77,7 @@ The EU-aggregate values of each quantity have been seen (§12) and are excluded 
 
 ### Decision rule for "largest", "smallest" and "reversed" ▲
 
-No cell-level standard errors are published, so a ranking is not a finding. A country is classed as **large-gap** only if it sits in the top tercile of the signed percentage-point gap, in the top tercile of the male-to-female ratio, and in the top tercile after age standardisation, all on unflagged cells; **small-gap** by the same rule at the bottom; **reversed** only if the female rate exceeds the male rate on the all-individual denominator and on the internet-user denominator; every other country is **not distinguishable**. The number of countries that change class between any two measures is RQ2's headline quantity. Ties within presentation rounding are reported as bands.
+No cell-level standard errors are published, so a ranking is not a finding. A country is classed as **large-gap** only if it sits in the top tercile of the signed percentage-point gap, in the tercile of the largest male lead on the ratio (`p_F / p_M` ascending; corrected from "top tercile of the male-to-female ratio" after the referee's pre-registration review, so that §4 and §7 agree), and in the top tercile after age standardisation, all on unflagged cells; **small-gap** by the same rule at the bottom; **reversed** only if the female rate exceeds the male rate on the all-individual denominator and on the internet-user denominator; every other country is **not distinguishable**. The number of countries that change class between any two measures is RQ2's headline quantity. Ties within presentation rounding are reported as bands.
 
 ## 5. Scope and exclusions
 
