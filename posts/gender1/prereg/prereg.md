@@ -1,6 +1,6 @@
 # Pre-registration · gender1 · "Where is the gender gap in generative AI use widest, and how much of that is measurement?"
 
-**Date written.** 21 September 2026, after `scripts/01_sampling_bound.py` and before any country-level gap, ratio, purpose-by-age, education-by-country or standardised value is computed. **Revision 2**, after the referee's BLOCK verdict on revision 1 (`notes/referee-prereg.md`, content aef0b5d at 3d4ae45); every item applied, listed in `notes/lab-notebook.md`. **Committed as** ⟨the hash of the commit carrying this file; content hash recorded in the commit message⟩. Brief: `posts/gender1/BRIEF.md` v1.1 (Gate 1b approved by the human, 21 September 2026; §4's ratio direction corrected to match §7, see notebook). Data profile: `data/releases/eurostat_isoc_ai_iaiu.md`.
+**Date written.** 21 September 2026, after `scripts/01_sampling_bound.py` and before any country-level gap, ratio, purpose-by-age, education-by-country or standardised value is computed. **Revision 2**, after the referee's BLOCK verdict on revision 1 (`notes/referee-prereg.md`, content aef0b5d at 3d4ae45); every item applied, listed in `notes/lab-notebook.md`. **Committed as** ⟨the hash of the commit carrying this file; content hash recorded in the commit message⟩. Review of the brief: `notes/brief-review.md`. Brief: `posts/gender1/BRIEF.md` v1.1 (Gate 1b approved by the human, 21 September 2026; §4's ratio direction corrected to match §7, see notebook). Data profile: `data/releases/eurostat_isoc_ai_iaiu.md`.
 
 ## Disclosure: what has already been seen
 
@@ -70,7 +70,7 @@ Every rule is a count over geographies in the stated set and can fail. Each hypo
 - **Distinguishable count:** distinguishable in favour if `gap_work − gap_private` exceeds √2 × the overall half-width; distinguishable against if it is below −√2 × the half-width.
 - **Disclosed prior evidence:** the EU27 aggregate has private 5.5 and work 3.0 points, against H-work; Henseke's work gap among workers (4.1 points) is on a different population and denominator. The country inputs are in the committed audit file (Disclosure). The test is kept because the country majority is unread, and its verdict is reported with both disclosures.
 - **Secondary form:** the same comparison among AI users (`PC_IND_IUAI`), reported beside it, not in the rule.
-- **Expected resolution:** under a null of no difference between the two gaps a raw majority obtains by chance with probability ½; a raw count of 19 or more of 27 arises under an even split with probability 0.026. A raw majority below 19 is reported as "not distinguishable from an even split" whatever the distinguishable count; if every country had the EU27 purpose gaps the expected count in favour would be about 2.5 of 26.
+- **Expected resolution:** under a null of no difference between the two gaps a raw majority obtains by chance with probability ½; a raw count of 19 or more of 27 arises under an even split with probability 0.026. A raw majority below 19 is reported as "not distinguishable from an even split" whatever the distinguishable count; if every country had the EU27 purpose gaps the expected count in favour would be about 2.6 of 27.
 
 ### H-age · the gap is smallest or reversed at 16–24 and largest between 25 and 44
 

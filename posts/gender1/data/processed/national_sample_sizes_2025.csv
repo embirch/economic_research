@@ -1,35 +1,35 @@
-geo,n_net_individuals_16_74_D,how_read,n_individuals_16_74_achieved_old,ref_yes_count,ref_prop_pct,n_implied,ref_se_pp,household_unit_nonresponse_pct_if_parsed,note
-AL,4702,row [D] single figure,,3377,38.6,8749,0.01,"24,8","csv 'implied' = yes/proportion gives 8,749; the page's net sample is 4,702; the reference proportion is on a different base"
-AT,5550,row [D] third column (individuals 16-74),,3937,72.7,5415,0.79,,
-BA,5814,row [D] (households = individuals),,2666,49.5,5386,1.08,"23,5",
-BE,6081,row [D] third column,,4636,78.5,5906,0.66,31.6,
-BG,7272,row [D] third column,,3559,51.2,6951,1.0411,20.6,
-CH,2767,row [D] third column,,2344,85.5,2742,1.288,45.9,
-CY,3275,row [D] second column (individuals 16-74; first is households 16-89),,1887,63.41,2976,0.94,,
-CZ,4494,row [D] third column,7705,3407,84.0,4056,0.55,36,"csv 'achieved' 7,705 does not appear on the page; published SE / SRS SE = 1.01 with 4,494 (1.32 with 7,705)"
-DE,12701,row [D] second column (households 8,,9959,81.4,12235,0.38,51.8,701)
-DK,3876,row [D] second column,,3546,91.11,3892,0.5,,
-EE,3866,row [D],,2943,76.5,3847,0.7,,
-EL,3440,row [D],,1802,52.38,3440,0.87,42.73,
-ES,14251,row [D] third column,,9599,70.7,13577,0.34,"30,2",
-FI,3023,row [D] third column,,2456,82.04,2994,0.71,,
-FR,11513,row [D] third column,,8646,80.2,10781,0.46,92,
-HR,3116,row [D],,1785,61.723043,2892,1.167872,60,
-HU,,row [D] gives households only (6,,4157,67.68,6142,0.61,47,6142
-IE,,row [D] not parseable; reference-indicator block cites the 2022 questionnaire and INFOSOC_HHNSI_A_2023_IE,,2644,79.5,3326,0.65,59.1,"IE's precision figures may be stale; 2,644 may be the net sample rather than the yes-count; verify"
-IT,31536,row [D] second column,31536,17559,56.2,31244,0.25,22.1,matches
-LT,4389,row [D] single figure,,2643,64.8,4079,0.77,31.7,
-LU,2514,row [D] third column,,2514,81.46,3086,0.78,,"yes-count 2,514 equals the net sample, so implied = n/proportion overstates; published SE / SRS SE = 1.01 with 2,514"
-LV,5237,row [D] single figure,,3487,69.39,5025,0.54,67.9,
-ME,1831,row [D],,712,38.7,1840,0.015,31.6,not in isoc_ai_iaiu
-MT,1725,row [D],,1197,68.4,1750,1.1,21.9,
-NL,5603,row [D] first column (individuals 16-74; 637 is 75-89); reference block: 5,,,,,,95,
-NO,2071,row [D] third column,,1923,92.83,2072,0.56759948,,
-PL,10013,row [D] third column,,6620,64.3,10295,,28.3,reference indicator SE 0.81 (csv blank)
-PT,8261,row [D],,4317,60.5,7136,0.65,56.9,
-RO,14987,row [D] second column,,8239,60.28,13668,1.16,10.93,
-RS,2633,row [D] first column,,1433,54.4,2634,1.6,,
-SE,4450,row [D] third column,,4450,90.12,4938,0.548,37,"yes-count 4,450 equals the net sample, so implied overstates by 11%"
-SI,2859,row [D] third column,,1898,66.9,2837,0.9484,35,
-SK,3225,row [D] third column,,2418,78.76,3070,0.94,,
-TR,,row [D] 11,,12209,50.74,24062,0.5197,,24062
+"geo","n_net_individuals_16_74_D","how_read","n_individuals_16_74_achieved_old","ref_yes_count","ref_prop_pct","n_implied","ref_se_pp","household_unit_nonresponse_pct_if_parsed","note"
+"AL","4702","row [D] single figure","","3377","38.6","8749","0.01","24,8","csv 'implied' = yes/proportion gives 8749 - the page's net sample is 4702 - the reference proportion is on a different base"
+"AT","5550","row [D] third column (individuals 16-74)","","3937","72.7","5415","0.79","",""
+"BA","5814","row [D] (households = individuals)","","2666","49.5","5386","1.08","23,5",""
+"BE","6081","row [D] third column","","4636","78.5","5906","0.66","31.6",""
+"BG","7272","row [D] third column","","3559","51.2","6951","1.0411","20.6",""
+"CH","2767","row [D] third column","","2344","85.5","2742","1.288","45.9",""
+"CY","3275","row [D] second column (individuals 16-74 - first is households 16-89)","","1887","63.41","2976","0.94","",""
+"CZ","4494","row [D] third column","7705","3407","84.0","4056","0.55","36","csv 'achieved' 7705 does not appear on the page - published SE / SRS SE = 1.01 with 4494 (1.32 with 7705)"
+"DE","12701","row [D] second column (households 8","","9959","81.4","12235","0.38","51.8","701)"
+"DK","3876","row [D] second column","","3546","91.11","3892","0.5","",""
+"EE","3866","row [D]","","2943","76.5","3847","0.7","",""
+"EL","3440","row [D]","","1802","52.38","3440","0.87","42.73",""
+"ES","14251","row [D] third column","","9599","70.7","13577","0.34","30,2",""
+"FI","3023","row [D] third column","","2456","82.04","2994","0.71","",""
+"FR","11513","row [D] third column","","8646","80.2","10781","0.46","92",""
+"HR","3116","row [D]","","1785","61.723043","2892","1.167872","60",""
+"HU","","row [D] gives households only (6","","4157","67.68","6142","0.61","47","6142"
+"IE","","row [D] not parseable - reference-indicator block cites the 2022 questionnaire and INFOSOC_HHNSI_A_2023_IE","","2644","79.5","3326","0.65","59.1","IE's precision figures may be stale - 2644 may be the net sample rather than the yes-count - verify"
+"IT","31536","row [D] second column","31536","17559","56.2","31244","0.25","22.1","matches"
+"LT","4389","row [D] single figure","","2643","64.8","4079","0.77","31.7",""
+"LU","2514","row [D] third column","","2514","81.46","3086","0.78","","yes-count 2514 equals the net sample, so implied = n/proportion overstates - published SE / SRS SE = 1.01 with 2514"
+"LV","5237","row [D] single figure","","3487","69.39","5025","0.54","67.9",""
+"ME","1831","row [D]","","712","38.7","1840","0.015","31.6","not in isoc_ai_iaiu"
+"MT","1725","row [D]","","1197","68.4","1750","1.1","21.9",""
+"NL","5603","row [D] first column (individuals 16-74 - 637 is 75-89) - reference block: 5","","","","","","95",""
+"NO","2071","row [D] third column","","1923","92.83","2072","0.56759948","",""
+"PL","10013","row [D] third column","","6620","64.3","10295","","28.3","reference indicator SE 0.81 (csv blank)"
+"PT","8261","row [D]","","4317","60.5","7136","0.65","56.9",""
+"RO","14987","row [D] second column","","8239","60.28","13668","1.16","10.93",""
+"RS","2633","row [D] first column","","1433","54.4","2634","1.6","",""
+"SE","4450","row [D] third column","","4450","90.12","4938","0.548","37","yes-count 4450 equals the net sample, so implied overstates by 11%"
+"SI","2859","row [D] third column","","1898","66.9","2837","0.9484","35",""
+"SK","3225","row [D] third column","","2418","78.76","3070","0.94","",""
+"TR","","row [D] 11","","12209","50.74","24062","0.5197","","24062"

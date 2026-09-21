@@ -20,6 +20,10 @@ Written from BRIEF v1.1 after script 01. Sent to the referee in a direct session
 
 **Fact for the assumptions sweep (referee item 12):** at the EU27 level the sex difference in age structure alone accounts for about 1.1 of the 4.5-point gap.
 
+## 2026-09-21 · second read (sesn_01Y8aLQVf6cTBsdHDNffWezw, $2.24): PASS WITH CHANGES, sign off
+
+Five non-blocking opens, applied in the same commit: (B) script 01's docstring no longer says "achieved"; (C) the free-text columns of the sample-size table are quoted and stripped of thousands separators, no figure changed; (D) H-work's expected count corrected to "about 2.6 of 27"; (E) the pointer to `notes/brief-review.md` restored in the header. (A) The edit to `BRIEF.md` §4 (ratio direction) was made by the human's assistant acting for the human, who owns the brief at this stage of the pivot and approved it at Gate 1b; it is recorded here as the human's own correction, not the analyst's, and the pre-registration's class rule is the binding text either way.
+
 ## What the data cannot show (running list)
 
 No sex within employment, occupation or urbanisation; no trend; no intensity; no confidence intervals; no gender beyond female and male; no age-by-education by sex; the household population differs from the resident population used for weights; no education-cell sampling bound.
