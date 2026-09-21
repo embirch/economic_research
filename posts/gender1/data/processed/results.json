@@ -1,7 +1,7 @@
 {
  "post": "gender1",
  "question": "Where is the gender gap in generative AI use widest, and how much of that is measurement?",
- "generated": "2026-09-21T16:38:39Z",
+ "generated": "2026-09-21T16:47:11Z",
  "prereg": "posts/gender1/prereg/prereg.md (revision 2, content 6050e38, committed c128906; opens applied 625440e)",
  "data": {
   "tsv_sha256": "7f668f7be9aaefaa5662ab2ab059875de8ccbe050c5c38a8de4b2c33a96896ab",
@@ -6449,6 +6449,22 @@
     "SE"
    ],
    "N": 26,
+   "men_lead_by_band": {
+    "Y16_24": 6,
+    "Y25_34": 17,
+    "Y35_44": 18,
+    "Y45_54": 18,
+    "Y55_64": 20,
+    "Y65_74": 22
+   },
+   "largest_band_counts": {
+    "Y16_24": 2,
+    "Y25_34": 5,
+    "Y35_44": 4,
+    "Y45_54": 3,
+    "Y55_64": 3,
+    "Y65_74": 9
+   },
    "rule_a": {
     "raw": 20,
     "raw_majority": true,
@@ -6938,16 +6954,6 @@
  },
  "deviations": [
   {
-   "id": "D3",
-   "what": "H-composition's crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading) rather than the registered literal reading (crude tercile over all 27, compared on the intersection); both counts reported",
-   "effect": "3 changes (CZ, FR, LV) against 2 (CZ, LV); verdict supported under either; distinguishable 0 under either"
-  },
-  {
-   "id": "D4",
-   "what": "an unregistered exploratory addition: the Spearman of the ratio against the feminine message share, beside the registered gap correlation; scipy p-values stored under not-for-citation keys",
-   "effect": "no rule touched; nothing citable added"
-  },
-  {
    "id": "D1",
    "what": "class-rule precedence: a geography in the bottom tercile on all three measures that is also reversed on both denominators is classed small-gap, with its reversed flag reported beside it (the registered rule lists both classes without precedence)",
    "effect": "no count changes; the reversed set is reported as a flag"
@@ -6956,6 +6962,16 @@
    "id": "D2",
    "what": "triangulation leg (ii) dropped: Henseke's country gaps are published only as a figure image",
    "effect": "one exploratory leg fewer"
+  },
+  {
+   "id": "D3",
+   "what": "H-composition's crude tercile re-cut on the 26 geographies with a standardised gap (analyst's reading) rather than the registered literal reading (crude tercile over all 27, compared on the intersection); both counts reported",
+   "effect": "3 changes (CZ, FR, LV) against 2 (CZ, LV); verdict supported under either; distinguishable 0 under either"
+  },
+  {
+   "id": "D4",
+   "what": "an unregistered exploratory addition: the Spearman of the ratio against the feminine message share, beside the registered gap correlation; scipy p-values stored under not-for-citation keys",
+   "effect": "no rule touched; nothing citable added"
   }
  ]
 }

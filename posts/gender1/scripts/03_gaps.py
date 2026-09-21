@@ -58,7 +58,10 @@ for g in age_set:
     a_raw += ra; b_raw += rb; a_dist += bool(da); b_dist += bool(db)
     age_detail[g] = {"gaps": gp, "rule_a": ra, "rule_b": rb, "largest_band": largest, "rule_a_distinguishable": da, "rule_b_distinguishable": db, "bound": bool(all(hw.values()))}
 N_age = len(age_set)
+import collections as _c
 h_age = {"usable_set": age_set, "N": N_age,
+         "men_lead_by_band": {b: sum(1 for g in age_set if bands[g]["PC_IND"][b]["gap"] > 0) for b in BANDS},
+         "largest_band_counts": {b: sum(1 for g in age_set if age_detail[g]["largest_band"] == b) for b in BANDS},
          "rule_a": {"raw": a_raw, "raw_majority": a_raw > N_age / 2, "distinguishable": a_dist},
          "rule_b": {"raw": b_raw, "raw_majority": b_raw > N_age / 2, "distinguishable": b_dist},
          "no_bound": [g for g in age_set if not age_detail[g]["bound"]],

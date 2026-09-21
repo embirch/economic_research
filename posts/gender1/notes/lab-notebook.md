@@ -50,3 +50,7 @@ The pre-registration's §6 says fieldwork is "by convention in the first quarter
 ## 2026-09-21 · second read on the results (sesn_017BqKaB8BgfAWz9tGMzzxqb): PASS WITH CHANGES; three opens applied
 
 Figure 1's legend moved below the axes; Figure 2's zero cells formatted on the rounded value (Belgium at 25–34, exactly −0.50, prints "0"); Figure 5's caption and `internet_composition.reading` now say the sex difference in recent internet use is at most 1.1 points in any age band and moves the gap by under 0.3 points (the decomposition key gives 1.10 at 55–64 and 1.08 at 65–74); Figure 1's caption says "13 of 27 countries sit in the same tercile on all three measures (6 large-gap, 7 small-gap)"; `internet_composition.over_one_point_by_band` added for the caption's "ten countries". The referee's own claims list and red-team memo are refreshed by the referee in the confirming session.
+
+## 2026-09-21 · after the referee's SIGN OFF (bbad2db): the two missing keys added
+
+`tests.H_age.men_lead_by_band` (17, 18, 18, 20, 22 for 25–34 to 65–74; 6 at 16–24) and `tests.H_age.largest_band_counts` (2, 5, 4, 3, 3, 9) added in script 03 so the two Figure 2 caption sentences the claims list marks **[key missing]** are bound; the deviations list in results.json reordered D1–D4 as the sign-off asked. No verdict, count or figure changed; chain re-run in the recorded order.
