@@ -1,0 +1,308 @@
+TSV sha256 7f668f7b… (pre-registration: 7f668f7b…) OK
+results.json data.tsv_sha256 agrees
+cells read 39006; flagged u 6699; missing 3196
+  [MATCH] data.cells: mine=39006 results.json=39006
+  [MATCH] data.flagged_u: mine=6699 results.json=6699
+  [MATCH] data.missing: mine=3196 results.json=3196
+
+== A. EU27 aggregate (disclosed values; ingestion check) ==
+EU27 overall: total 32.66, women 30.45, men 34.91, gap 4.46 (published 33 / 30 / 35)
+  [MATCH] eu27.overall.gap: mine=4.459999999999997 results.json=4.459999999999997
+  [MATCH] eu27.overall.F: mine=30.45 results.json=30.45
+  [MATCH] eu27.overall.M: mine=34.91 results.json=34.91
+EU27 private: participation F 22.76 M 28.27 gap 5.51; among users F 74.74 M 80.97 gap 6.23
+  [MATCH] eu27.purposes_participation.private.gap: mine=5.509999999999998 results.json=5.509999999999998
+  [MATCH] eu27.purposes_among_users.private.gap: mine=6.230000000000004 results.json=6.230000000000004
+EU27 work: participation F 13.87 M 16.87 gap 3.00; among users F 45.57 M 48.31 gap 2.74
+  [MATCH] eu27.purposes_participation.work.gap: mine=3.0000000000000018 results.json=3.0000000000000018
+  [MATCH] eu27.purposes_among_users.work.gap: mine=2.740000000000002 results.json=2.740000000000002
+EU27 education: participation F 9.3 M 9.35 gap 0.05; among users F 30.53 M 26.77 gap -3.76
+  [MATCH] eu27.purposes_participation.education.gap: mine=0.049999999999998934 results.json=0.049999999999998934
+  [MATCH] eu27.purposes_among_users.education.gap: mine=-3.7600000000000016 results.json=-3.7600000000000016
+  [MATCH] eu27.internet_users.gap: mine=4.710000000000001 results.json=4.710000000000001
+  [MATCH] eu27.age_profile_gap.Y16_24: mine=-1.6700000000000017 results.json=-1.6700000000000017
+  [MATCH] eu27.age_profile_gap.Y25_34: mine=4.670000000000002 results.json=4.670000000000002
+  [MATCH] eu27.age_profile_gap.Y35_44: mine=4.829999999999998 results.json=4.829999999999998
+  [MATCH] eu27.age_profile_gap.Y45_54: mine=2.84 results.json=2.84
+  [MATCH] eu27.age_profile_gap.Y55_64: mine=4.24 results.json=4.24
+  [MATCH] eu27.age_profile_gap.Y65_74: mine=4.140000000000001 results.json=4.140000000000001
+  [MATCH] eu27.education_profile.I0_2.gap: mine=3.7600000000000016 results.json=3.7600000000000016
+  [MATCH] eu27.education_profile.I3_4.gap: mine=4.609999999999999 results.json=4.609999999999999
+  [MATCH] eu27.education_profile.I5_8.gap: mine=6.969999999999999 results.json=6.969999999999999
+
+== Age weights from demo_pjan (own indexing of the JSON-stat cube) ==
+weights {'Y16_24': 0.130521, 'Y25_34': 0.158487, 'Y35_44': 0.179448, 'Y45_54': 0.188886, 'Y55_64': 0.18798, 'Y65_74': 0.154677} sum 1.0 flags ['ep']
+  [MATCH] power_rules.eu27_age_weights.Y16_24: mine=0.13052075066136848 results.json=0.13052075066136848
+  [MATCH] power_rules.eu27_age_weights.Y25_34: mine=0.1584872965345235 results.json=0.1584872965345235
+  [MATCH] power_rules.eu27_age_weights.Y35_44: mine=0.1794481276377297 results.json=0.1794481276377297
+  [MATCH] power_rules.eu27_age_weights.Y45_54: mine=0.1888859591208919 results.json=0.1888859591208919
+  [MATCH] power_rules.eu27_age_weights.Y55_64: mine=0.18798044311777043 results.json=0.18798044311777043
+  [MATCH] power_rules.eu27_age_weights.Y65_74: mine=0.15467742292771602 results.json=0.15467742292771602
+
+== B. H-age (EU27 members with all twelve sex-by-age cells usable on I_IUAI PC_IND) ==
+usable set N=26; excluded: ['IE']
+rule (a) raw 20 of 26 (majority True); distinguishable 8
+rule (b) raw 9 of 26 (majority False); distinguishable 1
+  [MATCH] tests.H_age.N: mine=26 results.json=26
+  [MATCH] tests.H_age.rule_a.raw: mine=20 results.json=20
+  [MATCH] tests.H_age.rule_a.distinguishable: mine=8 results.json=8
+  [MATCH] tests.H_age.rule_b.raw: mine=9 results.json=9
+  [MATCH] tests.H_age.rule_b.distinguishable: mine=1 results.json=1
+  [MATCH] tests.H_age.verdict: mine='partly declared' results.json='partly declared'
+  [MATCH] tests.H_age.no_bound: mine=[] results.json=[]
+  decomposition: 16–24 gap negative in 20; 16–24 smallest of six in 14; either 20
+  largest-band distribution over the 26: {'Y16_24': 2, 'Y25_34': 5, 'Y35_44': 4, 'Y45_54': 3, 'Y55_64': 3, 'Y65_74': 9}
+  men lead (gap>0) by band over the 26: {'Y16_24': 6, 'Y25_34': 17, 'Y35_44': 18, 'Y45_54': 18, 'Y55_64': 20, 'Y65_74': 22}
+  countries satisfying (a): ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'EL', 'ES', 'FI', 'HR', 'HU', 'IT', 'LT', 'LU', 'LV', 'MT', 'PT', 'SI']
+  countries failing (a): ['FR', 'NL', 'PL', 'RO', 'SE', 'SK']
+  (a)-distinguishable: ['AT', 'BE', 'DE', 'EL', 'FI', 'HR', 'IT', 'SI']
+  (b)-distinguishable: ['HU']
+  band half-width range over the 26 (min..max): Y16_24 2.9..12.6; Y25_34 2.8..11.8; Y35_44 2.5..10.9; Y45_54 2.3..9.8; Y55_64 1.9..8.1; Y65_74 1.4..5.9
+  band half-width medians over the 26: Y16_24 7.50; Y25_34 7.07; Y35_44 6.49; Y45_54 5.84; Y55_64 4.82; Y65_74 3.54
+
+== C. H-education (EU27 members with all three education pairs usable) ==
+usable set N=26; excluded: ['HR']
+high is largest in 14 of 26 (majority True); monotone low<med<high in 8
+  [MATCH] tests.H_education.N: mine=26 results.json=26
+  [MATCH] tests.H_education.high_is_largest: mine=14 results.json=14
+  [MATCH] tests.H_education.monotone: mine=8 results.json=8
+  largest-group distribution: {'I0_2': 6, 'I3_4': 6, 'I5_8': 14}; high smallest of three in 4
+  median gaps: low 3.23, medium 4.81, high 7.28
+  HR education cells: I0_2: F (8.47, '') M (15.39, 'u'), I3_4: F (31.11, '') M (26.51, ''), I5_8: F (38.04, '') M (34.51, '')
+
+== D. Standardisation (EU27 2025 pooled weights), per-measure terciles, H-composition ==
+  DE: crude 5.30, standardised 4.1258, change -1.17
+  [MATCH] countries.DE.standardised.std_gap: mine=4.125824849275258 results.json=4.125824849275258
+  [MATCH] countries.DE.overall.gap: mine=5.299999999999997 results.json=5.299999999999997
+  IT: crude 3.12, standardised 2.2832, change -0.84
+  [MATCH] countries.IT.standardised.std_gap: mine=2.2832331221303868 results.json=2.2832331221303868
+  [MATCH] countries.IT.overall.gap: mine=3.120000000000001 results.json=3.120000000000001
+  MT: crude -1.71, standardised -3.6332, change -1.92
+  [MATCH] countries.MT.standardised.std_gap: mine=-3.633202780554271 results.json=-3.633202780554271
+  [MATCH] countries.MT.overall.gap: mine=-1.7100000000000009 results.json=-1.7100000000000009
+  [MATCH] countries.AT.standardised.std_gap: mine=3.072843976442968 results.json=3.072843976442968
+  [MATCH] countries.BE.standardised.std_gap: mine=0.92439080842707 results.json=0.92439080842707
+  [MATCH] countries.BG.standardised.std_gap: mine=0.211739525922642 results.json=0.211739525922642
+  [MATCH] countries.CY.standardised.std_gap: mine=1.8033560599236864 results.json=1.8033560599236864
+  [MATCH] countries.CZ.standardised.std_gap: mine=5.185418676373139 results.json=5.185418676373139
+  [MATCH] countries.DK.standardised.std_gap: mine=7.499174415512051 results.json=7.499174415512051
+  [MATCH] countries.EE.standardised.std_gap: mine=-4.6671250454189845 results.json=-4.6671250454189845
+  [MATCH] countries.EL.standardised.std_gap: mine=1.2262424941986794 results.json=1.2262424941986794
+  [MATCH] countries.ES.standardised.std_gap: mine=2.9556011517829432 results.json=2.9556011517829432
+  [MATCH] countries.FI.standardised.std_gap: mine=1.2406631635809973 results.json=1.2406631635809973
+  [MATCH] countries.FR.standardised.std_gap: mine=3.1941203450180637 results.json=3.1941203450180637
+  [MATCH] countries.HR.standardised.std_gap: mine=-3.000788069354382 results.json=-3.000788069354382
+  [MATCH] countries.HU.standardised.std_gap: mine=4.579160307358908 results.json=4.579160307358908
+  [MATCH] countries.LT.standardised.std_gap: mine=-5.37811473559448 results.json=-5.37811473559448
+  [MATCH] countries.LU.standardised.std_gap: mine=5.8932564319436125 results.json=5.8932564319436125
+  [MATCH] countries.LV.standardised.std_gap: mine=-0.7659800409979027 results.json=-0.7659800409979027
+  [MATCH] countries.NL.standardised.std_gap: mine=5.409622459736475 results.json=5.409622459736475
+  [MATCH] countries.PL.standardised.std_gap: mine=5.978165351333644 results.json=5.978165351333644
+  [MATCH] countries.PT.standardised.std_gap: mine=0.34390979284864187 results.json=0.34390979284864187
+  [MATCH] countries.RO.standardised.std_gap: mine=2.375668694842247 results.json=2.375668694842247
+  [MATCH] countries.SE.standardised.std_gap: mine=6.060505135997317 results.json=6.060505135997317
+  [MATCH] countries.SI.standardised.std_gap: mine=-3.071790805527641 results.json=-3.071790805527641
+  [MATCH] countries.SK.standardised.std_gap: mine=5.64851972040152 results.json=5.64851972040152
+  EU27: crude 4.46, standardised 3.3627
+  [MATCH] eu27.standardised.std_gap: mine=3.362738211345391 results.json=3.362738211345391
+  standardisation lowers the gap in 25 of 26; raises it in ['CZ']
+  change in points: median -1.31 (lower-median per script -1.30), min -4.03, max 0.95
+  [MATCH] tests.H_composition.median_change_pp (script uses sorted[N//2]): mine=-1.3014802795984792 results.json=-1.3014802795984792
+  H-composition: k=9; crude cuts (top/bottom) 4.25/2.51; standardised cuts 3.194/1.226; tercile changes 3 ['CZ', 'FR', 'LV']
+    CZ: crude 4.24 [middle] -> standardised 5.185 [top]; overall half-width 2.8
+    FR: crude 4.53 [top] -> standardised 3.194 [middle]; overall half-width 1.77
+    LV: crude 2.42 [middle] -> standardised -0.766 [bottom]; overall half-width 2.55
+  [MATCH] tests.H_composition.N: mine=26 results.json=26
+  [MATCH] tests.H_composition.k: mine=9 results.json=9
+  [MATCH] tests.H_composition.tercile_changes: mine=3 results.json=3
+  [MATCH] tests.H_composition.changed: mine=['CZ', 'FR', 'LV'] results.json=['CZ', 'FR', 'LV']
+  [MATCH] tests.H_composition.distinguishable_changes: mine=0 results.json=0
+  [MATCH] tests.H_composition.raw_verdict: mine='supported' results.json='supported'
+  tie-rule exclusions: crude(26) ['LV']; std []; gap(27) ['LV']; ratio(27) ['EL']
+
+== E. Persistent class table (EU27; gap and ratio terciles on 27, standardised on 26) ==
+  k gap 9, cuts 4.53/2.51; k ratio 9, cuts 0.8661/0.9309
+  [MISMATCH] classes.cuts.gap: mine=[4.530000000000001, 2.510000000000005] results.json=[4.25, 2.510000000000005]
+  [MATCH] classes.cuts.ratio: mine=[0.8660518225735617, 0.9309309309309309] results.json=[0.8660518225735617, 0.9309309309309309]
+  [MATCH] classes.cuts.std: mine=[3.1941203450180637, 1.2262424941986794] results.json=[3.1941203450180637, 1.2262424941986794]
+  counts {'large-gap': 6, 'small-gap': 7, 'reversed': 0, 'not distinguishable': 13, 'not classifiable': 1}; distinguishable {'large-gap': 2, 'small-gap': 4, 'reversed': 0}
+  [MATCH] classes.counts.large-gap: mine=6 results.json=6
+  [MATCH] classes.counts.small-gap: mine=7 results.json=7
+  [MATCH] classes.counts.reversed: mine=0 results.json=0
+  [MATCH] classes.counts.not distinguishable: mine=13 results.json=13
+  [MATCH] classes.counts.not classifiable: mine=1 results.json=1
+  [MATCH] classes.counts_distinguishable.large-gap: mine=2 results.json=2
+  [MATCH] classes.counts_distinguishable.small-gap: mine=4 results.json=4
+  [MATCH] classes.counts_distinguishable.reversed: mine=0 results.json=0
+  [MATCH] classes.large_gap: mine=['DE', 'DK', 'HU', 'PL', 'SE', 'SK'] results.json=['DE', 'DK', 'HU', 'PL', 'SE', 'SK']
+  [MATCH] classes.small_gap: mine=['BE', 'EE', 'HR', 'LT', 'MT', 'PT', 'SI'] results.json=['BE', 'EE', 'HR', 'LT', 'MT', 'PT', 'SI']
+  [MATCH] classes.reversed_on_both_denominators: mine=['EE', 'HR', 'MT', 'SI'] results.json=['EE', 'HR', 'MT', 'SI']
+  [MATCH] classes.reversed_on_pc_ind: mine=['EE', 'HR', 'LT', 'MT', 'SI'] results.json=['EE', 'HR', 'LT', 'MT', 'SI']
+  [MATCH] classes.not_classifiable: mine=['IE'] results.json=['IE']
+  D1 precedence: small-gap AND reversed-on-both = ['EE', 'HR', 'MT', 'SI']; if reversed took precedence the table would read small-gap 3, reversed 4
+    AT: gap +4.25 [middle], ratio 0.898 [middle], std +3.07 [middle], hw 2.57 -> not distinguishable
+  [MATCH] countries.AT.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.AT.class.distinguishable: mine=None results.json=None
+    BE: gap +1.18 [bottom], ratio 0.972 [bottom], std +0.92 [bottom], hw 2.48 -> small-gap
+  [MATCH] countries.BE.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.BE.class.distinguishable: mine=False results.json=False
+    BG: gap +1.61 [bottom], ratio 0.931 [middle], std +0.21 [bottom], hw 1.92 -> not distinguishable
+  [MATCH] countries.BG.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.BG.class.distinguishable: mine=None results.json=None
+    CY: gap +3.47 [middle], ratio 0.924 [middle], std +1.80 [middle], hw 3.4 -> not distinguishable
+  [MATCH] countries.CY.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.CY.class.distinguishable: mine=None results.json=None
+    CZ: gap +4.24 [middle], ratio 0.887 [middle], std +5.19 [top], hw 2.8 -> not distinguishable
+  [MATCH] countries.CZ.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.CZ.class.distinguishable: mine=None results.json=None
+    DE: gap +5.30 [top], ratio 0.848 [top], std +4.13 [top], hw 1.63 -> large-gap
+  [MATCH] countries.DE.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.DE.class.distinguishable: mine=False results.json=False
+    DK: gap +7.87 [top], ratio 0.850 [top], std +7.50 [top], hw 3.15 -> large-gap ●
+  [MATCH] countries.DK.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.DK.class.distinguishable: mine=True results.json=True
+    EE: gap -1.56 [bottom], ratio 1.034 [bottom], std -4.67 [bottom], hw 3.15 -> small-gap (reversed both) ●
+  [MATCH] countries.EE.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.EE.class.distinguishable: mine=True results.json=True
+    EL: gap +3.02 [middle], ratio 0.934 [middle], std +1.23 [middle], hw 3.32 -> not distinguishable
+  [MATCH] countries.EL.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.EL.class.distinguishable: mine=None results.json=None
+    ES: gap +3.96 [middle], ratio 0.901 [middle], std +2.96 [middle], hw 1.59 -> not distinguishable
+  [MATCH] countries.ES.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.ES.class.distinguishable: mine=None results.json=None
+    FI: gap +2.51 [middle], ratio 0.947 [bottom], std +1.24 [middle], hw 3.55 -> not distinguishable
+  [MATCH] countries.FI.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.FI.class.distinguishable: mine=None results.json=None
+    FR: gap +4.53 [middle], ratio 0.886 [middle], std +3.19 [middle], hw 1.77 -> not distinguishable
+  [MATCH] countries.FR.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.FR.class.distinguishable: mine=None results.json=None
+    HR: gap -1.34 [bottom], ratio 1.050 [bottom], std -3.00 [bottom], hw 3.14 -> small-gap (reversed both) ●
+  [MATCH] countries.HR.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.HR.class.distinguishable: mine=True results.json=True
+    HU: gap +6.23 [top], ratio 0.810 [top], std +4.58 [top], hw 2.28 -> large-gap
+  [MATCH] countries.HU.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.HU.class.distinguishable: mine=False results.json=False
+    IE: gap +9.32 [top], ratio 0.812 [top], std +nan [None], hw 3.38 -> not classifiable
+  [MATCH] countries.IE.class.class: mine='not classifiable' results.json='not classifiable'
+  [MATCH] countries.IE.class.distinguishable: mine=None results.json=None
+    IT: gap +3.12 [middle], ratio 0.854 [top], std +2.28 [middle], hw 0.88 -> not distinguishable
+  [MATCH] countries.IT.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.IT.class.distinguishable: mine=None results.json=None
+    LT: gap -1.35 [bottom], ratio 1.037 [bottom], std -5.38 [bottom], hw 2.86 -> small-gap ●
+  [MATCH] countries.LT.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.LT.class.distinguishable: mine=True results.json=True
+    LU: gap +6.10 [top], ratio 0.866 [middle], std +5.89 [top], hw 3.87 -> not distinguishable
+  [MATCH] countries.LU.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.LU.class.distinguishable: mine=None results.json=None
+    LV: gap +2.42 [middle], ratio 0.930 [middle], std -0.77 [bottom], hw 2.55 -> not distinguishable
+  [MATCH] countries.LV.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.LV.class.distinguishable: mine=None results.json=None
+    MT: gap -1.71 [bottom], ratio 1.037 [bottom], std -3.63 [bottom], hw 4.71 -> small-gap (reversed both)
+  [MATCH] countries.MT.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.MT.class.distinguishable: mine=False results.json=False
+    NL: gap +5.53 [top], ratio 0.883 [middle], std +5.41 [top], hw 2.6 -> not distinguishable
+  [MATCH] countries.NL.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.NL.class.distinguishable: mine=None results.json=None
+    PL: gap +7.29 [top], ratio 0.724 [top], std +5.98 [top], hw 1.64 -> large-gap ●
+  [MATCH] countries.PL.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.PL.class.distinguishable: mine=True results.json=True
+    PT: gap +2.15 [bottom], ratio 0.946 [bottom], std +0.34 [bottom], hw 2.1 -> small-gap
+  [MATCH] countries.PT.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.PT.class.distinguishable: mine=False results.json=False
+    RO: gap +3.57 [middle], ratio 0.818 [top], std +2.38 [middle], hw 1.22 -> not distinguishable
+  [MATCH] countries.RO.class.class: mine='not distinguishable' results.json='not distinguishable'
+  [MATCH] countries.RO.class.distinguishable: mine=None results.json=None
+    SE: gap +6.82 [top], ratio 0.850 [top], std +6.06 [top], hw 2.9 -> large-gap
+  [MATCH] countries.SE.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.SE.class.distinguishable: mine=False results.json=False
+    SI: gap -1.50 [bottom], ratio 1.041 [bottom], std -3.07 [bottom], hw 3.55 -> small-gap (reversed both) ●
+  [MATCH] countries.SI.class.class: mine='small-gap' results.json='small-gap'
+  [MATCH] countries.SI.class.distinguishable: mine=True results.json=True
+    SK: gap +6.95 [top], ratio 0.797 [top], std +5.65 [top], hw 3.19 -> large-gap
+  [MATCH] countries.SK.class.class: mine='large-gap' results.json='large-gap'
+  [MATCH] countries.SK.class.distinguishable: mine=False results.json=False
+  tercile changes: gap vs ratio 6 of 27 ['BG', 'FI', 'IT', 'LU', 'NL', 'RO']; ratio vs standardised 8 of 26; crude(26) vs standardised 3
+  [MATCH] classes.tercile_changes.gap_vs_ratio: mine=6 results.json=6
+  [MATCH] classes.tercile_changes.ratio_vs_standardised: mine=8 results.json=8
+  crude tercile on 27 differs from crude tercile on 26 for: ['FR'] (cuts 27: 4.53/2.51; 26: 4.25/2.51)
+  EU27 gap range: min -1.71 (MT), max +9.32 (IE); median 3.57
+  distinguishable marks: large ['DK', 'PL'], small ['EE', 'HR', 'LT', 'SI']
+
+== F. H-work (EU27, PC_IND) ==
+N=27; work gap > private gap in 4 ['AT', 'DK', 'EL', 'HR']; distinguishable in favour 0, against 9 ['ES', 'FR', 'IE', 'IT', 'LU', 'PL', 'PT', 'RO', 'SK']
+  the other way (private > work) in 23; 19-of-27 threshold in either direction: yes (against count 23)
+  median work−private -2.26; EU27 -2.51
+  [MATCH] tests.H_work.N: mine=27 results.json=27
+  [MATCH] tests.H_work.raw_favour: mine=4 results.json=4
+  [MATCH] tests.H_work.distinguishable_favour: mine=0 results.json=0
+  [MATCH] tests.H_work.distinguishable_against: mine=9 results.json=9
+  [MATCH] tests.H_work.verdict: mine='against' results.json='against'
+  [MATCH] tests.H_work.among_users_favour: mine=7 results.json=7
+  [MATCH] tests.H_work.among_users_N: mine=27 results.json=27
+
+== F2. Purposes: sign counts on the two denominators ==
+  private: participation N 27 +25/−2 median 4.34; among users N 27 +25/−2 median 6.38; sign flips 4
+  [MATCH] purposes.private.participation.positive: mine=25 results.json=25
+  [MATCH] purposes.private.participation.negative: mine=2 results.json=2
+  [MATCH] purposes.private.among_users.positive: mine=25 results.json=25
+  [MATCH] purposes.private.among_users.negative: mine=2 results.json=2
+  [MATCH] purposes.private.sign_flips: mine=4 results.json=4
+  [MATCH] purposes.private.participation.median_gap (script: sorted[N//2]): mine=4.339999999999996 results.json=4.339999999999996
+  work: participation N 27 +23/−4 median 2.58; among users N 27 +22/−5 median 2.95; sign flips 3
+  [MATCH] purposes.work.participation.positive: mine=23 results.json=23
+  [MATCH] purposes.work.participation.negative: mine=4 results.json=4
+  [MATCH] purposes.work.among_users.positive: mine=22 results.json=22
+  [MATCH] purposes.work.among_users.negative: mine=5 results.json=5
+  [MATCH] purposes.work.sign_flips: mine=3 results.json=3
+  [MATCH] purposes.work.participation.median_gap (script: sorted[N//2]): mine=2.5799999999999983 results.json=2.5799999999999983
+  education: participation N 27 +6/−21 median -0.74; among users N 27 +1/−26 median -4.24; sign flips 5
+  [MATCH] purposes.education.participation.positive: mine=6 results.json=6
+  [MATCH] purposes.education.participation.negative: mine=21 results.json=21
+  [MATCH] purposes.education.among_users.positive: mine=1 results.json=1
+  [MATCH] purposes.education.among_users.negative: mine=26 results.json=26
+  [MATCH] purposes.education.sign_flips: mine=5 results.json=5
+  [MATCH] purposes.education.participation.median_gap (script: sorted[N//2]): mine=-0.7400000000000002 results.json=-0.7400000000000002
+    education participation positive in ['AT', 'DE', 'HU', 'PL', 'RO', 'SK']; among users positive in ['DE']
+
+== F3. Internet-composition share by band (gap on PC_IND − gap on PC_IND_IU3) ==
+  N=26; excluded ['IE']
+  Y16_24: median (script sorted[N//2]) +0.00, true median +0.00, |share|>1 in 3 countries (below −1 in 2), min -1.38 max +1.73
+  [MATCH] internet_composition.band_medians.Y16_24: mine=0.0 results.json=0.0
+  Y25_34: median (script sorted[N//2]) -0.13, true median -0.13, |share|>1 in 1 countries (below −1 in 1), min -1.03 max +0.63
+  [MATCH] internet_composition.band_medians.Y25_34: mine=-0.13000000000000256 results.json=-0.13000000000000256
+  Y35_44: median (script sorted[N//2]) -0.21, true median -0.21, |share|>1 in 2 countries (below −1 in 1), min -1.04 max +1.09
+  [MATCH] internet_composition.band_medians.Y35_44: mine=-0.21000000000000085 results.json=-0.21000000000000085
+  Y45_54: median (script sorted[N//2]) -0.18, true median -0.18, |share|>1 in 1 countries (below −1 in 1), min -1.30 max +0.45
+  [MATCH] internet_composition.band_medians.Y45_54: mine=-0.17999999999999972 results.json=-0.17999999999999972
+  Y55_64: median (script sorted[N//2]) -0.45, true median -0.45, |share|>1 in 5 countries (below −1 in 4), min -1.75 max +1.85
+  [MATCH] internet_composition.band_medians.Y55_64: mine=-0.4499999999999993 results.json=-0.4499999999999993
+  Y65_74: median (script sorted[N//2]) -0.82, true median -0.87, |share|>1 in 10 countries (below −1 in 10), min -2.68 max +0.02
+  [MATCH] internet_composition.band_medians.Y65_74: mine=-0.8200000000000003 results.json=-0.8200000000000003
+  [MATCH] internet_composition.N: mine=26 results.json=26
+  EU27 composition share by band: {'Y16_24': -0.25, 'Y25_34': -0.26, 'Y35_44': -0.25, 'Y45_54': -0.21, 'Y55_64': -0.58, 'Y65_74': -0.98}
+
+== F4. Sets, flagged appendix ==
+  EU27 median gap 3.57; extension N 8 median (sorted[N//2]) 4.65, reversed ['MK']; all35 median 3.96
+  [MATCH] sets.eu27.median: mine=3.5700000000000003 results.json=3.5700000000000003
+  [MATCH] sets.extension.N: mine=8 results.json=8
+  [MATCH] sets.extension.reversed: mine=['MK'] results.json=['MK']
+  [MATCH] flagged_appendix_rows: mine=0 results.json=0
+  overall pairs with a value but a u flag on either cell: 0
+
+== F5. Triangulation leg (i): OpenAI Signals feminine share, June 2025 ==
+  N=26; missing ['MT']; Spearman gap vs feminine share -0.1738; ratio vs feminine share +0.0397
+  [MATCH] triangulation.leg_i.N: mine=26 results.json=26
+  [MATCH] triangulation.leg_i.spearman_gap: mine=-0.17376434645689617 results.json=-0.17376434645689617
+  [MATCH] triangulation.leg_i.spearman_ratio: mine=0.03967847281299204 results.json=0.03967847281299204
+  Signals: feminine+masculine sums to 1 within country? min 1.000 max 1.000 (a third category would make it <1)
+  Signals feminine share, EU26: min 0.455 max 0.594
+
+== G. Caption sentences in outputs/figures.json against my numbers ==
+fig1: 'in every EU country but five' -> reversed on PC_IND 5 ['EE', 'HR', 'LT', 'MT', 'SI']; 'about −2 to +9' -> -1.71..+9.32; 'class is stable across measures for only 13 of 27' -> large+small = 13 (note: 'not distinguishable' is also 13)
+fig1 (bound): of the 22 positive overall gaps, 17 exceed the country's own SRS half-width ['BE', 'BG', 'EL', 'FI', 'LV'] do not; of the 5 negative, 0 exceed it []; sign not distinguishable from zero at the bound in 10
+fig2: 'women lead in 20 of 26 at 16–24' -> negative 16–24 gaps 20; 'from 25 upward men lead in 17 to 22 of 26' -> [17, 18, 18, 20, 22]; 'no single band holds the largest gap in a majority' -> max over bands 9 of 26; 'band half-widths 4 to 8 points' -> medians [7.5, 7.1, 6.5, 5.8, 4.8, 3.5], full range 1.4..12.6
+fig3: education participation negative in 21 of 27, among users negative in 26 of 27; private positive 25, work positive 23
+fig4: 'lowers the gap in 25 of 26' -> 25; 'moves three across a tercile cut' -> 3
+fig5: 'under a point at the median in every band' -> max |median| 0.87; 'more than a point in ten countries only at 65–74' -> |share|>1 by band [3, 1, 2, 1, 5, 10]
+
+== Summary: 185 matches, 1 mismatches against results.json ==

@@ -1,0 +1,28 @@
+== (1) H-composition under the two readings of the registered rule ==
+  crude vs standardised — literal reading (gap tercile over 27, counted on the 26): 2 ['CZ', 'LV']
+  crude vs standardised — analyst's script 05 (crude tercile recomputed on the 26): 3 ['CZ', 'FR', 'LV']
+  the difference is FR: 10th of 27 on the crude gap (middle; cut 4.53 = FR's own value) but 9th of 26 (top; cut AT 4.25). FR's standardised tercile is middle either way.
+  ratio vs standardised — ratio tercile over 27 (analyst's script 05): 8 ['BG', 'CZ', 'FI', 'IT', 'LU', 'LV', 'NL', 'RO']
+  ratio vs standardised — ratio tercile recomputed on the 26: 7 ['BG', 'CZ', 'FI', 'IT', 'LV', 'NL', 'RO']
+  gap vs ratio (both over 27, no ambiguity): 6
+  => script 05 applies one reading to crude-vs-standardised (recompute on 26) and the other to ratio-vs-standardised (27 vs 26). Verdict unchanged under either (≤ 8).
+
+== (2) Persistent class rule under a null of ONE common true gap; registered k and tie rule; own SRS bounds ==
+  composition term sd 0.0: null mean large-gap 6.24, small-gap 6.35 of 26 (observed 6 and 7); P(large+small >= 13) = 0.53; mean distinguishable large 0.18, small 0.18 (observed 2 and 4)
+  composition term sd 0.5: null mean large-gap 5.70, small-gap 5.78 of 26 (observed 6 and 7); P(large+small >= 13) = 0.30; mean distinguishable large 0.31, small 0.31 (observed 2 and 4)
+  composition term sd 1.0: null mean large-gap 5.00, small-gap 5.07 of 26 (observed 6 and 7); P(large+small >= 13) = 0.09; mean distinguishable large 0.59, small 0.62 (observed 2 and 4)
+  => the class COUNTS (6 / 7 / 13) are what one common gap plus sampling noise produces; the distinguishable MARKS (DK, PL; EE, HR, LT, SI) are not.
+
+== (3) H-work: joint sign on both denominators ==
+  work > private among all individuals: ['AT', 'DK', 'EL', 'HR']; among users: ['AT', 'BG', 'CZ', 'DE', 'DK', 'EL', 'HR']; both: ['AT', 'DK', 'EL', 'HR']
+  work gap and private gap, EU27 medians: work 2.58, private 4.34
+  private-use rates, EU27 aggregate: F 22.76 M 28.27; work-use: F 13.87 M 16.87 — the work base rate is about half the private base rate, so equal ratios would give a smaller work gap in points
+  ratio form: EU27 private p_F/p_M 0.805, work 0.822
+  countries where the work RATIO shows the larger male lead (rw < rp): 10 of 27 — an unregistered check, reported for the red team only
+
+== (4) H-age rule (a): the two clauses ==
+  negative at 16–24: 20; smallest of six: 14; negative but not smallest: ['CY', 'EE', 'LT', 'LV', 'MT', 'PT']; smallest but not negative: []
+  16–24 gap by country: SI -18.5, HR -17.1, FI -11.7, EL -9.5, AT -9.3, BE -9.3, DE -8.2, LU -5.4, BG -5.3, MT -3.6, EE -3.6, LT -3.4, HU -2.6, IT -2.5, CY -2.5, ES -2.0, PT -1.5, LV -1.4, DK -0.7, CZ -0.4, NL +0.8, SE +2.5, FR +3.2, RO +3.3, SK +5.7, PL +13.8
+  16–24 female and male rates, EU27: F 64.67 M 63.0
+  65–74 holds the largest gap in 9 of 26; 65–74 rates EU27 F 4.58 M 8.72 (ratio 0.53)
+  band ratios p_F/p_M, EU27: Y16_24 1.03, Y25_34 0.91, Y35_44 0.88, Y45_54 0.90, Y55_64 0.77, Y65_74 0.53
