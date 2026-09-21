@@ -1,7 +1,7 @@
 {
  "post": "gender1",
  "question": "Where is the gender gap in generative AI use widest, and how much of that is measurement?",
- "generated": "2026-09-21T16:35:25Z",
+ "generated": "2026-09-21T16:38:39Z",
  "prereg": "posts/gender1/prereg/prereg.md (revision 2, content 6050e38, committed c128906; opens applied 625440e)",
  "data": {
   "tsv_sha256": "7f668f7be9aaefaa5662ab2ab059875de8ccbe050c5c38a8de4b2c33a96896ab",
@@ -6801,7 +6801,15 @@
     "internet_use_gap_term": 0.09023667536048077
    }
   },
-  "reading": "a difference of gaps on two denominators; where internet use is below 100% its sign is a rescaling of the internet-user gap, not a composition that favours women; the sex difference in implied internet use is within a point in every band at EU27 level"
+  "over_one_point_by_band": {
+   "Y16_24": 3,
+   "Y25_34": 1,
+   "Y35_44": 2,
+   "Y45_54": 1,
+   "Y55_64": 5,
+   "Y65_74": 10
+  },
+  "reading": "a difference of gaps on two denominators; where internet use is below 100% its sign is a rescaling of the internet-user gap, not a composition that favours women; the sex difference in implied internet use is at most 1.1 points in any band at EU27 level and moves the gap by under 0.3 points"
  },
  "sets": {
   "eu27": {
