@@ -180,3 +180,12 @@ it; they are the first-read referee's files, and this second read does not edit 
   not said whether it opened Henseke's PDF; D2's ruling does not depend on it.
 - The re-derivations behind the untouched numbers were not repeated; this read relies on the first verdict's
   185-of-186 match for everything the revision did not move.
+
+## Postscript: 4ec7b45, landed after this read
+
+`4ec7b45` (after a13ac3e, the revision reviewed here) changes Figure 1's caption opening from "in early
+2025" to "in the three months before their 2025 interview", adds the fieldwork-timing note to the notebook
+and re-runs script 08 (timestamp only in `results.json`). The frame correction is right and nothing in it
+touches the three open items above, which are all still open at 4ec7b45: Figure 1's legend over Ireland's
+bar, Belgium's "−0" cell at 25–34, and Figure 5's "within a point". The unnumbered fig1 remark ("13 of 27")
+is also still as it was.
