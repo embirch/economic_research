@@ -1,0 +1,187 @@
+[
+  {
+    "file": "raw/eige_metadata.html",
+    "bytes": 32167,
+    "sha256": "284fd3fa562c4235ebf0221a5341c06ee9b85bb9aaf0abcc6fdffe0ebee6cb98"
+  },
+  {
+    "file": "raw/eige_nonuse.html",
+    "bytes": 36188,
+    "sha256": "789fd2ee643bd6485dcd6864273d409c498b7f03cac87660aa4d40e5452fa09d"
+  },
+  {
+    "file": "raw/eige_nonuse_download.html",
+    "bytes": 4898,
+    "sha256": "b7b4567ee1d7105fd9b27a3fb3ee35c3f77bd0b440571196e048ef758c915b4b"
+  },
+  {
+    "file": "raw/eige_use_download.html",
+    "bytes": 4856,
+    "sha256": "fc9911bb5a8607dc9f8e2def5f59ff11c9e1aa53efa1632b949148e7adfbf9c9"
+  },
+  {
+    "file": "raw/eige_use_metadata.html",
+    "bytes": 31806,
+    "sha256": "8d6f835c8aefecfbfb7e3013feda89759067b0e5e891d33701caa9f8aeb7bbf4"
+  },
+  {
+    "file": "raw/eurostat_nonuse.json",
+    "bytes": 40691,
+    "sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290"
+  },
+  {
+    "file": "raw/eurostat_nonuse.tsv.gz",
+    "bytes": 40691,
+    "sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290"
+  },
+  {
+    "file": "raw/eurostat_questionnaire.pdf",
+    "bytes": 980636,
+    "sha256": "493998af804c8e7cbf649789886ace3d9cc1ca074d506759806fa70148ae1aa5"
+  },
+  {
+    "file": "raw/eurostat_use.json",
+    "bytes": 40691,
+    "sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290"
+  },
+  {
+    "file": "raw/eurostat_use.tsv.gz",
+    "bytes": 40691,
+    "sha256": "5746055af33ef1bc86f4cc14b1dbb83722c74b65cca47b3e4fa42268cf7f3290"
+  },
+  {
+    "file": "raw/ewcs_access.html",
+    "bytes": 3097,
+    "sha256": "72a3d0c91202301f4aaddcbae0d2de41d750e6cf23f4ed6b0193528b6780c4c3"
+  },
+  {
+    "file": "raw/interviewer_api.json",
+    "bytes": 1845,
+    "sha256": "f0b1cc2b90a2e1f5d20416ba3b53e00d639d4affe30f66ac8f58eb098cd0c595"
+  },
+  {
+    "file": "raw/interviewer_creatives_transcripts.csv",
+    "bytes": 1116650,
+    "sha256": "d4e865b9959671990ceb51089c7494dbeed7560f9a623da873e6eb0f1b6506b4"
+  },
+  {
+    "file": "raw/interviewer_scientists_transcripts.csv",
+    "bytes": 1066693,
+    "sha256": "338677e4a4ec17824cb5bfbc9242c8a37e7041157d34fb65e7e6fb58ea3f407a"
+  },
+  {
+    "file": "raw/interviewer_workforce_transcripts.csv",
+    "bytes": 9251048,
+    "sha256": "09ff307d42ebc8ed0b0ba25f41ffe2e50e9baa0b3c1ab4133ee528118817aab4"
+  },
+  {
+    "file": "raw/isoc_ai_iaiu_Data.csv",
+    "bytes": 1590988,
+    "sha256": "c1bd2a165d82bf3bb6e915e835a461f934423e9fc43b51eabe01233e75a6f841"
+  },
+  {
+    "file": "raw/isoc_ai_iaiu_Label.csv",
+    "bytes": 6722,
+    "sha256": "35b96efee2fec4a4a6be15f541283f19f7661889caab79602f1d28103450aa8b"
+  },
+  {
+    "file": "raw/isoc_ai_iaiu_eige.csv",
+    "bytes": 223165,
+    "sha256": "d2ea794fee6da6c54711c5be592421e6bd1ec2bc98864dfe11323f334de6c399"
+  },
+  {
+    "file": "raw/isoc_ai_iaiuxr_Data.csv",
+    "bytes": 2519215,
+    "sha256": "6911d62391560901b5b443db1acaf2c63234e8f64e29313b137e907695636b17"
+  },
+  {
+    "file": "raw/isoc_ai_iaiuxr_Label.csv",
+    "bytes": 6909,
+    "sha256": "08118a8316cde08a261b514ccafb47c2127649e2b14d58f80e4fee0f8dc45576"
+  },
+  {
+    "file": "raw/isoc_ai_iaiuxr_eige.csv",
+    "bytes": 308851,
+    "sha256": "c82ce624786ac38bddc26b89cb908f52732f59e8291c2fe799db4fc176929915"
+  },
+  {
+    "file": "raw/osf_analysis.Rmd",
+    "bytes": 129866,
+    "sha256": "bd4fee283683b69b2e201d02b5e4336317eeae173e4c75ef18636c2478cb15e7"
+  },
+  {
+    "file": "raw/osf_data_list.json",
+    "bytes": 15055,
+    "sha256": "e38403bca67e5a43c67ebb7fedef14b1ed2f675130aa9d9f02b2a1115bb53df6"
+  },
+  {
+    "file": "raw/osf_demographics.xlsx",
+    "bytes": 2607791,
+    "sha256": "0e0b792033ebae59340e6c20aa258f2b3df7f60e348661269885f06430abb39c"
+  },
+  {
+    "file": "raw/osf_files.json",
+    "bytes": 16741,
+    "sha256": "616b0695bf5a69605cc81005e31564a4fdba99b95a7c67a3c97d66ecf5904f0f"
+  },
+  {
+    "file": "raw/osf_metered.csv",
+    "bytes": 75638519,
+    "sha256": "9a970dafe9bdb2c9f60c0af17842fa9ae74465bd1e6f28829f4aa59f15d46c72"
+  },
+  {
+    "file": "raw/osf_metered.pdf",
+    "bytes": 90705,
+    "sha256": "fcf3b031ffede04a914646461dc371f5a2fbf25018bb88749579ea5ebb7d5640"
+  },
+  {
+    "file": "raw/osf_node.json",
+    "bytes": 4398,
+    "sha256": "2ed7f9f62d5294e67614df450ea644cddb7d51de8ec0eb2bd386c54ce243b541"
+  },
+  {
+    "file": "raw/osf_panel_history.xlsx",
+    "bytes": 3771259,
+    "sha256": "eed6032be540e24d4dd020c37955906f11e8cc17f3c46e673b542abd426429cb"
+  },
+  {
+    "file": "raw/osf_processing.R",
+    "bytes": 28720,
+    "sha256": "e236de27e072840f278c37c894f23f340a88427b34586224dbe0de72ca6d4be0"
+  },
+  {
+    "file": "raw/osf_profiling.pdf",
+    "bytes": 279827,
+    "sha256": "aea63ec46690971e2880ef260e7b685157a8b778d747247796478276c8340825"
+  },
+  {
+    "file": "raw/osf_profiling_original.xlsx",
+    "bytes": 2539390,
+    "sha256": "575969df437cb88ca8fd201141792ff98dc56c5fb6f2550b51f8a9c0f7def7d2"
+  },
+  {
+    "file": "raw/osf_scripts_list.json",
+    "bytes": 4206,
+    "sha256": "43b43848008735aced744e878e497dae283b26181c0777d4763d5df7215713b7"
+  },
+  {
+    "file": "raw/pew_datasets.html",
+    "bytes": 485362,
+    "sha256": "6de567bb4bf0e889ceb2d2eb040e67b0f7bd3d321d9607220cf579b3d5bf5600"
+  },
+  {
+    "file": "raw/pew_gender.html",
+    "bytes": 632211,
+    "sha256": "a32260c397de4569042088a2c86cc51f718c035c149b9befb65ed88ab8751fab"
+  },
+  {
+    "file": "raw/pew_questionnaire.pdf",
+    "bytes": 262345,
+    "sha256": "9113a0dd2bf8c0be591aa345ab4ce441f9ca56da72f79384d63da54b84af65c0"
+  },
+  {
+    "file": "raw/pew_wave164.html",
+    "bytes": 345625,
+    "sha256": "55db2e2a6b74f1d27c55ffba7760c73b64ec25101be98c31e35a192287eba48d"
+  }
+]

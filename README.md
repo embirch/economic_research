@@ -4,6 +4,10 @@ A research team of Claude managed agents producing standalone empirical research
 
 Read in this order: `team/SETUP.md` (the operating model), `team/LESSONS.md` (what the team guards against), `.claude/skills/room-protocol/SKILL.md` (how to communicate and the file-ownership rule), then the skill for your role.
 
+## Programme focus from 21 September 2026
+
+The central question is now **how gender differences in AI exposure, adoption and workplace conditions translate into differences in economic opportunity**. The Anthropic Economic Index remains one source among several; the first post of the series, `posts/gender1/`, is built on Eurostat's 2025 generative-AI tables (`data/releases/eurostat_isoc_ai_iaiu.md`). Gates, stages, templates, the referee procedure, the claims-list boundary and the style standard are unchanged; see `room/human-2026-09-21-gender-series-kickoff.md`.
+
 ## Working criteria for "Anthropic-grade" (rewritten from the style corpus, session 1.2; grounding in `wiki/style/STYLE-GUIDE.md`)
 1. Inspired by a named thread of Anthropic's inquiry, with the contribution stated as a difference rather than a characterisation: how many of the thread's units the post shares, and how its measure differs from the Anthropic measure nearest it, said before that measure is used.
 2. Founded on the Economic Index releases in any of their components, with other data layered only where the question needs it and the layering justified by naming what the Index cannot see.
