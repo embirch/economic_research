@@ -1,0 +1,151 @@
+{
+ "leg_i": {
+  "source": "OpenAI Signals share_of_messages_by_gender_country_month.csv, feminine, 2025-06-01",
+  "N": 26,
+  "missing_eu27": [
+   "MT"
+  ],
+  "spearman_gap_vs_feminine_share": -0.17376434645689617,
+  "p_value_gap": 0.39591601168364476,
+  "spearman_ratio_vs_feminine_share": 0.03967847281299204,
+  "p_value_ratio": 0.847392605995324,
+  "expected_sign": "negative for the gap (a larger male lead in the survey should go with a smaller feminine share of messages), positive for the ratio",
+  "values": [
+   {
+    "geo": "AT",
+    "gap": 4.25,
+    "feminine_share": 0.476
+   },
+   {
+    "geo": "BE",
+    "gap": 1.1799999999999997,
+    "feminine_share": 0.512
+   },
+   {
+    "geo": "BG",
+    "gap": 1.6099999999999994,
+    "feminine_share": 0.458
+   },
+   {
+    "geo": "HR",
+    "gap": -1.3399999999999999,
+    "feminine_share": 0.588
+   },
+   {
+    "geo": "CY",
+    "gap": 3.470000000000006,
+    "feminine_share": 0.571
+   },
+   {
+    "geo": "CZ",
+    "gap": 4.239999999999995,
+    "feminine_share": 0.541
+   },
+   {
+    "geo": "DK",
+    "gap": 7.869999999999997,
+    "feminine_share": 0.491
+   },
+   {
+    "geo": "EE",
+    "gap": -1.5599999999999952,
+    "feminine_share": 0.538
+   },
+   {
+    "geo": "FI",
+    "gap": 2.510000000000005,
+    "feminine_share": 0.501
+   },
+   {
+    "geo": "FR",
+    "gap": 4.530000000000001,
+    "feminine_share": 0.523
+   },
+   {
+    "geo": "DE",
+    "gap": 5.299999999999997,
+    "feminine_share": 0.489
+   },
+   {
+    "geo": "EL",
+    "gap": 3.019999999999996,
+    "feminine_share": 0.508
+   },
+   {
+    "geo": "HU",
+    "gap": 6.229999999999997,
+    "feminine_share": 0.506
+   },
+   {
+    "geo": "IE",
+    "gap": 9.32,
+    "feminine_share": 0.484
+   },
+   {
+    "geo": "IT",
+    "gap": 3.120000000000001,
+    "feminine_share": 0.542
+   },
+   {
+    "geo": "LV",
+    "gap": 2.4200000000000017,
+    "feminine_share": 0.594
+   },
+   {
+    "geo": "LT",
+    "gap": -1.3499999999999943,
+    "feminine_share": 0.455
+   },
+   {
+    "geo": "LU",
+    "gap": 6.100000000000001,
+    "feminine_share": 0.537
+   },
+   {
+    "geo": "NL",
+    "gap": 5.530000000000001,
+    "feminine_share": 0.474
+   },
+   {
+    "geo": "PL",
+    "gap": 7.289999999999999,
+    "feminine_share": 0.56
+   },
+   {
+    "geo": "PT",
+    "gap": 2.1500000000000057,
+    "feminine_share": 0.543
+   },
+   {
+    "geo": "RO",
+    "gap": 3.5700000000000003,
+    "feminine_share": 0.558
+   },
+   {
+    "geo": "SK",
+    "gap": 6.949999999999999,
+    "feminine_share": 0.512
+   },
+   {
+    "geo": "SI",
+    "gap": -1.5,
+    "feminine_share": 0.501
+   },
+   {
+    "geo": "ES",
+    "gap": 3.960000000000001,
+    "feminine_share": 0.521
+   },
+   {
+    "geo": "SE",
+    "gap": 6.82,
+    "feminine_share": 0.476
+   }
+  ],
+  "caveats": "name-inferred gender; message share, not people; consumer ChatGPT; a share of messages within a country, not a use rate; exploratory, in no rule"
+ },
+ "leg_ii": {
+  "status": "dropped by rule",
+  "reason": "Henseke (2026) Figure 2 gives the country gender gaps only as an image; the figure-values ruling forbids reading values off a chart; no table is published"
+ }
+}

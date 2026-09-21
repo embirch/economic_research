@@ -27,3 +27,10 @@ Five non-blocking opens, applied in the same commit: (B) script 01's docstring n
 ## What the data cannot show (running list)
 
 No sex within employment, occupation or urbanisation; no trend; no intensity; no confidence intervals; no gender beyond female and male; no age-by-education by sex; the household population differs from the resident population used for weights; no education-cell sampling bound.
+
+## 2026-09-21 · analysis run (scripts 02–08), after Gate 2a approval (a95c100)
+
+- Scripts run in the order 02, 03, 05, 04, 06, 07, 08 (04, the independent second implementation, needs 05's outputs to compare against; the registered names are unchanged).
+- **Deviation D1 (class-rule precedence).** The registered class rule lists large-gap, small-gap, reversed, not classifiable and not distinguishable without saying which applies when a geography meets both "bottom tercile on all three" and "reversed on both denominators". Resolved as listed: small-gap first, with the reversed flag reported beside it. No count changes; both sets are in results.json (`classes.small_gap`, `classes.reversed_on_both_denominators`).
+- **Deviation D2 (triangulation leg ii).** Henseke (2026) publishes the country gender gaps only as Figure 2, an image; under the figure-values ruling no number is read off a chart, and no table exists. Leg (ii) is dropped; leg (i) (OpenAI Signals) runs as registered.
+- Purpose-specific standardisation omitted by rule (7 usable EU27 geographies per purpose; floor 15), as pre-registered.

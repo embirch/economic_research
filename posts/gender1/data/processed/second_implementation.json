@@ -1,0 +1,11 @@
+{
+ "tolerance": 1e-09,
+ "checked": 236,
+ "max_abs_difference": 0.0,
+ "synthetic": {
+  "standardised_gap_recovered": true,
+  "equal_rates_all_middle": true,
+  "composition_effect_recovered_pp": 10.399138172962857,
+  "single_large_gap_geography": "DK"
+ }
+}
