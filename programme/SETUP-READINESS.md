@@ -16,9 +16,9 @@ Current follow-up to the original setup report in the parent workspace's `projec
 | Item | Current evidence | Required completion |
 |---|---|---|
 | Programme visibility | Emily subsequently instructed "ok just keep going with public for now". The repository remains public. | No visibility change pending under the current instruction. Keep restricted/raw data and credentials out of commits. |
-| Branch protection | Authenticated API reports `main` has `protected=false`. | Configure an appropriate rule for the public repository. Retain branch/PR workflow meanwhile. |
+| Branch protection | GitHub confirms the public repository is eligible on the current Free plan. A `main` rule was prepared to require PRs, resolve review conversations, apply to administrators, and disallow force pushes/deletion. Saving was blocked by automatic approval review for lack of specific authorisation. No rule was saved. | Explicit confirmation is needed to save that rule. Formal approval count would remain zero to avoid preventing the sole maintainer from merging; scientific review requirements still apply. |
 | Article cloud backup | Authenticated repository API still returns 404. The preservation commit and safety backup remain local. | User checks repository selection/access for the existing credential; then push the preservation branch without rewriting author edits. Never put credentials in project files or messages. |
-| Remote validation | Existing setup record says workflow installation was denied; the template remains at `team/templates/setup-validation.workflow.yml`. | Enable through an authorised account/credential and verify an actual successful run. Local passing checks are not CI results. |
+| Remote validation | The prepared template was committed through the authenticated GitHub browser to `.github/workflows/setup-validation.yml` on the setup branch at `aee2bac`; local comparison confirms an exact match. The pinned checkout action resolves to a valid upstream commit. | Verify the PR run, then integrate the setup through its PR. No paid research calls occur in this workflow. |
 
 No credentials were changed and repository visibility remains public at Emily's instruction. Setup documentation can now proceed through the public branch/PR workflow; restricted data remain local.
 
