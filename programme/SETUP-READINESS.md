@@ -15,15 +15,15 @@ Current follow-up to the original setup report in the parent workspace's `projec
 
 | Item | Current evidence | Required completion |
 |---|---|---|
-| Programme privacy | Authenticated GitHub API reports `private=false`. PATCH to make it private returns 403, resource not accessible by the token. Browser settings are accessible, but automatic approval review rejected the confirmation click for lack of specific user authorisation. | Obtain explicit confirmation in the current chat, then finish the private visibility change and verify authenticated Git access afterwards. Do not represent recorded intent as completed privacy. |
-| Branch protection | Authenticated API reports `main` has `protected=false`. | Configure an appropriate rule after privacy is resolved and check account-plan support. Retain branch/PR workflow meanwhile. |
+| Programme visibility | Emily subsequently instructed "ok just keep going with public for now". The repository remains public. | No visibility change pending under the current instruction. Keep restricted/raw data and credentials out of commits. |
+| Branch protection | Authenticated API reports `main` has `protected=false`. | Configure an appropriate rule for the public repository. Retain branch/PR workflow meanwhile. |
 | Article cloud backup | Authenticated repository API still returns 404. The preservation commit and safety backup remain local. | User checks repository selection/access for the existing credential; then push the preservation branch without rewriting author edits. Never put credentials in project files or messages. |
 | Remote validation | Existing setup record says workflow installation was denied; the template remains at `team/templates/setup-validation.workflow.yml`. | Enable through an authorised account/credential and verify an actual successful run. Local passing checks are not CI results. |
 
-No credentials were changed and no repository visibility change succeeded. New follow-up documents remain local while privacy is pending; do not publish them simply to complete a setup checklist.
+No credentials were changed and repository visibility remains public at Emily's instruction. Setup documentation can now proceed through the public branch/PR workflow; restricted data remain local.
 
 ## Ready to begin, within limits
 
 The local organisation and bounded research brief are ready. The first substantive task is verification of the existing evidence inventory, before selecting a production dashboard or final index coverage. A paid specialist run needs an explicit assignment approval and dollar cap. Existing setup approval does not supply either.
 
-Privacy and cloud-backup issues should be resolved before relying on the repositories as a private shared research environment. Local read-only planning can continue without changing the manuscript or starting a paid session.
+The programme repository is a public shared environment. The article's local preservation remains separate from its unresolved cloud backup. Index preparation can continue without changing the manuscript or starting a paid session.

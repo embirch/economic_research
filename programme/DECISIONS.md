@@ -13,6 +13,8 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 
 ## Still open
 
+Update, 30 September 2026: Emily instructed "ok just keep going with public for now". Keep `economic_research` public and continue setup. This supersedes the immediate privacy-change instruction above; do not retry that change without a new request. Restricted/raw respondent data and credentials remain outside the repository. No paid research session is authorised by this visibility decision.
+
 - Final index name, geographic coverage, indicator inclusion and refresh policy.
 - Selection of papers two and three after data and novelty checks.
 - Any future composite measure and its justification.
