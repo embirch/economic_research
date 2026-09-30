@@ -1,16 +1,20 @@
-# <Title: a claim or a question about AI> 
+# <Title matching the evidence>
 
-*<Month year> · Evidence from Claude*
+*<Scope, population and date>*
 
-## The puzzle Anthropic left open   (why it matters first; the thread; what this post asks)
-## <How to tell the explanations apart>   (hypotheses and signatures, one table)
-## <Finding 1 as a plain sentence>   (figure; caption in Anthropic's style; the number and its caveat in the same breath)
-## <Finding 2>
-## <Finding 3>
-## What this means   (what was learned; why it matters; what it changes; what comes next; no numbers; the title's key word does work in the last paragraph)
-## Recommendations to Anthropic   (each names an actor, an action, and the circumstance in which it would not work)
-## Limitations   (the ones a referee would raise first, ranked, each signed for direction; at least one withdraws a claim)
-## Methodology   (data; measures verbatim; models; stress tests)
-## What was set in advance   (the pre-registration; the assumed effect and its provenance; deviations logged)
-## Reproduction   (the scripts, the data, the command that rebuilds the page)
-## Assistance disclosure   (what Claude was asked to do, and what was done to catch it being wrong)
+Open with why the question matters, what is known, what this study asks and its main finding. Use the author's voice and verified sources. This is a flexible outline, not mandatory visible headings.
+
+## <Finding stated clearly>
+Explain the comparison, figure, units, underlying rates and relevant uncertainty. Repeat for the findings needed to answer the question; avoid hypothesis codes and internal field names in the body.
+
+## Relationship to existing research
+The specific contribution and comparable or conflicting evidence, with links.
+
+## Limitations
+Material measurement, selection, comparability and design limits. Do not manufacture a required number of caveats or claim reversals.
+
+## Implications and further research
+What follows from the findings and what remains open. Recommendations only when the evidence supports an action; no mandatory recommendations to a particular provider.
+
+## Methods and reproduction
+Data, definitions, exclusions, uncertainty, analysis plan and deviations; links to code, checked outputs and reproduction instructions. Include assistance disclosure. Technical detail can be in a linked appendix.

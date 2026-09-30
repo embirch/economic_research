@@ -1,17 +1,16 @@
-# Claims list · <Post id> · written by the referee after verification
+# Reviewed claims: <study and result version>
 
-## Sentences the post may state
-Each with its test or fact id from results.json and the exact bound on the wording.
-- "<sentence>" ← tests.<id>.estimates.<term> (coef, interval). Wording bound: <e.g. "does most of the work", not "all">.
+## Supported claims
+Each claim has a stable result ID or verified external citation, measure, population, direction, uncertainty and limits. Bound the meaning; example sentences are not mandatory prose.
 
-## Sentences the post may not state
-- "<sentence>" because <the number does not support it / the design cannot separate X from Y / the rule was inside the MDE>.
+## Unsupported interpretations
+Explain what the design/data cannot establish. Non-significance or an estimate below the MDE is not proof of no effect.
 
-## Required caveats
-Each finding's caveat that must appear in the same paragraph.
+## Necessary qualifications
+Identify which caveats must be beside a finding and which belong in methods/limitations. Maintain readable prose and the author's voice.
 
-## Title and opening claim
-The strongest title and opening claim the evidence supports, in the referee's words. The editor may shorten them, not strengthen them.
+## Title and opening
+State the strongest defensible interpretation; do not require exact phrasing. New interpretations need review.
 
-## Limitations a referee would raise first
-In order.
+## Unverified items
+List precisely what was not checked. A sign-off applies only to its stated files/versions and scope.

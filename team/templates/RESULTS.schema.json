@@ -1,26 +1,99 @@
 {
-  "$comment": "data/processed/results.json. Every number the post may cite lives here. Keys are stable test ids the claims list and the page refer to.",
-  "post": "post3",
-  "generated": "2026-09-16T00:00:00Z",
-  "tests": {
-    "<test_id>": {
-      "label": "human-readable name",
-      "script": "scripts/06_main_test.py",
-      "n": 61,
-      "sample": "what units and which wave",
-      "estimates": {
-        "<term>": {"coef": -0.63, "ci": [-1.55, 0.29], "se": 0.47, "mde": 1.31, "unit": "points of automation share per SD of power distance"}
-      },
-      "r2": 0.69,
-      "prereg_rule": "against H1 if |coef| < MDE",
-      "verdict": "against H1",
-      "notes": "deviations or caveats, one line"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gender-ai/results.schema.json",
+  "title": "New-study result record",
+  "description": "For new studies; existing analyses keep their documented schemas. No requirement for inferential quantities when unavailable.",
+  "type": "object",
+  "required": [
+    "study_id",
+    "generated",
+    "results"
+  ],
+  "properties": {
+    "study_id": {
+      "type": "string"
+    },
+    "generated": {
+      "type": "string"
+    },
+    "results": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "label",
+          "value",
+          "unit",
+          "population",
+          "source_ids",
+          "calculation",
+          "uncertainty"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": "string"
+          },
+          "population": {
+            "type": "string"
+          },
+          "denominator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "calculation": {
+            "type": "string"
+          },
+          "uncertainty": {
+            "type": "object",
+            "required": [
+              "status",
+              "explanation"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "estimated",
+                  "unavailable",
+                  "not_applicable"
+                ]
+              },
+              "explanation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interval": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
     }
-  },
-  "facts": {
-    "<fact_id>": {"value": 3.112, "label": "replicated slope, Aug 2025", "script": "scripts/02_replicate.py", "source_check": "matches report Figure 2.11 to the third decimal"}
-  },
-  "figures": {
-    "fig1": {"file": "outputs/figures/fig1.png", "caption": "Anthropic-style caption: what is plotted, units, sample, what the line is", "script": "scripts/10_figures.py"}
   }
 }

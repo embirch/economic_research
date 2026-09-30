@@ -1,3 +1,5 @@
+> **Status, 30 September 2026:** Historical programme calendar. Current priorities and decisions are in PROJECT.md and programme/DECISIONS.md; the former nine-paper sequence is not a current instruction.
+
 # Programme calendar
 
 Owner: director. Sequencing only; no dates promised. Status is updated at the close of each session.

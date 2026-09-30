@@ -1,31 +1,20 @@
 ---
 name: qc-rubric
-description: The referee's checklist and verdict format for the four review points (brief, pre-registration, results, draft), including the assumptions sweep. Read before any review.
+description: Current gender-and-AI project procedure for qc-rubric; read PROJECT.md first.
 ---
 
 # Referee rubric
 
-Use templates/VERDICT.md. Verdicts are PASS, PASS WITH CHANGES, or BLOCK. Be specific: file, section, what to change.
+Use a version-specific verdict: PASS, PASS WITH CHANGES or BLOCK, with concrete reasons and unverified items. Read current project decisions before historical reviews.
 
-## At the brief
-- **Assumptions sweep**, four items, each handled / newly flagged / needs a design change: (1) value judgement embedded in the framing; (2) construct mapping against Anthropic's verbatim definition (what the measure measures; which direction the sign could run); (3) composition or selection: who the users are in each unit, what mix could produce the pattern without the mechanism, whether occupation is inferred from tasks; (4) Anthropic's own results that cut against or bound the framing, quoted.
-- Does each hypothesis have a signature that its rivals do not share, and a stated counter-result?
-- Is the contribution stated for both outcomes? Can the closing section be imagined?
-- Is any framing inherited rather than derived? Is the why-it-matters something an economist would care about?
+## Brief and plan
+Check a useful contribution to the wider literature, confirmed data access/fields and the stated population. Examine construct validity, gender measurement, value judgements, selection, overlapping samples and evidence against the framing. Distinguish descriptive from causal questions. Verify prior-inspection disclosure and analysis-plan status. Assess power only for questions/designs where it is meaningful.
 
-## At the pre-registration
-- Can every rule fail? Is its expected MDE stated and informative? Are collinear predictors, residual-on-covariate designs, small cells and flagged units handled by the rule rather than discovered later?
-- Is the sample rule, exclusion list and error type fixed? Is "what has been seen" disclosed?
+## Results
+Independently re-derive the assigned key results from source inputs. Inspect denominators, weights, flags, exclusions, missingness, source revisions and deviations. Check inferential assumptions, multiplicity and measurement uncertainty where applicable. Do not accept non-significance or a below-MDE result as proof of no effect. State exactly what cannot be checked.
 
-## At the results
-- Re-derive three headline numbers from raw files with your own code (notes/rederivation/), and report match or cause of discrepancy.
-- Judge every logged deviation: legitimate, or a rule rewritten to fit?
-- Count the tests actually run against those registered; note multiple-testing exposure.
-- Write the red-team memo (templates/RED-TEAM.md) and the claims list (templates/CLAIMS.md), including the strongest title and opening claim the evidence supports.
+## Draft
+Check title, narrative, quantitative claims, captions, source links and actual measured population. Preserve the author's voice. Claims-list wording bounds meaning, not exact sentences. Avoid requiring a particular provider, heading order or statistical machinery. Review a new draft only after Emily has seen it and the task is commissioned.
 
-## At the draft
-- Every quantitative sentence maps to results.json (check the claims map); no number appears that is not there.
-- Title and opening claim no stronger than the claims list.
-- Limitations name what you would raise first; caveats sit in the same paragraph as their findings.
-- Register: questions about AI, findings about Claude; no first person; no summary block; figures captioned in Anthropic's style.
-- Nothing forbidden by the claims list appears anywhere, including captions and the site card.
+## Independence
+Use artifacts and source evidence, not pressure to validate an expected story. Do not edit analysis or manuscript files to resolve a disagreement. Record methods disagreements separately from editorial preferences.

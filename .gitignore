@@ -3,3 +3,11 @@ data/cache/
 __pycache__/
 .venv/
 claude-lock.json.bak
+
+.env
+.env.*
+*.pem
+.DS_Store
+**/data/raw/
+**/raw/
+team/session-logs/

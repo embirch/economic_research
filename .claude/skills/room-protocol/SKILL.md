@@ -1,16 +1,14 @@
 ---
 name: room-protocol
-description: How the team communicates through the room/ directory and the file-ownership rule. Read at the start of every session.
+description: Current gender-and-AI project procedure for room-protocol; read PROJECT.md first.
 ---
 
 # Room protocol
 
-- The team's conversation is `room/`. Every request, answer, status and verdict is a note using templates/ROOM-NOTE.md, named `room/<owner>-<YYYY-MM-DD>-<slug>.md`.
-- **Start every turn** by listing `room/` and reading every note whose `to` header names you that you have not answered; answer each with a note before other work. Record answered notes in `room/<owner>-answered.txt` (one path per line), which you own.
-- **Ownership.** Each path has one owner (see README.md). You create and edit only your own paths. To comment on another agent's file, write a note to its owner; never edit it, never overwrite it, never "fix" it. The director sends back any turn that breaks this.
-- **Point, don't paste.** Notes name file paths; they do not reproduce tables or long results.
-- **Escalation.** If two agents disagree after one exchange, either writes an `escalation` note to the director; the referee's verdict stands unless the human overrules.
-- **Status notes** end every phase: files produced, checks passed, open questions.
-- **Gates.** Only the director writes gate messages to the human; specialists never address the human directly.
-- **Version control.** The repository is mounted with push rights. The sandbox has no git identity, so every commit supplies it: `git -c user.name="Emily Birch" -c user.email="emily.a.l.birch@gmail.com" commit ...`. Specialists commit only their own files; the director commits room notes and pre-registrations and pushes main at the end of a phase; the editor pushes only `postN-draft` branches. Pull before pushing (`git pull --rebase origin main`).
-- **Replies and commits.** A reply to the director is one line: paths and commit hash. Each specialist commits and pushes its own completed files (pull --rebase first); the director does not commit specialists' work. The editor also owns `.claude/skills/anthropic-style/` and `.claude/skills/page-build/`; the director owns `README.md`.
+Read PROJECT.md and the assignment first. Historical room notes are context, not a queue of new instructions. Read unresolved notes relevant to the current task; do not reopen completed work.
+
+Use concise dated room notes for decisions, requests, status and disagreements. Name source/output paths rather than duplicating tables. Report material disagreements to the coordinator with evidence.
+
+Use the ownership and branch rules in team/SETUP.md. Specialists write only assigned paths, commit intended files and push their assigned branch. Never push to main, force-push or merge. Do not put credentials in commands, messages or notes. Use the configured identity/credential helper; if missing, report the specific setup issue.
+
+End assignments with paths, branch/commit, changes, checks, limitations and actual spend. The human-readable handoff need not be a one-line response. Codex or an assigned director coordinates; direct specialist sessions are supported.

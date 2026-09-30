@@ -1,3 +1,5 @@
+> **Status, 30 September 2026:** Historical style synthesis for reference. Current editorial instructions are in team/agents/editor.md and .claude/skills/anthropic-style/SKILL.md; preserve Emily’s voice and the actual source population.
+
 # The Anthropic economics style guide
 
 Derived from the twenty-three annotated files in `wiki/style/`, read in full on 2026-09-16. Every pattern below is supported by at least one quotation, attributed to the corpus file that verified it against its source and, through that file, to the source and page. No number read off a chart image appears here (`room/director-2026-09-16-figure-values-ruling.md`). Where the corpus is inconsistent, the inconsistency is stated rather than averaged.

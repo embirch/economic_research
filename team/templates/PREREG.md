@@ -1,25 +1,18 @@
-# Pre-registration · <Post id>
+# Analysis plan: <study ID>
 
-**Date written.** <date>, before <which steps>. **Committed as** <git hash, filled by the director>.
+Date and commit: <record>. Status: <prospective preregistration / plan after disclosed data inspection>. Do not describe a retrospective plan as preregistered.
 
-## Disclosure: what has already been seen
-Every number or pattern seen before this document was written, and by whom.
+## Prior inspection
+Data, patterns, figures and outputs already seen, by whom and when.
 
-## Definitions, fixed
-Outcome(s); predictors; sample rule (thresholds applied by us); exclusions with reasons (flagged units named); standardisation; error type and why.
+## Definitions and sample
+Population, dates, estimands, denominators, gender measure, flags, exclusions, missingness and standardisation weights.
 
-## Hypotheses and decision rules
-For each hypothesis:
-- **Test:** the model or comparison, exactly.
-- **Rule for support / against:** stated so that it can fail.
-- **Expected minimum detectable effect:** from a pilot on the same data without the treatment variable, or from N and the residual variance; the referee checks it is informative.
-- **Known specification risks:** collinearity between predictors, residual-on-covariate designs, small cells; and how the rule avoids them.
+## Primary analysis
+Specify comparisons/calculations and interpretation. For a descriptive study, no artificial hypothesis tests are required. For inferential work, state the survey/experimental design, uncertainty calculation, multiplicity and decision rules. Power/MDE calculations are design-specific; a result below the MDE is not evidence of absence.
 
-## Robustness, fixed now
-The list. Nothing is added later without a dated deviation.
+## Sensitivity and exploration
+Planned checks, alternative definitions and bounded exploratory work. Missing precision information must not be replaced by invented confidence intervals.
 
-## Interpretation, fixed now
-What each outcome will be read as, before it is known.
-
-## Deviations
-Logged in notes/lab-notebook.md with date and reason; the pre-registered rule and the corrected one are both reported if a rule proves mis-specified.
+## Reproduction and changes
+Source versions and hashes, software, outputs and checks. Date and justify later deviations, distinguishing planned and exploratory findings. Record a flawed original rule and the correction transparently.

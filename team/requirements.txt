@@ -1,0 +1,2 @@
+# Configuration and session tooling; study dependencies are separate.
+anthropic==0.125.0
