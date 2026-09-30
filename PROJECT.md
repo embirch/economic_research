@@ -40,5 +40,5 @@ The [operating model](team/SETUP.md) defines file ownership, proportionate revie
 1. Preserve the manuscript and connect the two repositories without moving or rewriting the paper.
 2. Consolidate index notes; record provenance and verification limits.
 3. Align local and deployed agent instructions, templates and memory with this scope.
-4. Verify authenticated access, adopt branch-based work, then make `economic_research` private as requested.
+4. Verify authenticated access and adopt branch-based work. Emily's latest instruction on 30 September 2026 is to keep `economic_research` public for now; the earlier privacy request is deferred.
 5. Return a setup report. A verified indicator inventory is the next proposed research assignment, requiring its own scope and budget if agents are used.

@@ -1,0 +1,16 @@
+name: Setup validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Validate project record and imported artifacts
+        run: python3 team/validate_setup.py
+      - name: Check guards on billable session creation
+        run: python3 team/test_session_guards.py
