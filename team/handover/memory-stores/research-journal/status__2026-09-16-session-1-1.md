@@ -1,0 +1,17 @@
+# 2026-09-16 Stage 1 session 1.1: corpus and atlas (keywords: session 1.1, corpus, atlas, style corpus, wiki, releases, enumeration)
+
+Status: IN PROGRESS. Kick-off note with the section templates for wiki/reports, wiki/style and data/releases: room/director-2026-09-16-session-1-1-kickoff.md. programme/CALENDAR.md created.
+
+Sequencing decision: enumeration first (lead → wiki/INDEX.md; steward → data/releases/INDEX.md), then one thread per slug/release. The editor's style threads wait for wiki/INDEX.md so that wiki/reports and wiki/style share slugs. Reason: SETUP §5 says the director lists publications, but the director has no web tools, so enumeration is delegated and verified against the categories in the kick-off.
+
+Completion criteria the director checks from the filesystem: every slug in wiki/INDEX.md has wiki/reports/<slug>.md and wiki/style/<slug>.md with all H2 sections from the kick-off note; every folder in data/releases/INDEX.md has data/releases/<release>.md and data/fetch/<release>.py; data/ATLAS.md exists.
+
+## Platform constraint discovered (keywords: thread cap, 25 threads, archive, spawn error)
+The session allows at most 25 live child threads, and IDLE (finished) threads still count; only the platform user can archive them (POST /v1/sessions/{id}/threads/{thread_id}/archive). "One thread per publication" therefore fails after 25 spawns (hit at spawn 26, 2026-09-16 ~11:20 UTC). Workaround used: reuse idle threads of the same role via send_to_agent with a self-contained follow-up task. Consequence: the editor got only 1 slot (spawned last); the style corpus proceeds serially unless the human archives idle threads. Next session: spawn in role-balanced batches (e.g. 8 lead, 8 editor, 7 steward) and reuse from the start.
+
+## Resume (cap raised to $250) — human decisions (keywords: scope, combined entry, style corpus 23, batch commits)
+- Commit dac2f86 pushed to main with everything written before the pause (21 wiki/reports, 2 wiki/style, 7 data/releases, 7 fetch scripts, room notes, CALENDAR).
+- Human decisions (room/director-2026-09-16-resume-decisions.md): 37 individual wiki entries + ONE combined `wiki/reports/programme-and-product-pages.md` for the 12 programme/product pages; style corpus = 23 research pieces only (12 economic-index-*, 9 team papers/appendices, 2 survey write-ups); ≤20 live threads; commit+push after each batch; human archives idle threads on request.
+- Batch 1 spawned (20): steward ATLAS thread (+ missing steward status notes), 9 lead threads (skill-formation, survey announcement, 81k economics, 81k interviews + appendix, interviewer, fluency, work-at-anthropic, combined programme pages + INDEX fixes), 10 editor threads (the remaining economic-index-* style files).
+- Batch 2 to spawn after archiving: lead ×6 (econ-scenarios explorer + paper, institute agenda + launch, independent-research-access, clio) + 1 lead thread for missing status notes; editor ×11 (labor-market ×2, productivity, claude-code ×2, coding-agents ×2, retraining, skill-formation, 81k economics, 81k interviews).
+- Files complete but lacking status notes (threads archived mid-run): wiki/reports {claude-code-expertise-2026-06, coding-agents-social-sciences-2026-05(+appendix), economic-index-2025-02-paper, economic-index-2025-09-report, economic-index-2026-01-report, economic-index-2026-03-report, economic-index-2026-06-report(+appendix), labor-market-impacts-2026-03-appendix, productivity-gains-2025-11}; wiki/style/economic-index-2025-09-report; data/releases {2026_01_15, 2026_03_24, 2026_06_26}.

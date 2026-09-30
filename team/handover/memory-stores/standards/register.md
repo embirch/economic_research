@@ -1,0 +1,2 @@
+# Register (working version; the editor rewrites it from the style corpus in Stage 1)
+Why it matters first. Findings as plain sentences with the number and its caveat together. The comparison is the finding. Observation separated from conjecture. Limitations a referee would raise first. A close about what was learned and why it matters. No first person. No summary block. Figures captioned Anthropic-style: what is plotted, units, sample, what the line is.

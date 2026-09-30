@@ -1,0 +1,5 @@
+# 2026-09-16 dry run (keywords: dry run, room protocol, ownership, hugging face, data_documentation, git push)
+Dry run passed: all five specialists saw repo, skills, both memory stores; five hello notes in room/, no ownership violations. Report: room/director-2026-09-16-dry-run-report.md.
+Version control from the sandbox works: commit 75da5d0 ("Dry run: hello notes and report", author Emily Birch) pushed directly to origin main at https://github.com/embirch/economic_research.git with plain `git push -u origin main`, exit 0, no credential prompt. Commit identity must be passed per-command (`-c user.name/-c user.email` or --author); no global git identity is configured in the sandbox.
+Data fact: 2026_06_26 release docs at https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/release_2026_06_26/data_documentation.md (7397 bytes; covers April and May 2026 monthly data). HF tree API works from this environment.
+Open for Stage 1: where the generalised page builder lives (editor does not own team/); short-list verdict goes to room/referee-<date>-shortlist-verdict.md; programme/CALENDAR.md still to be created by the director.
