@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-09-30T14:52:47.081190+00:00",
+  "memories": [
+    {
+      "store": "standards",
+      "path": "/criteria.md",
+      "memory_id": "mem_01QMN4Jw3VNRFhPaEhWYV9eD",
+      "source": "team/memory-current/criteria.md",
+      "sha256": "1a33389750c9a6f8282e91665439ee4d0e041dbc370bdff0213ee10eccefd619",
+      "read_back_verified": true
+    },
+    {
+      "store": "standards",
+      "path": "/file-ownership.md",
+      "memory_id": "mem_018RTKZtRtBaCgZvBcQ31y8Y",
+      "source": "team/memory-current/file-ownership.md",
+      "sha256": "c16088afc8d72c418a65177283753602721205643894932124937aa198e44f50",
+      "read_back_verified": true
+    },
+    {
+      "store": "standards",
+      "path": "/register.md",
+      "memory_id": "mem_01CVoZCXX6F67MTCvgRxSg1U",
+      "source": "team/memory-current/register.md",
+      "sha256": "c37813e5d07f7664f8e06c8c0f766d7a96f517c904c124dc2c602b71dc16368b",
+      "read_back_verified": true
+    },
+    {
+      "store": "standards",
+      "path": "/terminology.md",
+      "memory_id": "mem_01EUPyPG78HEA8tm1Bb4xffx",
+      "source": "team/memory-current/terminology.md",
+      "sha256": "315a4a7483d8b6661b9c6aeeb16c0d90c2aec29d385b908aa46fb408eb4df426",
+      "read_back_verified": true
+    },
+    {
+      "store": "research-journal",
+      "path": "/status/programme.md",
+      "memory_id": "mem_01F6Cyh7gMC6sGVMWarnq2eD",
+      "source": "team/memory-current/programme-status.md",
+      "sha256": "70e477a2d3d063a783b9411449e7c152e2a0e99302dcc897f7ed7e1acbae7c14",
+      "read_back_verified": true
+    },
+    {
+      "store": "research-journal",
+      "path": "/decisions/2026-09-30-current-programme.md",
+      "memory_id": "mem_016KhXoJ9txbtHuq4gWLkzFJ",
+      "source": "team/memory-current/programme-status.md",
+      "sha256": "70e477a2d3d063a783b9411449e7c152e2a0e99302dcc897f7ed7e1acbae7c14",
+      "read_back_verified": true
+    }
+  ]
+}

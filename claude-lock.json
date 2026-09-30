@@ -9,51 +9,51 @@
     "./team/agents/analyst.md": {
       "kind": "agent",
       "id": "agent_01VR1W2w759u8jQixwjqvRW1",
-      "version": "2",
-      "hash": "bec861d0a3d30c44e35b2bfde529bc11",
-      "remote_hash": "bd8923fae257a4983b6f26e871123d84"
+      "version": "3",
+      "hash": "d14d4a707589868fefd7755f186ab203",
+      "remote_hash": "696a953a32fc9305aed0005d6d6df73e"
     },
     "./team/agents/data-steward.md": {
       "kind": "agent",
       "id": "agent_019f5LBbE9KLN49qfAyxQaLB",
-      "version": "2",
-      "hash": "78ce20972b995454d1fb4c030c5505ba",
-      "remote_hash": "07a2448f2f78679e3fc93f671a18d1fb"
+      "version": "3",
+      "hash": "6ddd64cb0a89adab4dd5e0bbfb290bfb",
+      "remote_hash": "a196c9dd5c1821bbc8dd0e1940f826ee"
     },
     "./team/agents/director.md": {
       "kind": "agent",
       "id": "agent_0193GKsjm8DYDiTFrrXKtBgy",
-      "version": "5",
-      "hash": "8ceb93ad50b50b59dda0eb6c7f800a88",
-      "remote_hash": "cdfc279bfa2ff67b3e3b899c056a35f6"
+      "version": "6",
+      "hash": "c2c88983947e2a5eeb0ef3348e841435",
+      "remote_hash": "4257380682aaec641a06c02ea2b506a4"
     },
     "./team/agents/editor.md": {
       "kind": "agent",
       "id": "agent_013EeUahpP5iNHCwbW22aF7M",
-      "version": "4",
-      "hash": "dd441a40c7b1be7c249d706760a9b4b0",
-      "remote_hash": "9c4a8b62e6a92810b775067546751d67"
+      "version": "5",
+      "hash": "f85c8141b35403425672eff1b9ea1a24",
+      "remote_hash": "ba26645c747bd51f7b121ea3fb0e4eb3"
     },
     "./team/agents/programme-lead.md": {
       "kind": "agent",
       "id": "agent_01PjZ415AjWnezMMVFnGyrbG",
-      "version": "2",
-      "hash": "5ee8b4bddb22a3454ac6c862e54d6d88",
-      "remote_hash": "0ea75b0188c7d3255c2cb1ea1f13bcdd"
+      "version": "3",
+      "hash": "c771f0960c168e9ce6431126f5e7d2de",
+      "remote_hash": "fb39cadb677ff174f4ef7a53fdf69201"
     },
     "./team/agents/referee-second-read.md": {
       "kind": "agent",
       "id": "agent_0111jFz9U8BioBJNbfoGfW1V",
-      "version": "1",
-      "hash": "816a68b6c1ef21963e277408f8b3a102",
-      "remote_hash": "026242687736b614f4fb7c8dda596d5d"
+      "version": "2",
+      "hash": "9ed135c3342412d8beb19a6efe933b08",
+      "remote_hash": "b99925d1b05e857b73329aafc54b8393"
     },
     "./team/agents/referee.md": {
       "kind": "agent",
       "id": "agent_017JziDLubtRnsScSYjbBZEe",
-      "version": "2",
-      "hash": "8b2309ab2be8d8f9316006b8cbc2b04a",
-      "remote_hash": "f1040b3f228a61f470b014bbd5a9dc19"
+      "version": "3",
+      "hash": "faf2d0cf6aff1ec5de981c129cb989ed",
+      "remote_hash": "7505b6063cc6b7a189313f4463d593f9"
     },
     "./team/environment.yaml": {
       "kind": "environment",

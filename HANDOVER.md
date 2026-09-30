@@ -1,3 +1,5 @@
+> **Status, 30 September 2026:** Historical Claude handover. Current scope and decisions are in PROJECT.md and programme/DECISIONS.md. In particular, the existing article is authoritative; do not restart posts/gender1. The local research/gender-ai-index work is current, not superseded.
+
 # Handover · economic_research · 30 September 2026
 
 Prepared by the Claude Code session that has coordinated this project since 2 September 2026 (session `d0dd900a-348c-43aa-b607-a2f548570fae`), for coordination to move to Codex. Owner and principal: Emily Birch. No new research was started in preparing this document.

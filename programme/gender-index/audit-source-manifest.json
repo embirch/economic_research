@@ -1,0 +1,96 @@
+{
+  "audit_date": "2026-09-30",
+  "files": [
+    {
+      "file": "academia_files.json",
+      "bytes": 6522,
+      "sha256": "ad118970d8dc166435e1e0528f62c42701952d9ac2391a0f8fb3846c5291303c",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "ecb_data.html",
+      "bytes": 117342,
+      "sha256": "d4740d70d83182496bcfe2130cfc0f0073b016d8db8e8004992761c3873d8994",
+      "source_url": "https://www.ecb.europa.eu/stats/ecb_surveys/consumer_exp_survey/html/data_methodological.en.html",
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "ecb_metadata.zip",
+      "bytes": 153353,
+      "sha256": "5789f1781b85abd117d3cae6b0355f589a8736143e78c355bac797c418600120",
+      "source_url": "https://www.ecb.europa.eu/stats/ecb_surveys/consumer_exp_survey/shared/pdf/ecb.CES_metadata.en.zip",
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "ecb_metadata_ai_search.json",
+      "bytes": 1700,
+      "sha256": "eb593f54e776382b8f0e1494e95295c25addf1b6e4c3856c0f287a0681988ee7",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "ecb_microdata_guide.pdf",
+      "bytes": 1993788,
+      "sha256": "c4bbea4a5480552845cfcef706ba012bb0a6e48e7135984829ae1547af5b2c9f",
+      "source_url": "https://www.ecb.europa.eu/stats/ecb_surveys/consumer_exp_survey/shared/pdf/ecb.CES_microdata_guide.en.pdf",
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "ecb_microdata_guide.txt",
+      "bytes": 418296,
+      "sha256": "61364e275d2fbb2b9300f37ad280d57257ba7ab1e7f818b6c1546d58da892cbb",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "noy_intermediate.json",
+      "bytes": 204,
+      "sha256": "80ddcb525eca75a360a682c873b144ea31512d6c4dd5649ab964d034b44448f7",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "noy_node.json",
+      "bytes": 7360,
+      "sha256": "7d4f3fa57244459546114341095c531303e678bb8fb7d559d136088263bb0000",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "noy_raw.json",
+      "bytes": 33421,
+      "sha256": "45927b7c54cf1b3361826c9039945ff8a315dbd906ba542ad855c98b46bef362",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "noy_survey_schema.json",
+      "bytes": 17493,
+      "sha256": "504862404986b023145224a8687284bb520791285278c9bd211a0f90fee6c2a8",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "rps_download.html",
+      "bytes": 57890,
+      "sha256": "8d157937ac52d9ed8630d16c7dec8abec488756db4cb5794eb91dd35a3c4de57",
+      "source_url": "https://services.informs.org/dataset/mnsc/download.php?doi=mnsc.2025.02523",
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "rps_reuse_terms.txt",
+      "bytes": 1182,
+      "sha256": "b59ab2ab65f28c85d9c2a09245c0a9b5e56e0ae8c0c5f3a0779f2a2c08303a7a",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    },
+    {
+      "file": "xd7qw_files.json",
+      "bytes": 20479,
+      "sha256": "d2805a886651b6165ce0d1921258f0583f6112d465dc39f913e567550d95dd63",
+      "source_url": null,
+      "note": "Source or derived audit evidence; not an approved public data redistribution."
+    }
+  ]
+}

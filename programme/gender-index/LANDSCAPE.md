@@ -1,3 +1,5 @@
+> **Status, 30 September 2026:** Historical landscape scan; read README.md in this directory and the follow-up audit before using it. The unqualified novelty claim below is not established: adjacent gender/AI indices were identified in the newer concept memo. Source leads and licence claims still require verification.
+
 # A Gender Index for AI · landscape scan · 30 September 2026
 
 Synthesis of three parallel scans (`strand1-gender-indices.md`, `strand2-ai-trackers.md`, `strand3-literature-datasets.md`), each with URLs for every claim. Entries the strands mark `[S]`, `†` or "secondary" came from search snippets or press because the primary site blocked automated fetching; they are leads to verify, not confirmed facts. Where this synthesis relies on one, it says so.

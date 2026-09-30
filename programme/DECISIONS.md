@@ -1,0 +1,22 @@
+# Current decisions
+
+Maintain dated, attributable decisions. Separate decisions from suggestions and record supersession without rewriting the historical research record.
+
+| Date | Decision | Basis / effect |
+|---|---|---|
+| 2026-09-30 | The programme focuses on gender and AI; Anthropic is one source among several. | Emily explicitly approved updating inherited scope instructions in Codex. Supersedes Economic-Index-only requirements. |
+| 2026-09-30 | Preserve and use the existing `gender-gap-generative-ai` manuscript and analysis. | Emily has already compared the Claude version. No further comparison or substitution is commissioned. `posts/gender1/` becomes reference-only. |
+| 2026-09-30 | Consolidate newer local index work into the shared record. | Emily approved importing concept, audit and prototype materials. Working proposals remain proposals. |
+| 2026-09-30 | Implement the proposed project setup. | Includes current project record, recoverable edits, consistent agent guidance, evidence register and Git workflow. This is setup authorisation, not permission for new paid research. |
+| 2026-09-30 | Return `economic_research` to private after setup and access verification. | Explicit user request; use the existing credential locally, never record its value. |
+| 2026-09-30 | Use branches and review for subsequent agent changes. | Approved setup recommendation. Codex may implement and integrate this setup; future scientific/publication decisions remain with Emily. |
+
+## Still open
+
+- Final index name, geographic coverage, indicator inclusion and refresh policy.
+- Selection of papers two and three after data and novelty checks.
+- Any future composite measure and its justification.
+- Code/data licensing for publication; access permission and redistribution permission are separate.
+- New research assignments and their spending caps.
+
+The earlier low/high-wage delegation draft and its open pull request remain untouched. No new instruction to continue or merge them was given.

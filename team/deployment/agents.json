@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-09-30T14:52:21.067271+00:00",
+  "sessions_started": 0,
+  "agents": [
+    {
+      "source": "team/agents/analyst.md",
+      "id": "agent_01VR1W2w759u8jQixwjqvRW1",
+      "version": "3",
+      "model": "claude-opus-5",
+      "sha256": "c9024cf812b817816ecfc104e067b914ebdaee6a1f69f377d53c5a63e2aedb6d",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/data-steward.md",
+      "id": "agent_019f5LBbE9KLN49qfAyxQaLB",
+      "version": "3",
+      "model": "claude-opus-5",
+      "sha256": "d8b2c0a083757ba4407bbb0b1499f14fa9bd7e80cb9aa138e4ccce47e1d6b335",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/director.md",
+      "id": "agent_0193GKsjm8DYDiTFrrXKtBgy",
+      "version": "6",
+      "model": "claude-fable-5-1",
+      "sha256": "fe6ed21b1d41d94ec7e55fa9e5cd8a4248234b5b4b51bf4ff5c2c4ef5c3c0ff8",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/editor.md",
+      "id": "agent_013EeUahpP5iNHCwbW22aF7M",
+      "version": "5",
+      "model": "claude-opus-5",
+      "sha256": "9a625c2c9876bcf2a8c633ab016184177f2ef4b41bb9d6ab3fd0acd846348753",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/programme-lead.md",
+      "id": "agent_01PjZ415AjWnezMMVFnGyrbG",
+      "version": "3",
+      "model": "claude-opus-5",
+      "sha256": "7441e6968ee5592b8517ddb45fdaf4355e1d05dac94b403cf5d84c48c403cdb6",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/referee-second-read.md",
+      "id": "agent_0111jFz9U8BioBJNbfoGfW1V",
+      "version": "2",
+      "model": "claude-opus-5",
+      "sha256": "5f56a119c8e1cd7be212cc0cbe179a58e0f2a78b6455e62f8f8f0bc26ef5dddd",
+      "read_back_verified": true
+    },
+    {
+      "source": "team/agents/referee.md",
+      "id": "agent_017JziDLubtRnsScSYjbBZEe",
+      "version": "3",
+      "model": "claude-fable-5-1",
+      "sha256": "8a08ff49da9f3cfbb0b04f42ada0c16548b76d0180b140ee02728ce0e7491ad2",
+      "read_back_verified": true
+    }
+  ]
+}

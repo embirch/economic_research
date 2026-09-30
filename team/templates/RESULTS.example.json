@@ -1,0 +1,22 @@
+{
+  "study_id": "illustrative-only",
+  "generated": "YYYY-MM-DD",
+  "results": {
+    "example_id": {
+      "label": "Illustrative missing estimate; not a finding",
+      "value": null,
+      "unit": "percentage points",
+      "population": "Specify population and dates",
+      "denominator": "Specify eligible respondents",
+      "source_ids": [
+        "replace-with-source-id"
+      ],
+      "calculation": "Replace with script and result identifier",
+      "uncertainty": {
+        "status": "unavailable",
+        "explanation": "This template contains no observations or sampling information."
+      },
+      "notes": "Do not fill missing values with zero."
+    }
+  }
+}
