@@ -1,0 +1,82 @@
+{
+  "source_id_prefix": "KR_NIA",
+  "sample_family": "KR_NIA_INTERNET_2025",
+  "provider": "Ministry of Science and ICT / National Information Society Agency (fieldwork: Gallup Korea)",
+  "survey": "2025 Survey on the Internet Usage (approved national statistics)",
+  "retrieved": "2026-10-01",
+  "source_url": "https://www.nia.or.kr/common/board/Download.do?bcIdx=29580&cbIdx=99870&fileNo=2",
+  "file_sha256": "12ec5ffec2596bed3162f671231ca3b166f2137031b76095f720d763a988bc00",
+  "file_bytes": 4815170,
+  "unit_note": "percentages of the stated base; the volume reports no table-level standard errors",
+  "tables": {
+    "Table_105": {
+      "base": "Persons aged 12 or older who have used the Experienced Not experienced Total",
+      "period": "Within the last 1 year",
+      "gender_rows": {
+        "Male": [
+          48.7,
+          51.3,
+          100.0
+        ],
+        "Female": [
+          40.3,
+          59.7,
+          100.0
+        ]
+      },
+      "caption": "Generative AI service experience status",
+      "pdf_pages": [
+        222,
+        223
+      ]
+    },
+    "Table_106": {
+      "base": "Persons aged 12 or older who have used the ChatGPT Gemini Copilot CLOVA X Other Not",
+      "period": "Within the last 1 year",
+      "gender_rows": {
+        "Male": [
+          45.5,
+          11.5,
+          2.5,
+          2.3,
+          0.0,
+          51.3
+        ],
+        "Female": [
+          38.0,
+          8.1,
+          1.8,
+          1.7,
+          0.1,
+          59.7
+        ]
+      },
+      "caption": "Generative AI service experience activity",
+      "pdf_pages": [
+        224,
+        225
+      ]
+    },
+    "Table_133": {
+      "base": "Persons aged 12 or older who have not No interest or Do not know Did not know such",
+      "period": "Within the last 1 year",
+      "gender_rows": {
+        "Male": [
+          50.6,
+          16.8,
+          15.7
+        ],
+        "Female": [
+          48.4,
+          19.9,
+          16.4
+        ]
+      },
+      "caption": "Reasons for not using Generative AI services",
+      "pdf_pages": [
+        278,
+        279
+      ]
+    }
+  }
+}
