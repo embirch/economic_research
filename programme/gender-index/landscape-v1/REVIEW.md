@@ -26,11 +26,13 @@ Also withheld: unverified Danish encouragement/training magnitudes; an untraced 
 
 ## Scope and remaining work
 
-This is a finite audit, not a systematic worldwide review. Completeness means dispositions for the assigned inventory, documented regional discovery, selected checked measures and explicit blockers. It does not mean every underlying file or methodology was accessible. Wider national coverage, joint gender-by-age/occupation variables, usable uncertainty, publication terms and novelty comparisons still require source-specific work. No absence claim follows from an unsuccessful download or a region without a displayed panel.
+Coverage correction following Emily's review, 1 October 2026: the bounded assignment was delivered, but the broader evidence landscape remains incomplete. The 33 catalogue cards mix source, indicator and literature records; the HBS review is one card, and its 76 underlying sources have not been individually reconciled. They have not all been screened and excluded on quality or availability grounds. The [reconciliation work](coordination/COVERAGE-RECONCILIATION.md) must precede deep-dive selection.
+
+The initial audit supplies dispositions for its assigned inventory, documented regional discovery, selected checked measures and explicit blockers. It is not a systematic worldwide review. Wider literature and national coverage, joint gender-by-age/occupation variables, usable uncertainty, publication terms and novelty comparisons still require source-specific work. No absence claim follows from an unsuccessful download or a region without a displayed panel.
 
 The UK, US, Canada and Brazil panels are examples of source-specific published evidence. They do not establish cross-national differences in gender gaps. A statistical-significance test would need suitable design-based variance information; rounded published values and unweighted counts alone are insufficient.
 
-Original research remains an outstanding programme deliverable. Emily's [SimilarWeb and event-response ideas](coordination/emerging-questions.md) join the unranked question log. No new paper, vendor subscription, outreach, event analysis or additional paid agent session has been commissioned. The next scientific step is to use this landscape to compare feasible original questions against existing research, then define a bounded study.
+Original research remains an outstanding programme deliverable. Emily's [SimilarWeb and event-response ideas](coordination/emerging-questions.md) join the unranked question log. No new paper, vendor subscription, outreach, event analysis or additional paid agent session has been commissioned. Broaden and reconcile the evidence library first, then compare feasible original questions against existing research and define a bounded study.
 
 ## Reproducibility and author preservation
 
@@ -45,3 +47,7 @@ The programme lead delivered `97c38b0` at $8.00; the data steward delivered `78d
 The working edition contains 33 reviewed source cards, 112 European country/context pairs (EU27 plus the EU aggregate, four contexts) and four national panels. Source cards do not represent independent studies. The steward’s original 31-row register, 72-entity coverage table and scripts remain preserved; the reviewed central atlas adds two existing literature records and coordinator qualifications.
 
 Validation: setup consistency and session guard checks; specialist CSV/ID checks; European source-cell adapter; UK pinned-workbook and US/Canada/Brazil primary-page checks; independent Brazil aggregate extraction; presentation input validation and JavaScript syntax. Browser review covers source filters, country/context selection, CSV export and a narrow mobile viewport. The original author file hash is unchanged. This review establishes the documented technical checks and selected source verification, not comprehensive replication or external peer review.
+
+## Foundational reading and coverage correction
+
+Following Emily's feedback, the coordinator read the complete May 2026 HBS paper, including both appendices, and recorded [methodological and research implications](coordination/HBS-READING.md). This supersedes earlier selected-passage verification. The catalogue still needs the [full corpus reconciliation](coordination/COVERAGE-RECONCILIATION.md); full reading does not mean all primary sources have been checked. The source-register and explorer verification fields now state this boundary. No numerical panel inputs changed.

@@ -10,7 +10,7 @@
     },
     {
       "value": "33",
-      "label": "source and literature records"
+      "label": "cards catalogued so far"
     }
   ],
   "findings": [
@@ -2464,7 +2464,7 @@
       "definition": "varies by constituent study",
       "uncertainty": "varies",
       "access": "working paper open; Working paper copyright retained by authors; linked, not redistributed.",
-      "limit": "constituent samples must be deduplicated before any country count is repeated. Next check: Trace constituent source families and assess novelty. Pooled estimates are not world prevalence; vendor traffic is distinct from people and adoption.",
+      "limit": "constituent samples must be deduplicated before any country count is repeated. Next check: Trace constituent source families and assess novelty. Pooled estimates are not world prevalence; vendor traffic is distinct from people and adoption. Coverage gap: the full 76-source corpus has not yet been individually reconciled into this catalogue; this synthesis card does not represent that ingestion.",
       "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf",
       "regions": [
         "Cross-region"
@@ -2472,7 +2472,7 @@
       "topics": [
         "Context / synthesis"
       ],
-      "verification": "Foundational report: lead read full paper; coordinator checked title, methods and selected SimilarWeb passages. Read FOUNDATION.md and landscape-v1/coordination/synthesis-review.md."
+      "verification": "2026-10-01: coordinator read the complete May 2026 PDF, including references, measurement tables and Appendices A/B; figures visually checked. See landscape-v1/coordination/HBS-READING.md. No pooled replication or complete primary-study verification."
     },
     {
       "id": "ALLAS_EXPOSURE",

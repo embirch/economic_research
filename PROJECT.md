@@ -43,9 +43,11 @@ The [operating model](team/SETUP.md) defines file ownership, proportionate revie
 
 ## Immediate work order
 
+Emily's subsequent coverage correction, 1 October 2026: the current 33 cards do not yet incorporate the 76 underlying HBS sources. The initial catalogue is partial; completion of the bounded assignments does not establish completion of the intended broader landscape. Reconcile every HBS entry with our existing records, add distinct further sources and distinguish publications, datasets, waves and usable indicators before selecting new deep dives. Follow the [coverage reconciliation requirements](programme/gender-index/landscape-v1/coordination/COVERAGE-RECONCILIATION.md). The coordinator has now read the complete foundational paper; carry the [reading implications](programme/gender-index/landscape-v1/coordination/HBS-READING.md) into this work. Existing paid caps and completed-session status remain unchanged.
+
 Emily approved the explicit $60 additional Claude envelope ($40 source audit, $20 synthesis) on 1 October 2026. Both assignments have finished: source audit $20.94, synthesis $8.00, total $28.94. Codex integrated the working v1 and records its scientific boundaries and checks in the [review](programme/gender-index/landscape-v1/REVIEW.md). Session records are in `team/RUNS.csv`; do not launch or resume these assignments. The live first-paper author file remains unchanged.
 
-1. Review the assembled landscape, checked measures and source dispositions. The finite v1 audit is delivered; inaccessible sources and unresolved questions remain explicitly marked.
+1. Expand the partial catalogue by reconciling all 76 HBS sources and our additional evidence. Preserve the checked panels, record overlaps and exclusions, and report literature coverage separately from available datasets and numerical indicators.
 2. Keep the source map and synthesis current as further checks or findings warrant. Emily's SimilarWeb and event-response ideas are parked in the emerging-question log.
 3. Use that foundation to choose original deep-dive questions, verify their distinct contribution and data requirements, and prepare scoped analysis plans and budgets. Later paid work needs separate approval.
 4. Conduct and independently check the selected studies; feed findings back into the index and propose warranted paper revisions, preserving live author edits and reproducible versions.

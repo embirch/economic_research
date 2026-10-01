@@ -20,6 +20,8 @@ Codex assembled the working landscape/index v1 after integrating the two approve
 
 ## Still open
 
+Coverage clarification, 1 October 2026: Emily expects the evidence library to build on the full 76-source Cranney, Delecourt and Koning corpus plus our additional sources. Codex confirmed that the current 33 cards do not do this: the review is represented as one card, underlying sources are not fully reconciled, and some datasets have multiple indicator cards. The previous bounded delivery is a partial catalogue. The [reconciliation requirements](gender-index/landscape-v1/coordination/COVERAGE-RECONCILIATION.md) now precede deep-dive selection. This is a scope correction, not evidence that all 76 have been screened or a new paid-session approval.
+
 Research suggestion, 1 October 2026: Emily also parked a question about what attracts or discourages women from using AI tools, comparing women's and men's usage around news, scandals, ads, offers and other events. Retain this in the [emerging-question log](gender-index/landscape-v1/coordination/emerging-questions.md) for later feasibility and identification assessment. It does not commission a study or expand the current v1 budget.
 
 Research suggestion, 1 October 2026: Emily highlighted the SimilarWeb analyses in the May 2026 Cranney, Delecourt and Koning paper as a possible small original study, explicitly “tbd”. Record it in the emerging-question log for assessment after v1. No study selection, subscription, purchase or extra paid assignment is implied; the current audit/synthesis continues within its existing caps.

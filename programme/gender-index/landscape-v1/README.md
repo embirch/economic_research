@@ -1,11 +1,11 @@
 # Gender & AI landscape v1
 
-Working research edition, 1 October 2026. Open [the local evidence explorer](index.html). This directory assembles the broad source/literature audit before selection of new deep-dive papers. It is not a worldwide prevalence estimate, a composite ranking, or a public launch.
+Working research edition, 1 October 2026. Open [the local evidence explorer](index.html). This is a partial catalogue with selected checked measures. The 33 cards do not yet incorporate all 76 sources in the foundational HBS review. The broader source reconciliation must precede selection of new deep-dive papers; see the [coverage correction and next work](coordination/COVERAGE-RECONCILIATION.md). It is not a worldwide prevalence estimate, a composite ranking, or a public launch.
 
 ## Reading order
 
 1. [Explorer](index.html): findings, selected measures, geographic coverage, filterable source cards and emerging questions.
-2. [Foundational report note](../FOUNDATION.md): Cranney, Delecourt and Koning's May 2026 synthesis and its role in our contribution.
+2. [Foundational report note](../FOUNDATION.md) and [full-reading record](coordination/HBS-READING.md): Cranney, Delecourt and Koning's May 2026 synthesis, measurement boundaries and implications for our contribution.
 3. [Coordinator-reviewed synthesis](SYNTHESIS.md), the specialist's [submitted claim ledger](research/claims-evidence.csv) and the explicit [integration corrections](coordination/synthesis-review.md). The submitted specialist draft is retained for provenance; it is not the accepted reader-facing synthesis.
 4. [Reviewed source atlas](../evidence/source-register.csv) and [coordinator source review](coordination/source-audit-review.md), with the preserved [specialist audit](../evidence/v1-audit-2026-10-01/AUDIT-REPORT.md) and [pilot corrections](../evidence/v1-audit-2026-10-01/pilot-corrections.md).
 5. [Coordinator review and inclusion decisions](REVIEW.md): what was independently checked and what remains limited. Read this alongside the specialist outputs.
@@ -57,6 +57,6 @@ The explorer combines existing European calculations with clearly attributed pub
 
 Country, aggregate and study/sample-family identifiers serve different purposes. In particular, the HBS synthesis and its constituent surveys are not independent replications, and three Eurostat indicator records come from the same source family. Gender-category labels and survey populations remain source-specific. Occupational composition and inferred platform demographics cannot become self-reported individual gender.
 
-Next iterations should be driven by the findings and explicit gaps: resolve specific access/measurement blockers, define a distinct original question, assess its feasible data and methods, and then commission a bounded study. Feed reviewed findings back into the landscape and propose warranted revisions to the living European paper while preserving author edits.
+The immediate next step is to reconcile the full foundational HBS corpus with our existing and additional sources, separating literature coverage from usable data and indicators. Then use the broader findings and explicit gaps to define distinct original questions, assess feasible data and methods, and commission bounded studies. Feed reviewed findings back into the landscape and propose warranted revisions to the living European paper while preserving author edits.
 
 AI assistance: existing deployed Claude specialists provided source audit and literature synthesis; Codex coordinated, checked selected primary evidence, imported existing results, assembled the explorer and reviewed it. Emily retains scientific and editorial ownership. Internal checks do not substitute for external peer review or author approval of a public release.
