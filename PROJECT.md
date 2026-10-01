@@ -14,7 +14,7 @@ Emily clarified on 1 October 2026 that original empirical analysis of suitable d
 
 Emily's 1 October 2026 direction is to aim for global coverage where data support it. Geographic scope must be established through a coverage and comparability audit; do not make Europe the default ceiling or assume a worldwide comparable series exists. The first $20 data-steward pilot is authorised separately from setup; see `team/assignments/2026-10-01-steward-pilot.md` and programme decisions. No subsequent paid tranche is automatic.
 
-The pilot has now delivered at $6.21. Its file diagnostics reproduce, but scientific integration is pending the corrections in [the coordinator review](programme/gender-index/reviews/2026-10-01-pilot-review.md). Geographic scope and indicator inclusion remain undecided; no new index calculation or publication was approved by completing this audit.
+The pilot delivered at $6.21. The subsequent approved audit and synthesis are now integrated into a [working landscape v1](programme/gender-index/landscape-v1/README.md), with an EU27 comparison core, four separate national panels and 33 source cards. The [review record](programme/gender-index/landscape-v1/REVIEW.md) documents accepted measures, corrections and unresolved limitations. This is an international evidence explorer for review; a comparable global series and a public release remain unestablished.
 
 - Participation; purposes and patterns of use; experience, barriers and workplace opportunity. Occupational exposure may relate to augmentation, displacement or other changes; its sign for worker welfare is not predetermined. Economic returns and who captures gains remain evidence questions, not assumed consequences of exposure or use.
 - Anthropic research is supplementary intellectual and empirical material. Select sources by fitness for the question, including official surveys, other platforms, experiments and qualitative studies.
@@ -31,7 +31,7 @@ The first paper's current analysis is descriptive, but the paper is a living out
 
 ## Index and further papers
 
-The current concept and audit are under [programme/gender-index](programme/gender-index/README.md). They are working evidence, not a completed systematic review. The approved setup work consolidates this record and prepares an evidence register; it does not commission a new research study or a paid agent run.
+The current landscape, audit and research agenda are under [programme/gender-index](programme/gender-index/README.md). They are working evidence, not a completed systematic review. V1 includes existing original European results and attributed published evidence elsewhere. Further original studies are to be selected from the findings; none is commissioned by completing v1.
 
 Specific further papers remain candidates; original research itself is a programme requirement. Evaluate data access, actual joint variables, measurement, uncertainty, reuse terms and novelty before selecting their questions. Prior suggestions about first use, topic patterns, workplace conditions and economic returns are not instructions to run all of them. Reproducing a benchmark supports validation but does not alone meet a deep-dive paper's contribution requirement.
 
@@ -43,10 +43,10 @@ The [operating model](team/SETUP.md) defines file ownership, proportionate revie
 
 ## Immediate work order
 
-Emily's subsequent “ok go” authorises proceeding with the v1-first work. The [delivery brief](programme/gender-index/V1-BRIEF.md) and two specialist assignments are prepared. Emily approved the explicit $60 additional Claude envelope ($40 source audit, $20 synthesis) with her next “ok go” on 1 October 2026. Launch these two assignments with $36/$18 service limits; no automatic continuation or additional sessions. Session and delivery status belong in team/RUNS.csv. Codex has begun [bounded source discovery](programme/gender-index/landscape-v1/coordination/SCOUT.md), including a reproducible check of UK DSIT published aggregates. This is progress towards v1, not completion of the full audit or scientific integration.
+Emily approved the explicit $60 additional Claude envelope ($40 source audit, $20 synthesis) on 1 October 2026. Both assignments have finished: source audit $20.94, synthesis $8.00, total $28.94. Codex integrated the working v1 and records its scientific boundaries and checks in the [review](programme/gender-index/landscape-v1/REVIEW.md). Session records are in `team/RUNS.csv`; do not launch or resume these assignments. The live first-paper author file remains unchanged.
 
-1. Scope the broader data/literature audit: resolve pilot issues, assess the existing inventory and additional regional leads, and establish what can be measured and compared. The two v1 assignments now have approved caps; later paid work needs separate approval.
-2. Assemble an initial checked index/evidence map and synthesis, with coverage, definitions, limitations and a running log of emerging questions.
-3. Use that foundation to choose original deep-dive questions, verify their distinct contribution and data requirements, and prepare scoped analysis plans and budgets.
+1. Review the assembled landscape, checked measures and source dispositions. The finite v1 audit is delivered; inaccessible sources and unresolved questions remain explicitly marked.
+2. Keep the source map and synthesis current as further checks or findings warrant. Emily's SimilarWeb and event-response ideas are parked in the emerging-question log.
+3. Use that foundation to choose original deep-dive questions, verify their distinct contribution and data requirements, and prepare scoped analysis plans and budgets. Later paid work needs separate approval.
 4. Conduct and independently check the selected studies; feed findings back into the index and propose warranted paper revisions, preserving live author edits and reproducible versions.
 5. Prepare releases with Emily's scientific and editorial decisions; the initial index need not wait for all papers. Keep `economic_research` public under her 30 September instruction; article-repository cloud access remains a separate setup limitation.

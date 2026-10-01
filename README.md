@@ -24,7 +24,9 @@ Anthropic's research bank under `wiki/` is supplementary material. Earlier resea
 
 ## Quick verification
 
-From the repository root: `python3 team/validate_setup.py`. This checks setup consistency and imported-file provenance without internet access, API credentials or paid agent work. It does not certify the empirical findings. A ready-to-enable GitHub Actions workflow is in `team/templates/setup-validation.workflow.yml`; the current token cannot install workflows, so remote CI is not yet enabled.
+From the repository root: `python3 team/validate_setup.py`. This checks setup consistency and imported-file provenance without internet access, API credentials or paid agent work. It does not certify the empirical findings. The installed GitHub Actions workflow is `.github/workflows/setup-validation.yml`; it also checks billable-session guards on pull requests and pushes to main.
+
+The [working landscape v1](programme/gender-index/landscape-v1/README.md) has separate source-extract and presentation checks. Its HTML can be rebuilt offline with `python3 programme/gender-index/landscape-v1/build_explorer.py`.
 
 Research reproduction remains study-specific. Follow the first paper's README for its frozen data and analysis commands. New studies must document their own environment and reproduction command.
 

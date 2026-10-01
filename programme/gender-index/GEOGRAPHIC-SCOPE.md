@@ -1,5 +1,11 @@
 # Geographic scope: decision framework and initial leads
 
+## V1 integration update, 1 October 2026
+
+The [working v1](landscape-v1/README.md) implements option B below for review: an international evidence explorer with option A as its European comparison core. It includes EU27 plus a separately labelled EU aggregate, four source-specific national panels (UK, US, Canada and Brazil), and wider source cards. Korea remains a source card while reuse terms are unresolved. The finite audit has not established option C, a comparable global series. This is an edition architecture, not a final public-release decision.
+
+The [reviewed atlas](evidence/source-register.csv), [coverage matrix](evidence/v1-audit-2026-10-01/coverage.csv) and [integration review](landscape-v1/REVIEW.md) supersede the pending-check status of the initial leads below. Regional search coverage is not representative population coverage. The initial scoping record is retained for provenance.
+
 Codex coordinator note, 1 October 2026. Emily prefers global scope, conditional on data. This note supplements the bounded Claude steward pilot; it is a targeted scoping pass, not a systematic world inventory or a final release decision.
 
 The completed pilot and reproduced file diagnostics are assessed in the [coordinator review](reviews/2026-10-01-pilot-review.md). Its required corrections take precedence over stronger readiness/representation claims in the draft steward report.

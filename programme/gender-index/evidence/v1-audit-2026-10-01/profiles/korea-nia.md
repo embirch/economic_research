@@ -1,5 +1,7 @@
 # Source profile: Korea, 2025 Survey on the Internet Usage (NIA)
 
+> Coordinator integration note, 1 October 2026: preserved specialist submission. The [reviewed disposition](../../../landscape-v1/coordination/source-audit-review.md) qualifies claims and governs v1 inclusion.
+
 Data steward, 1 October 2026. Proposed IDs `KR_NIA_USE`, `KR_NIA_SERVICE`,
 `KR_NIA_NONUSE`; sample family **`KR_NIA_INTERNET_2025`**.
 Status: **file-verified published aggregates** (English statistical-table volume) plus

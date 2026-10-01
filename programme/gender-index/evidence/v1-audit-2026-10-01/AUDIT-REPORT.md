@@ -1,5 +1,7 @@
 # Broad source audit for landscape/index v1
 
+> Coordinator integration note, 1 October 2026: preserved specialist submission. The [reviewed disposition](../../landscape-v1/coordination/source-audit-review.md) qualifies claims and governs v1 inclusion.
+
 Data steward, 1 October 2026. Branch `work/index-v1-source-audit-2026-10-01`.
 Assignment: [`team/assignments/2026-10-01-v1-steward.md`](../../../../team/assignments/2026-10-01-v1-steward.md)
 (user authorisation: Emily's “ok go” to the explicit $60 additional Claude envelope,
@@ -37,11 +39,15 @@ touched. `posts/gender1/` was not used.
    (Cetic.br TIC Domicílios 2025) and the Republic of Korea (MSIT/NIA 2025 Survey on the
    Internet Usage). Both are probability-sample official or official-standard statistics
    with sex rows on a generative-AI item.
-2. **Brazil is the only audited source that publishes uncertainty for a sex-specific
-   generative-AI rate** (male 34.79% ± 3.29 pp, female 30.49% ± 2.78 pp at 95%). Eurostat
-   publishes none, Korea publishes only a survey-level error, the UK publishes a design
-   effect but no interval in the AI workbook, and Canada publishes an interval for an odds
-   ratio only.
+2. **Brazil is the only audited source whose published tables carry uncertainty for a
+   sex-specific generative-AI rate** (male 34.79% ± 3.29 pp, female 30.49% ± 2.78 pp at
+   95%). Eurostat publishes none; Korea publishes only a survey-level error; Canada
+   publishes an interval for an odds ratio only. For the UK the position is different and
+   should not be stated as an absence: the DSIT technical report (sections 7.5–8.2)
+   documents 95% logit intervals computed in R `survey` for the published tables and a
+   design effect of 1.67, but no interval column appears in the AI workbook or in a second
+   inspected PES workbook, so **the published location of the gender-cell intervals is
+   unresolved** and is recorded as a question, not as “no CIs published”.
 3. **Korea is the only audited source that publishes a sex × age generative-AI
    crossing.** No audited source publishes a sex × occupation cell.
 4. **No comparable multi-country adoption series exists outside the European core.** Every
@@ -73,6 +79,7 @@ deliberately left alone.
 | `isoc_i_esms_an_ICT_Survey_Model_Questionnaire.pdf` (2025) | 999,470 | `2f556a1c7a96d8dfc9a310937f3b18927fd6a4b1e50d25c996fe84a0b45643ac` | identical to the pilot; front matter confirms 2025 coverage |
 | `isoc_i_esms_an_Aggregated_variables_and_break.pdf` | 640,922 | `19c759b969102e50cda2ffd66cc11b4c9c5a8acfd8b30d2394f8e39099673ec0` | identical to the pilot; not parsed |
 | DSIT AI tables `.ods` | 325,288 | `a34ed705b6f8c2966d82586917befaae975fee8f61206ef3a2d679cc95c4610a` | identical to the coordinator vintage; extractor reproduces |
+| DSIT digital inclusion and skills tables `.ods` | 279,706 | `bc449398970cd1c0053443c2c63acc9e946a46db7b4cd1579785c7c9cd9b42e5` | new; checked only for the presence of confidence-interval columns (none) |
 | Cetic.br individuals tables bundle v1.0 (`.zip`) | 1,027,291 | `9ca6638cc6a965d7d90de789cdc7f0e67de08918d4f4067c56575e9b621dd930` | new; parsed by `check_cetic.py` |
 | Cetic.br methodological report v1.0 | 1,569,812 | `ba623fad92c9e7c7d0015186dd3df4e255992ab93e6716f9b2b5be824383f3a2` | new |
 | Cetic.br data-collection report v1.0 | 1,444,385 | `f18a69305f7ed2f95512ee65b49774cf3be812720c5c2b27cac3fe35c2bd9237` | new |
@@ -130,9 +137,10 @@ PDF return 403 to automated requests; Eurofound returns 429.
 5. **The Eurostat C2 residual is unexplained**, because the country-specific notes are on
    CIRCABC (404 to two routes) and the compilers' manual exists only for the 2024 survey.
    No national routing explanation may be offered.
-6. **No uncertainty for most displayed cells**, and none at all for any male−female
-   difference except through Brazil's published margins — which are per-cell, not
-   difference-level.
+6. **No usable uncertainty accompanies most displayed cells**, and none at all for any
+   male−female *difference* except through Brazil's published margins — which are per-cell,
+   not difference-level. For the UK this is an unresolved location question rather than an
+   absence (see finding 2).
 7. **Mexico's ENIAG lead rests on secondary coverage only.** The primary publication was
    not located; it is recorded as a queued lead, not evidence.
 8. **Language coverage is partial.** Japanese and Portuguese provider documents were read;
@@ -167,7 +175,9 @@ places attitudes, platform messages or modelled occupational exposure beside mea
 ## 6. Remaining work, in priority order
 
 1. Resolve the Korean reuse terms and the Brazilian licence choice — both are decisions, not
-   research.
+   research. In the same pass, find where the DSIT 95% logit intervals are published
+   (remaining PES workbooks or an accompanying product), or record the question for the
+   producer.
 2. Extract Korean printed table 134 (and 113+ if purposes are wanted) to complete those
    indicators.
 3. Pin the Canadian cells to StatCan table identifiers instead of article prose.

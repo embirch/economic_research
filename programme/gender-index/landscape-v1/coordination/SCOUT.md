@@ -24,3 +24,7 @@ The current evidence favours investigating national modules alongside the Europe
 ## Handoff
 
 Reuse the DSIT snapshot check; do not redo it merely to satisfy a new assignment. The steward should integrate it only after resolving its outstanding checks. The programme lead can use the verified questionnaire distinctions but should not turn queued leads into substantive findings. All pilot corrections remain governed by the [existing review](../../reviews/2026-10-01-pilot-review.md). No original article or historical audit was changed.
+
+## Delivery update, 1 October 2026
+
+The later cap approval and both specialist deliveries are recorded in the [v1 review](../REVIEW.md). The working explorer and reviewed atlas are assembled; the pending statuses above describe discovery at that time. The audit and synthesis cost $28.94 within the approved $60 envelope. No further paid session is authorised.

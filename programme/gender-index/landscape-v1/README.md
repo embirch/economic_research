@@ -6,10 +6,10 @@ Working research edition, 1 October 2026. Open [the local evidence explorer](ind
 
 1. [Explorer](index.html): findings, selected measures, geographic coverage, filterable source cards and emerging questions.
 2. [Foundational report note](../FOUNDATION.md): Cranney, Delecourt and Koning's May 2026 synthesis and its role in our contribution.
-3. [Research synthesis](research/SYNTHESIS.md) and [claims/evidence table](research/claims-evidence.csv).
-4. [Source audit](../evidence/v1-audit-2026-10-01/AUDIT-REPORT.md), [source register](../evidence/v1-audit-2026-10-01/source-register.csv) and [pilot corrections](../evidence/v1-audit-2026-10-01/pilot-corrections.md).
+3. [Coordinator-reviewed synthesis](SYNTHESIS.md), the specialist's [submitted claim ledger](research/claims-evidence.csv) and the explicit [integration corrections](coordination/synthesis-review.md). The submitted specialist draft is retained for provenance; it is not the accepted reader-facing synthesis.
+4. [Reviewed source atlas](../evidence/source-register.csv) and [coordinator source review](coordination/source-audit-review.md), with the preserved [specialist audit](../evidence/v1-audit-2026-10-01/AUDIT-REPORT.md) and [pilot corrections](../evidence/v1-audit-2026-10-01/pilot-corrections.md).
 5. [Coordinator review and inclusion decisions](REVIEW.md): what was independently checked and what remains limited. Read this alongside the specialist outputs.
-6. [Emerging questions](research/emerging-questions.md), including Emily's [SimilarWeb candidate](coordination/emerging-questions.md). No new paper has been selected by this edition.
+6. [Emerging questions](research/emerging-questions.md), read with the integration corrections, including Emily's [SimilarWeb and event-response candidates](coordination/emerging-questions.md). No new paper has been selected by this edition.
 
 ## Reproduce the presentation
 
@@ -19,7 +19,7 @@ From this directory, using Python 3's standard library:
 python3 build_explorer.py
 ```
 
-The build validates the reviewed `edition-data.json`, checks the European and UK displays against their saved extracts and writes `index.html` plus `build-manifest.json`. All display data are embedded; the explorer needs no server, account, network connection or external JavaScript library. Source links require connectivity. The filterable register can be exported as CSV from the page. Building the presentation does not constitute a new scientific review.
+The build validates the reviewed `edition-data.json`, checks the European and four national displays against their reviewed inputs and writes `index.html`, `source-cards.csv` and `build-manifest.json`. All display data are embedded; the explorer needs no server, account, network connection or external JavaScript library. Source links require connectivity. The filterable register can be exported as CSV from the page. Building the presentation does not constitute a new scientific review.
 
 The template is `explorer.template.html`. Edit reviewed content in `edition-data.json`, record substantive decisions in `REVIEW.md`, then rebuild. Do not edit generated `index.html` alone. Rebuilding must not fetch live observations or silently replace source vintages.
 
@@ -41,6 +41,15 @@ python3 coordination/check_public_tables.py /path/to/snapshot-directory
 ```
 
 The latter expects `canada-cswc.html`, `pew-gender.html` and `brazil-m1.html`. URLs and hashes are recorded in the scripts and `published-table-checks.json`; the DSIT record is in `dsit-published-cells.json`. Source copies are outside Git in coordinator scratch, not redistributed with the edition. Pages may change, including dynamic HTML: a hash mismatch requires an explicit new-vintage audit rather than bypassing the pin. The DSIT script prints an extract; compare it with the saved JSON. The HTML-page script rewrites its checked extract only after all pinned-cell checks pass. No new gaps, confidence intervals or models are estimated by these two source checks.
+
+The Brazil aggregate bundle can be re-extracted separately with Python and `openpyxl`:
+
+```sh
+python3 ../evidence/v1-audit-2026-10-01/checks/check_cetic.py /path/to/ict_households_2025_individuals_tables_xlsx_v1.0.zip
+python3 ../evidence/v1-audit-2026-10-01/checks/check_outputs.py
+```
+
+Compare the first command's JSON with `../evidence/v1-audit-2026-10-01/checks/cetic-published-cells.json`. The coordinator reproduced it exactly from the hash-pinned archive. The separate specialist Korea PDF extractor requires `pdftotext` and is not part of the presentation build or independently reproduced coordinator checks. See each script's usage and dependency notes.
 
 ## Evidence and updates
 

@@ -14,7 +14,13 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 | 2026-10-01 | The existing paper remains open to evidence-led revision. | Emily clarified that new nuance and insights may inform it. Supersedes any interpretation of preservation as a permanent freeze; preserve author edits and versioned inputs while documenting intentional updates. |
 | 2026-10-01 | Triangulate with detailed research and informed writers; exposure has no predetermined welfare sign. | Emily supplied Tera Allas's exposure essay. Trace supporting studies, distinguish interpretation from observed outcomes, and examine benefit, harm and distribution rather than equating exposure with risk. See `gender-index/RESEARCH-AGENDA.md`. No new paid session or cap is authorised by these scope clarifications. |
 
+## V1 implementation record, 1 October 2026
+
+Codex assembled the working landscape/index v1 after integrating the two approved specialist assignments. The [review record](gender-index/landscape-v1/REVIEW.md) governs accepted measures and corrections: EU27 comparative core, four separate national panels and 33 source cards. Final Claude cost is $28.94 ($20.94 steward plus $8.00 lead), within the additional $60 envelope. Both sessions are idle. This delivers a working edition for Emily’s review; it does not select new papers, launch a public website or authorise further spending. The first-paper author file remains unchanged.
+
 ## Still open
+
+Research suggestion, 1 October 2026: Emily also parked a question about what attracts or discourages women from using AI tools, comparing women's and men's usage around news, scandals, ads, offers and other events. Retain this in the [emerging-question log](gender-index/landscape-v1/coordination/emerging-questions.md) for later feasibility and identification assessment. It does not commission a study or expand the current v1 budget.
 
 Research suggestion, 1 October 2026: Emily highlighted the SimilarWeb analyses in the May 2026 Cranney, Delecourt and Koning paper as a possible small original study, explicitly “tbd”. Record it in the emerging-question log for assessment after v1. No study selection, subscription, purchase or extra paid assignment is implied; the current audit/synthesis continues within its existing caps.
 

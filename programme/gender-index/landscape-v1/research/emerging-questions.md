@@ -1,5 +1,7 @@
 # Emerging questions log
 
+> Coordinator integration note, 1 October 2026: this is the preserved specialist submission. Read the [reviewed synthesis](../SYNTHESIS.md) and [explicit corrections](../coordination/synthesis-review.md) before using its claims. Emily’s latest [parked questions](../coordination/emerging-questions.md) are maintained separately.
+
 Programme lead, 1 October 2026. Unranked and deliberately unordered. Each entry records the pattern, contradiction or gap that produced it and what would have to be true for it to become a study. These are observations and leads only: no paper topic is selected here, no brief is commissioned, and the earlier workplace and exposure examples in `RESEARCH-AGENDA.md` carry no priority. Deep dives follow v1.
 
 Claim IDs refer to [`claims-evidence.csv`](claims-evidence.csv).

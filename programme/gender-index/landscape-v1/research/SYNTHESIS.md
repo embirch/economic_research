@@ -1,5 +1,7 @@
 # Gender and generative AI: landscape synthesis for v1
 
+> Coordinator integration note, 1 October 2026: this is the preserved specialist submission. Read the [reviewed synthesis](../SYNTHESIS.md) and [explicit corrections](../coordination/synthesis-review.md) before using its claims. Emily’s latest [parked questions](../coordination/emerging-questions.md) are maintained separately.
+
 Programme lead, 1 October 2026. Branch `work/index-v1-landscape-2026-10-01`. Every number below is traced in [`claims-evidence.csv`](claims-evidence.csv) with its population, reference period, denominator, design and verification status; claim IDs appear in brackets. Proposed corrections to the central register are in [`literature-updates.csv`](literature-updates.csv). This is a bounded synthesis of sources actually read in this session, not a systematic review, and it deliberately produces no pooled worldwide rate.
 
 ## The foundational report, and how this synthesis uses it

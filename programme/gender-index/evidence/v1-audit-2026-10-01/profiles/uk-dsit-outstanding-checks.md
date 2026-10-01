@@ -1,8 +1,10 @@
 # Source profile: UK DSIT Public Engagement Survey 2025/2026 — outstanding checks closed
 
+> Coordinator integration note, 1 October 2026: preserved specialist submission. The [reviewed disposition](../../../landscape-v1/coordination/source-audit-review.md) qualifies claims and governs v1 inclusion.
+
 Data steward, 1 October 2026. ID `UK_DSIT_USE`; sample family `UK_DSIT_PES_2025_2026`.
 Builds on the coordinator's audit note
-[`../../landscape-v1/coordination/UK-DSIT.md`](../../landscape-v1/coordination/UK-DSIT.md)
+[`../../landscape-v1/coordination/UK-DSIT.md`](../../../landscape-v1/coordination/UK-DSIT.md)
 and its extractor `check_dsit.py`, which are read-only inputs here.
 
 ## Prior extraction reused and re-verified, not redone
@@ -36,11 +38,27 @@ From the published **technical report** (GOV.UK, 16 July 2026):
 - Mode effects: a single set of weights for mixed-mode questions, a separate set for
   web-only questions.
 
-**But the AI tables workbook does not carry those confidence intervals.** The `Table_E5`
-columns are exactly: Subgroup, Subgroup value, *Generative AI user*, *Generative AI
-non-user*, unweighted base, weighted base. So for v1: the design effect and the stated CI
-method may be cited as documentation, but **no published interval exists for the
-male/female cells**, and none should be derived from base counts.
+**Where those intervals are published is unresolved.** The technical report (sections 7.5
+to 8.2) is explicit that the published data tables were produced in R with the `survey`
+package at the 95% level by a logit method, so intervals were computed. They are not in
+the products inspected here:
+
+- `Table_E5` columns are exactly Subgroup, Subgroup value, *Generative AI user*,
+  *Generative AI non-user*, unweighted base, weighted base. The AI workbook's XML contains
+  **zero occurrences of the string “confidence”** and no lower/upper columns.
+- The digital inclusion and skills workbook (SHA-256 `bc449398…b42e5`, 279,706 bytes,
+  retrieved 2026-10-01) was checked as a second product and is the same: no interval
+  columns, no “confidence” string.
+
+So the correct statement for v1 is: **the gender-cell intervals exist in the producer's
+analysis but their published location has not been found**, across two inspected PES
+workbooks. Do not write that DSIT publishes no confidence intervals anywhere, and do not
+derive an interval from base counts. The design effect of 1.67 and the documented CI
+method may be cited as documentation of precision practice.
+
+*Next check:* look for a CI-bearing table product in the remaining three PES workbooks or
+an accompanying dataset, and if none exists, record it as a question for the producer
+rather than as an absence.
 
 Suppression rule (Notes): cells are suppressed with a `u` where fewer than 30 respondents
 answered or fewer than 5 gave that response. Values are weighted percentages, displayed to

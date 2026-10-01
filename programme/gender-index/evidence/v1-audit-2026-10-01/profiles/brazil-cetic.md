@@ -1,5 +1,7 @@
 # Source profile: Brazil, Cetic.br TIC Domicílios 2025 (generative-AI module)
 
+> Coordinator integration note, 1 October 2026: preserved specialist submission. The [reviewed disposition](../../../landscape-v1/coordination/source-audit-review.md) qualifies claims and governs v1 inclusion.
+
 Data steward, 1 October 2026. Proposed IDs `BR_CETIC_USE`, `BR_CETIC_PURPOSE`,
 `BR_CETIC_NONUSE`; sample family **`BR_CETIC_TICDOM_2025`**.
 Status: **file-verified published aggregates** (proportions, population totals and

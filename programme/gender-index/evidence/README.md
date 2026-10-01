@@ -1,10 +1,10 @@
 # Evidence register
 
-`indicators.csv` and `literature.csv` are a starting inventory assembled from the existing concept and audits on 30 September 2026. **No new source verification or analysis was performed to populate this register.** Each entry records that status and its next check. Register entries are candidates, not approved dashboard indicators.
+The current reviewed atlas is [source-register.csv](source-register.csv): 33 source/indicator records, with dated verification, definitions, uncertainty, access and next checks. Read the [v1 integration review](../landscape-v1/REVIEW.md) and [source-audit disposition](../landscape-v1/coordination/source-audit-review.md) before using specialist claims. A record is not automatically a displayed numerical indicator or an independent study.
 
-Update, 1 October 2026: a paid steward pilot submitted new evidence for EU_USE, EU_PURPOSE and EU_NONUSE. Its three changed rows are **draft, pending correction**: read the [coordinator review](../reviews/2026-10-01-pilot-review.md) before using them. File diagnostics reproduced; source-document, claim and interpretation issues remain. The other original rows have not received a full new audit.
+`indicators.csv` preserves the original 14 stable IDs with reviewed metadata. `literature.csv` retains 11 foundational and interpretive records with updated reading limits; the specialist's proposed additions remain in [literature-updates.csv](../landscape-v1/research/literature-updates.csv). Some sources have newly inspected files, others primary documentation, and others explicitly carried-forward checks or access blockers. This is not a claim that every underlying dataset was freshly audited.
 
-Later on 1 October, three dated literature records were appended for the [research agenda](../RESEARCH-AGENDA.md): Allas's interpretive essay, the ILO exposure-methods abstract and OpenAI's jobs-framework overview. These have separate reading/verification limits and do not change the eight original literature records or establish new index indicators.
+The 30 September migration itself performed no new verification. The [pilot](pilot-2026-10-01/) and [v1 specialist submission](v1-audit-2026-10-01/) preserve the subsequent evidence and scripts. Their reports carry notices linking to coordinator corrections. The unresolved Eurostat non-use reconstruction is withheld from the numerical explorer; corrections do not erase historical source vintages.
 
 ## Maintain the record
 

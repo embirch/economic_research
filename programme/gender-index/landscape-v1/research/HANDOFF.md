@@ -1,5 +1,7 @@
 # Handoff: landscape v1 evidence synthesis
 
+> Coordinator integration note, 1 October 2026: this is the preserved specialist submission. Read the [reviewed synthesis](../SYNTHESIS.md) and [explicit corrections](../coordination/synthesis-review.md) before using its claims. Emily’s latest [parked questions](../coordination/emerging-questions.md) are maintained separately.
+
 Programme lead (existing v3 agent), 1 October 2026. Branch `work/index-v1-landscape-2026-10-01`, from launch commit `198acf4`. Writable path used: `programme/gender-index/landscape-v1/research/` only. No other file was touched; `literature.csv`, `indicators.csv`, steward files, coordinator records, `RUNS.csv` and the article repository are unchanged.
 
 ## Outputs

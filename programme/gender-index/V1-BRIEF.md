@@ -25,7 +25,7 @@ For discovery, record at least one targeted primary-source search in each of Eur
 
 Assess every starter candidate and four named additions with dated evidence or a concrete blocker. Prioritise file-level checks for Eurostat corrections and the most plausible non-European use sources; retain documentation-only status elsewhere if files/terms are unavailable. One access attempt plus a reasonable alternative is sufficient before documenting an access blocker. Stop when the finite inventory has dispositions, regional searches are logged and v1 inclusion is supported—or at the task cap, saving incomplete work with gaps identified. Do not expand indefinitely to make the word “global” fit.
 
-Codex has begun the [coordinator discovery record](landscape-v1/coordination/SCOUT.md): six additional leads are identified/queued against the eight-lead limit, ten targeted search/provider checks are logged, and selected UK DSIT published cells have a pinned, reproducible extract. Reuse this work. Verification depth varies; the wider audit, synthesis and explorer are still outstanding. The subsequent explicit cap approval authorises launch of the two scoped assignments.
+Delivery update, 1 October 2026: the [working v1](landscape-v1/README.md) is assembled. The six coordinator leads plus Japan and a secondary-only Mexico lead fill the eight further-discovery slots. The reviewed atlas has 33 indicator/source cards, including separate measures from shared sources; these are not 33 independent studies. Regional searches and candidate dispositions are complete within the finite assignment, with access blockers and carried-forward verification clearly marked. The [integration review](landscape-v1/REVIEW.md) governs inclusion rather than the original specialist recommendations.
 
 ## Execution and approved spending
 
@@ -48,4 +48,4 @@ The two specialists work on separate branches and non-overlapping paths. Source 
 - No unsupported confidence intervals, causal language, world coverage percentage or welfare sign for exposure/use.
 - Author edits remain intact; checked dataset snapshots remain reproducible; new evidence can feed later paper revisions.
 
-Detailed launch briefs: `team/assignments/2026-10-01-v1-steward.md` and `team/assignments/2026-10-01-v1-landscape.md`. Current status: authorised for launch. The launch commit, session IDs, actual spend and delivery status are recorded in team/RUNS.csv; no automatic continuation is approved.
+Detailed assignment briefs remain at `team/assignments/2026-10-01-v1-steward.md` and `team/assignments/2026-10-01-v1-landscape.md`. Current status: delivered and integrated for Emily's review. Final observed Claude cost: $20.94 steward plus $8.00 lead, $28.94 total. The launch commit, session IDs, service caps and delivery status are recorded in `team/RUNS.csv`; no automatic continuation is approved.

@@ -1,5 +1,7 @@
 # Proposed v1 inclusion list
 
+> Coordinator integration note, 1 October 2026: preserved specialist submission. The [reviewed disposition](../../landscape-v1/coordination/source-audit-review.md) qualifies claims and governs v1 inclusion.
+
 Data steward, 1 October 2026. Companion to [`permitted-cells.csv`](permitted-cells.csv),
 which holds the exact cells, their definitions, provenance and display rules.
 This is a **proposal for Codex review and Emily's decision**, not an approval. No ranking,
@@ -56,7 +58,9 @@ indicator).
    WhatsApp; Korea prompts with named services; Eurostat asks about creating content with
    named generative tools.
 4. **Uncertainty shown honestly.** Brazil has published margins of error. Nobody else
-   does: the UK publishes a design effect but no interval in the AI workbook, Korea
+   does, in the products audited: the UK's technical report documents 95% logit intervals
+   and a design effect of 1.67 but no interval appears in the inspected workbooks, so where
+   those gender-cell intervals are published is unresolved; Korea
    publishes only a survey-level error, Canada publishes an interval for an odds ratio only,
    and Eurostat publishes none at all. Do not manufacture intervals from bases.
 5. **Gender categories kept as the provider recorded them.** Two categories for Eurostat,
