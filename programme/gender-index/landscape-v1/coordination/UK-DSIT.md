@@ -34,3 +34,7 @@ python3 check_dsit.py /private/tmp/gender-index-v1-coordinator/dsit-ai-2025-2026
 Output is retained in [dsit-published-cells.json](dsit-published-cells.json). It contains only the selected published aggregates and provenance. A later download needs a fresh check if its hash differs.
 
 Before v1 integration: inspect technical weighting/variance documentation and paper-questionnaire consistency, establish whether finer joint gender/age cells or permitted microdata exist, and review the proposed source card. Use a national module with its definition attached; cross-country ordering is unsupported. Acquisition and benchmark checking are not original empirical research; questions for later reanalysis remain open.
+
+### Subsequent coordinator check
+
+The [technical report](https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026-technical-report), sections 7.5–8.2, was checked later on 1 October. It describes design, response and calibration weighting, with separate mixed-mode and web weights. It says logit confidence intervals were produced using R's survey package. Those limits are not present in the E5 cells extracted here; their release location remains unresolved. The reported overall weighting design effect of 1.67 is not a verified variance for a gender difference and must not be used as one. Raking matches selected margins and does not establish unbiased relationships between variables. The paper-instrument and microdata checks remain open.

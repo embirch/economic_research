@@ -16,6 +16,8 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 
 ## Still open
 
+Research suggestion, 1 October 2026: Emily highlighted the SimilarWeb analyses in the May 2026 Cranney, Delecourt and Koning paper as a possible small original study, explicitly “tbd”. Record it in the emerging-question log for assessment after v1. No study selection, subscription, purchase or extra paid assignment is implied; the current audit/synthesis continues within its existing caps.
+
 Approval update, 1 October 2026: Emily replied “ok go” to the explicit request for the additional $60 Claude cap. Authorise the prepared v1 source-audit assignment at $40 ($36 service limit) and v1 landscape-synthesis assignment at $20 ($18 service limit), using the existing deployed agents and separate branches. Codex reviews and assembles the local working v1. No automatic resumption, transfers, third agent, budget increase, new deep-dive study or public launch is authorised. This supersedes the pending-cap status in the implementation record below.
 
 Implementation update, 1 October 2026: after Emily's “ok go”, Codex prepared `gender-index/V1-BRIEF.md` and the two v1 assignments. The proposed additional Claude envelope is $60 ($40 steward / $20 programme lead; planned service caps $36 / $18); explicit cap confirmation is pending and no new paid session was launched. Codex's initial discovery and checked UK published cells are recorded in `gender-index/landscape-v1/coordination/SCOUT.md`. This neither selects new papers nor completes the wider audit. The existing manuscript remains unchanged.

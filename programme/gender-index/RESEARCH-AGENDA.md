@@ -4,6 +4,8 @@ Emily's direction, 1 October 2026. This develops the [execution proposal](EXECUT
 
 ## Three connected contributions
 
+The [Cranney, Delecourt and Koning synthesis](FOUNDATION.md) is a foundational starting point and benchmark for our incremental contribution, as Emily emphasised on 1 October. Trace its underlying studies, preserve distinctions between pooled surveys and platform traffic, and acknowledge its treatment of intensity and mechanisms as well as adoption. Our v1 should build on this foundation and contextualise differing findings rather than rediscover it or claim an unoccupied field.
+
 | Contribution | What we produce | How it connects |
 |---|---|---|
 | Evidence synthesis | A coherent account of existing findings, differences in definitions, coverage and unresolved disagreements | Establishes what is known and identifies questions worth analysing |
@@ -27,6 +29,8 @@ Emily explicitly confirmed the intended milestone: **landscape/index v1 first, t
 | Exposure, job change and the distribution of benefits | Investigate whether similarly exposed work differs in observed adoption or job outcomes across task/occupational groups, and how women and men are distributed across those groups. Define a narrower question if outcomes cannot be observed. | Needs compatible occupation codes, sex-disaggregated employment and independently measured task/job characteristics; observed wage, hours or employment change needs suitable time data. Exposure scores alone cannot establish benefits or losses. Occupational comparisons remain aggregate evidence, not inferred individual behaviour. |
 
 These are examples in the question log, not priorities that should steer the audit or predetermined paper slots. New questions may replace them entirely as the index takes shape. If workplace or outcome data fail, alternatives already in the register include within-source patterns of platform activity or motivations. Name-associated message categories cannot become measures of women's participation, and recalled motives cannot become observed first-use behaviour. Later selection must preserve the requirement for substantive original research rather than quietly falling back to compilation alone.
+
+Emily also flagged a possible small original SimilarWeb study on 1 October, explicitly to be determined. The [candidate note](landscape-v1/coordination/emerging-questions.md) records the idea and its later novelty/access checks. Keep it in the v1 question log; it is not a selected paper, authorised purchase or reason to narrow the ongoing source audit.
 
 Each selected paper needs a short brief recording:
 
