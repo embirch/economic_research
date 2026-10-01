@@ -9,8 +9,12 @@
       "label": "separate national panels"
     },
     {
-      "value": "33",
-      "label": "cards catalogued so far"
+      "value": "111",
+      "label": "evidence catalogue cards"
+    },
+    {
+      "value": "76 / 76",
+      "label": "HBS entries linked to records"
     }
   ],
   "findings": [
@@ -1692,25 +1696,25 @@
     {
       "region": "Asia",
       "displayed": "No numerical national panel in this edition.",
-      "other": "Korean tables file-verified by the steward, including gender × age; Japan is a documentation lead.",
+      "other": "Korean tables checked by the steward, plus review-derived Korean worker and selected student studies; primary verification varies.",
       "gap": "Korean reuse terms remain unresolved; retained as linked cards. Most Asian countries were not individually audited."
     },
     {
       "region": "Africa",
       "displayed": "No numerical national use panel in this edition.",
-      "other": "Digital-access context, occupational exposure and multi-country research.",
+      "other": "Digital-access context and review-derived teacher/student studies in Sierra Leone, Ghana, Sudan and Egypt; primary checks pending.",
       "gap": "Context is not observed GenAI adoption; targeted searching is incomplete country coverage."
     },
     {
       "region": "Oceania",
       "displayed": "No numerical national panel in this edition.",
-      "other": "Australian Digital Inclusion Index and multi-country research.",
+      "other": "Australian Digital Inclusion Index plus HBS-listed Australian adult and office-worker studies; review-derived additions await primary checks.",
       "gap": "Dashboard availability does not establish permitted downloadable gender cells; Pacific coverage unassessed."
     },
     {
       "region": "West Asia / North Africa",
       "displayed": "No numerical national panel in this edition.",
-      "other": "Targeted discovery and some multi-country sources.",
+      "other": "HBS-listed student studies in Saudi Arabia, Jordan, Egypt and the UAE; these are review-derived and do not represent whole national populations.",
       "gap": "No accepted use table in this bounded audit; not evidence that none exists. Language and provider coverage remain limited."
     }
   ],
@@ -2464,7 +2468,7 @@
       "definition": "varies by constituent study",
       "uncertainty": "varies",
       "access": "working paper open; Working paper copyright retained by authors; linked, not redistributed.",
-      "limit": "constituent samples must be deduplicated before any country count is repeated. Next check: Trace constituent source families and assess novelty. Pooled estimates are not world prevalence; vendor traffic is distinct from people and adoption. Coverage gap: the full 76-source corpus has not yet been individually reconciled into this catalogue; this synthesis card does not represent that ingestion.",
+      "limit": "All 76 HBS entries now have linked catalogue dispositions. Primary-source checks, exact-wave matches and unresolved sample overlaps remain open. Counts refer to catalogue records, not independent studies or a harmonised global dataset.",
       "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf",
       "regions": [
         "Cross-region"
@@ -2523,6 +2527,1879 @@
         "Work / opportunity"
       ],
       "verification": "Coordinator sections 3.1–3.3 confirm EWCS family; specialist abstract checked. Estimates not replicated."
+    },
+    {
+      "id": "HBS_001",
+      "title": "Sublime and Renna (2024) — Higher-education students",
+      "geography": "France; Italy",
+      "period": "May–October 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_001",
+      "population": "Higher-education students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 1, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_002",
+      "title": "Møgelvang et al. (2024) — Higher-education students",
+      "geography": "Norway",
+      "period": "September 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_002",
+      "population": "Higher-education students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 2, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_003",
+      "title": "Alonso-Muñoz and Casero-Ripollés (2026) — Journalism students",
+      "geography": "Spain",
+      "period": "October 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_003",
+      "population": "Journalism students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 3, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_004",
+      "title": "Contractor and Reyes (2025) — Middlebury undergraduates",
+      "geography": "United States",
+      "period": "December 2024–February 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_004",
+      "population": "Middlebury undergraduates; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 4, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_005",
+      "title": "Alammari et al. (2025) — Medical students aware of ChatGPT",
+      "geography": "Saudi Arabia",
+      "period": "March–May 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_005",
+      "population": "Medical students aware of ChatGPT; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Awareness-conditioned sample; do not interpret as adoption among all medical students.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Asia"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 5, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_006",
+      "title": "Pizarro Milian and Peters (2024) — Postsecondary students; StudentVu survey",
+      "geography": "Canada",
+      "period": "13 March–21 April 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_006",
+      "population": "Postsecondary students; StudentVu survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. HBS distinguishes the plotted wave sample from the final-analysis sample; verify the primary flow before reusing a denominator.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 6, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_007",
+      "title": "Maaß et al. (2025) — Medical students; Ulm University",
+      "geography": "Germany",
+      "period": "November 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_007",
+      "population": "Medical students; Ulm University; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 7, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_008",
+      "title": "Lyttelton, Massenkoff and Wilmers (2026) — social scientists: AI and coding-agent use",
+      "geography": "Not specified in Table A1",
+      "period": "February–March 2026 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Two HBS entries from one publication and survey: general research AI use (8) and coding-agent use (56).",
+      "family": "HBS_SOCIAL_SCIENTISTS_2026",
+      "population": "Quantitative social scientists; research AI use; eligibility and analytic denominator require primary check",
+      "gender": "Name-inferred gender; not self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Same publication and survey as entry 56; different outcome. Keep one source card and two entry links. Distinct citation from the June 2026 Anthropic programme lead.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use",
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 8, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation. Entry 56 is the coding-agent outcome in the same publication and survey; both links are preserved in hbs-corpus.csv."
+    },
+    {
+      "id": "HBS_009",
+      "title": "Ravšelj et al. (2025) — Higher-education students",
+      "geography": "109 countries/territories reported by HBS",
+      "period": "October 2023–February 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_009",
+      "population": "Higher-education students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 9, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_010",
+      "title": "Carvajal, Franco and Isaksson (2024) — Business-school students; NHH",
+      "geography": "Norway",
+      "period": "November 2023–April 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_010",
+      "population": "Business-school students; NHH; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 10, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_011",
+      "title": "Stöhr, Ou and Malmström (2024) — University students",
+      "geography": "Sweden",
+      "period": "April–May 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_011",
+      "population": "University students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=43",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 11, printed p. 41 (PDF p. 43). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_012",
+      "title": "Mohammadi et al. (2026) — Publishing academics; Scopus sampling frame",
+      "geography": "20 countries reported by HBS",
+      "period": "January–March 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_012",
+      "population": "Publishing academics; Scopus sampling frame; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 12, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_013",
+      "title": "Monday Girl (2026) — Adults; Angus Reid Forum",
+      "geography": "Canada",
+      "period": "24–26 February 2026 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_013",
+      "population": "Adults; Angus Reid Forum; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. HBS reports no exact gender denominators in the public release; do not infer them.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 13, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_014",
+      "title": "Kennedy et al. (2025) — Adults; Pew American Trends Panel",
+      "geography": "United States",
+      "period": "9–15 June 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_014",
+      "population": "Adults; Pew American Trends Panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Related provider to PEW_GENDER, but June 2025 fieldwork is not the February 2026 Wave 187 sample. Keep separate.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 14, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_015",
+      "title": "Arntz et al. (2026) — Socially insured employees aged 16–65; DiWaBe 2.0",
+      "geography": "Germany",
+      "period": "July–December 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_015",
+      "population": "Socially insured employees aged 16–65; DiWaBe 2.0; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 15, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_016",
+      "title": "Barisano et al. (2024) — Technology-industry employees",
+      "geography": "India; United States; Japan; United Kingdom; Germany",
+      "period": "January 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_016",
+      "population": "Technology-industry employees; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 16, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_017",
+      "title": "Glassdoor Economic Research (2024) — Working professionals; Glassdoor panel",
+      "geography": "United States",
+      "period": "13–17 November 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_017",
+      "population": "Working professionals; Glassdoor panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 17, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_018",
+      "title": "Bachaud (2026) — Job seekers; ZipRecruiter confidence survey",
+      "geography": "United States",
+      "period": "7–23 February 2026 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_018",
+      "population": "Job seekers; ZipRecruiter confidence survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. HBS sample size is approximate; no exact sample weighting or precision inferred here.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 18, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_019",
+      "title": "Brooks (2023) — Workers familiar with and having used ChatGPT",
+      "geography": "United States",
+      "period": "2023; exact dates not stated (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_019",
+      "population": "Workers familiar with and having used ChatGPT; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Prior ChatGPT experience conditions the sample; check the actual outcome and denominator before interpreting adoption.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 19, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_020",
+      "title": "Nam (2024) — Undergraduate and graduate students",
+      "geography": "United States",
+      "period": "29 September–5 October 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_020",
+      "population": "Undergraduate and graduate students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 20, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HUM_VEST",
+      "title": "Humlum and Vestergaard (2025) — Workers in 11 AI-exposed occupations",
+      "geography": "Denmark",
+      "period": "November 2023–January 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "DENMARK_CHATGPT_WORKERS",
+      "population": "Workers in 11 AI-exposed occupations; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "Existing primary DOI link retained; previous specialist access blocked; respondent-data access not established",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Citation matched to existing HUM_VEST literature record; promoted to a visible source card without upgrading its primary verification.",
+      "url": "https://doi.org/10.1073/pnas.2414972121",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 21, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_022",
+      "title": "AmeriSpeak and NORC at the University of Chicago (2025) — Adults; AmeriSpeak Omnibus",
+      "geography": "United States",
+      "period": "22–24 August 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_022",
+      "population": "Adults; AmeriSpeak Omnibus; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 22, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_023",
+      "title": "Salesforce, Slack and YouGov (2024) — Office workers",
+      "geography": "Australia",
+      "period": "Not stated; released 27 February 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_023",
+      "population": "Office workers; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Sample size is approximate and fieldwork dates are not stated in HBS; primary check required.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=44",
+      "regions": [
+        "Oceania"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 23, printed p. 42 (PDF p. 44). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_024",
+      "title": "Kreacic and Stone (2024) — Workers aged 18–65; Oliver Wyman Forum",
+      "geography": "16 countries reported by HBS",
+      "period": "June and November 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_024",
+      "population": "Workers aged 18–65; Oliver Wyman Forum; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 24, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_025",
+      "title": "El-Sobkey et al. (2026) — Physical-therapy students; Beni-Suef University",
+      "geography": "Egypt",
+      "period": "November 2024–May 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_025",
+      "population": "Physical-therapy students; Beni-Suef University; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Africa"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 25, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_026",
+      "title": "Campus AI (2025) — Adults; non-US subset of four-country survey",
+      "geography": "United Kingdom; Spain; Poland",
+      "period": "December 2024–January 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_026",
+      "population": "Adults; non-US subset of four-country survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 26, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_027",
+      "title": "Ahmed et al. (2025) — Medical students",
+      "geography": "Sudan",
+      "period": "20 June–30 October 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_027",
+      "population": "Medical students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Africa"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 27, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_028",
+      "title": "Howington (2024) — Working professionals; FlexJobs panel",
+      "geography": "United States",
+      "period": "3–21 May 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_028",
+      "population": "Working professionals; FlexJobs panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 28, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_029",
+      "title": "Sallam et al. (2023) — Health students aware of ChatGPT",
+      "geography": "Jordan",
+      "period": "28 February–31 March 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_029",
+      "population": "Health students aware of ChatGPT; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Awareness-conditioned sample; do not interpret as adoption among all health students.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Asia"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 29, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_030",
+      "title": "Zhang et al. (2024) — Medical students",
+      "geography": "United States",
+      "period": "August–October 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_030",
+      "population": "Medical students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 30, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_031",
+      "title": "Aldasoro et al. (2024) — Household heads; NY Fed Survey of Consumer Expectations",
+      "geography": "United States",
+      "period": "February 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_031",
+      "population": "Household heads; NY Fed Survey of Consumer Expectations; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. NY Fed SCE also appears in entry 43; wave/respondent overlap requires checking.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 31, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_032",
+      "title": "Draxler et al. (2023) — Adults aged 18+; Prolific quotas",
+      "geography": "United States",
+      "period": "March 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_032",
+      "population": "Adults aged 18+; Prolific quotas; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 32, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_033",
+      "title": "Goligoski et al. (2024) — Workers; Glimpse panel",
+      "geography": "United States",
+      "period": "6–26 August 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_033",
+      "population": "Workers; Glimpse panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 33, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_034",
+      "title": "Public First and Google (2025) — Workers; AI Works second-wave poll",
+      "geography": "United Kingdom",
+      "period": "28 February–7 March 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_034",
+      "population": "Workers; AI Works second-wave poll; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. HBS derives its plotted measure from age bins; do not assume a population-weighted overall rate.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 34, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_035",
+      "title": "Hartley et al. (2025) — Workers aged 18+; public survey microdata",
+      "geography": "United States",
+      "period": "24 September–1 October 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_035",
+      "population": "Workers aged 18+; public survey microdata; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 35, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_036",
+      "title": "Arbanas et al. (2024) — Consumers; Deloitte Connected Consumer Survey",
+      "geography": "United States",
+      "period": "2024; exact dates not stated (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_036",
+      "population": "Consumers; Deloitte Connected Consumer Survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=45",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 36, printed p. 43 (PDF p. 45). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_037",
+      "title": "Gai, Hou and Tu (2025) — Software engineers; single-company server logs",
+      "geography": "Global technology company; countries not specified in Table A1",
+      "period": "January–December 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_037",
+      "population": "Software engineers; single-company server logs; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Observed use from company logs; audit gender coding and the separate experimental evidence in the primary paper.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 37, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_038",
+      "title": "Google and Ipsos (2024) — Adults aged 18+; online panels and KnowledgePanel",
+      "geography": "17 countries reported by HBS",
+      "period": "19 October–6 November 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_038",
+      "population": "Adults aged 18+; online panels and KnowledgePanel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 38, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_039",
+      "title": "Conceição et al. (2025) — Adults; UNDP telephone poll",
+      "geography": "21 countries reported by HBS",
+      "period": "November 2024–January 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_039",
+      "population": "Adults; UNDP telephone poll; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 39, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_040",
+      "title": "Saad (2025) — Adults; Gallup Work and Education Poll",
+      "geography": "United States",
+      "period": "June 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_040",
+      "population": "Adults; Gallup Work and Education Poll; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 40, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_041",
+      "title": "Gambacorta, Jappelli and Oliviero (2025) — Adults aged 18–75; Bank of Italy expectations survey",
+      "geography": "Italy",
+      "period": "April 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_041",
+      "population": "Adults aged 18–75; Bank of Italy expectations survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Related Italian expectations-survey evidence to entry 43; identity and respondent overlap unresolved.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 41, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_042",
+      "title": "Lopez Barrios and Déri (2025) — Undergraduates at 31 universities",
+      "geography": "North America; Europe",
+      "period": "Approximately May 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_042",
+      "population": "Undergraduates at 31 universities; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 42, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_043",
+      "title": "Loschiavo et al. (2026) — Households; HOS and NY Fed SCE",
+      "geography": "Italy; United States",
+      "period": "February; August; September 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_043",
+      "population": "Households; HOS and NY Fed SCE; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Multiple samples; potential overlap with entry 31 and relationship to entry 41 require primary checks. Do not treat as independent replication by default.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 43, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_044",
+      "title": "English et al. (2026) — Adults; YouGov country panels",
+      "geography": "Australia; Canada; France; Germany; Italy; Netherlands; Poland; Romania; Spain; United Kingdom; United States",
+      "period": "23 September–19 December 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_044",
+      "population": "Adults; YouGov country panels; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 44, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_045",
+      "title": "Egli et al. (2025) — Clinicians",
+      "geography": "Switzerland",
+      "period": "18 April–1 October 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_045",
+      "population": "Clinicians; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 45, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_046",
+      "title": "Thurman, Thäsler-Kordonouri and Fletcher (2025) — Journalists",
+      "geography": "United Kingdom",
+      "period": "August–November 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_046",
+      "population": "Journalists; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 46, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_047",
+      "title": "Sarasohn (2024) — Full-time desk workers; Slack workforce survey",
+      "geography": "United States; Australia; France; Germany; Japan; United Kingdom",
+      "period": "6–22 March 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_047",
+      "population": "Full-time desk workers; Slack workforce survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=46",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 47, printed p. 44 (PDF p. 46). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_049",
+      "title": "Bick et al. (2026) — Employed adults aged 18–67; seven-country study",
+      "geography": "United States; United Kingdom; Netherlands; Sweden; France; Germany; Italy",
+      "period": "21 May–18 June 2025 and 19 January–2 February 2026 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_049",
+      "population": "Employed adults aged 18–67; seven-country study; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Related Bick research to entry 53 and RPS_USE_RETURNS, but this is a seven-country publication and later fieldwork. Keep a separate citation; sample/wave overlap unresolved.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 49, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_050",
+      "title": "Suh and Oh (2026) — Workers aged 15–64; Korea Research web panel",
+      "geography": "South Korea",
+      "period": "19 May–17 June 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_050",
+      "population": "Workers aged 15–64; Korea Research web panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Korea Research worker panel differs from the NIA household/internet survey in KR_NIA_USE; do not merge.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "Asia"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 50, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_051",
+      "title": "Haslberger, Gingrich and Bhatia (2023) — Working-age adults; YouGov",
+      "geography": "United Kingdom",
+      "period": "19–28 July 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_051",
+      "population": "Working-age adults; YouGov; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 51, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_052",
+      "title": "Lean In (2026) — Adults aged 18+",
+      "geography": "United States",
+      "period": "2–6 March 2026 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_052",
+      "population": "Adults aged 18+; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 52, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_054",
+      "title": "Park and Gelles-Watnick (2023) — Adults; Pew American Trends Panel",
+      "geography": "United States",
+      "period": "17–23 July 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_054",
+      "population": "Adults; Pew American Trends Panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Pew July 2023 wave differs from entry 14 and programme PEW_GENDER (2026). Do not inherit newer-wave verification.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 54, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_055",
+      "title": "Angrisani et al. (2026) — Adults; Understanding America Study",
+      "geography": "United States",
+      "period": "April–July 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_055",
+      "population": "Adults; Understanding America Study; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 55, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_057",
+      "title": "Stephany and Duszynski (2026) — Adults; Public Attitudes to Data and AI Tracker",
+      "geography": "United Kingdom",
+      "period": "2023–2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UK_PADAI_TRACKER",
+      "population": "Adults; Public Attitudes to Data and AI Tracker; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Public Attitudes to Data and AI Tracker is not automatically the same instrument as UK_DSIT_USE; retain separate citation.",
+      "url": "https://arxiv.org/abs/2601.03880v2",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 57, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation. Specialist previously inspected the abstract of arXiv:2601.03880v2 (later revision); full text not read. This is a primary abstract lead, not verification of the earlier HBS-extracted sample or findings."
+    },
+    {
+      "id": "HBS_058",
+      "title": "Notley et al. (2024) — Adults; online quota panel",
+      "geography": "Australia",
+      "period": "24 January–18 February 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: plotted adoption entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_058",
+      "population": "Adults; online quota panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Not automatically the Australian Digital Inclusion Index record AU_ADII_GENAI; verify survey identity before merging samples.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "Oceania"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 58, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_059",
+      "title": "Björkegren et al. (2025) — Teachers and principals",
+      "geography": "Sierra Leone",
+      "period": "April 2023–September 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_059",
+      "population": "Teachers and principals; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=47",
+      "regions": [
+        "Africa"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 59, printed p. 45 (PDF p. 47). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_060",
+      "title": "Borwein et al. (2026) — Adults; YouGov opt-in panel",
+      "geography": "United States; Canada",
+      "period": "November 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_060",
+      "population": "Adults; YouGov opt-in panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 60, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_061",
+      "title": "Chatterji et al. (2025) — Eligible ChatGPT consumer accounts and conversations",
+      "geography": "Platform sample; geographic restrictions require primary check",
+      "period": "May 2024–June 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_061",
+      "population": "Eligible ChatGPT consumer accounts and conversations; eligibility and analytic denominator require primary check",
+      "gender": "Name-inferred gender; not self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Related provider to SIGNALS_TOPIC, but this paper and vintage are distinct. Name-inferred gender and consumer-account restrictions require primary checks.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Platform sample"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 61, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_062",
+      "title": "Chugunova et al. (2026) — Researchers; Max Planck and Fraunhofer societies",
+      "geography": "Germany",
+      "period": "June 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_062",
+      "population": "Researchers; Max Planck and Fraunhofer societies; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 62, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_063",
+      "title": "Dorta-González et al. (2024) — Researchers; secondary analysis of Nature survey",
+      "geography": "Worldwide self-selected scientist sample",
+      "period": "September 2023 as reported in Table A1 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "HBS_NATURE_AI_SCIENCE_2023",
+      "population": "Researchers; secondary analysis of Nature survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Secondary analysis of the same Nature AI-and-science survey lineage as entry 75. HBS sample counts differ across descriptions; verify analytic exclusions. Separate publication, shared sample family.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 63, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_064",
+      "title": "Gnambs et al. (2025) — Adults aged 18+; probability online panel",
+      "geography": "Germany",
+      "period": "2024; exact dates not stated (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_064",
+      "population": "Adults aged 18+; probability online panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 64, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_065",
+      "title": "Gonzalez Vazquez et al. (2025) — Working-age population; AIM-WORK",
+      "geography": "European Union; 27 Member States",
+      "period": "2024–2025 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "EU_AIM_WORK_2025",
+      "population": "Working-age population; AIM-WORK; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. AIM-WORK is distinct from EWCS_WORK/HENSEKE_WORK and CEDEFOP_SKILLS; do not merge European worker surveys by geography.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 65, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_066",
+      "title": "Ibrahim et al. (2025) — German-speaking adults; convenience panel",
+      "geography": "German-speaking sample; countries not specified in Table A1",
+      "period": "October 2023–February 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_066",
+      "population": "German-speaking adults; convenience panel; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 66, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_067",
+      "title": "Liu and Wang (2026) — Estimated visits to 40 tools; Semrush",
+      "geography": "200+ economies reported by HBS; not population coverage",
+      "period": "January 2022–March 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_067",
+      "population": "Estimated visits to 40 tools; Semrush; eligibility and analytic denominator require primary check",
+      "gender": "Provider-estimated audience demographics; not self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Semrush traffic evidence is distinct from the HBS authors’ SimilarWeb analysis. Country/economy reach does not establish representative adoption coverage.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Platform sample"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 67, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_068",
+      "title": "Nordling (2023) — Postdoctoral researchers; Nature postdoc survey",
+      "geography": "93 countries reported by HBS",
+      "period": "June–July 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_068",
+      "population": "Postdoctoral researchers; Nature postdoc survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Nature postdoc survey is distinct from the Nature AI-and-science survey in entries 63/75.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 68, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_069",
+      "title": "Ofosu-Ampong (2023) — Higher-education students",
+      "geography": "Ghana",
+      "period": "2023; exact dates not stated (reported by HBS; primary dates unverified)",
+      "construct": "Participation / use",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_069",
+      "population": "Higher-education students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Africa"
+      ],
+      "topics": [
+        "Participation / use"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 69, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_070",
+      "title": "Pérez-Portabella et al. (2025) — Residents aged 18+; CIS survey",
+      "geography": "Spain",
+      "period": "6–15 February 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_070",
+      "population": "Residents aged 18+; CIS survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. CIS national survey is distinct from SPAIN_MOTIVATION/OSF; no sample match inferred from country.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 70, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_071",
+      "title": "Russo et al. (2025) — Adults; community convenience sample",
+      "geography": "Predominantly Italy",
+      "period": "Early 2025 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_071",
+      "population": "Adults; community convenience sample; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 71, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_072",
+      "title": "Shishakly (2025) — University students",
+      "geography": "United Arab Emirates",
+      "period": "November 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_072",
+      "population": "University students; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=48",
+      "regions": [
+        "Asia"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 72, printed p. 46 (PDF p. 48). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_073",
+      "title": "Stone (2025) — Psychology undergraduates; Boise State University",
+      "geography": "United States",
+      "period": "Autumn 2023–spring 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Experience / attitudes",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_073",
+      "population": "Psychology undergraduates; Boise State University; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. No matching citation identified in the existing programme registers; underlying sample overlap remains unreviewed.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=49",
+      "regions": [
+        "North America"
+      ],
+      "topics": [
+        "Experience / attitudes"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 73, printed p. 47 (PDF p. 49). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_074",
+      "title": "Tang et al. (2025) — SSRN author observations; separate researcher survey",
+      "geography": "SSRN sample; United States survey",
+      "period": "May 2022–June 2023; separate survey in 2024 (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_074",
+      "population": "SSRN author observations; separate researcher survey; eligibility and analytic denominator require primary check",
+      "gender": "Name-inferred gender in SSRN component; survey component separately requires checking",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Two studies and observation units; name-based gender in the SSRN component. Keep author observations separate from people and survey respondents.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=49",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 74, printed p. 47 (PDF p. 49). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_075",
+      "title": "Van Noorden and Perkel (2023) — Scientists; Nature AI-and-science survey",
+      "geography": "Worldwide self-selected scientist sample",
+      "period": "Summer 2023 (reported by HBS; primary dates unverified)",
+      "construct": "Patterns / intensity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "HBS_NATURE_AI_SCIENCE_2023",
+      "population": "Scientists; Nature AI-and-science survey; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Same Nature AI-and-science survey lineage as entry 63, but a different publication. Sample/exclusion differences require a primary check.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=49",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Patterns / intensity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 75, printed p. 47 (PDF p. 49). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "HBS_076",
+      "title": "Zahs, Schmodde and Wehner (2026) — Employees; cross-sectional and diary studies",
+      "geography": "Germany",
+      "period": "Not stated (reported by HBS; primary dates unverified)",
+      "construct": "Work / opportunity",
+      "status": "Review-derived; primary check pending",
+      "use": "Foundational review entry: narrative entry. Retained for source-level follow-up.",
+      "family": "UNRESOLVED_HBS_076",
+      "population": "Employees; cross-sectional and diary studies; eligibility and analytic denominator require primary check",
+      "gender": "Source gender categories and coding require primary verification; do not assume uniform self-report",
+      "definition": "Exact AI definition, question wording and recall window require primary check",
+      "uncertainty": "Not extracted; no precision or significance claim imported",
+      "access": "HBS review is open; primary publication and underlying data access/reuse not established here",
+      "limit": "Catalogue inclusion only; no adoption rate or effect is imported. Cross-sectional and diary components are separate samples; do not combine their denominators.",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf#page=49",
+      "regions": [
+        "Europe"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: bibliographic and sample-scope metadata read in HBS Table A1, entry 76, printed p. 47 (PDF p. 49). Review-derived; primary publication and data not independently checked in this reconciliation."
+    },
+    {
+      "id": "ILO_GENDER",
+      "title": "ILO; occupational segregation and gender equality brief",
+      "geography": "Scope requires source-specific review",
+      "period": "See source; publication and fieldwork dates are not interchangeable",
+      "construct": "Potential exposure",
+      "status": "Existing literature lead",
+      "use": "Exposure literature and source family overlap",
+      "family": "ILO_GENAI_2025",
+      "population": "Source-specific; no harmonised population or denominator claimed",
+      "gender": "Source definitions and gender-specific analytical availability require checking",
+      "definition": "See primary source; no numerical result imported",
+      "uncertainty": "Not established for a new indicator",
+      "access": "Existing public link; underlying data access and reuse require source-specific checks",
+      "limit": "Keep occupation and employment denominators separate; potential exposure has no predetermined welfare sign. Same ILO family as method and indicator.",
+      "url": "https://www.ilo.org/publications/gen-ai-occupational-segregation-and-gender-equality-world-work",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Potential exposure"
+      ],
+      "verification": "2026-10-01: full March 2026 brief read by programme lead; publisher overview checked by coordinator. Calculations not replicated."
+    },
+    {
+      "id": "NOY_ZHANG",
+      "title": "Noy and Zhang; experimental writing performance",
+      "geography": "Scope requires source-specific review",
+      "period": "See source; publication and fieldwork dates are not interchangeable",
+      "construct": "Work / opportunity",
+      "status": "Existing literature lead",
+      "use": "Bounded outcomes evidence; candidate only",
+      "family": "NOY_ZHANG_WRITING_EXPERIMENT",
+      "population": "Source-specific; no harmonised population or denominator claimed",
+      "gender": "Source definitions and gender-specific analytical availability require checking",
+      "definition": "See primary source; no numerical result imported",
+      "uncertainty": "Not established for a new indicator",
+      "access": "Existing public link; underlying data access and reuse require source-specific checks",
+      "limit": "Retain as experiment lead; no experimental gender effect accepted from this pass.",
+      "url": "https://osf.io/xd7qw/",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Work / opportunity"
+      ],
+      "verification": "2026-10-01: public listing previously inspected; specialist OSF fetch returned an empty shell. Files and gender subgroup power remain unverified."
+    },
+    {
+      "id": "WOMEN_AI_INDEX",
+      "title": "Women in AI Index quarterly report",
+      "geography": "Scope requires source-specific review",
+      "period": "See source; publication and fieldwork dates are not interchangeable",
+      "construct": "Context / synthesis",
+      "status": "Existing literature lead",
+      "use": "Branding and novelty check",
+      "family": "INDEX_COMPARATOR",
+      "population": "Source-specific; no harmonised population or denominator claimed",
+      "gender": "Source definitions and gender-specific analytical availability require checking",
+      "definition": "See primary source; no numerical result imported",
+      "uncertainty": "Not established for a new indicator",
+      "access": "Existing public link; underlying data access and reuse require source-specific checks",
+      "limit": "Complete differentiation check before novelty claims; omission is not evidence of no overlap.",
+      "url": "https://empressa.ai/wp-content/uploads/2025/11/Women-in-AI-Index-Quarterly-Report-Q4-2025.pdf",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Context / synthesis"
+      ],
+      "verification": "2026-10-01: title located previously; full-method comparison deliberately deferred in bounded synthesis."
+    },
+    {
+      "id": "GIRAI",
+      "title": "Global Index on Responsible AI",
+      "geography": "Scope requires source-specific review",
+      "period": "See source; publication and fieldwork dates are not interchangeable",
+      "construct": "Context / synthesis",
+      "status": "Existing literature lead",
+      "use": "Adjacent governance index",
+      "family": "INDEX_COMPARATOR",
+      "population": "Source-specific; no harmonised population or denominator claimed",
+      "gender": "Source definitions and gender-specific analytical availability require checking",
+      "definition": "See primary source; no numerical result imported",
+      "uncertainty": "Not established for a new indicator",
+      "access": "Existing public link; underlying data access and reuse require source-specific checks",
+      "limit": "Do not reuse untraced world-use headline. Audit methodology and gender-related components before final differentiation claims.",
+      "url": "https://www.global-index.ai/",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Context / synthesis"
+      ],
+      "verification": "2026-10-01: specialist read current landing page; methodology not reviewed. Governance comparator, not an adoption dataset."
+    },
+    {
+      "id": "OPENAI_JOB_TRANSITION",
+      "title": "OpenAI; AI Jobs Transition Framework; 2026",
+      "geography": "Scope requires source-specific review",
+      "period": "See source; publication and fieldwork dates are not interchangeable",
+      "construct": "Context / synthesis",
+      "status": "Existing literature lead",
+      "use": "Provider-authored conceptual framework; supporting lead from Allas",
+      "family": "OPENAI_JOB_TRANSITION_2026",
+      "population": "Source-specific; no harmonised population or denominator claimed",
+      "gender": "Source definitions and gender-specific analytical availability require checking",
+      "definition": "See primary source; no numerical result imported",
+      "uncertainty": "Not established for a new indicator",
+      "access": "Existing public link; underlying data access and reuse require source-specific checks",
+      "limit": "Full-method audit remains open; keep separate identity from Allas interpretation. Direct PDF recorded in specialist updates.",
+      "url": "https://openai.com/index/modeling-ai-jobs-transition/",
+      "regions": [
+        "Cross-region"
+      ],
+      "topics": [
+        "Context / synthesis"
+      ],
+      "verification": "2026-10-01: publisher overview read previously; full PDF review incomplete, specialist did not retry."
     }
   ],
   "questions": [

@@ -40,4 +40,4 @@ For the index more broadly, keep participation, intensity, opportunity, exposure
 
 Resolve the arithmetic in footnote 5 and reconcile Appendix B's sample flow with the Figure A1/A2 captions before importing their totals. Audit source gender coding against Table A1 rather than assuming uniform self-report. Check the independence assumptions behind pooled uncertainty and monthly comparisons. These are replication questions, not findings that invalidate the report.
 
-The current explorer is still a partial 33-card catalogue. This full reading is complete; the entry-by-entry reconciliation and primary-source verification are not. No additional paid session was started.
+At completion of this reading, the explorer was still a partial 33-card catalogue. The subsequent [entry reconciliation](HBS-RECONCILIATION.md) now accounts for all 76 HBS entries and expands the explorer to 111 cards. Primary-source verification and unresolved sample overlaps remain open. No additional paid session was started.

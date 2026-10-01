@@ -1,6 +1,6 @@
 # Gender & AI landscape v1
 
-Working research edition, 1 October 2026. Open [the local evidence explorer](index.html). This is a partial catalogue with selected checked measures. The 33 cards do not yet incorporate all 76 sources in the foundational HBS review. The broader source reconciliation must precede selection of new deep-dive papers; see the [coverage correction and next work](coordination/COVERAGE-RECONCILIATION.md). It is not a worldwide prevalence estimate, a composite ranking, or a public launch.
+Working research edition, 1 October 2026. Open [the local evidence explorer](index.html). The expanded catalogue contains 111 cards, including linked records for all 76 numbered HBS entries (75 linked cards), alongside the selected checked measures. New HBS records are review-derived; primary verification and unresolved sample/wave relationships remain open. See the [reconciliation and remaining work](coordination/HBS-RECONCILIATION.md). The wider landscape is not a completed systematic review. It is not a worldwide prevalence estimate, a composite ranking, or a public launch.
 
 ## Reading order
 
@@ -19,7 +19,7 @@ From this directory, using Python 3's standard library:
 python3 build_explorer.py
 ```
 
-The build validates the reviewed `edition-data.json`, checks the European and four national displays against their reviewed inputs and writes `index.html`, `source-cards.csv` and `build-manifest.json`. All display data are embedded; the explorer needs no server, account, network connection or external JavaScript library. Source links require connectivity. The filterable register can be exported as CSV from the page. Building the presentation does not constitute a new scientific review.
+The build joins and validates the full numbered HBS crosswalk and the reviewed `edition-data.json`, checks the European and four national displays against their reviewed inputs and writes `index.html`, `source-cards.csv` and `build-manifest.json`. All display data are embedded; the explorer needs no server, account, network connection or external JavaScript library. Source links require connectivity. The filterable register can be exported as CSV from the page. Building the presentation does not constitute a new scientific review.
 
 The template is `explorer.template.html`. Edit reviewed content in `edition-data.json`, record substantive decisions in `REVIEW.md`, then rebuild. Do not edit generated `index.html` alone. Rebuilding must not fetch live observations or silently replace source vintages.
 
@@ -57,6 +57,6 @@ The explorer combines existing European calculations with clearly attributed pub
 
 Country, aggregate and study/sample-family identifiers serve different purposes. In particular, the HBS synthesis and its constituent surveys are not independent replications, and three Eurostat indicator records come from the same source family. Gender-category labels and survey populations remain source-specific. Occupational composition and inferred platform demographics cannot become self-reported individual gender.
 
-The immediate next step is to reconcile the full foundational HBS corpus with our existing and additional sources, separating literature coverage from usable data and indicators. Then use the broader findings and explicit gaps to define distinct original questions, assess feasible data and methods, and commission bounded studies. Feed reviewed findings back into the landscape and propose warranted revisions to the living European paper while preserving author edits.
+All 76 HBS entries now have catalogue dispositions. The immediate next step is primary-source verification, resolving sample/wave overlaps and assessing data feasibility, while continuing documented discovery beyond the baseline corpus. Then use the broader findings and explicit gaps to define distinct original questions, assess feasible data and methods, and commission bounded studies. Feed reviewed findings back into the landscape and propose warranted revisions to the living European paper while preserving author edits.
 
 AI assistance: existing deployed Claude specialists provided source audit and literature synthesis; Codex coordinated, checked selected primary evidence, imported existing results, assembled the explorer and reviewed it. Emily retains scientific and editorial ownership. Internal checks do not substitute for external peer review or author approval of a public release.

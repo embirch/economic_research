@@ -9,6 +9,72 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parent
 
 
+def attach_corpus(data):
+    """Join every numbered HBS entry without turning entries into independent samples."""
+    with (ROOT.parent / "evidence/hbs-corpus.csv").open(newline="") as handle:
+        entries = list(csv.DictReader(handle))
+    numbers = [int(row["hbs_entry"]) for row in entries]
+    if sorted(numbers) != list(range(1, 77)):
+        raise ValueError("HBS corpus must contain each May 2026 entry 1–76 exactly once")
+    with (ROOT.parent / "evidence/source-register.csv").open(newline="") as handle:
+        atlas_rows = list(csv.DictReader(handle))
+    with (ROOT.parent / "evidence/literature.csv").open(newline="") as handle:
+        literature_rows = list(csv.DictReader(handle))
+    atlas = {row["indicator_id"]: row for row in atlas_rows}
+    literature = {row["study_id"]: row for row in literature_rows}
+    sources = {row["id"]: row for row in data["sources"]}
+    if len(atlas) != len(atlas_rows) or len(literature) != len(literature_rows):
+        raise ValueError("Duplicate register IDs")
+    if set(atlas) != set(sources):
+        raise ValueError("Source atlas and explorer have different coverage")
+    for source in sources.values():
+        source["hbs_entries"] = []
+        source["hbs_roles"] = []
+        source["hbs_mapping_notes"] = []
+    for row in entries:
+        n = int(row["hbs_entry"])
+        expected = "Plotted adoption entry" if n <= 58 else "Narrative entry"
+        if row["hbs_role"] != expected:
+            raise ValueError(f"Incorrect review role for HBS entry {n}")
+        if row["source_id"] not in sources or row["literature_id"] not in literature:
+            raise ValueError(f"Unlinked HBS entry {n}")
+        if not all(row[k].strip() for k in ["disposition", "relationship_note", "primary_check_status", "metadata_basis"]):
+            raise ValueError(f"Missing review boundary for HBS entry {n}")
+        for linked in filter(None, row["related_existing_ids"].split("|")):
+            if linked not in atlas and linked not in literature:
+                raise ValueError(f"Unknown related programme ID: {linked}")
+        for linked in filter(None, row["related_hbs_entries"].split("|")):
+            if int(linked) not in numbers:
+                raise ValueError(f"Unknown related HBS entry: {linked}")
+        if atlas[row["source_id"]]["sample_family"] != row["sample_family"]:
+            raise ValueError(f"Inconsistent sample-family mapping for HBS entry {n}")
+        if literature[row["literature_id"]]["sample_family"] != row["sample_family"]:
+            raise ValueError(f"Inconsistent literature family for HBS entry {n}")
+        validate_link(row["hbs_url"])
+        source = sources[row["source_id"]]
+        source["hbs_entries"].append(n)
+        source["hbs_mapping_notes"].append(f"Entry {n}: {row['disposition']}. {row['relationship_note']}")
+        if expected not in source["hbs_roles"]:
+            source["hbs_roles"].append(expected)
+    for source in sources.values():
+        source["hbs_entry_ids"] = "|".join(str(n) for n in source["hbs_entries"])
+        source["hbs_role_labels"] = "|".join(source["hbs_roles"])
+        source["hbs_mapping"] = " ".join(source.pop("hbs_mapping_notes"))
+    by_number = {int(row["hbs_entry"]): row for row in entries}
+    if by_number[8]["source_id"] != by_number[56]["source_id"]:
+        raise ValueError("Entries 8 and 56 must retain their shared publication")
+    if by_number[63]["sample_family"] != by_number[75]["sample_family"]:
+        raise ValueError("Nature survey publications must retain their shared sample lineage")
+    data["corpus"] = {
+        "entries": len(entries), "plotted": 58, "narrative": 18,
+        "mapped_cards": len({row["source_id"] for row in entries}),
+        "citation_records": len({row["literature_id"] for row in entries}),
+        "other_cards": sum(not source["hbs_entries"] for source in sources.values()),
+    }
+    if data["counters"][2]["value"] != str(len(sources)):
+        raise ValueError("Headline catalogue count is stale")
+
+
 def validate_link(value, local_ok=False):
     url = urlparse(value)
     if url.scheme in {"https", "http"} and url.netloc:
@@ -39,6 +105,9 @@ def validate(data):
     for module in data["modules"]:
         if module["source_id"] not in ids or any(len(r) != len(module["columns"]) for r in module["rows"]):
             raise ValueError("Invalid module provenance or row width")
+        source = next(s for s in sources if s["id"] == module["source_id"])
+        if source["status"].startswith("Review-derived"):
+            raise ValueError("Review-derived metadata cannot supply a numerical panel")
         validate_link(module["url"])
     for item in data["findings"] + data["questions"]:
         for link in item["links"]:
@@ -77,6 +146,7 @@ def validate(data):
 
 def main():
     data = json.loads((ROOT / "edition-data.json").read_text())
+    attach_corpus(data)
     count = validate(data)
     template = (ROOT / "explorer.template.html").read_text()
     if template.count("__EDITION_DATA__") != 1:
@@ -86,17 +156,19 @@ def main():
     (ROOT / "index.html").write_text(result)
     with (ROOT / "source-cards.csv").open("w", newline="") as handle:
         fields = ["id", "title", "geography", "period", "construct", "status", "use", "family",
-                  "population", "gender", "definition", "uncertainty", "access", "limit", "url", "verification"]
+                  "population", "gender", "definition", "uncertainty", "access", "limit", "url", "verification",
+                  "hbs_entry_ids", "hbs_role_labels", "hbs_mapping"]
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(data["sources"])
     files = ["edition-data.json", "explorer.template.html", "index.html", "source-cards.csv",
              "coordination/europe-published-cells.json", "coordination/dsit-published-cells.json",
              "coordination/published-table-checks.json", "../evidence/source-register.csv",
+             "../evidence/hbs-corpus.csv", "../evidence/literature.csv",
              "../evidence/v1-audit-2026-10-01/checks/cetic-published-cells.json"]
     manifest = {f: hashlib.sha256((ROOT / f).read_bytes()).hexdigest() for f in files}
     (ROOT / "build-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(f"PASS: {count} complete source cards; 112 European pairs and four national panels match reviewed inputs; offline HTML built.")
+    print(f"PASS: {count} catalogue cards; all 76 HBS entries linked; 112 European pairs and four national panels match reviewed inputs; offline HTML built.")
 
 
 if __name__ == "__main__":

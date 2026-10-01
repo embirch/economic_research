@@ -1,4 +1,6 @@
-# Coverage correction: 33 catalogue cards versus 76 HBS sources
+# Coverage correction: initial 33 cards versus 76 HBS entries
+
+Status update: the [entry reconciliation](HBS-RECONCILIATION.md) now accounts for all 76 and expands the explorer to 111 cards. The note below preserves the original diagnosis and requirements. Primary-source and sample-overlap checks remain open.
 
 1 October 2026. Emily asked why the explorer contains only 33 records when the foundational HBS paper includes 76 sources. The current catalogue does not yet incorporate that full corpus. Describing the initial bounded delivery as sufficient completion of the broader landscape was premature.
 

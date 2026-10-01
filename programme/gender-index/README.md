@@ -5,7 +5,7 @@ Start with [PROJECT.md](../../PROJECT.md). The concept is an evidence resource w
 - [Concept and feasibility](concept-and-feasibility.md): current framing, limits, sources and possible papers.
 - [Additional-source audit](additional-sources-audit-2026-09-30.md): later access and measurement checks, including important restrictions.
 - [Interactive concept](prototype.html): standalone HTML; open locally in a browser or Codex. An illustrative design, not a live index. Participation uses the earlier study; other panels include proposed analysis.
-- [Working landscape v1](landscape-v1/README.md): checked European results, four separate national panels, reviewed synthesis, 33 source cards and emerging questions. Start here for the current edition.
+- [Working landscape v1](landscape-v1/README.md): checked European results, four separate national panels, reviewed synthesis, 111 catalogue cards with all 76 HBS entries linked, and emerging questions. Start here for the current edition.
 - [Evidence register](evidence/README.md): the reviewed source atlas and original stable indicator/literature records, with verification depth and outstanding checks stated.
 - [Proposed full inventory assignment](FIRST-ASSIGNMENT.md): all-candidate verification remains uncommissioned; the narrower [steward pilot](../../team/assignments/2026-10-01-steward-pilot.md) was authorised on 1 October 2026.
 - [Execution proposal](EXECUTION-PROPOSAL.md): staged work, Claude roles and proposed later budgets; the first bounded pilot was commissioned on 1 October 2026.
