@@ -45,7 +45,7 @@ For each regional entry, record: source identified; primary documentation checke
 2. At least one feasible module outside Europe with meaningful sex/gender comparisons. This is a minimum test for expanding the first edition, not a definition of global coverage.
 3. A comparison dictionary stating where age bounds, denominators, question wording, tool scope and reference periods differ. Harmonisation must follow actual joint data; do not reconstruct unobserved cells from margins.
 4. A separately reported assessment of geographic breadth, population coverage, representation and statistical comparability. Do not report a global coverage percentage until eligible country data and matching population denominators have been verified.
-5. A reasoned release label: European core, international evidence explorer, or a specific comparable cross-country series. The decision does not alter the first paper's geography.
+5. A reasoned release label: European core, international evidence explorer, or a specific comparable cross-country series. The decision does not automatically alter the first paper's geography; deliberate paper revisions remain possible under the [research agenda](RESEARCH-AGENDA.md).
 
 No final geography has been selected. A bounded next audit of Brazil, Canada and the multi-country survey is more informative than either assuming a worldwide dataset exists or ruling out global scope from the Europe-heavy starter register.
 

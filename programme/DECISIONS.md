@@ -10,6 +10,9 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 | 2026-09-30 | Implement the proposed project setup. | Includes current project record, recoverable edits, consistent agent guidance, evidence register and Git workflow. This is setup authorisation, not permission for new paid research. |
 | 2026-09-30 | Return `economic_research` to private after setup and access verification. | Explicit user request; use the existing credential locally, never record its value. |
 | 2026-09-30 | Use branches and review for subsequent agent changes. | Approved setup recommendation. Codex may implement and integrate this setup; future scientific/publication decisions remain with Emily. |
+| 2026-10-01 | Original empirical research is a core contribution alongside synthesis. | Emily explicitly requested our own analyses of suitable datasets through deep-dive papers. Select feasible questions alongside index development; compiling existing statistics alone is insufficient for the programme. |
+| 2026-10-01 | The existing paper remains open to evidence-led revision. | Emily clarified that new nuance and insights may inform it. Supersedes any interpretation of preservation as a permanent freeze; preserve author edits and versioned inputs while documenting intentional updates. |
+| 2026-10-01 | Triangulate with detailed research and informed writers; exposure has no predetermined welfare sign. | Emily supplied Tera Allas's exposure essay. Trace supporting studies, distinguish interpretation from observed outcomes, and examine benefit, harm and distribution rather than equating exposure with risk. See `gender-index/RESEARCH-AGENDA.md`. No new paid session or cap is authorised by these scope clarifications. |
 
 ## Still open
 

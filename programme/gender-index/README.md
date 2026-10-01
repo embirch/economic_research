@@ -8,6 +8,7 @@ Start with [PROJECT.md](../../PROJECT.md). The concept is an evidence resource w
 - [Evidence register](evidence/README.md): seeded from those audits, with outstanding checks stated.
 - [Proposed full inventory assignment](FIRST-ASSIGNMENT.md): all-candidate verification remains uncommissioned; the narrower [steward pilot](../../team/assignments/2026-10-01-steward-pilot.md) was authorised on 1 October 2026.
 - [Execution proposal](EXECUTION-PROPOSAL.md): staged work, Claude roles and proposed later budgets; the first bounded pilot was commissioned on 1 October 2026.
+- [Research agenda](RESEARCH-AGENDA.md): original deep-dive analyses alongside synthesis, an evolving first paper, and triangulation with detailed research and informed writers; includes the Allas reading and candidate empirical questions.
 - [Geographic scope](GEOGRAPHIC-SCOPE.md): global ambition, comparison options and dated non-European source leads; final release geography remains open.
 - [First pilot review](reviews/2026-10-01-pilot-review.md): delivered for $6.21; file diagnostics reproduced, but report/register revisions are required before scientific integration. Start here before using the linked steward findings.
 - [Setup readiness](../SETUP-READINESS.md): current checks and remaining GitHub access/settings work.

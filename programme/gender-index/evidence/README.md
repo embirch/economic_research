@@ -4,6 +4,8 @@
 
 Update, 1 October 2026: a paid steward pilot submitted new evidence for EU_USE, EU_PURPOSE and EU_NONUSE. Its three changed rows are **draft, pending correction**: read the [coordinator review](../reviews/2026-10-01-pilot-review.md) before using them. File diagnostics reproduced; source-document, claim and interpretation issues remain. The other original rows have not received a full new audit.
 
+Later on 1 October, three dated literature records were appended for the [research agenda](../RESEARCH-AGENDA.md): Allas's interpretive essay, the ILO exposure-methods abstract and OpenAI's jobs-framework overview. These have separate reading/verification limits and do not change the eight original literature records or establish new index indicators.
+
 ## Maintain the record
 
 Each indicator has a stable ID, question, construct, population, geography, fieldwork/reference period, unit, denominator, gender measure, AI definition, source/sample family, access/reuse status, uncertainty and a comparability group. Unknown items remain explicit. Record actual fieldwork, publication and retrieval dates separately when acquired. Add file/version/hash, verified variable names, missingness and exclusions to the linked source profile; do not overwrite old release evidence.
