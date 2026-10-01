@@ -13,6 +13,8 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 
 ## Still open
 
+Update, 1 October 2026: Emily said "Let's do it" in response to the execution proposal and its recommended $20 data-steward pilot, adding that global scope is preferable but must be led by data. Commence that bounded pilot using the existing Claude data steward. Assess European-only, international source-specific, and genuinely comparable global options explicitly. The coordinator will configure an $18 service limit within the $20 pilot envelope to allow headroom for in-flight usage. Further paid tranches, other specialists and budget increases are not automatically commissioned. The separate European paper retains its scope and author edits.
+
 Update, 30 September 2026: Emily instructed "ok just keep going with public for now". Keep `economic_research` public and continue setup. This supersedes the immediate privacy-change instruction above; do not retry that change without a new request. Restricted/raw respondent data and credentials remain outside the repository. No paid research session is authorised by this visibility decision.
 
 - Final index name, geographic coverage, indicator inclusion and refresh policy.
