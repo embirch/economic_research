@@ -2,6 +2,10 @@
 
 Prepared for Emily Birch, 30 September 2026. Discussion draft requested in Codex; no research session, spending, publication or new paper is authorised by this proposal. Current starting programme commit: `3f72fdb`. Earlier decisions and the authoritative first paper remain in force.
 
+Update, 1 October 2026: Emily accepted the recommended first $20 data-steward pilot and requested a data-led assessment of global rather than European-only scope. The current assignment is `team/assignments/2026-10-01-steward-pilot.md`; further tranches remain uncommissioned. See [geographic scope](GEOGRAPHIC-SCOPE.md). Global ambition applies to the resource; the existing European paper remains unchanged.
+
+Pilot outcome: delivered for $6.21. The [coordinator review](reviews/2026-10-01-pilot-review.md) reproduces the file diagnostics and identifies corrections required before integrating the scientific claims. This is not release or methods approval.
+
 ## 1. What we would build
 
 A maintained evidence resource answering three questions: who uses generative AI, what they use it for, and what opportunities or barriers shape their experience. Economic consequences remain a research question. The working name is Gender & AI Index, but the first edition would present separately defined indicators and an evidence explorer. A single score or worldwide league table is not needed for a useful release.
@@ -21,6 +25,14 @@ Proposed first edition:
 The release can be useful with one strong survey family. A blocked second source should not force a weak comparison or delay the existing paper. Binary source categories will be described as such; absent nonbinary data remain an explicit coverage gap. Higher male use is not a target, and more use does not establish greater welfare.
 
 ## 2. Responsibilities and when Claude is useful
+
+### Two repositories, one programme
+
+`gender-gap-generative-ai` owns paper one: its frozen European inputs, analysis, figures and live author edits. `economic_research` owns the index and wider programme: evidence register, source audits, geographic scope, new indicator methods, explorer, assignments and reviews. The current steward pilot writes only to the programme repository.
+
+The planned connection is a read-only, version-pinned reuse of permitted paper outputs, with the article commit and source hashes recorded in the index. The adapter has not yet been built. There should be no second editable manuscript in the programme repository; `posts/gender1` remains historical reference. A broader index or newer source release does not silently change paper one's geography, results or author text. Later papers can remain separate projects with the same documented output interface.
+
+At pilot launch, the current credential cannot access the article repository; the agent receives a coordinator-supplied provenance summary, not an assertion that it independently inspected the frozen files. Local copies and preserved commits remain available to Codex for read-only checks.
 
 | Owner | Specific responsibility | When engaged |
 |---|---|---|

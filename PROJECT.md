@@ -12,6 +12,8 @@ The intended programme combines a maintained Gender & AI Index or evidence explo
 
 Emily's 1 October 2026 direction is to aim for global coverage where data support it. Geographic scope must be established through a coverage and comparability audit; do not make Europe the default ceiling or assume a worldwide comparable series exists. The first $20 data-steward pilot is authorised separately from setup; see `team/assignments/2026-10-01-steward-pilot.md` and programme decisions. No subsequent paid tranche is automatic.
 
+The pilot has now delivered at $6.21. Its file diagnostics reproduce, but scientific integration is pending the corrections in [the coordinator review](programme/gender-index/reviews/2026-10-01-pilot-review.md). Geographic scope and indicator inclusion remain undecided; no new index calculation or publication was approved by completing this audit.
+
 - Participation; purposes and patterns of use; experience, barriers and workplace opportunity. Occupational exposure provides context where its interpretation is clear. Economic returns remain an evidence question, not an assumed consequence of use.
 - Anthropic research is supplementary intellectual and empirical material. Select sources by fitness for the question, including official surveys, other platforms, experiments and qualitative studies.
 - Preserve distinctions between generative AI and broader AI, people and messages, reported sex/gender and inferred proxies, participation and benefits, exposure and realised outcomes.
