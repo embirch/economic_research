@@ -43,6 +43,8 @@ The [operating model](team/SETUP.md) defines file ownership, proportionate revie
 
 ## Immediate work order
 
+Emily's subsequent “ok go” authorises proceeding with the v1-first work. The [delivery brief](programme/gender-index/V1-BRIEF.md) and two specialist assignments are prepared. A proposed $60 additional Claude envelope ($40 source audit, $20 synthesis) awaits explicit confirmation; no new paid session has launched. Codex has begun [bounded source discovery](programme/gender-index/landscape-v1/coordination/SCOUT.md), including a reproducible check of UK DSIT published aggregates. This is progress towards v1, not completion of the full audit or scientific integration.
+
 1. Scope the broader data/literature audit: resolve pilot issues, assess the existing inventory and additional regional leads, and establish what can be measured and compared. New paid work still needs an explicit cap.
 2. Assemble an initial checked index/evidence map and synthesis, with coverage, definitions, limitations and a running log of emerging questions.
 3. Use that foundation to choose original deep-dive questions, verify their distinct contribution and data requirements, and prepare scoped analysis plans and budgets.

@@ -16,6 +16,8 @@ Maintain dated, attributable decisions. Separate decisions from suggestions and 
 
 ## Still open
 
+Implementation update, 1 October 2026: after Emily's “ok go”, Codex prepared `gender-index/V1-BRIEF.md` and the two v1 assignments. The proposed additional Claude envelope is $60 ($40 steward / $20 programme lead; planned service caps $36 / $18); explicit cap confirmation is pending and no new paid session was launched. Codex's initial discovery and checked UK published cells are recorded in `gender-index/landscape-v1/coordination/SCOUT.md`. This neither selects new papers nor completes the wider audit. The existing manuscript remains unchanged.
+
 Emily's follow-up on 1 October makes the milestone explicit: get a v1 of the landscape/index, then build deep dives from it and refine the big picture iteratively. V1 includes synthesis and checked measures with visible limitations; it is not merely an inventory. This confirms the sequencing clarification below.
 
 Latest sequencing clarification, 1 October 2026: Emily questioned selecting deep-dive papers before full data research and index assembly. Follow broad source/literature research → initial verified index/evidence synthesis → selection of new deep-dive questions informed by the findings. Record emerging questions during discovery without locking in paper topics or choosing sources only to fit them. This supersedes the coordinator's paper-first recommendation and proposed $30 selection round, which was never authorised or launched. Original research remains a core eventual deliverable; there is no requirement to finish a polished/public website before selecting papers. “Full” means completing a defined broad audit with transparent coverage and blockers, not an unbounded search for every dataset.
