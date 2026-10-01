@@ -1,13 +1,13 @@
 # Assignment: evidence synthesis for landscape/index v1
 
-- User task: Emily's 1 October “ok go” following the v1-first sequence. Paid cap is proposed, not yet approved; launch only after coordinator records confirmation.
+- User task: Emily approved the explicit $60 additional Claude envelope by replying “ok go” on 1 October 2026; this assignment and its allocation are authorised.
 - Decision: what does the available research say about gender and generative AI, where does it disagree, and what should readers take from landscape/index v1?
 - Type: bounded literature synthesis and interpretation; no paper selection, new effect estimation or systematic-review claim.
 - Inputs: current PROJECT.md, programme/DECISIONS.md, team/SETUP.md; programme/gender-index/V1-BRIEF.md, RESEARCH-AGENDA.md, GEOGRAPHIC-SCOPE.md, existing audits, evidence/literature.csv and indicators.csv, pilot review. Base before briefs: fcea670; actual launch commit recorded by coordinator.
 - Role: existing programme-lead v3; retain current model. No delegation, director or other paid session.
-- Proposed branch: work/index-v1-landscape-2026-10-01, from the confirmed coordinator launch commit. Never main, force-push or merge.
+- Work branch: work/index-v1-landscape-2026-10-01, from the confirmed coordinator launch commit. Never main, force-push or merge.
 - Writable paths: programme/gender-index/landscape-v1/research/ only. Submit additions/corrections to literature records there; do not change literature.csv, indicator rows, steward files, article or coordinator records.
-- Proposed ceiling: $20 user envelope; $18 service limit. Stop before exhaustion and save partial findings rather than expanding budget or restarting.
+- Approved ceiling: $20 user envelope; $18 service limit. Stop before exhaustion and save partial findings rather than expanding budget or restarting.
 - Review/integration: Codex; Emily sees v1 before any later draft-review session is commissioned.
 
 ## Work

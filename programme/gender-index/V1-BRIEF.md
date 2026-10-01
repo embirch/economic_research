@@ -1,6 +1,6 @@
 # Landscape/index v1: delivery brief
 
-1 October 2026. Emily said “ok go” after choosing landscape/index v1 before new deep dives. This authorises progressing the work. The prior $30 paper-selection proposal was withdrawn; it is not a budget for this broader audit. The paid-session allocation below is proposed and must be confirmed before launch under the project spending rule.
+1 October 2026. Emily said “ok go” after choosing landscape/index v1 before new deep dives. This authorises progressing the work. The prior $30 paper-selection proposal was withdrawn; it is not a budget for this broader audit. Emily then replied “ok go” to the explicit $60 cap request on 1 October 2026. The allocation below is approved for these two assignments only.
 
 ## Deliverable for Emily
 
@@ -25,17 +25,17 @@ For discovery, record at least one targeted primary-source search in each of Eur
 
 Assess every starter candidate and four named additions with dated evidence or a concrete blocker. Prioritise file-level checks for Eurostat corrections and the most plausible non-European use sources; retain documentation-only status elsewhere if files/terms are unavailable. One access attempt plus a reasonable alternative is sufficient before documenting an access blocker. Stop when the finite inventory has dispositions, regional searches are logged and v1 inclusion is supported—or at the task cap, saving incomplete work with gaps identified. Do not expand indefinitely to make the word “global” fit.
 
-Codex has begun the [coordinator discovery record](landscape-v1/coordination/SCOUT.md): six additional leads are identified/queued against the eight-lead limit, ten targeted search/provider checks are logged, and selected UK DSIT published cells have a pinned, reproducible extract. Reuse this work. Verification depth varies; the wider audit, synthesis and explorer are still outstanding. This progress does not authorise paid launch.
+Codex has begun the [coordinator discovery record](landscape-v1/coordination/SCOUT.md): six additional leads are identified/queued against the eight-lead limit, ten targeted search/provider checks are logged, and selected UK DSIT published cells have a pinned, reproducible extract. Reuse this work. Verification depth varies; the wider audit, synthesis and explorer are still outstanding. The subsequent explicit cap approval authorises launch of the two scoped assignments.
 
-## Execution and proposed spending
+## Execution and approved spending
 
-| Owner | Work | Proposed user ceiling | Planned service limit |
+| Owner | Work | Approved user ceiling | Planned service limit |
 |---|---|---:|---:|
 | Existing Claude data steward v3 | Correct pilot claims; audit sources, regional coverage, fields and reuse; produce proposed inclusion table | $40 | $36 |
 | Existing Claude programme lead v3 | Source-traced landscape synthesis, disagreements, sample overlap and emerging-question log | $20 | $18 |
 | Codex | Coordinate inputs/branches, check delivered evidence, integrate source records and assemble/review the local v1 | Existing chat work; outside the separate Claude allocation | No new Claude session |
 
-Proposed additional Claude envelope: **$60**, with $54 configured across the two services to leave headroom. This is a ceiling proposal, not a cost estimate or completion guarantee. No automatic transfer, continuation, third agent or cap increase. Existing model settings stay unchanged. No new paid referee is included; Codex reports the limits of its own review. Further independent/draft review can be scoped after Emily sees v1.
+Approved additional Claude envelope: **$60**, with $54 configured across the two services to leave headroom. This is a spending ceiling, not a cost estimate or completion guarantee. No automatic transfer, continuation, third agent or cap increase. Existing model settings stay unchanged. No new paid referee is included; Codex reports the limits of its own review. Further independent/draft review can be scoped after Emily sees v1.
 
 The two specialists work on separate branches and non-overlapping paths. Source selection is shared, but the lead must label unaudited data-access claims rather than infer them. Codex reconciles delivered source profiles before presenting indicators. No specialist may merge or write the shared run ledger.
 
@@ -48,4 +48,4 @@ The two specialists work on separate branches and non-overlapping paths. Source 
 - No unsupported confidence intervals, causal language, world coverage percentage or welfare sign for exposure/use.
 - Author edits remain intact; checked dataset snapshots remain reproducible; new evidence can feed later paper revisions.
 
-Detailed launch briefs: `team/assignments/2026-10-01-v1-steward.md` and `team/assignments/2026-10-01-v1-landscape.md`. Current status: prepared; proposed paid caps awaiting confirmation.
+Detailed launch briefs: `team/assignments/2026-10-01-v1-steward.md` and `team/assignments/2026-10-01-v1-landscape.md`. Current status: authorised for launch. The launch commit, session IDs, actual spend and delivery status are recorded in team/RUNS.csv; no automatic continuation is approved.
