@@ -56,7 +56,9 @@ indicator).
    WhatsApp; Korea prompts with named services; Eurostat asks about creating content with
    named generative tools.
 4. **Uncertainty shown honestly.** Brazil has published margins of error. Nobody else
-   does: the UK publishes a design effect but no interval in the AI workbook, Korea
+   does, in the products audited: the UK's technical report documents 95% logit intervals
+   and a design effect of 1.67 but no interval appears in the inspected workbooks, so where
+   those gender-cell intervals are published is unresolved; Korea
    publishes only a survey-level error, Canada publishes an interval for an odds ratio only,
    and Eurostat publishes none at all. Do not manufacture intervals from bases.
 5. **Gender categories kept as the provider recorded them.** Two categories for Eurostat,

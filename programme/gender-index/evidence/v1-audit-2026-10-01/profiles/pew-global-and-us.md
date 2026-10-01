@@ -34,7 +34,7 @@ measured the same thing.
 | Sample | **American Trends Panel Wave 187**, fieldwork **17–23 February 2026**, **5,119** panellists responding out of 5,854 sampled; online (n=4,930) and live telephone (n=189) by SSRS; English and Spanish; oversample of non-Hispanic Asian adults weighted back |
 | Population | US adults |
 | Construct | Ever-use and frequency of chatbot use (for example ever use ChatGPT), purposes, perceived helpfulness, confidence, awareness and attitudes |
-| Register correction | The register's “confirm wave/sample” is now resolved: the wave number is **187**, stated on the methodology page |
+| Register correction | The register's “confirm wave/sample” is resolved: the methodology page **Overview names Wave 187 explicitly** (Feb 17–23 2026, N=5,119). Sample family `PEW_ATP_W187` is retained; the earlier doubt came from reading the report chapter rather than the methodology page |
 | Sample-family note | W187 is the **same wave** that supplies the US February data in the global report. The two Pew records share that sample and are not independent evidence |
 
 **Estimand incompatibility.** “Ever use ChatGPT” (US) and “used generative AI in the last
