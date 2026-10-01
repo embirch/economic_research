@@ -1,0 +1,13 @@
+{
+  "edition-data.json": "a0ab117524351d5e0c970c561850b0593b3ea45cec250d0b0afd637194548f45",
+  "explorer.template.html": "91dfacae6aabdf3531f13ce654f75181c3209a7f69f9bb42c4b2782a2fb46c1d",
+  "index.html": "cf08facc605f626806e58033d7ae7765701126cb4d3a870626489a0a94f8b17b",
+  "source-cards.csv": "376873db8c741a2da10d53268a0c9811d9be9c68346d405a294fe76264c1bc22",
+  "coordination/europe-published-cells.json": "1f16b60ce81004f225662d6db219606684cbd44c5ecef455e572ee275639286f",
+  "coordination/dsit-published-cells.json": "01bfba27aa9bca4136133f5791a82af92dbcec1160ca2039e0bb54f67fb72f7d",
+  "coordination/published-table-checks.json": "a45a7eb33695c2728dc73ca946e9581f74ae976aa5596d11e1f8264e109afd71",
+  "../evidence/source-register.csv": "6b112aae43c458bef3fcbdc346d7a8f6e68a69cbb75040dd87ba94ba87130aa2",
+  "../evidence/hbs-corpus.csv": "ae53023e9136c545109ed6b3dff35609ddb56574b511bc3f62235d7f94d8410d",
+  "../evidence/literature.csv": "af12ae8ff87de8d0b6b85247e0b615893f622d0befff7af3850675f8eb93919f",
+  "../evidence/v1-audit-2026-10-01/checks/cetic-published-cells.json": "a7a18f60b42fedfa50137a865cb675e84a8f444e7455303e4f7bac2ed6122347"
+}

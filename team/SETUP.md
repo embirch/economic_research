@@ -8,6 +8,8 @@ Emily sets direction, budgets and publication decisions. Codex coordinates the p
 
 Read `PROJECT.md`, `programme/DECISIONS.md`, the assignment, and relevant current files. Do not reread every historical room message or restart corpus construction. The article in `gender-gap-generative-ai` is authoritative; `posts/gender1` is reference-only. Emily already compared the versions and chose the existing manuscript.
 
+Clarification, 1 October 2026: the programme combines synthesis, original empirical deep-dive papers and interpretation informed by multiple kinds of evidence. Follow `programme/gender-index/RESEARCH-AGENDA.md` for paper selection and triangulation. The first paper can evolve through explicit revisions; preserving author edits is not a permanent freeze on its findings or discussion. Keep source snapshots reproducible, record analytical changes and preserve the current author copy when preparing a revision.
+
 ## Assignment contract
 
 Every assignment records the question, task type, inputs, required output, writable paths, work branch, validation, stopping point and approved dollar cap. Use `team/templates/ASSIGNMENT.md`. Record session ID, deployed agent version, source commit, cap and actual spend in `team/RUNS.csv`. Existing session history is historical, not a continuing authorisation. Do not resume a session with superseded instructions for new work.
@@ -15,6 +17,8 @@ Every assignment records the question, task type, inputs, required output, writa
 The coordinator gives each contributor a distinct branch and non-overlapping files. One integration owner resolves conflicts. Reviewer independence means independently examining evidence and calculations; a second LLM review is not journal peer review or a guarantee of correctness.
 
 ## Proportionate research sequence
+
+At programme level, broad data/literature research and an initial verified index/evidence synthesis precede selection of new deep-dive papers. Maintain an emerging-question log during discovery; do not commission paper briefs around predetermined topics before that foundation exists. The study-level sequence below applies once a question is selected. This ordering does not delay warranted updates to the existing paper.
 
 1. **Brief and feasibility:** a standalone question, contribution relative to the wider literature, measurement assumptions, actual available fields and access terms. Emily approves a new study's scope and budget.
 2. **Analysis plan:** definitions, sample and exclusions, estimands, primary comparisons, uncertainty and robustness. Disclose prior inspection. Use hypotheses, power and formal decision rules only where appropriate. Review the plan before new primary analysis; honour any existing approval instead of asking again.

@@ -1,17 +1,21 @@
 # Project file map
 
-Updated 30 September 2026. Repository-relative paths below are portable; local roots are documented for this workstation only.
+Updated 1 October 2026. Repository-relative paths below are portable; local roots are documented for this workstation only.
 
 | Material | Authoritative location | Status |
 |---|---|---|
 | Current scope and operating decisions | `PROJECT.md`, `programme/DECISIONS.md` | Read first |
 | Shared research and index | `embirch/economic_research` | This repository |
 | First paper analysis and manuscript | `embirch/gender-gap-generative-ai` | Separate authoritative repository |
-| Latest first-paper author edits | Article repo: `paper/author-edits/blog.html` | Preserve verbatim; overrides generated prose pending integration |
+| Latest first-paper author edits | Article repo: `paper/author-edits/blog.html` | Preserve live edits; integrate deliberate tracked revisions against this copy |
 | Article generator and published-number bindings | Article repo: `paper/templates/blog.md`, `src/manuscript.py`, existing outputs and claim register | Integrate line edits carefully after author review; regeneration does not update the live editing copy |
 | Current index concept and follow-up audit | `programme/gender-index/concept-and-feasibility.md`, `additional-sources-audit-2026-09-30.md` | Imported unchanged; source details in migration manifest |
 | Dashboard concept | `programme/gender-index/prototype.html` | Illustrative prototype, not a validated published index |
-| Indicator/literature register | `programme/gender-index/evidence/` | Seeded from prior audits; outstanding verification explicitly marked |
+| Working landscape/index v1 | `programme/gender-index/landscape-v1/` | Reviewed synthesis, local explorer, source dispositions, reproduction and emerging questions; see its delivery review |
+| Indicator/literature register | `programme/gender-index/evidence/` | Reviewed source atlas, stable starter IDs and literature records; verification depth and outstanding checks explicitly marked |
+| Index execution and geographic scope | `programme/gender-index/EXECUTION-PROPOSAL.md`, `GEOGRAPHIC-SCOPE.md` | Staged proposal; global ambition subject to evidence |
+| Original research and interpretation | `programme/gender-index/RESEARCH-AGENDA.md` | Required empirical contribution, candidate deep dives, triangulation and deliberate paper revisions |
+| First steward pilot disposition | `programme/gender-index/reviews/2026-10-01-pilot-review.md` | Read before using the draft pilot findings or updated indicator rows |
 | Anthropic reading bank | `wiki/reports/`, `wiki/style/` | Supplementary material; verify source claims before use |
 | Claude's alternative Eurostat work | `posts/gender1/` | Reference-only; do not replace the current article |
 | Earlier programme and agent history | `HANDOVER.md`, `room/`, `programme/CALENDAR.md`, `team/handover/` | Historical context where superseded |
@@ -20,6 +24,10 @@ Updated 30 September 2026. Repository-relative paths below are portable; local r
 ## Local material and boundaries
 
 Both repositories are under `/Users/emilybirch/Desktop/Anthropic/`. The parent is not a Git repository. Original index files remain under `research/gender-ai-index/`; the copies named above become the shared working versions. The migration manifest records source paths and SHA-256 hashes.
+
+The article repository owns paper one's reproducible analysis and author text. The programme repository owns the evolving index, source audits and agent workflow. The read-only adapter is now built at `programme/gender-index/landscape-v1/coordination/import_europe.py`: it pins the article commit and input/output hashes and checks selected existing results against the official source cells. It writes only into this programme repository. New index geographies or source vintages do not silently refresh the paper. There is one authoritative editable manuscript, in the article repository.
+
+The paper is open to intentional updates from new research. Immutable input snapshots preserve reproducibility; they do not freeze the narrative or bar new analysis. Version changes and integrate them against Emily's live edits rather than regenerating over her copy.
 
 `research/gender-ai-index/audit-sources/` and `gender_ai_audit/raw/` remain local. Some sources are individual-level data or third-party material with unverified redistribution terms. No raw survey responses or complete third-party source archives are imported by this setup.
 

@@ -1,0 +1,41 @@
+# Gender & AI: what the first landscape shows
+
+Working research edition, 1 October 2026. Coordinator-reviewed synthesis for Emily. Read with the [explorer](index.html) and [review record](REVIEW.md). The specialist's fuller [submitted synthesis](research/SYNTHESIS.md) and claim ledger remain available as research inputs; the qualifications below govern this edition.
+
+## A global research question, with different kinds of evidence
+
+Gender differences in generative-AI use recur across the literature, but their magnitude depends on the population, tool, question and period. A single number would conceal much of the phenomenon we want to understand. Our first edition therefore combines a European comparative core with separate national measures and a wider evidence map. It does not estimate global prevalence or create a country league table.
+
+[Cranney, Delecourt and Koning's May 2026 report](https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf) is foundational: it brings together adoption evidence, analyses web traffic and examines intensity, tools and possible mechanisms. It guides discovery and sets a substantial benchmark for our original contribution. Its pooled estimates combine different study populations and outcomes; they are not a representative world-population rate. We also need to trace constituent samples so the review and an underlying survey are not counted as independent confirmation. See the [foundation note](../FOUNDATION.md).
+
+## Participation depends on what is measured
+
+The European panel imports existing results from Emily's first paper through a read-only, versioned adapter. In the Eurostat 2025 EU aggregate, reported recent use was 34.91% for males and 30.45% for females: an existing descriptive difference of 4.46 percentage points. The source covers individuals aged 16–74 and asks about the previous three months. Across the EU27, the direction and size vary; Estonia's published female rate is higher. Without suitable sampling uncertainty, small differences should not become claims of statistical separation. [Eurostat source table](https://ec.europa.eu/eurostat/databrowser/view/isoc_ai_iaiu/default/table?lang=en).
+
+National evidence elsewhere answers different questions. The UK DSIT survey includes older adults and a broader AI definition. Brazil's table covers internet users aged ten and above. Canada's workplace study covers employed people aged 15–69 in the provinces. These are valuable additions to a global landscape, but their headline percentages do not support a direct ranking. The explorer displays their definitions beside the measures, with remaining uncertainties visible.
+
+In the US, Pew reports similar ever-use shares for men and women, while daily use remains higher among men. This illustrates why participation and intensity need separate indicators. Similar estimates do not establish exact equality, and changes to wording and routing complicate comparison with 2024. The same survey reports differences in tool choice, confidence and perceived productivity. Self-assessed helpfulness is not an experimentally measured productivity gain. [Pew's gender chapter](https://www.pewresearch.org/internet/2026/06/17/the-gender-gap-in-ai/) and [methodology](https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-methodology/).
+
+Canada illustrates a second distinction. Rounded reported use is 22% for both women and men, while an adjusted model reports a Male+ odds ratio of 1.15 relative to Female+ (95% CI 1.02–1.29). The crude and adjusted quantities answer different questions; rounded equality does not prove a zero gap. The odds ratio is neither a percentage-point effect nor a causal estimate. The plus categories include nonbinary respondents redistributed for confidentiality. [Statistics Canada, narrative and Table A.1](https://www150.statcan.gc.ca/n1/pub/75-006-x/2026001/article/00007-eng.htm).
+
+## Use context matters
+
+The European results already distinguish private, work and formal-education uses by sex. Those data are available even though one Eurostat narrative article focuses on age. In this edition every European purpose rate uses **all individuals**, so the work-purpose rate must not be described as a rate among workers. Purposes overlap. Alternative user-only and non-use denominators need their own definitions and checks; the unresolved non-use reconstruction is withheld.
+
+Website traffic provides another view of engagement. It can reveal product and temporal patterns unavailable in aggregate survey tables, but inferred audience demographics, repeat visits and incomplete platform coverage make it a different construct from population adoption. For SimilarWeb specifically, the foundational paper describes website traffic across account statuses; it would be incorrect to say its panel necessarily excludes logged-out website visits. No vendor data have been acquired for this edition.
+
+## Exposure is an opportunity-and-risk question
+
+The ILO's gender brief links occupational segregation to unequal potential exposure. This is task-based exposure, not observed job loss or measured benefit. Its occupational and employment statistics have different denominators and must remain distinct. [ILO research brief](https://www.ilo.org/publications/gen-ai-occupational-segregation-and-gender-equality-world-work).
+
+[Tera Allas's essay](https://teraallas.substack.com/p/ai-and-jobs-when-exposure-is-a-strength) supplies a useful interpretive challenge: complex jobs can combine automatable tasks with activities that still require people, allowing augmentation and potentially stronger demand for their work. Her discussion also identifies administrative and secretarial work as an exception to the broader complexity pattern. This motivates questions about which workers capture gains; it is not itself a gender-specific causal estimate, and her calculations have not been reproduced here.
+
+Workplace conditions and tasks therefore belong beside adoption. Henseke's paper uses EWCS 2024 and examines how occupational exposure relates to uptake and reported task changes. Its questionnaire stem is broader than strictly generative AI, despite generative examples. The data section confirms the survey family, resolving the specialist's abstract-only uncertainty. Its results are published research, not models we have reproduced. [Henseke, sections 3.1–3.3](https://arxiv.org/html/2604.18849v3).
+
+## What is missing, and what comes next
+
+This finite audit does not yet establish a comparable gender-specific series linking use to later pay, hours, promotion or job quality. That is a limitation of this edition, not evidence that nobody has studied AI's economic effects. Experiments, workplace studies and access-restricted datasets remain important leads. Reported reasons for non-use are also descriptive accounts, not identified causes of a gender difference.
+
+Geographic coverage and gender measurement remain uneven. Regional searches identify leads, not representative coverage of every country; a blocked or unsearched source is not absent evidence. Binary tables, proxy demographics and small published categories limit what can be said about nonbinary and trans experiences. Joint variables, appropriate uncertainty and reuse rights need checking before an original study is feasible.
+
+The [emerging-question log](coordination/emerging-questions.md) includes Emily's suggestion of a small SimilarWeb study and her idea of comparing women's and men's usage around news, scandals, advertisements or offers. Event timing could support an initial descriptive investigation; causal interpretation and inferred motivations would require additional evidence. One candidate is to distinguish changes within tools from a changing mix of tools. It remains unranked and to be determined: first establish what the foundational paper already does, whether a usable historical export exists and what its measurement and reuse terms permit. V1 also raises questions about intensity, workplace conditions, use contexts and who benefits. Selecting among them follows this landscape; new empirical work can then refine it and inform deliberate revisions to the living first paper.

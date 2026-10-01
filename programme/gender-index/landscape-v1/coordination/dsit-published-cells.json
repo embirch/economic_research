@@ -1,0 +1,48 @@
+{
+  "source_id": "UK_DSIT_USE",
+  "sample_family": "UK_DSIT_PES_2025_2026",
+  "retrieved": "2026-10-01",
+  "source_url": "https://assets.publishing.service.gov.uk/media/6a58999031fb6daf314137c5/DSIT_Public_Engagement_Survey_2025_2026_artificial_intelligence_tables.ods",
+  "source_sha256": "a34ed705b6f8c2966d82586917befaae975fee8f61206ef3a2d679cc95c4610a",
+  "source_bytes": 325288,
+  "sheet": "Table_E5",
+  "rows": [
+    {
+      "source_label": "TOTAL",
+      "source_cells": "Table_E5!B6:F6",
+      "published_percent": "58.9",
+      "unweighted_base": 30653,
+      "displayed_weighted_base": "30,640"
+    },
+    {
+      "source_label": "Male",
+      "source_cells": "Table_E5!B38:F38",
+      "published_percent": "63.2",
+      "unweighted_base": 13902,
+      "displayed_weighted_base": "14,428"
+    },
+    {
+      "source_label": "Female",
+      "source_cells": "Table_E5!B39:F39",
+      "published_percent": "55.5",
+      "unweighted_base": 15953,
+      "displayed_weighted_base": "15,343"
+    },
+    {
+      "source_label": "Identify in another way",
+      "source_cells": "Table_E5!B40:F40",
+      "published_percent": "49.2",
+      "unweighted_base": 99,
+      "displayed_weighted_base": "141"
+    },
+    {
+      "source_label": "Prefer not to say",
+      "source_cells": "Table_E5!B41:F41",
+      "published_percent": "45.0",
+      "unweighted_base": 671,
+      "displayed_weighted_base": "694"
+    }
+  ],
+  "status": "published cells reproduced; not a harmonised international indicator",
+  "notes": "Provider display precision retained. No gaps, confidence intervals or significance tests calculated."
+}

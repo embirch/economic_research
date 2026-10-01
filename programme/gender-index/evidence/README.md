@@ -1,12 +1,16 @@
 # Evidence register
 
-`indicators.csv` and `literature.csv` are a starting inventory assembled from the existing concept and audits on 30 September 2026. **No new source verification or analysis was performed to populate this register.** Each entry records that status and its next check. Register entries are candidates, not approved dashboard indicators.
+The current reviewed atlas is [source-register.csv](source-register.csv): 111 source/indicator/literature cards, with dated verification, definitions, uncertainty, access and next checks. Read the [v1 integration review](../landscape-v1/REVIEW.md) and [source-audit disposition](../landscape-v1/coordination/source-audit-review.md) before using specialist claims. A record is not automatically a displayed numerical indicator or an independent study.
+
+`indicators.csv` preserves the original 14 stable IDs with reviewed metadata. `literature.csv` now contains 85 citation records. [hbs-corpus.csv](hbs-corpus.csv) accounts for all 76 numbered HBS entries, linking them to 75 citation records and source cards. The original 11 literature records are retained, with Humlum shared with the HBS corpus. The [reconciliation record](../landscape-v1/coordination/HBS-RECONCILIATION.md) also accounts for the specialist's proposed additions in [literature-updates.csv](../landscape-v1/research/literature-updates.csv). Some sources have newly inspected files, others primary documentation, and others explicitly carried-forward checks or access blockers. New HBS cards are review-derived metadata, with primary checks pending. This is not a claim that every underlying dataset was freshly audited. `UNRESOLVED_HBS_*` family identifiers do not establish independent samples.
+
+The 30 September migration itself performed no new verification. The [pilot](pilot-2026-10-01/) and [v1 specialist submission](v1-audit-2026-10-01/) preserve the subsequent evidence and scripts. Their reports carry notices linking to coordinator corrections. The unresolved Eurostat non-use reconstruction is withheld from the numerical explorer; corrections do not erase historical source vintages.
 
 ## Maintain the record
 
 Each indicator has a stable ID, question, construct, population, geography, fieldwork/reference period, unit, denominator, gender measure, AI definition, source/sample family, access/reuse status, uncertainty and a comparability group. Unknown items remain explicit. Record actual fieldwork, publication and retrieval dates separately when acquired. Add file/version/hash, verified variable names, missingness and exclusions to the linked source profile; do not overwrite old release evidence.
 
-The `audit_record` field points to the prior memo in the parent directory. `new_check_this_setup=false` distinguishes migration from verification. Replace this with a dated verification record only after performing the check, preserving history in Git. Access to a report, catalogue or metadata is not access to its respondent data.
+The `audit_record` field resolves relative to `programme/gender-index/`. `new_check_this_setup=false` retains its historical meaning that the 30 September migration performed no verification. Add new dates and linked evidence to `verification_status` and `audit_record` after checking sources, preserving history in Git. Access to a report, catalogue or metadata is not access to its respondent data.
 
 Use `sample_family` to prevent counting purpose tables, multiple reports or a synthesis as independent surveys. Comparison groups limit compatible comparisons; do not pool incompatible measures into a worldwide rate. Survey sex categories and name-associated message categories must remain visibly different.
 

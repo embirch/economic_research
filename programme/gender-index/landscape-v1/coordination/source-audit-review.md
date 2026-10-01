@@ -1,0 +1,30 @@
+# Disposition of the data-steward submission
+
+Codex, 1 October 2026. Delivered commits `78d8db2` and `5082703`; final idle-session cost $20.94. The final correction implements the UK interval-location qualification and confirms Pew Wave 187. It was requested within the active assignment and processed after the runner’s earlier $17.39 idle snapshot; the ledger preserves that snapshot and appends the reconciled final cost. The final patch was applied to the preserved submission without removing coordinator review notices. The submitted 31-row register, 72-entity coverage table, 19-entry search log, profiles and scripts are retained under `evidence/v1-audit-2026-10-01/`. The current [reviewed source register](../../evidence/source-register.csv) adds integration corrections and two existing literature records. The initial 14 indicator IDs remain in their original register with corrected metadata. Source counts are not independent-study counts.
+
+## Accepted checks
+
+The submitted CSV/ID/cross-reference check passes locally. Its eight further-lead slots include the six coordinator leads and two additions, Japan and Mexico; multiple indicators from one source do not consume new discovery slots. Mexico remains secondary-only, with no numerical finding accepted.
+
+The coordinator independently downloaded the Brazil aggregate bundle, matched its SHA-256, ran the inspected extractor and reproduced the complete JSON exactly. Questionnaire C13A confirms three-month use with AI-tool examples; the collection report's “Data de coleta” section confirms March–September 2025. The archive page's microdata metadata instead says November; this discrepancy is retained as a documentation issue, not silently harmonised. The exact aggregate-table entry explicitly supplies CC BY 4.0. Selected M1 estimates and per-rate margins are accepted with attribution and disclosed rounding; see [credits](../CREDITS.md). Margins are not a variance estimate for the difference between genders. The [methodological report](https://cetic.br/media/microdados/1026/tic_domicilios_2025_relatorio_metodologico_v1.0.pdf), pp. 54–55, independently confirms the 95% level and replicate-weight method. Its pp. 35–36 describe sampling-frame exclusions, including Indigenous and quilombola settlement sectors; this boundary is now attached to the reviewed cards and panel.
+
+The coordinator's existing UK ODS, Pew HTML, Canada HTML and European read-only import checks supply the other four-panel/core checks. Korea's file extraction is attributed to the steward; it was not independently reproduced by the coordinator. Korea remains a checked-source card rather than a numerical panel while reuse terms are unresolved. The generated local explorer contains four national panels (UK, US, Canada CSWC, Brazil), not every cell in the specialist's proposed inclusion table.
+
+## Qualifications and corrections
+
+| Submission | Integration decision |
+|---|---|
+| Korea is the only audited source with sex × age GenAI data | Incorrect: Eurostat also publishes sex × age data and the first paper already analyses them. Korea is an additional promising source; no exclusivity claim. |
+| No comparable multi-country series exists outside Europe | This audit did not establish one. Searches and inspection of selected reports cannot prove none exists. |
+| Every verified source is a single period; no trend anywhere | Too broad given repeated Pew questions and the foundational report's temporal analysis. This edition does not estimate a harmonised trend; compatibility must be checked item by item. |
+| Only Brazil publishes uncertainty / Eurostat publishes none | Restrict to inspected materials. Brazil supplies per-cell margins; UK documentation says intervals were produced, and subgroup locations remain unresolved. No universal absence claim. |
+| Korea or UK subgroup precision is known to be poor from survey size | Retain small-base warnings, but adequacy and difference precision are unestablished without suitable variances. Do not substitute overall survey margins. |
+| Canada 22/22 shows no gender difference | Equal rounded percentages do not establish a zero difference. Preserve crude versus adjusted distinction and the plus-category confidentiality note. |
+| Two Canada releases are independent / not independent | Sample overlap and dependence were not audited. Different vehicles and common provider identity alone settle neither. Do not chain into a trend. |
+| No gender-by-country cells exist in the multi-country sources | A complete outcome matrix was not located in the inspected public reports. This does not establish absence in unretrieved files, other releases or underlying microdata. |
+| Prior records are now unverified because not rechecked | Preserve earlier verification and distinguish its vintage from checks omitted in this pass. Several starter sources received carried-forward dispositions, not fresh file audits. |
+| C2 routing and denominator problem resolved by a model questionnaire | The model defines intended routing; country-specific departures and C2 reconstruction remain unresolved. Numerical non-use panel withheld. No cause claimed for its residuals. |
+| Signals v2.0 establishes the latest file vintage | The inspected publisher label does not demonstrate exact current downloadable content. The prior bundle is not shown superseded; direct new download remained blocked. |
+| Licence “decision” requires a new approval before any useful work | For Brazil the exact archive's explicit licence and attribution were checked as part of authorised integration. Korea stays as a linked source. No purchase, terms-acceptance click or public site launch occurred. |
+
+The global-mapping recommendation is accepted as an internal v1 architecture, not a claim of complete coverage or publication approval. The source atlas documents verification depth, the unresolved items and the scope of each module. The original specialist files are preserved with an integration notice; historical pilot files remain unchanged.

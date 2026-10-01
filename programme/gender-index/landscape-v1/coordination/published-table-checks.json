@@ -1,0 +1,51 @@
+{
+  "sources": {
+    "canada-cswc": {
+      "url": "https://www150.statcan.gc.ca/n1/pub/75-006-x/2026001/article/00007-eng.htm",
+      "sha256": "fd0612e4e13b928faf260d23d4181bce5919c196585abc401bd74fda83acaded",
+      "bytes": 121489,
+      "checked": "2026-10-01"
+    },
+    "pew-gender": {
+      "url": "https://www.pewresearch.org/internet/2026/06/17/the-gender-gap-in-ai/",
+      "sha256": "45f21a74d464d9927a54fc17576b255160a1f8c033e27fb155e3c1e738d88a41",
+      "bytes": 632345,
+      "checked": "2026-10-01"
+    },
+    "brazil-m1": {
+      "url": "https://www.cetic.br/pt/tics/domicilios/2025/individuos/M1/",
+      "sha256": "7eb17e218305e4a84e95574433c8b12d15f418ce6e2d682202abdbb5492152ed",
+      "bytes": 25519,
+      "checked": "2026-10-01"
+    }
+  },
+  "pew_ever_chatbot_use": {
+    "table": "Men, women are now equally likely to say they use chatbots; 2026 row",
+    "population": "US noninstitutionalised adults 18+",
+    "fieldwork": "2026-02-17 to 2026-02-23",
+    "denominator": "all adults of each reported category",
+    "percent": {
+      "Men": 50,
+      "Women": 47
+    },
+    "limits": "Ever use; not past-three-month prevalence. Pew describes the shares as similar; not proof of exact equality. No new significance test here."
+  },
+  "brazil_m1_use": {
+    "table": "M1; SEXO rows; Sim column",
+    "percent": {
+      "Masculino": 35,
+      "Feminino": 30
+    },
+    "denominator": "internet users",
+    "limits": "Provider's rounded published cells; questionnaire/reference-window and precision checks required before integration."
+  },
+  "canada_adjusted_model": {
+    "table": "Table A.1; Gender",
+    "reference": "Female+",
+    "comparison": "Male+",
+    "odds_ratio": "1.15",
+    "ci95_lower": "1.02",
+    "ci95_upper": "1.29",
+    "limits": "Adjusted association, not a probability difference or causal effect. Plus labels include redistributed nonbinary respondents for confidentiality. Crude percentages of 22/22 are from narrative, not this model."
+  }
+}

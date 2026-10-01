@@ -1,0 +1,252 @@
+{
+  "source_id_prefix": "BR_CETIC",
+  "sample_family": "BR_CETIC_TICDOM_2025",
+  "provider": "Cetic.br / NIC.br",
+  "survey": "TIC Domicilios 2025 (individuals tables, version 1.0)",
+  "retrieved": "2026-10-01",
+  "source_url": "https://cetic.br/media/microdados/986/ict_households_2025_individuals_tables_xlsx_v1.0.zip",
+  "archive_sha256": "9ca6638cc6a965d7d90de789cdc7f0e67de08918d4f4067c56575e9b621dd930",
+  "archive_bytes": 1027291,
+  "tables": {
+    "M1": {
+      "description": "internet users by use of generative AI tools",
+      "measures": {
+        "proportion": {
+          "sheet_title": "M1 -  INTERNET USERS BY USE OF GENERATIVE ARTIFICIAL INTELLIGENCE (AI) TOOLS",
+          "base": "Total number of Internet users",
+          "columns": [
+            "Yes",
+            "No",
+            "Does not know",
+            "Did not answer"
+          ],
+          "sex_rows": {
+            "Male": [
+              34.7902,
+              64.3738,
+              0.7306,
+              0.1054
+            ],
+            "Female": [
+              30.4901,
+              68.5496,
+              0.8835,
+              0.0768
+            ]
+          }
+        },
+        "total": {
+          "sheet_title": "M1 -  INTERNET USERS BY USE OF GENERATIVE ARTIFICIAL INTELLIGENCE (AI) TOOLS",
+          "base": "Total number of Internet users",
+          "columns": [
+            "Yes",
+            "No",
+            "Does not know",
+            "Did not answer"
+          ],
+          "sex_rows": {
+            "Male": [
+              25591924,
+              47353880,
+              537469,
+              77511
+            ],
+            "Female": [
+              25579362,
+              57509070,
+              741194,
+              64443
+            ]
+          }
+        },
+        "margin_of_error": {
+          "sheet_title": "M1 -  INTERNET USERS BY USE OF GENERATIVE ARTIFICIAL INTELLIGENCE (AI) TOOLS",
+          "base": "Total number of Internet users",
+          "columns": [
+            "Yes",
+            "No",
+            "Does not know",
+            "Did not answer"
+          ],
+          "sex_rows": {
+            "Male": [
+              3.2872,
+              3.307,
+              0.2393,
+              0.096
+            ],
+            "Female": [
+              2.7759,
+              2.7697,
+              0.341,
+              0.0385
+            ]
+          }
+        }
+      }
+    },
+    "M2": {
+      "description": "internet users who used generative AI, by purpose of use",
+      "measures": {
+        "proportion": {
+          "sheet_title": "M2 -  INTERNET USERS WHO USED GENERATIVE AI BY PURPOSE OF USE",
+          "base": "Total number of Internet users who used generative AI",
+          "columns": [
+            "For professional or work use",
+            "For school or college research/work",
+            "For personal use",
+            "For another purpose"
+          ],
+          "sex_rows": {
+            "Male": [
+              52.2303,
+              47.679,
+              88.17,
+              4.1691
+            ],
+            "Female": [
+              48.6824,
+              58.477,
+              80.3,
+              3.3803
+            ]
+          }
+        },
+        "total": {
+          "sheet_title": "M2 -  INTERNET USERS WHO USED GENERATIVE AI BY PURPOSE OF USE",
+          "base": "Total number of Internet users who used generative AI",
+          "columns": [
+            "For professional or work use",
+            "For school or college research/work",
+            "For personal use",
+            "For another purpose"
+          ],
+          "sex_rows": {
+            "Male": [
+              13614226,
+              12427834,
+              22982751,
+              1086698
+            ],
+            "Female": [
+              12620590,
+              15159691,
+              20817381,
+              876310
+            ]
+          }
+        },
+        "margin_of_error": {
+          "sheet_title": "M2 -  INTERNET USERS WHO USED GENERATIVE AI BY PURPOSE OF USE",
+          "base": "Total number of Internet users who used generative AI",
+          "columns": [
+            "For professional or work use",
+            "For school or college research/work",
+            "For personal use",
+            "For another purpose"
+          ],
+          "sex_rows": {
+            "Male": [
+              5.2228,
+              5.679,
+              2.519,
+              2.2651
+            ],
+            "Female": [
+              4.9992,
+              5.5776,
+              4.382,
+              2.2942
+            ]
+          }
+        }
+      }
+    },
+    "M3": {
+      "description": "internet users who did not use generative AI, by declared reason",
+      "measures": {
+        "proportion": {
+          "sheet_title": "M3 -  INTERNET USERS WHO DID NOT USE GENERATIVE AI BY REASON FOR NOT USING GENERATIVE AI",
+          "base": "Total number of Internet users who did not use generative AI",
+          "columns": [
+            "Lack of interest or need",
+            "Lack of awareness of the existence of this type of tool",
+            "Lack of skills to use this type of tool",
+            "Concerns with security and privacy",
+            "Other reason"
+          ],
+          "sex_rows": {
+            "Male": [
+              73.9557,
+              50.4143,
+              55.0028,
+              58.6516,
+              0.9472
+            ],
+            "Female": [
+              77.5159,
+              53.2201,
+              60.4712,
+              67.5019,
+              0.3986
+            ]
+          }
+        },
+        "total": {
+          "sheet_title": "M3 -  INTERNET USERS WHO DID NOT USE GENERATIVE AI BY REASON FOR NOT USING GENERATIVE AI",
+          "base": "Total number of Internet users who did not use generative AI",
+          "columns": [
+            "Lack of interest or need",
+            "Lack of awareness of the existence of this type of tool",
+            "Lack of skills to use this type of tool",
+            "Concerns with security and privacy",
+            "Other reason"
+          ],
+          "sex_rows": {
+            "Male": [
+              37101393,
+              25291371,
+              27593319,
+              29423816,
+              475209
+            ],
+            "Female": [
+              46463504,
+              31900495,
+              36246833,
+              40461048,
+              238955
+            ]
+          }
+        },
+        "margin_of_error": {
+          "sheet_title": "M3 -  INTERNET USERS WHO DID NOT USE GENERATIVE AI BY REASON FOR NOT USING GENERATIVE AI",
+          "base": "Total number of Internet users who did not use generative AI",
+          "columns": [
+            "Lack of interest or need",
+            "Lack of awareness of the existence of this type of tool",
+            "Lack of skills to use this type of tool",
+            "Concerns with security and privacy",
+            "Other reason"
+          ],
+          "sex_rows": {
+            "Male": [
+              3.2088,
+              4.0696,
+              3.8643,
+              3.3473,
+              0.5968
+            ],
+            "Female": [
+              2.5262,
+              3.6684,
+              3.4962,
+              2.8837,
+              0.1638
+            ]
+          }
+        }
+      }
+    }
+  }
+}

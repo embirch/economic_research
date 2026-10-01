@@ -1,0 +1,71 @@
+# Gender and generative AI: landscape synthesis for v1
+
+> Coordinator integration note, 1 October 2026: this is the preserved specialist submission. Read the [reviewed synthesis](../SYNTHESIS.md) and [explicit corrections](../coordination/synthesis-review.md) before using its claims. Emily’s latest [parked questions](../coordination/emerging-questions.md) are maintained separately.
+
+Programme lead, 1 October 2026. Branch `work/index-v1-landscape-2026-10-01`. Every number below is traced in [`claims-evidence.csv`](claims-evidence.csv) with its population, reference period, denominator, design and verification status; claim IDs appear in brackets. Proposed corrections to the central register are in [`literature-updates.csv`](literature-updates.csv). This is a bounded synthesis of sources actually read in this session, not a systematic review, and it deliberately produces no pooled worldwide rate.
+
+## The foundational report, and how this synthesis uses it
+
+Emily has identified [Cranney, Delecourt and Koning, *Global Evidence on Gender Gaps and Generative AI Over Time*, HBS Working Paper 25-023, May 2026](https://www.hbs.edu/ris/Publication%20Files/25-023_be8fb517-3dd5-40aa-97f9-4e42e1c8e6ff.pdf) as foundational for this programme, and it is treated as such here. The paper was read in full on 1 October 2026 and performs three functions that no other single source in the register performs.
+
+First, **discovery**: its systematic review identifies 76 sources, of which 58 supply comparable male and female rates, and its appendix tables record each source's sample, field dates and the exact question wording behind every plotted estimate. That inventory is the fastest reliable route into the literature outside Europe, and it has already surfaced sources this programme had not registered — among them an EU-wide workplace survey, a representative Korean worker survey and national evidence from Sudan, Ghana and the United Arab Emirates.
+
+Second, **synthesis**: the paper is wider than the register's earlier description of it as adoption-only. It covers adoption, intensity (visit duration, prompt volume, persistence), differences between tools and products, and an organised account of five candidate mechanisms with the supporting and conflicting sources named for each. That correction is submitted in `literature-updates.csv`.
+
+Third, **novelty assessment**: because it maps which populations and tools have been studied, it is the right instrument for testing whether a proposed deep dive is genuinely new. It also forecloses any claim that this programme is first to the subject.
+
+Two boundaries matter. Its pooled figures are weighted averages across study estimands — "ever use", weekly use, workplace use and tool-specific use — and are not prevalence for any defined population, least of all the world's [P07]. And a systematic review is one evidence lineage: several of its entries draw on the same survey programmes that this register already holds, so it cannot be counted alongside them as independent confirmation.
+
+## Participation
+
+The most defensible statement is that a male-favouring difference in generative-AI use appears in most places it has been measured, that it is small relative to age and education differences, and that its size depends heavily on what is being counted.
+
+In the EU in 2025, 33% of people aged 16–74 used generative AI in the previous three months; men 35%, women 30% [P01, P02]. Eurostat's own reading of that table is that "gender is less of a predictor" than age or education — in the same data, 64% of 16–24s used it against 7% of 65–74s, and 49% of the most educated against 22% of the least [P02]. A 5-point sex difference and a 57-point age difference sit in one table, and v1 should show both.
+
+Outside the EU, national modules differ in ways that forbid ranking. UK adults aged 16+ report 63.2% (male) and 55.5% (female) use in the previous three months — but that instrument's definition includes autonomous workplace AI, and UK coverage extends above age 74 [P03]. Brazilian internet users aged 10+ report 35% and 30% [P05]: numerically identical to the EU split, on a different denominator, a different age range and an unstated reference window. That coincidence is the single clearest argument in this register against a league table.
+
+Two recent findings complicate the simple picture. In the United States the ever-use gap has effectively closed: 50% of men and 47% of women say they ever use chatbots, against 39% and 28% in 2024 [P04]. In Canada, rounded workplace use is 22% for women and 22% for men, while the adjusted odds ratio for Male+ against Female+ is 1.15 (95% CI 1.02–1.29) [P06] — crude parity alongside a small adjusted male-favouring association. Neither can be restated as a percentage-point effect.
+
+Against that, the foundational review's pooled figures are 47.8% for men and 39.3% for women across 54 entries and 318,924 respondents or observed users, an 8.5-point and 21.7% relative gap; restricted to 2025–2026 sources the same method gives 39.8% and 34.4%, a 5.4-point and 15.7% gap [P07]. The raw difference favours men in 56 of 58 plotted sources [P08]. Consistency of sign across publications is informative; it is not statistical independence.
+
+## Purposes and intensity
+
+Where the extensive margin has narrowed, differences have not disappeared — they have moved. In the same US survey in which ever-use is at parity, 27% of men and 20% of women use chatbots daily [I01], and the tool mix diverges sharply: Gemini 29% against 20%, Copilot 22% against 13%, Grok 11% against 4%, Claude 9% against 4% — while ChatGPT is identical at 44% and Meta AI is the one female-higher entry at 13% against 15% [I02]. A single headline adoption indicator would conceal all of this, which is an argument for v1 reporting participation and intensity as separate constructs rather than one score.
+
+Commercial traffic data point the same way with a weaker unit. Across the ten most visited US AI tools the female share of *visits* runs from 44.1% on chatgpt.com to 26.7% on grok.com [I03], and the worldwide female traffic share rose from just under 35% in January 2023 to about 40% by January 2026, broadly flat since October 2024 [I04]. These are visits with vendor-imputed gender, not people, and they have no population at risk.
+
+Female-higher patterns are real and domain-specific rather than anomalous: longer mean visits by women on companion-oriented products [I03], emotional support and advice in the US (11% against 8%) with no companionship difference [I05]. Reporting them is not a softening of the headline; it is what the measures show.
+
+One gap is worth stating plainly: the published Eurostat purpose breakdown used here is by age, not by sex [I06]. A sex-by-purpose claim cannot be read off it.
+
+## Experience, barriers and workplace opportunity
+
+Differences in reported familiarity, confidence and perceived benefit are larger and more persistent than the adoption difference. US men are more likely to say they have heard a lot about AI (55% against 41%) and to be confident using chatbots (22% against 15%) [B02], and more likely to say chatbots help their productivity (35% against 25%) [B03] — a belief, not a measured outcome. Women are more negative about societal impact (43% against 36%) and more likely to say AI is advancing too quickly (68% against 58%) [B04].
+
+How much weight that carries is contested. [Stephany and Duszynski](https://arxiv.org/abs/2601.03880) report that in UK tracker data the gap in frequent personal use is widest among younger, digitally fluent respondents with high societal-risk concerns, exceeding 45 points in that subgroup, and that risk perception is among the strongest predictors of women's use [B05]. Yet in Eurostat's EU data only 7% of non-users name privacy or security as their single main reason; 64% say they simply do not feel the need and 14% are unsure how [B01]. Reported reasons and modelled predictors are answering different questions, and neither identifies a cause.
+
+On workplace opportunity the register is thinner than it looks. [Henseke](https://arxiv.org/abs/2604.18849) finds adoption from under 3% to 25% across 35 European countries, exposure strongly predicting uptake, a gender gap that persists and is concentrated in the most exposed occupations, and no detectable effect of adoption on worker-reported task restructuring [W01]. The abstract gives no gap magnitude and does not name the underlying survey, so the register's assignment of this record to the EWCS 2024 sample family is not yet confirmed — a correction request, not a finding. The frequently cited Danish result, women about 16 points less likely than men in the same occupation to have used ChatGPT for work [W02], could not be verified at source in this session; it is reported here as secondary. Claims circulating in the programme's historical landscape note that employer encouragement cuts that gap to 5 points and training to 3.6 remain unverified and should not appear in v1.
+
+Finally, an EU-wide working-age survey reportedly finds gender *not* significant for AI use at work once occupation, education, age, firm size, income, tenure and country are controlled [W03]. Set against the foundational review's finding of within-occupation and within-firm gaps [P08, W04], this is the sharpest live disagreement in the register.
+
+## Exposure and economic context
+
+The [ILO research brief](https://www.ilo.org/publications/gen-ai-occupational-segregation-and-gender-equality-world-work) of March 2026 supplies the exposure picture: 29% of female-dominated occupations fall in exposure gradients 1–4 against 16% of male-dominated ones; 16% against 3% in the two highest gradients, concentrated in business administration and clerical support [E01, E02]; and women in employment are more exposed than men in 88% of 84 countries [E03]. Three qualifications travel with those numbers. The unit is occupations, not workers. Exposure is modelled potential, and the brief states explicitly that it does not imply near-term redundancy — the expected channel is tasks, skills and working conditions. And exposure tracks economic structure heavily: 41% of employment is exposed in high-income countries against 11% in low-income ones [E03].
+
+[Tera Allas](https://teraallas.substack.com/p/ai-and-jobs-when-exposure-is-a-strength) argues the opposite-signed reading: the most AI-exposed UK occupations tend to have more distinct work activities and higher qualification levels, which favours augmentation over automation, so exposure "is not the same as risk" [E04]. Her post contains no gender analysis, its UK employment and wage growth figures are her own uncited calculations, and the linked task-bundling paper was unreadable; it is a mechanism argument, not an estimated effect, and it and the OpenAI framework it endorses are one interpretive lineage rather than two confirmations. Notably, her own exception — administrative and secretarial work, already in decline — is exactly the female-dominated high-gradient cluster. Read together, the two sources are less contradictory than they appear: they imply that augmentation and automation may be unevenly distributed by sex, which is an open question, not a result.
+
+Economic consequences remain unmeasured. The foundational review's closing extrapolation, that a persistent 16% gap could cost hundreds of billions in US productivity [E06], multiplies an aggregate productivity-potential figure by a usage gap; it presumes that use causes the gains and that forgone use maps proportionally onto output. The same conclusion concedes the reverse possibility, that lower adoption could benefit women if AI erodes skills. Neither belongs in v1 as an estimate.
+
+## Where the evidence disagrees
+
+Four disagreements are definitional rather than empirical, and v1 should resolve them by labelling, not by choosing. **Outcome:** the US gap has closed on ever-use and not on daily use or tool mix [P04, I01, I02]. **Denominator:** near parity among active ChatGPT consumer accounts coexists with a 44.1% female share of US visits, because the populations differ and neither has a population at risk [X01]. **Estimand:** crude parity with an adjusted male-favouring association in Canada [P06], and gender insignificant after controls in the EU [W03] against within-occupation gaps elsewhere [P08] — conditioning on occupation answers a different question from the unconditional comparison. **Construct:** women are more exposed and less adopting at the same time, with no welfare sign attached to either [E01, W01].
+
+One further caution is instructive. The adjacent [Global Index on Responsible AI](https://www.global-index.ai/) measures governance, not use [C01], yet publishes a headline that 53% of the global population has used generative AI with no denominator, period or source on the page [C02]. That is precisely the figure v1 declines to produce.
+
+## Who is not measured
+
+Eurostat records sex as Male/Female only and never crosses it with occupation; the UK publishes a third category and a "prefer not to say" category on bases of 99 and 671, requiring visible precision caveats [P03]; Canada redistributes nonbinary respondents into Male+/Female+ for confidentiality [P06]; Brazil's table covers only internet users [P05]. Non-binary and trans populations are therefore close to unmeasured everywhere, intersectional differences appear only qualitatively, and no source in this register observes pay, promotion or hours in relation to generative-AI use by sex.
+
+## What readers should take from v1
+
+That a modest, widely replicated male-favouring difference in generative-AI use exists; that it is narrowing on the broadest measures while persisting on frequency, on frontier tools and in confidence and perceived benefit; that women's work is more exposed to the technology on task-based measures while their adoption is lower; and that nobody has yet measured who gains. More use is not self-evidently better, men's rate is not the target, and the honest headline of v1 is a well-documented map with its empty cells left visibly empty.
