@@ -8,7 +8,7 @@ Understand gender differences in adoption, use and experience of generative AI, 
 
 The intended programme combines a maintained Gender & AI Index or evidence explorer with approximately three substantial research papers. The index's final form, coverage and paper choices depend on verified data and a distinct contribution. No composite score, worldwide ranking, causal pathway or release schedule is committed. The fellowship application is a motivation, not a constraint that every study use Anthropic data or imitate its prose.
 
-Emily clarified on 1 October 2026 that original empirical analysis of suitable datasets is a core deliverable, alongside coherent synthesis of existing evidence. Develop the deep-dive papers alongside the index. Triangulate our results with academic, official, qualitative and informed interpretive work; trace claims to underlying evidence and retain disagreement. The [research agenda](programme/gender-index/RESEARCH-AGENDA.md) sets the contribution requirements and candidate questions.
+Emily clarified on 1 October 2026 that original empirical analysis of suitable datasets is a core deliverable, alongside coherent synthesis of existing evidence. Her subsequent sequencing clarification is to conduct the broad data research and assemble an initial index/evidence synthesis before selecting new deep-dive papers. Log questions as they emerge; let coverage, patterns, contradictions and gaps inform selection. Triangulate throughout with academic, official, qualitative and informed interpretive work. The [research agenda](programme/gender-index/RESEARCH-AGENDA.md) sets the contribution requirements and sequence.
 
 ## Current scope
 
@@ -43,8 +43,8 @@ The [operating model](team/SETUP.md) defines file ownership, proportionate revie
 
 ## Immediate work order
 
-1. Resolve the first pilot's consequential review issues and assess geographic coverage alongside feasibility for original analysis.
-2. Prepare contribution-led deep-dive briefs and an interpretation/evidence map; select questions from available joint data rather than a collection of publishable charts.
-3. Scope and budget the next research assignments, then implement and independently check the selected analyses under their approved plans.
-4. Connect reviewed results to the index and propose warranted revisions to the existing paper, preserving live author edits and reproducible versions.
-5. Develop the explorer and publication package with Emily's scientific and editorial decisions. Keep `economic_research` public under her 30 September instruction; article-repository cloud access remains a separate setup limitation.
+1. Scope the broader data/literature audit: resolve pilot issues, assess the existing inventory and additional regional leads, and establish what can be measured and compared. New paid work still needs an explicit cap.
+2. Assemble an initial checked index/evidence map and synthesis, with coverage, definitions, limitations and a running log of emerging questions.
+3. Use that foundation to choose original deep-dive questions, verify their distinct contribution and data requirements, and prepare scoped analysis plans and budgets.
+4. Conduct and independently check the selected studies; feed findings back into the index and propose warranted paper revisions, preserving live author edits and reproducible versions.
+5. Prepare releases with Emily's scientific and editorial decisions; the initial index need not wait for all papers. Keep `economic_research` public under her 30 September instruction; article-repository cloud access remains a separate setup limitation.

@@ -14,7 +14,11 @@ The explorer is a way to communicate this research. A complete programme cannot 
 
 ## Deep-dive pipeline
 
-Develop paper questions during source verification and contribution review, alongside the index. Do not defer them until after dashboard delivery. The existing European paper supplies the first empirical foundation; approximately three papers remains the working portfolio, with subsequent choices led by feasible data and contribution.
+Latest sequencing clarification, 1 October 2026: complete the broad data/literature audit and assemble an initial verified index/evidence synthesis before selecting new deep-dive questions. Maintain a running log of patterns, contradictions, gaps and possible questions during discovery; these are observations and leads, not commissioned papers. The existing European paper supplies an empirical foundation; approximately three papers remains the working portfolio. A polished public website is not a prerequisite for choosing papers once the evidence base is assembled.
+
+The sequence is: broad audit → initial index/evidence synthesis → paper selection and analysis plans → original studies → findings fed back into the index and existing paper. An initial index may contain our own descriptive calculations needed for its measures; those calculations and the emerging-question log do not constitute a prematurely selected deep-dive study. Disclose data inspection when planning later analyses.
+
+Emily explicitly confirmed the intended milestone: **landscape/index v1 first, then deep dives, refining the big picture as we go**. A useful v1 contains a readable account of current findings; checked source-specific indicators; a country/construct coverage and comparability map; linked source/method notes; and clearly marked disagreements, evidence gaps and emerging questions. It is a substantive research output with known limits, not just a list of datasets. It need not be exhaustive or a finished public website.
 
 | Candidate | Original work to define | Data needed and current limits |
 |---|---|---|
@@ -22,7 +26,7 @@ Develop paper questions during source verification and contribution review, alon
 | Workplace opportunity and use | Ask whether reported employer support, training or job autonomy is associated with AI use differently across source gender categories. If supported, compare within occupational groups and assess how composition changes the descriptive gap. | Needs permitted respondent data containing the required variables together, adequate subgroup coverage, weights and design information. EWCS and other workplace sources are candidates, not confirmed inputs. Review overlap with existing workplace papers before choosing the question. Cross-sectional adjustment is not a causal effect of support. |
 | Exposure, job change and the distribution of benefits | Investigate whether similarly exposed work differs in observed adoption or job outcomes across task/occupational groups, and how women and men are distributed across those groups. Define a narrower question if outcomes cannot be observed. | Needs compatible occupation codes, sex-disaggregated employment and independently measured task/job characteristics; observed wage, hours or employment change needs suitable time data. Exposure scores alone cannot establish benefits or losses. Occupational comparisons remain aggregate evidence, not inferred individual behaviour. |
 
-These are candidate directions, not approved designs or a commitment to run every analysis. If workplace or outcome data fail, alternatives already in the register include within-source patterns of platform activity or motivations. Name-associated message categories cannot become measures of women's participation, and recalled motives cannot become observed first-use behaviour. Selection must preserve the requirement for substantive original research rather than quietly falling back to compilation alone.
+These are examples in the question log, not priorities that should steer the audit or predetermined paper slots. New questions may replace them entirely as the index takes shape. If workplace or outcome data fail, alternatives already in the register include within-source patterns of platform activity or motivations. Name-associated message categories cannot become measures of women's participation, and recalled motives cannot become observed first-use behaviour. Later selection must preserve the requirement for substantive original research rather than quietly falling back to compilation alone.
 
 Each selected paper needs a short brief recording:
 
@@ -58,11 +62,11 @@ These readings do not establish a direction of gender effects. Our proposed inte
 
 ## Claude and Codex responsibilities
 
-- Programme lead: formulate the paper briefs, verify contribution, and maintain the interpretation/evidence map, including challenging writers and underlying studies.
+- Programme lead: first synthesise the literature and maintain the interpretation/evidence map and emerging-question log, including challenging writers and underlying studies; develop paper briefs after the broad audit and initial index.
 - Data steward: verify access, joint variables and design, reporting separately whether a source supports a displayable statistic or the proposed original analysis.
 - Analyst: implement each authorised study's analytical plan and robustness checks with reproducible outputs; disclose exploration and deviations.
 - Referee: independently reproduce key calculations and challenge novelty, measurement and alternative explanations; distinguish a mechanism from evidence that it operates here.
 - Editor: integrate reviewed evidence and nuance into the assigned prose while preserving Emily's voice and live edits.
 - Codex: coordinate the source/question decisions, versioning, integration and review record; Emily owns scientific direction and publication.
 
-The next proposed research brief should therefore combine feasibility for original analysis with source coverage, rather than ask only which charts can be reproduced. Existing paid-task caps remain unchanged; later papers require scoped assignments and budgets.
+The next proposed assignment is the broader data/literature audit, recording both index-ready measures and available fields for future analysis without selecting papers yet. Audit completion means each registered candidate and scoped regional lead has dated evidence or an explicit blocker, a coverage/comparability matrix exists, and the proposed initial index has a documented basis. Do not call this a systematic global review unless its search protocol and execution justify that description. Existing paid-task caps remain unchanged; later papers require scoped assignments and budgets.

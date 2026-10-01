@@ -18,6 +18,8 @@ The coordinator gives each contributor a distinct branch and non-overlapping fil
 
 ## Proportionate research sequence
 
+At programme level, broad data/literature research and an initial verified index/evidence synthesis precede selection of new deep-dive papers. Maintain an emerging-question log during discovery; do not commission paper briefs around predetermined topics before that foundation exists. The study-level sequence below applies once a question is selected. This ordering does not delay warranted updates to the existing paper.
+
 1. **Brief and feasibility:** a standalone question, contribution relative to the wider literature, measurement assumptions, actual available fields and access terms. Emily approves a new study's scope and budget.
 2. **Analysis plan:** definitions, sample and exclusions, estimands, primary comparisons, uncertainty and robustness. Disclose prior inspection. Use hypotheses, power and formal decision rules only where appropriate. Review the plan before new primary analysis; honour any existing approval instead of asking again.
 3. **Analysis and verification:** maintain immutable source snapshots locally, provenance, code and logged deviations. Reviewers independently reproduce key results and challenge interpretations.

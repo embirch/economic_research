@@ -12,7 +12,7 @@ Pilot outcome: delivered for $6.21. The [coordinator review](reviews/2026-10-01-
 
 A maintained evidence resource answering three questions: who uses generative AI, what they use it for, and what opportunities or barriers shape their experience. Economic consequences remain a research question. The working name is Gender & AI Index, but the first edition would present separately defined indicators and an evidence explorer. A single score or worldwide league table is not needed for a useful release.
 
-The programme has three connected outputs: coherent synthesis of existing evidence, our own original analyses in deep-dive papers, and triangulated interpretation. An initial explorer can appear while a study is in progress, but the programme's contribution is not complete with repackaged statistics. Select paper questions during feasibility and develop them alongside the index.
+The programme has three connected outputs: coherent synthesis of existing evidence, our own original analyses in deep-dive papers, and triangulated interpretation. Emily's latest sequence is **broad data research → landscape/index v1 → deep dives informed by v1 → successive refinements to the big picture**. Record emerging questions during discovery, then choose papers from the assembled evidence. Original research remains a core programme contribution; selecting it is not the immediate next task.
 
 The proposed primary audience is researchers and policymakers; a short narrative layer would serve interested readers and journalists. Emily confirms this audience and scope before the first research tranche. Success is a reader being able to understand a comparison, inspect its limitations, and trace it to its source and calculation.
 
@@ -45,7 +45,7 @@ At pilot launch, the current credential cannot access the article repository; th
 | Emily | Scientific direction, interpretation, editorial voice, budgets, final inclusion and release | Three main decisions: commission feasibility; choose release scope; approve publication |
 | Codex | Prepare assignments and inputs, manage branches and provenance, integrate results, run checks, build the explorer, present decisions and costs | Throughout; one integration owner |
 | Claude data steward | Verify actual data, measures, access/reuse terms, coverage and source families | First research task; limited later source corrections |
-| Claude programme lead | Develop original paper questions and verify contribution; synthesise research and informed writing, tracing shared sources and competing interpretations | Alongside source verification, with separate output ownership |
+| Claude programme lead | First synthesise research and informed writing, trace shared sources and competing interpretations, and log emerging questions; later develop original paper briefs | Synthesis alongside source verification; paper selection after landscape/index v1 |
 | Claude analyst | Develop and execute each selected paper's original empirical plan, plus indicator calculations and diagnostics | After question/data selection; no speculative modelling to compensate for missing variables |
 | Claude referee | Independently inspect source evidence, challenge estimands and reproduce material results | Short feasibility review, then substantive methods/results review |
 | Claude second-read referee | Verify a finite list of resolved review issues | Only if substantive corrections warrant it; not a default second full review |
@@ -60,7 +60,7 @@ AI review is useful for reproducibility and criticism, but it is not independent
 
 ### Step 1 — Fix the brief and launch only a bounded first tranche
 
-Codex turns this proposal into a one-page agreed brief: audience, organising questions, provisional modules, exclusions, deliverables and spending envelope. Reuse the concept, additional-source audit, 14 candidate indicators and 8 literature records. Do not reopen the first-paper comparison.
+Codex turns this proposal into a one-page agreed brief: audience, organising questions, provisional modules, exclusions, deliverables and spending envelope. Reuse the concept, additional-source audit, 14 candidate indicators, the current literature register and newer source leads. Do not reopen the first-paper comparison.
 
 Prepare versioned assignment files using `team/templates/ASSIGNMENT.md`. Each specifies the source commit, role/version, writable files, branch, output, validation, cap and stopping point. Give agents only the inputs they need. Agent work requiring local raw files stays blocked until access, licence and permitted processing environment are checked; do not upload respondent data merely to make a cloud assignment convenient.
 
@@ -68,11 +68,11 @@ Deliverable: launch-ready briefs and an explicit authorisation entry. Decision A
 
 ### Step 2 — Verify the evidence inventory
 
-The data steward follows `FIRST-ASSIGNMENT.md`, starting with the three Eurostat entries. Reuse local audit manifests and the paper's frozen source version before downloading newer releases. Check all 14 candidates, grouped by source family, rather than commissioning 14 disconnected reviews.
+The data steward starts from the existing inventory brief in `FIRST-ASSIGNMENT.md`, updated for the broader remit before commissioning. Resolve the pilot's consequential Eurostat issues; reuse existing source checks and the article's recorded source version. Assess all 14 starter candidates by source family and the newer leads in `GEOGRAPHIC-SCOPE.md` and the pilot matrix. Add a bounded regional search so the Europe-heavy starter list does not set the geographic ceiling. Record search scope, dates and unresolved gaps; do not promise exhaustive worldwide discovery.
 
 For each, inspect actual permitted files and documentation where available: population, fieldwork and reference dates, AI definition, survey question/routing, sex/gender variable, unit, denominator, weights/design, joint variables, subgroup sizes, suppression/missingness, uncertainty, source version, access and redistribution terms. Reproduce a relevant published benchmark where feasible. A codebook or report alone earns documentation-only status.
 
-Report two separate feasibility judgments: can this source support a clearly defined index measure, and can it support our proposed original research question? The latter needs actual joint fields, sufficient variation and a usable design. More geographic coverage alone does not answer that question.
+Report whether a source supports a clearly defined index measure and what joint variables/design it offers for potential later research. Do not constrain the audit to the two previously suggested paper topics. More geographic coverage alone does not establish analytical comparability or the feasibility of an individual-level study.
 
 Use a bounded triage rule: one documented access route and one reasonable alternative before recording an access blocker. Do not spend a whole session repeatedly trying a blocked download. Record unavailable, not yet checked and inaccessible as different states.
 
@@ -82,11 +82,11 @@ The historical `new_check_this_setup=false` field continues to mean that the ori
 
 ### Step 3 — Establish the contribution and identify omissions
 
-The programme lead examines the existing eight literature entries and the specific overlap questions already raised in the audits: adoption syntheses, national gender reports, platform dashboards, workplace studies and neighbouring gender/AI indices. Record search terms, dates, versions, inclusion decisions and underlying sample families. This is a focused scoping review, not a systematic review unless a separate protocol and search justify that label.
+The programme lead examines the current literature register and the specific overlap questions already raised in the audits: adoption syntheses, national gender reports, platform dashboards, workplace studies and neighbouring gender/AI indices. Record search terms, dates, versions, inclusion decisions and underlying sample families. This is a focused scoping review, not a systematic review unless a separate protocol and search justify that label.
 
 Ask what the resource adds beyond republishing existing charts: traceable source-specific measures, explicit comparability, maintained coverage and uncertainty, and original empirical papers answering identified questions. Include female advantages, null findings and measurement gaps. Review excluded populations, unpaid work and nonbinary gender coverage as scope questions rather than manufacture indicators for them.
 
-Deliverables: a contribution memo and overlap table, plus ranked paper briefs using `team/templates/BRIEF.md`. Each brief states the new question, what we will calculate ourselves, verified data requirements and why the answer adds knowledge. Use the candidate workplace and exposure/opportunity questions in [RESEARCH-AGENDA.md](RESEARCH-AGENDA.md) as starting points, not approved designs. Trace informed writers' interpretations to supporting studies and record contrary evidence in a claims-to-evidence table. The lead may flag missing sources, including the UK leads already in the concept but absent from the 14-row register; additions go into a proposed queue, not an automatic expansion of a bounded assignment.
+Deliverables: a landscape synthesis, overlap table, claims-to-evidence map and emerging-question log. Explain where findings agree, conflict or leave gaps. Trace informed writers' interpretations to supporting studies and seek contrary evidence. New leads enter a dated queue with their verification status. Do not rank or commission paper briefs at this stage; the illustrative questions in [RESEARCH-AGENDA.md](RESEARCH-AGENDA.md) may be replaced by better ones from the wider audit.
 
 Steps 2 and 3 can run concurrently once authorised: the steward owns indicators/source profiles, while the lead owns literature and a contribution memo. Both read common inputs. Codex reconciles disagreements and source-family IDs.
 
@@ -98,11 +98,11 @@ Separate statistical indicators from literature-only evidence. Inclusion require
 
 Present Emily with a concrete release list, exclusions with reasons, and a small number of unresolved choices. Decision B: approve modules and methods development. If only Eurostat is ready, proceed with that core and clearly labelled evidence cards. If Signals is ready, add it as a separate platform module. If workplace data remain inaccessible, retain that question in the research queue.
 
-Alongside the release list, present the strongest feasible original-paper brief and its analytical scope/budget. The resource's earliest release and a deep-dive paper need not cover the same countries or finish together. If a proposed dataset cannot support original work, select a better question/source rather than silently dropping that programme requirement.
+Present the proposed landscape/index v1: a readable synthesis, verified measures, geographic/comparability map, source cards and explicit unknowns. Defer new paper selection until this evidence is assembled. V1 should make useful patterns and unanswered questions visible without implying that missing data are zero or that all countries are comparable.
 
 ### Step 5 — Write and review the measurement plan
 
-The analyst specifies each selected indicator and original paper's analyses before substantive new calculation. The plan records the estimand, population, eligible cells, numerator/denominator, country/year coverage, exclusions, sample overlap, gap direction, uncertainty, missingness handling and sensitivity checks. Disclose all previous data inspection and distinguish confirmatory questions from exploratory comparisons. Any extension to paper one documents its reason and changes, preserving its existing disclosure of prior inspection.
+The analyst specifies each selected v1 indicator before substantive new calculation. The plan records the estimand, population, eligible cells, numerator/denominator, country/year coverage, exclusions, sample overlap, gap direction, uncertainty, missingness handling and sensitivity checks. Disclose previous data inspection. Descriptive calculations needed for the index can proceed under this plan without selecting a deep-dive paper. Any extension to paper one documents its reason and changes, preserving its existing disclosure of prior inspection.
 
 Survey conventions follow the current article: absolute gap = male rate minus female rate in percentage points; relative gap = 100 × (male rate − female rate) / male rate. Always show both underlying rates. Mark the relative gap undefined at a zero male rate. Do not clip negative gaps. Source labels take priority over casually treating sex categories as complete gender measurement.
 
@@ -140,7 +140,13 @@ Emily sees the initial narrative and evidence cards. If commissioned, the editor
 
 First-paper revisions are a separate explicit editorial scope, using the same evidence map and the live author copy. Interpretation should explain differences across sources and consider competing explanations, not assume higher exposure or use is better or worse.
 
-### Step 9 — Publish a versioned first edition
+### Step 9 — Choose deep dives from landscape/index v1
+
+Review the assembled v1 with Emily: what patterns, contradictions or gaps now merit explanation, and which can be investigated with the verified data? Rank questions by substantive importance, distinct contribution and empirical feasibility. Use `team/templates/BRIEF.md` for the selected questions, with our own proposed analysis, design limits and a scoped budget. Disclose the exploratory inspection that generated each question; do not retrospectively call it a hypothesis fixed before seeing the data.
+
+The selected studies follow their own plan, analysis and independent review cycle. Their findings revise the landscape, indicators, interpretation and existing paper where warranted. Neither an exhaustive world inventory nor a polished public website is required before this decision; a substantive, checked v1 is.
+
+### Step 10 — Publish a versioned first edition
 
 Codex assembles a release candidate: explorer, source register, methods, permitted downloads, reproducible code, release manifest, limitations, corrections policy, and AI-assistance disclosure. Verify code/content/data licences separately; the project does not acquire redistribution rights merely by linking to or downloading a source.
 
@@ -148,11 +154,11 @@ Decision C: Emily approves the final public presentation and release. A public w
 
 Publish a dated static edition first. Keep prior editions and associate each chart/paper with its exact source and derived-data version. The existing paper need not wait for the whole explorer if Emily wishes to release it separately.
 
-### Step 10 — Maintain the resource and revise the research portfolio
+### Step 11 — Maintain the resource and revise the research portfolio
 
 Refresh when eligible source releases materially change the evidence, with separately approved maintenance work. Check questionnaire, population, classification and release changes before extending a series. Preserve breaks and corrections; do not promise quarterly updates for annual or irregular sources. Notifications/automations would be a separate explicit setup.
 
-Continue paper one from the existing European manuscript, incorporating warranted new evidence through deliberate revisions. Paper selection begins in Steps 3–4 and analysis proceeds through Steps 5–7, alongside the explorer. Revisit the portfolio as findings emerge. Candidate alternatives include longitudinal task representation using Signals, workplace conditions using permitted survey data, motivations, and exposure/opportunity or realised outcomes where fields and reuse terms support them. Select a replacement if a candidate fails; do not automatically grow the portfolio.
+Continue paper one from the existing European manuscript, incorporating warranted new evidence through deliberate revisions. Questions are logged in Step 3 and selected after v1 in Step 9. Revisit the portfolio as findings emerge, and feed original results back into the wider resource. The previously suggested workplace, platform, motivation and exposure questions are examples rather than reserved paper slots. Select a replacement if a candidate fails; do not automatically grow the portfolio.
 
 The Spanish pilot, if chosen later, would code 100–150 short responses in Spanish, blind coders to gender, allow ambiguity/multiple codes, and compare with independent human coding. Recalled motives are not observed first tasks; cross-sectional current/former use is not longitudinal retention. Human coding time and any restricted-data processing permission are separate dependencies.
 
@@ -201,7 +207,7 @@ For concurrency, the steward and lead may run in parallel after approval. Analyt
 
 ## 7. Proposed next decision
 
-The first pilot is complete. Next, prepare a bounded assignment that closes its consequential review issues, assesses non-European sources and actual fields for original analysis, and develops the strongest paper briefs with a contribution and interpretation map. Present its explicit cap before a new paid launch. Original research is agreed as a programme objective; specific new analyses and paper budgets still need concrete designs. No composite or open-ended literature collection is implied.
+The first pilot is complete. Next, scope the broader data/literature audit and landscape/index v1: close consequential pilot issues, assess the starter inventory and regional leads, verify comparable measures, synthesise findings and maintain an emerging-question log. The proposed $30 paper-selection round was not authorised and is withdrawn. Prepare an explicit audit scope and cap before another paid launch. Choose new deep dives after v1, then refine the big picture with their results. No composite or open-ended literature collection is implied.
 
 ## Basis and methodological references
 

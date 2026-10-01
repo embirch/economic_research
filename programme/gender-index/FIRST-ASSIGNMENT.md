@@ -2,6 +2,8 @@
 
 Status: prepared during setup on 30 September 2026; research execution and paid sessions are not authorised by this document.
 
+Sequencing update, 1 October 2026: this original 14-candidate brief is a starting input, not the complete next assignment. Emily now wants a broader data/literature audit and landscape/index v1 before selecting new deep dives. Before commissioning, extend the scope to the regional leads and source gaps recorded in `GEOGRAPHIC-SCOPE.md`, address the pilot review and specify a bounded search protocol and cap. The original no-expansion rule below applies to the old brief, not the new programme-wide audit. See `EXECUTION-PROPOSAL.md` and `RESEARCH-AGENDA.md`; no new paid launch is authorised here.
+
 ## Assignment contract
 
 - User authorisation: Emily authorised finishing project setup on 30 September 2026. This brief is a proposed next task, not a new study approval.
