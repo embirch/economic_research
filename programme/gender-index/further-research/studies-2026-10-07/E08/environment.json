@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "dependencies": [
+    "numpy",
+    "pandas"
+  ],
+  "script_sha256": "707c0b9984d434f76663dd360a8cf812920f4243689cc98550a1eeb9cdf9025a",
+  "thread_settings": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-08",
+  "status": "pass",
+  "checks": [
+    "frequent: raw contrast/covariance, domain quality and frequency totals pass",
+    "difficult: raw contrast/covariance, domain quality and frequency totals pass",
+    "occupation_sector: joint covariance/decomposition or preserved failed replicates pass",
+    "occupation_sector_education: joint covariance/decomposition or preserved failed replicates pass",
+    "age_saturated_failed_diagnostic: joint covariance/decomposition or preserved failed replicates pass",
+    "Release suppression and companion suppression pass",
+    "All figure rows match rounded public tables; E warnings retained",
+    "Eight percentile rows confirmed",
+    "Manuscript length, no-em-dash and figure markers pass"
+  ],
+  "manuscript_word_count": 1474,
+  "public_rows": 101,
+  "figures": 4,
+  "scope": "Author aggregate/output checks; not independent raw-data or manuscript review"
+}

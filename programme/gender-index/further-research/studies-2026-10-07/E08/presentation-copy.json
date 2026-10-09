@@ -1,0 +1,168 @@
+{
+  "frequent-work": {
+    "figure": {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "title": "Generative AI users report unpaid job work during personal time more often",
+      "description": "Unpaid job work during free time daily or several times a week, by reported GenAI use.",
+      "x_label": "Frequent unpaid job work (%)",
+      "unit": "percent",
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents."
+    },
+    "rows": {
+      "frequent.raw.rate.0": {
+        "label": "Men+ nonusers"
+      },
+      "frequent.raw.rate.1": {
+        "label": "Men+ users"
+      },
+      "frequent.raw.rate.2": {
+        "label": "Women+ nonusers"
+      },
+      "frequent.raw.rate.3": {
+        "label": "Women+ users"
+      }
+    }
+  },
+  "composition": {
+    "figure": {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "title": "The larger absolute gap for Women+ depends on the comparison",
+      "description": "Right of zero: the user–nonuser difference is larger for Women+. Left of zero: it is larger for Men+.",
+      "x_label": "Women+ gap minus Men+ gap (percentage points)",
+      "unit": "percentage_points",
+      "footnote": "Outcome: daily or several-times-a-week unpaid job work. Each estimate subtracts the Men+ user–nonuser difference from the Women+ difference. All 20,538 employees are included except in the education common-mix comparison, which retains 20,413 and 99.4% of survey weight. These comparisons describe different targets, not causal effects. Common-mix estimates use some sparse groups. Pointwise 95% intervals use all 1,000 shared bootstrap replicates; sample sizes count unweighted respondents.",
+      "reference_line": 0,
+      "section_label": "Comparison set"
+    },
+    "rows": {
+      "frequent.raw.interaction": {
+        "label": "Observed workforce",
+        "section": ""
+      },
+      "frequent.additive.interaction": {
+        "label": "Model adjusting for age, education and job characteristics",
+        "section": ""
+      },
+      "frequent.occupation_sector.standardized_interaction": {
+        "label": "Common occupation and sector mix",
+        "section": ""
+      },
+      "frequent.occupation_sector_education.standardized_interaction": {
+        "label": "Common occupation, sector and education mix",
+        "section": ""
+      }
+    },
+    "row_order": [
+      "frequent.raw.interaction",
+      "frequent.additive.interaction",
+      "frequent.occupation_sector.standardized_interaction",
+      "frequent.occupation_sector_education.standardized_interaction"
+    ]
+  },
+  "frequency-profile": {
+    "figure": {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "title": "GenAI users are less likely to report never doing unpaid job work",
+      "description": "All five frequency categories for unpaid job work during personal time.",
+      "x_label": "Share of each gender/use group (%)",
+      "unit": "percent",
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents. Five categories sum to 100% before rounding; frequency categories are not hours. Use with caution (E): both Men+ daily-frequency estimates have 75–149 contributing outcome records.",
+      "optional": true,
+      "optional_label": "Explore the full unpaid-work frequency distribution"
+    },
+    "rows": {
+      "frequent.distribution.0.1": {
+        "label": "Men+ nonusers: Daily"
+      },
+      "frequent.distribution.0.2": {
+        "label": "Men+ nonusers: Several times a week"
+      },
+      "frequent.distribution.0.3": {
+        "label": "Men+ nonusers: Several times a month"
+      },
+      "frequent.distribution.0.4": {
+        "label": "Men+ nonusers: Once a month or less"
+      },
+      "frequent.distribution.0.5": {
+        "label": "Men+ nonusers: Never"
+      },
+      "frequent.distribution.1.1": {
+        "label": "Men+ users: Daily"
+      },
+      "frequent.distribution.1.2": {
+        "label": "Men+ users: Several times a week"
+      },
+      "frequent.distribution.1.3": {
+        "label": "Men+ users: Several times a month"
+      },
+      "frequent.distribution.1.4": {
+        "label": "Men+ users: Once a month or less"
+      },
+      "frequent.distribution.1.5": {
+        "label": "Men+ users: Never"
+      },
+      "frequent.distribution.2.1": {
+        "label": "Women+ nonusers: Daily"
+      },
+      "frequent.distribution.2.2": {
+        "label": "Women+ nonusers: Several times a week"
+      },
+      "frequent.distribution.2.3": {
+        "label": "Women+ nonusers: Several times a month"
+      },
+      "frequent.distribution.2.4": {
+        "label": "Women+ nonusers: Once a month or less"
+      },
+      "frequent.distribution.2.5": {
+        "label": "Women+ nonusers: Never"
+      },
+      "frequent.distribution.3.1": {
+        "label": "Women+ users: Daily"
+      },
+      "frequent.distribution.3.2": {
+        "label": "Women+ users: Several times a week"
+      },
+      "frequent.distribution.3.3": {
+        "label": "Women+ users: Several times a month"
+      },
+      "frequent.distribution.3.4": {
+        "label": "Women+ users: Once a month or less"
+      },
+      "frequent.distribution.3.5": {
+        "label": "Women+ users: Never"
+      }
+    }
+  },
+  "time-off": {
+    "figure": {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "title": "AI users report less difficulty taking time off for personal matters",
+      "description": "Difficult or very difficult to take one or two hours off during working hours for personal or family matters.",
+      "x_label": "Difficulty taking time off (%)",
+      "unit": "percent",
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents. This item has no explicit 12-month recall window. A separate dimension of working conditions, not unpaid-work hours."
+    },
+    "rows": {
+      "difficult.raw.rate.0": {
+        "label": "Men+ nonusers"
+      },
+      "difficult.raw.rate.1": {
+        "label": "Men+ users"
+      },
+      "difficult.raw.rate.2": {
+        "label": "Women+ nonusers"
+      },
+      "difficult.raw.rate.3": {
+        "label": "Women+ users"
+      }
+    }
+  }
+}

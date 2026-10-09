@@ -1,0 +1,21 @@
+section,label,group,value,low,high,n,quality,result_id
+,Men+ nonusers: Daily,Men+,1.5,1.1,1.8,7993,E,frequent.distribution.0.1
+,Men+ nonusers: Several times a week,Men+,2.4,1.9,2.8,7993,A,frequent.distribution.0.2
+,Men+ nonusers: Several times a month,Men+,5.2,4.6,5.9,7993,A,frequent.distribution.0.3
+,Men+ nonusers: Once a month or less,Men+,9.4,8.5,10.4,7993,A,frequent.distribution.0.4
+,Men+ nonusers: Never,Men+,81.4,80.2,82.7,7993,A,frequent.distribution.0.5
+,Men+ users: Daily,Men+,3.4,2.5,4.3,2224,E,frequent.distribution.1.1
+,Men+ users: Several times a week,Men+,7.2,5.6,8.7,2224,A,frequent.distribution.1.2
+,Men+ users: Several times a month,Men+,15.6,13.2,17.9,2224,A,frequent.distribution.1.3
+,Men+ users: Once a month or less,Men+,17.7,15.3,20.1,2224,A,frequent.distribution.1.4
+,Men+ users: Never,Men+,56.2,53.0,59.3,2224,A,frequent.distribution.1.5
+,Women+ nonusers: Daily,Women+,2.3,1.8,2.7,8080,A,frequent.distribution.2.1
+,Women+ nonusers: Several times a week,Women+,3.9,3.2,4.5,8080,A,frequent.distribution.2.2
+,Women+ nonusers: Several times a month,Women+,6.8,6.1,7.6,8080,A,frequent.distribution.2.3
+,Women+ nonusers: Once a month or less,Women+,11.2,10.2,12.3,8080,A,frequent.distribution.2.4
+,Women+ nonusers: Never,Women+,75.8,74.4,77.2,8080,A,frequent.distribution.2.5
+,Women+ users: Daily,Women+,6.1,4.8,7.5,2241,A,frequent.distribution.3.1
+,Women+ users: Several times a week,Women+,10.1,8.2,12.0,2241,A,frequent.distribution.3.2
+,Women+ users: Several times a month,Women+,12.9,10.8,15.1,2241,A,frequent.distribution.3.3
+,Women+ users: Once a month or less,Women+,17.4,15.1,19.6,2241,A,frequent.distribution.3.4
+,Women+ users: Never,Women+,53.4,50.3,56.6,2241,A,frequent.distribution.3.5

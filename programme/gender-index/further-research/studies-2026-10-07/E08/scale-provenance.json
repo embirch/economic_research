@@ -1,0 +1,7 @@
+{
+  "source": "results.json",
+  "source_sha256": "b8279a71bb7fbc96bb1121b0d417f120c52c25c672be2a5bf1b59416b998b592",
+  "formula": "user/nonuser, from unrounded original rates; absolute gap is 100*(user\u2212nonuser).",
+  "scope": "Descriptive scale explanation. No ratio equality test, new primary outcome, or causal comparison.",
+  "rounding": "One decimal, half up, after all arithmetic."
+}

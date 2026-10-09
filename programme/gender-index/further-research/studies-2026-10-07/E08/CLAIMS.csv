@@ -1,0 +1,29 @@
+claim_id,claim,result_id_or_source,qualification
+E08-01,"20,538 employees in four complete groups",results.json:sample_flow,Reference-job employees aged 15–69; ten provinces; not all workers
+E08-02,"Frequent unpaid work: 3.9%, 10.6%, 6.2%, 16.3%",frequent.raw.rate.0|frequent.raw.rate.1|frequent.raw.rate.2|frequent.raw.rate.3,Daily or several times weekly; unpaid job demands; any reported GenAI use
+E08-03,"Men+ user gap 6.7 pp [4.8,8.5]",frequent.raw.men_user_minus_nonuser,"Association, not causal effect"
+E08-04,"Women+ user gap 10.1 pp [7.7,12.5]",frequent.raw.women_user_minus_nonuser,"Association, not causal effect"
+E08-05,"Raw gender interaction 3.4 pp [0.5,6.3]",frequent.raw.interaction,Difference in user–nonuser gaps; primary target
+E08-06,Never unpaid work: Men+ 56.2% users/81.4% nonusers; Women+ 53.4%/75.8%,frequent.distribution.1.5|frequent.distribution.0.5|frequent.distribution.3.5|frequent.distribution.2.5,"Full ordered categories, pointwise intervals"
+E08-07,Several times monthly: Men+ 15.6%/5.2%; Women+ 12.9%/6.8%,frequent.distribution.1.3|frequent.distribution.0.3|frequent.distribution.3.3|frequent.distribution.2.3,Frequency is not hours
+E08-08,"Additive gender interaction 2.7 pp [−0.2,5.6]",frequent.additive.interaction,Whole-sample linear projection; not causal or individual probability model
+E08-09,"Common occupation/sector interaction −1.7 pp [−5.2,1.7]",frequent.occupation_sector.standardized_interaction,All employees retained; sparse components
+E08-10,"Common occupation/sector/education interaction −1.0 pp [−4.5,2.5]",frequent.occupation_sector_education.standardized_interaction,"20,413 respondents; 99.4% weight; conditional support"
+E08-11,"Occupation/sector composition change −5.1 pp [−7.7,−2.6]",frequent.occupation_sector.composition_change,Common-replicate covariance; restriction change exactly zero by identity
+E08-12,"Education restriction change rounds 0.0 pp [−0.1,0.0]",frequent.occupation_sector_education.restriction_change,Full precision negative; no equivalence claim
+E08-13,"Education composition change −4.3 pp [−7.2,−1.4]",frequent.occupation_sector_education.composition_change,Same-support raw baseline and shared covariance
+E08-14,"Secondary difficult-time-off rates 17.4%,10.3%,25.5%,17.5%",difficult.raw.rate.0|difficult.raw.rate.1|difficult.raw.rate.2|difficult.raw.rate.3,Separate item without explicit 12-month recall
+E08-15,"Secondary user gaps −7.1 pp/−8.0 pp; interaction −0.9 [−4.6,2.7]",difficult.raw.men_user_minus_nonuser|difficult.raw.women_user_minus_nonuser|difficult.raw.interaction,Not evidence of practical equality
+E08-16,Two age-saturated replicate cell failures,results.json:common_composition.age_saturated_failed_diagnostic.support,Diagnostic not released as an estimate; no dropped-replicate inference
+E08-17,Eight percentile intervals similar at publication rounding,percentile-sensitivity.csv,Fixed recipe; linear quantile interpolation; no replacement of contrast intervals
+E08-18,4.9% answered about job already left,CSWC guide §5.5; source-manifest.json,Whole sample only; CHG_05 absent
+E08-19,Men+/Women+ source categories include some redistributed nonbinary respondents,CSWC codebook GENDER; source-manifest.json,No independent nonbinary estimate or biological-sex interpretation
+E08-20,Existing Canadian publication covers adoption/job composition/gender and technology pace,https://www150.statcan.gc.ca/n1/pub/75-006-x/2026001/article/00007-eng.htm,Primary article; no claim to newly discover adoption gap
+E08-21,Prior AI/workday studies include gender and spouses,https://faculty.marshall.usc.edu/Gerard-Hoberg/CETAFE/papers/paper7.pdf,Prior draft read; latest February 2026 SSRN full text inaccessible
+E08-22,Randomized access can reduce measured outside-hours application time,https://arxiv.org/html/2504.11436v4,Dillon et al.; telemetry not all unpaid work; rendered-version date discrepancy logged
+E08-23,Substantial prior outcome inspection,prior-inspection.md|PROTOCOL.md,Not untouched preregistration
+E08-24,Source quality warnings and complementary suppression,results.json:public_release_checks|public-tables.csv,All core binary rates A; E warnings; no F value recoverable through paired category
+E08-25,Common occupation/sector rates: Men+ 4.8% nonusers/11.0% users; Women+ 6.1% nonusers/10.6% users,frequent.occupation_sector.standardized_rates.0|frequent.occupation_sector.standardized_rates.1|frequent.occupation_sector.standardized_rates.2|frequent.occupation_sector.standardized_rates.3,Existing published estimates brought into the narrative to distinguish group rates from the difference between user–nonuser gaps; no new computation
+E08-26,Job structures rewarding long or particular hours provide an economic rationale for examining gender and working time,https://www.aeaweb.org/articles?id=10.1257/aer.104.4.1091,Goldin 2014 journal abstract read; motivation only; no Canadian AI mechanism or care variable tested
+E08-27,Observed user/nonuser point ratios about2.6 Women+ and2.7 Men+,scale-comparison.csv|export_scale.py,Arithmetic from unrounded original rates; no ratio equality test or new primary outcome
+E08-28,All16 restricted common-mix point estimates span -2.6 to+0.1pp; all intervals includezero; common-minus-raw changes all negative,influence-summary.json|influence_check.py,Each deletion defines a restricted population; dependent pointwise intervals; concentrated and sparse components; original estimates unchanged

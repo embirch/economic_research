@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "immutable_files": 80,
+  "changed_files": [
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/package-manifest.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/site-build.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/pdf-validation.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/index.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/package_reproduction.py",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/verify_pdfs.py",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/build_pdfs.py",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/build_site.py",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/pdf-build.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/paper.pdf",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/index.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/CLAIMS.csv",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/methods.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/README.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/METHODS.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/manuscript.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E03/reproduction.zip",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/paper.pdf",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/presentation-copy.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/index.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/figure-specs.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/methods.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/README.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/METHODS.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/manuscript.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E10/reproduction.zip",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/paper.pdf",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/presentation-copy.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/index.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/figure-specs.json",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/CLAIMS.csv",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/methods.html",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/README.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/METHODS.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/manuscript.md",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/reproduction.zip",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/figures/composition.csv",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/studies-2026-10-07/E08/figures/composition.svg",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/build_page.py",
+    "/Users/emilybirch/Desktop/Anthropic/economic_research/programme/gender-index/further-research/index.html"
+  ],
+  "preserved_numerical_chart_rows": 69,
+  "active_figures": 9,
+  "local_links_checked": 136,
+  "studies": [
+    {
+      "id": "E08",
+      "manuscript_words": 1902,
+      "active_figures": 3,
+      "retained_chart_rows": 32,
+      "package_matches_current_files": true
+    },
+    {
+      "id": "E03",
+      "manuscript_words": 1489,
+      "active_figures": 3,
+      "retained_chart_rows": 16,
+      "package_matches_current_files": true
+    },
+    {
+      "id": "E10",
+      "manuscript_words": 1764,
+      "active_figures": 3,
+      "retained_chart_rows": 24,
+      "package_matches_current_files": true
+    }
+  ],
+  "scope": "Preserved original analytical files and69 figure rows; three-row subset from existing US estimates; current packages, narrative structure and local links. Canadian influence reconstruction is recorded separately."
+}

@@ -1,0 +1,16 @@
+target,group,retained_n,retained_weight_percent,common_strata,zero_replicate_cell_denominators,status
+occupation_sector,All groups,20538,100.0,16,0,Pooled estimate with sparse components
+occupation_sector,Men+ nonusers,7993,100.0,16,0,Pooled estimate with sparse components
+occupation_sector,Men+ users,2224,100.0,16,0,Pooled estimate with sparse components
+occupation_sector,Women+ nonusers,8080,100.0,16,0,Pooled estimate with sparse components
+occupation_sector,Women+ users,2241,100.0,16,0,Pooled estimate with sparse components
+occupation_sector_education,All groups,20413,99.4,44,0,Pooled estimate with sparse components
+occupation_sector_education,Men+ nonusers,7939,99.5,44,0,Pooled estimate with sparse components
+occupation_sector_education,Men+ users,2218,99.9,44,0,Pooled estimate with sparse components
+occupation_sector_education,Women+ nonusers,8020,99.2,44,0,Pooled estimate with sparse components
+occupation_sector_education,Women+ users,2236,99.9,44,0,Pooled estimate with sparse components
+age_saturated_failed_diagnostic,All groups,17665,84.8,143,2,Failed diagnostic; no standardized interval
+age_saturated_failed_diagnostic,Men+ nonusers,6383,77.3,143,2,Failed diagnostic; no standardized interval
+age_saturated_failed_diagnostic,Men+ users,2133,95.2,143,2,Failed diagnostic; no standardized interval
+age_saturated_failed_diagnostic,Women+ nonusers,7004,86.5,143,2,Failed diagnostic; no standardized interval
+age_saturated_failed_diagnostic,Women+ users,2145,96.0,143,2,Failed diagnostic; no standardized interval

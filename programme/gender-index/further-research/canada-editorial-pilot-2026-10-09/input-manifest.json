@@ -1,0 +1,214 @@
+{
+  "scope": "Latest local Canada editorial inputs; no respondent or private fine-cell data",
+  "base_commit": "0ed7e4787f89360522ed1a70a67aff982dddd011",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "17d11fc4f458aaf7a106949bb62eee2c12343bf24f5df662ca4afcfb1f9c3f17",
+      "bytes": 12495
+    },
+    "PROJECT.md": {
+      "sha256": "d25fa4c66b98b6f8344381c79f1473a3632dc533d1b670de38f9b14eb99ce9fd",
+      "bytes": 54221
+    },
+    "programme/DECISIONS.md": {
+      "sha256": "3aad74c663fde436e01845b0249327c4e3efa4b812402a93c66480ca5d5743c4",
+      "bytes": 87677
+    },
+    "programme/HANDOVER-2026-10-09.md": {
+      "sha256": "eb9c4da5a343c50ad02041ec3cd0bba14a87e3631676767d2ee9647d0cd490e6",
+      "bytes": 9548
+    },
+    "programme/gender-index/FOUNDATION.md": {
+      "sha256": "0d349df9ab8b0f955110ee231043c654473abe8aab87c562eee52597827749e5",
+      "bytes": 3701
+    },
+    "programme/gender-index/RESEARCH-AGENDA.md": {
+      "sha256": "cb8c3c8afdcd8d184cb87def5bbda267796ee1088288e3ddfbdddb240fd0b136",
+      "bytes": 14653
+    },
+    "programme/gender-index/further-research/approved-revision-2026-10-09/CANADA-INFLUENCE.md": {
+      "sha256": "06695301119a3484ead4a24bf4f2819d4cbbf2db518d7be969172323ee43209b",
+      "bytes": 12568
+    },
+    "programme/gender-index/further-research/approved-revision-2026-10-09/COMPLETION.md": {
+      "sha256": "8cc8334013db294964ed84f1afbe9f4ed72b51937e3943397e8c5af7c88b76f0",
+      "bytes": 5042
+    },
+    "programme/gender-index/further-research/approved-revision-2026-10-09/independent-canada-verification.json": {
+      "sha256": "974ace4e24b7ec833c69498e1a868ac79bc135689b0650ff234493ccb916ce5b",
+      "bytes": 662
+    },
+    "programme/gender-index/further-research/approved-revision-2026-10-09/verification.json": {
+      "sha256": "6df16b4ad7fd81a5a0a223bec895c339bc28465e7877caa70f494482fa7267f7",
+      "bytes": 6380
+    },
+    "programme/gender-index/further-research/canada-editorial-pilot-2026-10-09/ASSIGNMENT.md": {
+      "sha256": "ba627c6c72d36e47035c4ea89cfd4fc16450cba9a60b4d8ddfae6c6c577724b9",
+      "bytes": 2932
+    },
+    "programme/gender-index/further-research/canada-editorial-pilot-2026-10-09/EDITOR-ASSIGNMENT.md": {
+      "sha256": "eaae86a1fb1109b85bcdeb46b698cd4bea93a25b2a37798f98055553b2ad1066",
+      "bytes": 10288
+    },
+    "programme/gender-index/further-research/editorial-method-2026-10-09/PROPOSED-METHOD.md": {
+      "sha256": "b031bc573418c1f36ae4424e2e43e891e3ba373dd2a8380e253b4dc708e84ff0",
+      "bytes": 17981
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/CLAIMS.csv": {
+      "sha256": "a2aa44bb3c7b9af1a2810eedf304c9cbfe89e97f88898f999c5e9888355b6b9d",
+      "bytes": 5522
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/DEVIATIONS.md": {
+      "sha256": "4af11e88f412f3aa2f4b8a026f677e18925e31b036e687289ffe507a881e7f53",
+      "bytes": 2811
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/METHODS.md": {
+      "sha256": "5e8ee8045e7fec689df5cabc2d2f0ef21331b8dd7ff24b104e1398fbb52046c9",
+      "bytes": 17622
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/PROTOCOL.md": {
+      "sha256": "923e1df76d28d289ef1c8c7a536b56c22d6a59a6aa004336e5b44d42bca4bed1",
+      "bytes": 31678
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/README.md": {
+      "sha256": "ce59f09112b37690c64bc902057fcacdc97b3c322451f52504a0e9f145555b2c",
+      "bytes": 5000
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/analysis.py": {
+      "sha256": "707c0b9984d434f76663dd360a8cf812920f4243689cc98550a1eeb9cdf9025a",
+      "bytes": 26006
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/environment.json": {
+      "sha256": "2fb6281ea47f12de84adc48529ae4d1d22cccb3e2e277b5edb6a18b74370b062",
+      "bytes": 402
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/export_scale.py": {
+      "sha256": "0d7752ed0aff2a36f4bed9852b7176dd8b94ea7f182150a9c62f6064316a8923",
+      "bytes": 1962
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figure-specs.json": {
+      "sha256": "49f5f9de28e8fe905b209c1abd6e84586ca063d5bc71f01cf034e6bce7832b7f",
+      "bytes": 12874
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/composition.csv": {
+      "sha256": "f72b97dd15a6ae68fa3ac0562161c8c6857b7ac3bff1927479679976ea9faa97",
+      "bytes": 509
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/composition.svg": {
+      "sha256": "73451042420a0888359bd818a56091054f486ed330458db446bb4180f419b5fb",
+      "bytes": 5517
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/frequency-profile.csv": {
+      "sha256": "6e750d93cdfc261d42b41b53d7e4d5f0e3df1acbcb5a1c8e5019b8692dd280a8",
+      "bytes": 1740
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/frequency-profile.svg": {
+      "sha256": "0bd557c0073f574cc5c8e123a4eb9ee187a9347a113b41bdace21c3627f4ad34",
+      "bytes": 20418
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/frequent-work.csv": {
+      "sha256": "ec619b775bb0e58c8f950e3247316b662ef7b49cf992bbecc95c3fd068c754ba",
+      "bytes": 303
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/frequent-work.svg": {
+      "sha256": "4f715887a8226ab127ab7fde5ea0bdc2af123d1cc4246e34339d75a2ae5c4146",
+      "bytes": 4841
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/time-off.csv": {
+      "sha256": "590468e272cac7b1b953d2d7d3595407f458851672d802bac8755fde736e09f0",
+      "bytes": 313
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/figures/time-off.svg": {
+      "sha256": "be38420101d86aae5bcd44edb4c4e151a26be29fe3b2804c12396cd65326010a",
+      "bytes": 4858
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/index.html": {
+      "sha256": "f1acf7dc7f4385a0d75dcfe89f73717dd45cdf3d8a81ca5160ebf2b42ec40472",
+      "bytes": 99072
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/influence-summary.json": {
+      "sha256": "83617874cb0e337f0019bd823077a457c442fdbcfd907e68349d8ff5b63126ce",
+      "bytes": 10005
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/influence_check.py": {
+      "sha256": "9ea5860260ee1c9121c238593c707de3316995d7cb44a63873a78ea445f2c409",
+      "bytes": 25774
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/literature-review.md": {
+      "sha256": "4d394759184777ea0d917965e819ebbf1d9ac34a9d5c11a03b6d03ed095f06cb",
+      "bytes": 8711
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/manuscript.md": {
+      "sha256": "46025fa731aacbde59ad54a6df1bb863ad3b1e79b3a5d7b403eeca6d668ccc4d",
+      "bytes": 13647
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/methods.html": {
+      "sha256": "5cb8253d808fa74abcf5e70aa2e3db6de2848b9001fff64bed480ed75c236ada",
+      "bytes": 20524
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/percentile-sensitivity.csv": {
+      "sha256": "e29f1d6592b6ceffc5a0c05943cf3ecd2dc2c40552f2ce98fd7420f39b202bee",
+      "bytes": 901
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/presentation-copy.json": {
+      "sha256": "0a29949590a3e621c6f727a60272359704aab2d7a40042dc456f3cb7cad76f89",
+      "bytes": 7343
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/prior-inspection.md": {
+      "sha256": "9543390df8826cb10503d364c635f825d1f4c6841632b6145134afc7223790e2",
+      "bytes": 1809
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/public-tables.csv": {
+      "sha256": "c124181addf01d3ca6dae86fc90b2353d0764dae5833bb31d82bbf9718b9a70c",
+      "bytes": 14386
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/scale-comparison.csv": {
+      "sha256": "a6604b7e132a53b30b6341f5c28cbe1c708956265993e02f1f233ceb0b072b4f",
+      "bytes": 214
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/scale-provenance.json": {
+      "sha256": "a198f9792768e8ec916fd47e526cb10112a8dbd0ece782cc4d6c1ec25a022819",
+      "bytes": 393
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/source-manifest.json": {
+      "sha256": "2ecd46ada2f4161e8a52f246278265940e087a4162579f015189633590fd1671",
+      "bytes": 2961
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/support-summary.csv": {
+      "sha256": "9116937b7770f4ea9f30ef4e57e9ff79df8f66ce215ce92b9e95bac14ed7da23",
+      "bytes": 1551
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/verification.json": {
+      "sha256": "ab164e824b164f6bb48398226131c412017c38b612a62a3a0cd90e8dbf2b9707",
+      "bytes": 928
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/E08/verify_outputs.py": {
+      "sha256": "6bb57c50530492df665622139c3e8e2bd22190eba173d6206599c5c8f9e090fe",
+      "bytes": 3963
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/build_site.py": {
+      "sha256": "16cfea78dd2e9c5d147bfcecd65949e95662e212d1356f92aa2455bda8fab544",
+      "bytes": 20458
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/reviews/E08-NUMERICAL-REVIEW.md": {
+      "sha256": "97b1f308d48d04fd24a57b3f283a45f7f07b53cc7e865c47a7f5ff16dd4efb13",
+      "bytes": 5942
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/studies.css": {
+      "sha256": "ae6ce1af0cd48a466824a29e65611379f02f35e365ccb43c72485aa3c932616e",
+      "bytes": 4817
+    },
+    "programme/gender-index/further-research/studies-2026-10-07/studies.js": {
+      "sha256": "c8ee5852fe8ab3bd2a7094a5e24b35bf5b266709e61c38d40ed6c4512cd4bdee",
+      "bytes": 1271
+    },
+    "team/RUNS.csv": {
+      "sha256": "915781942a3d5615d1e9a7d74673f5e199317be1803d1cdb58cff8c92370e4ac",
+      "bytes": 15212
+    },
+    "team/SETUP.md": {
+      "sha256": "2fe1cf01895761ae6bffbc58615671d41fdb58906528296755f98e184a500df9",
+      "bytes": 8359
+    }
+  }
+}

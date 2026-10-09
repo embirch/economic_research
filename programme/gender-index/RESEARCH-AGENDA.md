@@ -1,5 +1,10 @@
 # Research contribution, evolving papers and triangulation
 
+**Current longlist, 7 October 2026:** [20 reviewed proposals](further-research/longlist-2026-10-07/OVERVIEW.md), comprising 16 empirical and four methods alternatives, plus four detailed reserve cards. Twelve have verified scoped data feasibility and eight retain a material condition. Read the [opportunity map](further-research/longlist-2026-10-07/OPPORTUNITY-MAP.md) and [review decisions](further-research/longlist-2026-10-07/REVIEW.md) before selecting. The old manuscript is excluded. Final study selection and full analysis plans remain the next stage.
+
+**Research portfolio reset, 7 October 2026:** Emily authorised a broad, public-data-verified longlist targeting two original empirical posts on AI’s economic effects using external data, plus one original methodological post on AI’s labour-market/work/societal impacts. The earlier European research piece is superseded by The State of Gender & Generative AI report and is excluded from use or selection; preserve its files. No preference for Anthropic-only data. Current assignment: [longlist](further-research/longlist-2026-10-07/ASSIGNMENT.md). Earlier manuscript-continuation and parked-Further-Research notes below are historical. No final study selection or new paid sessions are authorised by the longlist task.
+
+
 Emily's direction, 1 October 2026. This develops the [execution proposal](EXECUTION-PROPOSAL.md). Original empirical research is a required part of the programme alongside synthesis. This note scopes the work; it does not launch another paid session or claim that candidate data have been acquired.
 
 ## Three connected contributions
@@ -15,6 +20,8 @@ The [Cranney, Delecourt and Koning synthesis](FOUNDATION.md) is a foundational s
 The explorer is a way to communicate this research. A complete programme cannot consist solely of collected statistics. Conversely, originality does not require a new algorithm or a causal claim: a well-motivated descriptive or associational analysis can make a contribution if its question and added knowledge are established. Benchmark reproduction is quality control; a new visualisation of the same finding is not by itself a new paper.
 
 ## Deep-dive pipeline
+
+Further clarification, 1 October 2026: the first major milestone is now explicitly a synthesised v1.0 from the global evidence, organised as Gaps, Barriers and Implications, with roughly five headline-and-visual stories per section and deeper exploration. New original empirical studies follow that milestone. The [synthesis methodology](SYNTHESIS-V1-METHOD.md) is proposed for this work. Existing original European results can be reused, and extraction, verification and charting of published findings support v1.0; new studies are not commissioned as part of preparing those displays.
 
 Latest sequencing clarification, 1 October 2026: complete the broad data/literature audit and assemble an initial verified index/evidence synthesis before selecting new deep-dive questions. Maintain a running log of patterns, contradictions, gaps and possible questions during discovery; these are observations and leads, not commissioned papers. The existing European paper supplies an empirical foundation; approximately three papers remains the working portfolio. A polished public website is not a prerequisite for choosing papers once the evidence base is assembled.
 

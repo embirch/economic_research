@@ -1,0 +1,9 @@
+result_id,outcome,group,estimate_percent,normal_low,normal_high,percentile_low,percentile_high,quality,method
+frequent.raw.rate.0,frequent,Men+ nonusers,3.9,3.3,4.4,3.3,4.4,A,numpy.quantile method=linear
+frequent.raw.rate.1,frequent,Men+ users,10.6,8.8,12.3,8.9,12.3,A,numpy.quantile method=linear
+frequent.raw.rate.2,frequent,Women+ nonusers,6.2,5.4,7.0,5.4,6.9,A,numpy.quantile method=linear
+frequent.raw.rate.3,frequent,Women+ users,16.3,14.0,18.5,14.0,18.6,A,numpy.quantile method=linear
+difficult.raw.rate.0,difficult,Men+ nonusers,17.4,16.1,18.7,16.1,18.6,A,numpy.quantile method=linear
+difficult.raw.rate.1,difficult,Men+ users,10.3,8.4,12.2,8.4,12.2,A,numpy.quantile method=linear
+difficult.raw.rate.2,difficult,Women+ nonusers,25.5,24.0,27.0,24.0,26.9,A,numpy.quantile method=linear
+difficult.raw.rate.3,difficult,Women+ users,17.5,15.2,19.8,15.2,19.7,A,numpy.quantile method=linear

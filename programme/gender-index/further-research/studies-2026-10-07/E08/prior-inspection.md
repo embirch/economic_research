@@ -1,0 +1,9 @@
+# Prior inspection and implementation freeze
+
+7 October 2026. This study follows the selected and reviewed E08 protocol. It is not an untouched preregistration. The pilot had already examined the employee sample, frequent-work threshold, full frequency profile, raw interactions, additive projections, both common-composition targets, failed age-saturated target and secondary time-off outcome. Selection occurred with that information available.
+
+The raw interaction remains primary. Additive projection, occupation/sector standardization and occupation/sector/education standardization remain secondary in that order. The new same-support raw diagnostic, its restriction and composition contrasts, and the fixed eight-proportion percentile recipe were specified in the reviewed protocol before this execution. Membership in common support uses covariates and the gender/use groups, never outcomes. No new subgroup search, link function, endpoint, timing contrast or threshold was added.
+
+The pilot ledger remains unchanged at `../../stabilisation-2026-10-07/strands/work-households/`: `canada-diagnostics.json`, `canada-adjusted.json`, `analyse.py`, `canada_models.py` and `verification.json`. The prior independent numerical ledger remains at `../../stabilisation-2026-10-07/reviews/households-independent-results.json`. The new standalone script imports none of those helpers. It compares its benchmark and two raw interactions with the earlier independent point estimates and standard errors to tolerance 1e-12.
+
+The public layer uses the frozen guide rules and one-decimal output. Fine component estimates, respondent records and weights remain excluded. Native numerical review is distinct from human peer review. Emily must see this first draft before another manuscript-review agent is commissioned.

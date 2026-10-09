@@ -1,0 +1,5 @@
+section,label,group,value,low,high,n,quality,result_id
+,Observed workforce,neutral,3.4,0.5,6.3,20538,A,frequent.raw.interaction
+,"Model adjusting for age, education and job characteristics",neutral,2.7,-0.2,5.6,20538,A,frequent.additive.interaction
+,Common occupation and sector mix,neutral,-1.7,-5.2,1.7,20538,A,frequent.occupation_sector.standardized_interaction
+,"Common occupation, sector and education mix",neutral,-1.0,-4.5,2.5,20413,A,frequent.occupation_sector_education.standardized_interaction

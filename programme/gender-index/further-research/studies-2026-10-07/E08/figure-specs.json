@@ -1,0 +1,392 @@
+{
+  "figures": [
+    {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "id": "frequent-work",
+      "title": "Generative AI users report unpaid job work during personal time more often",
+      "description": "Unpaid job work during free time daily or several times a week, by reported GenAI use.",
+      "x_label": "Frequent unpaid job work (%)",
+      "unit": "percent",
+      "rows": [
+        {
+          "label": "Men+ nonusers",
+          "group": "Men+",
+          "value": 3.9,
+          "low": 3.3,
+          "high": 4.4,
+          "n": 7993,
+          "result_id": "frequent.raw.rate.0",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users",
+          "group": "Men+",
+          "value": 10.6,
+          "low": 8.8,
+          "high": 12.3,
+          "n": 2224,
+          "result_id": "frequent.raw.rate.1",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers",
+          "group": "Women+",
+          "value": 6.2,
+          "low": 5.4,
+          "high": 7.0,
+          "n": 8080,
+          "result_id": "frequent.raw.rate.2",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users",
+          "group": "Women+",
+          "value": 16.3,
+          "low": 14.0,
+          "high": 18.5,
+          "n": 2241,
+          "result_id": "frequent.raw.rate.3",
+          "quality": "A"
+        }
+      ],
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents."
+    },
+    {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "id": "composition",
+      "title": "The larger absolute gap for Women+ depends on the comparison",
+      "description": "Right of zero: the user–nonuser difference is larger for Women+. Left of zero: it is larger for Men+.",
+      "x_label": "Women+ gap minus Men+ gap (percentage points)",
+      "unit": "percentage_points",
+      "rows": [
+        {
+          "label": "Observed workforce",
+          "group": "neutral",
+          "value": 3.4,
+          "low": 0.5,
+          "high": 6.3,
+          "n": 20538,
+          "result_id": "frequent.raw.interaction",
+          "quality": "A",
+          "section": ""
+        },
+        {
+          "label": "Model adjusting for age, education and job characteristics",
+          "group": "neutral",
+          "value": 2.7,
+          "low": -0.2,
+          "high": 5.6,
+          "n": 20538,
+          "result_id": "frequent.additive.interaction",
+          "quality": "A",
+          "section": ""
+        },
+        {
+          "label": "Common occupation and sector mix",
+          "group": "neutral",
+          "value": -1.7,
+          "low": -5.2,
+          "high": 1.7,
+          "n": 20538,
+          "result_id": "frequent.occupation_sector.standardized_interaction",
+          "quality": "A",
+          "section": ""
+        },
+        {
+          "label": "Common occupation, sector and education mix",
+          "group": "neutral",
+          "value": -1.0,
+          "low": -4.5,
+          "high": 2.5,
+          "n": 20413,
+          "result_id": "frequent.occupation_sector_education.standardized_interaction",
+          "quality": "A",
+          "section": ""
+        }
+      ],
+      "footnote": "Outcome: daily or several-times-a-week unpaid job work. Each estimate subtracts the Men+ user–nonuser difference from the Women+ difference. All 20,538 employees are included except in the education common-mix comparison, which retains 20,413 and 99.4% of survey weight. These comparisons describe different targets, not causal effects. Common-mix estimates use some sparse groups. Pointwise 95% intervals use all 1,000 shared bootstrap replicates; sample sizes count unweighted respondents.",
+      "reference_line": 0,
+      "section_label": "Comparison set"
+    },
+    {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "id": "frequency-profile",
+      "title": "GenAI users are less likely to report never doing unpaid job work",
+      "description": "All five frequency categories for unpaid job work during personal time.",
+      "x_label": "Share of each gender/use group (%)",
+      "unit": "percent",
+      "rows": [
+        {
+          "label": "Men+ nonusers: Daily",
+          "group": "Men+",
+          "value": 1.5,
+          "low": 1.1,
+          "high": 1.8,
+          "n": 7993,
+          "result_id": "frequent.distribution.0.1",
+          "quality": "E"
+        },
+        {
+          "label": "Men+ nonusers: Several times a week",
+          "group": "Men+",
+          "value": 2.4,
+          "low": 1.9,
+          "high": 2.8,
+          "n": 7993,
+          "result_id": "frequent.distribution.0.2",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ nonusers: Several times a month",
+          "group": "Men+",
+          "value": 5.2,
+          "low": 4.6,
+          "high": 5.9,
+          "n": 7993,
+          "result_id": "frequent.distribution.0.3",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ nonusers: Once a month or less",
+          "group": "Men+",
+          "value": 9.4,
+          "low": 8.5,
+          "high": 10.4,
+          "n": 7993,
+          "result_id": "frequent.distribution.0.4",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ nonusers: Never",
+          "group": "Men+",
+          "value": 81.4,
+          "low": 80.2,
+          "high": 82.7,
+          "n": 7993,
+          "result_id": "frequent.distribution.0.5",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users: Daily",
+          "group": "Men+",
+          "value": 3.4,
+          "low": 2.5,
+          "high": 4.3,
+          "n": 2224,
+          "result_id": "frequent.distribution.1.1",
+          "quality": "E"
+        },
+        {
+          "label": "Men+ users: Several times a week",
+          "group": "Men+",
+          "value": 7.2,
+          "low": 5.6,
+          "high": 8.7,
+          "n": 2224,
+          "result_id": "frequent.distribution.1.2",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users: Several times a month",
+          "group": "Men+",
+          "value": 15.6,
+          "low": 13.2,
+          "high": 17.9,
+          "n": 2224,
+          "result_id": "frequent.distribution.1.3",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users: Once a month or less",
+          "group": "Men+",
+          "value": 17.7,
+          "low": 15.3,
+          "high": 20.1,
+          "n": 2224,
+          "result_id": "frequent.distribution.1.4",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users: Never",
+          "group": "Men+",
+          "value": 56.2,
+          "low": 53.0,
+          "high": 59.3,
+          "n": 2224,
+          "result_id": "frequent.distribution.1.5",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers: Daily",
+          "group": "Women+",
+          "value": 2.3,
+          "low": 1.8,
+          "high": 2.7,
+          "n": 8080,
+          "result_id": "frequent.distribution.2.1",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers: Several times a week",
+          "group": "Women+",
+          "value": 3.9,
+          "low": 3.2,
+          "high": 4.5,
+          "n": 8080,
+          "result_id": "frequent.distribution.2.2",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers: Several times a month",
+          "group": "Women+",
+          "value": 6.8,
+          "low": 6.1,
+          "high": 7.6,
+          "n": 8080,
+          "result_id": "frequent.distribution.2.3",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers: Once a month or less",
+          "group": "Women+",
+          "value": 11.2,
+          "low": 10.2,
+          "high": 12.3,
+          "n": 8080,
+          "result_id": "frequent.distribution.2.4",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers: Never",
+          "group": "Women+",
+          "value": 75.8,
+          "low": 74.4,
+          "high": 77.2,
+          "n": 8080,
+          "result_id": "frequent.distribution.2.5",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users: Daily",
+          "group": "Women+",
+          "value": 6.1,
+          "low": 4.8,
+          "high": 7.5,
+          "n": 2241,
+          "result_id": "frequent.distribution.3.1",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users: Several times a week",
+          "group": "Women+",
+          "value": 10.1,
+          "low": 8.2,
+          "high": 12.0,
+          "n": 2241,
+          "result_id": "frequent.distribution.3.2",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users: Several times a month",
+          "group": "Women+",
+          "value": 12.9,
+          "low": 10.8,
+          "high": 15.1,
+          "n": 2241,
+          "result_id": "frequent.distribution.3.3",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users: Once a month or less",
+          "group": "Women+",
+          "value": 17.4,
+          "low": 15.1,
+          "high": 19.6,
+          "n": 2241,
+          "result_id": "frequent.distribution.3.4",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users: Never",
+          "group": "Women+",
+          "value": 53.4,
+          "low": 50.3,
+          "high": 56.6,
+          "n": 2241,
+          "result_id": "frequent.distribution.3.5",
+          "quality": "A"
+        }
+      ],
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents. Five categories sum to 100% before rounding; frequency categories are not hours. Use with caution (E): both Men+ daily-frequency estimates have 75–149 contributing outcome records.",
+      "optional": true,
+      "optional_label": "Explore the full unpaid-work frequency distribution"
+    },
+    {
+      "type": "dot",
+      "source_label": "Statistics Canada, CSWC 2024–2025 PUMF; author calculations",
+      "source_url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/142500012026001-eng.htm",
+      "id": "time-off",
+      "title": "AI users report less difficulty taking time off for personal matters",
+      "description": "Difficult or very difficult to take one or two hours off during working hours for personal or family matters.",
+      "x_label": "Difficulty taking time off (%)",
+      "unit": "percent",
+      "rows": [
+        {
+          "label": "Men+ nonusers",
+          "group": "Men+",
+          "value": 17.4,
+          "low": 16.1,
+          "high": 18.7,
+          "n": 7993,
+          "result_id": "difficult.raw.rate.0",
+          "quality": "A"
+        },
+        {
+          "label": "Men+ users",
+          "group": "Men+",
+          "value": 10.3,
+          "low": 8.4,
+          "high": 12.2,
+          "n": 2224,
+          "result_id": "difficult.raw.rate.1",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ nonusers",
+          "group": "Women+",
+          "value": 25.5,
+          "low": 24.0,
+          "high": 27.0,
+          "n": 8080,
+          "result_id": "difficult.raw.rate.2",
+          "quality": "A"
+        },
+        {
+          "label": "Women+ users",
+          "group": "Women+",
+          "value": 17.5,
+          "low": 15.2,
+          "high": 19.8,
+          "n": 2241,
+          "result_id": "difficult.raw.rate.3",
+          "quality": "A"
+        }
+      ],
+      "footnote": "Reference-job employees aged 15–69 in ten provinces. Users report any GenAI use over the relevant 12 months. Intervals are pointwise 95% public-bootstrap normal intervals. Reported gender uses the source Men+/Women+ categories. Counts are unweighted respondents. This item has no explicit 12-month recall window. A separate dimension of working conditions, not unpaid-work hours."
+    }
+  ],
+  "preferred_main_figures": [
+    "frequent-work",
+    "composition",
+    "frequency-profile"
+  ],
+  "appendix_figures": [
+    "time-off"
+  ]
+}

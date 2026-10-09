@@ -1,0 +1,264 @@
+{
+  "study": "E08",
+  "diagnostic_date": "2026-10-09",
+  "outcome": "Unpaid job work daily or several times a week",
+  "status": "Bounded influence diagnostic; original national-target estimates unchanged",
+  "population": "20,538 public/private reference-job employees, ages 15\u201369, CSWC 2024\u20132025, ten provinces",
+  "gender_categories": [
+    "Men+ nonusers",
+    "Men+ users",
+    "Women+ nonusers",
+    "Women+ users"
+  ],
+  "fixed_strata": {
+    "variables": [
+      "NOC7",
+      "COWMAIN3"
+    ],
+    "strata_n": 16,
+    "all_employee_records_retained_in_original": true
+  },
+  "source_checks": [
+    {
+      "filename": "canada_cswc.zip",
+      "sha256": "1724ba91cd3510088b284b6f090a641ea8282d6a135c7ea9e3e8b2c7050e098d",
+      "matches_pin": true
+    },
+    {
+      "filename": "CSWC2024_2025_UgE.pdf",
+      "sha256": "3c6fd5372b73c54093020abc1f581e346e9e6d0f69803c299b03e4129b440a67",
+      "matches_pin": true
+    },
+    {
+      "filename": "CSWC_PUMF_2024_2025_CdBk_NoFreq.pdf",
+      "sha256": "a5bf64ab49b0ae35043cd9079d4cc0c6af5305afe8ce9e7fcf040c4f8e8c53ea",
+      "matches_pin": true
+    },
+    {
+      "filename": "cswc2024_2025_pumf.sas7bdat",
+      "sha256": "bd739e8a9da6463e33085976901d325a1f79268a45f13630ae62463f7185ff9c",
+      "matches_pin": true
+    },
+    {
+      "filename": "cswc2024_2025_pumf_bsw.sas7bdat",
+      "sha256": "fa3e9c027fdb7aa39d8284e17b14d764026aec28887feb043590760aef18b5e5",
+      "matches_pin": true
+    }
+  ],
+  "original_reconciliation": {
+    "checks_n": 11,
+    "tolerance": 1e-12,
+    "maximum_absolute_error": 3.7470027081099033e-16,
+    "all_passed": true
+  },
+  "accounting_check": {
+    "all_1001_weight_sets_checked": true,
+    "maximum_absolute_error": 1.249000902703301e-16,
+    "formula": "C_s = sum_g a_g * (q_s - p_sg) * m_sg; sum_s C_s = common-mix minus raw contrast",
+    "interpretation": "Descriptive accounting under observed support, not an occupational causal decomposition"
+  },
+  "original_results": {
+    "raw_gender_contrast": {
+      "estimate_pp": 3.4,
+      "interval_95_pp": [
+        0.5,
+        6.3
+      ]
+    },
+    "common_mix_gender_contrast": {
+      "estimate_pp": -1.7,
+      "interval_95_pp": [
+        -5.2,
+        1.7
+      ]
+    },
+    "common_minus_raw_contrast": {
+      "estimate_pp": -5.1,
+      "interval_95_pp": [
+        -7.7,
+        -2.6
+      ]
+    }
+  },
+  "support": {
+    "original_minimum_component_n": 3,
+    "zero_component_bootstrap_denominators": 0,
+    "thin_support_buckets": [
+      {
+        "criterion": "domain_count_below_5",
+        "strata_n": 1,
+        "pooled_outcome_quality": "F",
+        "pooled_target_share_quality": "F",
+        "target_weight_percent": null,
+        "share_of_absolute_contribution_mass_percent": null,
+        "net_change_contribution_pp": null,
+        "disclosure_note": "Outcome contributions withheld: singleton or F-quality pooled outcome support; target mass separately graded as a pooled covariate proportion"
+      },
+      {
+        "criterion": "domain_count_below_75",
+        "strata_n": 10,
+        "pooled_outcome_quality": "F",
+        "pooled_target_share_quality": "A",
+        "target_weight_percent": 41.5,
+        "share_of_absolute_contribution_mass_percent": null,
+        "net_change_contribution_pp": null,
+        "disclosure_note": "Outcome contributions withheld: singleton or F-quality pooled outcome support; target mass separately graded as a pooled covariate proportion"
+      },
+      {
+        "criterion": "domain_count_below_150",
+        "strata_n": 11,
+        "pooled_outcome_quality": "F",
+        "pooled_target_share_quality": "A",
+        "target_weight_percent": 43.3,
+        "share_of_absolute_contribution_mass_percent": null,
+        "net_change_contribution_pp": null,
+        "disclosure_note": "Outcome contributions withheld: singleton or F-quality pooled outcome support; target mass separately graded as a pooled covariate proportion"
+      },
+      {
+        "criterion": "outcome_event_count_below_5",
+        "strata_n": 7,
+        "pooled_outcome_quality": "F",
+        "pooled_target_share_quality": "A",
+        "target_weight_percent": 31.0,
+        "share_of_absolute_contribution_mass_percent": null,
+        "net_change_contribution_pp": null,
+        "disclosure_note": "Outcome contributions withheld: singleton or F-quality pooled outcome support; target mass separately graded as a pooled covariate proportion"
+      },
+      {
+        "criterion": "outcome_event_count_below_75",
+        "strata_n": 16,
+        "pooled_outcome_quality": "A",
+        "pooled_target_share_quality": "A",
+        "target_weight_percent": 100.0,
+        "share_of_absolute_contribution_mass_percent": 100.0,
+        "net_change_contribution_pp": -5.1,
+        "disclosure_note": "Pooled across multiple strata"
+      },
+      {
+        "criterion": "outcome_event_count_below_150",
+        "strata_n": 16,
+        "pooled_outcome_quality": "A",
+        "pooled_target_share_quality": "A",
+        "target_weight_percent": 100.0,
+        "share_of_absolute_contribution_mass_percent": 100.0,
+        "net_change_contribution_pp": -5.1,
+        "disclosure_note": "Pooled across multiple strata"
+      }
+    ],
+    "interpretation": "Target mass counts each flagged stratum once. Buckets overlap and must not be added. Event-count criteria are a conservative study safeguard, not an additional source theorem."
+  },
+  "concentration": {
+    "definition": "Absolute contribution divided by sum of absolute contributions across all 16 strata; not percent of net change explained",
+    "largest_absolute_contribution_share_percent": 46.8,
+    "three_largest_absolute_contributions_share_percent": 67.0,
+    "largest_contributor_all_four_domain_counts_at_least_150": true,
+    "largest_contributor_has_outcome_event_count_below_75": true,
+    "negative_contributions_n": 10,
+    "positive_contributions_n": 6
+  },
+  "leave_one_stratum_out": {
+    "diagnostics_n": 16,
+    "omission_rule": "Each stratum omitted once from all four groups; no selective exclusions",
+    "target": "Each result describes its own remaining 15-stratum employee population, with newly pooled weights",
+    "aggregate_quality_counts": {
+      "A": 16,
+      "E": 0,
+      "F": 0
+    },
+    "all_pooled_results_pass_aggregate_release_threshold": true,
+    "summary": {
+      "raw": {
+        "point_range_pp": [
+          0.0,
+          4.9
+        ],
+        "positive_points_n": 16,
+        "negative_points_n": 0,
+        "interval_includes_zero_n": 2,
+        "interval_excludes_zero_negative_n": 0,
+        "interval_excludes_zero_positive_n": 14
+      },
+      "standardized": {
+        "point_range_pp": [
+          -2.6,
+          0.1
+        ],
+        "positive_points_n": 1,
+        "negative_points_n": 15,
+        "interval_includes_zero_n": 16,
+        "interval_excludes_zero_negative_n": 0,
+        "interval_excludes_zero_positive_n": 0
+      },
+      "composition_change": {
+        "point_range_pp": [
+          -7.0,
+          -2.4
+        ],
+        "positive_points_n": 0,
+        "negative_points_n": 16,
+        "interval_includes_zero_n": 1,
+        "interval_excludes_zero_negative_n": 15,
+        "interval_excludes_zero_positive_n": 0
+      },
+      "standardized_minus_original": {
+        "point_range_pp": [
+          -0.9,
+          1.8
+        ],
+        "positive_points_n": 7,
+        "negative_points_n": 9,
+        "interval_includes_zero_n": 16,
+        "interval_excludes_zero_negative_n": 0,
+        "interval_excludes_zero_positive_n": 0
+      },
+      "composition_change_minus_original": {
+        "point_range_pp": [
+          -1.8,
+          2.7
+        ],
+        "positive_points_n": 7,
+        "negative_points_n": 9,
+        "interval_includes_zero_n": 12,
+        "interval_excludes_zero_negative_n": 3,
+        "interval_excludes_zero_positive_n": 1
+      }
+    },
+    "warning": "Ranges are point-estimate diagnostics, not uncertainty intervals. Intervals are dependent, pointwise and not simultaneous. No deletion estimates replace the full-population estimate."
+  },
+  "uncertainty": {
+    "public_bootstrap_replicates": 1000,
+    "variance": "mean((T_b - T_full_target)^2)",
+    "normal_multiplier": 1.96,
+    "centering": "Each original or restricted target's full-weight estimate; never its replicate mean",
+    "reestimated_per_replicate": [
+      "group rates",
+      "pooled target shares",
+      "group-specific job shares",
+      "all contrasts"
+    ],
+    "scope": "Sampling uncertainty conditional on observed support; not measurement error, confounding or general model uncertainty"
+  },
+  "disclosure": {
+    "fine_cell_rates_released": false,
+    "stratum_identities_released": false,
+    "individual_deletion_estimates_released": false,
+    "respondent_rows_or_weights_written": false,
+    "percentages_and_differences_decimals": 1,
+    "quality_rule": "A >=150; E 75\u2013149; F <75; <5 expressly unacceptable. Worse domain/event grade is the conservative study release rule.",
+    "additional_safeguard": "Fine components remain private regardless of grade; singleton bucket quantities withheld. Target mass is graded on pooled covariate counts, separately from outcome-contribution support. Public deletions summarised only across all 16."
+  },
+  "reproducibility": {
+    "script": "influence_check.py",
+    "script_sha256": "9ea5860260ee1c9121c238593c707de3316995d7cb44a63873a78ea445f2c409",
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "original_files_unchanged": true
+  },
+  "limitations": [
+    "Sparse components remain in both original and restricted pooled estimates.",
+    "A one-stratum deletion cannot assess all simultaneous component influences or all alternative specifications.",
+    "Thin support and large influence are distinct; a large contribution need not come from the thinnest cell.",
+    "No causal effect of AI or occupation, no equivalence conclusion and no new national estimator is identified."
+  ]
+}

@@ -1,0 +1,5 @@
+section,label,group,value,low,high,n,quality,result_id
+,Men+ nonusers,Men+,17.4,16.1,18.7,7993,A,difficult.raw.rate.0
+,Men+ users,Men+,10.3,8.4,12.2,2224,A,difficult.raw.rate.1
+,Women+ nonusers,Women+,25.5,24.0,27.0,8080,A,difficult.raw.rate.2
+,Women+ users,Women+,17.5,15.2,19.8,2241,A,difficult.raw.rate.3

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "source_hashes_verified": 5,
+  "respondents": 20538,
+  "strata": 16,
+  "replicates": 1000,
+  "independent_original_estimate_and_se_matches": 3,
+  "contribution_identity_max_error": 1.249000902703301e-16,
+  "scope": "Independent raw/common/paired-change reconstruction and all16 deletion calculations; original results unchanged. Fine diagnostics remain private.",
+  "independent_specialist_comparisons": {
+    "target_weights": 0.0,
+    "contributions": 0.0,
+    "raw_deletions": 2.7755575615628914e-17,
+    "common_deletions": 2.0816681711721685e-17,
+    "change_deletions": 4.163336342344337e-17
+  },
+  "array_values_compared": 80080
+}

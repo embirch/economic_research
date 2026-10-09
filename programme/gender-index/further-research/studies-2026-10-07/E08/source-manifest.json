@@ -1,0 +1,56 @@
+{
+  "frozen_date": "2026-10-07",
+  "source_files": [
+    {
+      "filename": "canada_cswc.zip",
+      "cache_relative_path": "E08/canada_cswc.zip",
+      "sha256": "1724ba91cd3510088b284b6f090a641ea8282d6a135c7ea9e3e8b2c7050e098d",
+      "bytes": 149468015,
+      "url": "https://www150.statcan.gc.ca/n1/pub/14-25-0001/2026001/2024-2025.zip",
+      "archive": null,
+      "retrieval_record": "programme/gender-index/further-research/stabilisation-2026-10-07/strands/work-households/data-source-pins.json",
+      "original_cache_path": "/private/tmp/gender-longlist-households-20261007/canada_cswc.zip"
+    },
+    {
+      "filename": "CSWC2024_2025_UgE.pdf",
+      "cache_relative_path": "E08/CSWC2024_2025_UgE.pdf",
+      "sha256": "3c6fd5372b73c54093020abc1f581e346e9e6d0f69803c299b03e4129b440a67",
+      "bytes": 844762,
+      "url": null,
+      "archive": "canada_cswc.zip",
+      "retrieval_record": "programme/gender-index/further-research/stabilisation-2026-10-07/strands/work-households/data-source-pins.json",
+      "original_cache_path": "/private/tmp/gender-longlist-households-20261007/canada/PUMF/Documentation/Guide/CSWC2024_2025_UgE.pdf"
+    },
+    {
+      "filename": "CSWC_PUMF_2024_2025_CdBk_NoFreq.pdf",
+      "cache_relative_path": "E08/CSWC_PUMF_2024_2025_CdBk_NoFreq.pdf",
+      "sha256": "a5bf64ab49b0ae35043cd9079d4cc0c6af5305afe8ce9e7fcf040c4f8e8c53ea",
+      "bytes": 1527922,
+      "url": null,
+      "archive": "canada_cswc.zip",
+      "retrieval_record": "programme/gender-index/further-research/stabilisation-2026-10-07/strands/work-households/data-source-pins.json",
+      "original_cache_path": "/private/tmp/gender-longlist-households-20261007/canada/PUMF/Documentation/DataDictionary_DictionnaireDonn\u00e9es/CSWC_PUMF_2024_2025_CdBk_NoFreq.pdf"
+    },
+    {
+      "filename": "cswc2024_2025_pumf.sas7bdat",
+      "cache_relative_path": "E08/cswc2024_2025_pumf.sas7bdat",
+      "sha256": "bd739e8a9da6463e33085976901d325a1f79268a45f13630ae62463f7185ff9c",
+      "bytes": 7405568,
+      "url": null,
+      "archive": "canada_cswc.zip",
+      "retrieval_record": "programme/gender-index/further-research/stabilisation-2026-10-07/strands/work-households/data-source-pins.json",
+      "original_cache_path": "/private/tmp/gender-longlist-households-20261007/canada/PUMF/Data_Donn\u00e9es/cswc2024_2025_pumf.sas7bdat"
+    },
+    {
+      "filename": "cswc2024_2025_pumf_bsw.sas7bdat",
+      "cache_relative_path": "E08/cswc2024_2025_pumf_bsw.sas7bdat",
+      "sha256": "fa3e9c027fdb7aa39d8284e17b14d764026aec28887feb043590760aef18b5e5",
+      "bytes": 93061120,
+      "url": null,
+      "archive": "canada_cswc.zip",
+      "retrieval_record": "programme/gender-index/further-research/stabilisation-2026-10-07/strands/work-households/data-source-pins.json",
+      "original_cache_path": "/private/tmp/gender-longlist-households-20261007/canada/PUMF/Data_Donn\u00e9es/cswc2024_2025_pumf_bsw.sas7bdat"
+    }
+  ],
+  "raw_in_git": false
+}
